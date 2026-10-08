@@ -7,12 +7,15 @@ import {
   recipeInputSchema,
   type Recipe,
   type RecipeInput,
-  type Ingredient,
   type Unit,
+  type Draft,
 } from '../../shared/contracts/recipe';
 import { Button } from '../../shared/ui/button';
 import { RecipeSteps } from './RecipeSteps';
 import { RecipeIngredients } from './RecipeIngredients';
+import { RecipeDetails } from './RecipeDetails';
+import { useDurableDraft } from './useDurableDraft';
+import { IngredientSearchControl } from '../ingredients';
 import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
 const nullable = (value: string) => (value.trim() ? value : null);
 const decimal = (value: string) => value.trim().replace(',', '.');
@@ -21,56 +24,61 @@ export function RecipeEditor({
   client,
   onSaved,
   onCancel,
+  recovered,
 }: {
   recipe: Recipe | null;
   client: RecipeClient;
   onSaved: (recipe: Recipe) => void;
   onCancel: () => void;
+  recovered?: Draft;
 }) {
-  const [draft, setDraft] = useState<RecipeInput>(() =>
-    recipe
-      ? {
-          id: recipe.id,
-          expectedRevision: recipe.revision,
-          title: recipe.title,
-          description: recipe.description,
-          kind: recipe.kind,
-          servings: recipe.servings,
-          prepMinutes: recipe.prepMinutes,
-          cookMinutes: recipe.cookMinutes,
-          notes: recipe.notes,
-          ingredients: recipe.ingredients,
-          steps: recipe.steps,
-        }
-      : {
-          id: crypto.randomUUID(),
-          expectedRevision: null,
-          title: '',
-          description: null,
-          kind: 'food',
-          servings: '1',
-          prepMinutes: null,
-          cookMinutes: null,
-          notes: null,
-          ingredients: [],
-          steps: [],
-        },
+  const [draft, setDraft] = useState<RecipeInput>(
+    () =>
+      recovered?.input ??
+      (recipe
+        ? {
+            id: recipe.id,
+            expectedRevision: recipe.revision,
+            title: recipe.title,
+            description: recipe.description,
+            kind: recipe.kind,
+            servings: recipe.servings,
+            prepMinutes: recipe.prepMinutes,
+            cookMinutes: recipe.cookMinutes,
+            notes: recipe.notes,
+            ingredients: recipe.ingredients,
+            steps: recipe.steps,
+          }
+        : {
+            id: crypto.randomUUID(),
+            expectedRevision: null,
+            title: '',
+            description: null,
+            kind: 'food',
+            servings: '1',
+            prepMinutes: null,
+            cookMinutes: null,
+            notes: null,
+            ingredients: [],
+            steps: [],
+          }),
   );
   const initial = useRef(JSON.stringify(draft));
-  const dirty = JSON.stringify(draft) !== initial.current;
+  const dirty = !!recovered || JSON.stringify(draft) !== initial.current;
+  const durable = useDurableDraft(client, draft, dirty, recovered);
   const [names, setNames] = useState<Record<string, string>>(
-    recipe?.ingredientNames ?? {},
+    recovered?.ingredientNames ?? recipe?.ingredientNames ?? {},
   );
   const [units, setUnits] = useState<Unit[]>([]);
-  const [ingredients, setIngredients] = useState<Ingredient[]>([]);
-  const [query, setQuery] = useState('');
+
   const [error, setError] = useState('');
   const [saving, setSaving] = useState(false);
   const [adding, setAdding] = useState(false);
   const [notice, setNotice] = useState('');
   const [discard, setDiscard] = useState(false);
   const pending = useRef(false);
-  const searchGeneration = useRef(0);
+  const [conflict, setConflict] = useState(false);
+  const [latestSaved, setLatestSaved] = useState<Recipe>();
   useEffect(() => {
     let active = true;
     void client
@@ -85,44 +93,10 @@ export function RecipeEditor({
       active = false;
     };
   }, [client]);
-  useEffect(() => {
-    let active = true;
-    const generation = ++searchGeneration.current;
-    const timer = setTimeout(() => {
-      void client
-        .searchIngredients(query)
-        .then((v) => {
-          if (active && generation === searchGeneration.current) {
-            setIngredients(v);
-            setNames((previous) => ({
-              ...previous,
-              ...Object.fromEntries(v.map((i) => [i.id, i.name])),
-            }));
-          }
-        })
-        .catch((e) => {
-          if (active) setError(errorMessage(normalizeError(e).messageKey));
-        });
-    }, 150);
-    return () => {
-      active = false;
-      clearTimeout(timer);
-    };
-  }, [client, query]);
-  useEffect(() => {
-    const guard = (e: BeforeUnloadEvent) => {
-      if (dirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', guard);
-    return () => window.removeEventListener('beforeunload', guard);
-  }, [dirty]);
   function update<K extends keyof RecipeInput>(key: K, value: RecipeInput[K]) {
     setDraft((d) => ({ ...d, [key]: value }));
   }
-  async function save() {
+  async function save(asCopy = false) {
     if (pending.current) return;
     const parsed = recipeInputSchema.safeParse(draft);
     if (!parsed.success) {
@@ -133,9 +107,29 @@ export function RecipeEditor({
     setSaving(true);
     setError('');
     try {
-      const result = await client.save(parsed.data);
+      const result = await durable.session.commit(parsed.data, asCopy);
       initial.current = JSON.stringify(draft);
       onSaved(result);
+    } catch (e) {
+      setError(errorMessage(normalizeError(e).messageKey));
+      setConflict(
+        ['CONFLICT', 'DRAFT_CONFLICT', 'NOT_FOUND'].includes(
+          normalizeError(e).code,
+        ),
+      );
+    } finally {
+      pending.current = false;
+      setSaving(false);
+    }
+  }
+  async function leave(erase: boolean) {
+    if (pending.current) return;
+    pending.current = true;
+    setSaving(true);
+    try {
+      if (erase) await durable.session.discard();
+      else await durable.flush();
+      onCancel();
     } catch (e) {
       setError(errorMessage(normalizeError(e).messageKey));
     } finally {
@@ -143,42 +137,40 @@ export function RecipeEditor({
       setSaving(false);
     }
   }
-  async function createIngredient() {
-    if (adding || !query.trim()) return;
-    setAdding(true);
+  async function viewLatest() {
     try {
-      const result = await client.createIngredient(query);
-      setNames((previous) => ({ ...previous, [result.id]: result.name }));
-      setIngredients((items) => [
-        result,
-        ...items.filter((i) => i.id !== result.id),
-      ]);
-      setDraft((current) => ({
-        ...current,
-        ingredients: [
-          ...current.ingredients,
-          {
-            id: crypto.randomUUID(),
-            ingredientId: result.id,
-            quantity: null,
-            unitCode: 'g',
-            note: null,
-          },
-        ],
-      }));
-      setNotice(t.ingredientSaved);
+      setLatestSaved(await client.get(draft.id));
     } catch (e) {
       setError(errorMessage(normalizeError(e).messageKey));
-    } finally {
-      setAdding(false);
     }
+  }
+  function selectIngredient(ingredient: {
+    id: string;
+    name: string;
+    preferredUnit?: string | null;
+  }) {
+    setNames((previous) => ({ ...previous, [ingredient.id]: ingredient.name }));
+    setDraft((current) => ({
+      ...current,
+      ingredients: [
+        ...current.ingredients,
+        {
+          id: crypto.randomUUID(),
+          ingredientId: ingredient.id,
+          quantity: null,
+          unitCode: ingredient.preferredUnit ?? 'g',
+          note: null,
+        },
+      ],
+    }));
+    setNotice(t.ingredientSaved);
   }
   return (
     <section className="recipe-editor">
       <div className="page-heading">
         <div>
           <p className="eyebrow">{t.heading}</p>
-          <h1>{recipe ? t.edit : t.newRecipe}</h1>
+          <h1>{draft.expectedRevision !== null ? t.edit : t.newRecipe}</h1>
         </div>
       </div>
       {error && (
@@ -187,13 +179,56 @@ export function RecipeEditor({
         </p>
       )}
       {notice && <p role="status">{notice}</p>}
+      <p role="status">
+        {dirty ? t.unsaved : t.editorClean} ·{' '}
+        {durable.status === 'pending'
+          ? t.draftPending
+          : durable.status === 'saving'
+            ? t.draftSaving
+            : durable.status === 'saved'
+              ? t.draftSaved
+              : durable.status === 'failed'
+                ? t.draftFailed
+                : ''}
+      </p>
+      {durable.failure ? (
+        <div className="recipe-error" role="alert">
+          <p>{errorMessage(normalizeError(durable.failure).messageKey)}</p>
+          <Button
+            variant="outline"
+            onClick={() => void durable.flush().catch(() => {})}
+          >
+            {t.retry}
+          </Button>
+        </div>
+      ) : null}
+      {(conflict ||
+        (recovered?.input.expectedRevision && !recovered.recipeId)) && (
+        <p role="alert">{t.conflictHelp}</p>
+      )}
+
+      {conflict && (
+        <Button variant="outline" onClick={() => void viewLatest()}>
+          {t.viewLatest}
+        </Button>
+      )}
+      {latestSaved && (
+        <details open>
+          <summary>{t.viewLatest}</summary>
+          <RecipeDetails recipe={latestSaved} />
+        </details>
+      )}
       <form
+        noValidate
         onSubmit={(e) => {
           e.preventDefault();
           void save();
         }}
       >
-        <fieldset disabled={saving} className="recipe-fieldset">
+        <fieldset
+          disabled={saving || durable.closing}
+          className="recipe-fieldset"
+        >
           <div className="panel recipe-form">
             <label>
               {t.title}
@@ -260,12 +295,14 @@ export function RecipeEditor({
           <RecipeIngredients
             lines={draft.ingredients}
             units={units}
-            ingredients={ingredients}
             names={names}
-            query={query}
-            onQuery={setQuery}
-            adding={adding}
-            onCreate={() => void createIngredient()}
+            search={
+              <IngredientSearchControl
+                client={client}
+                onSelect={selectIngredient}
+                onBusy={setAdding}
+              />
+            }
             onChange={(lines) => update('ingredients', lines)}
           />
           <RecipeSteps
@@ -289,10 +326,28 @@ export function RecipeEditor({
             <Button
               type="button"
               variant="outline"
-              onClick={() => (dirty ? setDiscard(true) : onCancel())}
+              onClick={() => (dirty ? setDiscard(true) : void leave(true))}
             >
               {t.cancel}
             </Button>
+            {dirty && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => void leave(false)}
+              >
+                {t.keepDraft}
+              </Button>
+            )}
+            {(conflict || recovered?.input.expectedRevision) && (
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => void save(true)}
+              >
+                {t.saveAsNew}
+              </Button>
+            )}
           </div>
         </fieldset>
       </form>
@@ -301,9 +356,16 @@ export function RecipeEditor({
           title={t.confirmDiscard}
           description={t.discardHelp}
           confirm={t.discard}
-          cancel={t.cancel}
+          cancel={t.continueEditing}
+          extra={{
+            label: t.save,
+            onClick: () => {
+              setDiscard(false);
+              void save();
+            },
+          }}
           onCancel={() => setDiscard(false)}
-          onConfirm={onCancel}
+          onConfirm={() => void leave(true)}
         />
       )}
     </section>

@@ -92,6 +92,7 @@ pub struct RecipeInput {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct Recipe {
+    pub archived_at: Option<String>,
     pub ingredient_names: std::collections::BTreeMap<String, String>,
     pub id: String,
     pub revision: i64,

@@ -3,8 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { expect, test, vi } from 'vitest';
 import { AppShell } from './AppShell';
 import type { FoundationClient } from '../shared/api/client';
+import { rendererRecipeClient } from '../test/recipeClient';
 import type { Bootstrap } from '../shared/contracts/foundation';
-const recipes = {list: vi.fn().mockResolvedValue([]), get: vi.fn(), save: vi.fn(), setDeleted: vi.fn(), searchIngredients: vi.fn().mockResolvedValue([]), createIngredient: vi.fn(), units: vi.fn().mockResolvedValue([])};
+const recipes=rendererRecipeClient();
 const data: Bootstrap = { preferences: { theme: 'light', locale: 'tr' }, storage: { schemaVersion: 1, sqliteVersion: '3.53.0', foreignKeys: true, fts5: true } };
 function client(): FoundationClient { return { bootstrap: vi.fn().mockResolvedValue(data), savePreferences: vi.fn().mockImplementation(async (p) => p) }; }
 // These injected clients isolate renderer behavior; Rust/native tests prove real persistence.

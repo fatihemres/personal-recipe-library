@@ -73,7 +73,7 @@ impl Database {
         {
             return Err(invalid());
         }
-        let mut s=self.conn.prepare("SELECT id FROM recipes WHERE (deleted_at IS NOT NULL)=?1 AND (?2 IS NULL OR kind=?2) ORDER BY updated_at DESC,id")?;
+        let mut s=self.conn.prepare("SELECT id FROM recipes WHERE (deleted_at IS NOT NULL)=?1 AND (?1 OR archived_at IS NULL) AND (?2 IS NULL OR kind=?2) ORDER BY updated_at DESC,id")?;
         let ids = s
             .query_map(params![trash, kind], |r| r.get::<_, String>(0))?
             .collect::<Result<Vec<_>, _>>()?;
@@ -82,80 +82,14 @@ impl Database {
     pub fn recipe(&self, id: &str) -> Result<Recipe, AppError> {
         valid_id(id)?;
         let tx = self.conn.unchecked_transaction()?;
-        let mut recipe=tx.query_row("SELECT id,revision,title,description,kind,servings,prep_minutes,cook_minutes,notes,created_at,updated_at,deleted_at FROM recipes WHERE id=?1",[id],|r|Ok(Recipe{ingredient_names:Default::default(),id:r.get(0)?,revision:r.get(1)?,title:r.get(2)?,description:r.get(3)?,kind:r.get(4)?,servings:r.get(5)?,prep_minutes:r.get(6)?,cook_minutes:r.get(7)?,notes:r.get(8)?,created_at:r.get(9)?,updated_at:r.get(10)?,deleted_at:r.get(11)?,ingredients:vec![],steps:vec![]})).optional()?.ok_or_else(not_found)?;
-        let mut s=tx.prepare("SELECT id,ingredient_id,quantity,unit_code,note FROM recipe_ingredients WHERE recipe_id=?1 ORDER BY position")?;
-        recipe.ingredients = s
-            .query_map([id], |r| {
-                Ok(RecipeIngredient {
-                    id: r.get(0)?,
-                    ingredient_id: r.get(1)?,
-                    quantity: r.get(2)?,
-                    unit_code: r.get(3)?,
-                    note: r.get(4)?,
-                })
-            })?
-            .collect::<Result<_, _>>()?;
-        let mut s = tx.prepare(
-            "SELECT id,instructions FROM recipe_steps WHERE recipe_id=?1 ORDER BY position",
-        )?;
-        recipe.steps = s
-            .query_map([id], |r| {
-                Ok(RecipeStep {
-                    id: r.get(0)?,
-                    instructions: r.get(1)?,
-                })
-            })?
-            .collect::<Result<_, _>>()?;
-        for line in &recipe.ingredients {
-            let name: String = tx.query_row(
-                "SELECT name FROM ingredients WHERE id=?1",
-                [&line.ingredient_id],
-                |r| r.get(0),
-            )?;
-            recipe
-                .ingredient_names
-                .insert(line.ingredient_id.clone(), name);
-        }
-        Ok(recipe)
+        read_recipe(&tx, id)
     }
     pub fn save_recipe(&mut self, input: RecipeInput) -> Result<Recipe, AppError> {
         input.validate()?;
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
-        if let Some(revision) = input.expected_revision {
-            let count=tx.execute("UPDATE recipes SET title=?2,description=?3,kind=?4,servings=?5,prep_minutes=?6,cook_minutes=?7,notes=?8,revision=revision+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1 AND revision=?9 AND deleted_at IS NULL",params![input.id,input.title.trim(),input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes,revision])?;
-            if count != 1 {
-                return Err(conflict());
-            }
-        } else {
-            if tx.query_row(
-                "SELECT EXISTS(SELECT 1 FROM recipes WHERE id=?1)",
-                [&input.id],
-                |r| r.get::<_, bool>(0),
-            )? {
-                return Err(conflict());
-            }
-            tx.execute("INSERT INTO recipes(id,title,description,kind,servings,prep_minutes,cook_minutes,notes) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",params![input.id,input.title.trim(),input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes])?;
-        }
-        tx.execute(
-            "DELETE FROM recipe_ingredients WHERE recipe_id=?1",
-            [&input.id],
-        )?;
-        tx.execute("DELETE FROM recipe_steps WHERE recipe_id=?1", [&input.id])?;
-        for (position, i) in input.ingredients.iter().enumerate() {
-            let valid=tx.query_row("SELECT EXISTS(SELECT 1 FROM ingredients WHERE id=?1) AND EXISTS(SELECT 1 FROM units WHERE code=?2)",params![i.ingredient_id,i.unit_code],|r|r.get::<_,bool>(0))?;
-            if !valid {
-                return Err(invalid());
-            }
-            tx.execute("INSERT INTO recipe_ingredients(id,recipe_id,ingredient_id,quantity,unit_code,position,note) VALUES(?1,?2,?3,?4,?5,?6,?7)",params![i.id,input.id,i.ingredient_id,i.quantity,i.unit_code,position as i64,i.note])?;
-        }
-        for (position, s) in input.steps.iter().enumerate() {
-            tx.execute(
-                "INSERT INTO recipe_steps(id,recipe_id,position,instructions) VALUES(?1,?2,?3,?4)",
-                params![s.id, input.id, position as i64, s.instructions.trim()],
-            )?;
-        }
+        write_recipe(&tx, &input)?;
         tx.commit()?;
         self.recipe(&input.id)
     }
@@ -172,4 +106,81 @@ impl Database {
         }
         self.recipe(id)
     }
+}
+
+pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recipe, AppError> {
+    let mut recipe=conn.query_row("SELECT id,revision,title,description,kind,servings,prep_minutes,cook_minutes,notes,created_at,updated_at,deleted_at,archived_at FROM recipes WHERE id=?1",[id],|r|Ok(Recipe{archived_at:r.get(12)?,ingredient_names:Default::default(),id:r.get(0)?,revision:r.get(1)?,title:r.get(2)?,description:r.get(3)?,kind:r.get(4)?,servings:r.get(5)?,prep_minutes:r.get(6)?,cook_minutes:r.get(7)?,notes:r.get(8)?,created_at:r.get(9)?,updated_at:r.get(10)?,deleted_at:r.get(11)?,ingredients:vec![],steps:vec![]})).optional()?.ok_or_else(not_found)?;
+    let mut s=conn.prepare("SELECT id,ingredient_id,quantity,unit_code,note FROM recipe_ingredients WHERE recipe_id=?1 ORDER BY position")?;
+    recipe.ingredients = s
+        .query_map([id], |r| {
+            Ok(RecipeIngredient {
+                id: r.get(0)?,
+                ingredient_id: r.get(1)?,
+                quantity: r.get(2)?,
+                unit_code: r.get(3)?,
+                note: r.get(4)?,
+            })
+        })?
+        .collect::<Result<_, _>>()?;
+    let mut s = conn
+        .prepare("SELECT id,instructions FROM recipe_steps WHERE recipe_id=?1 ORDER BY position")?;
+    recipe.steps = s
+        .query_map([id], |r| {
+            Ok(RecipeStep {
+                id: r.get(0)?,
+                instructions: r.get(1)?,
+            })
+        })?
+        .collect::<Result<_, _>>()?;
+    for line in &recipe.ingredients {
+        let name: String = conn.query_row(
+            "SELECT name FROM ingredients WHERE id=?1",
+            [&line.ingredient_id],
+            |r| r.get(0),
+        )?;
+        recipe
+            .ingredient_names
+            .insert(line.ingredient_id.clone(), name);
+    }
+    Ok(recipe)
+}
+
+pub(super) fn write_recipe(
+    tx: &rusqlite::Transaction<'_>,
+    input: &RecipeInput,
+) -> Result<(), AppError> {
+    if let Some(revision) = input.expected_revision {
+        let count=tx.execute("UPDATE recipes SET title=?2,description=?3,kind=?4,servings=?5,prep_minutes=?6,cook_minutes=?7,notes=?8,revision=revision+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1 AND revision=?9 AND deleted_at IS NULL AND archived_at IS NULL",params![input.id,input.title.trim(),input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes,revision])?;
+        if count != 1 {
+            return Err(conflict());
+        }
+    } else {
+        if tx.query_row(
+            "SELECT EXISTS(SELECT 1 FROM recipes WHERE id=?1)",
+            [&input.id],
+            |r| r.get::<_, bool>(0),
+        )? {
+            return Err(conflict());
+        }
+        tx.execute("INSERT INTO recipes(id,title,description,kind,servings,prep_minutes,cook_minutes,notes) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",params![input.id,input.title.trim(),input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes])?;
+    }
+    tx.execute(
+        "DELETE FROM recipe_ingredients WHERE recipe_id=?1",
+        [&input.id],
+    )?;
+    tx.execute("DELETE FROM recipe_steps WHERE recipe_id=?1", [&input.id])?;
+    for (position, i) in input.ingredients.iter().enumerate() {
+        let valid=tx.query_row("SELECT EXISTS(SELECT 1 FROM ingredients WHERE id=?1) AND EXISTS(SELECT 1 FROM units WHERE code=?2)",params![i.ingredient_id,i.unit_code],|r|r.get::<_,bool>(0))?;
+        if !valid {
+            return Err(invalid());
+        }
+        tx.execute("INSERT INTO recipe_ingredients(id,recipe_id,ingredient_id,quantity,unit_code,position,note) VALUES(?1,?2,?3,?4,?5,?6,?7)",params![i.id,input.id,i.ingredient_id,i.quantity,i.unit_code,position as i64,i.note])?;
+    }
+    for (position, s) in input.steps.iter().enumerate() {
+        tx.execute(
+            "INSERT INTO recipe_steps(id,recipe_id,position,instructions) VALUES(?1,?2,?3,?4)",
+            params![s.id, input.id, position as i64, s.instructions.trim()],
+        )?;
+    }
+    Ok(())
 }

@@ -1,6 +1,6 @@
 # Architecture
 
-Status: M1 foundation implemented, 2026-10-08; later domain modules remain proposed. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
+Status: M1, M2A and M2B implemented, 2026-10-08; M3 and later domain modules remain proposed. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
 
 ## Boundaries and technology decisions
 
@@ -107,7 +107,7 @@ Build/sign macOS Apple Silicon and supported Intel, Windows on native CI hosts. 
 - The original greeting verification is replaced by real bootstrap diagnostics and preference persistence. Unused opener runtime/dependency/capability removed. CSP now scopes production assets/IPC; native window minimum size and Turkish native menu resources added.
 - Native UI verification uses the unsigned packaged debug .app with no Vite server: live diagnostics and light/dark switching, full quit/relaunch with saved dark theme. Browser mock/client tests are explicitly separate from this evidence. Windows/Intel/signing/installer/native driver automation remain unverified.
 
-## M2A implementation decisions — 2026-10-08
+## M2A implementation decisions — 2026-10-08 (historical; M2B extends these below)
 
 The existing Tauri/React/Rust worker architecture is retained. Typed command closures are queued to the same database-owning thread, using oneshot results; no renderer SQL/filesystem permissions were added. Domain validation lives in `domain/recipes.rs`, parameterized transactional repositories in `persistence/recipes.rs`, and adapters in `commands.rs`. Frontend contracts/API clients remain separate from library/editor/ingredient controls and the reusable native HTML confirmation dialog. Settings navigation keeps the recipe UI mounted to preserve in-memory edits.
 
@@ -116,3 +116,19 @@ New Rust dependencies are pinned uuid 1.27.0 (`v4`, stable identities) and unico
 Measurements are authoritative positive decimal strings, not floating-point. M2A deliberately preserves entered quantities and selected units without conversion/scaling; units carry exact standard factor metadata for M6. Canonical/normalized quantity storage is not yet implemented and is reserved for an additive measurement migration. No mass/volume conversion is inferred. Personal ingredient definitions survive recipe deletion/cancel and will be extended with separate source/catalog/localization entities at M3.
 
 Optimistic revision checks prevent silent stale writes. Owned child rows are replaced atomically with stable IDs and explicit order. Soft delete and restore retain aggregate data; no permanent purge command exists. Personal ingredient creation reuses obvious normalized duplicates. Catalog ingestion and advanced fuzzy search remain unimplemented. Current recipe lists are unpaginated, and title filtering is renderer-side; summary/pagination and FTS performance work must precede catalog-scale library claims. Full durable drafts remain M2B, so save before quitting/crashing.
+
+## M2B reliability decisions — 2026-10-08
+
+The existing React → Zod-validated IPC → thin Rust command → dedicated storage worker → repository/SQLite architecture is retained. No new dependencies or capabilities were required. Reliability models/repositories compose the M2A aggregate writer within one transaction; saved decimal quantities and original unit references remain unchanged.
+
+`DraftSession` serializes debounced/periodic writes, explicit Save and Discard for one stable session UUID. `useDurableDraft` checkpoints after 500 ms of idle input and every 2 seconds while editing, retaining partially entered decimal strings and blank steps. Draft revision CAS prevents two recovered editors from silently replacing each other. The original recipe ID/base revision stays immutable in a session; stale recipe saves fail. An explicitly requested save-as-new generates independent recipe/child IDs; a shared-session conflict forks a new session without deleting another editor's work.
+
+A successful Save atomically writes the recipe aggregate and closes its draft, removing its payload/references. A tiny closed-session tombstone rejects delayed autosaves. This is intentional; deleting that row immediately would permit a queued first-write to recreate an obsolete draft. Tombstone retention/compaction needs a separately designed safe policy. Draft payload format 1 is bounded JSON with separate FK-backed ingredient references, not production recipe rows. Schema upgrades must migrate payload formats explicitly rather than deserialize incompatible drafts silently.
+
+Native window close and app ExitRequested (including Cmd-Q) request the registered renderer guard, await its latest draft flush, and only then authorize Rust exit. Failure keeps the editor open with Turkish feedback. Force-quit/renderer failure cannot flush unacknowledged keystrokes; acknowledged SQLite snapshots recover after unexpected process termination. Debounce is a bounded recovery window, not per-keystroke durability or a portable backup.
+
+Archive and deletion are independent timestamps with revision increments. Trash hides both active and archived records; restoration retains the previous archive state. Purge is restricted to deleted recipes at the expected revision and cascades only owned steps/lines. Edit drafts survive with NULL recipe FK after purge, preserving original ID/base in their payload for explicit recovery-as-new. Future media/history entities must extend purge safety before those features ship.
+
+Personal ingredient edits use their own optimistic revision, notes and preferred-unit FK. Referenced definitions (saved recipes, including archive/trash, and active drafts) cannot be deleted. Renaming changes display names everywhere without changing IDs or measurements. A normalized duplicate rename is a localized conflict, never an automatic merge. Personal records stay independent of future catalog provenance/override entities.
+
+Search normalizes both stored names and queries with NFC, Turkish-aware case mapping and whitespace handling, using a parameterized substring query. SQLite NOCASE is insufficient for Turkish. No M2A matching defect reproduced against saved Şeker; M2B adds real catalog counts, distinct empty/no-match/error states, keyboard autocomplete, exact-name priority and an explicit 50-result refinement notice. Typo tolerance, aliases and catalog indexing remain M3/M4. Lists remain unpaginated; performance work is still required before large-library claims.

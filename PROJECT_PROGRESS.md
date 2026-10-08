@@ -3,7 +3,7 @@
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
-Current state: M1 and M2A implemented and verified on macOS arm64, 2026-10-08. Next task is M2B; M3 and later modules remain pending. The M2A handoff below is current; older inspection/planning/M1 sections are historical.
+Current state: M1, M2A and M2B implemented, 2026-10-08, with actual SQLite tests and native macOS arm64 evidence. Next task is M3; no catalog import has started. The M2B handoff at the end is current; earlier sections are historical and retain their original milestone boundaries.
 
 ## Existing project
 - `package.json` / `package-lock.json`: npm scripts and locked frontend dependencies; scripts for dev, build, preview, and Tauri.
@@ -167,3 +167,68 @@ Implement reversible archive/filtering and recipe duplication with distinct reci
 ### Local launch and version control
 
 `npm run tauri -- dev` launches the native development app. Standalone unsigned local bundle: `npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline`, then `open src-tauri/target/debug/bundle/macos/personal-recipe-library.app`. `npm run dev` alone is a browser preview and truthfully cannot access native SQLite. M2A is recorded in a logical local completion commit; use `git log -1` for its full hash. No push/tag/release was performed.
+
+## M2B completed — Recipe Reliability, Draft Recovery & Advanced Management, 2026-10-08
+
+### Implemented and preserved
+
+- Durable SQLite new/edit drafts separate from production recipes, recovering partial quantities/servings and blank steps. 500 ms debounced saving, 2-second periodic checkpoint, accurate pending/saving/acknowledged/failure states, Turkish recovery/resume/discard controls and leave-with-draft action.
+- Stable per-editor session IDs, serialized autosave/Save/Discard, immutable recipe base revisions and draft CAS. Explicit Save atomically commits the recipe and closes its draft; tombstones reject delayed autosave resurrection. Failed writes preserve previous committed data and recoverable input. Stale recipe/shared draft sessions never silently overwrite newer work; current-record preview and explicit save-as-new are available.
+- Native close/ExitRequested handshake awaits the current editor's flush before allowing exit. Cmd-Q recovery verified. Failure retains the window/input. Abrupt termination recovers acknowledged SQLite data; unacknowledged input within debounce/interval is not guaranteed.
+- Recipe duplication with new recipe/line/step UUIDs, unchanged precise quantities/units/order and shared ingredient IDs. Independent editability verified.
+- Active/archive/trash views, reversible archive/unarchive, soft deletion/restore and explicit permanent purge confirmation. Restore retains former archive state. Purge affects only recipe-owned rows, preserves shared ingredients and orphaned draft payloads for explicit save-as-new.
+- Personal ingredient names, notes and preferred units editable with optimistic revisions; rename preserves references; duplicate rename has a Turkish conflict; deletion of any saved/draft-referenced ingredient is blocked. Existing create reuses normalized duplicates.
+- Turkish keyboard/mouse autocomplete with clear empty catalog/no-match/storage-error messages, inline creation, exact-name priority and 50-result refinement notice. Actual saved/reopened Şeker matches Şek/şek/ŞEK/şeker; İ/i and I/ı pairs verified with real SQLite and IPC. Native four Şeker searches and İçme suyu/iç also verified. No actual matching defect reproduced in M2A; ambiguous empty-state UX was improved. No global catalog seeds or fabricated coverage.
+- New checksummed migration 003; applied 001/002 untouched. Existing worker/SQLite/FK/WAL/FTS5/private paths/pre-migration snapshots retained. No dependency, lockfile, architecture replacement or capability expansion. M1 settings/themes and M2A workflows retain regression coverage.
+
+### Modules/files changed
+
+Backend: `migrations/003_reliability.sql`; `domain/reliability.rs` and recipe archive DTO; `persistence/reliability.rs`/tests, migration registry and aggregate writer composition; commands/registration/IPC tests; `lib.rs` native exit handshake. Existing M1/M2A tests now expect schema 3 without modifying their historical migration fixtures.
+
+Frontend: `app/nativeExit.ts`, shell navigation/exit feedback; recipe contracts/client/localization; `DraftSession.ts`, `useDurableDraft.ts`, `DraftRecovery.tsx`, `RecipeDetails.tsx`; library/editor/ingredient-line UI; new ingredient search/manager public feature module; confirmation dialog/styles; renderer tests and test-only client fixture.
+
+Documentation: AGENTS, README, CHANGELOG, ARCHITECTURE, DATABASE_SCHEMA, DATA_DICTIONARY, FEATURE_CHECKLIST, IMPLEMENTATION_PLAN, TESTING and this handoff. MASTER_SPEC and measurement scope retained unchanged.
+
+### Verification results
+
+| Check | Actual result |
+| --- | --- |
+| npm run typecheck / npm run lint | Passed, no warnings |
+| npm test | Passed: 28 tests across 8 files |
+| npm run test:ui | Passed: 2 Chromium browser boundary/responsive tests |
+| npm run build | Passed (also final native bundle's production frontend) |
+| cargo fmt --check / cargo check --locked --offline | Passed |
+| cargo test --locked --offline | Passed: 31 tests, retained M1/M2A regression coverage |
+| cargo clippy --locked --offline --all-targets -- -D warnings | Passed |
+| Locked/offline unsigned debug macOS app builds | Passed for isolated and normal identifiers |
+| Native packaged UI→IPC→SQLite workflows/restarts | Passed for new/edit recovery, explicit save, four Şeker searches, duplicate independence, archive/unarchive, trash/restore and shared rename |
+| Unexpected process termination | Passed with actual SQLite/open-connection subprocess test |
+| Development native launch | Compiled and ran on isolated port 1430 after default 1420 was occupied; stopped cleanly |
+| Later/final GUI checks | Limited by ScreenCaptureKit -3811; see below |
+| Windows/Intel, installers/signing/notarization | Not tested |
+
+Actual schema-2→3 upgrade fixture preserves recipes/IDs/decimal units/order/preferences/checksums and startup idempotency. New registered IPC commands use actual storage, not mock repositories. Frontend clients isolate UI behavior only. Permanent purge/discard/reference safety and transaction rollback are tested against real SQLite; native purge confirmation was opened and canceled. Detailed evidence and exact coverage boundaries are in TESTING.md.
+
+Native test data is isolated under `com.recipeatlas.m2b-verification`; no test recipes were added to the normal production database. The final repository .app bundle uses unchanged `com.recipeatlas.desktop`. Fresh copied app paths avoid the earlier CUA bundle-identity cache issue.
+
+### Remaining issues and verification limits
+
+- No known failing automated check. The native capture service later returned ScreenCaptureKit -3811, including after tool reset. Further native dotless-I UI observation, window-close-button flush, failure feedback, final small mouse-focus/icon/listener-error/localization refinements and normal production-identifier launch were not observed; do not claim those GUI checks passed. Four native Şeker queries, new/edit Cmd-Q restart recovery and actual SQLite İ/i/I/ı tests did pass.
+- Default `npm run tauri -- dev` failed because another process occupied port 1420, not because of a timeout. Config-only port-1430 retry launched. The existing process was not interrupted. Further users may need to free their own dev server or use the temporary command below.
+- Last unacknowledged input may be lost during force-quit before an autosave is committed. Renderer failure cannot participate in graceful flush; force-quit still recovers previous acknowledged drafts. Closed session tombstones intentionally remain; safe compaction policy is future maintenance work. Schema upgrades must explicitly migrate draft format 1 before changing payload contracts.
+- Lists remain unpaginated and recipe title filters remain renderer-side; no fuzzy/FTS recipe search, media/history, advanced editor/measurement features or portable backups implemented. Full requested V1 scope remains tracked.
+- No Windows/Intel runtime or trusted signed release verified. Unsigned macOS debug build is an internal verification artifact only.
+
+### Next milestone and local launch
+
+**M3 — Ingredient catalog and source pipeline.** Begin with licensing/source/coverage decisions, schema/provenance/localized alias/override design, then a real normalized versioned idempotent offline seed pipeline with user-edit protection and actual coverage report. No M3 work has begun; stop at M2B in this task.
+
+Normal launch: `npm run tauri -- dev`. If port 1420 is occupied, a nonpersistent isolated verification command is:
+
+```sh
+npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m2b-verification","build":{"beforeDevCommand":"npm run dev -- --port 1430","devUrl":"http://localhost:1430"}}' -- --locked --offline
+```
+
+This command uses separate verification data, not the personal production library. To use normal personal data on another port, omit its identifier override. Standalone normal app: `npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline`, then `open src-tauri/target/debug/bundle/macos/personal-recipe-library.app`. Build output is ignored.
+
+Git was clean at start (M2A HEAD `52d0629fb326f67723c22a153a0210642a43f917`). M2B is grouped in one verified local commit; use `git log -1` for its full hash. No push/tag/release performed, and no personal databases/test artifacts are committed.

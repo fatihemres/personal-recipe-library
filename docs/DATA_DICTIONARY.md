@@ -1,6 +1,6 @@
 # Data dictionary
 
-M1 implemented data and contracts. Future domain entities remain proposed in ARCHITECTURE.md; no recipe tables or CRUD are available.
+Implemented M1/M2A/M2B data and contracts. Future entities remain proposed in ARCHITECTURE.md.
 
 | Table / field | Type and meaning | Constraint / policy |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ M1 implemented data and contracts. Future domain entities remain proposed in ARC
 - Structured errors: `code`, `messageKey`, `recoverable`; keys resolve in `src/shared/i18n/tr.ts`. Codes: STORAGE_BUSY, STORAGE_UNAVAILABLE, SCHEMA_INTEGRITY, SCHEMA_TOO_NEW, INVALID_INPUT, FTS_UNAVAILABLE. Renderer adds DESKTOP_REQUIRED, INVALID_RESPONSE, UNKNOWN. Tauri deserialization failures are normalized as unknown safe errors.
 - `foreignKeys` means actual connection PRAGMA; `fts5` means a successful real temporary FTS query; `sqliteVersion` is bundled runtime version. None is a hardcoded statistic or recipe count.
 
-## Initial future DTO contracts
+## Original M1 future DTO outline (superseded by implemented contracts below)
 
 `src/shared/contracts/recipe.ts` contains validation/type definitions only, for M2: recipe kind food/beverage, trimmed nonempty title, positive decimal-string yield, ingredient UUID references, nullable decimal-string quantities and unit codes, ordered step UUID/position/description, canonical/display ingredient names, and unit dimensions mass/volume/count/temperature. Numeric canonical strings use a dot; localized entry parsing is a future measurement concern. Null means unknown/as-needed, not zero. These contracts will gain advanced fields as their milestones arrive; they do not enable or simulate recipe features.
 
@@ -34,3 +34,13 @@ M1 implemented data and contracts. Future domain entities remain proposed in ARC
 - Ingredient: id and name (trimmed 1–200 characters). NFC + Turkish-aware lowercase + collapsed whitespace key supports search/exact duplicate reuse. Source/product/localized names are later catalog extensions.
 - Unit: code, dimension mass/volume/count, canonicalCode and exact integer factor. No custom unit editor yet.
 - IPC: list_recipes(trash,kind), get_recipe(id), save_recipe(input), set_recipe_deleted(id,revision,deleted), search_ingredients(query), create_ingredient(name), list_units. Existing bootstrap/save_preferences unchanged. Frontend output schemas are strict Zod contracts; Rust validates authoritative input and uses the existing structured error envelope. CONFLICT and NOT_FOUND have Turkish messages; SQL constraints map to validation errors without exposing SQL/paths.
+
+## Implemented M2B contracts
+
+- `Recipe` additionally includes nullable `archivedAt`. Active, archived and trash scope are explicit; `revision` changes on lifecycle operations as well as Save.
+- `Draft`: id (session UUID), revision (positive CAS token), recipeId (nullable canonical FK), updatedAt, input (raw incomplete `RecipeInput`), ingredientNames (live display names). Raw decimal strings may be incomplete; production validation is applied only at explicit commit. The payload's expectedRevision is the immutable recipe base, separate from the draft revision.
+- `DraftWrite`: id, expectedRevision (draft CAS token; null=new session), input. The two expectedRevision values refer to distinct records and must not be interchanged.
+- `PersonalIngredient`: id, name, notes (nullable max 2000), preferredUnit (nullable unit code), revision, origin. Edits/deletions apply only to personal origin. Search response: items, total (all personal definitions, not result count), hasMore (more than 50 matches).
+- New IPC: list_drafts(), get_draft(id), save_draft(write), discard_draft(id,revision), commit_recipe(input,draftId,draftRevision,asCopy), duplicate_recipe(id,revision), scope_recipes(scope,kind), archive_recipe(id,revision,archived), purge_recipe(id,revision), search_personal_ingredients(query), edit_ingredient(input), delete_ingredient(id,revision). Unit-returning commands serialize to JSON null. M1/M2A commands remain available.
+- `finish_exit` is the native exit handshake, invoked only after the registered recipe draft guard succeeds. Renderer never receives direct DB/filesystem access.
+- DRAFT_CONFLICT distinguishes a stale/closed/shared draft session; CONFLICT denotes a stale recipe/ingredient/lifecycle revision. INGREDIENT_DUPLICATE reports a rename collision; INGREDIENT_REFERENCED protects saved/draft references. These have localized messages and keep input available. NOT_FOUND remains explicit for missing records. No raw SQL/filesystem paths are exposed.

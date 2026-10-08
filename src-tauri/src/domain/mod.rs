@@ -1,4 +1,5 @@
 pub mod recipes;
+pub mod reliability;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, PartialEq)]

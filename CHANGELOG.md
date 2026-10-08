@@ -15,3 +15,12 @@
 - Turkish editor/detail/library, kind/title filters, confirmed soft deletion, trash and restore, validation/error states and in-memory edit preservation across Settings navigation.
 - Additive checksummed migration 002, revision conflicts, transactional rollback and FK safeguards; M1 preferences/migration/FTS infrastructure retained.
 - Persistence/IPC/UI regression tests and packaged native macOS restart verification. M2B and later modules remain pending.
+
+## M2B — Recipe Reliability & Advanced Management (2026-10-08, unreleased)
+
+- Real SQLite new/edit drafts, incomplete input recovery, debounced/periodic checkpoints and graceful native close/Cmd-Q flush with failure retention.
+- Serialized draft/Save/Discard operations, atomic draft cleanup, closed-session tombstones, stale editor protection and explicit recovery-as-new.
+- Independent duplication, reversible archive/unarchive, active/archive/trash views, restore and confirmed permanent deletion preserving shared ingredients/drafts.
+- Personal ingredient name/notes/preferred-unit edits, optimistic revisions, duplicate conflicts and reference-safe deletion.
+- Turkish keyboard autocomplete, distinct actual empty/no-match/error states; saved SQLite Şeker and İ/i, I/ı regression coverage. No global catalog seeds.
+- Additive migration 003 with unchanged applied 001/002; real storage/registered IPC tests, subprocess unexpected-termination recovery and native macOS restart verification. M3 and later milestones remain pending.

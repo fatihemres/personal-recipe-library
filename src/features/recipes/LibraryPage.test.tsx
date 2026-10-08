@@ -2,32 +2,10 @@ import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { expect, test, vi } from 'vitest';
 import { LibraryPage } from './LibraryPage';
-import type { RecipeClient } from '../../shared/api/recipes';
+import { rendererRecipeClient } from '../../test/recipeClient';
 import type { Recipe } from '../../shared/contracts/recipe';
 // Renderer tests isolate interaction; real SQLite and native tests independently prove persistence.
-function client(): RecipeClient {
-  const ingredient = { id: crypto.randomUUID(), name: 'İçme suyu' };
-  return {
-    list: vi.fn().mockResolvedValue([]),
-    get: vi.fn(),
-    save: vi.fn().mockImplementation(async (input) => ({
-      ...input,
-      expectedRevision: undefined,
-      revision: 1,
-      createdAt: 'now',
-      updatedAt: 'now',
-      deletedAt: null,
-      ingredientNames: { [ingredient.id]: ingredient.name },
-    })),
-    setDeleted: vi.fn(),
-    searchIngredients: vi.fn().mockResolvedValue([ingredient]),
-    createIngredient: vi.fn().mockResolvedValue(ingredient),
-    units: vi.fn().mockResolvedValue([
-      { code: 'cc', dimension: 'volume', canonicalCode: 'mL', factor: 1 },
-      { code: 'g', dimension: 'mass', canonicalCode: 'g', factor: 1 },
-    ]),
-  };
-}
+const client = rendererRecipeClient;
 test('create recipe with personal ingredient, decimal comma and reordered steps', async () => {
   const api = client();
   const user = userEvent.setup();
@@ -87,6 +65,7 @@ test('safe deletion requires confirmation and trash offers restore', async () =>
     createdAt: 'now',
     updatedAt: 'now',
     deletedAt: null,
+    archivedAt: null,
     ingredients: [],
     steps: [],
     ingredientNames: {},
@@ -146,7 +125,45 @@ test('save errors keep unfinished edits and cancel requires explicit discard', a
   await user.click(screen.getByRole('button', { name: 'Vazgeç' }));
   expect(screen.getByRole('dialog')).toBeVisible();
   await user.click(
-    within(screen.getByRole('dialog')).getByRole('button', { name: 'Vazgeç' }),
+    within(screen.getByRole('dialog')).getByRole('button', {
+      name: 'Düzenlemeye devam et',
+    }),
   );
   expect(screen.getByLabelText('Tarif adı')).toHaveValue('Çorba');
+});
+test('archive scopes, duplication and permanent deletion are explicit UI actions', async () => {
+  const api = client();
+  const recipe: Recipe = {
+    id: crypto.randomUUID(), revision: 1, title: 'Çay', kind: 'beverage',
+    servings: '1', description: null, prepMinutes: null, cookMinutes: null,
+    notes: null, createdAt: 'now', updatedAt: 'now', deletedAt: null,
+    archivedAt: null, ingredients: [], steps: [], ingredientNames: {},
+  };
+  vi.mocked(api.scope).mockResolvedValue([recipe]);
+  vi.mocked(api.get).mockResolvedValue(recipe);
+  vi.mocked(api.archive).mockResolvedValue({ ...recipe, revision: 2, archivedAt: 'now' });
+  vi.mocked(api.duplicate).mockResolvedValue({ ...recipe, id: crypto.randomUUID() });
+  const user = userEvent.setup();
+  render(<LibraryPage client={api} />);
+  await user.click(await screen.findByRole('button', { name: /Çay/ }));
+  await user.click(screen.getByRole('button', { name: 'Arşivle' }));
+  await screen.findByRole('button', { name: 'Arşivden çıkar' });
+  expect(api.archive).toHaveBeenCalledWith(recipe.id, 1, true);
+  await user.click(screen.getByRole('button', { name: 'Tarifi çoğalt' }));
+  await screen.findByText('Tarif bağımsız bir kopya olarak oluşturuldu.');
+  expect(api.duplicate).toHaveBeenCalledWith(recipe.id, 2);
+  await user.click(screen.getByRole('button', { name: 'Kütüphaneye dön' }));
+  await user.click(screen.getByRole('button', { name: 'Arşiv' }));
+  await waitFor(() => expect(api.scope).toHaveBeenCalledWith('archived', null));
+  vi.mocked(api.get).mockResolvedValue({ ...recipe, deletedAt: 'now', revision: 3 });
+  await user.click(screen.getByRole('button', { name: 'Çöp kutusu' }));
+  await user.click(await screen.findByRole('button', { name: /Çay/ }));
+  await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
+  expect(api.purge).not.toHaveBeenCalled();
+  expect(screen.getByRole('dialog')).toHaveTextContent('geri alınamaz');
+  await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Vazgeç' }));
+  expect(api.purge).not.toHaveBeenCalled();
+  await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
+  await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
+  await waitFor(() => expect(api.purge).toHaveBeenCalledWith(recipe.id, 3));
 });

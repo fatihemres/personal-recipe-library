@@ -1,6 +1,7 @@
 pub mod migrations;
 mod preferences;
 mod recipes;
+mod reliability;
 use crate::domain::{AppError, Bootstrap, StorageStatus};
 use rusqlite::{Connection, OpenFlags};
 use std::{path::Path, time::Duration};
@@ -92,3 +93,6 @@ mod tests;
 
 #[cfg(test)]
 mod recipe_tests;
+
+#[cfg(test)]
+mod reliability_tests;

@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation and M2A persistent recipe slice implemented and verified; M2B and M3–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
+Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation, M2A persistent recipes and M2B reliability implemented and verified; M3–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
 
 ## Delivery rules and common acceptance gate
 
@@ -44,7 +44,7 @@ Tests: recipe/ingredient CRUD, invalid yields/quantities, rollback and revision 
 
 M2A delivers the real persistent vertical slice: food/beverage recipe create/read/edit/list, independent personal ingredient creation/search/exact normalized deduplication, nullable precise decimal quantities with six standard unit references, ordered steps, safe soft deletion and basic trash/restore UI. Transaction rollback, referential integrity, stale revisions, M1→M2 migration, Turkish Unicode and native restart are acceptance gates. No catalog fixtures, mock persistence or full measurement engine. This is the explicitly requested first part of M2, not completion of all M2 requirements above.
 
-M2B remains responsible for duplication, archive state/filtering, durable draft autosave/recovery with crash/restart tests and clear saved-vs-draft policy; broader ingredient editing/deletion with reference protection; richer validation/accessibility/keyboard workflows and conflict-resolution UX. Refine list queries/pagination as needed ahead of large catalogs. Preserve existing stable identities and decimal strings. Basic trash and restore already work; expanded recovery/purge policies must remain compatible with future media/history safety. Full Quick Add/Advanced editor coverage remains tracked across M2/M5, and the complete conversion engine remains M6. Do not begin M2B or M3 during the M2A task.
+M2B (completed 2026-10-08) implements duplication, archive state/filtering, durable draft autosave/recovery with crash/restart tests and clear saved-vs-draft policy; broader ingredient editing/deletion with reference protection; richer validation/accessibility/keyboard workflows and conflict-resolution UX. Refine list queries/pagination as needed ahead of large catalogs. Preserve existing stable identities and decimal strings. Basic trash and restore already work; expanded recovery/purge policies must remain compatible with future media/history safety. Full Quick Add/Advanced editor coverage remains tracked across M2/M5, and the complete conversion engine remains M6. The M2A task stopped at its own boundary; the subsequent M2B task does not begin M3.
 
 M2B acceptance: duplicate has a distinct recipe identity and correctly remapped child IDs; archive is reversible and distinct from trash; unfinished drafts recover after quit/crash without overwriting saved revisions; reference-safe ingredient edits preserve recipes; M1/M2A regression suites and native restart smoke pass. Each migration is additive/checksummed; keep the application runnable between increments.
 
@@ -186,3 +186,9 @@ Catalog coverage size and legal source approval gate M3; household defaults and 
 ## V2 distinction
 
 Only full English UI translation and optional video-reference user experience are explicitly future-facing requested capabilities; their V1 architecture support remains mandatory. Optional online sync/catalog refresh, hardware scanning, AI or video hosting are proposals, not commitments. No R01–R20 module is assigned to V2. Changing that requires a recorded user-approved scope revision, not a convenience decision during coding.
+
+## M2B completion and next gate — 2026-10-08
+
+Delivered additive schema 003, durable new/edit drafts with debounce and native-close flush, recovery/discard, atomic Save cleanup with tombstones, stale recipe/session protection and explicit save-as-new; independent duplication; separate active/archive/trash views and confirmed purge; personal ingredient metadata edits with duplicate/reference safeguards; Turkish keyboard autocomplete, actual catalog/no-match/error states and search regressions against saved SQLite ingredients. M1/M2A functionality retained. See PROJECT_PROGRESS.md and TESTING.md for actual checks/native evidence and limitations.
+
+M3 is the next implementation milestone: ingredient catalog research/licensing, normalized canonical/source/localized/alias metadata, real repeatable versioned seeding with user-override preservation and truthful coverage report. First M3 increment must resolve legally reusable source material and coverage acceptance before redistributing/importing it. Do not fill empty catalogs with fabricated records. Large-list pagination, advanced search, full Quick Add/Advanced modes, measurement conversions and other pending requirements remain assigned to their existing later gates; none was silently removed.

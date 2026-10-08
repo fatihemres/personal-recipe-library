@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
-  BookOpen, Settings, Leaf, Menu, CircleCheck, AlertTriangle, LoaderCircle,
-  Wine, Carrot, Package, ShoppingBasket, CalendarDays, FolderHeart, ChartNoAxesCombined,
+  BookOpen, Settings, Carrot, Leaf, Menu, CircleCheck, AlertTriangle, LoaderCircle,
+  Wine, Package, ShoppingBasket, CalendarDays, FolderHeart, ChartNoAxesCombined,
 } from 'lucide-react';
 import { foundationClient, type FoundationClient } from '../shared/api/client';
 import { errorMessage, messages as t } from '../shared/i18n';
@@ -10,12 +10,13 @@ import { recipeClient, type RecipeClient } from '../shared/api/recipes';
 import { LibraryPage } from '../features/recipes/LibraryPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
 import { useFoundation } from './useFoundation';
+import { installNativeExitHandler } from './nativeExit';
+import { IngredientManager } from '../features/ingredients';
 import { useTheme } from './theme';
 
 const futureModules = [
   { label: t.dashboard, Icon: ChartNoAxesCombined },
   { label: t.beverage, Icon: Wine },
-  { label: t.ingredients, Icon: Carrot },
   { label: t.pantry, Icon: Package },
   { label: t.shopping, Icon: ShoppingBasket },
   { label: t.planner, Icon: CalendarDays },
@@ -24,8 +25,21 @@ const futureModules = [
 
 export function AppShell({ client = foundationClient, recipes = recipeClient }: { client?: FoundationClient; recipes?: RecipeClient }) {
   const { data, error, loading, saving, load, saveTheme } = useFoundation(client);
-  const [page, setPage] = useState<'library' | 'settings'>('library');
+  const [page, setPage] = useState<'library' | 'settings' | 'ingredients'>('library');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [exitError, setExitError] = useState('');
+  useEffect(() => {
+    let active = true;
+    let unlisten: (() => void) | undefined;
+    void installNativeExitHandler(() => setExitError(t.closeFailed)).then(
+      (cleanup) => {
+        if (active) unlisten = cleanup;
+        else cleanup();
+      },
+      () => { if (active) setExitError(t.closeFailed); },
+    );
+    return () => { active = false; unlisten?.(); };
+  }, []);
   useTheme(data?.preferences.theme ?? 'system');
 
   function navigate(next: typeof page) {
@@ -58,6 +72,13 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
           >
             <Settings size={19} aria-hidden="true" />{t.settings}
           </button>
+          <button
+            className={`nav-item ${page === 'ingredients' ? 'active' : ''}`}
+            aria-current={page === 'ingredients' ? 'page' : undefined}
+            onClick={() => navigate('ingredients')}
+          >
+            <Carrot size={19} aria-hidden="true" />{t.ingredients}
+          </button>
         </nav>
         <section className="future-modules" aria-label={t.future}>
           <p className="nav-heading">{t.future}</p>
@@ -78,7 +99,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               aria-controls="sidebar" aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
             ><Menu size={20} aria-hidden="true" /></Button>
-            <span>{page === 'library' ? t.library : t.settings}</span>
+            <span>{page === 'library' ? t.library : page === 'ingredients' ? t.ingredients : t.settings}</span>
           </div>
           <span className="connection-status">
             {error ? <><AlertTriangle size={15} aria-hidden="true" />{t.storageUnavailable}</>
@@ -87,6 +108,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
           </span>
         </header>
         <main id="main-content" tabIndex={-1} className="main-content">
+          {exitError && <p role="alert" className="recipe-error">{exitError}</p>}
           {loading && (
             <section className="state-panel" role="status">
               <LoaderCircle className="spin" size={28} aria-hidden="true" />
@@ -104,7 +126,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               </div>
             </section>
           )}
-          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientManager client={recipes} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>

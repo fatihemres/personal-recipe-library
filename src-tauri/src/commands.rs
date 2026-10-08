@@ -67,6 +67,115 @@ pub async fn list_units(state: tauri::State<'_, StorageService>) -> Result<Vec<U
     state.execute(|d| d.units()).await
 }
 
+use crate::domain::reliability::{
+    Draft, DraftWrite, IngredientEdit, IngredientSearch, PersonalIngredient,
+};
+#[tauri::command]
+pub async fn list_drafts(state: tauri::State<'_, StorageService>) -> Result<Vec<Draft>, AppError> {
+    state.execute(|d| d.drafts()).await
+}
+#[tauri::command]
+pub async fn get_draft(
+    id: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Draft, AppError> {
+    state.execute(move |d| d.draft(&id)).await
+}
+#[tauri::command]
+pub async fn save_draft(
+    write: DraftWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Draft, AppError> {
+    state.execute(move |d| d.save_draft(write)).await
+}
+#[tauri::command]
+pub async fn discard_draft(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.discard_draft(&id, revision)).await
+}
+#[tauri::command]
+pub async fn commit_recipe(
+    input: RecipeInput,
+    draft_id: String,
+    draft_revision: i64,
+    as_copy: bool,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Recipe, AppError> {
+    state
+        .execute(move |d| d.commit_recipe(input, &draft_id, draft_revision, as_copy))
+        .await
+}
+#[tauri::command]
+pub async fn duplicate_recipe(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Recipe, AppError> {
+    state
+        .execute(move |d| d.duplicate_recipe(&id, revision))
+        .await
+}
+#[tauri::command]
+pub async fn scope_recipes(
+    scope: String,
+    kind: Option<String>,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Vec<Recipe>, AppError> {
+    state.execute(move |d| d.scope_recipes(&scope, kind)).await
+}
+#[tauri::command]
+pub async fn archive_recipe(
+    id: String,
+    revision: i64,
+    archived: bool,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Recipe, AppError> {
+    state
+        .execute(move |d| d.archive_recipe(&id, revision, archived))
+        .await
+}
+#[tauri::command]
+pub async fn purge_recipe(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.purge_recipe(&id, revision)).await
+}
+#[tauri::command]
+pub async fn search_personal_ingredients(
+    query: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<IngredientSearch, AppError> {
+    state.execute(move |d| d.search_personal(&query)).await
+}
+#[tauri::command]
+pub async fn edit_ingredient(
+    input: IngredientEdit,
+    state: tauri::State<'_, StorageService>,
+) -> Result<PersonalIngredient, AppError> {
+    state.execute(move |d| d.edit_ingredient(input)).await
+}
+#[tauri::command]
+pub async fn delete_ingredient(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state
+        .execute(move |d| d.delete_ingredient(&id, revision))
+        .await
+}
+
+#[tauri::command]
+pub fn finish_exit(app: tauri::AppHandle, state: tauri::State<'_, crate::ExitPermission>) {
+    state.0.store(true, std::sync::atomic::Ordering::SeqCst);
+    app.exit(0);
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -255,7 +364,143 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            2
+            3
+        );
+    }
+    #[test]
+    fn reliability_ipc_uses_actual_sqlite_for_drafts_management_and_ingredient_conflicts() {
+        let dir = tempfile::tempdir().unwrap();
+        let app = mock_builder()
+            .manage(StorageService::new(Ok(dir.path().into())))
+            .invoke_handler(tauri::generate_handler![
+                create_ingredient,
+                search_personal_ingredients,
+                edit_ingredient,
+                delete_ingredient,
+                save_draft,
+                get_draft,
+                list_drafts,
+                discard_draft,
+                commit_recipe,
+                duplicate_recipe,
+                scope_recipes,
+                archive_recipe,
+                set_recipe_deleted,
+                purge_recipe
+            ])
+            .build(mock_context(noop_assets()))
+            .unwrap();
+        let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        let ingredient = invoke(&window, "create_ingredient", json!({"name":"Şeker"})).unwrap();
+        for query in ["Şek", "şek", "ŞEK", "şeker"] {
+            assert_eq!(
+                invoke(
+                    &window,
+                    "search_personal_ingredients",
+                    json!({"query":query})
+                )
+                .unwrap()["items"][0]["id"],
+                ingredient["id"]
+            );
+        }
+        let id = uuid::Uuid::new_v4().to_string();
+        let draft_id = uuid::Uuid::new_v4().to_string();
+        let mut input = json!({"id":id,"expectedRevision":null,"title":"Şerbet","description":null,"kind":"beverage","servings":"1","prepMinutes":null,"cookMinutes":null,"notes":null,"ingredients":[{"id":uuid::Uuid::new_v4().to_string(),"ingredientId":ingredient["id"],"quantity":"35.","unitCode":"cc","note":null}],"steps":[]});
+        let draft = invoke(
+            &window,
+            "save_draft",
+            json!({"write":{"id":draft_id,"expectedRevision":null,"input":input}}),
+        )
+        .unwrap();
+        assert_eq!(
+            invoke(&window, "get_draft", json!({"id":draft_id})).unwrap()["input"]["ingredients"]
+                [0]["quantity"],
+            "35."
+        );
+        assert_eq!(
+            invoke(&window, "list_drafts", json!({}))
+                .unwrap()
+                .as_array()
+                .unwrap()
+                .len(),
+            1
+        );
+        assert_eq!(
+            invoke(
+                &window,
+                "delete_ingredient",
+                json!({"id":ingredient["id"],"revision":1})
+            )
+            .unwrap_err()["code"],
+            "INGREDIENT_REFERENCED"
+        );
+        input["ingredients"][0]["quantity"] = json!("35.000001");
+        let saved=invoke(&window,"commit_recipe",json!({"input":input,"draftId":draft_id,"draftRevision":draft["revision"],"asCopy":false})).unwrap();
+        assert!(invoke(&window, "list_drafts", json!({}))
+            .unwrap()
+            .as_array()
+            .unwrap()
+            .is_empty());
+        assert_eq!(
+            invoke(
+                &window,
+                "discard_draft",
+                json!({"id":draft_id,"revision":1})
+            )
+            .unwrap_err()["code"],
+            "DRAFT_CONFLICT"
+        );
+        let copy = invoke(&window, "duplicate_recipe", json!({"id":id,"revision":1})).unwrap();
+        assert_ne!(copy["id"], saved["id"]);
+        invoke(
+            &window,
+            "archive_recipe",
+            json!({"id":id,"revision":1,"archived":true}),
+        )
+        .unwrap();
+        assert_eq!(
+            invoke(
+                &window,
+                "scope_recipes",
+                json!({"scope":"archived","kind":null})
+            )
+            .unwrap()
+            .as_array()
+            .unwrap()
+            .len(),
+            1
+        );
+        invoke(
+            &window,
+            "set_recipe_deleted",
+            json!({"id":id,"revision":2,"deleted":true}),
+        )
+        .unwrap();
+        assert_eq!(
+            invoke(&window, "purge_recipe", json!({"id":id,"revision":3})).unwrap(),
+            Value::Null
+        );
+        assert_eq!(
+            invoke(
+                &window,
+                "scope_recipes",
+                json!({"scope":"active","kind":null})
+            )
+            .unwrap()[0]["id"],
+            copy["id"]
+        );
+        let renamed=invoke(&window,"edit_ingredient",json!({"input":{"id":ingredient["id"],"revision":1,"name":"Toz şeker","notes":"Kişisel","preferredUnit":"g"}})).unwrap();
+        assert_eq!(renamed["revision"], 2);
+        assert_eq!(
+            invoke(
+                &window,
+                "delete_ingredient",
+                json!({"id":ingredient["id"],"revision":2})
+            )
+            .unwrap_err()["code"],
+            "INGREDIENT_REFERENCED"
         );
     }
 }

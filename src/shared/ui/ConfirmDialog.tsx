@@ -7,6 +7,7 @@ export function ConfirmDialog({
   cancel,
   onConfirm,
   onCancel,
+  extra,
 }: {
   title: string;
   description: string;
@@ -14,6 +15,7 @@ export function ConfirmDialog({
   cancel: string;
   onConfirm: () => void;
   onCancel: () => void;
+  extra?: {label:string;onClick:()=>void};
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -38,6 +40,7 @@ export function ConfirmDialog({
         <Button autoFocus variant="outline" onClick={onCancel}>
           {cancel}
         </Button>
+        {extra && <Button onClick={extra.onClick}>{extra.label}</Button>}
         <Button onClick={onConfirm}>{confirm}</Button>
       </div>
     </dialog>

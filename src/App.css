@@ -558,3 +558,14 @@ legend {
 .detail-list li { padding:.4rem 0; white-space:pre-wrap; overflow-wrap:anywhere; }
 .preserve-text { white-space:pre-wrap; overflow-wrap:anywhere; }
 [hidden] { display:none !important; }
+
+/* Recovery and ingredient management use the existing theme tokens. */
+.ingredient-results { list-style:none; padding:0; margin:1rem 0; }
+.ingredient-results [aria-selected="true"] { outline:2px solid var(--primary); outline-offset:2px; }
+.ingredient-search > input { width:100%; padding:.65rem .8rem; border:1px solid var(--border); border-radius:8px; color:var(--foreground); background:var(--background); }
+.draft-list { list-style:none; padding:0; margin-top:1rem; }
+.draft-list li + li { border-top:1px solid var(--border); padding-top:1rem; }
+.draft-list strong { overflow-wrap:anywhere; }
+.recipe-error + .recipe-actions { margin-top:.5rem; }
+.recipe-form p { margin-bottom:.6rem; }
+summary { cursor:pointer; padding:.75rem 0; font-weight:600; }

@@ -1,6 +1,6 @@
 # Feature checklist
 
-Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M1/M2A subsets only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.
+Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M1/M2A/M2B subsets only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.
 
 ## R01 — Architecture/stack
 
@@ -33,7 +33,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 ## R05 — Library
 
 - [x] Food/beverage create/view/edit, ordered ingredients/steps, soft delete and basic trash restore.
-- [ ] Duplicate/archive and durable draft recovery (M2B).
+- [x] Independent duplication, archive/unarchive, separate trash/restore and confirmed purge (M2B).
+- [x] SQLite new/edit draft recovery, serialized autosave/Save/Discard, optimistic conflicts and explicit save-as-new (M2B).
 - [ ] Cards/list, sorts/filters/advanced FTS search and favorites.
 - [ ] Ratings/rich notes, variations/related recipes/history/version restore.
 - [ ] Ingredient substitutions and portion adjustment.
@@ -58,7 +59,9 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 ## R08 — Catalog
 
 - [x] Independent personal ingredient create/search/select and normalized exact duplicate reuse (M2A).
-- [ ] Personal ingredient edit/organize and advanced duplicate review.
+- [x] Personal ingredient name/notes/preferred-unit editing, rename duplicate conflict and reference-safe deletion (M2B).
+- [x] Turkish normalized substring keyboard autocomplete with actual empty/no-match/error states (M2B).
+- [ ] Ingredient organization, aliases/typo tolerance and advanced duplicate review.
 
 - [ ] Extensive cleaned catalog ships offline, Turkish culinary terminology included.
 - [ ] Coverage target reviewed; real per-category validated import count report.
@@ -132,7 +135,7 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 
 - [x] Guidance/progress/master/architecture/plan/schema/dictionary/testing/checklist.
 - [x] README setup/current behavior and unreleased CHANGELOG.
-- [x] M1/M2A actual SQLite/command/renderer tests and native macOS restart evidence.
+- [x] M1/M2A/M2B actual SQLite/command/renderer tests and native macOS restart evidence.
 - [ ] Measurement/data-license/coverage/backup/release docs at owning milestones.
 - [ ] Full critical feature tests listed in R20, including Turkish and cross-platform cases.
 - [ ] Signed/notarized native packages, verified supported OS/architecture matrix.

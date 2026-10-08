@@ -34,8 +34,12 @@ Build a local-first food and beverage recipe management desktop application for 
 - Do not install dependencies, upgrade versions, or change packaging merely to complete a documentation task.
 
 ## Recipe foundation invariants (M2A)
-- Preserve migration 001 and 002 after this milestone; future schema work adds version 003 or later.
+- Preserve migrations 001, 002 and 003 after M2B; future schema work adds version 004 or later.
 - Measurements are decimal text, never JS Number/SQLite REAL; preserve selected units and unknown quantity NULL. Consult docs/MEASUREMENT_ENGINE.md before conversion/scaling changes.
 - Recipe saves use the Rust worker/repository transaction and expected revisions. Do not bypass referential integrity or introduce renderer persistence as an alternative source of truth.
 - Personal ingredient identity is independent of recipes; catalog upgrades must preserve it.
-- Durable drafts/duplication/archive remain M2B. Basic trash/restore already exists; do not silently drop it.
+- M2B drafts are separate SQLite records with session revisions and immutable recipe base revisions. Serialize autosave/Save/Discard; commit the aggregate and close its draft in one transaction. Retain closed-session tombstones to reject delayed writes.
+- Archive, trash and active states are distinct. Preserve drafts across state changes and purge; orphan edit drafts require explicit save-as-new. Never delete shared ingredient definitions through recipe purge.
+- Ingredient references from saved recipes and active drafts restrict deletion. Renames preserve IDs; conflicts never silently merge or reassign references. Search uses NFC/Turkish normalization on both query and stored key, not SQLite NOCASE.
+- Native close/Cmd-Q must await the current recipe draft flush and keep the window open on failure. Last changes before an unacknowledged abrupt crash are not guaranteed durable.
+- M3 catalog work remains a separate task; never seed invented ingredients to satisfy search verification.

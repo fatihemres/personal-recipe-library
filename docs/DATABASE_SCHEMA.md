@@ -1,6 +1,6 @@
 # Database schema and initialization
 
-Current schema version is **2**. Migration 001 remains unchanged; migration 002 adds the M2A recipe foundation. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
+Current schema version is **3**. Applied migrations 001/002 remain unchanged; migration 003 adds M2B reliability. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
 
 ## Location, access and ownership
 
@@ -10,7 +10,7 @@ A dedicated Rust thread owns the connection. Async commands submit typed work an
 
 New Unix directories are mode 0700 and newly created DB/snapshot files 0600; existing data is not chmodded. Direct app-root or DB symlinks are rejected. SQLite uses a 5-second busy timeout, foreign keys on each connection, and WAL after migration validation. There is no unrestricted renderer SQL/filesystem API. SQLite data is private local storage, not encrypted storage; full portable backup/restore is M9.
 
-## M1 tables (retained unchanged)
+## M1 tables (retained unchanged; historical feature boundary)
 
 ```sql
 CREATE TABLE schema_migrations (
@@ -38,13 +38,13 @@ The single preference row initially uses system theme and Turkish locale. Update
 5. Execute pending embedded SQL, insert ledger version/name/checksum, and set `PRAGMA user_version` in the same transaction. Validate integrity before commit. Failure rolls back the schema and tracking writes; keep the snapshot.
 6. Select WAL, verify preferences and report readiness. Errors are a safe `{code,messageKey,recoverable}` envelope; no raw DB paths or SQL errors reach the UI.
 
-Applied SQL is immutable: never edit `001_foundation.sql` after a DB has used it. Add increasing migrations to the embedded registry and new SQL files. No automatic down-migration. A newer DB must be opened with its compatible app version; future upgrade/restore procedures must document supported schema ranges. Snapshot retention/restore UI is not yet implemented.
+Applied SQL is immutable: never edit `001_foundation.sql`, `002_recipes.sql` or `003_reliability.sql` after a DB has used them. Add increasing migrations to the embedded registry and new SQL files. No automatic down-migration. A newer DB must be opened with its compatible app version; future upgrade/restore procedures must document supported schema ranges. Snapshot retention/restore UI is not yet implemented.
 
 ## Proposed full schema, not implemented
 
 The entity/relationship table in [ARCHITECTURE.md](ARCHITECTURE.md#proposed-logical-schema) is the full logical model: recipes and immutable versions/relations; ingredients/products/localized aliases/categories; dimensions/units/presets/conversions/nutrients/allergens; recipe ingredients/steps/category/tag/facet joins; beverage extensions; media/reference joins; collections/ratings/history/filters/private notes; lot inventory/movements; shopping provenance; meal plans; drafts; source/seed/import/conflict/override metadata. Those entities are introduced by their owning milestones, with detailed columns and tests before migrations ship. UUID personal identities, deterministic seed identities, explicit unknown metadata, decimal strings, FK/join indexes, RESTRICT on referenced definitions and deliberate purge-only cascades remain design requirements.
 
-## M2A tables — migration 002_recipes.sql
+## M2A tables — migration 002_recipes.sql (original feature boundary)
 
 Authoritative SQL: `src-tauri/migrations/002_recipes.sql`, embedded as version 2 / `recipes` in the existing SHA-256 registry. Both migrations are applied transactionally on clean installs. Existing M1 databases are validated and snapshotted using the online backup API before 002; preferences are preserved. Once shipped/applied, 002 is also immutable. M1 executables reject this newer schema; no down-migration exists. Use a preserved M1 snapshot with M1 only if accepting loss of later edits.
 
@@ -63,3 +63,24 @@ Save creates/updates the recipe and replaces its owned line/step rows in one IMM
 Soft deletion/restore uses a conditional update with expected revision and prior deletion state, increments revision, changes updated_at, and retains children and personal ingredients. Active lists exclude deleted records; trash lists include them. Current list returns all matching recipes; scalable pagination/summary queries and FTS indexing remain later library work. FTS5 readiness remains verified, but no recipe FTS index is claimed in M2A.
 
 Category/localization/product/variation/nutrition/media/beverage entities will attach through FKs and joins in additive migrations. The six unit definitions are a foundation; normalized quantities, contextual conversions and rounding will be introduced by the measurement milestone without rewriting the original entered quantities/unit references.
+
+## M2B — migration 003_reliability.sql
+
+Embedded version 3 / `reliability`, SHA-256 checked by the existing migration ledger. Clean installations apply 001–003; existing M1/M2A databases receive only pending migrations, preceded by an online snapshot. There are no destructive schema rewrites or catalog seeds. Existing quantities, units, IDs, steps and preferences are preserved. Older M2A executables reject schema 3; no downgrade exists. Restoring a pre-upgrade snapshot loses subsequent changes and is not a substitute for the future portable backup UI.
+
+| Entity/change | Data and constraints |
+| --- | --- |
+| recipes.archived_at | Nullable UTC timestamp; active requires both archived_at/deleted_at NULL. Added kind/state/time index. |
+| ingredients.notes | Nullable personal notes, max 2000 characters. |
+| ingredients.preferred_unit | Nullable FK to units, RESTRICT. No implicit quantity conversion. |
+| ingredients.revision / updated_at | Positive revision default 1; UTC timestamp initialized from existing created_at, updated by metadata changes. |
+| editor_drafts | Session UUID PK; recipe_id nullable FK ON DELETE SET NULL; positive CAS revision; format_version=1; active/closed state; bounded validated JSON payload; updated UTC timestamp. CHECK requires payload for active and NULL for closed. Active/time and recipe indexes. |
+| draft_ingredients | Unique draft/ingredient join; draft CASCADE, ingredient RESTRICT; reference index. Includes incomplete editor lines, preventing deletion of definitions used only by drafts. |
+
+The payload retains the recipe ID, immutable expected recipe revision, editable header, precise raw quantity strings and ordered child arrays. It accepts blank titles/instructions and incomplete numeric text without relaxing committed recipe constraints. New drafts have NULL recipe_id; edit drafts reference their committed recipe. Purged edit drafts also have NULL recipe_id, but retain their edit base in the payload and are clearly handled as save-as-new, never resurrected silently.
+
+Draft saves use IMMEDIATE transactions, CAS revisions and immutable target/base validation; ingredient-reference replacement is in the same transaction. Save validates committed data, checks active draft/revision and recipe base, writes the aggregate, removes draft references/payload, and closes the session atomically. Failure preserves both the last committed recipe and its recoverable draft. Discard closes only the expected active session. Closed tombstones intentionally survive to reject delayed writes; payloads and ingredient references do not. New sessions always use new UUIDs.
+
+Duplicate reads a revision-checked consistent source within an IMMEDIATE transaction, creates new recipe/line/step UUIDs and reuses canonical ingredient IDs, quantities, units and order. The copy starts active and independent. Archive/unarchive and soft-delete/restore are revision-checked conditional updates; each increments revision. Archived drafts are retained but stale for committing. Purge requires deleted_at and the expected revision; only owned rows cascade and edit drafts become orphaned. Shared definitions never cascade.
+
+Personal ingredient metadata changes are transactional, personal-only and revision checked. Duplicate normalized names return INGREDIENT_DUPLICATE. Deletion is permitted only for an unreferenced personal definition; both saved lines and draft references are checked, with FKs as a final safeguard. Search returns actual personal count and at most 50 normalized substring matches plus hasMore; exact names sort first. No global catalog records are imported.

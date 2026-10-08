@@ -1,4 +1,65 @@
 export const recipesTr = {
+  editorClean: 'Kaydedilmemiş değişiklik yok',
+  draftPending: 'Son değişiklikler taslak kaydını bekliyor…',
+  archived: 'Arşiv',
+  emptyArchive: 'Arşivde tarif yok',
+  archive: 'Arşivle',
+  unarchive: 'Arşivden çıkar',
+  duplicate: 'Tarifi çoğalt',
+  duplicated: 'Tarif bağımsız bir kopya olarak oluşturuldu.',
+  purge: 'Kalıcı olarak sil',
+  confirmPurge: 'Tarif kalıcı olarak silinsin mi?',
+  purgeHelp:
+    'Bu işlem geri alınamaz. Paylaşılan malzemeler korunur; kalan düzenleme taslakları yalnızca yeni tarif olarak kaydedilebilir.',
+  purged: 'Tarif kalıcı olarak silindi.',
+  draftRecovery: 'Kurtarılabilir taslaklar',
+  draftHelp:
+    'Taslaklar kaydedilmiş tariflerden bağımsızdır. Devam edin veya açıkça silin.',
+  newDraft: 'Yeni tarif taslağı',
+  editDraft: 'Düzenleme taslağı',
+  untitled: 'Adsız taslak',
+  recover: 'Düzenlemeye devam et',
+  discardDraft: 'Taslağı sil',
+  confirmDraftDiscard: 'Bu taslak silinsin mi?',
+  draftDiscardHelp:
+    'Kaydedilmiş tarif değişmez. Taslaktaki kaydedilmemiş düzenlemeler silinir.',
+  unsaved: 'Kaydedilmemiş değişiklikler',
+  draftSaving: 'Taslak bu cihazda kaydediliyor…',
+  draftSaved: 'Taslak SQLite’a kaydedildi.',
+  draftFailed:
+    'Taslak kaydedilemedi. Düzenlemeler bu pencerede korunuyor; yeniden deneyin.',
+  keepDraft: 'Taslağı sakla ve çık',
+  continueEditing: 'Düzenlemeye devam et',
+  saveAsNew: 'Yeni tarif olarak kaydet',
+  conflictHelp:
+    'Güncel tarif değiştirilmedi. Taslağınız korunur. Güncel kaydı ayrı görüntüleyebilir veya bu düzenlemeyi yeni tarif olarak kaydedebilirsiniz.',
+  viewLatest: 'Güncel kaydı görüntüle',
+  targetUnavailable:
+    'Asıl tarif arşivlenmiş, silinmiş veya değişmiş olabilir. Taslak korunur; yeni tarif olarak kaydedebilirsiniz.',
+  personalIngredients: 'Kişisel malzemeler',
+  ingredientHelp:
+    'Bu aşamada yalnızca kendi kaydettiğiniz malzemeler aranır. Hazır katalog M3 aşamasında eklenecek.',
+  emptyCatalog:
+    'Henüz kişisel malzeme kaydetmediniz. Aşağıdan ilk malzemenizi oluşturabilirsiniz.',
+  emptyIngredientSearch:
+    'Bu ada uyan kayıt yok. Yeni bir malzeme oluşturabilir veya aramayı değiştirebilirsiniz.',
+  ingredientSearching: 'Malzemeler aranıyor…',
+  ingredientMore: 'Daha fazla eşleşme var. Aramayı daraltın.',
+  ingredientSearchFailed:
+    'Malzeme araması tamamlanamadı. Bu, katalog boş demek değildir; yeniden deneyin.',
+  ingredientKeyboard: 'Ok tuşlarıyla seçin, Enter ile ekleyin.',
+  ingredientEditHelp:
+    'İsim değişikliği bu malzemeyi kullanan tüm tariflerde görünür. Kayıt kimliği ve miktarlar korunur.',
+  preferredUnit: 'Tercih edilen birim',
+  noPreferredUnit: 'Tercih belirtilmemiş',
+  saveIngredient: 'Malzemeyi kaydet',
+  ingredientUpdated: 'Malzeme güncellendi.',
+  deleteIngredient: 'Malzemeyi sil',
+  ingredientDeleteHelp:
+    'Kaydedilmiş tariflerde veya taslaklarda kullanılan malzemeler silinemez.',
+  ingredientDeleted: 'Malzeme silindi.',
+  closeFailed:
+    'Kapatmadan önce taslak kaydedilemedi. Hata giderilene kadar pencere açık tutuldu.',
   brand: 'Tarif Atlası',
   heading: 'Tarif kütüphanesi',
   intro: 'Kendi tariflerinizi oluşturun ve bu bilgisayarda güvenle saklayın.',
