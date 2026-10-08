@@ -11,11 +11,18 @@ pub struct Migration {
     pub name: &'static str,
     pub sql: &'static str,
 }
-pub const MIGRATIONS: &[Migration] = &[Migration {
-    version: 1,
-    name: "foundation",
-    sql: include_str!("../../migrations/001_foundation.sql"),
-}];
+pub const MIGRATIONS: &[Migration] = &[
+    Migration {
+        version: 1,
+        name: "foundation",
+        sql: include_str!("../../migrations/001_foundation.sql"),
+    },
+    Migration {
+        version: 2,
+        name: "recipes",
+        sql: include_str!("../../migrations/002_recipes.sql"),
+    },
+];
 pub fn checksum(sql: &str) -> String {
     format!("{:x}", Sha256::digest(sql.as_bytes()))
 }

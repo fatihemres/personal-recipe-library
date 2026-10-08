@@ -6,6 +6,7 @@ import {
 import { foundationClient, type FoundationClient } from '../shared/api/client';
 import { errorMessage, messages as t } from '../shared/i18n';
 import { Button } from '../shared/ui/button';
+import { recipeClient, type RecipeClient } from '../shared/api/recipes';
 import { LibraryPage } from '../features/recipes/LibraryPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
 import { useFoundation } from './useFoundation';
@@ -21,7 +22,7 @@ const futureModules = [
   { label: t.collections, Icon: FolderHeart },
 ];
 
-export function AppShell({ client = foundationClient }: { client?: FoundationClient }) {
+export function AppShell({ client = foundationClient, recipes = recipeClient }: { client?: FoundationClient; recipes?: RecipeClient }) {
   const { data, error, loading, saving, load, saveTheme } = useFoundation(client);
   const [page, setPage] = useState<'library' | 'settings'>('library');
   const [menuOpen, setMenuOpen] = useState(false);
@@ -103,9 +104,7 @@ export function AppShell({ client = foundationClient }: { client?: FoundationCli
               </div>
             </section>
           )}
-          {!loading && data && (page === 'library'
-            ? <LibraryPage openSettings={() => navigate('settings')} />
-            : <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />)}
+          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>

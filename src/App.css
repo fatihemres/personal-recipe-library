@@ -23,6 +23,7 @@
   --border: #dedfd5;
   --secondary-text: #61685e;
   --sidebar: #f0f1e9;
+  --destructive: #ac3939;
   --active: #e0e8da;
 }
 :root.dark {
@@ -35,6 +36,7 @@
   --border: #3d493f;
   --secondary-text: #b0b9ad;
   --sidebar: #1d2520;
+  --destructive: #eaa5a5;
   --active: #334639;
 }
 * {
@@ -533,3 +535,26 @@ legend {
     transition: none !important;
   }
 }
+
+/* Persistent recipe workspace */
+.recipe-actions,.ingredient-results { display:flex; gap: .65rem; flex-wrap:wrap; margin:1rem 0; }
+.recipe-toolbar { display:flex; align-items:end; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+.recipe-toolbar label { min-width:150px; flex:1; }
+.recipe-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1rem; }
+.recipe-card { text-align:left; padding:1.5rem; cursor:pointer; color:var(--foreground); background:var(--card); }
+.recipe-card:hover { border-color:var(--primary); }
+.recipe-card h2 { font-size:1.2rem; overflow-wrap:anywhere; }
+.recipe-card p { overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+.recipe-form { padding:1.5rem; margin:1rem 0; }
+.recipe-form label,.recipe-toolbar label { display:grid; gap:.5rem; margin:.5rem 0; font-size:.9rem; font-weight:600; }
+.recipe-form input,.recipe-form textarea,.recipe-form select,.recipe-toolbar input,.recipe-toolbar select { width:100%; box-sizing:border-box; border:1px solid var(--border); border-radius:8px; padding:.65rem .8rem; color:var(--foreground); background:var(--background); font:inherit; }
+.recipe-form textarea { min-height:85px; resize:vertical; }
+.form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1rem; }
+.ingredient-row,.step-row { border-top:1px solid var(--border); margin-top:1rem; padding-top:1rem; }
+.recipe-fieldset { border:0; padding:0; margin:0; min-width:0; }
+.recipe-error { border:1px solid var(--destructive); background:var(--card); padding:1rem; border-radius:10px; }
+.confirm-dialog { max-width:450px; width:calc(100% - 3rem); padding:1.5rem; border:1px solid var(--border); border-radius:16px; background:var(--card); color:var(--foreground); box-shadow:0 20px 80px #0004; }
+.confirm-dialog::backdrop { background:#0007; }
+.detail-list li { padding:.4rem 0; white-space:pre-wrap; overflow-wrap:anywhere; }
+.preserve-text { white-space:pre-wrap; overflow-wrap:anywhere; }
+[hidden] { display:none !important; }

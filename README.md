@@ -1,8 +1,8 @@
 # Tarif Atlası — Personal Food & Beverage Library
 
-Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestone 1 foundation is implemented.** Recipe management is planned for M2 onward; this build contains no demo recipes or fabricated statistics.
+Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1 and 2A are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
 
-The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. Other modules are clearly identified as upcoming.
+The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers food/beverage filters, Turkish title filtering, recipe creation/detail/editing, confirmed soft deletion, trash and restore. Other modules are clearly identified as upcoming.
 
 ## Development
 
@@ -35,4 +35,12 @@ Rust resolves the per-user Tauri application-data directory and stores `library.
 - [Testing and native verification](docs/TESTING.md), [feature checklist](docs/FEATURE_CHECKLIST.md)
 - [Agent guidance](AGENTS.md), [progress/handoff](PROJECT_PROGRESS.md), [changelog](CHANGELOG.md)
 
-The entire requested product remains V1 scope. No recipe CRUD, ingredient catalog, beverage calculations, pantry, shopping, planning, backup or release installer is claimed complete yet.
+## Using recipes
+
+Choose **Yeni tarif**, enter a title and a positive serving count, and optionally add description, durations and notes. Search a personal ingredient and click its name to add it. To create one, type its name and choose **Kişisel malzeme oluştur / mevcut olanı seç**; equivalent normalized names reuse the existing stable ingredient. Ingredients persist independently, including when the recipe is canceled.
+
+Each ingredient line accepts an optional positive decimal quantity and g, kg, mL, cc, L or adet. Decimal commas are accepted and saved as decimal text with a dot, preserving precision and trailing zeros. Blank quantity means unknown/as needed. Units are preserved; this milestone does not convert quantities. Add preparation steps and use the up/down controls to order them. Save, open from the library, or edit an existing recipe. **Çöp kutusuna taşı** requires confirmation; open **Çöp kutusu** to restore. There is no permanent purge action.
+
+Switching to Settings keeps the editor mounted and retains unsaved input. Cancel requires confirmation when modified. Unfinished edits are not yet persisted across application quit/crash; save before quitting. Durable draft recovery is M2B.
+
+The entire requested product remains V1 scope. Duplication/archive/durable drafts (M2B), built-in catalog, advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.

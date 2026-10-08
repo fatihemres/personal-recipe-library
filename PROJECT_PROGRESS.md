@@ -3,7 +3,7 @@
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
-Current state: M1 foundation implemented and verified on macOS arm64, 2026-10-08. M2 and later modules remain pending. Initial inspection/planning history is retained below; see the M1 entry for current code, tests and next task.
+Current state: M1 and M2A implemented and verified on macOS arm64, 2026-10-08. Next task is M2B; M3 and later modules remain pending. The M2A handoff below is current; older inspection/planning/M1 sections are historical.
 
 ## Existing project
 - `package.json` / `package-lock.json`: npm scripts and locked frontend dependencies; scripts for dev, build, preview, and Tauri.
@@ -109,3 +109,61 @@ No known M1 functional failure remains. Windows/Intel macOS builds, installer be
 **M2 only:** persistent basic food/beverage recipe workflow, personal ingredient definitions, ordered steps, yield/quantity core, transactional CRUD, duplication/archive/trash recovery and drafts. Implement exact standardized unit/decimal foundation before storing quantities, without density/household guesses. Continue from M1's real DB/IPC; do not introduce external seeds until M3.
 
 The local foundation commit groups M1 with the previously untracked planning documents, preserving their content and the starter history. No push, tag or GitHub release is authorized in this task. The resulting commit hash is reported in the session final response; `git log -1 --oneline` retrieves it without a self-referential hash inside its own commit.
+
+## M2A completed — Persistent Recipe Management, 2026-10-08
+
+### Implemented
+
+- Real recipe create/read/edit/list through typed Tauri commands, existing Rust storage worker and SQLite. Stable canonical UUIDs, food/beverage kind, title/description, decimal-text servings, nullable preparation/cooking minutes/notes, created/updated/deleted timestamps and optimistic revisions.
+- Independent persistent personal ingredients: inline creation, Turkish Unicode/NFC search, exact normalized duplicate reuse, stable IDs; definitions survive canceled/deleted recipes. No fake built-in catalog or demo recipes seeded.
+- Multiple ingredient lines with reference, optional precise decimal-text quantity, original unit reference (g/kg/mL/cc/L/adet), stable ID, ordering and optional note. Quantity limit 12 integer/6 fractional digits; comma accepted by UI without floating-point parsing; NULL is unknown. No unsupported conversions or density assumptions.
+- Ordered preparation steps with add/edit/remove/up/down and stable identity/order after restart.
+- Turkish library cards, kind/title filters, clear empty/loading/errors, clean editor/detail, save/cancel, discard confirmation, confirmed soft delete, basic trash/restore. Light/dark/system M1 themes/settings retained. Editor stays mounted across Settings and diagnostic retries; no durable unfinished draft recovery yet.
+- Migration 002 (`recipes`) adds units, ingredients, recipes, recipe_ingredients and recipe_steps with STRICT constraints/FKs/indexes. Migration 001 untouched. All aggregate writes transactional; bad references/child collisions rollback and stale revisions conflict. Read transactions collect consistent recipe data.
+- Existing migration checksums, pre-upgrade online snapshots, WAL/FK/FTS5, private application-data paths, safe errors and initialization retry retained. No renderer SQL/filesystem capabilities added.
+
+### Changed modules and documents
+
+Backend: Cargo manifest/lockfile (pinned uuid v4 and Unicode normalization), migration 002/registry, recipe domain/repository/tests, service job queue, commands/IPC tests/registration and safe constraint errors. Frontend: recipe contracts/client, LibraryPage, RecipeEditor, RecipeIngredients, RecipeSteps, localized resources, confirmation dialog, shell edit-preservation behavior, styles and renderer tests. No frontend dependencies added.
+
+Documentation: AGENTS, README, CHANGELOG, ARCHITECTURE, DATABASE_SCHEMA, DATA_DICTIONARY, IMPLEMENTATION_PLAN, FEATURE_CHECKLIST, TESTING, new MEASUREMENT_ENGINE, and this progress file. MASTER_SPEC unchanged; all requested V1 features remain tracked. Git was clean before M2A; no pre-existing user changes were overwritten.
+
+### Verification
+
+| Check | Actual result |
+| --- | --- |
+| npm run typecheck | Passed |
+| npm run lint | Passed, no warnings |
+| npm test | Passed: 18 tests across 5 files |
+| npm run test:ui | Passed: 2 Chromium browser tests; renderer/platform boundary only |
+| npm run build | Passed; final production frontend built in native bundle command |
+| cargo fmt --manifest-path src-tauri/Cargo.toml -- --check | Passed |
+| cargo check --locked --offline --manifest-path src-tauri/Cargo.toml | Passed |
+| cargo test --locked --offline --manifest-path src-tauri/Cargo.toml | Passed: 21 tests, M1 regressions included |
+| cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings | Passed |
+| Tauri debug macOS .app build, locked/offline, no-sign | Passed for isolated verification and normal identifier |
+| Actual native UI→IPC→SQLite→quit/relaunch | Passed on macOS arm64; details below |
+| Windows, Intel macOS, installers/signing/notarization | Not tested; no compatible host/credentials in this session |
+
+Rust tests use real temporary databases and registered IPC handlers with actual storage worker. They cover CRUD, step replacement/order, decimal precision/validation/SQL constraints, Turkish duplicate/search behavior, rollback, FKs, stale edits, soft delete/restore, reopen persistence and M1→M2 migration/preservation/idempotency. Frontend injected clients establish interaction behavior only, never native persistence.
+
+Native packaged tauri://localhost app with no Vite server: food recipe with Turkish text, new ingredient, 35.000001 cc and note, reordered steps; full Cmd-Q/relaunch retained all fields/order; edit/save, existing ingredient selection, soft delete confirmation/trash/restore, another restart, theme switch and persisted dark selection. Final-code bundle read persisted records, removed a line, edited a step/saved, and created a simple beverage. Test data used identifier `com.recipeatlas.m2a-verification`, separate from the normal library. Final normal `com.recipeatlas.desktop` bundle launched, upgraded the actual M1 DB to schema 2, retained its dark theme, verified real SQLite/FKs/FTS5 and showed an empty recipe library. No verification recipes entered its production database.
+
+The CUA app selector cached bundle identity when the build path was reused with a different test identifier; selecting fresh copied .app paths resolved it. This was a verification-tool launch lookup issue, not a runtime/storage failure. Playwright sandbox EPERM for port binding was resolved by approved retry. Initial one-migration test fixture assumption and Clippy type-complexity warning were corrected; final checks passed. Offline crate cache lacked Unicode normalization, so an approved development-time fetch was used. No unresolved command timeout is reported.
+
+### Remaining work and limitations
+
+- M2A is complete; all of M2 is not. M2B must implement duplicate/archive and durable draft autosave/recovery. Unfinished edits do not survive quit/crash yet; save first. Cancel discards only after confirmation. Native window-close guard behavior is not claimed as durable recovery.
+- Ingredient create/search/select is implemented; full edit/organization/reference-safe deletion and catalog/source/product/localized metadata remain later work. Search is normalized substring with 50 ingredient results, not fuzzy/autocomplete ranking.
+- Recipe list is unpaginated and title filtering renderer-side. Summary/pagination/FTS indexing/performance belong to subsequent library work. No fabricated dashboard statistics.
+- Unit metadata only: no normalized quantity columns, conversions/scaling/density/ABV/presets yet. Implement via additive migrations in the measurement milestone, preserving entered text/unit meaning.
+- No permanent purge UI or portable backup/restore. Migration snapshots are internal SQLite safety files; M1 cannot open schema 2. Restore a compatible pre-upgrade snapshot with M1 only if accepting later-data loss.
+- No Windows/Intel native verification or trusted signed release. Temporary verification app/data remain outside the repository; normal workspace bundle is the final normal-identifier build.
+
+### Next task: M2B (do not start without a new task)
+
+Implement reversible archive/filtering and recipe duplication with distinct recipe/child IDs; durable drafts and restart/crash recovery without overwriting saved revisions; clear stale-edit/conflict recovery; reference-safe personal ingredient editing; refine keyboard/validation and list query behavior. Add new migrations rather than modifying 001/002. Retain and extend all M1/M2A tests and native restart checks. See IMPLEMENTATION_PLAN.md's explicit M2 split. Do not begin catalog ingestion (M3) in that task.
+
+### Local launch and version control
+
+`npm run tauri -- dev` launches the native development app. Standalone unsigned local bundle: `npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline`, then `open src-tauri/target/debug/bundle/macos/personal-recipe-library.app`. `npm run dev` alone is a browser preview and truthfully cannot access native SQLite. M2A is recorded in a logical local completion commit; use `git log -1` for its full hash. No push/tag/release was performed.

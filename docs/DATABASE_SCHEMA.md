@@ -1,6 +1,6 @@
 # Database schema and initialization
 
-M1 implements schema version **1**, not the future recipe schema. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
+Current schema version is **2**. Migration 001 remains unchanged; migration 002 adds the M2A recipe foundation. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
 
 ## Location, access and ownership
 
@@ -10,7 +10,7 @@ A dedicated Rust thread owns the connection. Async commands submit typed work an
 
 New Unix directories are mode 0700 and newly created DB/snapshot files 0600; existing data is not chmodded. Direct app-root or DB symlinks are rejected. SQLite uses a 5-second busy timeout, foreign keys on each connection, and WAL after migration validation. There is no unrestricted renderer SQL/filesystem API. SQLite data is private local storage, not encrypted storage; full portable backup/restore is M9.
 
-## Implemented tables
+## M1 tables (retained unchanged)
 
 ```sql
 CREATE TABLE schema_migrations (
@@ -43,3 +43,23 @@ Applied SQL is immutable: never edit `001_foundation.sql` after a DB has used it
 ## Proposed full schema, not implemented
 
 The entity/relationship table in [ARCHITECTURE.md](ARCHITECTURE.md#proposed-logical-schema) is the full logical model: recipes and immutable versions/relations; ingredients/products/localized aliases/categories; dimensions/units/presets/conversions/nutrients/allergens; recipe ingredients/steps/category/tag/facet joins; beverage extensions; media/reference joins; collections/ratings/history/filters/private notes; lot inventory/movements; shopping provenance; meal plans; drafts; source/seed/import/conflict/override metadata. Those entities are introduced by their owning milestones, with detailed columns and tests before migrations ship. UUID personal identities, deterministic seed identities, explicit unknown metadata, decimal strings, FK/join indexes, RESTRICT on referenced definitions and deliberate purge-only cascades remain design requirements.
+
+## M2A tables — migration 002_recipes.sql
+
+Authoritative SQL: `src-tauri/migrations/002_recipes.sql`, embedded as version 2 / `recipes` in the existing SHA-256 registry. Both migrations are applied transactionally on clean installs. Existing M1 databases are validated and snapshotted using the online backup API before 002; preferences are preserved. Once shipped/applied, 002 is also immutable. M1 executables reject this newer schema; no down-migration exists. Use a preserved M1 snapshot with M1 only if accepting loss of later edits.
+
+| Table | Implemented data and relationships |
+| --- | --- |
+| units | Code primary key; dimension mass/volume/count; canonical-unit FK; exact positive integer factor. Seeds only six real unit definitions: g→g×1, kg→g×1000, mL→mL×1, cc→mL×1, L→mL×1000, adet→adet×1. No ingredients or recipes are seeded. |
+| ingredients | UUID primary key, original name, NFC/Turkish normalized search key, origin personal/catalog, UTC creation time. Partial unique index on personal search names permits future source identities without imposing a global catalog merge. Only personal creation is exposed in M2A. |
+| recipes | Stable UUID, title, nullable description/notes, food/beverage kind, decimal-text servings, nullable integer preparation/cooking minutes, revision, UTC created/updated/deleted timestamps. Active/trash/kind/time listing index. |
+| recipe_ingredients | Stable line UUID, recipe FK, ingredient FK, nullable positive decimal-text quantity, original unit FK, zero-based position, nullable note; unique recipe/position and ingredient reference index. |
+| recipe_steps | Stable step UUID, recipe FK, zero-based position, nonempty instructions; unique recipe/position. |
+
+STRICT types and CHECK constraints enforce kinds, positive bounded decimal syntax, string lengths, nonnegative ordering, positive revisions and 0–10080 minute durations. Rust additionally validates canonical UUIDs, individual limits, at most 500 lines/steps, no NULs, and duplicate child IDs. Decimal limits: 12 integer digits and 6 fractional digits; never SQLite REAL or JS Number for measurements. NULL means unknown quantity, not zero. Units and referenced ingredient definitions use RESTRICT. CASCADE only applies to recipe-owned lines/steps if an explicit future purge is introduced; no permanent recipe or ingredient deletion command is exposed now.
+
+Save creates/updates the recipe and replaces its owned line/step rows in one IMMEDIATE transaction, preserving supplied stable child IDs and array order. Invalid references, constraint violations or stale revisions abort the whole aggregate. Updates require the expected revision and an active recipe. Repeated creation with the same ID conflicts rather than duplicating. Reads collect header, child rows and ingredient names in a read transaction. A save is explicit, not a durable autosave draft.
+
+Soft deletion/restore uses a conditional update with expected revision and prior deletion state, increments revision, changes updated_at, and retains children and personal ingredients. Active lists exclude deleted records; trash lists include them. Current list returns all matching recipes; scalable pagination/summary queries and FTS indexing remain later library work. FTS5 readiness remains verified, but no recipe FTS index is claimed in M2A.
+
+Category/localization/product/variation/nutrition/media/beverage entities will attach through FKs and joins in additive migrations. The six unit definitions are a foundation; normalized quantities, contextual conversions and rounding will be introduced by the measurement milestone without rewriting the original entered quantities/unit references.

@@ -20,7 +20,14 @@ pub fn run() {
         })
         .invoke_handler(tauri::generate_handler![
             commands::bootstrap,
-            commands::save_preferences
+            commands::save_preferences,
+            commands::list_recipes,
+            commands::get_recipe,
+            commands::save_recipe,
+            commands::set_recipe_deleted,
+            commands::search_ingredients,
+            commands::create_ingredient,
+            commands::list_units
         ])
         .run(tauri::generate_context!())
         .expect("desktop runtime could not start");

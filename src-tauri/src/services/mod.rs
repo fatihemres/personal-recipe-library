@@ -5,8 +5,11 @@ use crate::{
 use std::{path::PathBuf, sync::mpsc};
 use tokio::sync::oneshot;
 
+type StorageJob = Box<dyn FnOnce(Result<&mut Database, AppError>) + Send>;
+
 enum Request {
     Bootstrap(oneshot::Sender<Result<Bootstrap, AppError>>),
+    Execute(StorageJob),
     Save(Preferences, oneshot::Sender<Result<Preferences, AppError>>),
 }
 pub struct StorageService {
@@ -33,6 +36,7 @@ impl StorageService {
                     },
                 };
                 match request {
+                    Request::Execute(job) => job(database),
                     Request::Bootstrap(reply) => {
                         let _ = reply.send(database.and_then(|d| d.bootstrap()));
                     }
@@ -43,6 +47,18 @@ impl StorageService {
             }
         });
         Self { sender }
+    }
+    pub async fn execute<T: Send + 'static>(
+        &self,
+        operation: impl FnOnce(&mut Database) -> Result<T, AppError> + Send + 'static,
+    ) -> Result<T, AppError> {
+        let (tx, rx) = oneshot::channel();
+        self.sender
+            .send(Request::Execute(Box::new(move |database| {
+                let _ = tx.send(database.and_then(operation));
+            })))
+            .map_err(|_| AppError::storage())?;
+        rx.await.map_err(|_| AppError::storage())?
     }
     pub async fn bootstrap(&self) -> Result<Bootstrap, AppError> {
         let (tx, rx) = oneshot::channel();

@@ -9,7 +9,7 @@ export function normalizeError(error: unknown): AppError {
   const parsed = appErrorSchema.safeParse(error);
   return parsed.success ? parsed.data : { code: 'UNKNOWN', messageKey: 'errors.unknown', recoverable: true };
 }
-async function request<T>(command: string, schema: z.ZodType<T>, args?: Record<string, unknown>): Promise<T> {
+export async function request<T>(command: string, schema: z.ZodType<T>, args?: Record<string, unknown>): Promise<T> {
   if (!isTauri()) throw { code: 'DESKTOP_REQUIRED', messageKey: 'errors.desktop', recoverable: false } satisfies AppError;
   const result = await invoke<unknown>(command, args);
   const parsed = schema.safeParse(result);

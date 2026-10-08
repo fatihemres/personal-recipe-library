@@ -7,7 +7,7 @@ fn fresh_database_has_real_fts_foreign_keys_and_defaults() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
     let bootstrap = db.bootstrap().unwrap();
-    assert_eq!(bootstrap.storage.schema_version, 1);
+    assert_eq!(bootstrap.storage.schema_version, 2);
     assert!(bootstrap.storage.foreign_keys && bootstrap.storage.fts5);
     assert_eq!(bootstrap.preferences.theme, Theme::System);
     assert_eq!(bootstrap.preferences.locale, "tr");
@@ -25,7 +25,7 @@ fn fresh_database_has_real_fts_foreign_keys_and_defaults() {
         .is_err());
 }
 #[test]
-fn repeated_initialization_preserves_preferences_and_single_migration() {
+fn repeated_initialization_preserves_preferences_and_migration_ledger() {
     let dir = tempdir().unwrap();
     {
         let mut db = Database::open(dir.path()).unwrap();
@@ -43,7 +43,7 @@ fn repeated_initialization_preserves_preferences_and_single_migration() {
                 .query_row("SELECT count(*) FROM schema_migrations", [], |r| r
                     .get::<_, i64>(0))
                 .unwrap(),
-            1
+            2
         );
     }
 }
@@ -85,7 +85,7 @@ fn modified_checksum_is_rejected_without_mutating_file() {
 fn newer_schema_is_rejected_without_mutation() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
-    db.conn.pragma_update(None, "user_version", 2).unwrap();
+    db.conn.pragma_update(None, "user_version", 3).unwrap();
     drop(db);
     let path = dir.path().join("library.sqlite3");
     let before = std::fs::read(&path).unwrap();
@@ -114,8 +114,10 @@ fn missing_ledger_and_corrupt_files_are_not_replaced() {
 #[test]
 fn migration_failure_rolls_back_schema_and_ledger() {
     let dir = tempdir().unwrap();
-    let db = Database::open(dir.path()).unwrap();
-    drop(db);
+    let path = dir.path().join("library.sqlite3");
+    let mut initial = Connection::open(&path).unwrap();
+    migrations::apply(&mut initial, &path, &migrations::MIGRATIONS[..1]).unwrap();
+    drop(initial);
     let path = dir.path().join("library.sqlite3");
     let mut conn = Connection::open(&path).unwrap();
     let changes = [
@@ -163,8 +165,10 @@ fn migration_failure_rolls_back_schema_and_ledger() {
 #[test]
 fn read_only_database_returns_error_without_reset() {
     let dir = tempdir().unwrap();
-    let db = Database::open(dir.path()).unwrap();
-    drop(db);
+    let path = dir.path().join("library.sqlite3");
+    let mut initial = Connection::open(&path).unwrap();
+    migrations::apply(&mut initial, &path, &migrations::MIGRATIONS[..1]).unwrap();
+    drop(initial);
     let path = dir.path().join("library.sqlite3");
     let mut conn = Connection::open_with_flags(&path, OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
     let changes = [
@@ -206,7 +210,7 @@ fn rust_bootstrap_matches_frontend_contract_shape() {
         value["preferences"],
         serde_json::json!({"theme":"system","locale":"tr"})
     );
-    assert_eq!(value["storage"]["schemaVersion"], 1);
+    assert_eq!(value["storage"]["schemaVersion"], 2);
     assert_eq!(value["storage"]["foreignKeys"], true);
     assert_eq!(value["storage"]["fts5"], true);
 }
@@ -236,7 +240,10 @@ fn new_database_and_directory_are_private_and_symlinks_rejected() {
 #[test]
 fn successful_upgrade_preserves_preferences_and_snapshot_then_is_idempotent() {
     let dir = tempdir().unwrap();
-    let mut db = Database::open(dir.path()).unwrap();
+    let path = dir.path().join("library.sqlite3");
+    let mut conn = Connection::open(&path).unwrap();
+    migrations::apply(&mut conn, &path, &migrations::MIGRATIONS[..1]).unwrap();
+    let mut db = Database { conn };
     db.save_preferences(Preferences {
         theme: Theme::Dark,
         locale: "tr".into(),
@@ -294,7 +301,7 @@ fn migration_ledger_gap_and_version_disagreement_are_rejected() {
         if sql.contains("version=0") && !sql.starts_with("PRAGMA") {
             db.conn
                 .execute_batch(
-                    "PRAGMA ignore_check_constraints=ON; UPDATE schema_migrations SET version=0;",
+                    "PRAGMA ignore_check_constraints=ON; UPDATE schema_migrations SET version=0 WHERE version=1;",
                 )
                 .unwrap();
         } else {

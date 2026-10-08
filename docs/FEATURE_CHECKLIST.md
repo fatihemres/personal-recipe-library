@@ -1,6 +1,6 @@
 # Feature checklist
 
-Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.
+Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M1/M2A subsets only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.
 
 ## R01 — Architecture/stack
 
@@ -32,7 +32,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 
 ## R05 — Library
 
-- [ ] Food/beverage create/view/edit/duplicate/archive, soft delete/trash restore.
+- [x] Food/beverage create/view/edit, ordered ingredients/steps, soft delete and basic trash restore.
+- [ ] Duplicate/archive and durable draft recovery (M2B).
 - [ ] Cards/list, sorts/filters/advanced FTS search and favorites.
 - [ ] Ratings/rich notes, variations/related recipes/history/version restore.
 - [ ] Ingredient substitutions and portion adjustment.
@@ -56,6 +57,9 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 
 ## R08 — Catalog
 
+- [x] Independent personal ingredient create/search/select and normalized exact duplicate reuse (M2A).
+- [ ] Personal ingredient edit/organize and advanced duplicate review.
+
 - [ ] Extensive cleaned catalog ships offline, Turkish culinary terminology included.
 - [ ] Coverage target reviewed; real per-category validated import count report.
 - [ ] USDA/FoodOn/OFF/beverage references investigated with exact reuse/licensing gates.
@@ -69,6 +73,9 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 
 ## R09 — Measurements
 
+- [x] Decimal-text quantities and preserved g/kg/mL/cc/L/adet references; unknown quantities supported.
+- [ ] Full conversion/scaling/normalization/presets engine.
+
 - [ ] Full volume/mass/count/culinary/bar/custom/temperature units listed in R09.
 - [ ] 25/35/50 cc/custom quantities and personal presets/display preferences.
 - [ ] Canonical/display separation, exact compatible factors and cc=mL.
@@ -77,6 +84,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 - [ ] Household/bar definition snapshots and clear unsafe-conversion explanations.
 
 ## R10 — Instructions
+
+- [x] Ordered instructions, add/edit/remove/reorder persisted (M2A).
 
 - [ ] Ordered title/description/duration/temperature/equipment/images.
 - [ ] Step ingredient references/technique/tips/notes.
@@ -100,7 +109,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 - [x] Real per-user DB, singleton preferences, safe initialization/retry.
 - [x] Immutable migration SQL, SHA-256 ledger, user_version validation, FKs.
 - [x] Transactional changes and pre-upgrade online snapshots with rollback tests.
-- [ ] Normalized future recipe/catalog/media/inventory/planner entities and indexes.
+- [x] Normalized recipe/ingredient/unit/step foundation with constraints and atomic saves.
+- [ ] Remaining catalog/media/inventory/planner entities and indexes.
 - [ ] Source/seed/import metadata with repeatable idempotent imports/user overrides.
 - [ ] Historical production schema/seed upgrade matrix and duplicate protection.
 
@@ -122,7 +132,7 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are M1 only. All 
 
 - [x] Guidance/progress/master/architecture/plan/schema/dictionary/testing/checklist.
 - [x] README setup/current behavior and unreleased CHANGELOG.
-- [x] M1 actual SQLite/command/renderer tests and native macOS restart evidence.
+- [x] M1/M2A actual SQLite/command/renderer tests and native macOS restart evidence.
 - [ ] Measurement/data-license/coverage/backup/release docs at owning milestones.
 - [ ] Full critical feature tests listed in R20, including Turkish and cross-platform cases.
 - [ ] Signed/notarized native packages, verified supported OS/architecture matrix.

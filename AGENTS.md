@@ -32,3 +32,10 @@ Build a local-first food and beverage recipe management desktop application for 
 - Desktop smoke test: `npm run tauri -- dev` when runtime behavior changes.
 - Validate macOS and Windows on their respective hosts before claiming cross-platform readiness. A Rust check is not a desktop runtime or installer test.
 - Do not install dependencies, upgrade versions, or change packaging merely to complete a documentation task.
+
+## Recipe foundation invariants (M2A)
+- Preserve migration 001 and 002 after this milestone; future schema work adds version 003 or later.
+- Measurements are decimal text, never JS Number/SQLite REAL; preserve selected units and unknown quantity NULL. Consult docs/MEASUREMENT_ENGINE.md before conversion/scaling changes.
+- Recipe saves use the Rust worker/repository transaction and expected revisions. Do not bypass referential integrity or introduce renderer persistence as an alternative source of truth.
+- Personal ingredient identity is independent of recipes; catalog upgrades must preserve it.
+- Durable drafts/duplication/archive remain M2B. Basic trash/restore already exists; do not silently drop it.

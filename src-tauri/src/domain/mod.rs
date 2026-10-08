@@ -1,3 +1,4 @@
+pub mod recipes;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, PartialEq)]
@@ -28,6 +29,9 @@ impl From<rusqlite::Error> for AppError {
             rusqlite::Error::SqliteFailure(failure, _) => match failure.code {
                 rusqlite::ErrorCode::DatabaseCorrupt | rusqlite::ErrorCode::NotADatabase => {
                     Self::integrity()
+                }
+                rusqlite::ErrorCode::ConstraintViolation => {
+                    Self::new("INVALID_INPUT", "errors.validation", true)
                 }
                 rusqlite::ErrorCode::DatabaseBusy | rusqlite::ErrorCode::DatabaseLocked => {
                     Self::new("STORAGE_BUSY", "errors.busy", true)

@@ -24,3 +24,13 @@ M1 implemented data and contracts. Future domain entities remain proposed in ARC
 ## Initial future DTO contracts
 
 `src/shared/contracts/recipe.ts` contains validation/type definitions only, for M2: recipe kind food/beverage, trimmed nonempty title, positive decimal-string yield, ingredient UUID references, nullable decimal-string quantities and unit codes, ordered step UUID/position/description, canonical/display ingredient names, and unit dimensions mass/volume/count/temperature. Numeric canonical strings use a dot; localized entry parsing is a future measurement concern. Null means unknown/as-needed, not zero. These contracts will gain advanced fields as their milestones arrive; they do not enable or simulate recipe features.
+
+## Implemented M2A contracts
+
+- `RecipeInput`: id (canonical lowercase hyphenated UUID); expectedRevision (null=create, positive integer=update); title (trimmed 1–200 characters); description (nullable, ≤10000); kind food/beverage; servings (positive decimal text); prepMinutes/cookMinutes (nullable integers 0–10080); notes (nullable, ≤20000); ingredients and steps (ordered arrays, ≤500 each).
+- `Recipe`: saved input fields without expectedRevision, plus positive revision, createdAt/updatedAt UTC timestamp strings, nullable deletedAt, and ingredientNames keyed by stable ingredient ID for display. Array order is persisted position order. Snapshot names are resolved at read time, not authoritative ingredient identity.
+- Ingredient line: id, ingredientId, quantity (nullable decimal text), unitCode (FK; preserves selection), note (nullable, ≤2000). No density conversion or implicit mass/volume equivalence.
+- Step: id and instructions (trimmed 1–10000 characters). Position is the ordered array index, generated in Rust.
+- Ingredient: id and name (trimmed 1–200 characters). NFC + Turkish-aware lowercase + collapsed whitespace key supports search/exact duplicate reuse. Source/product/localized names are later catalog extensions.
+- Unit: code, dimension mass/volume/count, canonicalCode and exact integer factor. No custom unit editor yet.
+- IPC: list_recipes(trash,kind), get_recipe(id), save_recipe(input), set_recipe_deleted(id,revision,deleted), search_ingredients(query), create_ingredient(name), list_units. Existing bootstrap/save_preferences unchanged. Frontend output schemas are strict Zod contracts; Rust validates authoritative input and uses the existing structured error envelope. CONFLICT and NOT_FOUND have Turkish messages; SQL constraints map to validation errors without exposing SQL/paths.
