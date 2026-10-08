@@ -12,13 +12,15 @@
   "app": {
     "windows": [
       {
-        "title": "personal-recipe-library",
-        "width": 800,
-        "height": 600
+        "title": "Tarif Atlas\u0131",
+        "width": 1120,
+        "height": 800,
+        "minWidth": 520,
+        "minHeight": 560
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: http://asset.localhost; connect-src ipc: http://ipc.localhost"
     }
   },
   "bundle": {
