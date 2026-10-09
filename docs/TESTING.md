@@ -92,3 +92,65 @@ Final normal-identifier unsigned debug macOS app also built; normal personal dat
 Browser tests prove desktop-required boundary/responsive navigation, not native persistence. Frontend catalog response/error/status fixtures prove presentation/protocol handling only. First resumed Playwright bind failed with sandbox EPERM at 127.0.0.1:1420; authorized retry passed. Initial schema-expected-version/historical fixture issues were fixed and final Rust tests rerun. No unresolved failure/timeout. Windows/Intel hosts, signed/notarized installers, comprehensive production catalog and catalog-scale/fuzzy/category-management UI remain unverified/future scope.
 
 Final small personal-manager feedback explains when creating a name reuses a catalog record rather than making a personal duplicate; type/lint/frontend tests/build pass. That message was not separately clicked in native verification.
+
+## M3B-1 production catalog verification — 2026-10-09
+
+Added five real SQLite tests: embedded/disk package equivalence; full production
+counts/source/category report consistency and TR/EN/alias search; recipe exact
+quantity persistence after database reopen; version-1 personal collisions,
+customizations/notes/units, recipe/draft preservation; invalid duplicate and
+mid-transaction trigger rollback/retry; actual default worker first-launch
+installation/reopen/no repeated audit; future installed version retention and
+same-version drift rejection. The schema-3 upgrade regression now also installs
+the real production seed after migration/validation, retaining M2B state.
+Historical IPC fixtures explicitly use a seed-free worker for their original
+contracts; the new production worker test uses the real default path, not mocks.
+Existing crash/interrupted-import and M1/M2A/M2B/M3A tests remain active.
+
+Package: 235 verified source IDs, 39 category nodes, 470 production provenance
+mappings, zero empirical observations; clean installation available=235,
+collisions=0. Upgrade fixture with personal Şeker: production definitions=235,
+available catalog definitions=234, one pending collision; personal identity and
+recipe/draft references unchanged. Source history retains four snapshots on
+validation→production upgrade. Hash/quantity/FK/integrity assertions are real SQL.
+
+Generation was rerun against the pinned archive and all JSON artifacts reproduced
+byte-for-byte. The CLI installed into /private/tmp/recipeatlas-m3b1-final-cli;
+actual successful report is catalog/production/installation-report.json. A
+second import returned unchanged=true, inserted=0, updated=0. No user database
+was erased or reset. Unselected upstream rows are not reported as rejected.
+
+Frontend fixtures verify presentation only. Initial Clippy caught two needless
+borrows from the shared-loader refactor; fixed. A frontend test temporarily
+failed because the updated explanatory copy removed its validation/production
+distinction phrase; the phrase was retained and tests rerun. Neither was a
+timeout. Final check results are recorded in PROJECT_PROGRESS.md.
+
+Native verification uses isolated identifiers and copied unsigned debug .apps,
+never the normal com.recipeatlas.desktop database. Packaged first launch (no
+Vite/API server) showed schema 4, FK/FTS5 verified, production 235/validation 0,
+collisions 0. Selected bundled Domates (çiğ, kırmızı) with Down/Enter, saved a
+recipe with 200.000001 g and “Domatesi doğrayın.”, explicitly Quit via the macOS
+menu, confirmed stopped app inventory, relaunched and observed exact data.
+No physical OS network disable was performed; artifacts are embedded, Rust has
+no import network client, and the packaged workflows require no online API.
+Windows, Intel macOS, signing/notarization and independent Turkish culinary
+expert review remain unverified. No installer/public trust claim is made.
+
+
+Final isolated build `com.recipeatlas.m3b1-final-verification` also showed 235/0/0
+production/validation/collision counts and revised M3B-1 Settings copy. Native
+ICING returned Pudra şekeri; keyboard selection and save of 35.000001 g plus
+“Pudra şekerini eleyin.” survived explicit menu Quit, confirmed stopped inventory,
+and relaunch. After these observations the last recipe-help wording change was
+covered by frontend checks/build; its exact wording was not manually reobserved.
+The final normal-identifier unsigned debug bundle was built without launching
+against the user's production database. Isolated development launch on port
+1430 reached Running target/debug/personal-recipe-library and was stopped with
+Ctrl-C. GUI workflow evidence is from packaged apps, not inferred from dev logs.
+A final coverage consistency assertion initially used incompatible usize/i64 test
+types; corrected with checked conversion, then full Rust tests/Clippy rerun.
+
+Final browser rerun first encountered sandbox EPERM binding localhost:1420;
+authorized local-port retry passed both tests. This is an environment restriction,
+not a product failure or timeout. No unresolved timeouts or failed final gates.

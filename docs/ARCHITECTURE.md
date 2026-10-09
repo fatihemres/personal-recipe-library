@@ -143,3 +143,18 @@ Deterministic UUIDv8 curated keys, bilingual names/aliases, normalized taxonomy,
 Recipe autocomplete can read available personal/built-in records with locale-specific TR/EN/alias matching and DISTINCT identity semantics. The personal ingredient manager stays personal-only. Exact name collisions are queued and do not publish duplicate built-in recipe-facing rows. Explicit CAS linking attaches canonical metadata without renaming/reassigning personal IDs. Catalog overrides are a backend/typed service foundation; full collision/customization/category management UI, fuzzy search and large-list tuning remain M3C. Category creation is operational through validated IPC; no unused global UI scaffolding was added.
 
 M3B owns extensive validated coverage and bundled offline startup installation. Catalog versions/source artifact changes need review; missing records are retained to protect references, and reset-to-default/retirement policies need explicit future design. Checksums detect drift, not malicious unsigned package substitution. Schema 4 cannot be opened by older M2B builds; restore limitations remain unchanged.
+
+### M3B-1 offline catalog bootstrap
+
+Production seed version 2 is embedded in Rust and installed through the existing
+single SQLite worker after Database::open, before requests are served. Raw
+Database::open remains seed-free for maintenance/import tools and historical
+fixtures. Startup validates the same package contracts as the CLI, then applies
+the existing transactional importer. Installed same/hash versions are no-ops;
+newer catalog versions are retained. License clearance now permits explicitly
+reviewed immutable snapshot versions, preserving historical evidence hashes.
+No schema migration, dependency, capability, network client or frontend storage
+path added. Packaging includes the production CC0/attribution NOTICE resource. The recipe editor uses its existing catalog-aware IPC search.
+Historical IPC regression fixtures explicitly use a seed-free worker; a separate
+production test exercises the real default worker, embedded seed and recipe
+persistence. Fixtures do not establish production completion alone.

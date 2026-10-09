@@ -257,7 +257,7 @@ mod tests {
     fn registered_ipc_handlers_use_real_worker_and_persist_across_restart() {
         let dir = tempfile::tempdir().unwrap();
         let app = mock_builder()
-            .manage(StorageService::new(Ok(dir.path().into())))
+            .manage(StorageService::without_catalog(Ok(dir.path().into())))
             .invoke_handler(tauri::generate_handler![bootstrap, save_preferences])
             .build(mock_context(noop_assets()))
             .unwrap();
@@ -276,7 +276,7 @@ mod tests {
             "dark"
         );
         let app2 = mock_builder()
-            .manage(StorageService::new(Ok(dir.path().into())))
+            .manage(StorageService::without_catalog(Ok(dir.path().into())))
             .invoke_handler(tauri::generate_handler![super::bootstrap, save_preferences])
             .build(mock_context(noop_assets()))
             .unwrap();
@@ -306,7 +306,7 @@ mod tests {
         let directory = tempfile::tempdir().unwrap();
         let create_app = || {
             mock_builder()
-                .manage(StorageService::new(Ok(directory.path().into())))
+                .manage(StorageService::without_catalog(Ok(directory.path().into())))
                 .invoke_handler(tauri::generate_handler![
                     list_recipes,
                     get_recipe,
@@ -397,7 +397,7 @@ mod tests {
         let path = dir.path().join("app");
         std::fs::write(&path, "obstacle").unwrap();
         let app = mock_builder()
-            .manage(StorageService::new(Ok(path.clone())))
+            .manage(StorageService::without_catalog(Ok(path.clone())))
             .invoke_handler(tauri::generate_handler![bootstrap])
             .build(mock_context(noop_assets()))
             .unwrap();
@@ -418,7 +418,7 @@ mod tests {
     fn reliability_ipc_uses_actual_sqlite_for_drafts_management_and_ingredient_conflicts() {
         let dir = tempfile::tempdir().unwrap();
         let app = mock_builder()
-            .manage(StorageService::new(Ok(dir.path().into())))
+            .manage(StorageService::without_catalog(Ok(dir.path().into())))
             .invoke_handler(tauri::generate_handler![
                 create_ingredient,
                 search_personal_ingredients,
@@ -557,7 +557,7 @@ mod tests {
             .join("../catalog/validation/manifest.json");
         crate::catalog_tool::import(dir.path(), &manifest, true).unwrap();
         let app = mock_builder()
-            .manage(StorageService::new(Ok(dir.path().into())))
+            .manage(StorageService::without_catalog(Ok(dir.path().into())))
             .invoke_handler(tauri::generate_handler![
                 catalog_status,
                 search_ingredients,

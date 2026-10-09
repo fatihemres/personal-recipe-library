@@ -49,3 +49,41 @@ Coverage counts direct memberships, so root `food` has 0 direct members even tho
 M3B must extend preparation tools and license allowlist consciously, create a reviewed coverage matrix and actual report, and embed an approved production package for automatic idempotent offline installation through the Rust worker. It must test application packaging, first install and updates while preserving M2B data. This task does not claim production catalog completion.
 
 A catalog upgrade that would change an uncustomized system display name to an existing personal name is rejected with `CATALOG_NAME_CONFLICT`, rolling back the package. Review that collision rather than silently merging, renaming personal data or introducing duplicate display identities. This differs from initial installation, which retains pending candidates without materializing colliding built-in rows.
+
+## M3B-1 production installation (dataset version 2)
+
+The Rust worker validates and installs the compiled production package before
+serving its first request. `include_bytes!` embeds the ingredients and both
+provenance evidence artifacts; first launch requires no network or writable
+resource directory. The same license/checksum/provenance validator serves CLI
+and embedded imports. Validation version 1 is never auto-installed.
+
+Existing version 1 upgrades transactionally to version 2. Eight common identities
+are retained with stable IDs; 227 additional identities bring the total to 235.
+Personal-name collisions suppress catalog materialization and remain pending,
+without changing recipe/draft references. Per-field overrides survive updates.
+Same version/hash skips re-import and avoids redundant audit rows. Same version
+with a changed hash fails visibly; newer installed catalog versions are preserved
+without downgrade. Installation failures return existing structured errors and
+retry on later worker requests; no reset, partial catalog or pretend success.
+
+The immutable USDA snapshot `2018-04-selection-2` is a project extraction of the
+same upstream April 2018 release. It is not a claim of a newer USDA dataset.
+Historical `2018-04` and `validation-1` snapshots remain approved and unchanged.
+
+Reproduce using the pinned official archive described in DATA_SOURCES_AND_LICENSES:
+
+```sh
+python3 tools/prepare_production_catalog.py /path/to/FoodData_Central_sr_legacy_food_csv_2018-04.zip
+cargo run --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import -- /tmp/recipeatlas-production-test catalog/production/manifest.json
+```
+
+The generator checks archive SHA256 and exact descriptor for every ID against
+curation.tsv. It never downloads, translates automatically, or reads personal
+data. Repeating generation must produce identical JSON hashes. The CLI needs
+`--allow-validation` only for validation fixtures, not production. Use a separate
+temporary directory, never reset a user's database for testing.
+
+`coverage.json` records package counts; CLI reports actual inserts/updates/available
+rows/collisions and overlapping category memberships. Source and output checksums
+are integrity checks, not signatures or independent proof of translation quality.

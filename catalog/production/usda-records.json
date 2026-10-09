@@ -1,0 +1,942 @@
+[
+  {
+    "description": "Oil, flaxseed, cold pressed",
+    "externalId": "167702"
+  },
+  {
+    "description": "Alcoholic beverage, rice (sake)",
+    "externalId": "167723"
+  },
+  {
+    "description": "Lemons, raw, without peel",
+    "externalId": "167746"
+  },
+  {
+    "description": "Lemon juice, raw",
+    "externalId": "167747"
+  },
+  {
+    "description": "Raspberries, raw",
+    "externalId": "167755"
+  },
+  {
+    "description": "Strawberries, raw",
+    "externalId": "167762"
+  },
+  {
+    "description": "Tamarinds, raw",
+    "externalId": "167763"
+  },
+  {
+    "description": "Watermelon, raw",
+    "externalId": "167765"
+  },
+  {
+    "description": "Syrups, grenadine",
+    "externalId": "168088"
+  },
+  {
+    "description": "Kiwifruit, green, raw",
+    "externalId": "168153"
+  },
+  {
+    "description": "Kumquats, raw",
+    "externalId": "168154"
+  },
+  {
+    "description": "Limes, raw",
+    "externalId": "168155"
+  },
+  {
+    "description": "Lime juice, raw",
+    "externalId": "168156"
+  },
+  {
+    "description": "Quinces, raw",
+    "externalId": "168163"
+  },
+  {
+    "description": "Asparagus, raw",
+    "externalId": "168389"
+  },
+  {
+    "description": "Cucumber, with peel, raw",
+    "externalId": "168409"
+  },
+  {
+    "description": "Pumpkin, raw",
+    "externalId": "168448"
+  },
+  {
+    "description": "Spinach, raw",
+    "externalId": "168462"
+  },
+  {
+    "description": "Lemon grass (citronella), raw",
+    "externalId": "168573"
+  },
+  {
+    "description": "Grape leaves, raw",
+    "externalId": "168575"
+  },
+  {
+    "description": "Mushrooms, oyster, raw",
+    "externalId": "168580"
+  },
+  {
+    "description": "Alcoholic beverage, beer, regular, all",
+    "externalId": "168746"
+  },
+  {
+    "description": "Alcoholic beverage, beer, light",
+    "externalId": "168749"
+  },
+  {
+    "description": "Sugars, brown",
+    "externalId": "168833"
+  },
+  {
+    "description": "Quinoa, uncooked",
+    "externalId": "168874"
+  },
+  {
+    "description": "Wheat flour, whole-grain (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "168893"
+  },
+  {
+    "description": "Rice, white, short-grain, raw, unenriched",
+    "externalId": "168931"
+  },
+  {
+    "description": "Melons, cantaloupe, raw",
+    "externalId": "169092"
+  },
+  {
+    "description": "Oranges, raw, all commercial varieties",
+    "externalId": "169097"
+  },
+  {
+    "description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "169098"
+  },
+  {
+    "description": "Tangerines, (mandarin oranges), raw",
+    "externalId": "169105"
+  },
+  {
+    "description": "Pears, raw",
+    "externalId": "169118"
+  },
+  {
+    "description": "Pineapple, raw, all varieties",
+    "externalId": "169124"
+  },
+  {
+    "description": "Pomegranates, raw",
+    "externalId": "169134"
+  },
+  {
+    "description": "Beets, raw",
+    "externalId": "169145"
+  },
+  {
+    "description": "Artichokes, (globe or french), raw",
+    "externalId": "169205"
+  },
+  {
+    "description": "Eggplant, raw",
+    "externalId": "169228"
+  },
+  {
+    "description": "Garlic, raw",
+    "externalId": "169230"
+  },
+  {
+    "description": "Ginger root, raw",
+    "externalId": "169231"
+  },
+  {
+    "description": "Mushrooms, shiitake, raw",
+    "externalId": "169242"
+  },
+  {
+    "description": "Leeks, (bulb and lower leaf-portion), raw",
+    "externalId": "169246"
+  },
+  {
+    "description": "Lettuce, cos or romaine, raw",
+    "externalId": "169247"
+  },
+  {
+    "description": "Lettuce, iceberg (includes crisphead types), raw",
+    "externalId": "169248"
+  },
+  {
+    "description": "Mushrooms, white, raw",
+    "externalId": "169251"
+  },
+  {
+    "description": "Okra, raw",
+    "externalId": "169260"
+  },
+  {
+    "description": "Purslane, raw",
+    "externalId": "169274"
+  },
+  {
+    "description": "Radishes, raw",
+    "externalId": "169276"
+  },
+  {
+    "description": "Sauerkraut, canned, solids and liquids",
+    "externalId": "169279"
+  },
+  {
+    "description": "Squash, summer, zucchini, includes skin, raw",
+    "externalId": "169291"
+  },
+  {
+    "description": "Pickles, cucumber, sour",
+    "externalId": "169379"
+  },
+  {
+    "description": "Peppers, sweet, yellow, raw",
+    "externalId": "169383"
+  },
+  {
+    "description": "Arugula, raw",
+    "externalId": "169387"
+  },
+  {
+    "description": "Seeds, flaxseed",
+    "externalId": "169414"
+  },
+  {
+    "description": "Cocoa, dry powder, unsweetened",
+    "externalId": "169593"
+  },
+  {
+    "description": "Honey",
+    "externalId": "169640"
+  },
+  {
+    "description": "Sugars, granulated",
+    "externalId": "169655"
+  },
+  {
+    "description": "Sugars, powdered",
+    "externalId": "169656"
+  },
+  {
+    "description": "Syrups, maple",
+    "externalId": "169661"
+  },
+  {
+    "description": "Cornstarch",
+    "externalId": "169698"
+  },
+  {
+    "description": "Couscous, dry",
+    "externalId": "169699"
+  },
+  {
+    "description": "Millet, raw",
+    "externalId": "169702"
+  },
+  {
+    "description": "Oats (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "169705"
+  },
+  {
+    "description": "Rice flour, white, unenriched",
+    "externalId": "169714"
+  },
+  {
+    "description": "Rice, white, long-grain, regular, raw, unenriched",
+    "externalId": "169756"
+  },
+  {
+    "description": "Wheat flour, white, all-purpose, unenriched",
+    "externalId": "169761"
+  },
+  {
+    "description": "Loquats, raw",
+    "externalId": "169908"
+  },
+  {
+    "description": "Mangos, raw",
+    "externalId": "169910"
+  },
+  {
+    "description": "Melons, honeydew, raw",
+    "externalId": "169911"
+  },
+  {
+    "description": "Mulberries, raw",
+    "externalId": "169913"
+  },
+  {
+    "description": "Nectarines, raw",
+    "externalId": "169914"
+  },
+  {
+    "description": "Peaches, yellow, raw",
+    "externalId": "169928"
+  },
+  {
+    "description": "Persimmons, japanese, raw",
+    "externalId": "169941"
+  },
+  {
+    "description": "Pineapple juice, canned or bottled, unsweetened, without added ascorbic acid",
+    "externalId": "169947"
+  },
+  {
+    "description": "Plums, raw",
+    "externalId": "169949"
+  },
+  {
+    "description": "Beans, snap, green, raw",
+    "externalId": "169961"
+  },
+  {
+    "description": "Cabbage, raw",
+    "externalId": "169975"
+  },
+  {
+    "description": "Cabbage, red, raw",
+    "externalId": "169977"
+  },
+  {
+    "description": "Cauliflower, raw",
+    "externalId": "169986"
+  },
+  {
+    "description": "Celery, raw",
+    "externalId": "169988"
+  },
+  {
+    "description": "Chard, swiss, raw",
+    "externalId": "169991"
+  },
+  {
+    "description": "Coriander (cilantro) leaves, raw",
+    "externalId": "169997"
+  },
+  {
+    "description": "Corn, sweet, yellow, raw",
+    "externalId": "169998"
+  },
+  {
+    "description": "Onions, raw",
+    "externalId": "170000"
+  },
+  {
+    "description": "Onions, spring or scallions (includes tops and bulb), raw",
+    "externalId": "170005"
+  },
+  {
+    "description": "Potatoes, flesh and skin, raw",
+    "externalId": "170026"
+  },
+  {
+    "description": "Peppers, sweet, red, raw",
+    "externalId": "170108"
+  },
+  {
+    "description": "Seeds, sesame seeds, whole, dried",
+    "externalId": "170150"
+  },
+  {
+    "description": "Nuts, cashew nuts, raw",
+    "externalId": "170162"
+  },
+  {
+    "description": "Nuts, coconut meat, raw",
+    "externalId": "170169"
+  },
+  {
+    "description": "Nuts, pecans",
+    "externalId": "170182"
+  },
+  {
+    "description": "Nuts, pistachio nuts, raw",
+    "externalId": "170184"
+  },
+  {
+    "description": "Nuts, walnuts, english",
+    "externalId": "170187"
+  },
+  {
+    "description": "Barley, pearled, raw",
+    "externalId": "170284"
+  },
+  {
+    "description": "Buckwheat",
+    "externalId": "170286"
+  },
+  {
+    "description": "Corn flour, whole-grain, yellow",
+    "externalId": "170290"
+  },
+  {
+    "description": "Broccoli, raw",
+    "externalId": "170379"
+  },
+  {
+    "description": "Brussels sprouts, raw",
+    "externalId": "170383"
+  },
+  {
+    "description": "Carrots, raw",
+    "externalId": "170393"
+  },
+  {
+    "description": "Celeriac, raw",
+    "externalId": "170400"
+  },
+  {
+    "description": "Parsley, fresh",
+    "externalId": "170416"
+  },
+  {
+    "description": "Peas, green, raw",
+    "externalId": "170419"
+  },
+  {
+    "description": "Peppers, sweet, green, raw",
+    "externalId": "170427"
+  },
+  {
+    "description": "Tomatoes, red, ripe, raw, year round average",
+    "externalId": "170457"
+  },
+  {
+    "description": "Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "170459"
+  },
+  {
+    "description": "Tomato products, canned, puree, without salt added",
+    "externalId": "170460"
+  },
+  {
+    "description": "Turnips, raw",
+    "externalId": "170465"
+  },
+  {
+    "description": "Carrot juice, canned",
+    "externalId": "170491"
+  },
+  {
+    "description": "Shallots, raw",
+    "externalId": "170499"
+  },
+  {
+    "description": "Tomato juice, canned, without salt added",
+    "externalId": "170545"
+  },
+  {
+    "description": "Seeds, chia seeds, dried",
+    "externalId": "170554"
+  },
+  {
+    "description": "Seeds, pumpkin and squash seed kernels, dried",
+    "externalId": "170556"
+  },
+  {
+    "description": "Seeds, sunflower seed kernels, dried",
+    "externalId": "170562"
+  },
+  {
+    "description": "Nuts, almonds",
+    "externalId": "170567"
+  },
+  {
+    "description": "Nuts, hazelnuts or filberts",
+    "externalId": "170581"
+  },
+  {
+    "description": "Bulgur, dry",
+    "externalId": "170688"
+  },
+  {
+    "description": "Cream, fluid, heavy whipping",
+    "externalId": "170859"
+  },
+  {
+    "description": "Spices, bay leaf",
+    "externalId": "170917"
+  },
+  {
+    "description": "Spices, cardamom",
+    "externalId": "170919"
+  },
+  {
+    "description": "Spices, coriander seed",
+    "externalId": "170922"
+  },
+  {
+    "description": "Spices, cumin seed",
+    "externalId": "170923"
+  },
+  {
+    "description": "Spices, ginger, ground",
+    "externalId": "170926"
+  },
+  {
+    "description": "Spices, pepper, black",
+    "externalId": "170931"
+  },
+  {
+    "description": "Spices, pepper, white",
+    "externalId": "170933"
+  },
+  {
+    "description": "Spices, saffron",
+    "externalId": "170934"
+  },
+  {
+    "description": "Spices, thyme, dried",
+    "externalId": "170938"
+  },
+  {
+    "description": "Yogurt, plain, whole milk",
+    "externalId": "171284"
+  },
+  {
+    "description": "Egg, whole, raw, fresh",
+    "externalId": "171287"
+  },
+  {
+    "description": "Spices, allspice, ground",
+    "externalId": "171315"
+  },
+  {
+    "description": "Spices, anise seed",
+    "externalId": "171316"
+  },
+  {
+    "description": "Spices, basil, dried",
+    "externalId": "171317"
+  },
+  {
+    "description": "Spices, cinnamon, ground",
+    "externalId": "171320"
+  },
+  {
+    "description": "Spices, cloves, ground",
+    "externalId": "171321"
+  },
+  {
+    "description": "Spices, fennel seed",
+    "externalId": "171323"
+  },
+  {
+    "description": "Spices, fenugreek seed",
+    "externalId": "171324"
+  },
+  {
+    "description": "Spices, garlic powder",
+    "externalId": "171325"
+  },
+  {
+    "description": "Spices, nutmeg, ground",
+    "externalId": "171326"
+  },
+  {
+    "description": "Spices, onion powder",
+    "externalId": "171327"
+  },
+  {
+    "description": "Spices, oregano, dried",
+    "externalId": "171328"
+  },
+  {
+    "description": "Spices, paprika",
+    "externalId": "171329"
+  },
+  {
+    "description": "Spices, poppy seed",
+    "externalId": "171330"
+  },
+  {
+    "description": "Spices, rosemary, dried",
+    "externalId": "171333"
+  },
+  {
+    "description": "Oil, olive, salad or cooking",
+    "externalId": "171413"
+  },
+  {
+    "description": "Chicken, broilers or fryers, breast, meat and skin, raw",
+    "externalId": "171474"
+  },
+  {
+    "description": "Apples, raw, without skin",
+    "externalId": "171689"
+  },
+  {
+    "description": "Apricots, raw",
+    "externalId": "171697"
+  },
+  {
+    "description": "Avocados, raw, all commercial varieties",
+    "externalId": "171705"
+  },
+  {
+    "description": "Blueberries, raw",
+    "externalId": "171711"
+  },
+  {
+    "description": "Cherries, sweet, raw",
+    "externalId": "171719"
+  },
+  {
+    "description": "Beef, ground, 85% lean meat / 15% fat, raw (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "171796"
+  },
+  {
+    "description": "Beverages, carbonated, tonic water",
+    "externalId": "171869"
+  },
+  {
+    "description": "Beverages, coffee, brewed, prepared with tap water",
+    "externalId": "171890"
+  },
+  {
+    "description": "Beverages, coffee, instant, regular, powder",
+    "externalId": "171893"
+  },
+  {
+    "description": "Alcoholic beverages, wine, rose",
+    "externalId": "171908"
+  },
+  {
+    "description": "Beverages, tea, green, brewed, regular",
+    "externalId": "171917"
+  },
+  {
+    "description": "Beverages, rice milk, unsweetened",
+    "externalId": "171942"
+  },
+  {
+    "description": "Beverages, tea, hibiscus, brewed",
+    "externalId": "171946"
+  },
+  {
+    "description": "Cheese, brie",
+    "externalId": "172177"
+  },
+  {
+    "description": "Cheese, camembert",
+    "externalId": "172178"
+  },
+  {
+    "description": "Egg, white, raw, fresh",
+    "externalId": "172183"
+  },
+  {
+    "description": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+    "externalId": "172217"
+  },
+  {
+    "description": "Spices, turmeric, ground",
+    "externalId": "172231"
+  },
+  {
+    "description": "Basil, fresh",
+    "externalId": "172232"
+  },
+  {
+    "description": "Dill weed, fresh",
+    "externalId": "172233"
+  },
+  {
+    "description": "Vinegar, distilled",
+    "externalId": "172237"
+  },
+  {
+    "description": "Capers, canned",
+    "externalId": "172238"
+  },
+  {
+    "description": "Vinegar, red wine",
+    "externalId": "172240"
+  },
+  {
+    "description": "Vinegar, balsamic",
+    "externalId": "172241"
+  },
+  {
+    "description": "Oil, canola",
+    "externalId": "172336"
+  },
+  {
+    "description": "Lentils, raw",
+    "externalId": "172420"
+  },
+  {
+    "description": "Peanuts, all types, raw",
+    "externalId": "172430"
+  },
+  {
+    "description": "Leavening agents, baking powder, double-acting, straight phosphate",
+    "externalId": "172804"
+  },
+  {
+    "description": "Sauce, hoisin, ready-to-serve",
+    "externalId": "172886"
+  },
+  {
+    "description": "Figs, raw",
+    "externalId": "173021"
+  },
+  {
+    "description": "Grapefruit, raw, pink and red and white, all areas",
+    "externalId": "173033"
+  },
+  {
+    "description": "Grape juice, canned or bottled, unsweetened, without added ascorbic acid",
+    "externalId": "173042"
+  },
+  {
+    "description": "Alcoholic beverage, creme de menthe, 72 proof",
+    "externalId": "173168"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, red",
+    "externalId": "173190"
+  },
+  {
+    "description": "Beverages, carbonated, lemon-lime soda, no caffeine",
+    "externalId": "173205"
+  },
+  {
+    "description": "Beverages, tea, black, brewed, prepared with tap water",
+    "externalId": "173227"
+  },
+  {
+    "description": "Butter, salted",
+    "externalId": "173410"
+  },
+  {
+    "description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+    "externalId": "173414"
+  },
+  {
+    "description": "Cheese, cream",
+    "externalId": "173418"
+  },
+  {
+    "description": "Cheese, feta",
+    "externalId": "173420"
+  },
+  {
+    "description": "Butter, without salt",
+    "externalId": "173430"
+  },
+  {
+    "description": "Salt, table",
+    "externalId": "173468"
+  },
+  {
+    "description": "Vinegar, cider",
+    "externalId": "173469"
+  },
+  {
+    "description": "Spearmint, fresh",
+    "externalId": "173475"
+  },
+  {
+    "description": "Oil, avocado",
+    "externalId": "173573"
+  },
+  {
+    "description": "Beans, black, mature seeds, raw",
+    "externalId": "173734"
+  },
+  {
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+    "externalId": "173756"
+  },
+  {
+    "description": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid",
+    "externalId": "173933"
+  },
+  {
+    "description": "Bananas, raw",
+    "externalId": "173944"
+  },
+  {
+    "description": "Blackberries, raw",
+    "externalId": "173946"
+  },
+  {
+    "description": "Cherries, sour, red, raw",
+    "externalId": "173954"
+  },
+  {
+    "description": "Beverages, tea, Oolong, brewed",
+    "externalId": "174120"
+  },
+  {
+    "description": "Beverages, tea, herb, brewed, chamomile",
+    "externalId": "174156"
+  },
+  {
+    "description": "Water, bottled, generic",
+    "externalId": "174158"
+  },
+  {
+    "description": "Mollusks, cuttlefish, mixed species, raw",
+    "externalId": "174215"
+  },
+  {
+    "description": "Mollusks, octopus, common, raw",
+    "externalId": "174218"
+  },
+  {
+    "description": "Mollusks, squid, mixed species, raw",
+    "externalId": "174223"
+  },
+  {
+    "description": "Mung beans, mature seeds, raw",
+    "externalId": "174256"
+  },
+  {
+    "description": "Soybeans, mature seeds, raw",
+    "externalId": "174270"
+  },
+  {
+    "description": "Soy sauce made from soy and wheat (shoyu)",
+    "externalId": "174277"
+  },
+  {
+    "description": "Soy sauce made from soy (tamari)",
+    "externalId": "174278"
+  },
+  {
+    "description": "Lentils, pink or red, raw",
+    "externalId": "174284"
+  },
+  {
+    "description": "Lamb, ground, raw",
+    "externalId": "174370"
+  },
+  {
+    "description": "Goose, domesticated, meat and skin, raw",
+    "externalId": "174470"
+  },
+  {
+    "description": "Turkey, retail parts, breast, meat only, raw",
+    "externalId": "174515"
+  },
+  {
+    "description": "Sauce, oyster, ready-to-serve",
+    "externalId": "174529"
+  },
+  {
+    "description": "Sauce, fish, ready-to-serve",
+    "externalId": "174531"
+  },
+  {
+    "description": "Alcoholic beverage, distilled, rum, 80 proof",
+    "externalId": "174817"
+  },
+  {
+    "description": "Alcoholic beverage, distilled, vodka, 80 proof",
+    "externalId": "174818"
+  },
+  {
+    "description": "Alcoholic beverage, distilled, whiskey, 86 proof",
+    "externalId": "174819"
+  },
+  {
+    "description": "Beverages, Coconut water, ready-to-drink, unsweetened",
+    "externalId": "174831"
+  },
+  {
+    "description": "Beverages, almond milk, unsweetened, shelf stable",
+    "externalId": "174832"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white",
+    "externalId": "174837"
+  },
+  {
+    "description": "Beverages, carbonated, club soda",
+    "externalId": "174842"
+  },
+  {
+    "description": "Beverages, carbonated, ginger ale",
+    "externalId": "174846"
+  },
+  {
+    "description": "Beverages, carbonated, cola, regular",
+    "externalId": "174852"
+  },
+  {
+    "description": "Beverages, carbonated, orange",
+    "externalId": "174854"
+  },
+  {
+    "description": "Leavening agents, baking soda",
+    "externalId": "175040"
+  },
+  {
+    "description": "Leavening agents, cream of tartar",
+    "externalId": "175041"
+  },
+  {
+    "description": "Leavening agents, yeast, baker's, compressed",
+    "externalId": "175042"
+  },
+  {
+    "description": "Leavening agents, yeast, baker's, active dry",
+    "externalId": "175043"
+  },
+  {
+    "description": "Alcoholic beverage, liqueur, coffee, 53 proof",
+    "externalId": "175097"
+  },
+  {
+    "description": "Alcoholic beverage, liqueur, coffee with cream, 34 proof",
+    "externalId": "175098"
+  },
+  {
+    "description": "Beverages, water, tap, municipal",
+    "externalId": "175103"
+  },
+  {
+    "description": "Fish, mackerel, Atlantic, raw",
+    "externalId": "175119"
+  },
+  {
+    "description": "Fish, salmon, Atlantic, farmed, raw",
+    "externalId": "175167"
+  },
+  {
+    "description": "Fish, tilapia, raw",
+    "externalId": "175176"
+  },
+  {
+    "description": "Crustaceans, shrimp, raw",
+    "externalId": "175179"
+  },
+  {
+    "description": "Beans, kidney, all types, mature seeds, raw",
+    "externalId": "175193"
+  },
+  {
+    "description": "Beans, white, mature seeds, raw",
+    "externalId": "175202"
+  },
+  {
+    "description": "Broadbeans (fava beans), mature seeds, raw",
+    "externalId": "175205"
+  },
+  {
+    "description": "Game meat, goat, raw",
+    "externalId": "175303"
+  }
+]

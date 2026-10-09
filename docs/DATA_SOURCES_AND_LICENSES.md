@@ -45,3 +45,35 @@ The linked terms page identifies **TheMealDB** and displays “01/07/2025”; ap
 Project-authored validation factual labels/classifications are CC0 as stated in `catalog/validation/NOTICE.md`; source mappings remain separately attributed. Translation choices are project curation, never fabricated upstream metadata. Stable identities and culinary forms are reviewed independently of source IDs. Missing density, allergens, ABV and nutrients remain absent.
 
 M3B must set a representative food/beverage/Turkish coverage matrix, pin every approved artifact, preserve source evidence and generate actual counts. USDA alone does not provide complete spirit/liqueur/bitters/regional coverage; find lawful documented alternatives or author verified factual curation with evidence. Do not silently remove these V1 families because one source is excluded. Signoff on rights and attribution is required before redistribution; these technical findings do not substitute for resolving uncertain license applications.
+
+## M3B-1 production selection — 2026-10-09
+
+Reused the exact pinned April 2018 archive retrieved 2026-10-08; the official
+USDA API guide CC0/public-domain statement was rechecked 2026-10-09. No new
+external dataset, API subscription, scraping, image rights or branded dump.
+The production package has 235 unchanged real FDC descriptors and identifiers,
+plus separately attributed project-authored TR/EN labels, aliases/classifications.
+Both factual sources are CC0; production NOTICE.md is bundled with the app.
+FoodOn remains conditional, Foundation unpinned, OFF/CocktailDB excluded for the
+previously documented reasons. Their exclusions do not remove V1 coverage goals.
+
+`catalog/production/manifest.json` pins `2018-04-selection-2` (project extract of
+upstream 2018-04, not a USDA release) and `production-1` curation. Separate
+snapshot names preserve immutable M3A source hashes. Machine clearance accepts
+only the explicit historical/new versions. All original eight validation files
+remain unchanged; eight independently re-reviewed common identities reuse IDs
+in the separate 235-record production package (227 additional identities).
+
+Curation.tsv explicitly pairs authored labels with exact source descriptions.
+No automatic translation is accepted. Semantic review preserves raw/ground,
+whole/powdered, species, added salt/sugar and US-proof qualifiers; uncertain
+cultivar and oregano/marjoram aliases were removed. Ordinary spelling synonyms
+and locale search aliases are useful hints, not empirical ingredient metadata.
+There is no independent Turkish culinary expert review yet; regional specialty
+mappings need that additional review before expansion. All 235 nutrition,
+density, allergen and ABV observations remain unknown. Group classification is
+project curation, not a USDA consumer-facing taxonomy or country-of-origin claim.
+
+See CATALOG_COVERAGE_PLAN.md for verified counts, contingent complete-M3B goals
+and explicit regional/bitters/specialty beverage gaps. CC0 reuse does not imply
+USDA endorsement or authorize photographs/logos outside the factual dataset.

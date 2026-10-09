@@ -1,6 +1,6 @@
 # Tarif Atlası — Personal Food & Beverage Library
 
-Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B and 3A are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
+Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B, 3A and 3B-1 are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
 
 The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers food/beverage filters, Turkish title filtering, recipe creation/detail/editing, duplication, archive/unarchive, confirmed soft deletion, trash/restore and confirmed permanent deletion. Other modules are clearly identified as upcoming.
 
@@ -45,11 +45,31 @@ Unfinished recipe input is saved separately in SQLite after a 500 ms pause, with
 
 Stale edits never overwrite newer revisions. Review the current record or explicitly choose **Yeni tarif olarak kaydet** to preserve your changes independently. Archive/delete operations retain edit drafts; after permanent deletion an edit draft can only be saved as a new recipe.
 
-The **Malzemeler** screen edits personal ingredient names, notes and preferred units. Renaming preserves all references; referenced ingredients cannot be deleted. Exact normalized duplicates are reused on creation and rejected on rename. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker → Şeker, İ/i and I/ı are distinct pairs). Empty catalog, no matching results and database errors have different messages. Missing ingredients can be created inline; no global catalog is seeded.
+The **Malzemeler** screen edits personal ingredient names, notes and preferred units. Renaming preserves all references; referenced ingredients cannot be deleted. Exact normalized duplicates are reused on creation and rejected on rename. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker → Şeker, İ/i and I/ı are distinct pairs). Empty catalog, no matching results and database errors have different messages. Missing ingredients can be created inline; the first verified production batch installs offline on startup.
 
-The entire requested product remains V1 scope. Built-in catalog, advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
+The entire requested product remains V1 scope. Extensive catalog expansion, advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
 
 
 ## M3A catalog foundation
 
 Canonical bilingual ingredients, hierarchy/provenance/override schema and offline checksummed importer are implemented. Only **eight verified USDA-backed validation ingredients** are prepared; the extensive production catalog is M3B. Validation records never auto-install into personal data. Settings distinguishes real validation/production counts. See [catalog pipeline](docs/CATALOG_IMPORT_PIPELINE.md), [source licenses](docs/DATA_SOURCES_AND_LICENSES.md), [schema](docs/INGREDIENT_CATALOG_SCHEMA.md) and [actual coverage](docs/CATALOG_COVERAGE.md) for reproduction and limits. M1/M2 data/IDs and migrations 001–003 remain preserved; schema is now 4.
+
+
+## M3B-1 first production catalog
+
+235 USDA SR Legacy generic identities with project-curated Turkish/English names
+and aliases ship embedded and install transactionally offline on first launch.
+There are 227 additional identities and eight re-reviewed shared validation IDs;
+the validation fixture remains separate and never auto-installs. Existing
+personal records, collisions, recipe references and catalog overrides are
+preserved. Missing nutrition, density, allergens and ABV remain unknown.
+
+See [coverage plan](docs/CATALOG_COVERAGE_PLAN.md),
+[package coverage](catalog/production/coverage.json),
+[actual clean import](catalog/production/installation-report.json) and
+[CC0/attribution notice](catalog/production/NOTICE.md). This first batch is not
+complete M3B: regional Turkish specialties, bitters and many drink forms remain
+explicit gaps. Full cross-platform/signed release validation remains pending.
+Normal local launch: `npm run tauri -- dev`. Use a separate identifier/profile
+for tests; do not reset personal databases. Schema remains 4; migrations 001–004
+and dependency lockfiles are unchanged.

@@ -8,6 +8,31 @@ use rusqlite::{params, OptionalExtension, Transaction, TransactionBehavior};
 use std::collections::BTreeMap;
 
 impl Database {
+    /// Startup never downgrades newer installed data and does not add redundant audit runs.
+    pub(crate) fn install_bundled_catalog(&mut self) -> Result<(), AppError> {
+        let seed = crate::catalog_tool::bundled()?;
+        let latest: i64 = self.conn.query_row(
+            "SELECT coalesce(max(version),0) FROM catalog_releases WHERE dataset=?1",
+            [&seed.manifest.dataset],
+            |r| r.get(0),
+        )?;
+        if latest > seed.manifest.version {
+            return Ok(());
+        }
+        if latest == seed.manifest.version {
+            let hash: String = self.conn.query_row(
+                "SELECT manifest_sha256 FROM catalog_releases WHERE dataset=?1 AND version=?2",
+                params![seed.manifest.dataset, seed.manifest.version],
+                |r| r.get(0),
+            )?;
+            if hash != seed.manifest_hash {
+                return Err(catalog_error("CATALOG_VERSION_CHANGED"));
+            }
+            return Ok(());
+        }
+        self.import_catalog(&seed)?;
+        Ok(())
+    }
     pub fn import_catalog(&mut self, seed: &VerifiedSeed) -> Result<ImportReport, AppError> {
         seed.validate()?;
         let run = uuid::Uuid::new_v4().to_string();

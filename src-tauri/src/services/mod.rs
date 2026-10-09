@@ -17,17 +17,26 @@ pub struct StorageService {
 }
 impl StorageService {
     pub fn new(directory: Result<PathBuf, AppError>) -> Self {
+        Self::start(directory, true)
+    }
+    #[cfg(test)]
+    pub(crate) fn without_catalog(directory: Result<PathBuf, AppError>) -> Self {
+        Self::start(directory, false)
+    }
+    fn start(directory: Result<PathBuf, AppError>, install_catalog: bool) -> Self {
         let (sender, receiver) = mpsc::channel();
         std::thread::spawn(move || {
             let mut db: Option<Database> = None;
             for request in receiver {
                 let database = match &mut db {
                     Some(database) => Ok(database),
-                    None => match directory
-                        .as_ref()
-                        .map_err(Clone::clone)
-                        .and_then(|p| Database::open(p))
-                    {
+                    None => match directory.as_ref().map_err(Clone::clone).and_then(|p| {
+                        let mut database = Database::open(p)?;
+                        if install_catalog {
+                            database.install_bundled_catalog()?;
+                        }
+                        Ok(database)
+                    }) {
                         Ok(database) => {
                             db = Some(database);
                             Ok(db.as_mut().expect("database assigned"))

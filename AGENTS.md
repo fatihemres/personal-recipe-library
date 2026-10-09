@@ -50,3 +50,9 @@ Build a local-first food and beverage recipe management desktop application for 
 - Canonical keys/UUIDs and source mappings are stable. Preserve recipe-facing personal IDs, references and catalog overrides. Name collisions require review; never merge implicitly. Changed system names that collide with personal records reject the package transaction for review.
 - Sources require reviewed license/version clearance, checksummed evidence and accurate attribution. Unknown observations stay absent. Checksums verify integrity, not authenticity or translation quality.
 - Catalog data and success audit commit together; interrupted running audits are not success. Re-import unchanged packages is idempotent; changed packages need a greater version. Never mutate an applied migration or existing source/version snapshot.
+
+## Production catalog invariants (M3B-1)
+- Consult docs/CATALOG_COVERAGE_PLAN.md and catalog/production/coverage.json before expanding coverage. Production version 2 is a first batch, not complete M3B.
+- Keep validation fixtures separate and unchanged. Embedded production seed installs via the Rust worker; never bypass the shared checked transactional importer.
+- Production extracts have explicit immutable source snapshot versions. Preserve canonical IDs, personal collisions and overrides; do not infer observations from names or proof labels.
+- Reproduce tools/prepare_production_catalog.py with the pinned archive and curated descriptor assertions. New content requires a higher dataset version and reviewed source clearance.

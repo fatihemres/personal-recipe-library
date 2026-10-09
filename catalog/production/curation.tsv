@@ -1,0 +1,236 @@
+fdc_id	tr	en	category	aliases_tr	aliases_en	expected_description
+170457	Domates (çiğ, kırmızı)	Tomato (raw, red)	vegetables	Domates		Tomatoes, red, ripe, raw, year round average
+170000	Soğan (çiğ)	Onion (raw)	vegetables	Kuru soğan		Onions, raw
+170393	Havuç (çiğ)	Carrot (raw)	vegetables	Havuç		Carrots, raw
+170026	Patates (çiğ, kabuklu)	Potato (raw, with skin)	vegetables	Patates		Potatoes, flesh and skin, raw
+169228	Patlıcan (çiğ)	Eggplant (raw)	vegetables	Patlıcan	Aubergine	Eggplant, raw
+169291	Kabak (çiğ, kabuklu)	Zucchini (raw, with skin)	vegetables	Sakız kabağı	Courgette	Squash, summer, zucchini, includes skin, raw
+169230	Sarımsak (çiğ)	Garlic (raw)	vegetables	Sarımsak		Garlic, raw
+168409	Salatalık (çiğ, kabuklu)	Cucumber (raw, with peel)	vegetables	Salatalık;Hıyar		Cucumber, with peel, raw
+170108	Kırmızı tatlı biber (çiğ)	Sweet red pepper (raw)	vegetables		Red bell pepper	Peppers, sweet, red, raw
+170427	Yeşil tatlı biber (çiğ)	Sweet green pepper (raw)	vegetables		Green bell pepper	Peppers, sweet, green, raw
+169383	Sarı tatlı biber (çiğ)	Sweet yellow pepper (raw)	vegetables		Yellow bell pepper	Peppers, sweet, yellow, raw
+170379	Brokoli (çiğ)	Broccoli (raw)	vegetables	Brokoli		Broccoli, raw
+169986	Karnabahar (çiğ)	Cauliflower (raw)	vegetables	Karnabahar		Cauliflower, raw
+169975	Lahana (çiğ)	Cabbage (raw)	vegetables	Beyaz lahana		Cabbage, raw
+169977	Kırmızı lahana (çiğ)	Red cabbage (raw)	vegetables	Mor lahana		Cabbage, red, raw
+168462	Ispanak (çiğ)	Spinach (raw)	vegetables	Ispanak		Spinach, raw
+169991	Pazı (çiğ)	Swiss chard (raw)	vegetables	Pazı		Chard, swiss, raw
+169246	Pırasa (çiğ)	Leek (raw, bulb and lower leaves)	vegetables	Pırasa		Leeks, (bulb and lower leaf-portion), raw
+170400	Kök kereviz (çiğ)	Celeriac (raw)	vegetables	Kereviz kökü		Celeriac, raw
+169988	Sap kereviz (çiğ)	Celery (raw)	vegetables	Kereviz sapı		Celery, raw
+169145	Pancar (çiğ)	Beet (raw)	vegetables	Kırmızı pancar	Beetroot	Beets, raw
+169276	Turp (çiğ)	Radish (raw)	vegetables	Turp		Radishes, raw
+170465	Şalgam (çiğ)	Turnip (raw)	vegetables	Şalgam kökü		Turnips, raw
+169205	Enginar (çiğ)	Globe artichoke (raw)	vegetables	Enginar		Artichokes, (globe or french), raw
+168389	Kuşkonmaz (çiğ)	Asparagus (raw)	vegetables	Kuşkonmaz		Asparagus, raw
+169260	Bamya (çiğ)	Okra (raw)	vegetables	Bamya		Okra, raw
+169961	Taze fasulye (çiğ, yeşil)	Green snap beans (raw)	vegetables	Yeşil fasulye		Beans, snap, green, raw
+170419	Bezelye (çiğ)	Green peas (raw)	vegetables	Bezelye		Peas, green, raw
+168448	Bal kabağı (çiğ)	Pumpkin (raw)	vegetables	Balkabağı		Pumpkin, raw
+169251	Beyaz mantar (çiğ)	White mushroom (raw)	vegetables	Kültür mantarı	Button mushroom	Mushrooms, white, raw
+168580	İstiridye mantarı (çiğ)	Oyster mushroom (raw)	vegetables	İstiridye mantarı		Mushrooms, oyster, raw
+169242	Şiitake mantarı (çiğ)	Shiitake mushroom (raw)	vegetables	Shiitake mantarı		Mushrooms, shiitake, raw
+169247	Romen marulu (çiğ)	Romaine lettuce (raw)	vegetables		Cos lettuce	Lettuce, cos or romaine, raw
+169248	Göbek marul (çiğ)	Iceberg lettuce (raw)	vegetables	Aysberg marul		Lettuce, iceberg (includes crisphead types), raw
+169387	Roka (çiğ)	Arugula (raw)	vegetables	Roka	Rocket	Arugula, raw
+169274	Semizotu (çiğ)	Purslane (raw)	vegetables	Semizotu		Purslane, raw
+170383	Brüksel lahanası (çiğ)	Brussels sprouts (raw)	vegetables	Brüksel lahanası		Brussels sprouts, raw
+170499	Arpacık soğanı (çiğ)	Shallot (raw)	vegetables	Şalot		Shallots, raw
+170005	Taze soğan (çiğ)	Spring onion (raw)	vegetables	Yeşil soğan	Scallion	Onions, spring or scallions (includes tops and bulb), raw
+169998	Tatlı mısır (çiğ, sarı)	Sweet corn (raw, yellow)	vegetables	Sarı mısır		Corn, sweet, yellow, raw
+168575	Asma yaprağı (çiğ)	Grape leaves (raw)	vegetables	Asma yaprağı;Üzüm yaprağı		Grape leaves, raw
+169231	Taze zencefil kökü	Ginger root (raw)	herbs	Zencefil kökü		Ginger root, raw
+170416	Taze maydanoz	Parsley (fresh)	herbs	Maydanoz		Parsley, fresh
+172232	Taze fesleğen	Basil (fresh)	herbs	Fesleğen		Basil, fresh
+172233	Taze dereotu	Dill weed (fresh)	herbs	Dereotu		Dill weed, fresh
+173475	Taze yeşil nane	Spearmint (fresh)	herbs	Nane		Spearmint, fresh
+169997	Taze kişniş yaprağı	Coriander leaves (raw)	herbs	Kişniş yaprağı	Cilantro	Coriander (cilantro) leaves, raw
+168573	Limon otu (çiğ)	Lemongrass (raw)	herbs	Lemongrass		Lemon grass (citronella), raw
+173944	Muz (çiğ)	Banana (raw)	fruit	Muz		Bananas, raw
+169118	Armut (çiğ)	Pear (raw)	fruit	Armut		Pears, raw
+171697	Kayısı (çiğ)	Apricot (raw)	fruit	Kayısı		Apricots, raw
+169928	Sarı şeftali (çiğ)	Peach (raw, yellow)	fruit	Şeftali		Peaches, yellow, raw
+169914	Nektarin (çiğ)	Nectarine (raw)	fruit	Nektarin		Nectarines, raw
+169949	Erik (çiğ)	Plum (raw)	fruit	Erik		Plums, raw
+171719	Kiraz (çiğ)	Sweet cherry (raw)	fruit	Kiraz		Cherries, sweet, raw
+173954	Vişne (çiğ)	Sour red cherry (raw)	fruit	Vişne		Cherries, sour, red, raw
+167762	Çilek (çiğ)	Strawberry (raw)	fruit	Çilek		Strawberries, raw
+167755	Ahududu (çiğ)	Raspberry (raw)	fruit	Frambuaz		Raspberries, raw
+173946	Böğürtlen (çiğ)	Blackberry (raw)	fruit	Böğürtlen		Blackberries, raw
+171711	Yaban mersini (çiğ)	Blueberry (raw)	fruit	Yaban mersini		Blueberries, raw
+169913	Dut (çiğ)	Mulberry (raw)	fruit	Dut		Mulberries, raw
+173021	İncir (çiğ)	Fig (raw)	fruit	İncir		Figs, raw
+169134	Nar (çiğ)	Pomegranate (raw)	fruit	Nar		Pomegranates, raw
+168163	Ayva (çiğ)	Quince (raw)	fruit	Ayva		Quinces, raw
+169097	Portakal (çiğ)	Orange (raw)	fruit	Portakal		Oranges, raw, all commercial varieties
+169105	Mandalina (çiğ)	Mandarin orange (raw)	fruit	Mandalina	Tangerine	Tangerines, (mandarin oranges), raw
+167746	Limon (çiğ, kabuksuz)	Lemon (raw, without peel)	fruit	Limon		Lemons, raw, without peel
+173033	Greyfurt (çiğ, farklı renkler)	Grapefruit (raw, mixed colors)	fruit	Greyfurt		Grapefruit, raw, pink and red and white, all areas
+169124	Ananas (çiğ)	Pineapple (raw)	fruit	Ananas		Pineapple, raw, all varieties
+169910	Mango (çiğ)	Mango (raw)	fruit	Mango		Mangos, raw
+168153	Yeşil kivi (çiğ)	Green kiwifruit (raw)	fruit	Kivi		Kiwifruit, green, raw
+171705	Avokado (çiğ)	Avocado (raw)	fruit	Avokado		Avocados, raw, all commercial varieties
+167765	Karpuz (çiğ)	Watermelon (raw)	fruit	Karpuz		Watermelon, raw
+169092	Kantalup kavunu (çiğ)	Cantaloupe melon (raw)	fruit	Kantalup		Melons, cantaloupe, raw
+169911	Bal kavunu (çiğ)	Honeydew melon (raw)	fruit	Honeydew kavunu		Melons, honeydew, raw
+169908	Yenidünya (çiğ)	Loquat (raw)	fruit	Malta eriği		Loquats, raw
+169941	Japon hurması (çiğ)	Japanese persimmon (raw)	fruit	Trabzon hurması		Persimmons, japanese, raw
+168154	Kamkat (çiğ)	Kumquat (raw)	fruit	Kumkuat		Kumquats, raw
+167763	Demirhindi (çiğ)	Tamarind (raw)	fruit	Demirhindi		Tamarinds, raw
+171689	Elma (çiğ, kabuksuz)	Apple (raw, without skin)	fruit	Kabuksuz elma		Apples, raw, without skin
+170917	Kuru defne yaprağı	Bay leaf (dried spice)	herbs	Defne yaprağı		Spices, bay leaf
+170919	Kakule	Cardamom (spice)	spices	Kakule		Spices, cardamom
+170922	Kişniş tohumu	Coriander seed (spice)	spices	Kişniş tohumu		Spices, coriander seed
+170923	Kimyon tohumu	Cumin seed (spice)	spices	Kimyon		Spices, cumin seed
+170926	Öğütülmüş zencefil	Ginger (ground spice)	spices	Toz zencefil		Spices, ginger, ground
+170931	Karabiber	Black pepper (spice)	spices	Karabiber		Spices, pepper, black
+170933	Beyaz biber	White pepper (spice)	spices	Beyaz biber		Spices, pepper, white
+170934	Safran	Saffron (spice)	spices	Safran		Spices, saffron
+170938	Kuru kekik (thyme)	Thyme (dried)	herbs			Spices, thyme, dried
+171315	Öğütülmüş yenibahar	Allspice (ground)	spices	Yenibahar		Spices, allspice, ground
+171316	Anason tohumu	Anise seed (spice)	spices	Anason		Spices, anise seed
+171317	Kuru fesleğen	Basil (dried)	herbs	Kuru fesleğen		Spices, basil, dried
+171320	Toz tarçın	Cinnamon (ground)	spices	Tarçın		Spices, cinnamon, ground
+171321	Öğütülmüş karanfil	Cloves (ground)	spices	Toz karanfil		Spices, cloves, ground
+171323	Rezene tohumu	Fennel seed (spice)	spices	Rezene tohumu		Spices, fennel seed
+171324	Çemen otu tohumu	Fenugreek seed (spice)	spices	Çemen tohumu		Spices, fenugreek seed
+171325	Sarımsak tozu	Garlic powder	spices	Sarımsak tozu		Spices, garlic powder
+171326	Öğütülmüş muskat	Nutmeg (ground)	spices	Hint cevizi		Spices, nutmeg, ground
+171327	Soğan tozu	Onion powder	spices	Soğan tozu		Spices, onion powder
+171328	Kuru kekik (oregano)	Oregano (dried)	herbs			Spices, oregano, dried
+171329	Paprika	Paprika (spice)	spices	Tatlı toz kırmızı biber		Spices, paprika
+171330	Haşhaş tohumu	Poppy seed (spice)	nuts-seeds	Haşhaş tohumu		Spices, poppy seed
+171333	Kuru biberiye	Rosemary (dried)	herbs	Biberiye		Spices, rosemary, dried
+172231	Toz zerdeçal	Turmeric (ground)	spices	Zerdeçal		Spices, turmeric, ground
+168874	Kinoa (pişmemiş)	Quinoa (uncooked)	grains	Kinoa		Quinoa, uncooked
+170688	Bulgur (kuru)	Bulgur (dry)	grains	Bulgur		Bulgur, dry
+170286	Karabuğday	Buckwheat	grains	Greçka		Buckwheat
+170284	İnci arpa (çiğ)	Pearled barley (raw)	grains	İnci arpa		Barley, pearled, raw
+169705	Yulaf	Oats	grains	Yulaf		Oats (Includes foods for USDA's Food Distribution Program)
+169756	Uzun taneli beyaz pirinç (zenginleştirilmemiş)	White long-grain rice (unenriched, raw)	grains			Rice, white, long-grain, regular, raw, unenriched
+168931	Kısa taneli beyaz pirinç (zenginleştirilmemiş)	White short-grain rice (unenriched, raw)	grains			Rice, white, short-grain, raw, unenriched
+169699	Kuskus (kuru)	Couscous (dry)	grains	Kuskus		Couscous, dry
+169702	Darı (çiğ)	Millet (raw)	grains	Darı		Millet, raw
+172420	Mercimek (çiğ)	Lentils (raw)	legumes	Mercimek		Lentils, raw
+174284	Kırmızı mercimek (çiğ)	Red lentils (raw)	legumes	Kırmızı mercimek		Lentils, pink or red, raw
+173756	Nohut (kuru, çiğ)	Chickpeas (dry, raw)	legumes	Nohut	Garbanzo beans	Chickpeas (garbanzo beans, bengal gram), mature seeds, raw
+175202	Beyaz fasulye (kuru, çiğ)	White beans (dry, raw)	legumes	Kuru beyaz fasulye		Beans, white, mature seeds, raw
+173734	Siyah fasulye (kuru, çiğ)	Black beans (dry, raw)	legumes	Siyah fasulye		Beans, black, mature seeds, raw
+175193	Kidney fasulye (kuru, çiğ)	Kidney beans (dry, raw)	legumes			Beans, kidney, all types, mature seeds, raw
+175205	Bakla (kuru, çiğ)	Fava beans (dry, raw)	legumes	Kuru bakla	Broad beans	Broadbeans (fava beans), mature seeds, raw
+174256	Maş fasulyesi (kuru, çiğ)	Mung beans (dry, raw)	legumes	Maş fasulyesi		Mung beans, mature seeds, raw
+174270	Soya fasulyesi (kuru, çiğ)	Soybeans (dry, raw)	legumes	Soya fasulyesi		Soybeans, mature seeds, raw
+170567	Badem	Almonds	nuts-seeds	Badem		Nuts, almonds
+170581	Fındık	Hazelnuts	nuts-seeds	Fındık	Filberts	Nuts, hazelnuts or filberts
+170187	Adi ceviz	English walnuts	nuts-seeds	Ceviz		Nuts, walnuts, english
+170162	Çiğ kaju	Cashew nuts (raw)	nuts-seeds	Kaju		Nuts, cashew nuts, raw
+170184	Çiğ Antep fıstığı	Pistachio nuts (raw)	nuts-seeds	Antep fıstığı		Nuts, pistachio nuts, raw
+172430	Çiğ yer fıstığı	Peanuts (raw)	nuts-seeds	Yer fıstığı		Peanuts, all types, raw
+170182	Pekan cevizi	Pecans	nuts-seeds	Pikan cevizi		Nuts, pecans
+170150	Kuru bütün susam	Sesame seeds (whole, dried)	nuts-seeds	Susam		Seeds, sesame seeds, whole, dried
+169414	Keten tohumu	Flaxseed	nuts-seeds	Keten tohumu	Linseed	Seeds, flaxseed
+170554	Kuru chia tohumu	Chia seeds (dried)	nuts-seeds	Çiya tohumu		Seeds, chia seeds, dried
+170556	Kuru kabak çekirdeği içi	Pumpkin and squash seed kernels (dried)	nuts-seeds	Kabak çekirdeği içi		Seeds, pumpkin and squash seed kernels, dried
+170562	Kuru ayçekirdeği içi	Sunflower seed kernels (dried)	nuts-seeds	Ayçekirdeği içi		Seeds, sunflower seed kernels, dried
+170169	Çiğ Hindistan cevizi eti	Coconut meat (raw)	nuts-seeds	Hindistan cevizi içi		Nuts, coconut meat, raw
+173414	Cheddar peyniri	Cheddar cheese	dairy	Çedar peyniri		Cheese, cheddar (Includes foods for USDA's Food Distribution Program)
+173420	Feta peyniri	Feta cheese	dairy	Feta		Cheese, feta
+173418	Krem peynir	Cream cheese	dairy	Krem peynir		Cheese, cream
+172177	Brie peyniri	Brie cheese	dairy	Brie		Cheese, brie
+172178	Camembert peyniri	Camembert cheese	dairy	Camembert		Cheese, camembert
+171284	Sade tam yağlı yoğurt	Plain whole-milk yogurt	dairy			Yogurt, plain, whole milk
+170859	Yüksek yağlı çırpma kreması	Heavy whipping cream	dairy			Cream, fluid, heavy whipping
+173410	Tuzlu tereyağı	Butter (salted)	oils	Tuzlu tereyağı		Butter, salted
+173430	Tuzsuz tereyağı	Butter (unsalted)	oils	Tuzsuz tereyağı		Butter, without salt
+172336	Kanola yağı	Canola oil	oils	Kanola yağı		Oil, canola
+173573	Avokado yağı	Avocado oil	oils	Avokado yağı		Oil, avocado
+167702	Soğuk sıkım keten tohumu yağı	Flaxseed oil (cold pressed)	oils	Keten yağı		Oil, flaxseed, cold pressed
+169761	Beyaz çok amaçlı buğday unu (zenginleştirilmemiş)	White all-purpose wheat flour (unenriched)	baking			Wheat flour, white, all-purpose, unenriched
+168893	Tam buğday unu	Whole-grain wheat flour	baking	Tam buğday unu		Wheat flour, whole-grain (Includes foods for USDA's Food Distribution Program)
+169714	Beyaz pirinç unu (zenginleştirilmemiş)	White rice flour (unenriched)	baking	Pirinç unu		Rice flour, white, unenriched
+170290	Tam taneli sarı mısır unu	Whole-grain yellow corn flour	baking	Sarı mısır unu		Corn flour, whole-grain, yellow
+169698	Mısır nişastası	Cornstarch	baking	Mısır nişastası	Corn starch	Cornstarch
+175040	Karbonat	Baking soda	baking	Sodyum bikarbonat		Leavening agents, baking soda
+175041	Krem tartar	Cream of tartar	baking	Potasyum bitartrat		Leavening agents, cream of tartar
+175042	Yaş ekmek mayası	Baker's yeast (compressed)	baking	Yaş maya		Leavening agents, yeast, baker's, compressed
+175043	Aktif kuru ekmek mayası	Baker's yeast (active dry)	baking	Aktif kuru maya		Leavening agents, yeast, baker's, active dry
+168833	Esmer şeker	Brown sugar	sweeteners	Esmer şeker		Sugars, brown
+169661	Akçaağaç şurubu	Maple syrup	syrups	Akçaağaç şurubu		Syrups, maple
+168088	Grenadin şurubu	Grenadine syrup	syrups	Grenadin		Syrups, grenadine
+173468	Sofra tuzu	Table salt	condiments	Tuz		Salt, table
+173469	Elma sirkesi	Cider vinegar	condiments	Elma sirkesi	Apple cider vinegar	Vinegar, cider
+172240	Kırmızı şarap sirkesi	Red wine vinegar	condiments			Vinegar, red wine
+172241	Balzamik sirke	Balsamic vinegar	condiments	Balzamik		Vinegar, balsamic
+172237	Distile sirke	Distilled vinegar	condiments	Damıtılmış sirke		Vinegar, distilled
+174277	Shoyu soya sosu (soya ve buğday)	Shoyu soy sauce (soy and wheat)	sauces	Shoyu		Soy sauce made from soy and wheat (shoyu)
+174278	Tamari soya sosu	Tamari soy sauce	sauces	Tamari		Soy sauce made from soy (tamari)
+174531	Balık sosu	Fish sauce (ready to serve)	sauces	Balık sosu		Sauce, fish, ready-to-serve
+174529	İstiridye sosu	Oyster sauce (ready to serve)	sauces	İstiridye sosu		Sauce, oyster, ready-to-serve
+172886	Hoisin sosu	Hoisin sauce (ready to serve)	sauces	Hoisin		Sauce, hoisin, ready-to-serve
+170459	Tuz eklenmemiş konserve domates salçası	Canned tomato paste (no salt added)	sauces			Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program)
+169279	Konserve lahana turşusu	Sauerkraut (canned, solids and liquid)	fermented	Sauerkraut		Sauerkraut, canned, solids and liquids
+169379	Ekşi salatalık turşusu	Sour cucumber pickles	condiments			Pickles, cucumber, sour
+172238	Konserve kapari	Capers (canned)	condiments	Kapari		Capers, canned
+175179	Çiğ karides	Shrimp (raw)	seafood	Karides		Crustaceans, shrimp, raw
+174215	Çiğ mürekkep balığı	Cuttlefish (raw)	seafood	Mürekkep balığı		Mollusks, cuttlefish, mixed species, raw
+174218	Çiğ ahtapot	Common octopus (raw)	seafood	Ahtapot		Mollusks, octopus, common, raw
+174223	Çiğ kalamar	Squid (raw)	seafood	Kalamar		Mollusks, squid, mixed species, raw
+175119	Atlantik uskumrusu (çiğ)	Atlantic mackerel (raw)	seafood	Atlantik uskumrusu		Fish, mackerel, Atlantic, raw
+175167	Atlantik somonu (çiğ, çiftlik)	Atlantic salmon (raw, farmed)	seafood			Fish, salmon, Atlantic, farmed, raw
+175176	Tilapya (çiğ)	Tilapia (raw)	seafood	Tilapya		Fish, tilapia, raw
+172183	Çiğ taze yumurta akı	Egg white (raw, fresh)	eggs	Yumurta akı		Egg, white, raw, fresh
+171796	Dana kıyma (%85 yağsız et, %15 yağ; çiğ)	Ground beef (85% lean, 15% fat, raw)	meat			Beef, ground, 85% lean meat / 15% fat, raw (Includes foods for USDA's Food Distribution Program)
+174370	Kuzu kıyma (çiğ)	Ground lamb (raw)	meat	Kuzu kıyma		Lamb, ground, raw
+175303	Keçi eti (çiğ)	Goat meat (raw)	meat	Keçi eti		Game meat, goat, raw
+174515	Hindi göğüs eti (çiğ)	Turkey breast meat (raw)	poultry			Turkey, retail parts, breast, meat only, raw
+174470	Kaz eti ve derisi (çiğ)	Goose meat and skin (raw)	poultry			Goose, domesticated, meat and skin, raw
+174158	Şişelenmiş su (genel)	Bottled water (generic)	water	Şişe suyu		Water, bottled, generic
+175103	Şebeke suyu	Municipal tap water	water	Musluk suyu		Beverages, water, tap, municipal
+167747	Taze limon suyu	Lemon juice (raw)	juices	Limon suyu		Lemon juice, raw
+168156	Taze misket limonu suyu	Lime juice (raw)	juices	Lime suyu		Lime juice, raw
+169098	Taze portakal suyu	Orange juice (raw)	juices	Portakal suyu		Orange juice, raw (Includes foods for USDA's Food Distribution Program)
+173933	Şekersiz ambalajlı elma suyu (askorbik asit eklenmemiş)	Apple juice (unsweetened, no added ascorbic acid)	juices			Apple juice, canned or bottled, unsweetened, without added ascorbic acid
+173042	Şekersiz ambalajlı üzüm suyu (askorbik asit eklenmemiş)	Grape juice (unsweetened, no added ascorbic acid)	juices			Grape juice, canned or bottled, unsweetened, without added ascorbic acid
+169947	Şekersiz ambalajlı ananas suyu (askorbik asit eklenmemiş)	Pineapple juice (unsweetened, no added ascorbic acid)	juices			Pineapple juice, canned or bottled, unsweetened, without added ascorbic acid
+170545	Tuz eklenmemiş konserve domates suyu	Tomato juice (canned, no salt added)	juices			Tomato juice, canned, without salt added
+170491	Konserve havuç suyu	Carrot juice (canned)	juices			Carrot juice, canned
+171893	Normal hazır kahve tozu	Instant coffee powder (regular)	coffee-tea	Granül kahve		Beverages, coffee, instant, regular, powder
+171917	Demlenmiş yeşil çay	Green tea (brewed, regular)	tea	Yeşil çay		Beverages, tea, green, brewed, regular
+174120	Demlenmiş oolong çayı	Oolong tea (brewed)	tea	Oolong çayı		Beverages, tea, Oolong, brewed
+174156	Demlenmiş papatya çayı	Chamomile tea (brewed)	infusions	Papatya çayı		Beverages, tea, herb, brewed, chamomile
+171946	Demlenmiş hibiskus çayı	Hibiscus tea (brewed)	infusions	Hibiskus çayı		Beverages, tea, hibiscus, brewed
+171869	Tonik	Tonic water	mixers	Tonik suyu		Beverages, carbonated, tonic water
+174842	Soda (club soda)	Club soda	mixers	Club soda		Beverages, carbonated, club soda
+174846	Zencefilli gazoz	Ginger ale	mixers	Ginger ale		Beverages, carbonated, ginger ale
+174852	Kola (normal)	Cola (regular)	soft-drinks	Kola		Beverages, carbonated, cola, regular
+173205	Limon-misket limonu gazozu (kafeinsiz)	Lemon-lime soda (caffeine free)	soft-drinks			Beverages, carbonated, lemon-lime soda, no caffeine
+174854	Portakallı gazoz	Orange soda	soft-drinks			Beverages, carbonated, orange
+174831	Şekersiz Hindistan cevizi suyu	Coconut water (unsweetened, ready to drink)	other-beverages	Hindistan cevizi suyu		Beverages, Coconut water, ready-to-drink, unsweetened
+174832	Şekersiz uzun ömürlü badem içeceği	Almond milk (unsweetened, shelf stable)	dairy-alternatives	Badem içeceği		Beverages, almond milk, unsweetened, shelf stable
+171942	Şekersiz pirinç içeceği	Rice milk (unsweetened)	dairy-alternatives	Pirinç içeceği		Beverages, rice milk, unsweetened
+174817	Rom (80 ABD proof)	Rum (80 US proof)	spirits			Alcoholic beverage, distilled, rum, 80 proof
+174818	Votka (80 ABD proof)	Vodka (80 US proof)	spirits			Alcoholic beverage, distilled, vodka, 80 proof
+174819	Viski (86 ABD proof)	Whiskey (86 US proof)	spirits		Whisky (86 US proof)	Alcoholic beverage, distilled, whiskey, 86 proof
+175097	Kahve likörü (53 ABD proof)	Coffee liqueur (53 US proof)	liqueurs			Alcoholic beverage, liqueur, coffee, 53 proof
+175098	Kremalı kahve likörü (34 ABD proof)	Coffee cream liqueur (34 US proof)	liqueurs			Alcoholic beverage, liqueur, coffee with cream, 34 proof
+173168	Nane likörü (72 ABD proof)	Creme de menthe (72 US proof)	liqueurs			Alcoholic beverage, creme de menthe, 72 proof
+173190	Kırmızı sofra şarabı	Red table wine	wines	Kırmızı şarap		Alcoholic beverage, wine, table, red
+174837	Beyaz sofra şarabı	White table wine	wines	Beyaz şarap		Alcoholic beverage, wine, table, white
+171908	Roze şarap	Rose wine	wines	Roze	Rosé wine	Alcoholic beverages, wine, rose
+167723	Sake	Sake rice wine	wines	Sake		Alcoholic beverage, rice (sake)
+168746	Normal bira	Beer (regular)	beers	Bira		Alcoholic beverage, beer, regular, all
+168749	Hafif bira	Beer (light)	beers			Alcoholic beverage, beer, light
+169655	Toz şeker	Granulated sugar	sweeteners	Şeker	White sugar	Sugars, granulated
+169656	Pudra şekeri	Powdered sugar	sweeteners	Pudra şeker	Icing sugar;Confectioners sugar	Sugars, powdered
+169640	Bal	Honey	sweeteners			Honey
+172217	Tam yağlı süt (%3,25 yağ)	Whole milk (3.25%, unfortified)	dairy	Tam yağlı süt	Whole milk	Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D
+171890	Demlenmiş kahve	Brewed coffee	coffee-tea	Demleme kahve	Prepared coffee	Beverages, coffee, brewed, prepared with tap water
+168155	Çiğ misket limonu	Raw lime	fruit	Misket limonu	Lime	Limes, raw
+171413	Zeytinyağı	Olive oil	oils	Zeytin yağı		Oil, olive, salad or cooking
+171287	Çiğ bütün yumurta	Raw whole egg	eggs	Yumurta	Whole egg	Egg, whole, raw, fresh
+171474	Tavuk göğsü (et ve deri, çiğ)	Chicken breast (meat and skin, raw)	poultry			Chicken, broilers or fryers, breast, meat and skin, raw
+169593	Şekersiz kakao tozu	Cocoa powder (unsweetened)	baking	Kakao		Cocoa, dry powder, unsweetened
+173227	Demlenmiş siyah çay	Black tea (brewed, with tap water)	tea	Siyah çay		Beverages, tea, black, brewed, prepared with tap water
+172804	Çift etkili fosfatlı kabartma tozu	Baking powder (double acting, straight phosphate)	baking			Leavening agents, baking powder, double-acting, straight phosphate
+170460	Tuz eklenmemiş konserve domates püresi	Canned tomato puree (no salt added)	sauces			Tomato products, canned, puree, without salt added

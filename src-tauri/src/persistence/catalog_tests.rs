@@ -374,6 +374,8 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
     assert_eq!(db.recipe(&r.id).unwrap().deleted_at, trashed.deleted_at);
     assert_eq!(db.draft(&draft.id).unwrap().revision, 1);
     db.import_catalog(&seed()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 235);
     assert_eq!(
         db.recipe(&r.id).unwrap().ingredients[0].ingredient_id,
         ingredient.id
@@ -492,4 +494,252 @@ fn updated_system_name_collision_rejects_package_without_overwriting_personal_da
     assert_eq!(db.ingredients("Anadolu").unwrap()[0].id, personal.id);
     assert_eq!(db.ingredients("Honey").unwrap()[0].name, "Bal");
     assert_eq!(count(&db, "catalog_releases"), 1);
+}
+
+#[test]
+fn production_embedded_package_offline_counts_attribution_search_and_recipe_restart() {
+    let seed = catalog_tool::bundled().unwrap();
+    let disk = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/production/manifest.json"),
+    )
+    .unwrap();
+    assert_eq!(seed.manifest_hash, disk.manifest_hash);
+    assert_eq!(seed.data.ingredients.len(), 235);
+    assert_eq!(seed.data.categories.len(), 39);
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    let report = db.import_catalog(&seed).unwrap();
+    assert_eq!(
+        (
+            report.validated,
+            report.inserted,
+            report.available,
+            report.collisions
+        ),
+        (235, 235, 235, 0)
+    );
+    let coverage: serde_json::Value =
+        serde_json::from_str(include_str!("../../../catalog/production/coverage.json")).unwrap();
+    assert_eq!(
+        coverage["productionReadyRecords"].as_i64(),
+        Some(i64::try_from(report.validated).unwrap())
+    );
+    for (key, value) in coverage["categoryMembershipCounts"].as_object().unwrap() {
+        assert_eq!(
+            report.category_coverage[key],
+            usize::try_from(value.as_u64().unwrap()).unwrap()
+        );
+    }
+    assert!(seed
+        .manifest
+        .sources
+        .iter()
+        .all(|s| s.license == "CC0-1.0" && !s.attribution.is_empty()));
+    assert!(seed
+        .data
+        .ingredients
+        .iter()
+        .all(|i| i.names.contains_key("tr")
+            && i.names.contains_key("en")
+            && i.observations.is_empty()));
+    assert_eq!(report.category_coverage["vegetables"], 41);
+    assert_eq!(report.category_coverage["spirits"], 3);
+    assert_eq!(count(&db, "catalog_provenance"), 470);
+    assert_eq!(count(&db, "catalog_observations"), 0);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 235);
+    for q in ["Şek", "şek", "ŞEK", "şeker", "S\u{0327}EK"] {
+        assert!(db
+            .available_ingredients(q)
+            .unwrap()
+            .items
+            .iter()
+            .any(|i| i.id == stable_id("ingredient", "sugar-granulated")));
+    }
+    for q in ["ICING", "Icing", "icing"] {
+        assert_eq!(
+            db.ingredients(q).unwrap()[0].id,
+            stable_id("ingredient", "sugar-powdered")
+        );
+    }
+    for q in ["Ispanak", "ıspanak", "ISPANAK"] {
+        assert_eq!(db.ingredients(q).unwrap()[0].name, "Ispanak (çiğ)");
+    }
+    let tomato = db.ingredients("Domates (çiğ").unwrap().remove(0);
+    assert_eq!(db.ingredients("Tomato (raw").unwrap()[0].id, tomato.id);
+    let saved = db.save_recipe(recipe(&tomato)).unwrap();
+    assert!(db.import_catalog(&seed).unwrap().unchanged);
+    let runs = count(&db, "catalog_import_runs");
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "catalog_import_runs"), runs);
+    drop(db);
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
+        tomato.id
+    );
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0]
+            .quantity
+            .as_deref(),
+        Some("35.000001")
+    );
+    let broken: i64 = db
+        .conn
+        .query_row("SELECT count(*) FROM pragma_foreign_key_check", [], |r| {
+            r.get(0)
+        })
+        .unwrap();
+    assert_eq!(broken, 0);
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
+}
+
+#[test]
+fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    let personal = db.create_ingredient("Şeker").unwrap();
+    let saved = db.save_recipe(recipe(&personal)).unwrap();
+    let draft = db
+        .save_draft(DraftWrite {
+            id: uuid::Uuid::new_v4().to_string(),
+            expected_revision: None,
+            input: recipe(&personal),
+        })
+        .unwrap();
+    db.import_catalog(&seed()).unwrap();
+    let honey = stable_id("ingredient", "honey");
+    db.customize_catalog_ingredient(IngredientEdit {
+        id: honey.clone(),
+        revision: 1,
+        name: "Benim balım".into(),
+        notes: Some("Korunsun".into()),
+        preferred_unit: Some("kg".into()),
+    })
+    .unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 235);
+    assert_eq!(db.catalog_status().unwrap().pending_collisions, 1);
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
+        personal.id
+    );
+    assert_eq!(
+        db.draft(&draft.id).unwrap().input.ingredients[0].ingredient_id,
+        personal.id
+    );
+    assert_eq!(db.ingredients("Benim balım").unwrap()[0].id, honey);
+    let preserved: (String, String) = db
+        .conn
+        .query_row(
+            "SELECT notes,preferred_unit FROM ingredients WHERE id=?1",
+            [honey],
+            |r| Ok((r.get(0)?, r.get(1)?)),
+        )
+        .unwrap();
+    assert_eq!(preserved, ("Korunsun".into(), "kg".into()));
+    assert_eq!(count(&db, "ingredients"), 235);
+    assert_eq!(count(&db, "catalog_sources"), 4);
+}
+
+#[test]
+fn production_invalid_duplicate_and_failure_roll_back_package() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    let mut bad = catalog_tool::bundled().unwrap();
+    bad.data.ingredients.push(bad.data.ingredients[0].clone());
+    assert!(db.import_catalog(&bad).is_err());
+    assert_eq!(count(&db, "catalog_ingredients"), 0);
+    // Fail after writes have begun, using a real SQLite constraint/trigger.
+    db.conn.execute_batch("CREATE TRIGGER fail_production BEFORE INSERT ON catalog_ingredients WHEN NEW.canonical_key='usda-sr-170457' BEGIN SELECT RAISE(ABORT,'forced rollback'); END;").unwrap();
+    assert!(db
+        .import_catalog(&catalog_tool::bundled().unwrap())
+        .is_err());
+    assert_eq!(count(&db, "catalog_ingredients"), 0);
+    assert_eq!(count(&db, "ingredient_categories"), 0);
+    assert_eq!(count(&db, "catalog_releases"), 0);
+    db.conn
+        .execute_batch("DROP TRIGGER fail_production")
+        .unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "ingredients"), 235);
+}
+
+#[test]
+fn actual_default_worker_installs_offline_and_reopens_without_reimport() {
+    let dir = tempfile::tempdir().unwrap();
+    let runtime = tokio::runtime::Runtime::new().unwrap();
+    runtime.block_on(async {
+        let service = crate::services::StorageService::new(Ok(dir.path().into()));
+        service.bootstrap().await.unwrap();
+        assert_eq!(
+            service
+                .execute(|db| Ok(db.catalog_status()?.production_definitions))
+                .await
+                .unwrap(),
+            235
+        );
+        let recipe_id = service
+            .execute(|db| {
+                let ingredient = db.ingredients("Domates (çiğ")?.remove(0);
+                Ok(db.save_recipe(recipe(&ingredient))?.id)
+            })
+            .await
+            .unwrap();
+        drop(service);
+        let service = crate::services::StorageService::new(Ok(dir.path().into()));
+        service.bootstrap().await.unwrap();
+        assert_eq!(
+            service
+                .execute(move |db| Ok(db.recipe(&recipe_id)?.title))
+                .await
+                .unwrap(),
+            "Şerbet"
+        );
+        assert_eq!(
+            service
+                .execute(|db| Ok(count(db, "catalog_import_runs")))
+                .await
+                .unwrap(),
+            1
+        );
+    });
+}
+
+#[test]
+fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let mut newer = catalog_tool::bundled().unwrap();
+    next(&mut newer);
+    db.import_catalog(&newer).unwrap();
+    let runs = count(&db, "catalog_import_runs");
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "catalog_import_runs"), runs);
+    assert_eq!(
+        db.import_catalog(&catalog_tool::bundled().unwrap())
+            .unwrap_err()
+            .code,
+        "CATALOG_DOWNGRADE"
+    );
+    let fresh = tempfile::tempdir().unwrap();
+    let mut db = Database::open(fresh.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    db.conn
+        .execute(
+            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=2",
+            ["0".repeat(64)],
+        )
+        .unwrap();
+    assert_eq!(
+        db.install_bundled_catalog().unwrap_err().code,
+        "CATALOG_VERSION_CHANGED"
+    );
+    assert_eq!(count(&db, "ingredients"), 235);
 }

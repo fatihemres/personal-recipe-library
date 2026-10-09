@@ -17,6 +17,8 @@ struct Clearance {
     seed_approved: bool,
     license: String,
     pinned_version: Option<String>,
+    #[serde(default)]
+    pinned_versions: Vec<String>,
 }
 #[derive(Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
@@ -54,14 +56,24 @@ pub(crate) fn load(manifest: &Path) -> Result<VerifiedSeed, AppError> {
         return Err(catalog_error("CATALOG_ARTIFACT"));
     }
     let raw = std::fs::read_to_string(manifest)?;
+    verify_package(&raw, |a| {
+        read(
+            manifest
+                .parent()
+                .ok_or_else(|| catalog_error("CATALOG_ARTIFACT"))?,
+            a,
+        )
+    })
+}
+fn verify_package(
+    raw: &str,
+    reader: impl Fn(&Artifact) -> Result<Vec<u8>, AppError>,
+) -> Result<VerifiedSeed, AppError> {
     let m: SeedManifest =
-        serde_json::from_str(&raw).map_err(|_| catalog_error("CATALOG_INVALID"))?;
-    let root = manifest
-        .parent()
-        .ok_or_else(|| catalog_error("CATALOG_ARTIFACT"))?;
+        serde_json::from_str(raw).map_err(|_| catalog_error("CATALOG_INVALID"))?;
     let registry: Registry = serde_json::from_str(include_str!("../../catalog/sources.json"))
         .map_err(|_| AppError::integrity())?;
-    let bytes = read(root, &m.artifact)?;
+    let bytes = reader(&m.artifact)?;
     let data: SeedData =
         serde_json::from_slice(&bytes).map_err(|_| catalog_error("CATALOG_INVALID"))?;
     if m.evidence.len() != m.sources.len() {
@@ -72,7 +84,8 @@ pub(crate) fn load(manifest: &Path) -> Result<VerifiedSeed, AppError> {
             s.id == source.id
                 && s.seed_approved
                 && s.license == source.license
-                && s.pinned_version.as_deref() == Some(&source.version)
+                && (s.pinned_version.as_deref() == Some(&source.version)
+                    || s.pinned_versions.contains(&source.version))
         }) {
             return Err(catalog_error("CATALOG_LICENSE"));
         }
@@ -83,7 +96,7 @@ pub(crate) fn load(manifest: &Path) -> Result<VerifiedSeed, AppError> {
         if source.artifact_sha256 != artifact.sha256 {
             return Err(catalog_error("CATALOG_CHECKSUM"));
         }
-        let evidence: Vec<Evidence> = serde_json::from_slice(&read(root, artifact)?)
+        let evidence: Vec<Evidence> = serde_json::from_slice(&reader(artifact)?)
             .map_err(|_| catalog_error("CATALOG_PROVENANCE"))?;
         let mut records = BTreeMap::new();
         for e in evidence {
@@ -105,7 +118,7 @@ pub(crate) fn load(manifest: &Path) -> Result<VerifiedSeed, AppError> {
     let seed = VerifiedSeed {
         manifest: m,
         data,
-        manifest_hash: checksum(&raw),
+        manifest_hash: checksum(raw),
         artifact_hash,
     };
     seed.validate()?;
@@ -123,4 +136,26 @@ pub fn import(
         return Err(catalog_error("CATALOG_VALIDATION_ONLY"));
     }
     Database::open(directory)?.import_catalog(&seed)
+}
+
+/// Same checksum/provenance/license validation as the CLI, with compile-time offline artifacts.
+pub(crate) fn bundled() -> Result<VerifiedSeed, AppError> {
+    verify_package(
+        include_str!("../../catalog/production/manifest.json"),
+        |a| {
+            let bytes: &[u8] = match a.file.as_str() {
+                "ingredients.json" => include_bytes!("../../catalog/production/ingredients.json"),
+                "usda-records.json" => include_bytes!("../../catalog/production/usda-records.json"),
+                "curation-records.json" => {
+                    include_bytes!("../../catalog/production/curation-records.json")
+                }
+                _ => return Err(catalog_error("CATALOG_ARTIFACT")),
+            };
+            use sha2::{Digest, Sha256};
+            if format!("{:x}", Sha256::digest(bytes)) != a.sha256 {
+                return Err(catalog_error("CATALOG_CHECKSUM"));
+            }
+            Ok(bytes.to_vec())
+        },
+    )
 }

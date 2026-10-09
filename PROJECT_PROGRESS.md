@@ -3,7 +3,7 @@
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
-Current state: M1, M2A, M2B and M3A implemented; M3A resumed and verified 2026-10-09. Next task is M3B. The M3A handoff at the end is current; earlier sections are historical and retain their original milestone boundaries.
+Current state: M1, M2A, M2B, M3A and M3B-1 implemented and verified. Next task is M3B-2 only when requested. The final M3B-1 handoff below is current; earlier sections/checkpoints are historical.
 
 ## Existing project
 - `package.json` / `package-lock.json`: npm scripts and locked frontend dependencies; scripts for dev, build, preview, and Tauri.
@@ -283,3 +283,122 @@ npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3a-verification",
 ```
 
 Offline validation import reproduction: docs/CATALOG_IMPORT_PIPELINE.md. Final M3A changes are committed locally; retrieve full hash with `git log -1`. No push/tag/release.
+
+## M3B-1 checkpoint — 2026-10-09 (verification pending)
+
+Started from clean M3A commit 4bf1d5539bf782cb144bf9293d0cc312990482bf. Prepared separate production version 2 with 230 selected USDA SR Legacy identities (222 additional, eight re-reviewed shared canonical identities), explicit curated bilingual labels and unchanged source descriptors. Validation files and migrations 001–004 untouched. Generator checks pinned archive SHA and per-ID descriptor. Three empty planned groups remain: regional Turkish, international specialty, cocktail bitters. All empirical metadata unknown. Embedded offline loader/worker installation and multi-snapshot source clearance implemented; automated/native verification and final documentation are pending. No user database reset or production-profile GUI launch. Resume using tools/prepare_production_catalog.py and catalog/production/manifest.json; do not regenerate historical seeds.
+
+
+## M3B-1 completion / current handoff — 2026-10-09
+
+Completed only M3B-1 from clean M3A commit 4bf1d5539bf782cb144bf9293d0cc312990482bf.
+No project recreation, new migration, dependency/lockfile change, database reset,
+production-profile GUI launch, remote push, tag or release. M3B-2/3 and M3C remain
+unimplemented. All broad food/beverage/Turkish V1 families retain their scope.
+
+### Delivered and actual data
+
+- Separate production package **dataset version 2**, **235 canonical identities**,
+  **39 hierarchical category nodes**, **470 production provenance mappings**.
+  Primary type counts: 197 food, 38 beverage; 200 aliases; zero selected duplicate-name candidates.
+  **227 additional identities**, eight common identities re-reviewed with stable
+  validation IDs; the original eight-record validation package is unchanged.
+- Reused pinned official USDA SR Legacy April 2018 archive, CC0 factual data.
+  Project-authored bilingual labels/aliases/classifications dedicated CC0,
+  attributed separately; no images, branded dump or inferred empirical values.
+  Immutable source snapshots 2018-04-selection-2 and production-1; old snapshots
+  retained. FoodOn conditional; OFF/CocktailDB excluded; Foundation unpinned.
+- Deterministic offline preparation script checks archive hash and each exact
+  FDC descriptor; curated forms/qualifiers reviewed explicitly, doubtful aliases
+  removed. No automatic translations. Accepted TR/EN names complete, zero selected
+  duplicate IDs/rejected records; no exhaustive upstream rejection claim.
+  Independent Turkish culinary expert review remains outstanding.
+- **All 235 nutrition, density, allergen and ABV observation sets unknown**.
+  Sources provide 235 USDA and 235 curation mappings, not 470 ingredients.
+  Complete category matrix/ambitious conditional M3B goals in
+  docs/CATALOG_COVERAGE_PLAN.md; package coverage and actual clean SQLite import
+  in catalog/production/coverage.json and installation-report.json.
+- Compiled artifacts install through the existing Rust worker/shared checked
+  importer before requests. No network/renderer import. Same/hash startup skips
+  audit; changed installed version content rejects; newer installed versions
+  remain intact. CLI supports production without the validation opt-in flag.
+  Attribution/license notice physically included in macOS bundle resources.
+- Recipe editor's existing catalog-aware autocomplete works with real installed
+  records. Turkish Settings/helper/milestone text updated; no advanced M3C UI.
+  No fake statistics or demo production records.
+
+### Preservation and verification
+
+| Check | Final actual result |
+|---|---|
+| npm run typecheck / lint / build | Passed |
+| npm test | 32 passed across 10 files |
+| npm run test:ui | 2 passed; final sandbox localhost EPERM resolved by authorized retry |
+| cargo check --locked --offline | Passed |
+| cargo test --locked --offline | 48 passed, including retained crash-process helper tests and M1/M2/M3A regressions |
+| cargo fmt --check / Clippy all targets -D warnings | Passed |
+| Production generator repeat | Byte-for-byte JSON reproducibility passed |
+| Real clean CLI import / repeat | 235 validated/inserted/available, 0 collisions; repeat unchanged=true, inserted/updated 0 |
+| Real schema-3 and validation-v1 upgrade fixtures | Passed; recipe/draft/archive/trash/IDs preserved |
+| Personal Şeker/override upgrade | 235 definitions, 234 materialized catalog records plus original personal row; 1 pending collision; recipe/draft refs and honey name/notes/kg override retained |
+| Transaction failure / duplicate / version drift | Rejection and rollback/retry passed; foreign-key/integrity checks passed |
+| Isolated and normal macOS arm64 unsigned debug bundle | Built successfully; NOTICE resource verified |
+| Native packaged UI→IPC→SQLite / complete Quit/restart | Passed on isolated profiles; details below |
+| Isolated Tauri dev launch | Reached Running native executable on port 1430, stopped with Ctrl-C |
+| Windows/Intel / signed installers/notarization | Unverified |
+
+Five added SQLite production tests cover embedded/disk contracts, full coverage
+report, bilingual/alias/Turkish searches, counts/provenance, recipe restart,
+version-1 personal collisions/drafts/overrides, trigger rollback/retry,
+default worker offline bootstrap/restart/no repeat audit, newer-version retention
+and same-version drift. Existing schema-3 upgrade test now installs production
+as well. Historical IPC fixtures retain explicit seed-free workers; the added
+production test uses the real default worker. No frontend mock is persistence proof.
+
+During development Clippy found two unnecessary borrows, a UI copy assertion
+failed, and a new coverage assertion had mismatched integer test types; all fixed
+and final suites rerun. No unresolved failed check or timeout.
+
+### Native evidence / limits
+
+Initial isolated com.recipeatlas.m3b1-verification package installed 235/0/0
+production/validation/collision counts with real schema 4, FK and FTS5. Created
+“ M3B-1 Domates Denemesi ” with bundled Domates (çiğ, kırmızı), 200.000001 g and
+“Domatesi doğrayın.” by keyboard selection and save. Explicit menu Quit,
+confirmed stopped app inventory, relaunch showed exact saved values.
+
+Final isolated com.recipeatlas.m3b1-final-verification package showed updated
+M3B-1 Settings copy and 235/0/0. Native ICING selected Pudra şekeri; recipe
+“M3B-1 Pudra Şekeri” with 35.000001 g and “Pudra şekerini eleyin.” survived
+confirmed menu Quit/relaunch. Final recipe helper copy tweak was frontend-tested
+and built, not manually reobserved. GUI proof is packaged runtime; dev proof is
+successful CLI launch output. No physical network disable; compiled artifacts
+and packaged workflows need no API/Vite server. Isolated data was retained, not
+purged. The user's normal production database was not opened by this verification.
+
+### Remaining coverage / exact next task
+
+M3B-1 is a first genuine batch, not completed M3B or release-ready V1. Regional
+Turkish and cocktail bitters groups remain zero; seven international-specialty
+members overlap existing food/drink groups. Gin/tequila/rakı, dry tea/coffee forms,
+mineral water, simple syrup, many dairy/meat/fish/baking forms and regional
+specialties need source/terminology review. Missing empirical metadata remains
+unknown. Full coverage plan targets 800–1,000 reviewed unique identities with
+explicit contingent group targets, not achieved counts.
+
+Recommend **M3B-2**, when authorized: expand to 450–600 verified generic identities,
+prioritize common gaps; review lawful primary regional/beverage references and
+independent Turkish terminology; generate version 3/delta report/new immutable
+source snapshots, preserving source exclusions until cleared; rerun clean,
+upgrade, user-preservation and native gates. No M3C UI redesign.
+
+Normal local launch: `npm run tauri -- dev` (now installs the approved first batch
+safely on initial bootstrap). Isolated launch:
+
+```sh
+npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3b1-dev-verification","build":{"beforeDevCommand":"npm run dev -- --port 1430","devUrl":"http://localhost:1430"}}' -- --locked --offline
+```
+
+Reproduction commands and archive hash: docs/CATALOG_IMPORT_PIPELINE.md.
+Completed M3B-1 changes are recorded as one local milestone commit; obtain the exact
+commit hash with `git log -1`. No push requested or performed.

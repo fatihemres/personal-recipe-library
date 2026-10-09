@@ -32,3 +32,9 @@
 - Verified eight-record USDA SR Legacy validation package, source license manifest/attribution and deterministic offline preparation/transactional CLI import with checksums, idempotency and rollback.
 - Personal ID/reference and customization protection, explicit CAS linking, safe upgrade name-conflict rejection, catalog-aware recipe autocomplete and real Settings counts. No automatic production seed.
 - SQLite import/migration/restart/crash/collision/alias/upgrade regression tests and isolated native macOS verification; handoff/licensing/schema/pipeline/coverage documentation. M3B/M3C remain pending.
+
+## M3B-1 — 2026-10-09 (local development, unreleased)
+
+- Added 235 source-verified bilingual USDA ingredient identities, reproducible production extraction, coverage plan/reports and CC0 notices.
+- Embedded checked offline seed installation through the SQLite worker, preserving personal collisions/overrides and existing IDs; no schema migration.
+- Added production clean/upgrade/rollback/search/recipe-restart/version regressions and isolated macOS verification. Extensive catalog and signed cross-platform releases remain pending.

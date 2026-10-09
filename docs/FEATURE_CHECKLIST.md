@@ -114,7 +114,7 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 - [x] Transactional changes and pre-upgrade online snapshots with rollback tests.
 - [x] Normalized recipe/ingredient/unit/step foundation with constraints and atomic saves.
 - [ ] Remaining catalog/media/inventory/planner entities and indexes.
-- [ ] Source/seed/import metadata with repeatable idempotent imports/user overrides.
+- [x] Source/seed/import metadata with repeatable idempotent imports/user overrides.
 - [ ] Historical production schema/seed upgrade matrix and duplicate protection.
 
 ## R17/R18 — Media, portability and safety
@@ -141,3 +141,5 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 - [ ] Signed/notarized native packages, verified supported OS/architecture matrix.
 - [ ] Semantic tags/GitHub Releases/historical installable versions; v1.0.0 gates.
 - [ ] Upgrade/downgrade/restore limitations and preserved V1 artifacts.
+
+M3B-1: first embedded production batch contains 235 verified identities; extensive catalog checkbox remains open. Coverage plan and machine reports track actual versus planned breadth.

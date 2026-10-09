@@ -39,3 +39,14 @@ Removed records are retained during upgrades to protect references; importer is 
 All normal reads/writes use the established Rust worker/repository. Catalog import is an explicit offline development CLI, not a renderer filesystem endpoint or automatic startup seed. Read-only catalog status is visible in Settings; recipe selection can use available personal/built-in rows via typed IPC. Personal ingredient manager retains its personal-only scope.
 
 A catalog upgrade that would change an uncustomized system display name to an existing personal name is rejected with `CATALOG_NAME_CONFLICT`, rolling back the package. Review that collision rather than silently merging, renaming personal data or introducing duplicate display identities. This differs from initial installation, which retains pending candidates without materializing colliding built-in rows.
+
+## M3B-1 application of the existing schema
+
+No new migration; schema remains 4, migrations 001–004 unchanged. Production
+release version 2 uses 235 canonical definitions and 39 hierarchical category
+nodes. Eight version-1 identities preserve canonical UUIDs; operational personal
+IDs are never reassigned. Existing source/version snapshots remain immutable;
+new extraction snapshots store new evidence hashes with preserved external IDs.
+All 235 optional observation sets remain empty (unknown). Classification and
+TR/EN labels carry project curation provenance separately from unchanged USDA
+English descriptors. Empty planned categories represent gaps, not coverage.

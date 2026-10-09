@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation, M2A persistent recipes and M2B reliability implemented and verified; M3A foundation implemented; M3B/M3C and M4–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
+Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation, M2A persistent recipes and M2B reliability implemented and verified; M3A foundation implemented; M3B-1 first production batch delivered; M3B-2/M3B-3/M3C and M4–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
 
 ## Delivery rules and common acceptance gate
 
@@ -201,3 +201,27 @@ M3 is the next implementation milestone: ingredient catalog research/licensing, 
 **M3B next, depends on M3A:** (1) agree a concrete coverage matrix/count target for every specified Turkish/international food and beverage group; (2) pin lawful source artifacts and review licenses/imported dependencies, obtaining alternatives for excluded sources; (3) expand deterministic extraction/curation with reviewed forms/aliases/provenance and truthful rejection/category reports; (4) increment production package version and consciously extend allowlist; (5) bundle the approved artifact/evidence/notices and install idempotently offline via the Rust worker before availability; (6) verify clean first launch, updates, collisions/overrides/recipes/drafts and interrupted import on real SQLite and actual native macOS, plus Windows where host is available. Acceptance: useful extensive verified coverage, all requested families represented, no fabricated metadata, no network requirement, legal notices included, safe upgrade/rollback and actual measured counts. Keep application runnable throughout.
 
 **M3C after population:** complete catalog browse/category/pagination/fuzzy discovery, collision review/explicit link policies, catalog customization/reset and personal category UI; accessible keyboard flows and Turkish-first search at realistic size. Existing backend alias matching is foundational, not completion of advanced search. Tests must cover real catalog-sized behavior and M1/M2 regression; native UI evidence cannot be replaced with mocked renderer tests. No scope from MASTER_SPEC is dropped.
+
+
+### M3B-1 delivered — 2026-10-09
+
+First real production batch: 235 USDA-backed identities, 39 category nodes,
+project-curated Turkish/English labels, unchanged source evidence and CC0
+notices. Eight shared validation IDs retained; 227 additional identities.
+Coverage plan and machine package/import reports distinguish actual coverage,
+metadata unknowns and future targets. Embedded first-launch installation uses
+the existing checked transactional importer and preserves personal collisions,
+overrides, recipes and drafts. No new migration or dependency.
+
+Acceptance for this increment: clean offline worker installation, version-1 and
+schema-3 preservation, repeat/hash/downgrade behavior, source and category counts,
+real search/select/recipe save/restart, regression checks and isolated macOS
+runtime. See TESTING.md and current PROJECT_PROGRESS.md for actual results.
+This completes only M3B-1, not the extensive complete-M3B acceptance above.
+
+Next authorized milestone would be M3B-2: expand toward 450–600 verified generic
+identities and rights-cleared regional references, independently review Turkish
+regional terminology, version the delta and rerun preservation/native gates.
+Full goal remains 800–1,000 distinct reviewed identities contingent on lawful
+source availability, with every requested family represented; see the non-additive
+coverage matrix in CATALOG_COVERAGE_PLAN.md. No M3B-2/3 or M3C implemented here.

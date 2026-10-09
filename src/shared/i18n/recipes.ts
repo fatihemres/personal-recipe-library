@@ -39,8 +39,8 @@ export const recipesTr = {
   catalogIngredientReused: 'Bu adla katalogda bir malzeme zaten var; yeni kişisel kopya oluşturulmadı. Tarifte mevcut kaydı seçebilirsiniz. Katalog düzenleme arayüzü henüz kullanıma açık değil.',
   personalIngredients: 'Kişisel malzemeler',
   ingredientHelp:
-    'Burada yalnızca kişisel malzemelerinizi yönetirsiniz. Geniş üretim kataloğu M3B aşamasında eklenecek.',
-  availableIngredientHelp: 'Kişisel malzemeler ve kurulmuş katalog kayıtları Türkçe, İngilizce ve diğer adlarıyla aranır. Geniş üretim kataloğu M3B aşamasında eklenecek.',
+    'Burada yalnızca kişisel malzemelerinizi yönetirsiniz. İlk üretim grubu çevrimdışı kullanıma hazır; eksik malzemeleri kişisel kayıt olarak ekleyebilirsiniz.',
+  availableIngredientHelp: 'Kişisel malzemeler ve kurulmuş katalog kayıtları Türkçe, İngilizce ve diğer adlarıyla aranır. İlk üretim grubu çevrimdışı kullanıma hazır; eksik malzemeleri kişisel kayıt olarak ekleyebilirsiniz.',
   emptyAvailableCatalog: 'Henüz kullanılabilir malzeme yok. Yeni kişisel malzeme oluşturabilirsiniz; geniş katalog henüz kurulmadı.',
   emptyCatalog:
     'Henüz kişisel malzeme kaydetmediniz. Aşağıdan ilk malzemenizi oluşturabilirsiniz.',

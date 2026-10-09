@@ -6,7 +6,7 @@ export const tr = {
   storageUnavailable: 'Depolama bağlantısı doğrulanamadı', operationError: 'İşlem tamamlanamadı', offline: 'Bu cihazda · Çevrimdışı', connecting: 'Yerel depolama hazırlanıyor', loading: 'Kütüphaneniz için güvenli bir alan hazırlanıyor…',
   libraryEyebrow: 'MUTFAĞINIZIN HİKÂYESİ', libraryIntro: 'Sevdiğiniz lezzetler için kişisel bir alan.',
   emptyTitle: 'Kütüphaneniz yeni tariflere hazırlanıyor', emptyBody: 'Tarif oluşturma ve düzenleme bir sonraki geliştirme aşamasında açılacak. Bu aşamada yerel depolamanız hazır; görünüm tercihlerinizi ayarlayabilirsiniz.',
-  foundation: 'TEMEL ALTYAPI', milestone: 'Aşama 3A', next: 'Sıradaki aşama: Kalıcı tarif oluşturma ve düzenleme',
+  foundation: 'TEMEL ALTYAPI', milestone: 'Aşama 3B-1', next: 'Sıradaki aşama: Malzeme kapsamını genişletme',
   settingsLink: 'Görünümü kişiselleştir', privacyTitle: 'Verileriniz size ait', privacyBody: 'Tercihleriniz bu bilgisayarda saklanır. Hesap, bulut bağlantısı veya internet gerekmez.',
   settingsIntro: 'Çalışma alanınızı kendinize göre düzenleyin.', appearance: 'Görünüm', appearanceBody: 'Okuma ve çalışma alışkanlıklarınıza uygun temayı seçin.',
   themeLabel: 'Renk teması', light: 'Açık', dark: 'Koyu', system: 'Sistem', lightBody: 'Sıcak ve aydınlık', darkBody: 'Yumuşak ve sakin', systemBody: 'Cihazınızla uyumlu',
@@ -14,7 +14,7 @@ export const tr = {
   storageTitle: 'Yerel depolama', storageBody: 'Uygulamanın gerçek SQLite bağlantısı üzerinden doğrulanan bilgiler.', schema: 'Şema sürümü', sqlite: 'SQLite sürümü', foreignKeys: 'İlişkisel bütünlük', fts: 'Tam metin arama altyapısı', verified: 'Doğrulandı', notVerified: 'Doğrulanamadı',
   errorTitle: 'Yerel depolamaya erişilemiyor', errorBody: 'Mevcut verileriniz silinmedi veya sıfırlanmadı. Sorunu giderdikten sonra yeniden deneyebilirsiniz.', retry: 'Yeniden dene', errorBoundary: 'Arayüz beklenmeyen bir sorunla karşılaştı.', reload: 'Uygulamayı yeniden yükle',
   closeFailed:'Taslak kaydedilemediği için uygulama açık tutuldu. Hata giderildikten sonra yeniden kapatmayı deneyin.',
-  catalogTitle: 'Malzeme kataloğu altyapısı', catalogBody: 'Geniş üretim kataloğu M3B aşamasında eklenecek. Doğrulama kayıtları üretim kataloğu değildir.', catalogLoading: 'Katalog durumu okunuyor…', catalogValidation: 'Doğrulama kayıtları', catalogProduction: 'Üretim kayıtları', catalogCollisions: 'İnceleme bekleyen eşleşmeler',
+  catalogTitle: 'Malzeme kataloğu altyapısı', catalogBody: 'İlk üretim grubu çevrimdışı olarak kurulmuştur. Katalog kapsamı sonraki aşamalarda genişletilecek. Doğrulama kayıtları üretim kataloğu değildir.', catalogLoading: 'Katalog durumu okunuyor…', catalogValidation: 'Doğrulama kayıtları', catalogProduction: 'Üretim kayıtları', catalogCollisions: 'İnceleme bekleyen eşleşmeler',
   errors: {
     'errors.catalog': 'Katalog işlemi doğrulanamadı. Kaynak izinlerini, paket bütünlüğünü ve kayıt çakışmalarını kontrol edin; mevcut kişisel veriler değiştirilmedi.',
     'errors.draftConflict':'Bu taslak başka bir oturumda değiştirildi veya kapatıldı. Buradaki metni koruyup güncel taslağı yeniden açın; başka oturumun verisi üzerine yazılmadı.',
