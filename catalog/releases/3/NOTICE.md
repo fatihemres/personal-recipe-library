@@ -1,7 +1,7 @@
-# Production catalog notices — version 4
+# Production catalog notices — version 3
 
-508 canonical culinary identities: 454 selected USDA SR Legacy April 2018
-identities and 54 original project-authored reference-backed identities.
+482 canonical culinary identities: 443 selected USDA SR Legacy April 2018
+identities and 39 original project-authored reference-backed identities.
 The USDA source facts and IDs remain unchanged in usda-records.json; factual
 data is CC0: https://fdc.nal.usda.gov/api-guide/#licensing . USDA Agricultural
 Research Service attribution is retained. No images or branded-product dump.
@@ -16,13 +16,13 @@ Original factual names/classifications were prepared from narrow identity checks
 no recipe instructions, quantities, regulatory definitions or health claims copied.
 
 Turkish and English labels are project curation, not USDA translations or
-independently certified terminology. All 508 were structurally audited; 18
+independently certified terminology. All 482 were structurally audited; 17
 terminology questions remain for human culinary review. Unknown nutrition,
 density, allergens and ABV are absent. Regulatory minimum strengths are never
 actual ingredient ABV defaults, and non-alcoholic naming never implies 0% ABV.
 
-Version 4 adds 26 identities to the archived 482-record version 3. All old
+Version 3 adds 247 identities to the archived 235-record version 2. All old
 canonical IDs are retained. Eight shared validation identities are not added
 again to production counts. The separate validation package is unchanged and
-not installed automatically. Source snapshots 2018-04-selection-4 and production-3
+not installed automatically. Source snapshots 2018-04-selection-3 and production-2
 are project extraction/curation versions, not new upstream USDA releases.

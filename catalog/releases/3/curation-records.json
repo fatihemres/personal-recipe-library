@@ -28,18 +28,6 @@
     "externalId": "project-advocaat"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Blended aged rum\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/three-dots-and-a-dash/\"],\"tr\":\"Harmanlanmış yıllanmış rom\"}",
-    "externalId": "project-aged-blended-rum"
-  },
-  {
-    "description": "{\"aliasesEn\":[\"Rhum agricole\"],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Agricole rum\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/three-dots-and-a-dash/\"],\"tr\":\"Agricole rom\"}",
-    "externalId": "project-agricole-rum"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Ale beer\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type\"],\"tr\":\"Ale bira\"}",
-    "externalId": "project-ale-beer"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Apple brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Elma brandisi\"}",
     "externalId": "project-apple-brandy"
   },
@@ -72,10 +60,6 @@
     "externalId": "project-canadian-whisky"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Coarse bulgur for pilaf\",\"preferredUnit\":\"g\",\"references\":[\"https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218\"],\"tr\":\"İri pilavlık bulgur\"}",
-    "externalId": "project-coarse-pilaf-bulgur"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Cognac\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Konyak\"}",
     "externalId": "project-cognac"
   },
@@ -86,14 +70,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Siyah frenk üzümü likörü\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Crème de cassis\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Crème de cassis\"}",
     "externalId": "project-creme-de-cassis"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Edirne peyniri\"],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"dairy\",\"turkish-regional\",\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Edirne white cheese\",\"preferredUnit\":\"g\",\"references\":[\"https://www.kulturportali.gov.tr/turkiye/edirne/nealinir/edirne-peyniri\"],\"tr\":\"Edirne beyaz peyniri\"}",
-    "externalId": "project-edirne-cheese"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çiğ köftelik bulgur\"],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Fine bulgur for köfte\",\"preferredUnit\":\"g\",\"references\":[\"https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218\"],\"tr\":\"İnce köftelik bulgur\"}",
-    "externalId": "project-fine-koftelik-bulgur"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Fruit brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Meyve brandisi\"}",
@@ -108,28 +84,12 @@
     "externalId": "project-grape-pekmez"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Honey syrup\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/three-dots-and-a-dash/\"],\"tr\":\"Bal şurubu\"}",
-    "externalId": "project-honey-syrup"
-  },
-  {
-    "description": "{\"aliasesEn\":[\"IPA\"],\"aliasesTr\":[\"IPA\"],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"India pale ale\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type\"],\"tr\":\"India pale ale\"}",
-    "externalId": "project-india-pale-ale"
-  },
-  {
     "description": "{\"aliasesEn\":[\"Irish whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Irish whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"İrlanda viskisi\"}",
     "externalId": "project-irish-whisky"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"dairy\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Kars kaşar cheese\",\"preferredUnit\":\"g\",\"references\":[\"https://kulturportali.gov.tr/turkiye/kars/kulturatlasi/kars-kasari\"],\"tr\":\"Kars kaşarı\"}",
     "externalId": "project-kars-kasar"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kısırlık bulgur\"],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Bulgur for köfte\",\"preferredUnit\":\"g\",\"references\":[\"https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218\"],\"tr\":\"Köftelik bulgur\"}",
-    "externalId": "project-koftelik-bulgur"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Lager beer\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type\"],\"tr\":\"Lager bira\"}",
-    "externalId": "project-lager-beer"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Lemon peel\",\"preferredUnit\":\"g\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Limon kabuğu\"}",
@@ -152,16 +112,8 @@
     "externalId": "project-mezcal"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"condiments\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Nar ekşisi (pomegranate reduction)\",\"preferredUnit\":\"g\",\"references\":[\"https://www.kulturportali.gov.tr/turkiye/hatay/nealinir/nar-ekss\"],\"tr\":\"Nar ekşisi\"}",
-    "externalId": "project-nar-eksisi"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Orange peel\",\"preferredUnit\":\"g\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Portakal kabuğu\"}",
     "externalId": "project-orange-peel"
-  },
-  {
-    "description": "{\"aliasesEn\":[\"Orgeat\"],\"aliasesTr\":[\"Orgeat\"],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Orgeat almond syrup\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/mai-tai/\"],\"tr\":\"Orgeat badem şurubu\"}",
-    "externalId": "project-orgeat-syrup"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Pastis\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Pastis\"}",
@@ -170,14 +122,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Pear brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Armut brandisi\"}",
     "externalId": "project-pear-brandy"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Bulgur for pilaf\",\"preferredUnit\":\"g\",\"references\":[\"https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218\"],\"tr\":\"Pilavlık bulgur\"}",
-    "externalId": "project-pilaf-bulgur"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Porter beer\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type\"],\"tr\":\"Porter bira\"}",
-    "externalId": "project-porter-beer"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Rakı\",\"preferredUnit\":\"mL\",\"references\":[\"https://sanliurfa.tarimorman.gov.tr/Sayfalar/Detay.aspx?Liste=Duyuru&OgeId=666\"],\"tr\":\"Rakı\"}",
@@ -226,10 +170,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Sloe gin\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Sloe gin\"}",
     "externalId": "project-sloe-gin"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original project-authored factual identity label and classification; reference establishes ingredient existence/form only. No copied prose, recipe, images or empirical values. Turkish/English labels are project curation, not independently human-approved.\",\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Stout beer\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type\"],\"tr\":\"Stout bira\"}",
-    "externalId": "project-stout-beer"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"other-beverages\",\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"volume\"],\"en\":\"Sumac sherbet\",\"preferredUnit\":\"mL\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Sumak şerbeti\"}",
@@ -336,10 +276,6 @@
     "externalId": "usda-sr-168409"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Endive (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Hindiba (endivyen, çiğ)\"}",
-    "externalId": "usda-sr-168412"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Chanterelle mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kantarell mantarı (çiğ)\"}",
     "externalId": "usda-sr-168422"
   },
@@ -366,10 +302,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ispanak\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Spinach (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ispanak (çiğ)\"}",
     "externalId": "usda-sr-168462"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Radicchio (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Radicchio (çiğ)\"}",
-    "externalId": "usda-sr-168564"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sun-dried tomatoes\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş domates\"}",
@@ -572,10 +504,6 @@
     "externalId": "usda-sr-169231"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Jerusalem artichoke (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yer elması (çiğ)\"}",
-    "externalId": "usda-sr-169236"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shiitake mantarı\"],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shiitake mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şiitake mantarı (çiğ)\"}",
     "externalId": "usda-sr-169242"
   },
@@ -716,10 +644,6 @@
     "externalId": "usda-sr-169721"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Wheat bran (crude)\",\"preferredUnit\":\"g\",\"tr\":\"Buğday kepeği\"}",
-    "externalId": "usda-sr-169722"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh plain pasta (refrigerated)\",\"preferredUnit\":\"g\",\"tr\":\"Taze sade makarna\"}",
     "externalId": "usda-sr-169727"
   },
@@ -844,14 +768,6 @@
     "externalId": "usda-sr-170026"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Turnip greens (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şalgam yaprakları (çiğ)\"}",
-    "externalId": "usda-sr-170061"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Watercress (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Su teresi (çiğ)\"}",
-    "externalId": "usda-sr-170068"
-  },
-  {
     "description": "{\"aliasesEn\":[\"Red bell pepper\"],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet red pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı tatlı biber (çiğ)\"}",
     "externalId": "usda-sr-170108"
   },
@@ -884,14 +800,6 @@
     "externalId": "usda-sr-170170"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Coconut milk (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Hindistan cevizi sütü (çiğ)\"}",
-    "externalId": "usda-sr-170172"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Coconut milk (canned)\",\"preferredUnit\":\"g\",\"tr\":\"Hindistan cevizi sütü (konserve)\"}",
-    "externalId": "usda-sr-170173"
-  },
-  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pikan cevizi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pecans\",\"preferredUnit\":\"g\",\"tr\":\"Pekan cevizi\"}",
     "externalId": "usda-sr-170182"
   },
@@ -922,10 +830,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Dark chocolate (70–85% cocoa)\",\"preferredUnit\":\"g\",\"tr\":\"Bitter çikolata (%70–85 kakao)\"}",
     "externalId": "usda-sr-170273"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Agave syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Agave şurubu\"}",
-    "externalId": "usda-sr-170277"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İnci arpa\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Pearled barley (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İnci arpa (çiğ)\"}",
@@ -970,10 +874,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Domates\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Tomato (raw, red)\",\"preferredUnit\":\"g\",\"tr\":\"Domates (çiğ, kırmızı)\"}",
     "externalId": "usda-sr-170457"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tomato juice (canned, with salt added)\",\"preferredUnit\":\"mL\",\"tr\":\"Tuz eklenmiş konserve domates suyu\"}",
-    "externalId": "usda-sr-170458"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Canned tomato paste (no salt added)\",\"preferredUnit\":\"g\",\"tr\":\"Tuz eklenmemiş konserve domates salçası\"}",
@@ -1378,10 +1278,6 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cocoa butter\",\"preferredUnit\":\"g\",\"tr\":\"Kakao yağı\"}",
     "externalId": "usda-sr-171421"
-  },
-  {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Poppyseed oil\",\"preferredUnit\":\"g\",\"tr\":\"Haşhaş yağı\"}",
-    "externalId": "usda-sr-171423"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Hazelnut oil\",\"preferredUnit\":\"g\",\"tr\":\"Fındık yağı\"}",

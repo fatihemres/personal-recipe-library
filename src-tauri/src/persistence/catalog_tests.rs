@@ -375,7 +375,7 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
     assert_eq!(db.draft(&draft.id).unwrap().revision, 1);
     db.import_catalog(&seed()).unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 482);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
     assert_eq!(
         db.recipe(&r.id).unwrap().ingredients[0].ingredient_id,
         ingredient.id
@@ -431,13 +431,29 @@ fn catalog_crash_child() {
         return;
     };
     let mut db = Database::open(Path::new(&directory)).unwrap();
-    db.import_catalog(&seed()).unwrap();
+    let package = if std::env::var_os("RECIPEATLAS_CATALOG_CRASH_PRODUCTION").is_some() {
+        catalog_tool::bundled().unwrap()
+    } else {
+        seed()
+    };
+    db.import_catalog(&package).unwrap();
 }
 #[test]
 fn killed_import_process_rolls_back_uncommitted_package_and_retry_recovers() {
+    verify_killed_import(false);
+}
+#[test]
+fn killed_production_import_rolls_back_and_recovers_full_offline_seed() {
+    verify_killed_import(true);
+}
+fn verify_killed_import(production: bool) {
     let dir = tempfile::tempdir().unwrap();
     let marker = dir.path().join("ready");
-    let mut child = std::process::Command::new(std::env::current_exe().unwrap())
+    let mut command = std::process::Command::new(std::env::current_exe().unwrap());
+    if production {
+        command.env("RECIPEATLAS_CATALOG_CRASH_PRODUCTION", "1");
+    }
+    let mut child = command
         .args([
             "--exact",
             "persistence::catalog_tests::catalog_crash_child",
@@ -469,7 +485,15 @@ fn killed_import_process_rolls_back_uncommitted_package_and_retry_recovers() {
             .unwrap(),
         "running"
     );
-    assert_eq!(db.import_catalog(&seed()).unwrap().inserted, 8);
+    let package = if production {
+        catalog_tool::bundled().unwrap()
+    } else {
+        seed()
+    };
+    assert_eq!(
+        db.import_catalog(&package).unwrap().inserted,
+        if production { 508 } else { 8 }
+    );
 }
 
 #[test]
@@ -504,7 +528,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
     )
     .unwrap();
     assert_eq!(seed.manifest_hash, disk.manifest_hash);
-    assert_eq!(seed.data.ingredients.len(), 482);
+    assert_eq!(seed.data.ingredients.len(), 508);
     assert_eq!(seed.data.categories.len(), 50);
     let dir = tempfile::tempdir().unwrap();
     let mut db = Database::open(dir.path()).unwrap();
@@ -516,7 +540,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
             report.available,
             report.collisions
         ),
-        (482, 482, 482, 0)
+        (508, 508, 508, 0)
     );
     let coverage: serde_json::Value =
         serde_json::from_str(include_str!("../../../catalog/production/coverage.json")).unwrap();
@@ -542,11 +566,11 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
         .all(|i| i.names.contains_key("tr")
             && i.names.contains_key("en")
             && i.observations.is_empty()));
-    assert_eq!(report.category_coverage["vegetables"], 52);
-    assert_eq!(report.category_coverage["spirits"], 23);
-    assert_eq!(count(&db, "catalog_provenance"), 925);
+    assert_eq!(report.category_coverage["vegetables"], 57);
+    assert_eq!(report.category_coverage["spirits"], 25);
+    assert_eq!(count(&db, "catalog_provenance"), 962);
     assert_eq!(count(&db, "catalog_observations"), 0);
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 482);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
     for q in ["Şek", "şek", "ŞEK", "şeker", "S\u{0327}EK"] {
         assert!(db
             .available_ingredients(q)
@@ -623,7 +647,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
     })
     .unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 482);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
     assert_eq!(db.catalog_status().unwrap().pending_collisions, 1);
     assert_eq!(
         db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
@@ -643,7 +667,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
         )
         .unwrap();
     assert_eq!(preserved, ("Korunsun".into(), "kg".into()));
-    assert_eq!(count(&db, "ingredients"), 482);
+    assert_eq!(count(&db, "ingredients"), 508);
     assert_eq!(count(&db, "catalog_sources"), 4);
 }
 
@@ -667,7 +691,7 @@ fn production_invalid_duplicate_and_failure_roll_back_package() {
         .execute_batch("DROP TRIGGER fail_production")
         .unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "ingredients"), 482);
+    assert_eq!(count(&db, "ingredients"), 508);
 }
 
 #[test]
@@ -682,7 +706,7 @@ fn actual_default_worker_installs_offline_and_reopens_without_reimport() {
                 .execute(|db| Ok(db.catalog_status()?.production_definitions))
                 .await
                 .unwrap(),
-            482
+            508
         );
         let recipe_id = service
             .execute(|db| {
@@ -733,7 +757,7 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
     db.install_bundled_catalog().unwrap();
     db.conn
         .execute(
-            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=3",
+            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=4",
             ["0".repeat(64)],
         )
         .unwrap();
@@ -741,21 +765,31 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
         db.install_bundled_catalog().unwrap_err().code,
         "CATALOG_VERSION_CHANGED"
     );
-    assert_eq!(count(&db, "ingredients"), 482);
+    assert_eq!(count(&db, "ingredients"), 508);
 }
 
 #[test]
 fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
+    verify_historical_upgrade(2, 235, "Cin");
+}
+
+#[test]
+fn actual_v3_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
+    verify_historical_upgrade(3, 482, "Bal şurubu");
+}
+
+fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name: &str) {
     let old = catalog_tool::load(
-        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/2/manifest.json"),
+        &Path::new(env!("CARGO_MANIFEST_DIR"))
+            .join(format!("../catalog/releases/{version}/manifest.json")),
     )
     .unwrap();
-    assert_eq!(old.data.ingredients.len(), 235);
+    assert_eq!(old.data.ingredients.len(), previous_count);
     let dir = tempfile::tempdir().unwrap();
     let mut db = Database::open(dir.path()).unwrap();
     db.import_catalog(&old).unwrap();
     let personal = db.create_ingredient("Aile baharatım").unwrap();
-    let collision = db.create_ingredient("Cin").unwrap();
+    let collision = db.create_ingredient(collision_name).unwrap();
     let custom_recipe = db.save_recipe(recipe(&personal)).unwrap();
     let honey = db.ingredients("Honey").unwrap().remove(0);
     let saved = db.save_recipe(recipe(&honey)).unwrap();
@@ -785,7 +819,7 @@ fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and
             report.updated,
             report.collisions
         ),
-        (482, 247, 235, 1)
+        (508, 508 - previous_count, previous_count, 1)
     );
     for item in &old.data.ingredients {
         let id: String = db
@@ -821,16 +855,26 @@ fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and
         "kg"
     );
     assert_eq!(
-        db.ingredients("Cin")
+        db.ingredients(collision_name)
             .unwrap()
             .iter()
             .find(|i| i.id == collision.id)
             .unwrap()
             .name,
-        "Cin"
+        collision_name
     );
     let runs = count(&db, "catalog_import_runs");
+    let changes: i64 = db
+        .conn
+        .query_row("SELECT total_changes()", [], |r| r.get(0))
+        .unwrap();
     db.install_bundled_catalog().unwrap();
+    assert_eq!(
+        db.conn
+            .query_row("SELECT total_changes()", [], |r| r.get::<_, i64>(0))
+            .unwrap(),
+        changes
+    );
     assert_eq!(count(&db, "catalog_import_runs"), runs);
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
@@ -857,7 +901,7 @@ fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and
             .unwrap(),
         0
     );
-    eprintln!("actual v2->v3 import: {import_time:?}");
+    eprintln!("actual v{version}->v4 import: {import_time:?}");
 }
 
 #[test]
@@ -871,6 +915,14 @@ fn expanded_catalog_search_forms_aliases_source_boundaries_and_real_performance(
             vec!["SİYEZ BUĞ", "siyez buğ", "Siyez einkorn"],
         ),
         ("project-raki", vec!["RAKI", "rakı", "Rakı"]),
+        ("project-india-pale-ale", vec!["IPA", "India pale ale"]),
+        ("project-orgeat-syrup", vec!["orgeat", "Orgeat almond"]),
+        ("project-nar-eksisi", vec!["NAR EKŞİSİ", "nar ekşisi"]),
+        (
+            "project-fine-koftelik-bulgur",
+            vec!["ÇİĞ KÖFTELİK", "fine bulgur"],
+        ),
+        ("usda-sr-169236", vec!["Yer elması", "Jerusalem artichoke"]),
         (
             "project-creme-de-cassis",
             vec!["Siyah frenk üzümü likörü", "Crème de cassis"],
@@ -913,7 +965,7 @@ fn expanded_catalog_search_forms_aliases_source_boundaries_and_real_performance(
             .iter()
             .filter(|i| i.key.starts_with("project-"))
             .count(),
-        39
+        54
     );
     for item in seed
         .data
@@ -957,6 +1009,6 @@ fn failed_actual_v2_upgrade_keeps_previous_release_and_retries_atomically() {
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "catalog_ingredients"), 482);
+    assert_eq!(count(&db, "catalog_ingredients"), 508);
     assert_eq!(count(&db, "catalog_releases"), 2);
 }

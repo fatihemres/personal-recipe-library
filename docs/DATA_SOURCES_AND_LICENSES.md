@@ -109,3 +109,17 @@ protected expression. Any future broader reuse needs separate clearance.
 ABV, nutrition, density and allergens unknown. Language labels are project
 semantic curation, not source-supplied translations or independent human review.
 Seventeen terminology questions remain; see INGREDIENT_LOCALIZATION_REVIEW.md.
+
+
+## M3B-3 source review — 2026-10-09
+
+USDA April 2018 archive/license is unchanged; selection4 contains454 exact descriptor identities. Project production-3 evidence includes all 508 original labels/classifications and 54 original reference-backed identities. This counts two evidence layers for USDA identities, not 962 separate ingredients. Project-authored Turkish/English names are not USDA-provided translations. The new reference registry mappings retain source/version/date and a narrow factual-identity rights boundary.
+
+New primary identity references consulted:
+
+- [TTB malt beverage class/type](https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type): lager,ale,porter,stout,India pale ale. Original generic labels only; no regulatory definitions copied and no legal minimum used as actual ABV.
+- [Ministry bulgur article (2017)](https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218): pilaf and köfte grades/aliases. Historical terminology evidence, not a statement of current law.
+- [Hatay nar ekşisi](https://www.kulturportali.gov.tr/turkiye/hatay/nealinir/nar-ekss) and [Edirne cheese](https://www.kulturportali.gov.tr/turkiye/edirne/nealinir/edirne-peyniri): original identity labels; portal explicitly reserves rights, so article text/images/database are not redistributed.
+- [IBA Mai-Tai](https://iba-world.com/iba-cocktail/mai-tai/) and [Three Dots and a Dash](https://iba-world.com/iba-cocktail/three-dots-and-a-dash/): narrow checks of Orgeat,honey syrup,agricole/blended aged rum existence. No recipes, quantities, prose, brands, images or substantial database extraction copied. IBA remains unapproved as a raw bundled source.
+
+The only bundled source data licenses remain USDA CC0 and original project curation CC0. This does not relicense referenced websites. FoodOn remains conditional; Open Food Facts and TheCocktailDB remain excluded. Unavailable Van otlu primary page, black-turtle-bean concept overlap and ambiguous Falernum/allspice product boundaries remain gaps rather than invented records. Nutrition/density/allergens/ABV unknown for all 508. 18 terminology items require human review; none was human-approved.

@@ -133,3 +133,23 @@ old/new identities, NFC/Turkish-normalized collisions, historical IDs, source
 ownership, names, category references and powder units. --check detects report
 drift; separate tests inject actual label/alias/unit/source/ID defects. This is
 structural/project semantic review, not human linguistic certification.
+
+
+## M3B-3 reproduction and offline verification
+
+Production manifest version 4 and approved source snapshots selection4/production-3; archived exact235-record v2 and482-record v3 packages remain in catalog/releases/2 and /3. New 11-USDA-record batch is batches/final-coverage.tsv ; 15 original reference-backed additions are in reference-curation.json. Generator preserves source descriptors and every historical ID; bundled Rust startup embeds the complete checksummed package, not just NOTICE.md. No internet call is required.
+
+```sh
+python3 tools/prepare_production_catalog.py /private/tmp/recipeatlas-sr-2018.zip
+python3 tools/audit_catalog.py --check
+python3 -m unittest discover -s tools -p 'test_catalog*.py'
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/verify_catalog_installation.py --deny-network --output /private/tmp/catalog-installation-report.json
+python3 tools/report_catalog.py
+```
+
+The existing pinned archive must be present and match catalog/sources.json; archive retrieval is build-time only. Mac --deny-network runs sandbox-exec with per-process network denial and may need permission to execute outside a nested development sandbox. The verification script allocates new TemporaryDirectory profiles and never targets the personal app directory. Other platforms omit that flag and must separately test network blocking. CLI report regeneration may change measured timings; checked-in m3b3-installation-report.json is the actual recorded run. report_catalog.py summarizes that report without rerunning imports.
+
+Actual results: clean 508 inserted;v2→v4: 273 inserted / 235 updated;v3→v4: 26 inserted / 482 updated; all repeats unchanged. Historical preservation fixtures include user recipes, personal ingredients, draft references, name/notes/unit overrides and pending collisions. A real killed process importing the entire production seed now tests rollback and retry as well as the retained validation-seed kill test. Repeated startup asserts zero extra SQLite changes.
+
+Review CSV uses the bundled artifact-tool runtime via tools/export_localization_review.mjs, with no app/runtime dependency added. Pass repository absolute path using a runtime that resolves @oai/artifact-tool. CSV is UTF-8, quoted, full text,18 rows / 16 columns; detailed Markdown is generated alongside it. Do not mark pending labels human-approved without actual review.

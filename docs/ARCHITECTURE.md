@@ -170,3 +170,10 @@ versioned independently of schema/package releases. Category subgroups reuse
 existing hierarchy/many-to-many storage. Current search/recipe editor reuse the
 same canonical rows; richer discovery remains M3C. Automated terminology audits
 are development tooling, not runtime services or translation certification.
+
+
+### M3B-3 catalog quality and offline reliability
+
+Production version 4 uses the existing embedded package/shared importer, schema 4 and single storage worker. 508 canonical IDs include every prior v3 ID. No applied migration, dependency, capability or persistence architecture changed. Version3 is now an exact immutable fixture in catalog/releases/3 with a separate reproducer. Source selections use new approved snapshots 2018-04-selection-4 / production-3; old evidence remains immutable. New beer/wine category handling in build-time classification uses beverage types without inferring alcohol strength. Explicit extraCategories prevents international project entries from being assigned Turkish-regional membership automatically.
+
+Development QA validates the complete v3 ID baseline, parent graphs, reference registry, source versions/licenses, checksums, descriptor ownership, aliases, relationships and ingredient-type constraints. Concept/translation heuristics are review aids, never silent merges or proof of human approval. Existing per-field override and pending personal collision strategies remain authoritative. Repeated bundled bootstrap is tested for zero additional SQLite changes. Network-denied CLI runs verify fresh installation and both historical upgrades; runtime never downloads seeds.

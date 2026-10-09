@@ -92,10 +92,6 @@
     "externalId": "168409"
   },
   {
-    "description": "Endive, raw",
-    "externalId": "168412"
-  },
-  {
     "description": "Mushrooms, Chanterelle, raw",
     "externalId": "168422"
   },
@@ -122,10 +118,6 @@
   {
     "description": "Spinach, raw",
     "externalId": "168462"
-  },
-  {
-    "description": "Radicchio, raw",
-    "externalId": "168564"
   },
   {
     "description": "Tomatoes, sun-dried",
@@ -328,10 +320,6 @@
     "externalId": "169231"
   },
   {
-    "description": "Jerusalem-artichokes, raw",
-    "externalId": "169236"
-  },
-  {
     "description": "Mushrooms, shiitake, raw",
     "externalId": "169242"
   },
@@ -484,10 +472,6 @@
     "externalId": "169721"
   },
   {
-    "description": "Wheat bran, crude",
-    "externalId": "169722"
-  },
-  {
     "description": "Pasta, fresh-refrigerated, plain, as purchased",
     "externalId": "169727"
   },
@@ -612,14 +596,6 @@
     "externalId": "170026"
   },
   {
-    "description": "Turnip greens, raw",
-    "externalId": "170061"
-  },
-  {
-    "description": "Watercress, raw",
-    "externalId": "170068"
-  },
-  {
     "description": "Peppers, sweet, red, raw",
     "externalId": "170108"
   },
@@ -652,14 +628,6 @@
     "externalId": "170170"
   },
   {
-    "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)",
-    "externalId": "170172"
-  },
-  {
-    "description": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
-    "externalId": "170173"
-  },
-  {
     "description": "Nuts, pecans",
     "externalId": "170182"
   },
@@ -690,10 +658,6 @@
   {
     "description": "Chocolate, dark, 70-85% cacao solids",
     "externalId": "170273"
-  },
-  {
-    "description": "Sweetener, syrup, agave",
-    "externalId": "170277"
   },
   {
     "description": "Barley, pearled, raw",
@@ -738,10 +702,6 @@
   {
     "description": "Tomatoes, red, ripe, raw, year round average",
     "externalId": "170457"
-  },
-  {
-    "description": "Tomato juice, canned, with salt added",
-    "externalId": "170458"
   },
   {
     "description": "Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program)",
@@ -1154,10 +1114,6 @@
   {
     "description": "Oil, cocoa butter",
     "externalId": "171421"
-  },
-  {
-    "description": "Oil, poppyseed",
-    "externalId": "171423"
   },
   {
     "description": "Oil, hazelnut",

@@ -61,3 +61,8 @@ fabricated upstream identifiers. `project-*` keys have only project provenance;
 USDA rows retain exact FDC IDs/descriptors and separate project labels. Unknown
 observations remain absent for all entries. New consumer subgroups use existing
 parent keys. Full counts and overlapping memberships: CATALOG_COVERAGE_REPORT.md.
+
+
+## M3B-3 package version 4
+
+Schema 4 unchanged; migrations001–004 remain immutable. Package4 contains508 identities (454 USDA-backed, 54 project-only), 411 food / 97 beverage, 260 aliases and 50 categories. All 482 historical v3 IDs persist. New source evidence snapshots are separate from DB schema and dataset version; all personal/recipe/draft references and catalog field overrides retain their previous identity. Exact archived v2/v3 packages test upgrades. Metadata observations remain absent for every identity; no allergens/ABV/density/nutrition inferred.

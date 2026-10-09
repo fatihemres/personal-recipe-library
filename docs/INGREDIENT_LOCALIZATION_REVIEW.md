@@ -1,6 +1,6 @@
 # Ingredient localization review queue
 
-All 482 production identities were structurally audited; 17 terminology items require human review. No independent human review occurred.
+All 508 production identities were structurally audited; 18 terminology items require human review. No independent human review occurred.
 
 These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.
 
@@ -10,6 +10,7 @@ These are naming refinements, not missing or invented source identities. Qualifi
 | project-creme-de-cassis | Crème de cassis | Crème de cassis | Blackcurrant-specific synonym narrowed to siyah frenk üzümü likörü; review Turkish terminology. |
 | project-salep-drink | Salep (hazırlanmış içecek) | Salep drink | Prepared salep drink stays distinct from salep powder; composition and alcohol status unknown. |
 | project-siyez-grain | Siyez buğdayı | Siyez einkorn wheat | Siyez/einkorn English terminology for regional identity should be reviewed; no cultivar/nutrition inferred. |
+| usda-sr-168412 | Hindiba (endivyen, çiğ) | Endive (raw) | Endive/hindiba/endivyen terminology can refer to different chicory forms regionally. USDA confirms generic raw endive, not a specific cultivar; verify natural Turkish usage without silently equating Belgian endive or radicchio. |
 | usda-sr-168588 | Tuz eklenmemiş sade badem ezmesi | Almond butter (plain, no salt added) | Almond butter is different from baking almond paste; broad badem ezmesi alias removed. |
 | usda-sr-168921 | Tam taneli mavi mısır unu | Whole-grain blue corn flour | Blue corn versus Spanish harina de maiz morado wording: colour terminology needs expert review. |
 | usda-sr-170160 | Badem ezmesi (pastacılık) | Almond paste | Almond paste is qualified for baking, distinct from nut butter and marzipan. |

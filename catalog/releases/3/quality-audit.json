@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "previousIdentities": 235,
+  "auditedIdentities": 482,
+  "newlyAddedIdentities": 247,
+  "stableHistoricalIds": 235,
+  "structuralErrors": [],
+  "aliasCollisionCandidates": [],
+  "linguisticReviewCount": 17,
+  "independentlyHumanReviewed": 0,
+  "reviewBoundary": "Structural and project semantic audit; human culinary terminology review remains open.",
+  "selectionExclusions": [
+    {
+      "externalId": "175186",
+      "reason": "Black turtle bean mapping needs comparison with existing black bean identity; not added."
+    },
+    {
+      "reference": "Van otlu peyniri",
+      "reason": "Primary page unavailable during current verification; excluded from this batch, not a licensed raw import."
+    }
+  ]
+}

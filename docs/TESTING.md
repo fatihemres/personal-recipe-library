@@ -212,3 +212,34 @@ subsequent app flows and SQLite checks succeeded. No false timeout claim.
 Isolated development launch on port1433 compiled and ran the native binary and
 was intentionally stopped afterward. Deterministic reproduction left all five
 artifact hashes unchanged; all eight archived v2 files match the M3B-1 commit.
+
+
+## M3B-3 final verification — 2026-10-09
+
+- 53 Rust tests: M1/M2A/M2B/M3A regressions, actual archived v2/v3→v4 preservation, new search/aliases, zero-write repeat bootstrap, shared referential integrity and transaction rollback, actual validation and full production killed-import recovery.
+- 32 Vitest tests; 2 Playwright browser tests. Browser tests remain presentation evidence only. Initial sandbox Vite listen failed EPERM; rerun with local-server permission passed.
+- 4 Python audit tests (13 semantic defect subcases plus separate checksum tampering), all-record audit --check; UTF-8 CSV round trip verifies 18 unique review rows and zero human approvals.
+- TypeScript/ESLint, Rustfmt/check/Clippy all-targets with denied warnings and frontend production build pass. Initial updated Rust test expectations/type assertions and CSV exporter shape needed correction; final runs pass, not ignored failures or timeouts.
+- Real CLI offline verification: 8 process runs, network denied via sandbox-exec; clean 508 / 0 collisions; archived v2→v4 273 new / 235 updated; archived v3→v4 26 new / 482 updated; all repeats unchanged. Temporary databases only. Exact reports/timings under catalog/production/m3b3-installation-report.json.
+- Unsigned debug macOS arm64 app bundle builds. Isolated identifier com.recipeatlas.m3b3-verification, packaged tauri://localhost (no Vite server), shows schema 4/FK/FTS verified and 508 production / 0 validation / 0 pending. Native recipe editor searches `TOZ ŞEK`, `Domates (çiğ`, `Limon (`, `Brewed coffee`, `All-purpose wheat flour`, `YOĞURT`, `Orgeat`, `IPA`, `SİYEZ`, `RAKI` succeeded. Keyboard selection saved Toz şeker 35.000001 g and Orgeat 25.000001 mL. Menu Quit confirmed process absence via pgrep; relaunch/detail retained both exact quantities and references. Native GUI connectivity was not disabled; separate real importer processes had network denied.
+
+Local focused measurements: CLI clean initialization/import 238.593 ms; current-version repeat open 80.939 ms; v2 upgrade 232.644 ms; v3 upgrade 230.483 ms (process wall time). Rust focused imports 190.415 / 186.139 ms; 100 actual Turkish partial queries 80.595 ms. Debug/local observations, not portable SLA or release-startup benchmark.
+
+Windows / Intel macOS runtime/installers, signing/notarization remain pending. Initial native tooling reused a stale bundle identifier for the repository app path; copying to a unique temporary .app path resolved discovery. No user database reset/opened; native test profile retained. No GUI redesign or M3C implementation.
+
+```sh
+npm run typecheck
+npm run lint
+npm test
+npm run build
+npm run test:ui
+cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+cargo test --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo check --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3b3-verification"}' -- --locked --offline
+```
+
+Normal development launch: npm run tauri -- dev. Use an isolated identifier/config as documented for clean installation tests; never reset the normal profile.
+
+Final rebuilt package at `/private/tmp/recipeatlas-m3b3-final.app` additionally showed the updated Aşama 3B-3 label and retained the same saved recipe/quantities after initialization. Its identifier matches the isolated verification profile; the normal user profile was untouched.

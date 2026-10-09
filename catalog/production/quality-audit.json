@@ -1,12 +1,218 @@
 {
-  "version": 3,
-  "previousIdentities": 235,
-  "auditedIdentities": 482,
-  "newlyAddedIdentities": 247,
-  "stableHistoricalIds": 235,
+  "version": 4,
+  "capitalizationAndTranslationWarnings": [],
+  "conceptReviewCandidates": [
+    {
+      "concept": "almonds",
+      "keys": [
+        "usda-sr-170567",
+        "usda-sr-170568"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "apple",
+      "keys": [
+        "usda-sr-171688",
+        "usda-sr-171689"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "baker's yeast",
+      "keys": [
+        "usda-sr-175042",
+        "usda-sr-175043"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "basil",
+      "keys": [
+        "usda-sr-171317",
+        "usda-sr-172232"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "beer",
+      "keys": [
+        "usda-sr-168746",
+        "usda-sr-168749"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "butter",
+      "keys": [
+        "usda-sr-173410",
+        "usda-sr-173430"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "chicken thigh",
+      "keys": [
+        "usda-sr-172385",
+        "usda-sr-173627"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "chickpeas",
+      "keys": [
+        "usda-sr-173756",
+        "usda-sr-173757",
+        "usda-sr-173800"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "cocoa powder",
+      "keys": [
+        "usda-sr-169593",
+        "usda-sr-169594"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "coconut meat",
+      "keys": [
+        "usda-sr-170169",
+        "usda-sr-170170"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "coconut milk",
+      "keys": [
+        "usda-sr-170172",
+        "usda-sr-170173"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "dark chocolate",
+      "keys": [
+        "usda-sr-170271",
+        "usda-sr-170272",
+        "usda-sr-170273"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "dill weed",
+      "keys": [
+        "usda-sr-171322",
+        "usda-sr-172233"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "egg white",
+      "keys": [
+        "usda-sr-172183",
+        "usda-sr-172204"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "egg yolk",
+      "keys": [
+        "usda-sr-172184",
+        "usda-sr-173428"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "european anchovy",
+      "keys": [
+        "usda-sr-174182",
+        "usda-sr-174183"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "fava beans",
+      "keys": [
+        "usda-sr-168574",
+        "usda-sr-175205"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "firm tofu",
+      "keys": [
+        "usda-sr-172448",
+        "usda-sr-172475"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "goat cheese",
+      "keys": [
+        "usda-sr-172197",
+        "usda-sr-173435"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "parsley",
+      "keys": [
+        "usda-sr-170416",
+        "usda-sr-170930"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "rainbow trout",
+      "keys": [
+        "usda-sr-173717",
+        "usda-sr-175154"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "rye flour",
+      "keys": [
+        "usda-sr-168885",
+        "usda-sr-168887"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "shiitake mushroom",
+      "keys": [
+        "usda-sr-168436",
+        "usda-sr-169242"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "tahini",
+      "keys": [
+        "usda-sr-168604",
+        "usda-sr-169410",
+        "usda-sr-170189"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "tomato juice",
+      "keys": [
+        "usda-sr-170458",
+        "usda-sr-170545"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    }
+  ],
+  "previousIdentities": 482,
+  "auditedIdentities": 508,
+  "newlyAddedIdentities": 26,
+  "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],
-  "linguisticReviewCount": 17,
+  "linguisticReviewCount": 18,
   "independentlyHumanReviewed": 0,
   "reviewBoundary": "Structural and project semantic audit; human culinary terminology review remains open.",
   "selectionExclusions": [
@@ -16,7 +222,7 @@
     },
     {
       "reference": "Van otlu peyniri",
-      "reason": "Primary page unavailable during current verification; excluded from this batch, not a licensed raw import."
+      "reason": "Excluded at v3 due unavailable primary page; reconsider only after current primary verification."
     }
   ]
 }

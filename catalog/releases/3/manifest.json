@@ -1,42 +1,42 @@
 {
   "artifact": {
     "file": "ingredients.json",
-    "sha256": "d46469b0c6236b99edbf7bd7eaf10c151fc7b0b92cc07c025fa98e0c478c825f"
+    "sha256": "e2de5bbd857afcae90ad4e0e87d43ed28cecae2e0d0ce48ed51e70a26ed4b3b5"
   },
   "dataset": "recipeatlas-ingredients",
   "evidence": {
     "recipeatlas-curation": {
       "file": "curation-records.json",
-      "sha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea"
+      "sha256": "8019257a664a41bef31fa8eb5843c13f61538df4eefda39e18ae740f6c94b2c2"
     },
     "usda-sr-legacy": {
       "file": "usda-records.json",
-      "sha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+      "sha256": "5e7f121769222f66fc3438d2131001de47f9be490785a36ad39e0b1d70cfdbfd"
     }
   },
   "formatVersion": 1,
   "purpose": "production",
   "sources": [
     {
-      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769",
+      "artifactSha256": "5e7f121769222f66fc3438d2131001de47f9be490785a36ad39e0b1d70cfdbfd",
       "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned, not a new USDA release.",
       "id": "usda-sr-legacy",
       "license": "CC0-1.0",
-      "name": "USDA SR Legacy April 2018 — production selection 4",
+      "name": "USDA SR Legacy April 2018 — production selection 3",
       "retrievedAt": "2026-10-08",
       "url": "https://fdc.nal.usda.gov/download-datasets/",
-      "version": "2018-04-selection-4"
+      "version": "2018-04-selection-3"
     },
     {
-      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea",
+      "artifactSha256": "8019257a664a41bef31fa8eb5843c13f61538df4eefda39e18ae740f6c94b2c2",
       "attribution": "Project-authored Turkish/English culinary labels, aliases and classifications; not USDA translations. No empirical metadata inferred.",
       "id": "recipeatlas-curation",
       "license": "CC0-1.0",
       "name": "Tarif Atlası production label curation",
       "retrievedAt": "2026-10-09",
       "url": "https://github.com/fatihemres/personal-recipe-library",
-      "version": "production-3"
+      "version": "production-2"
     }
   ],
-  "version": 4
+  "version": 3
 }

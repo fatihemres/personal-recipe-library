@@ -127,3 +127,12 @@ vermouth/beer styles, coffee beans/tea leaves, tonic/bar syrups. Pin each approv
 source and preserve generic/product/form boundaries. Package version 4 with new
 source snapshots, retain v2/v3 upgrade fixtures, rerun preservation and native
 checks. Do not mix this with M3C interface redesign.
+
+
+## M3B-3 actual coverage — 2026-10-09
+
+Version 4: **508 identities**, **26 additions** from 482; 411 food/97 beverage,260 aliases,50 category nodes. 454 USDA-backed and54 project-only reference-backed identities. This is the verified shipped selection, not a claim of complete global coverage. Detailed category membership, additions, provenance, actual offline runs, exclusions and remaining families are in CATALOG_M3B_FINAL_REPORT.md and catalog/production/m3b3-final-report.json.
+
+Added vegetables (endive,radicchio,yer elması,turnip greens,watercress), wheat bran, coconut milk forms, agave, salted tomato juice, poppyseed oil; pilaf/köfte bulgur grades, nar ekşisi, Edirne cheese; lager/ale/porter/stout/IPA, Orgeat/honey syrups and meaningful rum forms. Existing482 labels/IDs retained.17 original terminology questions plus new endive usage remain open; 18 total with zero independent human approvals. No numeric target substituted for evidence.
+
+Still incomplete: regional cheeses/ferments/plants, international specialties, coffee beans/loose tea, vermouth/additional spirit and mixer varieties, empirical metadata. Preserve these goals in V1; M3C discovery work must not silently erase them. Additional future source-curation increments require explicit scope and new snapshots.

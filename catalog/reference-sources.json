@@ -45,6 +45,30 @@
       "version": "Web page consulted 2026-10-09"
     },
     {
+      "url": "https://iba-world.com/iba-cocktail/mai-tai/",
+      "identities": [
+        "project-orgeat-syrup"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://iba-world.com/iba-cocktail/three-dots-and-a-dash/",
+      "identities": [
+        "project-honey-syrup",
+        "project-agricole-rum",
+        "project-aged-blended-rum"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
       "url": "https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062",
       "identities": [
         "project-siyez-bulgur",
@@ -113,6 +137,57 @@
       "rawSeedApproved": false,
       "imagesApproved": false,
       "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.kulturportali.gov.tr/turkiye/edirne/nealinir/edirne-peyniri",
+      "identities": [
+        "project-edirne-cheese"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.kulturportali.gov.tr/turkiye/hatay/nealinir/nar-ekss",
+      "identities": [
+        "project-nar-eksisi"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.tarimtv.gov.tr/tr/video-detay/bulgurun-tasimasi-gereken-ozel-8218",
+      "identities": [
+        "project-pilaf-bulgur",
+        "project-coarse-pilaf-bulgur",
+        "project-fine-koftelik-bulgur",
+        "project-koftelik-bulgur"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.ttb.gov/regulated-commodities/beverage-alcohol/beer/labeling/malt-beverage-class-and-type",
+      "identities": [
+        "project-lager-beer",
+        "project-ale-beer",
+        "project-porter-beer",
+        "project-stout-beer",
+        "project-india-pale-ale"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "Primary identity reference only. No website/database/text/image relicensing assumed; original factual labels/classification under project CC0. No copied protected expression or substantial extraction.",
       "retrievedAt": "2026-10-09",
       "version": "Web page consulted 2026-10-09"
     },

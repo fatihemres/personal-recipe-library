@@ -1,6 +1,6 @@
 # Implementation plan
 
-Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation, M2A persistent recipes and M2B reliability implemented and verified; M3A foundation implemented; M3B-1 first production batch delivered; M3B-2/M3B-3/M3C and M4–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
+Status: planning baseline 2026-10-08. M0 inspection completed; this documentation task completed; M1 foundation, M2A persistent recipes and M2B reliability implemented and verified; M3A foundation implemented; M3B-1 first production batch delivered; M3B-2 and M3B-3 catalog increments delivered; M3C and M4–M11 pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.
 
 ## Delivery rules and common acceptance gate
 
@@ -238,3 +238,12 @@ Verification and final limitations are recorded in TESTING.md and PROJECT_PROGRE
 Next proposed authorized increment: M3B-3 targeted remaining regional/beverage
 coverage and human terminology review, new immutable seed version, preservation
 and packaging gates. Full long-term catalog and V1 scope remain unchanged.
+
+
+## M3B-3 delivered increment — 2026-10-09
+
+Version 4:508 identities, 26 legitimate additions,411 food / 97 beverage,260 aliases,50 nodes. Existing482 IDs retained; actualv2/v3 fixtures, new source snapshots, stronger reproducible QA and full production killed-process recovery delivered. Complete M3B coverage/report and18-item UTF-8 terminology review queue distinguish automated/curated checks from independent human approval. Existing 17 labels were retained pending review. Unknown empirical metadata remains unknown.
+
+Requested M3B-3 implementation/verification is complete subject to explicitly documented human terminology review and host/release limitations; this is not a claim that every worldwide ingredient family is populated. Full V1 scope and remaining coverage families stay tracked in coverage plan. No schema/infrastructure replacement and no M3C features added.
+
+Next recommended scoped milestone:M3C ingredient discovery and catalog management: richer autocomplete, category/origin filtering, bilingual alias discovery, accessible keyboard interaction, metadata/provenance view, safe field overrides/collision review and performance tests against the real installed catalog. Human terminology review can refine labels in a future version while keeping IDs/overrides stable. Do not start it automatically.

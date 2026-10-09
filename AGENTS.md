@@ -58,6 +58,6 @@ Build a local-first food and beverage recipe management desktop application for 
 - Reproduce tools/prepare_production_catalog.py with the pinned archive and curated descriptor assertions. New content requires a higher dataset version and reviewed source clearance.
 
 ## Expanded catalog invariants (M3B-2)
-- Current production version 3 has 482 identities; historical version 2 lives in catalog/releases/2. Never mutate committed source snapshots or reassign canonical IDs.
+- Current production version 4 has 508 identities; historical versions 2 and 3 live in catalog/releases/2 and catalog/releases/3. Never mutate committed source snapshots or reassign canonical IDs.
 - Consult docs/CATALOG_COVERAGE_REPORT.md, docs/INGREDIENT_LOCALIZATION_REVIEW.md and catalog/reference-sources.json. Project-only factual entries are not USDA records and reference-only websites are not approved bulk datasets.
 - Reproduce grouped curation with tools/prepare_production_catalog.py; run tools/audit_catalog.py --check and tools/test_catalog_audit.py. Human review remains distinct from structural/semantic tooling.
