@@ -57,6 +57,8 @@ pub fn run() {
             commands::edit_ingredient,
             commands::delete_ingredient,
             commands::catalog_status,
+            commands::ingredient_library,
+            commands::ingredient_detail,
             commands::search_available_ingredients,
             commands::link_personal_catalog,
             commands::customize_catalog_ingredient,

@@ -247,3 +247,9 @@ Version 4:508 identities, 26 legitimate additions,411 food / 97 beverage,260 ali
 Requested M3B-3 implementation/verification is complete subject to explicitly documented human terminology review and host/release limitations; this is not a claim that every worldwide ingredient family is populated. Full V1 scope and remaining coverage families stay tracked in coverage plan. No schema/infrastructure replacement and no M3C features added.
 
 Next recommended scoped milestone:M3C ingredient discovery and catalog management: richer autocomplete, category/origin filtering, bilingual alias discovery, accessible keyboard interaction, metadata/provenance view, safe field overrides/collision review and performance tests against the real installed catalog. Human terminology review can refine labels in a future version while keeping IDs/overrides stable. Do not start it automatically.
+
+## M3C increments — status 2026-10-09
+
+M3C-1 completed: unified real SQLite library, all/catalog/personal totals, bounded pagination, combined bilingual/alias/Turkish search and hierarchical category filters, read-only provenance details, retained revision-safe personal CRUD and native recipe/draft/restart integration. No catalog changes or new migration. Verification and platform limits are recorded in TESTING.md and PROJECT_PROGRESS.md.
+
+Next requested increment: M3C-2 ingredient favorites, recently used ingredients, advanced autocomplete ranking/keyboard interaction, user-specific catalog presentation overrides, explicit collision/conflict management and interface personalization. Define acceptance and any schema changes before implementing; preserve origin/identity, exact quantities, draft and override invariants. Do not begin automatically.

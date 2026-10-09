@@ -1,4 +1,5 @@
 pub mod catalog;
+pub mod ingredient_library;
 pub mod recipes;
 pub mod reliability;
 use serde::{Deserialize, Serialize};

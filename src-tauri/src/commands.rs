@@ -551,6 +551,50 @@ mod tests {
         );
     }
     #[test]
+    fn library_ipc_dispatches_real_paged_sqlite_and_detail_contracts() {
+        let dir = tempfile::tempdir().unwrap();
+        let app = mock_builder()
+            .manage(StorageService::new(Ok(dir.path().into())))
+            .invoke_handler(tauri::generate_handler![
+                bootstrap,
+                ingredient_library,
+                ingredient_detail,
+                create_ingredient
+            ])
+            .build(mock_context(noop_assets()))
+            .unwrap();
+        let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        invoke(&window, "bootstrap", json!({})).unwrap();
+        let page=invoke(&window,"ingredient_library",json!({"query":{"search":"India pale ale","origin":"catalog","categoryId":null,"offset":0,"limit":30}})).unwrap();
+        assert_eq!(page["total"], 1);
+        assert_eq!(page["catalogCount"], 508);
+        assert_eq!(page["personalCount"], 0);
+        let detail = invoke(
+            &window,
+            "ingredient_detail",
+            json!({"id":page["items"][0]["id"],"origin":"catalog"}),
+        )
+        .unwrap();
+        assert_eq!(detail["item"]["name"], "India pale ale");
+        assert_eq!(detail["catalogVersion"], 4);
+        let personal = invoke(
+            &window,
+            "create_ingredient",
+            json!({"name":"Özel ev malzemem"}),
+        )
+        .unwrap();
+        let detail = invoke(
+            &window,
+            "ingredient_detail",
+            json!({"id":personal["id"],"origin":"personal"}),
+        )
+        .unwrap();
+        assert_eq!(detail["item"]["origin"], "personal");
+        assert!(invoke(&window,"ingredient_library",json!({"query":{"search":"","origin":"invalid","categoryId":null,"offset":0,"limit":30}})).is_err());
+    }
+    #[test]
     fn catalog_ipc_uses_installed_sqlite_data_and_real_worker() {
         let dir = tempfile::tempdir().unwrap();
         let manifest = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
@@ -593,4 +637,22 @@ mod tests {
         .as_str()
         .is_some());
     }
+}
+
+#[tauri::command]
+pub async fn ingredient_library(
+    query: crate::domain::ingredient_library::LibraryQuery,
+    state: tauri::State<'_, StorageService>,
+) -> Result<crate::domain::ingredient_library::LibraryPage, AppError> {
+    state.execute(move |d| d.ingredient_library(query)).await
+}
+#[tauri::command]
+pub async fn ingredient_detail(
+    id: String,
+    origin: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<crate::domain::ingredient_library::LibraryDetail, AppError> {
+    state
+        .execute(move |d| d.ingredient_detail(&id, &origin))
+        .await
 }

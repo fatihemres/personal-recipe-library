@@ -66,3 +66,7 @@ parent keys. Full counts and overlapping memberships: CATALOG_COVERAGE_REPORT.md
 ## M3B-3 package version 4
 
 Schema 4 unchanged; migrations001–004 remain immutable. Package4 contains508 identities (454 USDA-backed, 54 project-only), 411 food / 97 beverage, 260 aliases and 50 categories. All 482 historical v3 IDs persist. New source evidence snapshots are separate from DB schema and dataset version; all personal/recipe/draft references and catalog field overrides retain their previous identity. Exact archived v2/v3 packages test upgrades. Metadata observations remain absent for every identity; no allergens/ABV/density/nutrition inferred.
+
+## M3C-1 read models
+
+Schema remains version4; migrations001–004 and seed version4 are unchanged. `ingredient_library` returns paginated canonical/personal rows, global counts and descendant facets in one read transaction. Its origin-qualified identity prevents ambiguity for pending collisions. `ingredient_detail(id, origin)` returns canonical TR name, localized aliases, all memberships, dimensions, external-source facts and factual observations when present. Canonical ID and nullable recipe-facing ID are separate. Existing linked personal records retain personal origin and their original recipe IDs; category/English metadata may be inherited from their canonical link. No browse/detail operation writes to the database or invokes imports.

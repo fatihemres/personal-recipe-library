@@ -11,7 +11,7 @@ import { LibraryPage } from '../features/recipes/LibraryPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
 import { useFoundation } from './useFoundation';
 import { installNativeExitHandler } from './nativeExit';
-import { IngredientManager } from '../features/ingredients';
+import { IngredientLibrary } from '../features/ingredients';
 import { useTheme } from './theme';
 
 const futureModules = [
@@ -126,7 +126,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               </div>
             </section>
           )}
-          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientManager client={recipes} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>

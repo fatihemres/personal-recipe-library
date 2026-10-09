@@ -1,2 +1,3 @@
-export { IngredientManager } from './IngredientManager';
 export { IngredientSearchControl } from './IngredientSearchControl';
+
+export { IngredientLibrary } from './IngredientLibrary';

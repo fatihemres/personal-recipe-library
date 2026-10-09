@@ -243,3 +243,24 @@ npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipe
 Normal development launch: npm run tauri -- dev. Use an isolated identifier/config as documented for clean installation tests; never reset the normal profile.
 
 Final rebuilt package at `/private/tmp/recipeatlas-m3b3-final.app` additionally showed the updated Aşama 3B-3 label and retained the same saved recipe/quantities after initialization. Its identifier matches the isolated verification profile; the normal user profile was untouched.
+
+## M3C-1 — unified library verification (2026-10-09)
+
+Passed: typecheck, ESLint, 38 Vitest tests across12 files, frontend production build; Cargo fmt/check, 58 Rust tests and all-target Clippy with warnings denied (locked/offline); two Chromium browser regressions; four Python catalog audit tests plus the508-record audit (no structural errors/exact alias collisions,18 terminology items remain for human review). Renderer tests isolate presentation/IPC validation; they do not establish native persistence.
+
+Four new SQLite repository tests cover all508 distinct paginated canonical records, personal/global counts, Turkish casing/NFC and English aliases, descendant/combined filtering, duplicate-result prevention, invalid queries, real details/provenance, personal CAS/reference safety, exact recipe quantities, draft and restart preservation, pending collisions and overrides. A new registered-command test dispatches typed library/detail IPC through a real worker/database. Existing regressions include transactions, migration compatibility, interrupted imports and draft recovery. Seventeen real30-row pages (508 IDs) measured244.900ms total in a focused warmed test; this is one local sample including facets/memberships, not a cross-platform SLA.
+
+Unsigned arm64 macOS debug package built twice, final bundle36.05MiB, with isolated identifier `com.recipeatlas.m3c1-verification`. Normal user profile was not opened or reset. Native verification browsed17 pages (16×30+28), saw508 catalog/0 personal initially, created and renamed a personal record, then saw508/1/509. Catalog sugar details exposed169655/CC0 provenance and unknown factual metadata with no edit action. Native searches Şek/şek/ŞEK/şeker each returned15 matches including Toz şeker; Granulated sugar and Orgeat each1; RAKI/rakı each1; SİYEZ/siyez each3. Nested Peynirler showed30, combined Feta search1. Both themes visually checked. Recipe selection by keyboard saved Orgeat25.000001mL and personal35.000001g; editor preserved both. Cmd-Q flushed an edit draft; process absence was confirmed with pgrep; final rebuilt app reopened the same isolated profile, recovered the draft and both quantities, committed the edit and retained library totals.
+
+Initial native automation getApp took391.24s before returning a window; subsequent restart took1.73s. First tool duration is not a measured SQLite initialization time. Packaged app uses tauri://localhost with embedded offline seed, without a development server. No physical network-disconnection experiment was performed; offline behavior is additionally verified by embedded-package SQLite tests and no network calls in library services. Windows, Intel macOS, signed/notarized packages and installer testing remain unverified. Catalog terminology review is unchanged and is not human-approved by these checks.
+
+Reproduce normal development with `npm run tauri -- dev`; isolated package:
+
+```sh
+npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3c1-verification"}' -- --locked --offline
+cargo test --locked --offline --manifest-path src-tauri/Cargo.toml ingredient_library
+python3 -m unittest discover -s tools -p 'test_*.py'
+python3 tools/audit_catalog.py
+```
+
+Isolated `npm run tauri -- dev` with identifier `com.recipeatlas.m3c1-dev-verification`, Vite port1434 and locked/offline Cargo compiled and reached `Running target/debug/personal-recipe-library`; stopped cleanly with Ctrl-C. This is CLI launch evidence; GUI acceptance above is from the packaged app.

@@ -1,4 +1,5 @@
 mod catalog;
+mod ingredient_library;
 pub mod migrations;
 mod preferences;
 mod recipes;
@@ -100,3 +101,6 @@ mod reliability_tests;
 
 #[cfg(test)]
 mod catalog_tests;
+
+#[cfg(test)]
+mod ingredient_library_tests;
