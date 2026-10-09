@@ -1,0 +1,21 @@
+{
+  "dataset": "recipeatlas-ingredients",
+  "version": 1,
+  "purpose": "validation",
+  "unchanged": false,
+  "validated": 8,
+  "inserted": 8,
+  "updated": 0,
+  "available": 8,
+  "collisions": 0,
+  "categoryCoverage": {
+    "beverage": 3,
+    "coffee-tea": 1,
+    "dairy": 1,
+    "eggs": 1,
+    "food": 0,
+    "fruit": 1,
+    "oils": 1,
+    "sweeteners": 3
+  }
+}

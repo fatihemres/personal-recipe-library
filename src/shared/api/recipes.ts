@@ -46,6 +46,7 @@ export interface RecipeClient {
   ): Promise<Recipe[]>;
   archive(id: string, revision: number, archived: boolean): Promise<Recipe>;
   purge(id: string, revision: number): Promise<null>;
+  searchAvailable?(query: string): Promise<IngredientSearch>;
   searchPersonal(query: string): Promise<IngredientSearch>;
   editIngredient(input: {
     id: string;
@@ -98,6 +99,7 @@ export const recipeClient: RecipeClient = {
   archive: (id, revision, archived) =>
     request('archive_recipe', recipeSchema, { id, revision, archived }),
   purge: (id, revision) => request('purge_recipe', z.null(), { id, revision }),
+  searchAvailable: (query) => request('search_available_ingredients', ingredientSearchSchema, { query }),
   searchPersonal: (query) =>
     request('search_personal_ingredients', ingredientSearchSchema, { query }),
   editIngredient: (input) =>

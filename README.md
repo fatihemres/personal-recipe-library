@@ -1,6 +1,6 @@
 # Tarif Atlası — Personal Food & Beverage Library
 
-Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A and 2B are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
+Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B and 3A are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
 
 The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers food/beverage filters, Turkish title filtering, recipe creation/detail/editing, duplication, archive/unarchive, confirmed soft deletion, trash/restore and confirmed permanent deletion. Other modules are clearly identified as upcoming.
 
@@ -48,3 +48,8 @@ Stale edits never overwrite newer revisions. Review the current record or explic
 The **Malzemeler** screen edits personal ingredient names, notes and preferred units. Renaming preserves all references; referenced ingredients cannot be deleted. Exact normalized duplicates are reused on creation and rejected on rename. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker → Şeker, İ/i and I/ı are distinct pairs). Empty catalog, no matching results and database errors have different messages. Missing ingredients can be created inline; no global catalog is seeded.
 
 The entire requested product remains V1 scope. Built-in catalog, advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
+
+
+## M3A catalog foundation
+
+Canonical bilingual ingredients, hierarchy/provenance/override schema and offline checksummed importer are implemented. Only **eight verified USDA-backed validation ingredients** are prepared; the extensive production catalog is M3B. Validation records never auto-install into personal data. Settings distinguishes real validation/production counts. See [catalog pipeline](docs/CATALOG_IMPORT_PIPELINE.md), [source licenses](docs/DATA_SOURCES_AND_LICENSES.md), [schema](docs/INGREDIENT_CATALOG_SCHEMA.md) and [actual coverage](docs/CATALOG_COVERAGE.md) for reproduction and limits. M1/M2 data/IDs and migrations 001–003 remain preserved; schema is now 4.

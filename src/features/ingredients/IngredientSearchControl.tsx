@@ -12,8 +12,10 @@ export function IngredientSearchControl({
   client,
   onSelect,
   onBusy,
+  personalOnly = true,
 }: {
   client: RecipeClient;
+  personalOnly?: boolean;
   onSelect: (
     ingredient: PersonalIngredient | { id: string; name: string },
   ) => void;
@@ -37,7 +39,7 @@ export function IngredientSearchControl({
     const timer = setTimeout(() => {
       setLoading(true);
       setError('');
-      void client.searchPersonal(query).then(
+      void (personalOnly ? client.searchPersonal : client.searchAvailable ?? client.searchPersonal)(query).then(
         (value) => {
           if (alive && generation.current === current) {
             setResult(value);
@@ -57,7 +59,7 @@ export function IngredientSearchControl({
       alive = false;
       clearTimeout(timer);
     };
-  }, [client, query, retry]);
+  }, [client, query, retry, personalOnly]);
   async function create() {
     if (creatingRef.current || !query.trim()) return;
     creatingRef.current = true;
@@ -125,7 +127,7 @@ export function IngredientSearchControl({
         }}
       />
       <p className="muted">
-        {t.ingredientHelp} {t.ingredientKeyboard}
+        {personalOnly ? t.ingredientHelp : t.availableIngredientHelp} {t.ingredientKeyboard}
       </p>
       {loading && <p role="status">{t.ingredientSearching}</p>}
       {error && (
@@ -144,7 +146,7 @@ export function IngredientSearchControl({
       )}
       {!loading && !error && result && items.length === 0 && (
         <p role="status">
-          {result.total === 0 ? t.emptyCatalog : t.emptyIngredientSearch}
+          {result.total === 0 ? personalOnly ? t.emptyCatalog : t.emptyAvailableCatalog : t.emptyIngredientSearch}
         </p>
       )}
       <ul

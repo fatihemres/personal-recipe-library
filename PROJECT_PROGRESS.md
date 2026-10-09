@@ -3,7 +3,7 @@
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
-Current state: M1, M2A and M2B implemented, 2026-10-08, with actual SQLite tests and native macOS arm64 evidence. Next task is M3; no catalog import has started. The M2B handoff at the end is current; earlier sections are historical and retain their original milestone boundaries.
+Current state: M1, M2A, M2B and M3A implemented; M3A resumed and verified 2026-10-09. Next task is M3B. The M3A handoff at the end is current; earlier sections are historical and retain their original milestone boundaries.
 
 ## Existing project
 - `package.json` / `package-lock.json`: npm scripts and locked frontend dependencies; scripts for dev, build, preview, and Tauri.
@@ -232,3 +232,54 @@ npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m2b-verification",
 This command uses separate verification data, not the personal production library. To use normal personal data on another port, omit its identifier override. Standalone normal app: `npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline`, then `open src-tauri/target/debug/bundle/macos/personal-recipe-library.app`. Build output is ignored.
 
 Git was clean at start (M2A HEAD `52d0629fb326f67723c22a153a0210642a43f917`). M2B is grouped in one verified local commit; use `git log -1` for its full hash. No push/tag/release performed, and no personal databases/test artifacts are committed.
+
+
+## M3A completion / interrupted-session recovery — 2026-10-09
+
+Resumed the existing uncommitted M3A implementation from M2B commit `df8e34df9d00a1ad04c64ca2a423125643f59685`; did not regenerate the project, discard earlier work, refetch datasets or repeat licensing research. Source review/retrieval dates remain 2026-10-08. Git contained the existing catalog/schema/importer/docs/UI changes; no unrelated changes were removed. Final code review added a transactional guard against new system-name/personal-name collisions during catalog upgrades, a real regression test, and explicit selected-source duplicate detection in preparation tooling. No dependency, lockfile or packaging configuration change.
+
+### Implemented / actual counts
+
+- Migration **004_catalog.sql**, retaining byte-for-byte 001–003. Separate canonical definitions and recipe-facing IDs; bilingual names/aliases, hierarchy/M:M memberships, dimensions/relations, optional exact observations, immutable source/version provenance, release/audit, collision and customization tables. Existing preferences, recipe/draft references, decimal quantities, archive/trash and personal metadata preserved.
+- Reviewed source manifest: USDA SR Legacy CC0 factual data and project-authored CC0 curation enabled; Foundation needs artifact pinning; FoodOn conditional pending release/imported-term review; Open Food Facts excluded pending ODbL distribution analysis; TheCocktailDB excluded pending applicable offline redistribution rights. No images reused. Full findings/primary links: DATA_SOURCES_AND_LICENSES.md.
+- Real offline CLI importer: checksummed local artifacts/evidence/license allowlist; deterministic identities; prevalidation; transactional catalog writes plus success audit; failure rollback; interruption recovery; unchanged-package no-op; downgrade/content-drift rejection; explicit revision-checked personal linking; per-field catalog overrides; user category creation. No automatic seed or renderer filesystem/network importer.
+- **8 validated USDA-backed canonical ingredients, 8 category nodes, 16 provenance mappings, 0 production definitions, 0 optional empirical observations.** Clean import: 8 recipe-facing catalog rows, 0 collisions. Existing personal Şeker fixture/native test: 7 available catalog identities, 1 pending collision, original personal ID/recipe retained. Direct/overlapping category counts in CATALOG_COVERAGE.md and captured coverage.json.
+- Typed IPC/client plus real Settings diagnostics; recipe autocomplete can search installed TR/EN names/aliases; personal ingredient manager remains personal-only. Full catalog/discovery/collision/customization UI is M3C, not claimed complete.
+
+### Verification
+
+| Check | Final result |
+|---|---|
+| npm run typecheck / lint / build | Passed |
+| npm test | Passed: 32 tests across 10 files |
+| npm run test:ui | Passed: 2 browser tests after approved local-port retry |
+| cargo fmt --check / check --locked --offline | Passed |
+| cargo test --locked --offline | Passed: 43 tests, including retained M1/M2A/M2B regressions and subprocess helpers |
+| cargo clippy --locked --offline --all-targets -- -D warnings | Passed |
+| Generator reproducibility / real CLI install and re-import | Passed; all four generated file hashes unchanged; repeat import unchanged=true |
+| Native unsigned debug macOS arm64 bundle | Built for isolated and normal identifiers |
+| Native packaged UI→IPC→SQLite | Observed recipe preservation after import/restart, actual validation/production/collision diagnostics, English alias selection, catalog-backed draft recovery and persisted dark theme |
+| Tauri development launch | Compiled/reached Running target/debug/personal-recipe-library on isolated port 1430; stopped cleanly |
+| Windows/Intel / signed installers/notarization | Unverified; no claims |
+
+Detailed test coverage and native observation limits are in TESTING.md. Playwright's first resumed run failed with sandbox EPERM when binding 127.0.0.1:1420, then passed on authorized retry; not a product failure or timeout. Earlier pre-resume tests exposed schema-version fixture expectations and schema-3 fixture use of a new repository path, which were corrected without editing historical migrations. Final checks pass; no unresolved timeout.
+
+### Native evidence and data protection
+
+Used `com.recipeatlas.m3a-verification` and separate copied .app paths. Existing personal Şeker from the interrupted session was retained. Created a real recipe using it with `35.000001 g` and a step; quit, imported eight validation records through the actual CLI, relaunched and confirmed exact data unchanged. Settings showed schema 4/FK/FTS5, validation 8/production 0/pending 1. Native ICING → one Pudra şekeri result selected by keyboard; a separate incomplete catalog-backed draft recovered `12.` after observed input/Cmd-Q/relaunch. Personal manager displayed only Şeker. Dark preference survived restart. No validation recipes or catalog records were added to the normal personal production database. Isolated verification data was left intact, not purged.
+
+Native GUI observations concern the packaged verification app. The final additional importer name-conflict guard is verified by real SQLite test and final build; its rejection dialog was not manually exercised. Development process launch was verified by CLI output; bundle lookup selected the packaged app, so GUI interactions are not misreported as dev-runtime UI proof. Initial same-call type/quit input was not confirmed in AX and did not recover the quantity; repeated test with observed input did recover `12.`. No per-keystroke durability guarantee is added. See existing M2B recovery limits.
+
+### Remaining risks / next task
+
+**M3B only:** define representative coverage matrix and actual acceptance count; pin approved bulk artifacts, verify forms/aliases/Turkish terminology and lawful beverage/regional sources; generate extensive reviewed production package/report/notices; increment dataset version and reviewed allowlist; bundle artifacts and install idempotently offline through the Rust worker; verify clean install and updates/collisions/overrides/recipes/drafts/interruption on real SQLite and native hosts. Detailed sequence is in IMPLEMENTATION_PLAN.md. No M3B/M3C work started.
+
+Pending: FoodOn/OFF/CocktailDB rights/dependency review; realistic catalog search/performance testing; collision-management/reset-to-default UI; catalog retirement policy; schema downgrade/portable backup limitations; Windows/Intel/runtime and signing validation. Checksums are not signatures. All broad food/beverage/Turkish catalog families remain V1 requirements.
+
+Normal local launch: `npm run tauri -- dev`. Isolated verified launch:
+
+```sh
+npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3a-verification","build":{"beforeDevCommand":"npm run dev -- --port 1430","devUrl":"http://localhost:1430"}}' -- --locked --offline
+```
+
+Offline validation import reproduction: docs/CATALOG_IMPORT_PIPELINE.md. Final M3A changes are committed locally; retrieve full hash with `git log -1`. No push/tag/release.

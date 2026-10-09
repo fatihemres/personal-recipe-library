@@ -34,7 +34,7 @@ Build a local-first food and beverage recipe management desktop application for 
 - Do not install dependencies, upgrade versions, or change packaging merely to complete a documentation task.
 
 ## Recipe foundation invariants (M2A)
-- Preserve migrations 001, 002 and 003 after M2B; future schema work adds version 004 or later.
+- Preserve migrations 001–004 after M3A; future schema work adds version 005 or later.
 - Measurements are decimal text, never JS Number/SQLite REAL; preserve selected units and unknown quantity NULL. Consult docs/MEASUREMENT_ENGINE.md before conversion/scaling changes.
 - Recipe saves use the Rust worker/repository transaction and expected revisions. Do not bypass referential integrity or introduce renderer persistence as an alternative source of truth.
 - Personal ingredient identity is independent of recipes; catalog upgrades must preserve it.
@@ -43,3 +43,10 @@ Build a local-first food and beverage recipe management desktop application for 
 - Ingredient references from saved recipes and active drafts restrict deletion. Renames preserve IDs; conflicts never silently merge or reassign references. Search uses NFC/Turkish normalization on both query and stored key, not SQLite NOCASE.
 - Native close/Cmd-Q must await the current recipe draft flush and keep the window open on failure. Last changes before an unacknowledged abrupt crash are not guaranteed durable.
 - M3 catalog work remains a separate task; never seed invented ingredients to satisfy search verification.
+
+## Catalog foundation invariants (M3A)
+- Consult docs/INGREDIENT_CATALOG_SCHEMA.md, docs/CATALOG_IMPORT_PIPELINE.md, docs/DATA_SOURCES_AND_LICENSES.md and catalog/sources.json before catalog changes.
+- Validation version 1 contains eight real USDA-backed ingredients; it is not the production catalog and never auto-installs into personal app data. Extensive population/bundled installation is M3B; management/discovery UI is M3C.
+- Canonical keys/UUIDs and source mappings are stable. Preserve recipe-facing personal IDs, references and catalog overrides. Name collisions require review; never merge implicitly. Changed system names that collide with personal records reject the package transaction for review.
+- Sources require reviewed license/version clearance, checksummed evidence and accurate attribution. Unknown observations stay absent. Checksums verify integrity, not authenticity or translation quality.
+- Catalog data and success audit commit together; interrupted running audits are not success. Re-import unchanged packages is idempotent; changed packages need a greater version. Never mutate an applied migration or existing source/version snapshot.

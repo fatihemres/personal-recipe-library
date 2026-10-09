@@ -1,6 +1,6 @@
 # Database schema and initialization
 
-Current schema version is **3**. Applied migrations 001/002 remain unchanged; migration 003 adds M2B reliability. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
+Current schema version is **4**. Applied migrations 001–003 remain unchanged; migration 004 adds the M3A catalog foundation. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
 
 ## Location, access and ownership
 
@@ -84,3 +84,8 @@ Draft saves use IMMEDIATE transactions, CAS revisions and immutable target/base 
 Duplicate reads a revision-checked consistent source within an IMMEDIATE transaction, creates new recipe/line/step UUIDs and reuses canonical ingredient IDs, quantities, units and order. The copy starts active and independent. Archive/unarchive and soft-delete/restore are revision-checked conditional updates; each increments revision. Archived drafts are retained but stale for committing. Purge requires deleted_at and the expected revision; only owned rows cascade and edit drafts become orphaned. Shared definitions never cascade.
 
 Personal ingredient metadata changes are transactional, personal-only and revision checked. Duplicate normalized names return INGREDIENT_DUPLICATE. Deletion is permitted only for an unreferenced personal definition; both saved lines and draft references are checked, with FKs as a final safeguard. Search returns actual personal count and at most 50 normalized substring matches plus hasMore; exact names sort first. No global catalog records are imported.
+
+
+## Migration 004 — catalog foundation
+
+New canonical ingredients, bilingual names/aliases, hierarchical category/membership/dimension/relationship tables, source/provenance/optional exact observations, release/import audit, customization and collision tables; nullable `ingredients.catalog_id` FK. Full table dictionary/policies: INGREDIENT_CATALOG_SCHEMA.md. No recipe, draft, ingredient ID, quantity, archive/trash or preference rewrite. Existing online snapshot/checksum safeguards remain; validation seed is explicit CLI opt-in. Historical sections above describe the schema at their original milestone. Clean installs now apply 001–004. M2B binaries reject schema 4; no downgrade or automatic reset.

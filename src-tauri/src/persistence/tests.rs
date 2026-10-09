@@ -7,7 +7,7 @@ fn fresh_database_has_real_fts_foreign_keys_and_defaults() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
     let bootstrap = db.bootstrap().unwrap();
-    assert_eq!(bootstrap.storage.schema_version, 3);
+    assert_eq!(bootstrap.storage.schema_version, 4);
     assert!(bootstrap.storage.foreign_keys && bootstrap.storage.fts5);
     assert_eq!(bootstrap.preferences.theme, Theme::System);
     assert_eq!(bootstrap.preferences.locale, "tr");
@@ -43,7 +43,7 @@ fn repeated_initialization_preserves_preferences_and_migration_ledger() {
                 .query_row("SELECT count(*) FROM schema_migrations", [], |r| r
                     .get::<_, i64>(0))
                 .unwrap(),
-            3
+            4
         );
     }
 }
@@ -85,7 +85,7 @@ fn modified_checksum_is_rejected_without_mutating_file() {
 fn newer_schema_is_rejected_without_mutation() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
-    db.conn.pragma_update(None, "user_version", 4).unwrap();
+    db.conn.pragma_update(None, "user_version", 5).unwrap();
     drop(db);
     let path = dir.path().join("library.sqlite3");
     let before = std::fs::read(&path).unwrap();
@@ -210,7 +210,7 @@ fn rust_bootstrap_matches_frontend_contract_shape() {
         value["preferences"],
         serde_json::json!({"theme":"system","locale":"tr"})
     );
-    assert_eq!(value["storage"]["schemaVersion"], 3);
+    assert_eq!(value["storage"]["schemaVersion"], 4);
     assert_eq!(value["storage"]["foreignKeys"], true);
     assert_eq!(value["storage"]["fts5"], true);
 }

@@ -1,3 +1,4 @@
+mod catalog;
 pub mod migrations;
 mod preferences;
 mod recipes;
@@ -96,3 +97,6 @@ mod recipe_tests;
 
 #[cfg(test)]
 mod reliability_tests;
+
+#[cfg(test)]
+mod catalog_tests;

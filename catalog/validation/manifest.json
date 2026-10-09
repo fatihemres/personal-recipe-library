@@ -1,0 +1,42 @@
+{
+  "artifact": {
+    "file": "ingredients.json",
+    "sha256": "271a771fbccf8d3b87c655346f582643eaacbd34c4310935b0bb1f677e1f7dfa"
+  },
+  "dataset": "recipeatlas-ingredients",
+  "evidence": {
+    "recipeatlas-curation": {
+      "file": "curation-records.json",
+      "sha256": "f7563adee01f29ca10d4e0a9636995d6bcc81c156f4d734112772aca48976d11"
+    },
+    "usda-sr-legacy": {
+      "file": "usda-records.json",
+      "sha256": "c6dd9dbb22419c92331bda9ac493c21f0dc3fda7243982da0a0a4ae2c139b9ed"
+    }
+  },
+  "formatVersion": 1,
+  "purpose": "validation",
+  "sources": [
+    {
+      "artifactSha256": "c6dd9dbb22419c92331bda9ac493c21f0dc3fda7243982da0a0a4ae2c139b9ed",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; descriptions selected unchanged.",
+      "id": "usda-sr-legacy",
+      "license": "CC0-1.0",
+      "name": "USDA FoodData Central SR Legacy",
+      "retrievedAt": "2026-10-08",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04"
+    },
+    {
+      "artifactSha256": "f7563adee01f29ca10d4e0a9636995d6bcc81c156f4d734112772aca48976d11",
+      "attribution": "Project-authored factual Turkish/English labels, aliases and culinary classification; not USDA translations or empirical measurements.",
+      "id": "recipeatlas-curation",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası validation curation",
+      "retrievedAt": "2026-10-08",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "validation-1"
+    }
+  ],
+  "version": 1
+}

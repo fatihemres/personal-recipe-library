@@ -20,13 +20,19 @@ impl Database {
         if query.chars().count() > 200 {
             return Err(invalid());
         }
-        let mut s=self.conn.prepare("SELECT id,name FROM ingredients WHERE instr(search_name,?1)>0 ORDER BY search_name,id LIMIT 50")?;
-        let rows = s.query_map([search_name(query)], |r| {
-            Ok(Ingredient {
-                id: r.get(0)?,
-                name: r.get(1)?,
-            })
-        })?;
+        let mut s=self.conn.prepare("SELECT i.id,i.name FROM ingredients i WHERE instr(i.search_name,?1)>0 OR EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND instr(n.search_key,CASE WHEN n.locale='tr' THEN ?1 ELSE ?2 END)>0) OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0) ORDER BY i.search_name,i.id LIMIT 50")?;
+        let rows = s.query_map(
+            params![
+                search_name(query),
+                crate::domain::catalog::name_key("en", query)
+            ],
+            |r| {
+                Ok(Ingredient {
+                    id: r.get(0)?,
+                    name: r.get(1)?,
+                })
+            },
+        )?;
         Ok(rows.collect::<Result<_, _>>()?)
     }
     pub fn create_ingredient(&mut self, name: &str) -> Result<Ingredient, AppError> {
@@ -38,7 +44,7 @@ impl Database {
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
-        let existing = tx
+        let mut existing = tx
             .query_row(
                 "SELECT id,name FROM ingredients WHERE search_name=?1 ORDER BY origin DESC LIMIT 1",
                 [&key],
@@ -50,6 +56,28 @@ impl Database {
                 },
             )
             .optional()?;
+        if existing.is_none() {
+            let mut s=tx.prepare("SELECT DISTINCT i.id,i.name FROM ingredients i WHERE EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND n.search_key=CASE WHEN n.locale='tr' THEN ?1 ELSE ?2 END) OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND a.search_key=CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END) LIMIT 2")?;
+            let matches = s
+                .query_map(
+                    params![key, crate::domain::catalog::name_key("en", &name)],
+                    |r| {
+                        Ok(Ingredient {
+                            id: r.get(0)?,
+                            name: r.get(1)?,
+                        })
+                    },
+                )?
+                .collect::<Result<Vec<_>, _>>()?;
+            if matches.len() > 1 {
+                return Err(AppError::new(
+                    "INGREDIENT_DUPLICATE",
+                    "errors.ingredientDuplicate",
+                    true,
+                ));
+            }
+            existing = matches.into_iter().next();
+        }
         let result = if let Some(i) = existing {
             i
         } else {

@@ -1,0 +1,34 @@
+[
+  {
+    "description": "{\"aliasesEn\":[\"Prepared coffee\"],\"aliasesTr\":[\"Demleme kahve\"],\"category\":\"coffee-tea\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brewed coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş kahve\"}",
+    "externalId": "coffee-brewed"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Whole egg\"],\"aliasesTr\":[\"Yumurta\"],\"category\":\"eggs\",\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw whole egg\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ bütün yumurta\"}",
+    "externalId": "egg-whole-raw"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"category\":\"sweeteners\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Honey\",\"preferredUnit\":\"g\",\"tr\":\"Bal\"}",
+    "externalId": "honey"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Lime\"],\"aliasesTr\":[\"Misket limonu\"],\"category\":\"fruit\",\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw lime\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ misket limonu\"}",
+    "externalId": "lime-raw"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Whole milk\"],\"aliasesTr\":[\"Tam yağlı süt\"],\"category\":\"dairy\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Whole milk (3.25%, unfortified)\",\"preferredUnit\":\"mL\",\"tr\":\"Tam yağlı süt (%3,25 yağ)\"}",
+    "externalId": "milk-whole-unfortified"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zeytin yağı\"],\"category\":\"oils\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Olive oil\",\"preferredUnit\":\"mL\",\"tr\":\"Zeytinyağı\"}",
+    "externalId": "olive-oil"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"White sugar\"],\"aliasesTr\":[\"Şeker\"],\"category\":\"sweeteners\",\"dimensions\":[\"mass\"],\"en\":\"Granulated sugar\",\"preferredUnit\":\"g\",\"tr\":\"Toz şeker\"}",
+    "externalId": "sugar-granulated"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Icing sugar\",\"Confectioners sugar\"],\"aliasesTr\":[\"Pudra şeker\"],\"category\":\"sweeteners\",\"dimensions\":[\"mass\"],\"en\":\"Powdered sugar\",\"preferredUnit\":\"g\",\"tr\":\"Pudra şekeri\"}",
+    "externalId": "sugar-powdered"
+  }
+]

@@ -1,3 +1,4 @@
+pub mod catalog_tool;
 mod commands;
 mod desktop_menu;
 mod domain;
@@ -55,6 +56,11 @@ pub fn run() {
             commands::search_personal_ingredients,
             commands::edit_ingredient,
             commands::delete_ingredient,
+            commands::catalog_status,
+            commands::search_available_ingredients,
+            commands::link_personal_catalog,
+            commands::customize_catalog_ingredient,
+            commands::create_personal_category,
             commands::finish_exit
         ])
         .build(tauri::generate_context!())

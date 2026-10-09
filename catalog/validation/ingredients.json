@@ -1,0 +1,403 @@
+{
+  "categories": [
+    {
+      "en": "Beverage ingredients",
+      "key": "beverage",
+      "parent": null,
+      "tr": "İçecek malzemeleri"
+    },
+    {
+      "en": "Coffee and tea",
+      "key": "coffee-tea",
+      "parent": "beverage",
+      "tr": "Kahve ve çay"
+    },
+    {
+      "en": "Dairy",
+      "key": "dairy",
+      "parent": "food",
+      "tr": "Süt ürünleri"
+    },
+    {
+      "en": "Eggs",
+      "key": "eggs",
+      "parent": "food",
+      "tr": "Yumurtalar"
+    },
+    {
+      "en": "Food ingredients",
+      "key": "food",
+      "parent": null,
+      "tr": "Gıda malzemeleri"
+    },
+    {
+      "en": "Fruit",
+      "key": "fruit",
+      "parent": "food",
+      "tr": "Meyveler"
+    },
+    {
+      "en": "Oils",
+      "key": "oils",
+      "parent": "food",
+      "tr": "Yağlar"
+    },
+    {
+      "en": "Sweeteners",
+      "key": "sweeteners",
+      "parent": "food",
+      "tr": "Tatlandırıcılar"
+    }
+  ],
+  "ingredients": [
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Demleme kahve"
+        },
+        {
+          "locale": "en",
+          "name": "Prepared coffee"
+        }
+      ],
+      "canonicalName": "Brewed coffee",
+      "categories": [
+        "coffee-tea"
+      ],
+      "dimensions": [
+        "mass",
+        "volume"
+      ],
+      "id": "a7da5812-c045-8ced-a0c3-18d16ff0871e",
+      "ingredientType": "beverage",
+      "key": "coffee-brewed",
+      "names": {
+        "en": "Brewed coffee",
+        "tr": "Demlenmiş kahve"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, coffee, brewed, prepared with tap water",
+          "externalId": "171890",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"Prepared coffee\"],\"aliasesTr\":[\"Demleme kahve\"],\"category\":\"coffee-tea\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brewed coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş kahve\"}",
+          "externalId": "coffee-brewed",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Yumurta"
+        },
+        {
+          "locale": "en",
+          "name": "Whole egg"
+        }
+      ],
+      "canonicalName": "Raw whole egg",
+      "categories": [
+        "eggs"
+      ],
+      "dimensions": [
+        "mass",
+        "count"
+      ],
+      "id": "a7ae1f73-85ae-83ff-bce7-60dc43f9241f",
+      "ingredientType": "food",
+      "key": "egg-whole-raw",
+      "names": {
+        "en": "Raw whole egg",
+        "tr": "Çiğ bütün yumurta"
+      },
+      "observations": [],
+      "preferredUnit": "adet",
+      "provenance": [
+        {
+          "description": "Egg, whole, raw, fresh",
+          "externalId": "171287",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"Whole egg\"],\"aliasesTr\":[\"Yumurta\"],\"category\":\"eggs\",\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw whole egg\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ bütün yumurta\"}",
+          "externalId": "egg-whole-raw",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Honey",
+      "categories": [
+        "sweeteners",
+        "beverage"
+      ],
+      "dimensions": [
+        "mass",
+        "volume"
+      ],
+      "id": "7ceacc7a-6ff9-8e5c-a1f5-09bd8c2ef893",
+      "ingredientType": "food",
+      "key": "honey",
+      "names": {
+        "en": "Honey",
+        "tr": "Bal"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Honey",
+          "externalId": "169640",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"category\":\"sweeteners\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Honey\",\"preferredUnit\":\"g\",\"tr\":\"Bal\"}",
+          "externalId": "honey",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Misket limonu"
+        },
+        {
+          "locale": "en",
+          "name": "Lime"
+        }
+      ],
+      "canonicalName": "Raw lime",
+      "categories": [
+        "fruit",
+        "beverage"
+      ],
+      "dimensions": [
+        "mass",
+        "count"
+      ],
+      "id": "bf3036f5-d761-84ab-ad7b-3c13cd8ebb62",
+      "ingredientType": "food",
+      "key": "lime-raw",
+      "names": {
+        "en": "Raw lime",
+        "tr": "Çiğ misket limonu"
+      },
+      "observations": [],
+      "preferredUnit": "adet",
+      "provenance": [
+        {
+          "description": "Limes, raw",
+          "externalId": "168155",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"Lime\"],\"aliasesTr\":[\"Misket limonu\"],\"category\":\"fruit\",\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw lime\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ misket limonu\"}",
+          "externalId": "lime-raw",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Tam yağlı süt"
+        },
+        {
+          "locale": "en",
+          "name": "Whole milk"
+        }
+      ],
+      "canonicalName": "Whole milk (3.25%, unfortified)",
+      "categories": [
+        "dairy",
+        "beverage"
+      ],
+      "dimensions": [
+        "mass",
+        "volume"
+      ],
+      "id": "e563e1c8-ec6a-84b9-8be1-522b9539a8cf",
+      "ingredientType": "food",
+      "key": "milk-whole-unfortified",
+      "names": {
+        "en": "Whole milk (3.25%, unfortified)",
+        "tr": "Tam yağlı süt (%3,25 yağ)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+          "externalId": "172217",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"Whole milk\"],\"aliasesTr\":[\"Tam yağlı süt\"],\"category\":\"dairy\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Whole milk (3.25%, unfortified)\",\"preferredUnit\":\"mL\",\"tr\":\"Tam yağlı süt (%3,25 yağ)\"}",
+          "externalId": "milk-whole-unfortified",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Zeytin yağı"
+        }
+      ],
+      "canonicalName": "Olive oil",
+      "categories": [
+        "oils"
+      ],
+      "dimensions": [
+        "mass",
+        "volume"
+      ],
+      "id": "fe553ea8-997f-80c0-a0d3-519ec868a35b",
+      "ingredientType": "food",
+      "key": "olive-oil",
+      "names": {
+        "en": "Olive oil",
+        "tr": "Zeytinyağı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Oil, olive, salad or cooking",
+          "externalId": "171413",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zeytin yağı\"],\"category\":\"oils\",\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Olive oil\",\"preferredUnit\":\"mL\",\"tr\":\"Zeytinyağı\"}",
+          "externalId": "olive-oil",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Şeker"
+        },
+        {
+          "locale": "en",
+          "name": "White sugar"
+        }
+      ],
+      "canonicalName": "Granulated sugar",
+      "categories": [
+        "sweeteners"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "df5f79c3-d753-8e4a-9649-7ded44b61d09",
+      "ingredientType": "food",
+      "key": "sugar-granulated",
+      "names": {
+        "en": "Granulated sugar",
+        "tr": "Toz şeker"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Sugars, granulated",
+          "externalId": "169655",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"White sugar\"],\"aliasesTr\":[\"Şeker\"],\"category\":\"sweeteners\",\"dimensions\":[\"mass\"],\"en\":\"Granulated sugar\",\"preferredUnit\":\"g\",\"tr\":\"Toz şeker\"}",
+          "externalId": "sugar-granulated",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [
+        {
+          "locale": "tr",
+          "name": "Pudra şeker"
+        },
+        {
+          "locale": "en",
+          "name": "Icing sugar"
+        },
+        {
+          "locale": "en",
+          "name": "Confectioners sugar"
+        }
+      ],
+      "canonicalName": "Powdered sugar",
+      "categories": [
+        "sweeteners"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "4b223592-835a-8814-923f-cc893d5e12df",
+      "ingredientType": "food",
+      "key": "sugar-powdered",
+      "names": {
+        "en": "Powdered sugar",
+        "tr": "Pudra şekeri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Sugars, powdered",
+          "externalId": "169656",
+          "sourceId": "usda-sr-legacy",
+          "sourceVersion": "2018-04"
+        },
+        {
+          "description": "{\"aliasesEn\":[\"Icing sugar\",\"Confectioners sugar\"],\"aliasesTr\":[\"Pudra şeker\"],\"category\":\"sweeteners\",\"dimensions\":[\"mass\"],\"en\":\"Powdered sugar\",\"preferredUnit\":\"g\",\"tr\":\"Pudra şekeri\"}",
+          "externalId": "sugar-powdered",
+          "sourceId": "recipeatlas-curation",
+          "sourceVersion": "validation-1"
+        }
+      ],
+      "relations": [
+        {
+          "key": "sugar-granulated",
+          "kind": "related"
+        }
+      ]
+    }
+  ]
+}

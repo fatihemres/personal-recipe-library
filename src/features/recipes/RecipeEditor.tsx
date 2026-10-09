@@ -298,6 +298,7 @@ export function RecipeEditor({
             names={names}
             search={
               <IngredientSearchControl
+                personalOnly={false}
                 client={client}
                 onSelect={selectIngredient}
                 onBusy={setAdding}

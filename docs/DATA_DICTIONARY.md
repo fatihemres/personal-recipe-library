@@ -1,6 +1,6 @@
 # Data dictionary
 
-Implemented M1/M2A/M2B data and contracts. Future entities remain proposed in ARCHITECTURE.md.
+Implemented M1/M2A/M2B/M3A data and contracts. Future entities remain proposed in ARCHITECTURE.md.
 
 | Table / field | Type and meaning | Constraint / policy |
 | --- | --- | --- |
@@ -44,3 +44,15 @@ Implemented M1/M2A/M2B data and contracts. Future entities remain proposed in AR
 - New IPC: list_drafts(), get_draft(id), save_draft(write), discard_draft(id,revision), commit_recipe(input,draftId,draftRevision,asCopy), duplicate_recipe(id,revision), scope_recipes(scope,kind), archive_recipe(id,revision,archived), purge_recipe(id,revision), search_personal_ingredients(query), edit_ingredient(input), delete_ingredient(id,revision). Unit-returning commands serialize to JSON null. M1/M2A commands remain available.
 - `finish_exit` is the native exit handshake, invoked only after the registered recipe draft guard succeeds. Renderer never receives direct DB/filesystem access.
 - DRAFT_CONFLICT distinguishes a stale/closed/shared draft session; CONFLICT denotes a stale recipe/ingredient/lifecycle revision. INGREDIENT_DUPLICATE reports a rename collision; INGREDIENT_REFERENCED protects saved/draft references. These have localized messages and keep input available. NOT_FOUND remains explicit for missing records. No raw SQL/filesystem paths are exposed.
+
+
+## Implemented M3A catalog contracts
+
+Catalog table/field semantics and ownership: INGREDIENT_CATALOG_SCHEMA.md. `ingredients.catalog_id` is a nullable canonical FK, not a replacement for personal identity. Optional observations use exact decimal text and sourced basis; absence is unknown. Stable curated UUIDv8 IDs remain independent of upstream identifiers. `catalog_releases` distinguishes validation/production; `catalog_import_runs` records actual outcomes, including possibly interrupted running audits.
+
+- `catalog_status()` → definitions, validationDefinitions, productionDefinitions, pendingCollisions (nonnegative integer database counts).
+- `search_available_ingredients(query)` → items with existing ingredient metadata contract, total across all recipe-facing rows, hasMore. TR/EN names and aliases yield one result per operational ID. Personal manager continues using search_personal_ingredients; recipe editor uses available search.
+- `link_personal_catalog(id,revision,catalogId)` → null; explicit CAS metadata link, no name/reference merge. Refuses merging an already published built-in row.
+- `customize_catalog_ingredient(input)` → ingredient metadata contract with origin catalog; CAS and per-field override markers, no change to canonical source definition.
+- `create_personal_category(tr,en,parent)` → new UUID; validated labels/optional parent FK. Full category-management UI remains M3C.
+- Import manifest/report are Rust tooling contracts, not renderer filesystem APIs. See CATALOG_IMPORT_PIPELINE.md. CATALOG_* errors have localized safe feedback; immutable source/package versions, invalid artifacts/licenses, downgrade, identity/name conflict or cycle reject the operation. Source snapshots and user data are not silently overwritten.

@@ -36,9 +36,12 @@ export const recipesTr = {
   viewLatest: 'Güncel kaydı görüntüle',
   targetUnavailable:
     'Asıl tarif arşivlenmiş, silinmiş veya değişmiş olabilir. Taslak korunur; yeni tarif olarak kaydedebilirsiniz.',
+  catalogIngredientReused: 'Bu adla katalogda bir malzeme zaten var; yeni kişisel kopya oluşturulmadı. Tarifte mevcut kaydı seçebilirsiniz. Katalog düzenleme arayüzü henüz kullanıma açık değil.',
   personalIngredients: 'Kişisel malzemeler',
   ingredientHelp:
-    'Bu aşamada yalnızca kendi kaydettiğiniz malzemeler aranır. Hazır katalog M3 aşamasında eklenecek.',
+    'Burada yalnızca kişisel malzemelerinizi yönetirsiniz. Geniş üretim kataloğu M3B aşamasında eklenecek.',
+  availableIngredientHelp: 'Kişisel malzemeler ve kurulmuş katalog kayıtları Türkçe, İngilizce ve diğer adlarıyla aranır. Geniş üretim kataloğu M3B aşamasında eklenecek.',
+  emptyAvailableCatalog: 'Henüz kullanılabilir malzeme yok. Yeni kişisel malzeme oluşturabilirsiniz; geniş katalog henüz kurulmadı.',
   emptyCatalog:
     'Henüz kişisel malzeme kaydetmediniz. Aşağıdan ilk malzemenizi oluşturabilirsiniz.',
   emptyIngredientSearch:

@@ -73,3 +73,5 @@ test('unfinished recipe survives settings navigation and storage retry', async (
   await waitFor(()=>expect(api.bootstrap).toHaveBeenCalledTimes(2));await user.click(screen.getByRole('button',{name:'Tarif kütüphanesi'}));
   expect(await screen.findByLabelText('Tarif adı')).toHaveValue('Kaydedilmemiş çorba');
 });
+
+vi.mock('../shared/api/catalog', () => ({ catalogClient: { status: vi.fn().mockResolvedValue({ definitions: 0, validationDefinitions: 0, productionDefinitions: 0, pendingCollisions: 0 }) } }));

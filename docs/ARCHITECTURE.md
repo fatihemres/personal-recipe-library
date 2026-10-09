@@ -1,6 +1,6 @@
 # Architecture
 
-Status: M1, M2A and M2B implemented, 2026-10-08; M3 and later domain modules remain proposed. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
+Status: M1, M2A, M2B and M3A implemented, 2026-10-08; M3B/M3C and later modules remain pending. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
 
 ## Boundaries and technology decisions
 
@@ -132,3 +132,14 @@ Archive and deletion are independent timestamps with revision increments. Trash 
 Personal ingredient edits use their own optimistic revision, notes and preferred-unit FK. Referenced definitions (saved recipes, including archive/trash, and active drafts) cannot be deleted. Renaming changes display names everywhere without changing IDs or measurements. A normalized duplicate rename is a localized conflict, never an automatic merge. Personal records stay independent of future catalog provenance/override entities.
 
 Search normalizes both stored names and queries with NFC, Turkish-aware case mapping and whitespace handling, using a parameterized substring query. SQLite NOCASE is insufficient for Turkish. No M2A matching defect reproduced against saved Şeker; M2B adds real catalog counts, distinct empty/no-match/error states, keyboard autocomplete, exact-name priority and an explicit 50-result refinement notice. Typo tolerance, aliases and catalog indexing remain M3/M4. Lists remain unpaginated; performance work is still required before large-library claims.
+
+
+## M3A implemented catalog foundation
+
+Additive migration 004 separates canonical/source-owned definitions from existing recipe-facing ingredients, preserving all prior IDs and references. Normal catalog status/search/link/customization/category operations use typed IPC and the existing Rust worker. Offline import preparation and installation use a separate CLI; no network client, new dependency, renderer filesystem capability or automatic validation import was introduced.
+
+Deterministic UUIDv8 curated keys, bilingual names/aliases, normalized taxonomy, source/version/provenance, exact optional observations and per-field user overrides are described in INGREDIENT_CATALOG_SCHEMA.md. DATA_SOURCES_AND_LICENSES.md and catalog/sources.json govern approved pinned sources. CATALOG_IMPORT_PIPELINE.md describes validation, checksums, immutable package versions, atomic success audit, interruption recovery, collision review and upgrade protection. USDA CC0 factual data plus authored CC0 curation provide eight validation identities, not the production catalog; see CATALOG_COVERAGE.md.
+
+Recipe autocomplete can read available personal/built-in records with locale-specific TR/EN/alias matching and DISTINCT identity semantics. The personal ingredient manager stays personal-only. Exact name collisions are queued and do not publish duplicate built-in recipe-facing rows. Explicit CAS linking attaches canonical metadata without renaming/reassigning personal IDs. Catalog overrides are a backend/typed service foundation; full collision/customization/category management UI, fuzzy search and large-list tuning remain M3C. Category creation is operational through validated IPC; no unused global UI scaffolding was added.
+
+M3B owns extensive validated coverage and bundled offline startup installation. Catalog versions/source artifact changes need review; missing records are retained to protect references, and reset-to-default/retirement policies need explicit future design. Checksums detect drift, not malicious unsigned package substitution. Schema 4 cannot be opened by older M2B builds; restore limitations remain unchanged.

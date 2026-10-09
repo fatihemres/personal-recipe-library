@@ -1,3 +1,4 @@
+import { CatalogStatusPanel } from './CatalogStatusPanel';
 import { Check, Monitor, Moon, Sun, Database, Languages } from 'lucide-react';
 import type { Bootstrap, Theme } from '../../shared/contracts/foundation';
 import { messages as t } from '../../shared/i18n';
@@ -49,6 +50,7 @@ export function SettingsPage({ data, saving, onTheme }: {
           <div><dt>{t.fts}</dt><dd>{data.storage.fts5 ? t.verified : t.notVerified}</dd></div>
         </dl>
       </section>
+      <CatalogStatusPanel />
     </>
   );
 }

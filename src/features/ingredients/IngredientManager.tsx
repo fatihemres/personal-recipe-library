@@ -34,7 +34,13 @@ export function IngredientManager({ client }: { client: RecipeClient }) {
     try {
       const result = await client.searchPersonal(ingredient.name);
       const saved = result.items.find((i) => i.id === ingredient.id);
-      if (saved) setSelected(saved);
+      if (saved) {
+        setSelected(saved);
+        setNotice('');
+      } else {
+        setSelected(undefined);
+        setNotice(t.catalogIngredientReused);
+      }
     } catch (e) {
       setError(errorMessage(normalizeError(e).messageKey));
     }
@@ -92,6 +98,7 @@ export function IngredientManager({ client }: { client: RecipeClient }) {
       {notice && <p role="status">{notice}</p>}
       <div className="panel recipe-form">
         <IngredientSearchControl
+          personalOnly
           key={generation}
           client={client}
           onSelect={(ingredient) => void select(ingredient)}

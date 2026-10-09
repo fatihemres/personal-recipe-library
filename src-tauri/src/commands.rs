@@ -176,6 +176,53 @@ pub fn finish_exit(app: tauri::AppHandle, state: tauri::State<'_, crate::ExitPer
     app.exit(0);
 }
 
+#[tauri::command]
+pub async fn search_available_ingredients(
+    query: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<IngredientSearch, AppError> {
+    state
+        .execute(move |d| d.available_ingredients(&query))
+        .await
+}
+#[tauri::command]
+pub async fn catalog_status(
+    state: tauri::State<'_, StorageService>,
+) -> Result<crate::domain::catalog::CatalogStatus, AppError> {
+    state.execute(|d| d.catalog_status()).await
+}
+#[tauri::command]
+pub async fn link_personal_catalog(
+    id: String,
+    revision: i64,
+    catalog_id: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state
+        .execute(move |d| d.link_personal_catalog(&id, revision, &catalog_id))
+        .await
+}
+#[tauri::command]
+pub async fn customize_catalog_ingredient(
+    input: IngredientEdit,
+    state: tauri::State<'_, StorageService>,
+) -> Result<PersonalIngredient, AppError> {
+    state
+        .execute(move |d| d.customize_catalog_ingredient(input))
+        .await
+}
+#[tauri::command]
+pub async fn create_personal_category(
+    tr: String,
+    en: String,
+    parent: Option<String>,
+    state: tauri::State<'_, StorageService>,
+) -> Result<String, AppError> {
+    state
+        .execute(move |d| d.create_personal_category(&tr, &en, parent.as_deref()))
+        .await
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -364,7 +411,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            3
+            4
         );
     }
     #[test]
@@ -502,5 +549,48 @@ mod tests {
             .unwrap_err()["code"],
             "INGREDIENT_REFERENCED"
         );
+    }
+    #[test]
+    fn catalog_ipc_uses_installed_sqlite_data_and_real_worker() {
+        let dir = tempfile::tempdir().unwrap();
+        let manifest = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+            .join("../catalog/validation/manifest.json");
+        crate::catalog_tool::import(dir.path(), &manifest, true).unwrap();
+        let app = mock_builder()
+            .manage(StorageService::new(Ok(dir.path().into())))
+            .invoke_handler(tauri::generate_handler![
+                catalog_status,
+                search_ingredients,
+                customize_catalog_ingredient,
+                create_personal_category
+            ])
+            .build(mock_context(noop_assets()))
+            .unwrap();
+        let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        assert_eq!(
+            invoke(&window, "catalog_status", json!({})).unwrap()["validationDefinitions"],
+            8
+        );
+        assert_eq!(
+            invoke(&window, "catalog_status", json!({})).unwrap()["productionDefinitions"],
+            0
+        );
+        let honey =
+            invoke(&window, "search_ingredients", json!({"query":"Honey"})).unwrap()[0].clone();
+        assert_eq!(invoke(&window,"customize_catalog_ingredient",json!({"input":{"id":honey["id"],"revision":1,"name":"Özel bal","notes":"Kişisel","preferredUnit":"g"}})).unwrap()["origin"],"catalog");
+        assert_eq!(
+            invoke(&window, "search_ingredients", json!({"query":"Honey"})).unwrap()[0]["name"],
+            "Özel bal"
+        );
+        assert!(invoke(
+            &window,
+            "create_personal_category",
+            json!({"tr":"Özel","en":"Custom","parent":null})
+        )
+        .unwrap()
+        .as_str()
+        .is_some());
     }
 }
