@@ -50,3 +50,14 @@ new extraction snapshots store new evidence hashes with preserved external IDs.
 All 235 optional observation sets remain empty (unknown). Classification and
 TR/EN labels carry project curation provenance separately from unchanged USDA
 English descriptors. Empty planned categories represent gaps, not coverage.
+
+## M3B-2 package version 3
+
+Schema 4 unchanged. 482 stable identities (443 USDA-backed, 39 original factual
+project entries), 50 category nodes, 252 aliases. All 235 historical IDs remain;
+no recipe-facing personal ID merge or deletion. Reference URLs and authored
+identity basis reside in the checksummed project provenance description, not
+fabricated upstream identifiers. `project-*` keys have only project provenance;
+USDA rows retain exact FDC IDs/descriptors and separate project labels. Unknown
+observations remain absent for all entries. New consumer subgroups use existing
+parent keys. Full counts and overlapping memberships: CATALOG_COVERAGE_REPORT.md.

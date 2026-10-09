@@ -158,3 +158,15 @@ path added. Packaging includes the production CC0/attribution NOTICE resource. T
 Historical IPC regression fixtures explicitly use a seed-free worker; a separate
 production test exercises the real default worker, embedded seed and recipe
 persistence. Fixtures do not establish production completion alone.
+
+### M3B-2 data-only expansion
+
+Production version 3 extends the same embedded package and shared transactional
+importer to 482 identities. No architectural replacement, migration, dependency,
+capability or normal-workflow network access added. Source facts, project labels
+and original reference-backed identities are explicitly separated in provenance.
+Version-2 package remains an immutable upgrade fixture. Source snapshots are
+versioned independently of schema/package releases. Category subgroups reuse
+existing hierarchy/many-to-many storage. Current search/recipe editor reuse the
+same canonical rows; richer discovery remains M3C. Automated terminology audits
+are development tooling, not runtime services or translation certification.

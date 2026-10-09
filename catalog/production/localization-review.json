@@ -1,0 +1,87 @@
+[
+  {
+    "key": "usda-sr-171329",
+    "status": "human-review-needed",
+    "reason": "Paprika sweetness is unspecified upstream; unsupported sweet alias removed. Review preferred Turkish culinary label."
+  },
+  {
+    "key": "usda-sr-170927",
+    "status": "human-review-needed",
+    "reason": "Mace is nutmeg aril, not a flower. Review conventional muskat çiçeği versus botanically precise label."
+  },
+  {
+    "key": "usda-sr-170936",
+    "status": "human-review-needed",
+    "reason": "Savory/sater regional Turkish terminology needs culinary expert review; do not equate with generic kekik."
+  },
+  {
+    "key": "usda-sr-170918",
+    "status": "human-review-needed",
+    "reason": "Caraway versus cumin: confirm Karaman/Frenk kimyonu regional usage; keep identities distinct."
+  },
+  {
+    "key": "usda-sr-171318",
+    "status": "human-review-needed",
+    "reason": "Chervil/Frenk maydanozu terminology should be independently reviewed."
+  },
+  {
+    "key": "usda-sr-171319",
+    "status": "human-review-needed",
+    "reason": "Chili powder composition is not given by source; no blend/sweetness assumption."
+  },
+  {
+    "key": "usda-sr-168921",
+    "status": "human-review-needed",
+    "reason": "Blue corn versus Spanish harina de maiz morado wording: colour terminology needs expert review."
+  },
+  {
+    "key": "usda-sr-168588",
+    "status": "human-review-needed",
+    "reason": "Almond butter is different from baking almond paste; broad badem ezmesi alias removed."
+  },
+  {
+    "key": "usda-sr-170160",
+    "status": "human-review-needed",
+    "reason": "Almond paste is qualified for baking, distinct from nut butter and marzipan."
+  },
+  {
+    "key": "usda-sr-170874",
+    "status": "human-review-needed",
+    "reason": "Buttermilk is not ayran; review natural Turkish naming without conflating products."
+  },
+  {
+    "key": "usda-sr-170903",
+    "status": "human-review-needed",
+    "reason": "Greek yogurt should not automatically alias Turkish süzme yoğurt; retain qualified type."
+  },
+  {
+    "key": "usda-sr-175142",
+    "status": "human-review-needed",
+    "reason": "Mixed-species sea bass is not necessarily European levrek; preserve qualifier."
+  },
+  {
+    "key": "usda-sr-174842",
+    "status": "human-review-needed",
+    "reason": "Club soda is distinct from mineral water; qualified Turkish soda label retained."
+  },
+  {
+    "key": "project-siyez-grain",
+    "status": "human-review-needed",
+    "reason": "Siyez/einkorn English terminology for regional identity should be reviewed; no cultivar/nutrition inferred."
+  },
+  {
+    "key": "project-salep-drink",
+    "status": "human-review-needed",
+    "reason": "Prepared salep drink stays distinct from salep powder; composition and alcohol status unknown."
+  },
+  {
+    "key": "project-aromatic-bitters",
+    "status": "human-review-needed",
+    "reason": "Cocktail bitters are distinct from bitter aperitif spirits; no brand or ABV assigned."
+  },
+  {
+    "key": "project-creme-de-cassis",
+    "status": "human-review-needed",
+    "reason": "Blackcurrant-specific synonym narrowed to siyah frenk üzümü likörü; review Turkish terminology."
+  }
+]

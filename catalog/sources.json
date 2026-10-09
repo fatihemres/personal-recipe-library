@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-08",
+  "reviewedAt": "2026-10-09",
   "sources": [
     {
       "id": "usda-sr-legacy",
@@ -16,7 +16,8 @@
       "decision": "Approved factual data only; immutable validation and production extracts of pinned April 2018 archive. No images.",
       "pinnedVersions": [
         "2018-04",
-        "2018-04-selection-2"
+        "2018-04-selection-2",
+        "2018-04-selection-3"
       ]
     },
     {
@@ -31,7 +32,8 @@
       "decision": "Authored labels/classification dedicated to CC0 in validation and production NOTICE.md; code license unchanged.",
       "pinnedVersions": [
         "validation-1",
-        "production-1"
+        "production-1",
+        "production-2"
       ]
     },
     {

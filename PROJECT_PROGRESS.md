@@ -402,3 +402,105 @@ npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3b1-dev-verificat
 Reproduction commands and archive hash: docs/CATALOG_IMPORT_PIPELINE.md.
 Completed M3B-1 changes are recorded as one local milestone commit; obtain the exact
 commit hash with `git log -1`. No push requested or performed.
+
+## M3B-2 checkpoint — 2026-10-09 (in progress)
+
+Preserved the exact committed version-2 package in `catalog/releases/2` and its
+reproducer `tools/prepare_production_v2.py`. Added reviewed USDA food batch
+`catalog/production/batches/food.tsv`: 126 new identities, 361 total at this
+checkpoint. Generator produces version 3 with new immutable source snapshots
+`2018-04-selection-3` / `production-2`; previous snapshots remain approved.
+Real CLI clean import into `/private/tmp/recipeatlas-m3b2-food-batch` validated and
+inserted 361, zero collisions. No user database touched, no migration changed.
+Pending: second food/drink batch, authored regional/spirit references, full
+localization audit, actual version-2 upgrade tests, regression/build/native gates.
+Do not treat these development version-3 artifacts as a released immutable seed;
+use fresh isolated DBs after content changes. Resume from the saved batches.
+
+### M3B-2 second checkpoint (implementation ready for full gates)
+
+Version 3 now has 482 identities: 396 food / 86 beverage, 253 aliases,
+50 category nodes; 247 additions over archived v2. USDA batches contribute
+208 new source-verified forms; 39 original reference-backed entries add regional
+and bar identities, without pretending to have USDA IDs or empirical metadata.
+All 235 historical IDs survive. `tools/audit_catalog.py` checks all 482 labels,
+IDs, provenance, dimensions, categories and exact normalized alias collisions;
+17 terminology questions are in the human-review queue, zero independent human
+reviews. Unsupported paprika sweetness alias removed; almond butter/paste aliases
+narrowed. Focused real SQLite suite: 21 tests passed (30 other tests filtered).
+Actual v2→v3 upgrade, personal collision, recipe/draft/override preservation,
+failed upgrade rollback/retry and search timing passed. Full regression/build/native
+checks remain pending; see files on disk, do not rerun completed source discovery.
+
+## M3B-2 completed — 2026-10-09
+
+### Delivered
+
+Production **version 3**: **482 canonical identities**, **247 additions** over v2;
+**396 food / 86 beverage**, **252 aliases**, **50 category nodes**. 443 unchanged
+USDA source descriptors/IDs; 39 original primary-reference-backed project entries
+(no fabricated USDA IDs, no third-party recipes/database/images copied). All
+482 have project-authored bilingual labels/classification and unknown optional
+nutrition/density/allergens/ABV. Final review removed an awkward almond-butter
+alias rather than invent a synonym, reducing the interim 253 count to 252.
+Eight validation identities stay separate/shared by stable ID, not added twice.
+
+Grouped TSV batches, deterministic generator, reference rights manifest, audit
+and audit safety tests added. Exact v2 package archived byte-identically against
+commit 5100f37138b9f7ea3e86ed6653ba17ca7b4a7092. All five generated artifact hashes
+match a repeat run. All 235 previous IDs intact; schema remains 4, migrations
+001–004 unchanged. No dependencies, architecture replacement or M3C redesign.
+Turkish shell/editor copy now describes expanded M3B-2 catalog.
+
+Full category counts and source/quality distinctions:
+`docs/CATALOG_COVERAGE_REPORT.md`, `catalog/production/coverage.json`.
+Seventeen human terminology review items in
+`docs/INGREDIENT_LOCALIZATION_REVIEW.md`; zero independent human review claimed.
+Structural audit: no errors, missing bilingual labels or exact alias collisions.
+Two selection exclusions recorded (black turtle bean distinction and unavailable
+Van-cheese reference); zero rejected accepted-package records.
+
+### Verification
+
+- 51 Rust tests pass, including retained M1/M2A/M2B/M3A/M3B-1 regression coverage.
+- 32 Vitest tests and 2 Playwright browser tests pass; browser mocks/UI are not native persistence evidence.
+- Two Python audit tests pass, including five injected defect subcases; `audit_catalog.py --check` passes.
+- TypeScript, ESLint, Rust fmt/check, Clippy --all-targets -D warnings, frontend production build and `git diff --check` pass.
+- Real CLI clean import: 482 inserted/available, 0 collisions. Actual archived v2 upgrade: 247 inserted / 235 updated / 482 available / 0 collisions. Reports saved with dataset.
+- Real test upgrade preserves personal Cin as a pending collision, all old IDs, custom ingredient/recipe/draft references and name/notes/unit overrides; repeat import and failed-upgrade rollback/retry pass; integrity/FK checks pass.
+- Focused debug timing: upgrade ~675 ms; 100 SQLite Turkish partial queries ~287 ms. Local observations only, not a hardware-independent SLA.
+- Unsigned debug macOS arm64 package builds pass. Final isolated profile `com.recipeatlas.m3b2-final-verification` showed schema4, FK/FTS verification and 482/0/0 counts, updated M3B-2 copy; SİYEZ search/keyboard selection saved “M3B-2 Son Doğrulama” with Siyez bulguru 35.000001 g. Confirmed menu Quit/process absence/relaunch/detail retained exact quantity/reference.
+- Earlier isolated package also verified English alias London dry gin, selected London gin 25 mL and a preparation step, then full quit/restart retained both ingredients/step. Final package retains that search implementation/data and automated coverage; final manual recipe was simpler.
+- Isolated `npm run tauri -- dev` on port1433 compiled and ran `target/debug/personal-recipe-library`, then intentionally stopped after smoke verification (no timeout/failure).
+
+No normal personal recipe DB was opened/reset by verification. Intermediate/final
+isolated profiles were retained, not erased. Native automation first-launch tool
+calls took 341 and 888 seconds; later relaunches were under 2 seconds and app
+initialization/flows succeeded. Treat this as unresolved automation/OS launch
+latency, not a measured DB import timeout. Physical network disabling was not
+performed; packaged tauri://localhost workflows require no Vite/API/external seed.
+Windows/Intel runtime and signing/notarization remain unverified release gates.
+Full details and exact reproduction commands are in TESTING.md and
+CATALOG_IMPORT_PIPELINE.md.
+
+### Next task and handoff
+
+**M3B-2 is complete within its requested expansion scope; M3B as a whole is not.**
+Do not begin M3B-3 or M3C without authorization. Recommend M3B-3: human culinary
+review of the 17-item queue; remaining Turkish regional cheeses/ferments/bulgur/
+pulses/plants, international specialties, rum/vodka/tequila styles, vermouth/beer,
+coffee beans/tea leaves, tonic/bar syrups. Keep unknown metadata unknown and
+source exclusions until separately cleared; generate version4/new snapshots,
+retain v2/v3 fixtures and rerun upgrade/preservation/native gates.
+
+Normal launch: `npm run tauri -- dev`. Fresh isolated launch:
+
+```sh
+npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3b2-dev-verification","build":{"beforeDevCommand":"npm run dev -- --port 1433","devUrl":"http://localhost:1433"}}' -- --locked --offline
+```
+
+Earlier development version3 profiles use intermediate hashes; do not silently
+replace those applied packages. Use a fresh test profile to reproduce the final
+seed, or retain its matching original intermediate artifact. Normal v2 user DBs
+upgrade to final v3 safely. Completed verified changes are committed locally as
+one milestone commit; obtain hash with `git log -1`. No push requested/performed.

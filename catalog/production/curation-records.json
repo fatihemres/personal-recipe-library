@@ -24,6 +24,162 @@
     "externalId": "olive-oil"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yumurta likörü\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Advocaat egg liqueur\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Advocaat\"}",
+    "externalId": "project-advocaat"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Apple brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Elma brandisi\"}",
+    "externalId": "project-apple-brandy"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Armagnac\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Armagnac\"}",
+    "externalId": "project-armagnac"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"bitters\"],\"dimensions\":[\"volume\"],\"en\":\"Aromatic cocktail bitters\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Aromatik kokteyl bitteri\"}",
+    "externalId": "project-aromatic-bitters"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Blended whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Blended whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Harman viski\"}",
+    "externalId": "project-blended-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Bourbon whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Bourbon whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Bourbon viski\"}",
+    "externalId": "project-bourbon"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"other-beverages\",\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"volume\"],\"en\":\"Boza\",\"preferredUnit\":\"mL\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Boza\"}",
+    "externalId": "project-boza"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Calvados\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Calvados\"}",
+    "externalId": "project-calvados"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Canadian whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Canadian whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Kanada viskisi\"}",
+    "externalId": "project-canadian-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Cognac\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Konyak\"}",
+    "externalId": "project-cognac"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Corn whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Corn whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Mısır viskisi\"}",
+    "externalId": "project-corn-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Siyah frenk üzümü likörü\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Crème de cassis\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Crème de cassis\"}",
+    "externalId": "project-creme-de-cassis"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Fruit brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Meyve brandisi\"}",
+    "externalId": "project-fruit-brandy"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Gin\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"gin\"],\"dimensions\":[\"volume\"],\"en\":\"Gin\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Cin\"}",
+    "externalId": "project-gin"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"sweeteners\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Grape pekmez\",\"preferredUnit\":\"g\",\"references\":[\"https://arastirma.tarimorman.gov.tr/bagcilik/Menu/64/Uzum-Pekmezi\"],\"tr\":\"Üzüm pekmezi\"}",
+    "externalId": "project-grape-pekmez"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Irish whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Irish whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"İrlanda viskisi\"}",
+    "externalId": "project-irish-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"dairy\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Kars kaşar cheese\",\"preferredUnit\":\"g\",\"references\":[\"https://kulturportali.gov.tr/turkiye/kars/kulturatlasi/kars-kasari\"],\"tr\":\"Kars kaşarı\"}",
+    "externalId": "project-kars-kasar"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Lemon peel\",\"preferredUnit\":\"g\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Limon kabuğu\"}",
+    "externalId": "project-lemon-peel"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"London dry gin\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"gin\"],\"dimensions\":[\"volume\"],\"en\":\"London gin\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"London gin\"}",
+    "externalId": "project-london-gin"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Malt whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Malt whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Malt viski\"}",
+    "externalId": "project-malt-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Maraşino\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Maraschino liqueur\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Maraschino likörü\"}",
+    "externalId": "project-maraschino"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Mezcal\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.gov.uk/protected-food-drink-names/mezcal\"],\"tr\":\"Mezcal\"}",
+    "externalId": "project-mezcal"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Orange peel\",\"preferredUnit\":\"g\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Portakal kabuğu\"}",
+    "externalId": "project-orange-peel"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Pastis\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Pastis\"}",
+    "externalId": "project-pastis"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"brandy\"],\"dimensions\":[\"volume\"],\"en\":\"Pear brandy\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Armut brandisi\"}",
+    "externalId": "project-pear-brandy"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Rakı\",\"preferredUnit\":\"mL\",\"references\":[\"https://sanliurfa.tarimorman.gov.tr/Sayfalar/Detay.aspx?Liste=Duyuru&OgeId=666\"],\"tr\":\"Rakı\"}",
+    "externalId": "project-raki"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Rye whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Rye whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"Çavdar viskisi\"}",
+    "externalId": "project-rye-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"other-beverages\",\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"volume\"],\"en\":\"Salep drink\",\"preferredUnit\":\"mL\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Salep (hazırlanmış içecek)\"}",
+    "externalId": "project-salep-drink"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"baking\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Salep powder\",\"preferredUnit\":\"g\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Salep tozu\"}",
+    "externalId": "project-salep-powder"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şalgam\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"other-beverages\",\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"volume\"],\"en\":\"Şalgam fermented turnip drink\",\"preferredUnit\":\"mL\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Şalgam suyu\"}",
+    "externalId": "project-salgam"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Sambuca\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Sambuca\"}",
+    "externalId": "project-sambuca"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Scotch whiskey\"],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\",\"whisky\"],\"dimensions\":[\"volume\"],\"en\":\"Scotch whisky\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf\"],\"tr\":\"İskoç viskisi\"}",
+    "externalId": "project-scotch-whisky"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şeker şurubu\"],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Simple syrup\",\"preferredUnit\":\"mL\",\"references\":[\"https://iba-world.com/iba-cocktail/brandy-crusta/\"],\"tr\":\"Basit şeker şurubu\"}",
+    "externalId": "project-simple-syrup"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Siyez bulgur\",\"preferredUnit\":\"g\",\"references\":[\"https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062\"],\"tr\":\"Siyez bulguru\"}",
+    "externalId": "project-siyez-bulgur"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"baking\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Siyez flour\",\"preferredUnit\":\"g\",\"references\":[\"https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062\"],\"tr\":\"Siyez unu\"}",
+    "externalId": "project-siyez-flour"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"grains\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Siyez einkorn wheat\",\"preferredUnit\":\"g\",\"references\":[\"https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062\"],\"tr\":\"Siyez buğdayı\"}",
+    "externalId": "project-siyez-grain"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Sloe gin\",\"preferredUnit\":\"mL\",\"references\":[\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787\"],\"tr\":\"Sloe gin\"}",
+    "externalId": "project-sloe-gin"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"other-beverages\",\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"volume\"],\"en\":\"Sumac sherbet\",\"preferredUnit\":\"mL\",\"references\":[\"https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler\"],\"tr\":\"Sumak şerbeti\"}",
+    "externalId": "project-sumac-sherbet"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values.\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Tequila\",\"preferredUnit\":\"mL\",\"references\":[\"https://www.gov.uk/protected-food-drink-names/tequila\"],\"tr\":\"Tekila\"}",
+    "externalId": "project-tequila"
+  },
+  {
     "description": "{\"aliasesEn\":[\"White sugar\"],\"aliasesTr\":[\"Şeker\"],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Granulated sugar\",\"preferredUnit\":\"g\",\"tr\":\"Toz şeker\"}",
     "externalId": "sugar-granulated"
   },
@@ -64,6 +220,14 @@
     "externalId": "usda-sr-167765"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Pink grapefruit juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Pembe greyfurt suyu (çiğ)\"}",
+    "externalId": "usda-sr-167774"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Pomegranate juice (bottled)\",\"preferredUnit\":\"mL\",\"tr\":\"Nar suyu (şişelenmiş)\"}",
+    "externalId": "usda-sr-167787"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Grenadin\"],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Grenadine syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Grenadin şurubu\"}",
     "externalId": "usda-sr-168088"
   },
@@ -80,8 +244,28 @@
     "externalId": "usda-sr-168156"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Dried blueberries (sweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru yaban mersini (şekerli)\"}",
+    "externalId": "usda-sr-168158"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Prunes (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru erik\"}",
+    "externalId": "usda-sr-168162"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ayva\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Quince (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ayva (çiğ)\"}",
     "externalId": "usda-sr-168163"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Golden raisins\",\"preferredUnit\":\"g\",\"tr\":\"Sarı kuru üzüm\"}",
+    "externalId": "usda-sr-168164"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Dark raisins\",\"preferredUnit\":\"g\",\"tr\":\"Koyu renkli kuru üzüm\"}",
+    "externalId": "usda-sr-168165"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Medjool dates\",\"preferredUnit\":\"g\",\"tr\":\"Medjool hurması\"}",
+    "externalId": "usda-sr-168191"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuşkonmaz\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Asparagus (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuşkonmaz (çiğ)\"}",
@@ -92,6 +276,26 @@
     "externalId": "usda-sr-168409"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Chanterelle mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kantarell mantarı (çiğ)\"}",
+    "externalId": "usda-sr-168422"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Morel mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuzugöbeği mantarı (çiğ)\"}",
+    "externalId": "usda-sr-168423"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Crimini mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kahverengi kültür mantarı (çiğ)\"}",
+    "externalId": "usda-sr-168434"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shiitake mushroom (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru shiitake mantarı\"}",
+    "externalId": "usda-sr-168436"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Potato flour\",\"preferredUnit\":\"g\",\"tr\":\"Patates unu\"}",
+    "externalId": "usda-sr-168446"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Balkabağı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pumpkin (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bal kabağı (çiğ)\"}",
     "externalId": "usda-sr-168448"
   },
@@ -100,16 +304,44 @@
     "externalId": "usda-sr-168462"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sun-dried tomatoes\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş domates\"}",
+    "externalId": "usda-sr-168567"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sun-dried hot chile peppers\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş acı biber\"}",
+    "externalId": "usda-sr-168570"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Lemongrass\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Lemongrass (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Limon otu (çiğ)\"}",
     "externalId": "usda-sr-168573"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Fava beans (in pod, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Taze bakla (kabuklu, çiğ)\"}",
+    "externalId": "usda-sr-168574"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Asma yaprağı\",\"Üzüm yaprağı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Grape leaves (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Asma yaprağı (çiğ)\"}",
     "externalId": "usda-sr-168575"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İstiridye mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Oyster mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İstiridye mantarı (çiğ)\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Jalapeño pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jalapeño biberi (çiğ)\"}",
+    "externalId": "usda-sr-168576"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pasilla pepper (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pasilla biberi\"}",
+    "externalId": "usda-sr-168579"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İstiridye mantarı\"],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Oyster mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İstiridye mantarı (çiğ)\"}",
     "externalId": "usda-sr-168580"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Almond butter (plain, no salt added)\",\"preferredUnit\":\"g\",\"tr\":\"Tuz eklenmemiş sade badem ezmesi\"}",
+    "externalId": "usda-sr-168588"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tahin\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Tahini (kernel type unspecified)\",\"preferredUnit\":\"g\",\"tr\":\"Tahin (susam içi türü belirtilmemiş)\"}",
+    "externalId": "usda-sr-168604"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bira\"],\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Beer (regular)\",\"preferredUnit\":\"mL\",\"tr\":\"Normal bira\"}",
@@ -120,24 +352,104 @@
     "externalId": "usda-sr-168749"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Molasses\",\"preferredUnit\":\"g\",\"tr\":\"Melas\"}",
+    "externalId": "usda-sr-168820"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Brown sugar\",\"preferredUnit\":\"g\",\"tr\":\"Esmer şeker\"}",
     "externalId": "usda-sr-168833"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Chocolate syrup (fudge type)\",\"preferredUnit\":\"mL\",\"tr\":\"Yoğun çikolata şurubu (fudge tipi)\"}",
+    "externalId": "usda-sr-168835"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Dark corn syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Koyu mısır şurubu\"}",
+    "externalId": "usda-sr-168836"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Light corn syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Açık mısır şurubu\"}",
+    "externalId": "usda-sr-168837"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kinoa\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Quinoa (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Kinoa (pişmemiş)\"}",
     "externalId": "usda-sr-168874"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam buğday unu\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Glutinous white rice (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Yapışkan beyaz pirinç (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-168883"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Rye grain\",\"preferredUnit\":\"g\",\"tr\":\"Çavdar tanesi\"}",
+    "externalId": "usda-sr-168884"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Rye flour (dark)\",\"preferredUnit\":\"g\",\"tr\":\"Koyu çavdar unu\"}",
+    "externalId": "usda-sr-168885"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Rye flour (light)\",\"preferredUnit\":\"g\",\"tr\":\"Açık çavdar unu\"}",
+    "externalId": "usda-sr-168887"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Wheat germ (crude)\",\"preferredUnit\":\"g\",\"tr\":\"Buğday ruşeymi (işlenmemiş)\"}",
+    "externalId": "usda-sr-168892"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam buğday unu\"}",
     "externalId": "usda-sr-168893"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Brown rice flour\",\"preferredUnit\":\"g\",\"tr\":\"Esmer pirinç unu\"}",
+    "externalId": "usda-sr-168898"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Chow mein noodles\",\"preferredUnit\":\"g\",\"tr\":\"Chow mein eriştesi\"}",
+    "externalId": "usda-sr-168905"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Soba\"],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Soba noodles (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru soba eriştesi\"}",
+    "externalId": "usda-sr-168906"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Somen\"],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Somen noodles (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru somen eriştesi\"}",
+    "externalId": "usda-sr-168908"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Bread wheat flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Ekmeklik buğday unu (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-168913"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Harina de maiz morado\"],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain blue corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli mavi mısır unu\"}",
+    "externalId": "usda-sr-168921"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Pasta (dry, unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru makarna (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-168927"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"White short-grain rice (unenriched, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kısa taneli beyaz pirinç (zenginleştirilmemiş)\"}",
     "externalId": "usda-sr-168931"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Semolina (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"İrmik (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-168933"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sorgum unu\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain sorghum flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli sorgum unu\"}",
+    "externalId": "usda-sr-168943"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kantalup\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Cantaloupe melon (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kantalup kavunu (çiğ)\"}",
     "externalId": "usda-sr-169092"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Ripe olives (canned)\",\"preferredUnit\":\"g\",\"tr\":\"Olgun zeytin (konserve)\"}",
+    "externalId": "usda-sr-169094"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Green olives (pickled)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil zeytin (salamura)\"}",
+    "externalId": "usda-sr-169096"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Portakal\"],\"categories\":[\"fruit\",\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Orange (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Portakal (çiğ)\"}",
@@ -150,6 +462,14 @@
   {
     "description": "{\"aliasesEn\":[\"Tangerine\"],\"aliasesTr\":[\"Mandalina\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Mandarin orange (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mandalina (çiğ)\"}",
     "externalId": "usda-sr-169105"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Purple passion fruit (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mor çarkıfelek meyvesi (çiğ)\"}",
+    "externalId": "usda-sr-169108"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Purple passion fruit juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Mor çarkıfelek meyvesi suyu (çiğ)\"}",
+    "externalId": "usda-sr-169109"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Armut\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pear (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Armut (çiğ)\"}",
@@ -184,7 +504,7 @@
     "externalId": "usda-sr-169231"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shiitake mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shiitake mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şiitake mantarı (çiğ)\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shiitake mantarı\"],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shiitake mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şiitake mantarı (çiğ)\"}",
     "externalId": "usda-sr-169242"
   },
   {
@@ -200,12 +520,20 @@
     "externalId": "usda-sr-169248"
   },
   {
-    "description": "{\"aliasesEn\":[\"Button mushroom\"],\"aliasesTr\":[\"Kültür mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"White mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz mantar (çiğ)\"}",
+    "description": "{\"aliasesEn\":[\"Button mushroom\"],\"aliasesTr\":[\"Kültür mantarı\"],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"White mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz mantar (çiğ)\"}",
     "externalId": "usda-sr-169251"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\",\"mushrooms\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Portabella mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Portobello mantarı (çiğ)\"}",
+    "externalId": "usda-sr-169255"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bamya\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Okra (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bamya (çiğ)\"}",
     "externalId": "usda-sr-169260"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pumpkin flowers (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kabak çiçeği (çiğ)\"}",
+    "externalId": "usda-sr-169270"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Semizotu\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Purslane (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Semizotu (çiğ)\"}",
@@ -236,16 +564,48 @@
     "externalId": "usda-sr-169387"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Tahini (raw, stone ground sesame)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ, taşta öğütülmüş susamdan tahin\"}",
+    "externalId": "usda-sr-169410"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Sesame kernels (dried, decorticated)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru susam içi (kabuksuz)\"}",
+    "externalId": "usda-sr-169412"
+  },
+  {
     "description": "{\"aliasesEn\":[\"Linseed\"],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Flaxseed\",\"preferredUnit\":\"g\",\"tr\":\"Keten tohumu\"}",
     "externalId": "usda-sr-169414"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kakao\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa powder (unsweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kakao tozu\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Beef liver (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sığır karaciğeri (çiğ)\"}",
+    "externalId": "usda-sr-169451"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kakao\"],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa powder (unsweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kakao tozu\"}",
     "externalId": "usda-sr-169593"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa powder (alkalized)\",\"preferredUnit\":\"g\",\"tr\":\"Kakao tozu (alkalize)\"}",
+    "externalId": "usda-sr-169594"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Maple sugar\",\"preferredUnit\":\"g\",\"tr\":\"Akçaağaç şekeri\"}",
+    "externalId": "usda-sr-169658"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Malt syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Malt şurubu\"}",
+    "externalId": "usda-sr-169660"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Maple syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Akçaağaç şurubu\"}",
     "externalId": "usda-sr-169661"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Sorghum syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Sorgum şurubu\"}",
+    "externalId": "usda-sr-169662"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Masa harina\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White masa corn flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz masa mısır unu (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-169696"
   },
   {
     "description": "{\"aliasesEn\":[\"Corn starch\"],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Cornstarch\",\"preferredUnit\":\"g\",\"tr\":\"Mısır nişastası\"}",
@@ -260,19 +620,67 @@
     "externalId": "usda-sr-169702"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Long-grain brown rice (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Uzun taneli esmer pirinç (çiğ)\"}",
+    "externalId": "usda-sr-169703"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Oats\",\"preferredUnit\":\"g\",\"tr\":\"Yulaf\"}",
     "externalId": "usda-sr-169705"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pirinç unu\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"White rice flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz pirinç unu (zenginleştirilmemiş)\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Medium-grain brown rice (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Orta taneli esmer pirinç (çiğ)\"}",
+    "externalId": "usda-sr-169706"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pirinç unu\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White rice flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz pirinç unu (zenginleştirilmemiş)\"}",
     "externalId": "usda-sr-169714"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Sorghum grain\",\"preferredUnit\":\"g\",\"tr\":\"Sorgum tanesi\"}",
+    "externalId": "usda-sr-169716"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Durum wheat\",\"preferredUnit\":\"g\",\"tr\":\"Durum buğdayı\"}",
+    "externalId": "usda-sr-169721"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh plain pasta (refrigerated)\",\"preferredUnit\":\"g\",\"tr\":\"Taze sade makarna\"}",
+    "externalId": "usda-sr-169727"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tam buğday makarnası\"],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-wheat pasta (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru tam buğday makarnası\"}",
+    "externalId": "usda-sr-169738"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Barley flour or meal\",\"preferredUnit\":\"g\",\"tr\":\"Arpa unu\"}",
+    "externalId": "usda-sr-169739"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Barley malt flour\",\"preferredUnit\":\"g\",\"tr\":\"Arpa maltı unu\"}",
+    "externalId": "usda-sr-169740"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Oat flour (partially debranned)\",\"preferredUnit\":\"g\",\"tr\":\"Kısmen kepeği alınmış yulaf unu\"}",
+    "externalId": "usda-sr-169741"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Rice noodles (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pirinç eriştesi\"}",
+    "externalId": "usda-sr-169742"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain white corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli beyaz mısır unu\"}",
+    "externalId": "usda-sr-169748"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Egg noodles (dry, unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru yumurtalı erişte (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-169755"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"White long-grain rice (unenriched, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Uzun taneli beyaz pirinç (zenginleştirilmemiş)\"}",
     "externalId": "usda-sr-169756"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"White all-purpose wheat flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz çok amaçlı buğday unu (zenginleştirilmemiş)\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White all-purpose wheat flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz çok amaçlı buğday unu (zenginleştirilmemiş)\"}",
     "externalId": "usda-sr-169761"
   },
   {
@@ -294,6 +702,10 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Nektarin\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Nectarine (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Nektarin (çiğ)\"}",
     "externalId": "usda-sr-169914"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Papaya (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Papaya (çiğ)\"}",
+    "externalId": "usda-sr-169926"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şeftali\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Peach (raw, yellow)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı şeftali (çiğ)\"}",
@@ -360,16 +772,32 @@
     "externalId": "usda-sr-170108"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Hemp seed (hulled)\",\"preferredUnit\":\"g\",\"tr\":\"Kabuğu alınmış kenevir tohumu\"}",
+    "externalId": "usda-sr-170148"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Susam\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Sesame seeds (whole, dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru bütün susam\"}",
     "externalId": "usda-sr-170150"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Almond paste\",\"preferredUnit\":\"g\",\"tr\":\"Badem ezmesi (pastacılık)\"}",
+    "externalId": "usda-sr-170160"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kaju\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Cashew nuts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ kaju\"}",
     "externalId": "usda-sr-170162"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kaju ezmesi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Cashew butter (plain, no salt added)\",\"preferredUnit\":\"g\",\"tr\":\"Tuz eklenmemiş sade kaju ezmesi\"}",
+    "externalId": "usda-sr-170163"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hindistan cevizi içi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Coconut meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ Hindistan cevizi eti\"}",
     "externalId": "usda-sr-170169"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Coconut meat (dried, unsweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kuru Hindistan cevizi içi\"}",
+    "externalId": "usda-sr-170170"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pikan cevizi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pecans\",\"preferredUnit\":\"g\",\"tr\":\"Pekan cevizi\"}",
@@ -384,6 +812,26 @@
     "externalId": "usda-sr-170187"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Tahini (roasted sesame)\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş susamdan tahin\"}",
+    "externalId": "usda-sr-170189"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Beef tongue (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sığır dili (çiğ)\"}",
+    "externalId": "usda-sr-170196"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Dark chocolate (45–59% cocoa)\",\"preferredUnit\":\"g\",\"tr\":\"Bitter çikolata (%45–59 kakao)\"}",
+    "externalId": "usda-sr-170271"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Dark chocolate (60–69% cocoa)\",\"preferredUnit\":\"g\",\"tr\":\"Bitter çikolata (%60–69 kakao)\"}",
+    "externalId": "usda-sr-170272"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"chocolate-cocoa\"],\"dimensions\":[\"mass\"],\"en\":\"Dark chocolate (70–85% cocoa)\",\"preferredUnit\":\"g\",\"tr\":\"Bitter çikolata (%70–85 kakao)\"}",
+    "externalId": "usda-sr-170273"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İnci arpa\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Pearled barley (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İnci arpa (çiğ)\"}",
     "externalId": "usda-sr-170284"
   },
@@ -392,7 +840,7 @@
     "externalId": "usda-sr-170286"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sarı mısır unu\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain yellow corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli sarı mısır unu\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sarı mısır unu\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain yellow corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli sarı mısır unu\"}",
     "externalId": "usda-sr-170290"
   },
   {
@@ -468,24 +916,124 @@
     "externalId": "usda-sr-170567"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Almonds (blanched)\",\"preferredUnit\":\"g\",\"tr\":\"Kabuksuz badem\"}",
+    "externalId": "usda-sr-170568"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brezilya cevizi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Brazil nuts (dried, unblanched)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru, kabuğu alınmamış Brezilya cevizi\"}",
+    "externalId": "usda-sr-170569"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kestane\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"European chestnuts (raw, unpeeled)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ kabuklu Avrupa kestanesi\"}",
+    "externalId": "usda-sr-170574"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Coconut cream (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ Hindistan cevizi kreması\"}",
+    "externalId": "usda-sr-170580"
+  },
+  {
     "description": "{\"aliasesEn\":[\"Filberts\"],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Hazelnuts\",\"preferredUnit\":\"g\",\"tr\":\"Fındık\"}",
     "externalId": "usda-sr-170581"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çam fıstığı\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pine nuts (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru çam fıstığı\"}",
+    "externalId": "usda-sr-170591"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Beef tripe (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sığır işkembesi (çiğ)\"}",
+    "externalId": "usda-sr-170599"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Amaranth (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Amarant (pişmemiş)\"}",
+    "externalId": "usda-sr-170682"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ararot\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Arrowroot flour\",\"preferredUnit\":\"g\",\"tr\":\"Ararot unu\"}",
+    "externalId": "usda-sr-170684"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-groat buckwheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam karabuğday unu\"}",
+    "externalId": "usda-sr-170687"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bulgur\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Bulgur (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Bulgur (kuru)\"}",
     "externalId": "usda-sr-170688"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Fontina cheese\",\"preferredUnit\":\"g\",\"tr\":\"Fontina peyniri\"}",
+    "externalId": "usda-sr-170843"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Monterey cheese\",\"preferredUnit\":\"g\",\"tr\":\"Monterey peyniri\"}",
+    "externalId": "usda-sr-170844"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mozzarella\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Mozzarella (whole milk)\",\"preferredUnit\":\"g\",\"tr\":\"Tam yağlı sütten mozzarella\"}",
+    "externalId": "usda-sr-170845"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Parmesan\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Parmesan cheese (hard)\",\"preferredUnit\":\"g\",\"tr\":\"Sert Parmesan peyniri\"}",
+    "externalId": "usda-sr-170848"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Port de Salut cheese\",\"preferredUnit\":\"g\",\"tr\":\"Port Salut peyniri\"}",
+    "externalId": "usda-sr-170849"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Provolone cheese\",\"preferredUnit\":\"g\",\"tr\":\"Provolone peyniri\"}",
+    "externalId": "usda-sr-170850"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ricotta\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Ricotta (whole milk)\",\"preferredUnit\":\"g\",\"tr\":\"Tam yağlı sütten ricotta\"}",
+    "externalId": "usda-sr-170851"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Tilsit cheese\",\"preferredUnit\":\"g\",\"tr\":\"Tilsit peyniri\"}",
+    "externalId": "usda-sr-170852"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kahve kreması\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Light fluid cream\",\"preferredUnit\":\"g\",\"tr\":\"Düşük yağlı sıvı krema\"}",
+    "externalId": "usda-sr-170857"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Heavy whipping cream\",\"preferredUnit\":\"g\",\"tr\":\"Yüksek yağlı çırpma kreması\"}",
     "externalId": "usda-sr-170859"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cultured lowfat buttermilk\",\"preferredUnit\":\"g\",\"tr\":\"Fermente az yağlı buttermilk\"}",
+    "externalId": "usda-sr-170874"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"milk-powders\"],\"dimensions\":[\"mass\"],\"en\":\"Nonfat milk powder (without added vitamins A and D)\",\"preferredUnit\":\"g\",\"tr\":\"Yağsız süt tozu (A ve D vitamini eklenmemiş)\"}",
+    "externalId": "usda-sr-170877"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Sheep milk\",\"preferredUnit\":\"g\",\"tr\":\"Koyun sütü\"}",
+    "externalId": "usda-sr-170882"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Plain lowfat Greek yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade az yağlı Yunan tipi yoğurt\"}",
+    "externalId": "usda-sr-170903"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Defne yaprağı\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Bay leaf (dried spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru defne yaprağı\"}",
     "externalId": "usda-sr-170917"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Frenk kimyonu\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Caraway seed\",\"preferredUnit\":\"g\",\"tr\":\"Karaman kimyonu tohumu\"}",
+    "externalId": "usda-sr-170918"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cardamom (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kakule\"}",
     "externalId": "usda-sr-170919"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Celery seed\",\"preferredUnit\":\"g\",\"tr\":\"Kereviz tohumu\"}",
+    "externalId": "usda-sr-170920"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Dried cilantro\"],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Coriander leaf (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kişniş yaprağı\"}",
+    "externalId": "usda-sr-170921"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Coriander seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kişniş tohumu\"}",
@@ -496,12 +1044,40 @@
     "externalId": "usda-sr-170923"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Curry powder\",\"preferredUnit\":\"g\",\"tr\":\"Köri tozu\"}",
+    "externalId": "usda-sr-170924"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Dill seed\",\"preferredUnit\":\"g\",\"tr\":\"Dereotu tohumu\"}",
+    "externalId": "usda-sr-170925"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Toz zencefil\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Ginger (ground spice)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş zencefil\"}",
     "externalId": "usda-sr-170926"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Makis\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Mace (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş muskat çiçeği\"}",
+    "externalId": "usda-sr-170927"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mercanköşk\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Marjoram (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru mercanköşk\"}",
+    "externalId": "usda-sr-170928"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hardal tozu\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Mustard seed (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş hardal tohumu\"}",
+    "externalId": "usda-sr-170929"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Parsley (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru maydanoz\"}",
+    "externalId": "usda-sr-170930"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Black pepper (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Karabiber\"}",
     "externalId": "usda-sr-170931"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Cayenne biberi\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Red or cayenne pepper (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Acı kırmızı biber (baharat)\"}",
+    "externalId": "usda-sr-170932"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"White pepper (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz biber\"}",
@@ -512,8 +1088,100 @@
     "externalId": "usda-sr-170934"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Sage (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş adaçayı\"}",
+    "externalId": "usda-sr-170935"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Savory (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş sater otu\"}",
+    "externalId": "usda-sr-170936"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tarhun\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Tarragon (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru tarhun\"}",
+    "externalId": "usda-sr-170937"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Thyme (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kekik (thyme)\"}",
     "externalId": "usda-sr-170938"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Rice bran oil\",\"preferredUnit\":\"g\",\"tr\":\"Pirinç kepeği yağı\"}",
+    "externalId": "usda-sr-171013"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Wheat germ oil\",\"preferredUnit\":\"g\",\"tr\":\"Buğday ruşeymi yağı\"}",
+    "externalId": "usda-sr-171014"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Sesame oil\",\"preferredUnit\":\"g\",\"tr\":\"Susam yağı\"}",
+    "externalId": "usda-sr-171016"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Grapeseed oil\",\"preferredUnit\":\"g\",\"tr\":\"Üzüm çekirdeği yağı\"}",
+    "externalId": "usda-sr-171028"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Corn oil\",\"preferredUnit\":\"g\",\"tr\":\"Mısır yağı\"}",
+    "externalId": "usda-sr-171029"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Walnut oil\",\"preferredUnit\":\"g\",\"tr\":\"Ceviz yağı\"}",
+    "externalId": "usda-sr-171030"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken meat (skinless, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk eti (derisiz, çiğ)\"}",
+    "externalId": "usda-sr-171052"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Teriyaki\"],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Teriyaki sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Teriyaki sosu\"}",
+    "externalId": "usda-sr-171167"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sriracha\"],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Sriracha hot chili sauce\",\"preferredUnit\":\"g\",\"tr\":\"Sriracha acı biber sosu\"}",
+    "externalId": "usda-sr-171186"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Gjetost cheese\",\"preferredUnit\":\"g\",\"tr\":\"Gjetost peyniri\"}",
+    "externalId": "usda-sr-171240"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Gouda cheese\",\"preferredUnit\":\"g\",\"tr\":\"Gouda peyniri\"}",
+    "externalId": "usda-sr-171241"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Gruyère\"],\"aliasesTr\":[\"Gravyer\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Gruyere cheese\",\"preferredUnit\":\"g\",\"tr\":\"Gruyère peyniri\"}",
+    "externalId": "usda-sr-171242"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Limburger cheese\",\"preferredUnit\":\"g\",\"tr\":\"Limburger peyniri\"}",
+    "externalId": "usda-sr-171243"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Muenster cheese\",\"preferredUnit\":\"g\",\"tr\":\"Muenster peyniri\"}",
+    "externalId": "usda-sr-171245"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Neufchatel cheese\",\"preferredUnit\":\"g\",\"tr\":\"Neufchâtel peyniri\"}",
+    "externalId": "usda-sr-171246"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Romano cheese\",\"preferredUnit\":\"g\",\"tr\":\"Romano peyniri\"}",
+    "externalId": "usda-sr-171249"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Rokfor\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Roquefort cheese\",\"preferredUnit\":\"g\",\"tr\":\"Roquefort peyniri\"}",
+    "externalId": "usda-sr-171250"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Swiss cheese\",\"preferredUnit\":\"g\",\"tr\":\"İsviçre tipi peynir\"}",
+    "externalId": "usda-sr-171251"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ekşi krema\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Sour cream (cultured)\",\"preferredUnit\":\"g\",\"tr\":\"Kültürlenmiş ekşi krema\"}",
+    "externalId": "usda-sr-171257"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Goat milk (with added vitamin D)\",\"preferredUnit\":\"g\",\"tr\":\"Keçi sütü (D vitamini eklenmiş)\"}",
+    "externalId": "usda-sr-171278"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Plain whole-milk yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade tam yağlı yoğurt\"}",
@@ -532,12 +1200,24 @@
     "externalId": "usda-sr-171317"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Chervil (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru Frenk maydanozu\"}",
+    "externalId": "usda-sr-171318"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Chili powder\",\"preferredUnit\":\"g\",\"tr\":\"Chili tozu\"}",
+    "externalId": "usda-sr-171319"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tarçın\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cinnamon (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Toz tarçın\"}",
     "externalId": "usda-sr-171320"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Toz karanfil\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cloves (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş karanfil\"}",
     "externalId": "usda-sr-171321"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Dill weed (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru dereotu yaprağı\"}",
+    "externalId": "usda-sr-171322"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Fennel seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Rezene tohumu\"}",
@@ -564,7 +1244,7 @@
     "externalId": "usda-sr-171328"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tatlı toz kırmızı biber\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Paprika (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Paprika\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Paprika (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Paprika\"}",
     "externalId": "usda-sr-171329"
   },
   {
@@ -572,16 +1252,60 @@
     "externalId": "usda-sr-171330"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Poultry seasoning\",\"preferredUnit\":\"g\",\"tr\":\"Kümes hayvanları için baharat karışımı\"}",
+    "externalId": "usda-sr-171331"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Pumpkin pie spice\",\"preferredUnit\":\"g\",\"tr\":\"Balkabağı turtası baharatı\"}",
+    "externalId": "usda-sr-171332"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Biberiye\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Rosemary (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru biberiye\"}",
     "externalId": "usda-sr-171333"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Peanut oil\",\"preferredUnit\":\"g\",\"tr\":\"Yer fıstığı yağı\"}",
+    "externalId": "usda-sr-171410"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Soybean oil\",\"preferredUnit\":\"g\",\"tr\":\"Soya yağı\"}",
+    "externalId": "usda-sr-171411"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Coconut oil\",\"preferredUnit\":\"g\",\"tr\":\"Hindistan cevizi yağı\"}",
+    "externalId": "usda-sr-171412"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cocoa butter\",\"preferredUnit\":\"g\",\"tr\":\"Kakao yağı\"}",
+    "externalId": "usda-sr-171421"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Hazelnut oil\",\"preferredUnit\":\"g\",\"tr\":\"Fındık yağı\"}",
+    "externalId": "usda-sr-171427"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken breast (meat and skin, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk göğsü (et ve deri, çiğ)\"}",
     "externalId": "usda-sr-171474"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Pesto sauce (refrigerated)\",\"preferredUnit\":\"g\",\"tr\":\"Soğuk saklanan hazır pesto\"}",
+    "externalId": "usda-sr-171579"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Worcestershire sauce\",\"preferredUnit\":\"g\",\"tr\":\"Worcestershire sosu\"}",
+    "externalId": "usda-sr-171610"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Apple (with skin, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Elma (kabuklu, çiğ)\"}",
+    "externalId": "usda-sr-171688"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kabuksuz elma\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Apple (raw, without skin)\",\"preferredUnit\":\"g\",\"tr\":\"Elma (çiğ, kabuksuz)\"}",
     "externalId": "usda-sr-171689"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Dried apple (sulfured)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru elma (kükürtlü)\"}",
+    "externalId": "usda-sr-171691"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kayısı\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Apricot (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kayısı (çiğ)\"}",
@@ -600,12 +1324,24 @@
     "externalId": "usda-sr-171719"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Deglet Noor dates\",\"preferredUnit\":\"g\",\"tr\":\"Deglet Noor hurması\"}",
+    "externalId": "usda-sr-171726"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground beef (85% lean, 15% fat, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Dana kıyma (%85 yağsız et, %15 yağ; çiğ)\"}",
     "externalId": "usda-sr-171796"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Salsa verde\"],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Salsa verde (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hazır salsa verde\"}",
+    "externalId": "usda-sr-171824"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tonik suyu\"],\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Tonic water\",\"preferredUnit\":\"mL\",\"tr\":\"Tonik\"}",
     "externalId": "usda-sr-171869"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Decaffeinated brewed coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Kafeinsiz demlenmiş kahve\"}",
+    "externalId": "usda-sr-171889"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Granül kahve\"],\"categories\":[\"coffee-tea\",\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Instant coffee powder (regular)\",\"preferredUnit\":\"g\",\"tr\":\"Normal hazır kahve tozu\"}",
@@ -614,6 +1350,10 @@
   {
     "description": "{\"aliasesEn\":[\"Rosé wine\"],\"aliasesTr\":[\"Roze\"],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Rose wine\",\"preferredUnit\":\"mL\",\"tr\":\"Roze şarap\"}",
     "externalId": "usda-sr-171908"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Decaffeinated brewed green tea\",\"preferredUnit\":\"mL\",\"tr\":\"Kafeinsiz demlenmiş yeşil çay\"}",
+    "externalId": "usda-sr-171910"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yeşil çay\"],\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Green tea (brewed, regular)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş yeşil çay\"}",
@@ -628,16 +1368,64 @@
     "externalId": "usda-sr-171946"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brie\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brie cheese\",\"preferredUnit\":\"g\",\"tr\":\"Brie peyniri\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Carp (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sazan (çiğ)\"}",
+    "externalId": "usda-sr-171952"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic cod (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik morinası (çiğ)\"}",
+    "externalId": "usda-sr-171955"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Millet flour\",\"preferredUnit\":\"g\",\"tr\":\"Darı unu\"}",
+    "externalId": "usda-sr-172023"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Blue cheese\",\"preferredUnit\":\"g\",\"tr\":\"Mavi küflü peynir\"}",
+    "externalId": "usda-sr-172175"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brie\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brie cheese\",\"preferredUnit\":\"g\",\"tr\":\"Brie peyniri\"}",
     "externalId": "usda-sr-172177"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Camembert\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Camembert cheese\",\"preferredUnit\":\"g\",\"tr\":\"Camembert peyniri\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Camembert\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Camembert cheese\",\"preferredUnit\":\"g\",\"tr\":\"Camembert peyniri\"}",
     "externalId": "usda-sr-172178"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cottage cheese (creamed)\",\"preferredUnit\":\"g\",\"tr\":\"Kremalı cottage peyniri\"}",
+    "externalId": "usda-sr-172179"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yumurta akı\"],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Egg white (raw, fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ taze yumurta akı\"}",
     "externalId": "usda-sr-172183"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yumurta sarısı\"],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Egg yolk (raw, fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ taze yumurta sarısı\"}",
+    "externalId": "usda-sr-172184"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Duck egg (raw, fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ ördek yumurtası\"}",
+    "externalId": "usda-sr-172189"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Quail egg (raw, fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ bıldırcın yumurtası\"}",
+    "externalId": "usda-sr-172191"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Goat cheese (hard)\",\"preferredUnit\":\"g\",\"tr\":\"Sert keçi peyniri\"}",
+    "externalId": "usda-sr-172197"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Egg white (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş yumurta akı\"}",
+    "externalId": "usda-sr-172204"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Queso fresco cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso fresco peyniri\"}",
+    "externalId": "usda-sr-172223"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Queso blanco cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso blanco peyniri\"}",
+    "externalId": "usda-sr-172224"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zerdeçal\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Turmeric (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Toz zerdeçal\"}",
@@ -672,6 +1460,14 @@
     "externalId": "usda-sr-172336"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken thigh (with skin, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk but (derili, çiğ)\"}",
+    "externalId": "usda-sr-172385"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken wing (with skin, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk kanat (derili, çiğ)\"}",
+    "externalId": "usda-sr-172390"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mercimek\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Lentils (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mercimek (çiğ)\"}",
     "externalId": "usda-sr-172420"
   },
@@ -680,8 +1476,44 @@
     "externalId": "usda-sr-172430"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Miso ezmesi\"],\"categories\":[\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Miso\",\"preferredUnit\":\"g\",\"tr\":\"Miso\"}",
+    "externalId": "usda-sr-172442"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Firm tofu (calcium sulfate and nigari)\",\"preferredUnit\":\"g\",\"tr\":\"Sert tofu (kalsiyum sülfat ve nigari)\"}",
+    "externalId": "usda-sr-172448"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Soft tofu (calcium sulfate and nigari)\",\"preferredUnit\":\"g\",\"tr\":\"Yumuşak tofu (kalsiyum sülfat ve nigari)\"}",
+    "externalId": "usda-sr-172449"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Koyadofu (freeze-dried tofu)\",\"preferredUnit\":\"g\",\"tr\":\"Koyadofu (dondurularak kurutulmuş tofu)\"}",
+    "externalId": "usda-sr-172450"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Fried tofu\",\"preferredUnit\":\"g\",\"tr\":\"Kızarmış tofu\"}",
+    "externalId": "usda-sr-172451"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Firm tofu (raw, calcium sulfate)\",\"preferredUnit\":\"g\",\"tr\":\"Sert tofu (çiğ, kalsiyum sülfatla hazırlanmış)\"}",
+    "externalId": "usda-sr-172475"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Regular tofu (raw, calcium sulfate)\",\"preferredUnit\":\"g\",\"tr\":\"Normal tofu (çiğ, kalsiyum sülfatla hazırlanmış)\"}",
+    "externalId": "usda-sr-172476"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Lamb liver (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuzu karaciğeri (çiğ)\"}",
+    "externalId": "usda-sr-172531"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baking powder (double acting, straight phosphate)\",\"preferredUnit\":\"g\",\"tr\":\"Çift etkili fosfatlı kabartma tozu\"}",
     "externalId": "usda-sr-172804"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Plum sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hazır erik sosu\"}",
+    "externalId": "usda-sr-172879"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hoisin\"],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Hoisin sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hoisin sosu\"}",
@@ -696,8 +1528,16 @@
     "externalId": "usda-sr-173033"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"White grapefruit juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Beyaz greyfurt suyu (çiğ)\"}",
+    "externalId": "usda-sr-173039"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Grape juice (unsweetened, no added ascorbic acid)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ambalajlı üzüm suyu (askorbik asit eklenmemiş)\"}",
     "externalId": "usda-sr-173042"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Common guava (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Guava (çiğ)\"}",
+    "externalId": "usda-sr-173044"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Creme de menthe (72 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Nane likörü (72 ABD proof)\"}",
@@ -716,24 +1556,44 @@
     "externalId": "usda-sr-173227"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Unsweetened instant tea powder\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz çözünebilir çay tozu\"}",
+    "externalId": "usda-sr-173230"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Butter (salted)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzlu tereyağı\"}",
     "externalId": "usda-sr-173410"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çedar peyniri\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cheddar cheese\",\"preferredUnit\":\"g\",\"tr\":\"Cheddar peyniri\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çedar peyniri\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cheddar cheese\",\"preferredUnit\":\"g\",\"tr\":\"Cheddar peyniri\"}",
     "externalId": "usda-sr-173414"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cream cheese\",\"preferredUnit\":\"g\",\"tr\":\"Krem peynir\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cream cheese\",\"preferredUnit\":\"g\",\"tr\":\"Krem peynir\"}",
     "externalId": "usda-sr-173418"
   },
   {
-    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Feta\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Feta cheese\",\"preferredUnit\":\"g\",\"tr\":\"Feta peyniri\"}",
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Edam cheese\",\"preferredUnit\":\"g\",\"tr\":\"Edam peyniri\"}",
+    "externalId": "usda-sr-173419"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Feta\"],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Feta cheese\",\"preferredUnit\":\"g\",\"tr\":\"Feta peyniri\"}",
     "externalId": "usda-sr-173420"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Egg yolk (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş yumurta sarısı\"}",
+    "externalId": "usda-sr-173428"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Butter (unsalted)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz tereyağı\"}",
     "externalId": "usda-sr-173430"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"cheeses\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Goat cheese (soft)\",\"preferredUnit\":\"g\",\"tr\":\"Yumuşak keçi peyniri\"}",
+    "externalId": "usda-sr-173435"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\",\"milk-powders\"],\"dimensions\":[\"mass\"],\"en\":\"Whole milk powder (without added vitamin D)\",\"preferredUnit\":\"g\",\"tr\":\"Tam yağlı süt tozu (D vitamini eklenmemiş)\"}",
+    "externalId": "usda-sr-173454"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tuz\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Table salt\",\"preferredUnit\":\"g\",\"tr\":\"Sofra tuzu\"}",
@@ -752,16 +1612,44 @@
     "externalId": "usda-sr-173573"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken thigh (skinless, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk but (derisiz, çiğ)\"}",
+    "externalId": "usda-sr-173627"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Rainbow trout (farmed, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Gökkuşağı alabalığı (çiftlik, çiğ)\"}",
+    "externalId": "usda-sr-173717"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Adzuki beans (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Adzuki fasulyesi (kuru)\"}",
+    "externalId": "usda-sr-173727"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Siyah fasulye\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Black beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Siyah fasulye (kuru, çiğ)\"}",
     "externalId": "usda-sr-173734"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Harnup unu\"],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Carob flour\",\"preferredUnit\":\"g\",\"tr\":\"Keçiboynuzu unu\"}",
+    "externalId": "usda-sr-173755"
   },
   {
     "description": "{\"aliasesEn\":[\"Garbanzo beans\"],\"aliasesTr\":[\"Nohut\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpeas (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Nohut (kuru, çiğ)\"}",
     "externalId": "usda-sr-173756"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpeas (boiled, no salt)\",\"preferredUnit\":\"g\",\"tr\":\"Haşlanmış nohut (tuzsuz)\"}",
+    "externalId": "usda-sr-173757"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpeas (canned, drained)\",\"preferredUnit\":\"g\",\"tr\":\"Nohut (konserve, süzülmüş)\"}",
+    "externalId": "usda-sr-173800"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Apple juice (unsweetened, no added ascorbic acid)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ambalajlı elma suyu (askorbik asit eklenmemiş)\"}",
     "externalId": "usda-sr-173933"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Dried apricots (sulfured)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kayısı (kükürtlü)\"}",
+    "externalId": "usda-sr-173941"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Muz\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Banana (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Muz (çiğ)\"}",
@@ -776,20 +1664,52 @@
     "externalId": "usda-sr-173954"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Red enchilada sauce (mild, ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hafif acılı kırmızı enchilada sosu\"}",
+    "externalId": "usda-sr-174074"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Oolong çayı\"],\"categories\":[\"tea\",\"international-specialty\"],\"dimensions\":[\"volume\"],\"en\":\"Oolong tea (brewed)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş oolong çayı\"}",
     "externalId": "usda-sr-174120"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Decaffeinated instant coffee powder\",\"preferredUnit\":\"g\",\"tr\":\"Kafeinsiz çözünebilir kahve tozu\"}",
+    "externalId": "usda-sr-174133"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Papatya çayı\"],\"categories\":[\"infusions\"],\"dimensions\":[\"volume\"],\"en\":\"Chamomile tea (brewed)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş papatya çayı\"}",
     "externalId": "usda-sr-174156"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Non-alcoholic wine\",\"preferredUnit\":\"mL\",\"tr\":\"Alkolsüz şarap\"}",
+    "externalId": "usda-sr-174157"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şişe suyu\"],\"categories\":[\"water\"],\"dimensions\":[\"volume\"],\"en\":\"Bottled water (generic)\",\"preferredUnit\":\"mL\",\"tr\":\"Şişelenmiş su (genel)\"}",
     "externalId": "usda-sr-174158"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"European anchovy (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Avrupa hamsisi (çiğ)\"}",
+    "externalId": "usda-sr-174182"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"European anchovy (canned in oil, drained)\",\"preferredUnit\":\"g\",\"tr\":\"Avrupa hamsisi (yağda konserve, süzülmüş)\"}",
+    "externalId": "usda-sr-174183"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Blue crab (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mavi yengeç (çiğ)\"}",
+    "externalId": "usda-sr-174204"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Clams (mixed species, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kum midyesi (karışık türler, çiğ)\"}",
+    "externalId": "usda-sr-174214"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mürekkep balığı\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Cuttlefish (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ mürekkep balığı\"}",
     "externalId": "usda-sr-174215"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Blue mussel (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mavi midye (çiğ)\"}",
+    "externalId": "usda-sr-174216"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ahtapot\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Common octopus (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ ahtapot\"}",
@@ -804,8 +1724,20 @@
     "externalId": "usda-sr-174256"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Cam erişte\"],\"categories\":[\"grains\",\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Mung bean cellophane noodles (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru maş fasulyesi eriştesi\"}",
+    "externalId": "usda-sr-174258"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Soya fasulyesi\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Soybeans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Soya fasulyesi (kuru, çiğ)\"}",
     "externalId": "usda-sr-174270"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Tempeh\",\"preferredUnit\":\"g\",\"tr\":\"Tempeh\"}",
+    "externalId": "usda-sr-174272"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Soy flour (defatted)\",\"preferredUnit\":\"g\",\"tr\":\"Yağı alınmış soya unu\"}",
+    "externalId": "usda-sr-174275"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shoyu\"],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Shoyu soy sauce (soy and wheat)\",\"preferredUnit\":\"g\",\"tr\":\"Shoyu soya sosu (soya ve buğday)\"}",
@@ -816,8 +1748,16 @@
     "externalId": "usda-sr-174278"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Fuyu\"],\"categories\":[\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Fermented salted tofu (fuyu)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzlu fermente tofu (fuyu)\"}",
+    "externalId": "usda-sr-174280"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kırmızı mercimek\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Red lentils (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı mercimek (çiğ)\"}",
     "externalId": "usda-sr-174284"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Besan\"],\"aliasesTr\":[],\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpea flour\",\"preferredUnit\":\"g\",\"tr\":\"Nohut unu\"}",
+    "externalId": "usda-sr-174288"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuzu kıyma\"],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground lamb (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuzu kıyma (çiğ)\"}",
@@ -832,12 +1772,28 @@
     "externalId": "usda-sr-174515"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"BBQ sos\"],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Barbecue sauce\",\"preferredUnit\":\"g\",\"tr\":\"Barbekü sosu\"}",
+    "externalId": "usda-sr-174523"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Salsa\"],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Salsa (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hazır salsa sosu\"}",
+    "externalId": "usda-sr-174524"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Oyster sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"İstiridye sosu\"}",
     "externalId": "usda-sr-174529"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Fish sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Balık sosu\"}",
     "externalId": "usda-sr-174531"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Dried figs\",\"preferredUnit\":\"g\",\"tr\":\"Kuru incir\"}",
+    "externalId": "usda-sr-174665"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Red or green grapes (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı veya yeşil üzüm (çiğ)\"}",
+    "externalId": "usda-sr-174683"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Rum (80 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Rom (80 ABD proof)\"}",
@@ -880,6 +1836,10 @@
     "externalId": "usda-sr-174854"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Decaffeinated brewed black tea\",\"preferredUnit\":\"mL\",\"tr\":\"Kafeinsiz demlenmiş siyah çay\"}",
+    "externalId": "usda-sr-174871"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sodyum bikarbonat\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baking soda\",\"preferredUnit\":\"g\",\"tr\":\"Karbonat\"}",
     "externalId": "usda-sr-175040"
   },
@@ -908,8 +1868,32 @@
     "externalId": "usda-sr-175103"
   },
   {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic herring (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik ringası (çiğ)\"}",
+    "externalId": "usda-sr-175116"
+  },
+  {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Atlantik uskumrusu\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic mackerel (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik uskumrusu (çiğ)\"}",
     "externalId": "usda-sr-175119"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Striped mullet (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çizgili kefal (çiğ)\"}",
+    "externalId": "usda-sr-175123"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic sardine (canned in oil, with bone)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik sardalyası (yağda konserve, kılçıklı)\"}",
+    "externalId": "usda-sr-175139"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Sea bass (mixed species, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Levrek (karışık türler, çiğ)\"}",
+    "externalId": "usda-sr-175142"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Rainbow trout (wild, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Gökkuşağı alabalığı (yabani, çiğ)\"}",
+    "externalId": "usda-sr-175154"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Yellowfin tuna (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı yüzgeçli ton balığı (çiğ)\"}",
+    "externalId": "usda-sr-175159"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic salmon (raw, farmed)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik somonu (çiğ, çiftlik)\"}",
@@ -926,6 +1910,10 @@
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Kidney beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kidney fasulye (kuru, çiğ)\"}",
     "externalId": "usda-sr-175193"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Pinto beans (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Pinto fasulyesi (kuru)\"}",
+    "externalId": "usda-sr-175199"
   },
   {
     "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuru beyaz fasulye\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"White beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz fasulye (kuru, çiğ)\"}",

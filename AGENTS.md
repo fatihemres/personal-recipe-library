@@ -56,3 +56,8 @@ Build a local-first food and beverage recipe management desktop application for 
 - Keep validation fixtures separate and unchanged. Embedded production seed installs via the Rust worker; never bypass the shared checked transactional importer.
 - Production extracts have explicit immutable source snapshot versions. Preserve canonical IDs, personal collisions and overrides; do not infer observations from names or proof labels.
 - Reproduce tools/prepare_production_catalog.py with the pinned archive and curated descriptor assertions. New content requires a higher dataset version and reviewed source clearance.
+
+## Expanded catalog invariants (M3B-2)
+- Current production version 3 has 482 identities; historical version 2 lives in catalog/releases/2. Never mutate committed source snapshots or reassign canonical IDs.
+- Consult docs/CATALOG_COVERAGE_REPORT.md, docs/INGREDIENT_LOCALIZATION_REVIEW.md and catalog/reference-sources.json. Project-only factual entries are not USDA records and reference-only websites are not approved bulk datasets.
+- Reproduce grouped curation with tools/prepare_production_catalog.py; run tools/audit_catalog.py --check and tools/test_catalog_audit.py. Human review remains distinct from structural/semantic tooling.

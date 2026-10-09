@@ -32,14 +32,6 @@
     "externalId": "167765"
   },
   {
-    "description": "Grapefruit juice, pink, raw",
-    "externalId": "167774"
-  },
-  {
-    "description": "Pomegranate juice, bottled",
-    "externalId": "167787"
-  },
-  {
     "description": "Syrups, grenadine",
     "externalId": "168088"
   },
@@ -60,28 +52,8 @@
     "externalId": "168156"
   },
   {
-    "description": "Blueberries, dried, sweetened",
-    "externalId": "168158"
-  },
-  {
-    "description": "Plums, dried (prunes), uncooked",
-    "externalId": "168162"
-  },
-  {
     "description": "Quinces, raw",
     "externalId": "168163"
-  },
-  {
-    "description": "Raisins, golden, seedless",
-    "externalId": "168164"
-  },
-  {
-    "description": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "168165"
-  },
-  {
-    "description": "Dates, medjool",
-    "externalId": "168191"
   },
   {
     "description": "Asparagus, raw",
@@ -92,26 +64,6 @@
     "externalId": "168409"
   },
   {
-    "description": "Mushrooms, Chanterelle, raw",
-    "externalId": "168422"
-  },
-  {
-    "description": "Mushrooms, morel, raw",
-    "externalId": "168423"
-  },
-  {
-    "description": "Mushrooms, brown, italian, or crimini, raw",
-    "externalId": "168434"
-  },
-  {
-    "description": "Mushrooms, shiitake, dried",
-    "externalId": "168436"
-  },
-  {
-    "description": "Potato flour",
-    "externalId": "168446"
-  },
-  {
     "description": "Pumpkin, raw",
     "externalId": "168448"
   },
@@ -120,44 +72,16 @@
     "externalId": "168462"
   },
   {
-    "description": "Tomatoes, sun-dried",
-    "externalId": "168567"
-  },
-  {
-    "description": "Peppers, hot chile, sun-dried",
-    "externalId": "168570"
-  },
-  {
     "description": "Lemon grass (citronella), raw",
     "externalId": "168573"
-  },
-  {
-    "description": "Beans, fava, in pod, raw",
-    "externalId": "168574"
   },
   {
     "description": "Grape leaves, raw",
     "externalId": "168575"
   },
   {
-    "description": "Peppers, jalapeno, raw",
-    "externalId": "168576"
-  },
-  {
-    "description": "Peppers, pasilla, dried",
-    "externalId": "168579"
-  },
-  {
     "description": "Mushrooms, oyster, raw",
     "externalId": "168580"
-  },
-  {
-    "description": "Nuts, almond butter, plain, without salt added",
-    "externalId": "168588"
-  },
-  {
-    "description": "Seeds, sesame butter, tahini, type of kernels unspecified",
-    "externalId": "168604"
   },
   {
     "description": "Alcoholic beverage, beer, regular, all",
@@ -168,104 +92,24 @@
     "externalId": "168749"
   },
   {
-    "description": "Molasses",
-    "externalId": "168820"
-  },
-  {
     "description": "Sugars, brown",
     "externalId": "168833"
-  },
-  {
-    "description": "Syrups, chocolate, fudge-type",
-    "externalId": "168835"
-  },
-  {
-    "description": "Syrups, corn, dark",
-    "externalId": "168836"
-  },
-  {
-    "description": "Syrups, corn, light",
-    "externalId": "168837"
   },
   {
     "description": "Quinoa, uncooked",
     "externalId": "168874"
   },
   {
-    "description": "Rice, white, glutinous, unenriched, uncooked",
-    "externalId": "168883"
-  },
-  {
-    "description": "Rye grain",
-    "externalId": "168884"
-  },
-  {
-    "description": "Rye flour, dark",
-    "externalId": "168885"
-  },
-  {
-    "description": "Rye flour, light",
-    "externalId": "168887"
-  },
-  {
-    "description": "Wheat germ, crude",
-    "externalId": "168892"
-  },
-  {
     "description": "Wheat flour, whole-grain (Includes foods for USDA's Food Distribution Program)",
     "externalId": "168893"
-  },
-  {
-    "description": "Rice flour, brown",
-    "externalId": "168898"
-  },
-  {
-    "description": "Noodles, chinese, chow mein",
-    "externalId": "168905"
-  },
-  {
-    "description": "Noodles, japanese, soba, dry",
-    "externalId": "168906"
-  },
-  {
-    "description": "Noodles, japanese, somen, dry",
-    "externalId": "168908"
-  },
-  {
-    "description": "Wheat flours, bread, unenriched",
-    "externalId": "168913"
-  },
-  {
-    "description": "Corn flour, whole-grain, blue (harina de maiz morado)",
-    "externalId": "168921"
-  },
-  {
-    "description": "Pasta, dry, unenriched",
-    "externalId": "168927"
   },
   {
     "description": "Rice, white, short-grain, raw, unenriched",
     "externalId": "168931"
   },
   {
-    "description": "Semolina, unenriched",
-    "externalId": "168933"
-  },
-  {
-    "description": "Sorghum flour, whole-grain",
-    "externalId": "168943"
-  },
-  {
     "description": "Melons, cantaloupe, raw",
     "externalId": "169092"
-  },
-  {
-    "description": "Olives, ripe, canned (small-extra large)",
-    "externalId": "169094"
-  },
-  {
-    "description": "Olives, pickled, canned or bottled, green",
-    "externalId": "169096"
   },
   {
     "description": "Oranges, raw, all commercial varieties",
@@ -278,14 +122,6 @@
   {
     "description": "Tangerines, (mandarin oranges), raw",
     "externalId": "169105"
-  },
-  {
-    "description": "Passion-fruit, (granadilla), purple, raw",
-    "externalId": "169108"
-  },
-  {
-    "description": "Passion-fruit juice, purple, raw",
-    "externalId": "169109"
   },
   {
     "description": "Pears, raw",
@@ -340,16 +176,8 @@
     "externalId": "169251"
   },
   {
-    "description": "Mushrooms, portabella, raw",
-    "externalId": "169255"
-  },
-  {
     "description": "Okra, raw",
     "externalId": "169260"
-  },
-  {
-    "description": "Pumpkin flowers, raw",
-    "externalId": "169270"
   },
   {
     "description": "Purslane, raw",
@@ -380,28 +208,12 @@
     "externalId": "169387"
   },
   {
-    "description": "Seeds, sesame butter, tahini, from raw and stone ground kernels",
-    "externalId": "169410"
-  },
-  {
-    "description": "Seeds, sesame seed kernels, dried (decorticated)",
-    "externalId": "169412"
-  },
-  {
     "description": "Seeds, flaxseed",
     "externalId": "169414"
   },
   {
-    "description": "Beef, variety meats and by-products, liver, raw",
-    "externalId": "169451"
-  },
-  {
     "description": "Cocoa, dry powder, unsweetened",
     "externalId": "169593"
-  },
-  {
-    "description": "Cocoa, dry powder, unsweetened, processed with alkali",
-    "externalId": "169594"
   },
   {
     "description": "Honey",
@@ -416,24 +228,8 @@
     "externalId": "169656"
   },
   {
-    "description": "Sugars, maple",
-    "externalId": "169658"
-  },
-  {
-    "description": "Syrups, malt",
-    "externalId": "169660"
-  },
-  {
     "description": "Syrups, maple",
     "externalId": "169661"
-  },
-  {
-    "description": "Syrups, sorghum",
-    "externalId": "169662"
-  },
-  {
-    "description": "Corn flour, masa, unenriched, white",
-    "externalId": "169696"
   },
   {
     "description": "Cornstarch",
@@ -448,60 +244,12 @@
     "externalId": "169702"
   },
   {
-    "description": "Rice, brown, long-grain, raw (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "169703"
-  },
-  {
     "description": "Oats (Includes foods for USDA's Food Distribution Program)",
     "externalId": "169705"
   },
   {
-    "description": "Rice, brown, medium-grain, raw (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "169706"
-  },
-  {
     "description": "Rice flour, white, unenriched",
     "externalId": "169714"
-  },
-  {
-    "description": "Sorghum grain",
-    "externalId": "169716"
-  },
-  {
-    "description": "Wheat, durum",
-    "externalId": "169721"
-  },
-  {
-    "description": "Pasta, fresh-refrigerated, plain, as purchased",
-    "externalId": "169727"
-  },
-  {
-    "description": "Pasta, whole-wheat, dry (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "169738"
-  },
-  {
-    "description": "Barley flour or meal",
-    "externalId": "169739"
-  },
-  {
-    "description": "Barley malt flour",
-    "externalId": "169740"
-  },
-  {
-    "description": "Oat flour, partially debranned",
-    "externalId": "169741"
-  },
-  {
-    "description": "Rice noodles, dry",
-    "externalId": "169742"
-  },
-  {
-    "description": "Corn flour, whole-grain, white",
-    "externalId": "169748"
-  },
-  {
-    "description": "Noodles, egg, dry, unenriched",
-    "externalId": "169755"
   },
   {
     "description": "Rice, white, long-grain, regular, raw, unenriched",
@@ -530,10 +278,6 @@
   {
     "description": "Nectarines, raw",
     "externalId": "169914"
-  },
-  {
-    "description": "Papayas, raw",
-    "externalId": "169926"
   },
   {
     "description": "Peaches, yellow, raw",
@@ -600,32 +344,16 @@
     "externalId": "170108"
   },
   {
-    "description": "Seeds, hemp seed, hulled",
-    "externalId": "170148"
-  },
-  {
     "description": "Seeds, sesame seeds, whole, dried",
     "externalId": "170150"
-  },
-  {
-    "description": "Nuts, almond paste",
-    "externalId": "170160"
   },
   {
     "description": "Nuts, cashew nuts, raw",
     "externalId": "170162"
   },
   {
-    "description": "Nuts, cashew butter, plain, without salt added",
-    "externalId": "170163"
-  },
-  {
     "description": "Nuts, coconut meat, raw",
     "externalId": "170169"
-  },
-  {
-    "description": "Nuts, coconut meat, dried (desiccated), not sweetened",
-    "externalId": "170170"
   },
   {
     "description": "Nuts, pecans",
@@ -638,26 +366,6 @@
   {
     "description": "Nuts, walnuts, english",
     "externalId": "170187"
-  },
-  {
-    "description": "Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",
-    "externalId": "170189"
-  },
-  {
-    "description": "Beef, variety meats and by-products, tongue, raw",
-    "externalId": "170196"
-  },
-  {
-    "description": "Chocolate, dark, 45- 59% cacao solids",
-    "externalId": "170271"
-  },
-  {
-    "description": "Chocolate, dark, 60-69% cacao solids",
-    "externalId": "170272"
-  },
-  {
-    "description": "Chocolate, dark, 70-85% cacao solids",
-    "externalId": "170273"
   },
   {
     "description": "Barley, pearled, raw",
@@ -744,124 +452,24 @@
     "externalId": "170567"
   },
   {
-    "description": "Nuts, almonds, blanched",
-    "externalId": "170568"
-  },
-  {
-    "description": "Nuts, brazilnuts, dried, unblanched",
-    "externalId": "170569"
-  },
-  {
-    "description": "Nuts, chestnuts, european, raw, unpeeled",
-    "externalId": "170574"
-  },
-  {
-    "description": "Nuts, coconut cream, raw (liquid expressed from grated meat)",
-    "externalId": "170580"
-  },
-  {
     "description": "Nuts, hazelnuts or filberts",
     "externalId": "170581"
-  },
-  {
-    "description": "Nuts, pine nuts, dried",
-    "externalId": "170591"
-  },
-  {
-    "description": "Beef, variety meats and by-products, tripe, raw",
-    "externalId": "170599"
-  },
-  {
-    "description": "Amaranth grain, uncooked",
-    "externalId": "170682"
-  },
-  {
-    "description": "Arrowroot flour",
-    "externalId": "170684"
-  },
-  {
-    "description": "Buckwheat flour, whole-groat",
-    "externalId": "170687"
   },
   {
     "description": "Bulgur, dry",
     "externalId": "170688"
   },
   {
-    "description": "Cheese, fontina",
-    "externalId": "170843"
-  },
-  {
-    "description": "Cheese, monterey",
-    "externalId": "170844"
-  },
-  {
-    "description": "Cheese, mozzarella, whole milk",
-    "externalId": "170845"
-  },
-  {
-    "description": "Cheese, parmesan, hard",
-    "externalId": "170848"
-  },
-  {
-    "description": "Cheese, port de salut",
-    "externalId": "170849"
-  },
-  {
-    "description": "Cheese, provolone",
-    "externalId": "170850"
-  },
-  {
-    "description": "Cheese, ricotta, whole milk",
-    "externalId": "170851"
-  },
-  {
-    "description": "Cheese, tilsit",
-    "externalId": "170852"
-  },
-  {
-    "description": "Cream, fluid, light (coffee cream or table cream)",
-    "externalId": "170857"
-  },
-  {
     "description": "Cream, fluid, heavy whipping",
     "externalId": "170859"
-  },
-  {
-    "description": "Milk, buttermilk, fluid, cultured, lowfat",
-    "externalId": "170874"
-  },
-  {
-    "description": "Milk, dry, nonfat, regular, without added vitamin A and vitamin D",
-    "externalId": "170877"
-  },
-  {
-    "description": "Milk, sheep, fluid",
-    "externalId": "170882"
-  },
-  {
-    "description": "Yogurt, Greek, plain, lowfat",
-    "externalId": "170903"
   },
   {
     "description": "Spices, bay leaf",
     "externalId": "170917"
   },
   {
-    "description": "Spices, caraway seed",
-    "externalId": "170918"
-  },
-  {
     "description": "Spices, cardamom",
     "externalId": "170919"
-  },
-  {
-    "description": "Spices, celery seed",
-    "externalId": "170920"
-  },
-  {
-    "description": "Spices, coriander leaf, dried",
-    "externalId": "170921"
   },
   {
     "description": "Spices, coriander seed",
@@ -872,40 +480,12 @@
     "externalId": "170923"
   },
   {
-    "description": "Spices, curry powder",
-    "externalId": "170924"
-  },
-  {
-    "description": "Spices, dill seed",
-    "externalId": "170925"
-  },
-  {
     "description": "Spices, ginger, ground",
     "externalId": "170926"
   },
   {
-    "description": "Spices, mace, ground",
-    "externalId": "170927"
-  },
-  {
-    "description": "Spices, marjoram, dried",
-    "externalId": "170928"
-  },
-  {
-    "description": "Spices, mustard seed, ground",
-    "externalId": "170929"
-  },
-  {
-    "description": "Spices, parsley, dried",
-    "externalId": "170930"
-  },
-  {
     "description": "Spices, pepper, black",
     "externalId": "170931"
-  },
-  {
-    "description": "Spices, pepper, red or cayenne",
-    "externalId": "170932"
   },
   {
     "description": "Spices, pepper, white",
@@ -916,100 +496,8 @@
     "externalId": "170934"
   },
   {
-    "description": "Spices, sage, ground",
-    "externalId": "170935"
-  },
-  {
-    "description": "Spices, savory, ground",
-    "externalId": "170936"
-  },
-  {
-    "description": "Spices, tarragon, dried",
-    "externalId": "170937"
-  },
-  {
     "description": "Spices, thyme, dried",
     "externalId": "170938"
-  },
-  {
-    "description": "Oil, rice bran",
-    "externalId": "171013"
-  },
-  {
-    "description": "Oil, wheat germ",
-    "externalId": "171014"
-  },
-  {
-    "description": "Oil, sesame, salad or cooking",
-    "externalId": "171016"
-  },
-  {
-    "description": "Oil, grapeseed",
-    "externalId": "171028"
-  },
-  {
-    "description": "Oil, corn, industrial and retail, all purpose salad or cooking",
-    "externalId": "171029"
-  },
-  {
-    "description": "Oil, walnut",
-    "externalId": "171030"
-  },
-  {
-    "description": "Chicken, broilers or fryers, meat only, raw",
-    "externalId": "171052"
-  },
-  {
-    "description": "Sauce, teriyaki, ready-to-serve",
-    "externalId": "171167"
-  },
-  {
-    "description": "Sauce, hot chile, sriracha",
-    "externalId": "171186"
-  },
-  {
-    "description": "Cheese, gjetost",
-    "externalId": "171240"
-  },
-  {
-    "description": "Cheese, gouda",
-    "externalId": "171241"
-  },
-  {
-    "description": "Cheese, gruyere",
-    "externalId": "171242"
-  },
-  {
-    "description": "Cheese, limburger",
-    "externalId": "171243"
-  },
-  {
-    "description": "Cheese, muenster",
-    "externalId": "171245"
-  },
-  {
-    "description": "Cheese, neufchatel",
-    "externalId": "171246"
-  },
-  {
-    "description": "Cheese, romano",
-    "externalId": "171249"
-  },
-  {
-    "description": "Cheese, roquefort",
-    "externalId": "171250"
-  },
-  {
-    "description": "Cheese, swiss",
-    "externalId": "171251"
-  },
-  {
-    "description": "Cream, sour, cultured",
-    "externalId": "171257"
-  },
-  {
-    "description": "Milk, goat, fluid, with added vitamin D",
-    "externalId": "171278"
   },
   {
     "description": "Yogurt, plain, whole milk",
@@ -1032,24 +520,12 @@
     "externalId": "171317"
   },
   {
-    "description": "Spices, chervil, dried",
-    "externalId": "171318"
-  },
-  {
-    "description": "Spices, chili powder",
-    "externalId": "171319"
-  },
-  {
     "description": "Spices, cinnamon, ground",
     "externalId": "171320"
   },
   {
     "description": "Spices, cloves, ground",
     "externalId": "171321"
-  },
-  {
-    "description": "Spices, dill weed, dried",
-    "externalId": "171322"
   },
   {
     "description": "Spices, fennel seed",
@@ -1084,64 +560,20 @@
     "externalId": "171330"
   },
   {
-    "description": "Spices, poultry seasoning",
-    "externalId": "171331"
-  },
-  {
-    "description": "Spices, pumpkin pie spice",
-    "externalId": "171332"
-  },
-  {
     "description": "Spices, rosemary, dried",
     "externalId": "171333"
-  },
-  {
-    "description": "Oil, peanut, salad or cooking",
-    "externalId": "171410"
-  },
-  {
-    "description": "Oil, soybean, salad or cooking",
-    "externalId": "171411"
-  },
-  {
-    "description": "Oil, coconut",
-    "externalId": "171412"
   },
   {
     "description": "Oil, olive, salad or cooking",
     "externalId": "171413"
   },
   {
-    "description": "Oil, cocoa butter",
-    "externalId": "171421"
-  },
-  {
-    "description": "Oil, hazelnut",
-    "externalId": "171427"
-  },
-  {
     "description": "Chicken, broilers or fryers, breast, meat and skin, raw",
     "externalId": "171474"
   },
   {
-    "description": "Sauce, pesto, ready-to-serve, refrigerated",
-    "externalId": "171579"
-  },
-  {
-    "description": "Sauce, worcestershire",
-    "externalId": "171610"
-  },
-  {
-    "description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "171688"
-  },
-  {
     "description": "Apples, raw, without skin",
     "externalId": "171689"
-  },
-  {
-    "description": "Apples, dried, sulfured, uncooked",
-    "externalId": "171691"
   },
   {
     "description": "Apricots, raw",
@@ -1160,24 +592,12 @@
     "externalId": "171719"
   },
   {
-    "description": "Dates, deglet noor",
-    "externalId": "171726"
-  },
-  {
     "description": "Beef, ground, 85% lean meat / 15% fat, raw (Includes foods for USDA's Food Distribution Program)",
     "externalId": "171796"
   },
   {
-    "description": "Sauce, salsa, verde, ready-to-serve",
-    "externalId": "171824"
-  },
-  {
     "description": "Beverages, carbonated, tonic water",
     "externalId": "171869"
-  },
-  {
-    "description": "Beverages, coffee, brewed, prepared with tap water, decaffeinated",
-    "externalId": "171889"
   },
   {
     "description": "Beverages, coffee, brewed, prepared with tap water",
@@ -1192,10 +612,6 @@
     "externalId": "171908"
   },
   {
-    "description": "Beverages, tea, green, brewed, decaffeinated",
-    "externalId": "171910"
-  },
-  {
     "description": "Beverages, tea, green, brewed, regular",
     "externalId": "171917"
   },
@@ -1208,22 +624,6 @@
     "externalId": "171946"
   },
   {
-    "description": "Fish, carp, raw",
-    "externalId": "171952"
-  },
-  {
-    "description": "Fish, cod, Atlantic, raw",
-    "externalId": "171955"
-  },
-  {
-    "description": "Millet flour",
-    "externalId": "172023"
-  },
-  {
-    "description": "Cheese, blue",
-    "externalId": "172175"
-  },
-  {
     "description": "Cheese, brie",
     "externalId": "172177"
   },
@@ -1232,44 +632,12 @@
     "externalId": "172178"
   },
   {
-    "description": "Cheese, cottage, creamed, large or small curd",
-    "externalId": "172179"
-  },
-  {
     "description": "Egg, white, raw, fresh",
     "externalId": "172183"
   },
   {
-    "description": "Egg, yolk, raw, fresh",
-    "externalId": "172184"
-  },
-  {
-    "description": "Egg, duck, whole, fresh, raw",
-    "externalId": "172189"
-  },
-  {
-    "description": "Egg, quail, whole, fresh, raw",
-    "externalId": "172191"
-  },
-  {
-    "description": "Cheese, goat, hard type",
-    "externalId": "172197"
-  },
-  {
-    "description": "Egg, white, dried",
-    "externalId": "172204"
-  },
-  {
     "description": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
     "externalId": "172217"
-  },
-  {
-    "description": "Cheese, fresh, queso fresco",
-    "externalId": "172223"
-  },
-  {
-    "description": "Cheese, white, queso blanco",
-    "externalId": "172224"
   },
   {
     "description": "Spices, turmeric, ground",
@@ -1304,14 +672,6 @@
     "externalId": "172336"
   },
   {
-    "description": "Chicken, broilers or fryers, thigh, meat and skin, raw",
-    "externalId": "172385"
-  },
-  {
-    "description": "Chicken, broilers or fryers, wing, meat and skin, raw",
-    "externalId": "172390"
-  },
-  {
     "description": "Lentils, raw",
     "externalId": "172420"
   },
@@ -1320,44 +680,8 @@
     "externalId": "172430"
   },
   {
-    "description": "Miso",
-    "externalId": "172442"
-  },
-  {
-    "description": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
-    "externalId": "172448"
-  },
-  {
-    "description": "Tofu, soft, prepared with calcium sulfate and magnesium chloride (nigari)",
-    "externalId": "172449"
-  },
-  {
-    "description": "Tofu, dried-frozen (koyadofu)",
-    "externalId": "172450"
-  },
-  {
-    "description": "Tofu, fried",
-    "externalId": "172451"
-  },
-  {
-    "description": "Tofu, raw, firm, prepared with calcium sulfate",
-    "externalId": "172475"
-  },
-  {
-    "description": "Tofu, raw, regular, prepared with calcium sulfate",
-    "externalId": "172476"
-  },
-  {
-    "description": "Lamb, variety meats and by-products, liver, raw",
-    "externalId": "172531"
-  },
-  {
     "description": "Leavening agents, baking powder, double-acting, straight phosphate",
     "externalId": "172804"
-  },
-  {
-    "description": "Sauce, plum, ready-to-serve",
-    "externalId": "172879"
   },
   {
     "description": "Sauce, hoisin, ready-to-serve",
@@ -1372,16 +696,8 @@
     "externalId": "173033"
   },
   {
-    "description": "Grapefruit juice, white, raw",
-    "externalId": "173039"
-  },
-  {
     "description": "Grape juice, canned or bottled, unsweetened, without added ascorbic acid",
     "externalId": "173042"
-  },
-  {
-    "description": "Guavas, common, raw",
-    "externalId": "173044"
   },
   {
     "description": "Alcoholic beverage, creme de menthe, 72 proof",
@@ -1400,10 +716,6 @@
     "externalId": "173227"
   },
   {
-    "description": "Beverages, tea, instant, unsweetened, powder",
-    "externalId": "173230"
-  },
-  {
     "description": "Butter, salted",
     "externalId": "173410"
   },
@@ -1416,28 +728,12 @@
     "externalId": "173418"
   },
   {
-    "description": "Cheese, edam",
-    "externalId": "173419"
-  },
-  {
     "description": "Cheese, feta",
     "externalId": "173420"
   },
   {
-    "description": "Egg, yolk, dried",
-    "externalId": "173428"
-  },
-  {
     "description": "Butter, without salt",
     "externalId": "173430"
-  },
-  {
-    "description": "Cheese, goat, soft type",
-    "externalId": "173435"
-  },
-  {
-    "description": "Milk, dry, whole, without added vitamin D",
-    "externalId": "173454"
   },
   {
     "description": "Salt, table",
@@ -1456,44 +752,16 @@
     "externalId": "173573"
   },
   {
-    "description": "Chicken, broilers or fryers, dark meat, thigh, meat only, raw",
-    "externalId": "173627"
-  },
-  {
-    "description": "Fish, trout, rainbow, farmed, raw",
-    "externalId": "173717"
-  },
-  {
-    "description": "Beans, adzuki, mature seeds, raw",
-    "externalId": "173727"
-  },
-  {
     "description": "Beans, black, mature seeds, raw",
     "externalId": "173734"
-  },
-  {
-    "description": "Carob flour",
-    "externalId": "173755"
   },
   {
     "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
     "externalId": "173756"
   },
   {
-    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
-    "externalId": "173757"
-  },
-  {
-    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids",
-    "externalId": "173800"
-  },
-  {
     "description": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid",
     "externalId": "173933"
-  },
-  {
-    "description": "Apricots, dried, sulfured, uncooked",
-    "externalId": "173941"
   },
   {
     "description": "Bananas, raw",
@@ -1508,52 +776,20 @@
     "externalId": "173954"
   },
   {
-    "description": "Sauce, enchilada, red, mild, ready to serve",
-    "externalId": "174074"
-  },
-  {
     "description": "Beverages, tea, Oolong, brewed",
     "externalId": "174120"
-  },
-  {
-    "description": "Beverages, coffee, instant, decaffeinated, powder",
-    "externalId": "174133"
   },
   {
     "description": "Beverages, tea, herb, brewed, chamomile",
     "externalId": "174156"
   },
   {
-    "description": "Beverages, Wine, non-alcoholic",
-    "externalId": "174157"
-  },
-  {
     "description": "Water, bottled, generic",
     "externalId": "174158"
   },
   {
-    "description": "Fish, anchovy, european, raw",
-    "externalId": "174182"
-  },
-  {
-    "description": "Fish, anchovy, european, canned in oil, drained solids",
-    "externalId": "174183"
-  },
-  {
-    "description": "Crustaceans, crab, blue, raw",
-    "externalId": "174204"
-  },
-  {
-    "description": "Mollusks, clam, mixed species, raw",
-    "externalId": "174214"
-  },
-  {
     "description": "Mollusks, cuttlefish, mixed species, raw",
     "externalId": "174215"
-  },
-  {
-    "description": "Mollusks, mussel, blue, raw",
-    "externalId": "174216"
   },
   {
     "description": "Mollusks, octopus, common, raw",
@@ -1568,20 +804,8 @@
     "externalId": "174256"
   },
   {
-    "description": "Noodles, chinese, cellophane or long rice (mung beans), dehydrated",
-    "externalId": "174258"
-  },
-  {
     "description": "Soybeans, mature seeds, raw",
     "externalId": "174270"
-  },
-  {
-    "description": "Tempeh",
-    "externalId": "174272"
-  },
-  {
-    "description": "Soy flour, defatted",
-    "externalId": "174275"
   },
   {
     "description": "Soy sauce made from soy and wheat (shoyu)",
@@ -1592,16 +816,8 @@
     "externalId": "174278"
   },
   {
-    "description": "Tofu, salted and fermented (fuyu)",
-    "externalId": "174280"
-  },
-  {
     "description": "Lentils, pink or red, raw",
     "externalId": "174284"
-  },
-  {
-    "description": "Chickpea flour (besan)",
-    "externalId": "174288"
   },
   {
     "description": "Lamb, ground, raw",
@@ -1616,28 +832,12 @@
     "externalId": "174515"
   },
   {
-    "description": "Sauce, barbecue",
-    "externalId": "174523"
-  },
-  {
-    "description": "Sauce, salsa, ready-to-serve",
-    "externalId": "174524"
-  },
-  {
     "description": "Sauce, oyster, ready-to-serve",
     "externalId": "174529"
   },
   {
     "description": "Sauce, fish, ready-to-serve",
     "externalId": "174531"
-  },
-  {
-    "description": "Figs, dried, uncooked",
-    "externalId": "174665"
-  },
-  {
-    "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
-    "externalId": "174683"
   },
   {
     "description": "Alcoholic beverage, distilled, rum, 80 proof",
@@ -1680,10 +880,6 @@
     "externalId": "174854"
   },
   {
-    "description": "Beverages, tea, black, brewed, prepared with tap water, decaffeinated",
-    "externalId": "174871"
-  },
-  {
     "description": "Leavening agents, baking soda",
     "externalId": "175040"
   },
@@ -1712,32 +908,8 @@
     "externalId": "175103"
   },
   {
-    "description": "Fish, herring, Atlantic, raw",
-    "externalId": "175116"
-  },
-  {
     "description": "Fish, mackerel, Atlantic, raw",
     "externalId": "175119"
-  },
-  {
-    "description": "Fish, mullet, striped, raw",
-    "externalId": "175123"
-  },
-  {
-    "description": "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
-    "externalId": "175139"
-  },
-  {
-    "description": "Fish, sea bass, mixed species, raw",
-    "externalId": "175142"
-  },
-  {
-    "description": "Fish, trout, rainbow, wild, raw",
-    "externalId": "175154"
-  },
-  {
-    "description": "Fish, tuna, fresh, yellowfin, raw",
-    "externalId": "175159"
   },
   {
     "description": "Fish, salmon, Atlantic, farmed, raw",
@@ -1754,10 +926,6 @@
   {
     "description": "Beans, kidney, all types, mature seeds, raw",
     "externalId": "175193"
-  },
-  {
-    "description": "Beans, pinto, mature seeds, raw (Includes foods for USDA's Food Distribution Program)",
-    "externalId": "175199"
   },
   {
     "description": "Beans, white, mature seeds, raw",

@@ -77,3 +77,35 @@ project curation, not a USDA consumer-facing taxonomy or country-of-origin claim
 See CATALOG_COVERAGE_PLAN.md for verified counts, contingent complete-M3B goals
 and explicit regional/bitters/specialty beverage gaps. CC0 reuse does not imply
 USDA endorsement or authorize photographs/logos outside the factual dataset.
+
+## M3B-2 — version 3, reviewed 2026-10-09
+
+443 source-backed generic identities use the same pinned CC0 USDA archive;
+39 additional identities are **original project factual curation**, not USDA.
+All 482 bilingual labels/classifications are project curation (CC0 dedication in
+production NOTICE). New snapshots: `2018-04-selection-3` and `production-2`.
+No new raw third-party dataset approved. Source exclusions/conditions for FoodOn,
+Open Food Facts and TheCocktailDB remain unchanged; TürKomp and proprietary GI
+compilations are not imported. No third-party images included.
+
+Reference checks (individual factual identities only):
+
+- [TTB BAM chapter 4](https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf), April 2007 edition: whisky/gin/brandy names. Historical identity reference, **not current regulatory advice**; definitions, tables and numeric limits not copied.
+- [EU 2019/787 original OJ edition](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787), 17 May 2019: London gin, pastis and liqueur identities. Not represented as the current consolidated law or a CC0 database.
+- [UK Tequila](https://www.gov.uk/protected-food-drink-names/tequila) and [Mezcal](https://www.gov.uk/protected-food-drink-names/mezcal) references identify the protected spirit names. GOV.UK pages normally use OGL except exceptions; original project names only, no product specification copied.
+- [Kastamonu Ministry siyez article](https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062), 18 July 2018, identifies grain/bulgur/flour; [Ministry grape pekmez](https://arastirma.tarimorman.gov.tr/bagcilik/Menu/64/Uzum-Pekmezi) identifies grape pekmez.
+- [Kars kaşar](https://kulturportali.gov.tr/turkiye/kars/kulturatlasi/kars-kasari) and [traditional drinks](https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler) identify regional cheese, boza, şalgam, salep drink/powder and sumac sherbet. No health claims, prose, recipes or images copied; no blanket portal/database redistribution permission assumed.
+- [Ministry distilled spirits notice](https://sanliurfa.tarimorman.gov.tr/Sayfalar/Detay.aspx?Liste=Duyuru&OgeId=666) supports Rakı identity; numeric legal strengths never become ingredient ABV defaults.
+- [IBA Brandy Crusta ingredient references](https://iba-world.com/iba-cocktail/brandy-crusta/) support only simple syrup, aromatic bitters and citrus peel existence. No cocktail recipe, quantities, instructions, images or database extraction redistributed. IBA is **not approved as a raw seed source**.
+
+`catalog/reference-sources.json` records URLs, consultation date, identity mapping,
+version boundary and the narrow rights decision. `reference-curation.json` and
+checksummed curation evidence retain references per ingredient. Publicly accessible
+pages are not treated as licenses to redistribute their databases. The CC0 claim
+applies only to our original factual labels/classification, never to referenced
+protected expression. Any future broader reuse needs separate clearance.
+
+39 entries have no USDA external ID. Observations remain absent for all 482:
+ABV, nutrition, density and allergens unknown. Language labels are project
+semantic curation, not source-supplied translations or independent human review.
+Seventeen terminology questions remain; see INGREDIENT_LOCALIZATION_REVIEW.md.

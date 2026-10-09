@@ -87,3 +87,49 @@ temporary directory, never reset a user's database for testing.
 `coverage.json` records package counts; CLI reports actual inserts/updates/available
 rows/collisions and overlapping category memberships. Source and output checksums
 are integrity checks, not signatures or independent proof of translation quality.
+
+## M3B-2 reproduction and actual version-2 upgrades
+
+The current generator produces **version 3**, not version 2. Historical version 2
+is preserved byte-for-byte in `catalog/releases/2`; its generator is
+`tools/prepare_production_v2.py`. Validation version 1 remains unchanged.
+No migration introduced; schema remains 4 and migrations 001–004 unchanged.
+
+```sh
+python3 tools/prepare_production_catalog.py /private/tmp/recipeatlas-sr-2018.zip
+python3 tools/audit_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/test_catalog_audit.py
+# Choose fresh, isolated temporary directories; never replace your personal DB.
+cargo run --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import -- /private/tmp/recipeatlas-v3-clean catalog/production/manifest.json
+cargo run --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import -- /private/tmp/recipeatlas-v2-upgrade catalog/releases/2/manifest.json
+cargo run --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import -- /private/tmp/recipeatlas-v2-upgrade catalog/production/manifest.json
+```
+
+Requires the previously pinned USDA archive hash documented above; tools perform
+no network requests. `curation.tsv` retains the original selection;
+`batches/food.tsv` (126) and `batches/forms-and-drinks.tsv` (82) hold reviewed
+additions. `reference-curation.json` holds 39 original factual entries and primary
+URLs, with no USDA IDs. Generator checks exact source descriptors, unique IDs,
+known categories and bilingual names, deterministically emits sorted/checksummed
+artifacts. Rust then checks licenses/provenance/checksums/relations and imports in
+one transaction. Dry powders prefer g; no density conversion inferred.
+
+All 235 v2 IDs remain. Two narrowed aliases remove unsupported paprika sweetness
+and baking-paste/nut-butter ambiguity; personal labels/overrides take priority.
+Individual source-version evidence is immutable, so v3 uses new snapshots and
+retains the earlier allowed versions. No removal/reassignment pass exists.
+
+Actual CLI results: clean 482 inserted / 0 collisions; archived v2 upgrade
+235 updated + 247 inserted = 482 definitions / 0 collisions. Test fixture with a
+personal Cin preserves that ID and leaves one pending catalog collision.
+Counts refer to catalog definitions; pending entries may not materialize as
+recipe-facing rows. installation-report.json and upgrade-report.json are real
+SQLite results, not generated estimates. Repeat imports are unchanged; startup
+avoids extra audit rows. Failed upgrade rolls back and succeeds after repair.
+
+Audit reports (`quality-audit.json`, INGREDIENT_LOCALIZATION_REVIEW.md) cover all
+old/new identities, NFC/Turkish-normalized collisions, historical IDs, source
+ownership, names, category references and powder units. --check detects report
+drift; separate tests inject actual label/alias/unit/source/ID defects. This is
+structural/project semantic review, not human linguistic certification.

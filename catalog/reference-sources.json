@@ -1,0 +1,145 @@
+{
+  "reviewedAt": "2026-10-09",
+  "purpose": "Primary identity references only, not approved bulk dataset imports",
+  "references": [
+    {
+      "url": "https://arastirma.tarimorman.gov.tr/bagcilik/Menu/64/Uzum-Pekmezi",
+      "identities": [
+        "project-grape-pekmez"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787",
+      "identities": [
+        "project-advocaat",
+        "project-creme-de-cassis",
+        "project-london-gin",
+        "project-maraschino",
+        "project-pastis",
+        "project-sambuca",
+        "project-sloe-gin"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "EU Official Journal 17 May 2019"
+    },
+    {
+      "url": "https://iba-world.com/iba-cocktail/brandy-crusta/",
+      "identities": [
+        "project-aromatic-bitters",
+        "project-lemon-peel",
+        "project-orange-peel",
+        "project-simple-syrup"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062",
+      "identities": [
+        "project-siyez-bulgur",
+        "project-siyez-flour",
+        "project-siyez-grain"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler",
+      "identities": [
+        "project-boza",
+        "project-salep-drink",
+        "project-salep-powder",
+        "project-salgam",
+        "project-sumac-sherbet"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://kulturportali.gov.tr/turkiye/kars/kulturatlasi/kars-kasari",
+      "identities": [
+        "project-kars-kasar"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://sanliurfa.tarimorman.gov.tr/Sayfalar/Detay.aspx?Liste=Duyuru&OgeId=666",
+      "identities": [
+        "project-raki"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.gov.uk/protected-food-drink-names/mezcal",
+      "identities": [
+        "project-mezcal"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.gov.uk/protected-food-drink-names/tequila",
+      "identities": [
+        "project-tequila"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "Web page consulted 2026-10-09"
+    },
+    {
+      "url": "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf",
+      "identities": [
+        "project-apple-brandy",
+        "project-armagnac",
+        "project-blended-whisky",
+        "project-bourbon",
+        "project-calvados",
+        "project-canadian-whisky",
+        "project-cognac",
+        "project-corn-whisky",
+        "project-fruit-brandy",
+        "project-gin",
+        "project-irish-whisky",
+        "project-malt-whisky",
+        "project-pear-brandy",
+        "project-rye-whisky",
+        "project-scotch-whisky"
+      ],
+      "rawSeedApproved": false,
+      "imagesApproved": false,
+      "licenseDecision": "No website/database/text/image relicensing assumed. Only original project-authored factual labels and classifications bundled under project CC0; no copied protected expression or substantial extraction.",
+      "retrievedAt": "2026-10-09",
+      "version": "TTB chapter 4 April 2007"
+    }
+  ]
+}

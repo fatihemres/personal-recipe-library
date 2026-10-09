@@ -154,3 +154,61 @@ types; corrected with checked conversion, then full Rust tests/Clippy rerun.
 Final browser rerun first encountered sandbox EPERM binding localhost:1420;
 authorized local-port retry passed both tests. This is an environment restriction,
 not a product failure or timeout. No unresolved timeouts or failed final gates.
+
+## M3B-2 verification — 2026-10-09
+
+Production version 3: 482 identities, 247 additions, 396 food / 86 beverage,
+252 aliases, 50 categories. Final data removes the broad almond-butter synonym
+instead of inventing an awkward replacement. No migration/dependency changes.
+
+51 Rust tests pass, retaining M1/M2A/M2B/M3A/M3B-1 coverage and adding three
+expansion tests: actual archived v2 upgrade (all 235 IDs, personal recipe/draft,
+per-field override and pending collision intact), real failed upgrade rollback/
+reopen/retry, and source boundaries/forms/Turkish aliases/search performance.
+The subprocess interruption test remains real SQLite crash coverage. Two Python
+audit tests run against isolated copies of actual v2/v3 artifacts, with five
+injected defect subcases (identity/Unicode label/alias/source/unit). All-record
+audit passes with no structural errors or exact alias collisions; 17 human
+terminology questions remain, no independent human review claimed.
+
+32 Vitest tests and 2 Playwright browser tests pass. TypeScript, ESLint, frontend
+production build, Rust fmt/check, Clippy all-targets with warnings denied pass.
+Browser tests are not proof of native SQLite. No check was treated as passed
+merely because of mocks. A first test compile exposed assumptions about the
+minimal Ingredient DTO; fixed by using stored revision/query. Upgrade assertion
+was corrected to count inserted definitions including one pending collision,
+not materialized rows. Both were resolved and tests rerun; no timeouts.
+
+Clean CLI install: 482 inserted/available, zero collisions. Actual archived v2
+upgrade: 235 updated + 247 inserted, 482 available, zero collisions. Artifacts:
+installation-report.json / upgrade-report.json. No personal DB reset/opened for
+these tests. Measured in focused concurrent test run: v2 upgrade 675 ms, 100 real
+Turkish partial SQLite searches 287 ms (~2.9 ms/query). These are local debug
+observations, not a cross-hardware guarantee; gross search regression test uses
+a generous 10-second bound. Re-import skips unchanged packages/startup audits.
+
+Native unsigned debug .app was built with locked/offline dependencies under
+isolated identifier com.recipeatlas.m3b2-verification. Packaged tauri://localhost
+(with no Vite dependency) showed schema 4, SQLite 3.53.2, FK/FTS verified and
+482 production / 0 validation / 0 pending records. Turkish SİYEZ and English alias
+London dry gin resolved real bundled entries. Recipe “M3B-2 Siyez Denemesi” saved
+with Siyez bulguru 35.000001 g, London gin 25 mL and a step. Menu Quit, process
+absence in inventory, relaunch and detail inspection confirmed exact persistence.
+This profile is separate from the user's database. Initial automation getApp call
+took 341 seconds; subsequent launch 1.2 seconds. That is tool-call latency, not a
+confirmed app initialization timeout/failure. Catalog initialization completed.
+
+Windows/Intel native execution, signed/notarized releases and hardware network
+disabling remain unverified. Normal recipe workflows contain no runtime API call;
+embedded package installs without a development server or external seed file.
+Final package verification and dev-launch details are appended in PROJECT_PROGRESS.
+
+Final reviewed package (`com.recipeatlas.m3b2-final-verification`) additionally
+confirmed updated M3B-2 copy, schema/FK/FTS and 482/0/0 counts, Turkish SİYEZ search,
+keyboard selection, actual recipe save and confirmed full quit/relaunch retaining
+Siyez bulguru 35.000001 g. Final first getApp automation call took 888 seconds;
+relaunch took 0.7 seconds. Cause of first-launch tool/OS latency remains unknown;
+subsequent app flows and SQLite checks succeeded. No false timeout claim.
+Isolated development launch on port1433 compiled and ran the native binary and
+was intentionally stopped afterward. Deterministic reproduction left all five
+artifact hashes unchanged; all eight archived v2 files match the M3B-1 commit.

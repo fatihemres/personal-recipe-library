@@ -225,3 +225,16 @@ regional terminology, version the delta and rerun preservation/native gates.
 Full goal remains 800–1,000 distinct reviewed identities contingent on lawful
 source availability, with every requested family represented; see the non-additive
 coverage matrix in CATALOG_COVERAGE_PLAN.md. No M3B-2/3 or M3C implemented here.
+
+## M3B-2 implementation status — 2026-10-09
+
+Expanded production package version 3: 482 identities, 247 additions, 396 food /
+86 beverage, 252 aliases, 50 category nodes. Deterministic grouped curation,
+reference rights manifest, all-record localization audit and 17-item human review
+queue delivered. Archived actual v2 package enables real upgrade compatibility
+and failure/retry tests; schema 4 unchanged. No M3B-3/M3C implemented.
+
+Verification and final limitations are recorded in TESTING.md and PROJECT_PROGRESS.
+Next proposed authorized increment: M3B-3 targeted remaining regional/beverage
+coverage and human terminology review, new immutable seed version, preservation
+and packaging gates. Full long-term catalog and V1 scope remain unchanged.

@@ -104,3 +104,26 @@ until redistribution rights are clear. Add independently reviewed regional terms
 only with traceable identity/form evidence. Produce version 3 with delta coverage,
 reproducible artifacts and the same clean/upgrade/preservation/native gates.
 Do not implement M3C discovery UI or claim final M3B coverage in that increment.
+
+## M3B-2 achieved checkpoint — production version 3
+
+482 canonical identities (396 food / 86 beverage), 247 added over M3B-1;
+443 USDA-backed / 39 original reference-backed. 252 aliases, 50 category nodes.
+The 450–600 working target is met without branded dumps or invented metadata.
+See CATALOG_COVERAGE_REPORT.md for every category/subcategory and coverage.json
+for machine counts. Direct memberships overlap; total is not their sum.
+
+New breadth includes cheeses/flours/noodles, Asian sauces/legume preparations,
+dried fruits, raw and preserved forms, seafood, cocoa, decaffeinated beverages,
+regional siyez forms/pekmez/Kars cheese/salep, gin/whisky/brandy/liqueur categories,
+tequila/mezcal/rakı, bitters/syrup/citrus-peel bar ingredients. Missing translations
+0; exact alias collisions 0; independent human language reviews 0, queued items 17.
+The extensive 800–1,000 long-term coverage ambition remains unmet; M3B is not complete.
+
+Recommended M3B-3: review the terminology queue with a Turkish culinary reviewer;
+expand remaining Turkish cheeses, ferments, regional bulgur/pulses/plants and
+Mediterranean/Middle Eastern specialties; balance rum/vodka/tequila styles,
+vermouth/beer styles, coffee beans/tea leaves, tonic/bar syrups. Pin each approved
+source and preserve generic/product/form boundaries. Package version 4 with new
+source snapshots, retain v2/v3 upgrade fixtures, rerun preservation and native
+checks. Do not mix this with M3C interface redesign.

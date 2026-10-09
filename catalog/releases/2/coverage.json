@@ -1,0 +1,73 @@
+{
+  "additionalIdentities": 227,
+  "aliasCount": 200,
+  "categoryMembershipCounts": {
+    "baking": 11,
+    "beers": 2,
+    "beverage": 3,
+    "coffee": 2,
+    "coffee-tea": 2,
+    "condiments": 7,
+    "dairy": 8,
+    "dairy-alternatives": 2,
+    "eggs": 2,
+    "fermented": 1,
+    "fruit": 33,
+    "garnishes": 4,
+    "grains": 9,
+    "herbs": 12,
+    "infusions": 2,
+    "international-specialty": 7,
+    "juices": 8,
+    "legumes": 9,
+    "liqueurs": 3,
+    "meat": 3,
+    "mixers": 3,
+    "nuts-seeds": 14,
+    "oils": 6,
+    "other-beverages": 1,
+    "poultry": 3,
+    "sauces": 7,
+    "seafood": 7,
+    "soft-drinks": 3,
+    "spices": 18,
+    "spirits": 3,
+    "sweeteners": 4,
+    "syrups": 2,
+    "tea": 3,
+    "vegetables": 41,
+    "water": 2,
+    "wines": 4
+  },
+  "categoryNodes": 39,
+  "dataset": "recipeatlas-ingredients",
+  "duplicateNameCandidates": [],
+  "duplicateSelectedIds": 0,
+  "emptyCategories": [
+    "bitters",
+    "turkish-regional"
+  ],
+  "importedRecords": null,
+  "importedRecordsExplanation": "Package coverage; actual database import results are separate CLI/runtime reports.",
+  "incompleteTranslations": 0,
+  "ingredientTypeCounts": {
+    "beverage": 38,
+    "food": 197
+  },
+  "localizationReview": "Project semantic review against pinned English descriptors; no independent Turkish culinary expert review.",
+  "missingMetadata": {
+    "abv": 235,
+    "allergens": 235,
+    "density": 235,
+    "nutrition": 235
+  },
+  "productionReadyRecords": 235,
+  "rejectedRecords": 0,
+  "selectedRecords": 235,
+  "sharedValidationIdentities": 8,
+  "sourceCounts": {
+    "recipeatlas-curation": 235,
+    "usda-sr-legacy": 235
+  },
+  "version": 2
+}

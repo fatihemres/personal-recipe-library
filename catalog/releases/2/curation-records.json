@@ -1,0 +1,942 @@
+[
+  {
+    "description": "{\"aliasesEn\":[\"Prepared coffee\"],\"aliasesTr\":[\"Demleme kahve\"],\"categories\":[\"coffee-tea\",\"coffee\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brewed coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş kahve\"}",
+    "externalId": "coffee-brewed"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Whole egg\"],\"aliasesTr\":[\"Yumurta\"],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw whole egg\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ bütün yumurta\"}",
+    "externalId": "egg-whole-raw"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sweeteners\",\"beverage\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Honey\",\"preferredUnit\":\"g\",\"tr\":\"Bal\"}",
+    "externalId": "honey"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Lime\"],\"aliasesTr\":[\"Misket limonu\"],\"categories\":[\"fruit\",\"garnishes\",\"beverage\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raw lime\",\"preferredUnit\":\"adet\",\"tr\":\"Çiğ misket limonu\"}",
+    "externalId": "lime-raw"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Whole milk\"],\"aliasesTr\":[\"Tam yağlı süt\"],\"categories\":[\"dairy\",\"beverage\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Whole milk (3.25%, unfortified)\",\"preferredUnit\":\"mL\",\"tr\":\"Tam yağlı süt (%3,25 yağ)\"}",
+    "externalId": "milk-whole-unfortified"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zeytin yağı\"],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Olive oil\",\"preferredUnit\":\"mL\",\"tr\":\"Zeytinyağı\"}",
+    "externalId": "olive-oil"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"White sugar\"],\"aliasesTr\":[\"Şeker\"],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Granulated sugar\",\"preferredUnit\":\"g\",\"tr\":\"Toz şeker\"}",
+    "externalId": "sugar-granulated"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Icing sugar\",\"Confectioners sugar\"],\"aliasesTr\":[\"Pudra şeker\"],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Powdered sugar\",\"preferredUnit\":\"g\",\"tr\":\"Pudra şekeri\"}",
+    "externalId": "sugar-powdered"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Keten yağı\"],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Flaxseed oil (cold pressed)\",\"preferredUnit\":\"g\",\"tr\":\"Soğuk sıkım keten tohumu yağı\"}",
+    "externalId": "usda-sr-167702"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Sake rice wine\",\"preferredUnit\":\"mL\",\"tr\":\"Sake\"}",
+    "externalId": "usda-sr-167723"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Limon\"],\"categories\":[\"fruit\",\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Lemon (raw, without peel)\",\"preferredUnit\":\"g\",\"tr\":\"Limon (çiğ, kabuksuz)\"}",
+    "externalId": "usda-sr-167746"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Limon suyu\"],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Lemon juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Taze limon suyu\"}",
+    "externalId": "usda-sr-167747"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Frambuaz\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Raspberry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ahududu (çiğ)\"}",
+    "externalId": "usda-sr-167755"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çilek\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Strawberry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çilek (çiğ)\"}",
+    "externalId": "usda-sr-167762"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Demirhindi\"],\"categories\":[\"fruit\",\"international-specialty\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Tamarind (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Demirhindi (çiğ)\"}",
+    "externalId": "usda-sr-167763"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Karpuz\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Watermelon (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Karpuz (çiğ)\"}",
+    "externalId": "usda-sr-167765"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Grenadin\"],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Grenadine syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Grenadin şurubu\"}",
+    "externalId": "usda-sr-168088"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kivi\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Green kiwifruit (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil kivi (çiğ)\"}",
+    "externalId": "usda-sr-168153"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kumkuat\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Kumquat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kamkat (çiğ)\"}",
+    "externalId": "usda-sr-168154"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Lime suyu\"],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Lime juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Taze misket limonu suyu\"}",
+    "externalId": "usda-sr-168156"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ayva\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Quince (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ayva (çiğ)\"}",
+    "externalId": "usda-sr-168163"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuşkonmaz\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Asparagus (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuşkonmaz (çiğ)\"}",
+    "externalId": "usda-sr-168389"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Salatalık\",\"Hıyar\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Cucumber (raw, with peel)\",\"preferredUnit\":\"g\",\"tr\":\"Salatalık (çiğ, kabuklu)\"}",
+    "externalId": "usda-sr-168409"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Balkabağı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pumpkin (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bal kabağı (çiğ)\"}",
+    "externalId": "usda-sr-168448"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ispanak\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Spinach (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ispanak (çiğ)\"}",
+    "externalId": "usda-sr-168462"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Lemongrass\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Lemongrass (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Limon otu (çiğ)\"}",
+    "externalId": "usda-sr-168573"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Asma yaprağı\",\"Üzüm yaprağı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Grape leaves (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Asma yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-168575"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İstiridye mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Oyster mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İstiridye mantarı (çiğ)\"}",
+    "externalId": "usda-sr-168580"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bira\"],\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Beer (regular)\",\"preferredUnit\":\"mL\",\"tr\":\"Normal bira\"}",
+    "externalId": "usda-sr-168746"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"beers\"],\"dimensions\":[\"volume\"],\"en\":\"Beer (light)\",\"preferredUnit\":\"mL\",\"tr\":\"Hafif bira\"}",
+    "externalId": "usda-sr-168749"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sweeteners\"],\"dimensions\":[\"mass\"],\"en\":\"Brown sugar\",\"preferredUnit\":\"g\",\"tr\":\"Esmer şeker\"}",
+    "externalId": "usda-sr-168833"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kinoa\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Quinoa (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Kinoa (pişmemiş)\"}",
+    "externalId": "usda-sr-168874"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam buğday unu\"}",
+    "externalId": "usda-sr-168893"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"White short-grain rice (unenriched, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kısa taneli beyaz pirinç (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-168931"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kantalup\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Cantaloupe melon (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kantalup kavunu (çiğ)\"}",
+    "externalId": "usda-sr-169092"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Portakal\"],\"categories\":[\"fruit\",\"garnishes\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Orange (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Portakal (çiğ)\"}",
+    "externalId": "usda-sr-169097"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Portakal suyu\"],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Orange juice (raw)\",\"preferredUnit\":\"mL\",\"tr\":\"Taze portakal suyu\"}",
+    "externalId": "usda-sr-169098"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Tangerine\"],\"aliasesTr\":[\"Mandalina\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Mandarin orange (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mandalina (çiğ)\"}",
+    "externalId": "usda-sr-169105"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Armut\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pear (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Armut (çiğ)\"}",
+    "externalId": "usda-sr-169118"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ananas\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pineapple (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Ananas (çiğ)\"}",
+    "externalId": "usda-sr-169124"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Nar\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Pomegranate (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Nar (çiğ)\"}",
+    "externalId": "usda-sr-169134"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Beetroot\"],\"aliasesTr\":[\"Kırmızı pancar\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Beet (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Pancar (çiğ)\"}",
+    "externalId": "usda-sr-169145"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Enginar\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Globe artichoke (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Enginar (çiğ)\"}",
+    "externalId": "usda-sr-169205"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Aubergine\"],\"aliasesTr\":[\"Patlıcan\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Eggplant (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Patlıcan (çiğ)\"}",
+    "externalId": "usda-sr-169228"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sarımsak\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Garlic (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sarımsak (çiğ)\"}",
+    "externalId": "usda-sr-169230"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zencefil kökü\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Ginger root (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Taze zencefil kökü\"}",
+    "externalId": "usda-sr-169231"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shiitake mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shiitake mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şiitake mantarı (çiğ)\"}",
+    "externalId": "usda-sr-169242"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pırasa\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Leek (raw, bulb and lower leaves)\",\"preferredUnit\":\"g\",\"tr\":\"Pırasa (çiğ)\"}",
+    "externalId": "usda-sr-169246"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Cos lettuce\"],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Romaine lettuce (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Romen marulu (çiğ)\"}",
+    "externalId": "usda-sr-169247"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Aysberg marul\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Iceberg lettuce (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Göbek marul (çiğ)\"}",
+    "externalId": "usda-sr-169248"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Button mushroom\"],\"aliasesTr\":[\"Kültür mantarı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"White mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz mantar (çiğ)\"}",
+    "externalId": "usda-sr-169251"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bamya\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Okra (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bamya (çiğ)\"}",
+    "externalId": "usda-sr-169260"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Semizotu\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Purslane (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Semizotu (çiğ)\"}",
+    "externalId": "usda-sr-169274"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Turp\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Radish (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Turp (çiğ)\"}",
+    "externalId": "usda-sr-169276"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sauerkraut\"],\"categories\":[\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Sauerkraut (canned, solids and liquid)\",\"preferredUnit\":\"g\",\"tr\":\"Konserve lahana turşusu\"}",
+    "externalId": "usda-sr-169279"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Courgette\"],\"aliasesTr\":[\"Sakız kabağı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Zucchini (raw, with skin)\",\"preferredUnit\":\"g\",\"tr\":\"Kabak (çiğ, kabuklu)\"}",
+    "externalId": "usda-sr-169291"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Sour cucumber pickles\",\"preferredUnit\":\"g\",\"tr\":\"Ekşi salatalık turşusu\"}",
+    "externalId": "usda-sr-169379"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Yellow bell pepper\"],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet yellow pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı tatlı biber (çiğ)\"}",
+    "externalId": "usda-sr-169383"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Rocket\"],\"aliasesTr\":[\"Roka\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Arugula (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Roka (çiğ)\"}",
+    "externalId": "usda-sr-169387"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Linseed\"],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Flaxseed\",\"preferredUnit\":\"g\",\"tr\":\"Keten tohumu\"}",
+    "externalId": "usda-sr-169414"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kakao\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa powder (unsweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kakao tozu\"}",
+    "externalId": "usda-sr-169593"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Maple syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Akçaağaç şurubu\"}",
+    "externalId": "usda-sr-169661"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Corn starch\"],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Cornstarch\",\"preferredUnit\":\"g\",\"tr\":\"Mısır nişastası\"}",
+    "externalId": "usda-sr-169698"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuskus\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Couscous (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuskus (kuru)\"}",
+    "externalId": "usda-sr-169699"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Darı\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Millet (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Darı (çiğ)\"}",
+    "externalId": "usda-sr-169702"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Oats\",\"preferredUnit\":\"g\",\"tr\":\"Yulaf\"}",
+    "externalId": "usda-sr-169705"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pirinç unu\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"White rice flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz pirinç unu (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-169714"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"White long-grain rice (unenriched, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Uzun taneli beyaz pirinç (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-169756"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"White all-purpose wheat flour (unenriched)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz çok amaçlı buğday unu (zenginleştirilmemiş)\"}",
+    "externalId": "usda-sr-169761"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Malta eriği\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Loquat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yenidünya (çiğ)\"}",
+    "externalId": "usda-sr-169908"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mango\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Mango (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mango (çiğ)\"}",
+    "externalId": "usda-sr-169910"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Honeydew kavunu\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Honeydew melon (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bal kavunu (çiğ)\"}",
+    "externalId": "usda-sr-169911"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Dut\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Mulberry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Dut (çiğ)\"}",
+    "externalId": "usda-sr-169913"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Nektarin\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Nectarine (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Nektarin (çiğ)\"}",
+    "externalId": "usda-sr-169914"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şeftali\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Peach (raw, yellow)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı şeftali (çiğ)\"}",
+    "externalId": "usda-sr-169928"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Trabzon hurması\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Japanese persimmon (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Japon hurması (çiğ)\"}",
+    "externalId": "usda-sr-169941"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Pineapple juice (unsweetened, no added ascorbic acid)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ambalajlı ananas suyu (askorbik asit eklenmemiş)\"}",
+    "externalId": "usda-sr-169947"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Erik\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Plum (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Erik (çiğ)\"}",
+    "externalId": "usda-sr-169949"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yeşil fasulye\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Green snap beans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Taze fasulye (çiğ, yeşil)\"}",
+    "externalId": "usda-sr-169961"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Beyaz lahana\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Cabbage (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Lahana (çiğ)\"}",
+    "externalId": "usda-sr-169975"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mor lahana\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Red cabbage (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı lahana (çiğ)\"}",
+    "externalId": "usda-sr-169977"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Karnabahar\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Cauliflower (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Karnabahar (çiğ)\"}",
+    "externalId": "usda-sr-169986"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kereviz sapı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Celery (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sap kereviz (çiğ)\"}",
+    "externalId": "usda-sr-169988"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pazı\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Swiss chard (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Pazı (çiğ)\"}",
+    "externalId": "usda-sr-169991"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Cilantro\"],\"aliasesTr\":[\"Kişniş yaprağı\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Coriander leaves (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Taze kişniş yaprağı\"}",
+    "externalId": "usda-sr-169997"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sarı mısır\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet corn (raw, yellow)\",\"preferredUnit\":\"g\",\"tr\":\"Tatlı mısır (çiğ, sarı)\"}",
+    "externalId": "usda-sr-169998"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuru soğan\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Onion (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Soğan (çiğ)\"}",
+    "externalId": "usda-sr-170000"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Scallion\"],\"aliasesTr\":[\"Yeşil soğan\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Spring onion (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Taze soğan (çiğ)\"}",
+    "externalId": "usda-sr-170005"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Patates\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Potato (raw, with skin)\",\"preferredUnit\":\"g\",\"tr\":\"Patates (çiğ, kabuklu)\"}",
+    "externalId": "usda-sr-170026"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Red bell pepper\"],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet red pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı tatlı biber (çiğ)\"}",
+    "externalId": "usda-sr-170108"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Susam\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Sesame seeds (whole, dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru bütün susam\"}",
+    "externalId": "usda-sr-170150"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kaju\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Cashew nuts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ kaju\"}",
+    "externalId": "usda-sr-170162"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hindistan cevizi içi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Coconut meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ Hindistan cevizi eti\"}",
+    "externalId": "usda-sr-170169"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pikan cevizi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pecans\",\"preferredUnit\":\"g\",\"tr\":\"Pekan cevizi\"}",
+    "externalId": "usda-sr-170182"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Antep fıstığı\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pistachio nuts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ Antep fıstığı\"}",
+    "externalId": "usda-sr-170184"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ceviz\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"English walnuts\",\"preferredUnit\":\"g\",\"tr\":\"Adi ceviz\"}",
+    "externalId": "usda-sr-170187"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İnci arpa\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Pearled barley (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İnci arpa (çiğ)\"}",
+    "externalId": "usda-sr-170284"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Greçka\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Buckwheat\",\"preferredUnit\":\"g\",\"tr\":\"Karabuğday\"}",
+    "externalId": "usda-sr-170286"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sarı mısır unu\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain yellow corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam taneli sarı mısır unu\"}",
+    "externalId": "usda-sr-170290"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brokoli\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Broccoli (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Brokoli (çiğ)\"}",
+    "externalId": "usda-sr-170379"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brüksel lahanası\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Brussels sprouts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Brüksel lahanası (çiğ)\"}",
+    "externalId": "usda-sr-170383"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Havuç\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Carrot (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Havuç (çiğ)\"}",
+    "externalId": "usda-sr-170393"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kereviz kökü\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Celeriac (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kök kereviz (çiğ)\"}",
+    "externalId": "usda-sr-170400"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Maydanoz\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Parsley (fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Taze maydanoz\"}",
+    "externalId": "usda-sr-170416"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bezelye\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Green peas (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bezelye (çiğ)\"}",
+    "externalId": "usda-sr-170419"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Green bell pepper\"],\"aliasesTr\":[],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet green pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil tatlı biber (çiğ)\"}",
+    "externalId": "usda-sr-170427"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Domates\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Tomato (raw, red)\",\"preferredUnit\":\"g\",\"tr\":\"Domates (çiğ, kırmızı)\"}",
+    "externalId": "usda-sr-170457"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Canned tomato paste (no salt added)\",\"preferredUnit\":\"g\",\"tr\":\"Tuz eklenmemiş konserve domates salçası\"}",
+    "externalId": "usda-sr-170459"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Canned tomato puree (no salt added)\",\"preferredUnit\":\"g\",\"tr\":\"Tuz eklenmemiş konserve domates püresi\"}",
+    "externalId": "usda-sr-170460"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şalgam kökü\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Turnip (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Şalgam (çiğ)\"}",
+    "externalId": "usda-sr-170465"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Carrot juice (canned)\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve havuç suyu\"}",
+    "externalId": "usda-sr-170491"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şalot\"],\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Shallot (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Arpacık soğanı (çiğ)\"}",
+    "externalId": "usda-sr-170499"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tomato juice (canned, no salt added)\",\"preferredUnit\":\"mL\",\"tr\":\"Tuz eklenmemiş konserve domates suyu\"}",
+    "externalId": "usda-sr-170545"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çiya tohumu\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Chia seeds (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru chia tohumu\"}",
+    "externalId": "usda-sr-170554"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kabak çekirdeği içi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Pumpkin and squash seed kernels (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kabak çekirdeği içi\"}",
+    "externalId": "usda-sr-170556"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ayçekirdeği içi\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Sunflower seed kernels (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru ayçekirdeği içi\"}",
+    "externalId": "usda-sr-170562"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Almonds\",\"preferredUnit\":\"g\",\"tr\":\"Badem\"}",
+    "externalId": "usda-sr-170567"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Filberts\"],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Hazelnuts\",\"preferredUnit\":\"g\",\"tr\":\"Fındık\"}",
+    "externalId": "usda-sr-170581"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Bulgur\"],\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Bulgur (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Bulgur (kuru)\"}",
+    "externalId": "usda-sr-170688"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Heavy whipping cream\",\"preferredUnit\":\"g\",\"tr\":\"Yüksek yağlı çırpma kreması\"}",
+    "externalId": "usda-sr-170859"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Defne yaprağı\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Bay leaf (dried spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru defne yaprağı\"}",
+    "externalId": "usda-sr-170917"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cardamom (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kakule\"}",
+    "externalId": "usda-sr-170919"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Coriander seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kişniş tohumu\"}",
+    "externalId": "usda-sr-170922"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kimyon\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cumin seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Kimyon tohumu\"}",
+    "externalId": "usda-sr-170923"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Toz zencefil\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Ginger (ground spice)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş zencefil\"}",
+    "externalId": "usda-sr-170926"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Black pepper (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Karabiber\"}",
+    "externalId": "usda-sr-170931"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"White pepper (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz biber\"}",
+    "externalId": "usda-sr-170933"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Saffron (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Safran\"}",
+    "externalId": "usda-sr-170934"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Thyme (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kekik (thyme)\"}",
+    "externalId": "usda-sr-170938"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Plain whole-milk yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade tam yağlı yoğurt\"}",
+    "externalId": "usda-sr-171284"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yenibahar\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Allspice (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş yenibahar\"}",
+    "externalId": "usda-sr-171315"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Anason\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Anise seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Anason tohumu\"}",
+    "externalId": "usda-sr-171316"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Basil (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru fesleğen\"}",
+    "externalId": "usda-sr-171317"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tarçın\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cinnamon (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Toz tarçın\"}",
+    "externalId": "usda-sr-171320"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Toz karanfil\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Cloves (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş karanfil\"}",
+    "externalId": "usda-sr-171321"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Fennel seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Rezene tohumu\"}",
+    "externalId": "usda-sr-171323"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çemen tohumu\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Fenugreek seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Çemen otu tohumu\"}",
+    "externalId": "usda-sr-171324"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Garlic powder\",\"preferredUnit\":\"g\",\"tr\":\"Sarımsak tozu\"}",
+    "externalId": "usda-sr-171325"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hint cevizi\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Nutmeg (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş muskat\"}",
+    "externalId": "usda-sr-171326"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Onion powder\",\"preferredUnit\":\"g\",\"tr\":\"Soğan tozu\"}",
+    "externalId": "usda-sr-171327"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Oregano (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru kekik (oregano)\"}",
+    "externalId": "usda-sr-171328"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tatlı toz kırmızı biber\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Paprika (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Paprika\"}",
+    "externalId": "usda-sr-171329"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Poppy seed (spice)\",\"preferredUnit\":\"g\",\"tr\":\"Haşhaş tohumu\"}",
+    "externalId": "usda-sr-171330"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Biberiye\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Rosemary (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru biberiye\"}",
+    "externalId": "usda-sr-171333"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Chicken breast (meat and skin, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tavuk göğsü (et ve deri, çiğ)\"}",
+    "externalId": "usda-sr-171474"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kabuksuz elma\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Apple (raw, without skin)\",\"preferredUnit\":\"g\",\"tr\":\"Elma (çiğ, kabuksuz)\"}",
+    "externalId": "usda-sr-171689"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kayısı\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Apricot (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kayısı (çiğ)\"}",
+    "externalId": "usda-sr-171697"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Avokado\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Avocado (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Avokado (çiğ)\"}",
+    "externalId": "usda-sr-171705"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yaban mersini\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Blueberry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yaban mersini (çiğ)\"}",
+    "externalId": "usda-sr-171711"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kiraz\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sweet cherry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kiraz (çiğ)\"}",
+    "externalId": "usda-sr-171719"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground beef (85% lean, 15% fat, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Dana kıyma (%85 yağsız et, %15 yağ; çiğ)\"}",
+    "externalId": "usda-sr-171796"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tonik suyu\"],\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Tonic water\",\"preferredUnit\":\"mL\",\"tr\":\"Tonik\"}",
+    "externalId": "usda-sr-171869"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Granül kahve\"],\"categories\":[\"coffee-tea\",\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Instant coffee powder (regular)\",\"preferredUnit\":\"g\",\"tr\":\"Normal hazır kahve tozu\"}",
+    "externalId": "usda-sr-171893"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Rosé wine\"],\"aliasesTr\":[\"Roze\"],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Rose wine\",\"preferredUnit\":\"mL\",\"tr\":\"Roze şarap\"}",
+    "externalId": "usda-sr-171908"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yeşil çay\"],\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Green tea (brewed, regular)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş yeşil çay\"}",
+    "externalId": "usda-sr-171917"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pirinç içeceği\"],\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Rice milk (unsweetened)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz pirinç içeceği\"}",
+    "externalId": "usda-sr-171942"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hibiskus çayı\"],\"categories\":[\"infusions\"],\"dimensions\":[\"volume\"],\"en\":\"Hibiscus tea (brewed)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş hibiskus çayı\"}",
+    "externalId": "usda-sr-171946"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Brie\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Brie cheese\",\"preferredUnit\":\"g\",\"tr\":\"Brie peyniri\"}",
+    "externalId": "usda-sr-172177"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Camembert\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Camembert cheese\",\"preferredUnit\":\"g\",\"tr\":\"Camembert peyniri\"}",
+    "externalId": "usda-sr-172178"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yumurta akı\"],\"categories\":[\"eggs\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Egg white (raw, fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ taze yumurta akı\"}",
+    "externalId": "usda-sr-172183"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Zerdeçal\"],\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Turmeric (ground)\",\"preferredUnit\":\"g\",\"tr\":\"Toz zerdeçal\"}",
+    "externalId": "usda-sr-172231"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Fesleğen\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Basil (fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Taze fesleğen\"}",
+    "externalId": "usda-sr-172232"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Dereotu\"],\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Dill weed (fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Taze dereotu\"}",
+    "externalId": "usda-sr-172233"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Damıtılmış sirke\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Distilled vinegar\",\"preferredUnit\":\"g\",\"tr\":\"Distile sirke\"}",
+    "externalId": "usda-sr-172237"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kapari\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Capers (canned)\",\"preferredUnit\":\"g\",\"tr\":\"Konserve kapari\"}",
+    "externalId": "usda-sr-172238"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Red wine vinegar\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı şarap sirkesi\"}",
+    "externalId": "usda-sr-172240"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Balzamik\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Balsamic vinegar\",\"preferredUnit\":\"g\",\"tr\":\"Balzamik sirke\"}",
+    "externalId": "usda-sr-172241"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Canola oil\",\"preferredUnit\":\"g\",\"tr\":\"Kanola yağı\"}",
+    "externalId": "usda-sr-172336"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mercimek\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Lentils (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Mercimek (çiğ)\"}",
+    "externalId": "usda-sr-172420"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yer fıstığı\"],\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Peanuts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ yer fıstığı\"}",
+    "externalId": "usda-sr-172430"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baking powder (double acting, straight phosphate)\",\"preferredUnit\":\"g\",\"tr\":\"Çift etkili fosfatlı kabartma tozu\"}",
+    "externalId": "usda-sr-172804"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hoisin\"],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Hoisin sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Hoisin sosu\"}",
+    "externalId": "usda-sr-172886"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"İncir\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Fig (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İncir (çiğ)\"}",
+    "externalId": "usda-sr-173021"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Greyfurt\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Grapefruit (raw, mixed colors)\",\"preferredUnit\":\"g\",\"tr\":\"Greyfurt (çiğ, farklı renkler)\"}",
+    "externalId": "usda-sr-173033"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Grape juice (unsweetened, no added ascorbic acid)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ambalajlı üzüm suyu (askorbik asit eklenmemiş)\"}",
+    "externalId": "usda-sr-173042"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Creme de menthe (72 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Nane likörü (72 ABD proof)\"}",
+    "externalId": "usda-sr-173168"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kırmızı şarap\"],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Red table wine\",\"preferredUnit\":\"mL\",\"tr\":\"Kırmızı sofra şarabı\"}",
+    "externalId": "usda-sr-173190"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Lemon-lime soda (caffeine free)\",\"preferredUnit\":\"mL\",\"tr\":\"Limon-misket limonu gazozu (kafeinsiz)\"}",
+    "externalId": "usda-sr-173205"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Siyah çay\"],\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Black tea (brewed, with tap water)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş siyah çay\"}",
+    "externalId": "usda-sr-173227"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Butter (salted)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzlu tereyağı\"}",
+    "externalId": "usda-sr-173410"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Çedar peyniri\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cheddar cheese\",\"preferredUnit\":\"g\",\"tr\":\"Cheddar peyniri\"}",
+    "externalId": "usda-sr-173414"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Cream cheese\",\"preferredUnit\":\"g\",\"tr\":\"Krem peynir\"}",
+    "externalId": "usda-sr-173418"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Feta\"],\"categories\":[\"dairy\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Feta cheese\",\"preferredUnit\":\"g\",\"tr\":\"Feta peyniri\"}",
+    "externalId": "usda-sr-173420"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Butter (unsalted)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz tereyağı\"}",
+    "externalId": "usda-sr-173430"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tuz\"],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Table salt\",\"preferredUnit\":\"g\",\"tr\":\"Sofra tuzu\"}",
+    "externalId": "usda-sr-173468"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Apple cider vinegar\"],\"aliasesTr\":[],\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Cider vinegar\",\"preferredUnit\":\"g\",\"tr\":\"Elma sirkesi\"}",
+    "externalId": "usda-sr-173469"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Nane\"],\"categories\":[\"herbs\",\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Spearmint (fresh)\",\"preferredUnit\":\"g\",\"tr\":\"Taze yeşil nane\"}",
+    "externalId": "usda-sr-173475"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"oils\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Avocado oil\",\"preferredUnit\":\"g\",\"tr\":\"Avokado yağı\"}",
+    "externalId": "usda-sr-173573"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Siyah fasulye\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Black beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Siyah fasulye (kuru, çiğ)\"}",
+    "externalId": "usda-sr-173734"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Garbanzo beans\"],\"aliasesTr\":[\"Nohut\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpeas (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Nohut (kuru, çiğ)\"}",
+    "externalId": "usda-sr-173756"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Apple juice (unsweetened, no added ascorbic acid)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ambalajlı elma suyu (askorbik asit eklenmemiş)\"}",
+    "externalId": "usda-sr-173933"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Muz\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Banana (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Muz (çiğ)\"}",
+    "externalId": "usda-sr-173944"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Böğürtlen\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Blackberry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Böğürtlen (çiğ)\"}",
+    "externalId": "usda-sr-173946"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Vişne\"],\"categories\":[\"fruit\"],\"dimensions\":[\"mass\",\"count\"],\"en\":\"Sour red cherry (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Vişne (çiğ)\"}",
+    "externalId": "usda-sr-173954"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Oolong çayı\"],\"categories\":[\"tea\",\"international-specialty\"],\"dimensions\":[\"volume\"],\"en\":\"Oolong tea (brewed)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş oolong çayı\"}",
+    "externalId": "usda-sr-174120"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Papatya çayı\"],\"categories\":[\"infusions\"],\"dimensions\":[\"volume\"],\"en\":\"Chamomile tea (brewed)\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş papatya çayı\"}",
+    "externalId": "usda-sr-174156"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Şişe suyu\"],\"categories\":[\"water\"],\"dimensions\":[\"volume\"],\"en\":\"Bottled water (generic)\",\"preferredUnit\":\"mL\",\"tr\":\"Şişelenmiş su (genel)\"}",
+    "externalId": "usda-sr-174158"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Mürekkep balığı\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Cuttlefish (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ mürekkep balığı\"}",
+    "externalId": "usda-sr-174215"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ahtapot\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Common octopus (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ ahtapot\"}",
+    "externalId": "usda-sr-174218"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kalamar\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Squid (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ kalamar\"}",
+    "externalId": "usda-sr-174223"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Maş fasulyesi\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Mung beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Maş fasulyesi (kuru, çiğ)\"}",
+    "externalId": "usda-sr-174256"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Soya fasulyesi\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Soybeans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Soya fasulyesi (kuru, çiğ)\"}",
+    "externalId": "usda-sr-174270"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Shoyu\"],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Shoyu soy sauce (soy and wheat)\",\"preferredUnit\":\"g\",\"tr\":\"Shoyu soya sosu (soya ve buğday)\"}",
+    "externalId": "usda-sr-174277"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tamari\"],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Tamari soy sauce\",\"preferredUnit\":\"g\",\"tr\":\"Tamari soya sosu\"}",
+    "externalId": "usda-sr-174278"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kırmızı mercimek\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Red lentils (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı mercimek (çiğ)\"}",
+    "externalId": "usda-sr-174284"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuzu kıyma\"],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground lamb (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuzu kıyma (çiğ)\"}",
+    "externalId": "usda-sr-174370"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Goose meat and skin (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kaz eti ve derisi (çiğ)\"}",
+    "externalId": "usda-sr-174470"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Turkey breast meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Hindi göğüs eti (çiğ)\"}",
+    "externalId": "usda-sr-174515"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Oyster sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"İstiridye sosu\"}",
+    "externalId": "usda-sr-174529"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Fish sauce (ready to serve)\",\"preferredUnit\":\"g\",\"tr\":\"Balık sosu\"}",
+    "externalId": "usda-sr-174531"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Rum (80 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Rom (80 ABD proof)\"}",
+    "externalId": "usda-sr-174817"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Vodka (80 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Votka (80 ABD proof)\"}",
+    "externalId": "usda-sr-174818"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Whisky (86 US proof)\"],\"aliasesTr\":[],\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Whiskey (86 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Viski (86 ABD proof)\"}",
+    "externalId": "usda-sr-174819"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Hindistan cevizi suyu\"],\"categories\":[\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Coconut water (unsweetened, ready to drink)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz Hindistan cevizi suyu\"}",
+    "externalId": "usda-sr-174831"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Badem içeceği\"],\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"mass\",\"volume\"],\"en\":\"Almond milk (unsweetened, shelf stable)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz uzun ömürlü badem içeceği\"}",
+    "externalId": "usda-sr-174832"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Beyaz şarap\"],\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"White table wine\",\"preferredUnit\":\"mL\",\"tr\":\"Beyaz sofra şarabı\"}",
+    "externalId": "usda-sr-174837"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Club soda\"],\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Club soda\",\"preferredUnit\":\"mL\",\"tr\":\"Soda (club soda)\"}",
+    "externalId": "usda-sr-174842"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ginger ale\"],\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Ginger ale\",\"preferredUnit\":\"mL\",\"tr\":\"Zencefilli gazoz\"}",
+    "externalId": "usda-sr-174846"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kola\"],\"categories\":[\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Cola (regular)\",\"preferredUnit\":\"mL\",\"tr\":\"Kola (normal)\"}",
+    "externalId": "usda-sr-174852"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Orange soda\",\"preferredUnit\":\"mL\",\"tr\":\"Portakallı gazoz\"}",
+    "externalId": "usda-sr-174854"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Sodyum bikarbonat\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baking soda\",\"preferredUnit\":\"g\",\"tr\":\"Karbonat\"}",
+    "externalId": "usda-sr-175040"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Potasyum bitartrat\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Cream of tartar\",\"preferredUnit\":\"g\",\"tr\":\"Krem tartar\"}",
+    "externalId": "usda-sr-175041"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Yaş maya\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baker's yeast (compressed)\",\"preferredUnit\":\"g\",\"tr\":\"Yaş ekmek mayası\"}",
+    "externalId": "usda-sr-175042"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Aktif kuru maya\"],\"categories\":[\"baking\"],\"dimensions\":[\"mass\"],\"en\":\"Baker's yeast (active dry)\",\"preferredUnit\":\"g\",\"tr\":\"Aktif kuru ekmek mayası\"}",
+    "externalId": "usda-sr-175043"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Coffee liqueur (53 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Kahve likörü (53 ABD proof)\"}",
+    "externalId": "usda-sr-175097"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Coffee cream liqueur (34 US proof)\",\"preferredUnit\":\"mL\",\"tr\":\"Kremalı kahve likörü (34 ABD proof)\"}",
+    "externalId": "usda-sr-175098"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Musluk suyu\"],\"categories\":[\"water\"],\"dimensions\":[\"volume\"],\"en\":\"Municipal tap water\",\"preferredUnit\":\"mL\",\"tr\":\"Şebeke suyu\"}",
+    "externalId": "usda-sr-175103"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Atlantik uskumrusu\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic mackerel (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik uskumrusu (çiğ)\"}",
+    "externalId": "usda-sr-175119"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Atlantic salmon (raw, farmed)\",\"preferredUnit\":\"g\",\"tr\":\"Atlantik somonu (çiğ, çiftlik)\"}",
+    "externalId": "usda-sr-175167"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Tilapya\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Tilapia (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tilapya (çiğ)\"}",
+    "externalId": "usda-sr-175176"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Karides\"],\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Shrimp (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ karides\"}",
+    "externalId": "usda-sr-175179"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Kidney beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kidney fasulye (kuru, çiğ)\"}",
+    "externalId": "usda-sr-175193"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kuru beyaz fasulye\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"White beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz fasulye (kuru, çiğ)\"}",
+    "externalId": "usda-sr-175202"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Broad beans\"],\"aliasesTr\":[\"Kuru bakla\"],\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Fava beans (dry, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bakla (kuru, çiğ)\"}",
+    "externalId": "usda-sr-175205"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Keçi eti\"],\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Goat meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Keçi eti (çiğ)\"}",
+    "externalId": "usda-sr-175303"
+  }
+]

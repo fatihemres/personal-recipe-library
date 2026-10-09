@@ -1,0 +1,500 @@
+[
+  {
+    "key": "project-gin",
+    "tr": "Cin",
+    "en": "Gin",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [
+      "Gin"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-london-gin",
+    "tr": "London gin",
+    "en": "London gin",
+    "category": "spirits",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "London dry gin"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-bourbon",
+    "tr": "Bourbon viski",
+    "en": "Bourbon whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Bourbon whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-rye-whisky",
+    "tr": "Çavdar viskisi",
+    "en": "Rye whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Rye whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-malt-whisky",
+    "tr": "Malt viski",
+    "en": "Malt whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Malt whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-corn-whisky",
+    "tr": "Mısır viskisi",
+    "en": "Corn whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Corn whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-scotch-whisky",
+    "tr": "İskoç viskisi",
+    "en": "Scotch whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Scotch whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-irish-whisky",
+    "tr": "İrlanda viskisi",
+    "en": "Irish whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Irish whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-canadian-whisky",
+    "tr": "Kanada viskisi",
+    "en": "Canadian whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Canadian whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-blended-whisky",
+    "tr": "Harman viski",
+    "en": "Blended whisky",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [
+      "Blended whiskey"
+    ],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-cognac",
+    "tr": "Konyak",
+    "en": "Cognac",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-armagnac",
+    "tr": "Armagnac",
+    "en": "Armagnac",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-calvados",
+    "tr": "Calvados",
+    "en": "Calvados",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-fruit-brandy",
+    "tr": "Meyve brandisi",
+    "en": "Fruit brandy",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-pear-brandy",
+    "tr": "Armut brandisi",
+    "en": "Pear brandy",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-apple-brandy",
+    "tr": "Elma brandisi",
+    "en": "Apple brandy",
+    "category": "spirits",
+    "references": [
+      "https://www.ttb.gov/system/files/images/pdfs/spirits_bam/chapter4.pdf"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-sloe-gin",
+    "tr": "Sloe gin",
+    "en": "Sloe gin",
+    "category": "liqueurs",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-pastis",
+    "tr": "Pastis",
+    "en": "Pastis",
+    "category": "spirits",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-sambuca",
+    "tr": "Sambuca",
+    "en": "Sambuca",
+    "category": "liqueurs",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-maraschino",
+    "tr": "Maraschino likörü",
+    "en": "Maraschino liqueur",
+    "category": "liqueurs",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [
+      "Maraşino"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-creme-de-cassis",
+    "tr": "Crème de cassis",
+    "en": "Crème de cassis",
+    "category": "liqueurs",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [
+      "Siyah frenk üzümü likörü"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-advocaat",
+    "tr": "Advocaat",
+    "en": "Advocaat egg liqueur",
+    "category": "liqueurs",
+    "references": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&uri=CELEX:32019R0787"
+    ],
+    "aliasesTr": [
+      "Yumurta likörü"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-simple-syrup",
+    "tr": "Basit şeker şurubu",
+    "en": "Simple syrup",
+    "category": "syrups",
+    "references": [
+      "https://iba-world.com/iba-cocktail/brandy-crusta/"
+    ],
+    "aliasesTr": [
+      "Şeker şurubu"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-aromatic-bitters",
+    "tr": "Aromatik kokteyl bitteri",
+    "en": "Aromatic cocktail bitters",
+    "category": "bitters",
+    "references": [
+      "https://iba-world.com/iba-cocktail/brandy-crusta/"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-siyez-grain",
+    "tr": "Siyez buğdayı",
+    "en": "Siyez einkorn wheat",
+    "category": "grains",
+    "references": [
+      "https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-siyez-bulgur",
+    "tr": "Siyez bulguru",
+    "en": "Siyez bulgur",
+    "category": "grains",
+    "references": [
+      "https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-siyez-flour",
+    "tr": "Siyez unu",
+    "en": "Siyez flour",
+    "category": "baking",
+    "references": [
+      "https://kastamonu.tarimorman.gov.tr/Sayfalar/GormeEngellilerDetay.aspx?Liste=Haber&OgeId=1062"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-grape-pekmez",
+    "tr": "Üzüm pekmezi",
+    "en": "Grape pekmez",
+    "category": "sweeteners",
+    "references": [
+      "https://arastirma.tarimorman.gov.tr/bagcilik/Menu/64/Uzum-Pekmezi"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-kars-kasar",
+    "tr": "Kars kaşarı",
+    "en": "Kars kaşar cheese",
+    "category": "dairy",
+    "references": [
+      "https://kulturportali.gov.tr/turkiye/kars/kulturatlasi/kars-kasari"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-boza",
+    "tr": "Boza",
+    "en": "Boza",
+    "category": "other-beverages",
+    "references": [
+      "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-salep-drink",
+    "tr": "Salep (hazırlanmış içecek)",
+    "en": "Salep drink",
+    "category": "other-beverages",
+    "references": [
+      "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-salgam",
+    "tr": "Şalgam suyu",
+    "en": "Şalgam fermented turnip drink",
+    "category": "other-beverages",
+    "references": [
+      "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler"
+    ],
+    "aliasesTr": [
+      "Şalgam"
+    ],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-sumac-sherbet",
+    "tr": "Sumak şerbeti",
+    "en": "Sumac sherbet",
+    "category": "other-beverages",
+    "references": [
+      "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-tequila",
+    "tr": "Tekila",
+    "en": "Tequila",
+    "category": "spirits",
+    "references": [
+      "https://www.gov.uk/protected-food-drink-names/tequila"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-mezcal",
+    "tr": "Mezcal",
+    "en": "Mezcal",
+    "category": "spirits",
+    "references": [
+      "https://www.gov.uk/protected-food-drink-names/mezcal"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-raki",
+    "tr": "Rakı",
+    "en": "Rakı",
+    "category": "spirits",
+    "references": [
+      "https://sanliurfa.tarimorman.gov.tr/Sayfalar/Detay.aspx?Liste=Duyuru&OgeId=666"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-salep-powder",
+    "tr": "Salep tozu",
+    "en": "Salep powder",
+    "category": "baking",
+    "references": [
+      "https://kulturportali.gov.tr/portal/geleneksel-lezzetler--icecekler"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-orange-peel",
+    "tr": "Portakal kabuğu",
+    "en": "Orange peel",
+    "category": "garnishes",
+    "references": [
+      "https://iba-world.com/iba-cocktail/brandy-crusta/"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  },
+  {
+    "key": "project-lemon-peel",
+    "tr": "Limon kabuğu",
+    "en": "Lemon peel",
+    "category": "garnishes",
+    "references": [
+      "https://iba-world.com/iba-cocktail/brandy-crusta/"
+    ],
+    "aliasesTr": [],
+    "aliasesEn": [],
+    "basis": "Original factual identity and culinary classification; primary reference confirms name; no copied definition, recipe, image or empirical values."
+  }
+]
