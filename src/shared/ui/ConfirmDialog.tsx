@@ -37,11 +37,11 @@ export function ConfirmDialog({
       <h2 id="confirm-title">{title}</h2>
       <p id="confirm-description">{description}</p>
       <div className="recipe-actions">
-        <Button autoFocus variant="outline" onClick={onCancel}>
+        <Button type="button" autoFocus variant="outline" onClick={onCancel}>
           {cancel}
         </Button>
-        {extra && <Button onClick={extra.onClick}>{extra.label}</Button>}
-        <Button onClick={onConfirm}>{confirm}</Button>
+        {extra && <Button type="button" onClick={extra.onClick}>{extra.label}</Button>}
+        <Button type="button" onClick={onConfirm}>{confirm}</Button>
       </div>
     </dialog>
   );

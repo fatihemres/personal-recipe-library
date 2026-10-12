@@ -8,6 +8,8 @@ pub struct LibraryQuery {
     pub category_id: Option<String>,
     pub offset: i64,
     pub limit: i64,
+    #[serde(default)]
+    pub view: Option<String>,
 }
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -37,6 +39,8 @@ pub struct LibraryItem {
     pub revision: Option<i64>,
     pub ingredient_type: Option<String>,
     pub categories: Vec<Category>,
+    pub favorite: bool,
+    pub last_used_at: Option<String>,
 }
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -80,4 +84,24 @@ pub struct LibraryDetail {
     pub sources: Vec<SourceFact>,
     pub metadata: Vec<FactualMetadata>,
     pub catalog_version: Option<i64>,
+    pub personal_alias: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct CatalogPresentationInput {
+    pub id: String,
+    pub revision: i64,
+    pub name: Option<String>,
+    pub alias: Option<String>,
+    pub preferred_unit: Option<String>,
+    pub notes: Option<String>,
+}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct IngredientCandidate {
+    pub id: String,
+    pub origin: String,
+    pub name: String,
+    pub reason: String,
 }

@@ -1,6 +1,6 @@
 # Tarif Atlası — Personal Food & Beverage Library
 
-Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B, 3A and 3B-1 are implemented.** Recipes, personal ingredients, ordered steps and preferences persist in real local SQLite. No demo records or fabricated statistics are seeded.
+Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B, 3A, 3B-1/2/3 and 3C-1/2 are implemented.** Recipes, personal ingredients, ordered steps, library preferences and settings persist in real local SQLite. No demo records or fabricated statistics are seeded.
 
 The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers food/beverage filters, Turkish title filtering, recipe creation/detail/editing, duplication, archive/unarchive, confirmed soft deletion, trash/restore and confirmed permanent deletion. Other modules are clearly identified as upcoming.
 
@@ -37,7 +37,7 @@ Rust resolves the per-user Tauri application-data directory and stores `library.
 
 ## Using recipes
 
-Choose **Yeni tarif**, enter a title and a positive serving count, and optionally add description, durations and notes. Search a personal ingredient and click its name to add it. To create one, type its name and choose **Kişisel malzeme oluştur / mevcut olanı seç**; equivalent normalized names reuse the existing stable ingredient. Ingredients persist independently, including when the recipe is canceled.
+Choose **Yeni tarif**, enter a title and a positive serving count, and optionally add description, durations and notes. Search built-in or personal ingredients by Turkish/English name or alias. The selector supports arrow keys, Enter and Escape, plus recent/favorite shortcuts when the search is empty. To create a missing personal ingredient, type its name and use the inline action; equivalent normalized names reuse the existing stable ingredient. Ingredients persist independently, including when the recipe is canceled.
 
 Each ingredient line accepts an optional positive decimal quantity and g, kg, mL, cc, L or adet. Decimal commas are accepted and saved as decimal text with a dot, preserving precision and trailing zeros. Blank quantity means unknown/as needed. Units are preserved; this milestone does not convert quantities. Add preparation steps and use the up/down controls to order them. Save, open from the library, or edit an existing recipe. **Çöp kutusuna taşı** requires confirmation; open **Çöp kutusu** to restore. Permanent deletion is available only in trash, with an explicit irreversible-action confirmation. Shared ingredients remain intact.
 
@@ -45,14 +45,14 @@ Unfinished recipe input is saved separately in SQLite after a 500 ms pause, with
 
 Stale edits never overwrite newer revisions. Review the current record or explicitly choose **Yeni tarif olarak kaydet** to preserve your changes independently. Archive/delete operations retain edit drafts; after permanent deletion an edit draft can only be saved as a new recipe.
 
-The **Malzemeler** screen edits personal ingredient names, notes and preferred units. Renaming preserves all references; referenced ingredients cannot be deleted. Exact normalized duplicates are reused on creation and rejected on rename. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker → Şeker, İ/i and I/ı are distinct pairs). Empty catalog, no matching results and database errors have different messages. Missing ingredients can be created inline; the first verified production batch installs offline on startup.
+**Malzeme Kütüphanesi** browses the 508 built-in canonical ingredients and your personal ingredients together, or filters by origin, favorites, recently used and nested category. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker, with İ/i and I/ı as distinct pairs), English names and aliases. Favoriting changes only local preference tables. “Recently used” means ingredients currently present in non-deleted saved recipes, ordered by those recipes' latest edit time; viewing or drafting alone does not count. Select a record to see its known facts and source. You can change a built-in record's local display name, personal search alias, compatible preferred unit and notes, then reset its presentation without changing the canonical catalog. Personal names, notes and units remain editable with stable references. Possible duplicates are shown for review; records are never merged automatically. Unsaved ingredient forms offer Save, Discard or Continue Editing before navigation.
 
-The entire requested product remains V1 scope. Extensive catalog expansion, advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
+The entire requested product remains V1 scope. Further catalog coverage/review, recipe-wide advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
 
 
 ## M3A catalog foundation
 
-Canonical bilingual ingredients, hierarchy/provenance/override schema and offline checksummed importer are implemented. Only **eight verified USDA-backed validation ingredients** are prepared; the extensive production catalog is M3B. Validation records never auto-install into personal data. Settings distinguishes real validation/production counts. See [catalog pipeline](docs/CATALOG_IMPORT_PIPELINE.md), [source licenses](docs/DATA_SOURCES_AND_LICENSES.md), [schema](docs/INGREDIENT_CATALOG_SCHEMA.md) and [actual coverage](docs/CATALOG_COVERAGE.md) for reproduction and limits. M1/M2 data/IDs and migrations 001–003 remain preserved; schema is now 4.
+Canonical bilingual ingredients, hierarchy/provenance/override schema and offline checksummed importer are implemented. The original **eight USDA-backed validation ingredients** remain a separate test fixture; they are not the production catalog. Settings distinguishes validation and production counts. See [catalog pipeline](docs/CATALOG_IMPORT_PIPELINE.md), [source licenses](docs/DATA_SOURCES_AND_LICENSES.md), [schema](docs/INGREDIENT_CATALOG_SCHEMA.md) and [actual coverage](docs/CATALOG_COVERAGE_REPORT.md) for reproduction and limits. All applied migrations 001–005 are retained; schema is now 5.
 
 
 ## M3B-1 first production catalog
@@ -67,9 +67,10 @@ preserved. Missing nutrition, density, allergens and ABV remain unknown.
 See [coverage plan](docs/CATALOG_COVERAGE_PLAN.md),
 [package coverage](catalog/production/coverage.json),
 [actual clean import](catalog/production/installation-report.json) and
-[CC0/attribution notice](catalog/production/NOTICE.md). This first batch is not
-complete M3B: regional Turkish specialties, bitters and many drink forms remain
-explicit gaps. Full cross-platform/signed release validation remains pending.
+[CC0/attribution notice](catalog/production/NOTICE.md). The M3B-3 package now
+contains 508 canonical identities, 260 bundled aliases and 50 category nodes.
+Eighteen terminology items still await human review; remaining gaps are recorded
+in the coverage report. Full cross-platform/signed release validation is pending.
 Normal local launch: `npm run tauri -- dev`. Use a separate identifier/profile
-for tests; do not reset personal databases. Schema remains 4; migrations 001–004
-and dependency lockfiles are unchanged.
+for tests; do not reset personal databases. M3C-2 added schema migration 005 for
+local favorites and personal aliases. Catalog seed version 4 is unchanged.

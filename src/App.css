@@ -605,3 +605,8 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
 .preserve-lines { white-space: pre-wrap; }
 @media (max-width: 760px) { .ingredient-filters { grid-template-columns: 1fr; } .ingredient-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .ingredient-detail dl { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .ingredient-card { transition: none; } }
+.ingredient-card-container { position: relative; }
+.ingredient-card-container .ingredient-card { padding-top: 3.35rem; }
+.ingredient-card-favorite { position: absolute; top: .75rem; right: .75rem; z-index: 1; min-width: 44px; min-height: 44px; padding: .5rem; }
+.ingredient-selector-shortcuts { display: flex; gap: .5rem; flex-wrap: wrap; margin: .6rem 0; }
+.ingredient-selector-shortcuts button { min-height: 40px; }

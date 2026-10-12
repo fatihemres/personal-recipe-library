@@ -1,5 +1,11 @@
 # Changelog
 
+## M3C-2 — Ingredient personalization and selection (2026-10-09, unreleased)
+
+- Added checksummed migration 005 for canonical/personal favorites and user search aliases; no canonical seed changes.
+- Added library favorite/recent views, recipe-derived usage, ranked bounded bilingual/alias autocomplete, keyboard selection, canonical presentation editing/reset, duplicate warnings and unsaved ingredient navigation choices.
+- Preserved all 508 bundled identities, existing recipe/draft references and exact quantities. Verified real SQLite upgrades/restarts, frontend and browser regressions, Rust checks and isolated native macOS package. Windows, Intel macOS and signed release checks remain pending.
+
 ## Unreleased — Milestone 1 foundation
 
 - Turkish responsive desktop shell, keyboard navigation, accessible light/dark/system theme choices, honest upcoming-module states and localized errors.

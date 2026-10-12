@@ -12,6 +12,7 @@ fn query(search: &str, origin: &str, category: Option<&str>, offset: i64) -> Lib
         category_id: category.map(|k| stable_id("category", k)),
         offset,
         limit: 30,
+        view: None,
     }
 }
 #[test]
@@ -265,5 +266,242 @@ fn library_keeps_pending_catalog_definitions_visible_and_preserves_existing_over
             .items[0]
             .id,
         honey
+    );
+}
+
+#[test]
+fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catalog() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let sugar = stable_id("ingredient", "sugar-granulated");
+    let own = db.create_ingredient("Aile şerbeti").unwrap();
+    assert!(db.set_ingredient_favorite(&sugar, "catalog", true).unwrap());
+    assert!(db
+        .set_ingredient_favorite(&own.id, "personal", true)
+        .unwrap());
+    assert_eq!(
+        db.ingredient_library(LibraryQuery {
+            view: Some("favorites".into()),
+            ..query("", "all", None, 0)
+        })
+        .unwrap()
+        .total,
+        2
+    );
+    let original = db.ingredient_detail(&sugar, "catalog").unwrap();
+    let revision = original.item.revision.unwrap();
+    let changed = db
+        .set_catalog_presentation(
+            crate::domain::ingredient_library::CatalogPresentationInput {
+                id: sugar.clone(),
+                revision,
+                name: Some("Bizim şeker".into()),
+                alias: Some("Ev tatlısı".into()),
+                preferred_unit: Some("kg".into()),
+                notes: Some("Rafın üstü".into()),
+            },
+        )
+        .unwrap();
+    assert_eq!(changed.canonical_tr.as_deref(), Some("Toz şeker"));
+    assert_eq!(changed.item.name, "Bizim şeker");
+    assert_eq!(
+        db.ingredient_library(query("Ev tatlısı", "all", None, 0))
+            .unwrap()
+            .total,
+        1
+    );
+    assert_eq!(
+        db.available_ingredients("Ev tatlısı").unwrap().items[0].id,
+        sugar
+    );
+    assert_eq!(
+        db.ingredient_candidates("Şeker")
+            .unwrap()
+            .iter()
+            .filter(|c| c.id == sugar)
+            .count(),
+        1
+    );
+    let rejected = db.set_catalog_presentation(
+        crate::domain::ingredient_library::CatalogPresentationInput {
+            id: sugar.clone(),
+            revision: changed.item.revision.unwrap(),
+            name: Some("Bizim şeker".into()),
+            alias: Some("Honey".into()),
+            preferred_unit: Some("kg".into()),
+            notes: Some("Rafın üstü".into()),
+        },
+    );
+    assert_eq!(rejected.unwrap_err().code, "INGREDIENT_DUPLICATE");
+    assert_eq!(
+        db.ingredient_detail(&sugar, "catalog")
+            .unwrap()
+            .personal_alias
+            .as_deref(),
+        Some("Ev tatlısı")
+    );
+    let mut recipe = RecipeInput {
+        id: uuid::Uuid::new_v4().to_string(),
+        expected_revision: None,
+        title: "Tarif".into(),
+        description: None,
+        kind: "food".into(),
+        servings: "1".into(),
+        prep_minutes: None,
+        cook_minutes: None,
+        notes: None,
+        ingredients: vec![RecipeIngredient {
+            id: uuid::Uuid::new_v4().to_string(),
+            ingredient_id: sugar.clone(),
+            quantity: Some("35.000001".into()),
+            unit_code: "g".into(),
+            note: None,
+        }],
+        steps: vec![],
+    };
+    let saved = db.save_recipe(recipe.clone()).unwrap();
+    recipe.expected_revision = Some(saved.revision);
+    assert_eq!(
+        db.ingredient_library(LibraryQuery {
+            view: Some("recent".into()),
+            ..query("", "all", None, 0)
+        })
+        .unwrap()
+        .items[0]
+            .id,
+        sugar
+    );
+    drop(db);
+    let mut db = Database::open(dir.path()).unwrap();
+    assert_eq!(
+        db.ingredient_library(LibraryQuery {
+            view: Some("favorites".into()),
+            ..query("", "all", None, 0)
+        })
+        .unwrap()
+        .total,
+        2
+    );
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0]
+            .quantity
+            .as_deref(),
+        Some("35.000001")
+    );
+    let reverted = db
+        .set_catalog_presentation(
+            crate::domain::ingredient_library::CatalogPresentationInput {
+                id: sugar.clone(),
+                revision: changed.item.revision.unwrap(),
+                name: None,
+                alias: None,
+                preferred_unit: None,
+                notes: None,
+            },
+        )
+        .unwrap();
+    assert_eq!(reverted.item.name, reverted.canonical_tr.clone().unwrap());
+    assert_eq!(reverted.personal_alias, None);
+    assert_eq!(
+        db.ingredient_library(query("Ev tatlısı", "all", None, 0))
+            .unwrap()
+            .total,
+        0
+    );
+    assert_eq!(
+        db.ingredient_library(LibraryQuery {
+            view: Some("favorites".into()),
+            ..query("", "all", None, 0)
+        })
+        .unwrap()
+        .total,
+        2
+    );
+    db.set_ingredient_favorite(&sugar, "catalog", false)
+        .unwrap();
+    assert_eq!(
+        db.ingredient_library(LibraryQuery {
+            view: Some("favorites".into()),
+            ..query("", "all", None, 0)
+        })
+        .unwrap()
+        .total,
+        1
+    );
+}
+
+#[test]
+fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggestions() {
+    let dir = tempfile::tempdir().unwrap();
+    let path = dir.path().join("library.sqlite3");
+    let mut conn = rusqlite::Connection::open(&path).unwrap();
+    conn.pragma_update(None, "foreign_keys", true).unwrap();
+    super::migrations::apply(&mut conn, &path, &super::migrations::MIGRATIONS[..4]).unwrap();
+    let mut db = Database { conn };
+    let ingredient = db.create_ingredient("Ev salçası").unwrap();
+    let input = RecipeInput {
+        id: uuid::Uuid::new_v4().to_string(),
+        expected_revision: None,
+        title: "Eski tarif".into(),
+        description: None,
+        kind: "food".into(),
+        servings: "1".into(),
+        prep_minutes: None,
+        cook_minutes: None,
+        notes: None,
+        ingredients: vec![RecipeIngredient {
+            id: uuid::Uuid::new_v4().to_string(),
+            ingredient_id: ingredient.id.clone(),
+            quantity: Some("0.123456".into()),
+            unit_code: "g".into(),
+            note: None,
+        }],
+        steps: vec![],
+    };
+    db.save_recipe(input.clone()).unwrap();
+    drop(db);
+    let mut db = Database::open(dir.path()).unwrap();
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 5);
+    assert_eq!(
+        db.recipe(&input.id).unwrap().ingredients[0]
+            .quantity
+            .as_deref(),
+        Some("0.123456")
+    );
+    db.install_bundled_catalog().unwrap();
+    let exact = db
+        .create_ingredient("Granulated sugar syrup blend")
+        .unwrap();
+    db.set_ingredient_favorite(&exact.id, "personal", true)
+        .unwrap();
+    let result = db.available_ingredients("Granulated sugar").unwrap();
+    assert_eq!(
+        result.items[0].id,
+        stable_id("ingredient", "sugar-granulated")
+    );
+    assert!(
+        result
+            .items
+            .iter()
+            .filter(|i| i.id == stable_id("ingredient", "sugar-granulated"))
+            .count()
+            == 1
+    );
+    let recent = db.available_ingredients_mode("", "recent").unwrap();
+    assert_eq!(recent.items[0].id, ingredient.id);
+    assert!(db
+        .available_ingredients_mode("", "favorites")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == exact.id));
+    assert_eq!(
+        db.ingredient_candidates("granulated sugar")
+            .unwrap()
+            .iter()
+            .filter(|c| c.id == stable_id("ingredient", "sugar-granulated"))
+            .count(),
+        1
     );
 }

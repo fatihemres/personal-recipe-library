@@ -7,6 +7,7 @@ import type {
 import { normalizeError } from '../../shared/api/client';
 import { errorMessage } from '../../shared/i18n';
 import { recipesTr as t } from '../../shared/i18n/recipes';
+import { ingredientsTr as libraryText } from '../../shared/i18n/ingredients';
 import { Button } from '../../shared/ui/button';
 export function IngredientSearchControl({
   client,
@@ -31,6 +32,7 @@ export function IngredientSearchControl({
   const [active, setActive] = useState(-1);
   const [expanded, setExpanded] = useState(true);
   const [retry, setRetry] = useState(0);
+  const [mode, setMode] = useState<'all'|'favorites'|'recent'>('recent');
   const generation = useRef(0);
   const creatingRef = useRef(false);
   useEffect(() => {
@@ -39,7 +41,7 @@ export function IngredientSearchControl({
     const timer = setTimeout(() => {
       setLoading(true);
       setError('');
-      void (personalOnly ? client.searchPersonal : client.searchAvailable ?? client.searchPersonal)(query).then(
+      void (personalOnly ? client.searchPersonal(query) : client.suggestAvailable ? client.suggestAvailable(query, query ? 'all' : mode) : (client.searchAvailable ?? client.searchPersonal)(query)).then(
         (value) => {
           if (alive && generation.current === current) {
             setResult(value);
@@ -59,7 +61,7 @@ export function IngredientSearchControl({
       alive = false;
       clearTimeout(timer);
     };
-  }, [client, query, retry, personalOnly]);
+  }, [client, query, retry, personalOnly, mode]);
   async function create() {
     if (creatingRef.current || !query.trim()) return;
     creatingRef.current = true;
@@ -82,6 +84,7 @@ export function IngredientSearchControl({
   return (
     <div className="ingredient-search">
       <label htmlFor={`${id}-input`}>{t.searchIngredient}</label>
+      {!personalOnly && !query && <div className="ingredient-selector-shortcuts" role="group" aria-label={libraryText.title}>{(['recent','favorites','all'] as const).map(value => <Button key={value} type="button" variant={mode === value ? 'default' : 'outline'} aria-pressed={mode === value} onClick={() => { setMode(value); setExpanded(true); setLoading(true); }}>{value === 'all' ? libraryText.all : libraryText[value]}</Button>)}</div>}
       <input
         ref={input}
         id={`${id}-input`}
@@ -89,10 +92,10 @@ export function IngredientSearchControl({
         value={query}
         role="combobox"
         aria-autocomplete="list"
-        aria-expanded={expanded && items.length > 0}
+        aria-expanded={expanded && items.length > 0 && !loading && !error}
         aria-controls={`${id}-results`}
         aria-activedescendant={
-          expanded && active >= 0 ? `${id}-${active}` : undefined
+          expanded && !loading && active >= 0 ? `${id}-${active}` : undefined
         }
         onChange={(e) => {
           setQuery(e.target.value);
@@ -146,7 +149,7 @@ export function IngredientSearchControl({
       )}
       {!loading && !error && result && items.length === 0 && (
         <p role="status">
-          {result.total === 0 ? personalOnly ? t.emptyCatalog : t.emptyAvailableCatalog : t.emptyIngredientSearch}
+          {!personalOnly && !query && mode === 'recent' ? libraryText.noRecent : !personalOnly && !query && mode === 'favorites' ? libraryText.noFavorites : result.total === 0 ? personalOnly ? t.emptyCatalog : t.emptyAvailableCatalog : t.emptyIngredientSearch}
         </p>
       )}
       <ul
@@ -154,7 +157,7 @@ export function IngredientSearchControl({
         role="listbox"
         aria-label={t.chooseIngredient}
         className="ingredient-results"
-        hidden={!expanded}
+        hidden={!expanded || loading || Boolean(error)}
       >
         {items.map((ingredient, index) => (
           <li key={ingredient.id} role="presentation">

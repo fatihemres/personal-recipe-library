@@ -1,0 +1,20 @@
+import { act, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { expect, test, vi } from 'vitest';
+import { PersonalIngredientEditor } from './PersonalIngredientEditor';
+import { rendererRecipeClient } from '../../test/recipeClient';
+import type { IngredientLibraryClient } from '../../shared/api/ingredientLibrary';
+import type { LibraryItem } from '../../shared/contracts/ingredientLibrary';
+const item:LibraryItem={id:crypto.randomUUID(),origin:'personal',recipeId:crypto.randomUUID(),name:'Ev baharatı',englishName:null,notes:null,preferredUnit:'g',revision:2,ingredientType:null,categories:[],favorite:false,lastUsedAt:null};
+const library={candidates:vi.fn().mockResolvedValue([])} as unknown as IngredientLibraryClient;
+test('sidebar guard offers save, discard and continue, and failed save retains edits', async()=>{
+ const client=rendererRecipeClient();const onDone=vi.fn();let guard:(()=>Promise<boolean>)|null=null;
+ const user=userEvent.setup();render(<PersonalIngredientEditor item={item} client={client} library={library} onDone={onDone} onSelectCandidate={vi.fn()} registerLeaveGuard={value=>{guard=value;}}/>);
+ await user.clear(screen.getByRole('textbox',{name:'Malzeme adı'}));await user.type(screen.getByRole('textbox',{name:'Malzeme adı'}),'İçli baharat');
+ await screen.findByText('Kaydedilmemiş değişiklikler');
+ let decision!:Promise<boolean>;act(()=>{decision=guard!();});await user.click(screen.getByRole('button',{name:'Düzenlemeye devam et'}));expect(await decision).toBe(false);
+ act(()=>{decision=guard!();});vi.mocked(client.editIngredient).mockRejectedValueOnce({code:'CONFLICT',messageKey:'errors.conflict',recoverable:true});
+ await user.click(screen.getByRole('button',{name:'Kaydet ve devam et'}));expect((await screen.findAllByRole('alert'))[0]).toHaveTextContent('başka bir işlemde değiştirildi');expect(screen.getByRole('textbox',{name:'Malzeme adı'})).toHaveValue('İçli baharat');
+ await user.click(screen.getByRole('button',{name:'Vazgeç ve devam et'}));expect(await decision).toBe(true);
+ expect(onDone).not.toHaveBeenCalled();
+});

@@ -1,4 +1,10 @@
 export const ingredientsTr = {
+    favorites:'Favoriler', recent:'Son Kullanılanlar', favoriteAdd:'Favorilere ekle', favoriteRemove:'Favorilerden çıkar',
+    noRecent:'Henüz kaydedilmiş tariflerde kullanılan malzeme yok.', noFavorites:'Henüz favori malzeme yok.',
+    recentHelp:'Son kullanım, silinmemiş kayıtlı tariflerdeki son düzenleme zamanına göre sıralanır.',
+    editCatalog:'Görünümü kişiselleştir', catalogName:'Tercih ettiğiniz ad', personalAlias:'Kişisel arama adı', catalogNotes:'Kişisel notlar', savePresentation:'Tercihleri kaydet', resetPresentation:'Katalog görünümüne dön', catalogEditHelp:'Bu tercihler yalnızca bu bilgisayardaki görünümü değiştirir. Katalog verisi ve tarif bağlantıları korunur.',
+    duplicateWarning:'Benzer malzemeler bulundu. Yeni kayıt oluşturmadan önce gözden geçirin.', useExisting:'Mevcut kaydı görüntüle', createAnyway:'Yine de oluştur / mevcut kaydı kullan',
+    leaveTitle:'Kaydedilmemiş malzeme değişiklikleri', leaveHelp:'Gezinmeden önce değişikliklerinizi kaydedin veya açıkça vazgeçin.', leaveSave:'Kaydet ve devam et', leaveDiscard:'Vazgeç ve devam et',
     title: 'Malzeme Kütüphanesi', intro: 'Hazır katalog ve kendi malzemeleriniz, tek bir yerde.',
     all: 'Tüm Malzemeler', catalog: 'Hazır Katalog', personal: 'Kişisel Malzemeler',
     search: 'Malzeme ara', searchHelp: 'Türkçe, İngilizce veya diğer adlarıyla arayın. Sonuçlar aynı malzemeyi yalnızca bir kez gösterir.',

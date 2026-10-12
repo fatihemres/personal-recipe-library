@@ -242,30 +242,80 @@ impl Database {
         &self,
         query: &str,
     ) -> Result<crate::domain::reliability::IngredientSearch, AppError> {
+        self.available_ingredients_mode(query, "all")
+    }
+    pub fn available_ingredients_mode(
+        &self,
+        query: &str,
+        mode: &str,
+    ) -> Result<crate::domain::reliability::IngredientSearch, AppError> {
         use crate::domain::reliability::{IngredientSearch, PersonalIngredient};
-        if query.chars().count() > 200 {
+        if query.chars().count() > 200
+            || query.contains('\0')
+            || !["all", "recent", "favorites"].contains(&mode)
+        {
             return Err(catalog_error("CATALOG_INVALID"));
         }
         let tx = self.conn.unchecked_transaction()?;
         let total = tx.query_row("SELECT count(*) FROM ingredients", [], |r| r.get(0))?;
-        let mut s=tx.prepare("SELECT i.id,i.name,i.notes,i.preferred_unit,i.revision,i.origin FROM ingredients i WHERE instr(i.search_name,?1)>0 OR EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND instr(n.search_key,CASE WHEN n.locale='tr' THEN ?1 ELSE ?2 END)>0) OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0) ORDER BY (i.origin='personal') DESC,i.search_name,i.id LIMIT 51")?;
+        // Text relevance precedes personal signals. EXISTS keeps aliases from multiplying rows.
+        let mut s=tx.prepare("WITH matches AS (
+          SELECT i.id,i.name,i.notes,i.preferred_unit,i.revision,i.origin,i.catalog_id,i.search_name,
+          CASE WHEN i.search_name=?1 OR EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND n.search_key=CASE WHEN n.locale='tr' THEN ?1 ELSE ?2 END) THEN 0
+               WHEN i.search_name LIKE ?3 ESCAPE '!' OR EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND n.search_key LIKE CASE WHEN n.locale='tr' THEN ?3 ELSE ?4 END ESCAPE '!') THEN 1
+               WHEN EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND a.search_key=CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END) OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=i.catalog_id AND a.search_key=?1) THEN 2
+               WHEN EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND a.search_key LIKE CASE WHEN a.locale='tr' THEN ?3 ELSE ?4 END ESCAPE '!') OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=i.catalog_id AND a.search_key LIKE ?3 ESCAPE '!') THEN 3
+               ELSE 4 END rank
+          FROM ingredients i
+          WHERE instr(i.search_name,?1)>0 OR EXISTS(SELECT 1 FROM catalog_names n WHERE n.ingredient_id=i.catalog_id AND instr(n.search_key,CASE WHEN n.locale='tr' THEN ?1 ELSE ?2 END)>0)
+          OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=i.catalog_id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0)
+          OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=i.catalog_id AND instr(a.search_key,?1)>0)
+        ), usage AS (SELECT ri.ingredient_id,max(r.updated_at) used_at FROM recipe_ingredients ri JOIN recipes r ON r.id=ri.recipe_id WHERE r.deleted_at IS NULL GROUP BY ri.ingredient_id)
+        SELECT m.id,m.name,m.notes,m.preferred_unit,m.revision,m.origin FROM matches m LEFT JOIN usage u ON u.ingredient_id=m.id
+        WHERE ?5='all' OR (?5='recent' AND u.used_at IS NOT NULL) OR (?5='favorites' AND (EXISTS(SELECT 1 FROM catalog_ingredient_favorites f WHERE f.catalog_id=m.catalog_id AND m.origin='catalog') OR EXISTS(SELECT 1 FROM personal_ingredient_favorites f WHERE f.ingredient_id=m.id AND m.origin='personal')))
+        ORDER BY m.rank, EXISTS(SELECT 1 FROM catalog_ingredient_favorites f WHERE f.catalog_id=m.catalog_id AND m.origin='catalog') DESC,
+        EXISTS(SELECT 1 FROM personal_ingredient_favorites f WHERE f.ingredient_id=m.id AND m.origin='personal') DESC,
+        u.used_at DESC,m.search_name,m.id LIMIT 51")?;
+        let tr = search_name(query);
+        let en = name_key("en", query);
+        // LIKE wildcards are escaped; all filtering still uses literal instr/EXISTS.
+        let prefix = |s: &str| {
+            format!(
+                "{}%",
+                s.replace('!', "!!").replace('%', "!%").replace('_', "!_")
+            )
+        };
         let mut items = s
-            .query_map(params![search_name(query), name_key("en", query)], |r| {
-                Ok(PersonalIngredient {
-                    id: r.get(0)?,
-                    name: r.get(1)?,
-                    notes: r.get(2)?,
-                    preferred_unit: r.get(3)?,
-                    revision: r.get(4)?,
-                    origin: r.get(5)?,
-                })
-            })?
+            .query_map(
+                params![
+                    tr,
+                    en,
+                    prefix(&search_name(query)),
+                    prefix(&name_key("en", query)),
+                    mode
+                ],
+                |r| {
+                    Ok(PersonalIngredient {
+                        id: r.get(0)?,
+                        name: r.get(1)?,
+                        notes: r.get(2)?,
+                        preferred_unit: r.get(3)?,
+                        revision: r.get(4)?,
+                        origin: r.get(5)?,
+                    })
+                },
+            )?
             .collect::<Result<Vec<_>, _>>()?;
         let has_more = items.len() > 50;
         items.truncate(50);
+        let returned_total = if mode == "all" || !items.is_empty() {
+            total
+        } else {
+            0
+        };
         Ok(IngredientSearch {
             items,
-            total,
+            total: returned_total,
             has_more,
         })
     }

@@ -411,7 +411,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            4
+            5
         );
     }
     #[test]
@@ -654,5 +654,44 @@ pub async fn ingredient_detail(
 ) -> Result<crate::domain::ingredient_library::LibraryDetail, AppError> {
     state
         .execute(move |d| d.ingredient_detail(&id, &origin))
+        .await
+}
+
+#[tauri::command]
+pub async fn set_ingredient_favorite(
+    id: String,
+    origin: String,
+    favorite: bool,
+    state: tauri::State<'_, StorageService>,
+) -> Result<bool, AppError> {
+    state
+        .execute(move |d| d.set_ingredient_favorite(&id, &origin, favorite))
+        .await
+}
+#[tauri::command]
+pub async fn set_catalog_presentation(
+    input: crate::domain::ingredient_library::CatalogPresentationInput,
+    state: tauri::State<'_, StorageService>,
+) -> Result<crate::domain::ingredient_library::LibraryDetail, AppError> {
+    state
+        .execute(move |d| d.set_catalog_presentation(input))
+        .await
+}
+#[tauri::command]
+pub async fn ingredient_candidates(
+    name: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Vec<crate::domain::ingredient_library::IngredientCandidate>, AppError> {
+    state.execute(move |d| d.ingredient_candidates(&name)).await
+}
+
+#[tauri::command]
+pub async fn ingredient_suggestions(
+    query: String,
+    mode: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<crate::domain::reliability::IngredientSearch, AppError> {
+    state
+        .execute(move |d| d.available_ingredients_mode(&query, &mode))
         .await
 }

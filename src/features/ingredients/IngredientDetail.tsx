@@ -13,7 +13,7 @@ export function IngredientDetail({ detail }: {
     {!item.recipeId && <p role="status">{t.unavailable}</p>}
     <h3>{t.names}</h3>
     <dl><dt>{t.canonical}</dt><dd>{detail.canonicalTr ?? item.name}</dd><dt>{t.english}</dt><dd>{item.englishName ?? t.unknown}</dd></dl>
-    <h3>{t.aliases}</h3><p>{detail.aliases.length ? detail.aliases.map(a => a.name).join(' · ') : t.noAliases}</p>
+    <h3>{t.aliases}</h3>{detail.personalAlias && <p>{t.personalAlias}: {detail.personalAlias}</p>}<p>{detail.aliases.length ? detail.aliases.map(a => a.name).join(' · ') : t.noAliases}</p>
     <h3>{t.categories}</h3><p>{item.categories.length ? item.categories.map(c => c.tr).join(' · ') : t.unknownCategory}</p>
     <h3>{t.measurements}</h3><dl><dt>{t.unit}</dt><dd>{item.preferredUnit ?? t.unknown}</dd><dt>{t.dimensions}</dt><dd>{detail.dimensions.map(d => ({ mass: t.mass, volume: t.volume, count: t.count })[d as 'mass' | 'volume' | 'count'] ?? d).join(' · ') || t.unknown}</dd></dl>
     <h3>{recipesTr.notes}</h3><p className="preserve-lines">{item.notes ?? t.noNotes}</p>

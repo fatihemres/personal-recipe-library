@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   BookOpen, Settings, Carrot, Leaf, Menu, CircleCheck, AlertTriangle, LoaderCircle,
   Wine, Package, ShoppingBasket, CalendarDays, FolderHeart, ChartNoAxesCombined,
@@ -28,6 +28,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
   const [page, setPage] = useState<'library' | 'settings' | 'ingredients'>('library');
   const [menuOpen, setMenuOpen] = useState(false);
   const [exitError, setExitError] = useState('');
+  const ingredientLeaveGuard = useRef<(()=>Promise<boolean>)|null>(null);
   useEffect(() => {
     let active = true;
     let unlisten: (() => void) | undefined;
@@ -42,7 +43,8 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
   }, []);
   useTheme(data?.preferences.theme ?? 'system');
 
-  function navigate(next: typeof page) {
+  async function navigate(next: typeof page) {
+    if (page === 'ingredients' && next !== page && ingredientLeaveGuard.current && !await ingredientLeaveGuard.current()) return;
     setPage(next);
     setMenuOpen(false);
     document.getElementById('main-content')?.focus();
@@ -61,21 +63,21 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
           <button
             className={`nav-item ${page === 'library' ? 'active' : ''}`}
             aria-current={page === 'library' ? 'page' : undefined}
-            onClick={() => navigate('library')}
+            onClick={() => void navigate('library')}
           >
             <BookOpen size={19} aria-hidden="true" />{t.library}
           </button>
           <button
             className={`nav-item ${page === 'settings' ? 'active' : ''}`}
             aria-current={page === 'settings' ? 'page' : undefined}
-            onClick={() => navigate('settings')}
+            onClick={() => void navigate('settings')}
           >
             <Settings size={19} aria-hidden="true" />{t.settings}
           </button>
           <button
             className={`nav-item ${page === 'ingredients' ? 'active' : ''}`}
             aria-current={page === 'ingredients' ? 'page' : undefined}
-            onClick={() => navigate('ingredients')}
+            onClick={() => void navigate('ingredients')}
           >
             <Carrot size={19} aria-hidden="true" />{t.ingredients}
           </button>
@@ -126,7 +128,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               </div>
             </section>
           )}
-          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>
