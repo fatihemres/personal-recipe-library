@@ -1,5 +1,12 @@
 # Changelog
 
+## M3C-3 — Catalog quality and category workflows (2026-10-12, unreleased)
+
+- Classified personal-ingredient collision candidates as exact names, matching aliases or weaker similarities; strong matches guide users to the existing record or a more precise name. No automatic merge.
+- Added uncategorized browsing and revision-checked, transactional category assignments for unlinked personal ingredients using the existing schema. Parent/child facets and unique counts remain database-derived.
+- Published a repeatable 508-record quality audit and a filtered, readable workbook for the 18 terminology decisions awaiting human review. Existing bundled identities, aliases, source data and migrations remain unchanged.
+
+
 ## M3C-2 — Ingredient personalization and selection (2026-10-09, unreleased)
 
 - Added checksummed migration 005 for canonical/personal favorites and user search aliases; no canonical seed changes.

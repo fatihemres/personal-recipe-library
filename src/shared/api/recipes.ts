@@ -55,6 +55,7 @@ export interface RecipeClient {
     name: string;
     notes: string | null;
     preferredUnit: string | null;
+    categoryIds?: string[];
   }): Promise<PersonalIngredient>;
   deleteIngredient(id: string, revision: number): Promise<null>;
 }

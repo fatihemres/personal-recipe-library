@@ -31,3 +31,10 @@ test('successful Save and Continue commits the personal edit before allowing nav
  expect(await decision).toBe(true);
  expect(client.editIngredient).toHaveBeenCalledWith(expect.objectContaining({id:item.id,revision:2,name:'İçli baharat'}));
 });
+test('personal category selections are included in the same revision-checked ingredient edit', async()=>{
+ const client=rendererRecipeClient(); const category={id:crypto.randomUUID(),parentId:null,key:'custom',tr:'Özel',en:'Custom'};
+ const user=userEvent.setup();render(<PersonalIngredientEditor item={item} categories={[{category,count:0}]} client={client} library={library} onDone={vi.fn()} onSelectCandidate={vi.fn()}/>);
+ await user.click(screen.getByRole('checkbox',{name:'Özel'}));
+ await user.click(screen.getByRole('button',{name:'Malzemeyi kaydet'}));
+ expect(client.editIngredient).toHaveBeenCalledWith(expect.objectContaining({id:item.id,categoryIds:[category.id]}));
+});

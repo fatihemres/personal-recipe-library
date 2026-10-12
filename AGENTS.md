@@ -61,3 +61,8 @@ Build a local-first food and beverage recipe management desktop application for 
 - Current production version 4 has 508 identities; historical versions 2 and 3 live in catalog/releases/2 and catalog/releases/3. Never mutate committed source snapshots or reassign canonical IDs.
 - Consult docs/CATALOG_COVERAGE_REPORT.md, docs/INGREDIENT_LOCALIZATION_REVIEW.md and catalog/reference-sources.json. Project-only factual entries are not USDA records and reference-only websites are not approved bulk datasets.
 - Reproduce grouped curation with tools/prepare_production_catalog.py; run tools/audit_catalog.py --check and tools/test_catalog_audit.py. Human review remains distinct from structural/semantic tooling.
+
+## Ingredient library invariants (M3C-3)
+- Schema 5 and production catalog version 4 are current; no M3C-3 migration or seed change occurred. Existing personal category links are owned by `personal_category_memberships` and edited atomically with expected-revision personal changes. Canonical category memberships remain source-owned.
+- Candidate reasons express name/alias similarity, not proven ingredient equivalence. Never auto-merge or reassign recipe IDs. A strong name/alias match blocks misleading personal creation; ambiguous variants need explicit user judgment.
+- The 18 terminology items in `docs/INGREDIENT_TERMINOLOGY_REVIEW.xlsx` remain human-pending. `docs/CATALOG_M3C3_QUALITY_AUDIT.md` and `catalog/production/m3c3-quality-report.json` are static audit outputs, not linguistic approval. Regenerate/check them with `tools/report_m3c3_quality.py` after catalog changes.

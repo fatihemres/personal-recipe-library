@@ -31,7 +31,7 @@ const BASE: &str = "WITH RECURSIVE
  OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=l.catalog_id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0)
  OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=l.catalog_id AND instr(a.search_key,?1)>0)
  )";
-const FILTER: &str = "(?3='all' OR l.origin=?3) AND (?4 IS NULL OR EXISTS(SELECT 1 FROM members m JOIN tree t ON t.id=m.category_id WHERE m.id=l.id AND m.origin=l.origin AND t.root=?4)) AND (?5 IS NULL OR (?5='favorites' AND EXISTS(SELECT 1 FROM favorites f WHERE f.id=l.id AND f.origin=l.origin)) OR (?5='recent' AND EXISTS(SELECT 1 FROM usage u WHERE u.id=l.recipe_id)))";
+const FILTER: &str = "(?3='all' OR l.origin=?3) AND (?4 IS NULL OR EXISTS(SELECT 1 FROM members m JOIN tree t ON t.id=m.category_id WHERE m.id=l.id AND m.origin=l.origin AND t.root=?4)) AND (?8=0 OR NOT EXISTS(SELECT 1 FROM members m WHERE m.id=l.id AND m.origin=l.origin)) AND (?5 IS NULL OR (?5='favorites' AND EXISTS(SELECT 1 FROM favorites f WHERE f.id=l.id AND f.origin=l.origin)) OR (?5='recent' AND EXISTS(SELECT 1 FROM usage u WHERE u.id=l.recipe_id)))";
 const CONTEXT: &str = "favorites(origin,id) AS (SELECT 'catalog',catalog_id FROM catalog_ingredient_favorites UNION ALL SELECT 'personal',ingredient_id FROM personal_ingredient_favorites), usage(id,last_used_at) AS (SELECT ri.ingredient_id,max(r.updated_at) FROM recipe_ingredients ri JOIN recipes r ON r.id=ri.recipe_id WHERE r.deleted_at IS NULL GROUP BY ri.ingredient_id)";
 
 fn category(row: &Row<'_>, start: usize) -> rusqlite::Result<Category> {
@@ -78,6 +78,7 @@ impl Database {
                 .view
                 .as_deref()
                 .is_some_and(|v| !["favorites", "recent"].contains(&v))
+            || (query.uncategorized && query.category_id.is_some())
         {
             return Err(AppError::new("INVALID_INPUT", "errors.validation", true));
         }
@@ -99,7 +100,16 @@ impl Database {
         let (catalog_count,personal_count)=tx.query_row("SELECT (SELECT count(*) FROM catalog_ingredients),(SELECT count(*) FROM ingredients WHERE origin='personal')",[],|r|Ok((r.get(0)?,r.get(1)?)))?;
         let total = tx.query_row(
             &format!("{BASE}, {CONTEXT} SELECT count(*) FROM searched l WHERE {FILTER}"),
-            params![tr, en, query.origin, query.category_id, query.view],
+            params![
+                tr,
+                en,
+                query.origin,
+                query.category_id,
+                query.view,
+                query.limit,
+                query.offset,
+                query.uncategorized
+            ],
             |r| r.get(0),
         )?;
         let mut items = {
@@ -118,7 +128,8 @@ impl Database {
                         query.category_id,
                         query.view,
                         query.limit,
-                        query.offset
+                        query.offset,
+                        query.uncategorized
                     ],
                     item,
                 )?
@@ -409,7 +420,30 @@ impl Database {
         if tr.chars().count() < 2 {
             return Ok(vec![]);
         }
-        let mut s=self.conn.prepare("SELECT id,origin,name,reason FROM (SELECT i.id,i.origin,i.name,'personal' reason,CASE WHEN i.search_name=?1 THEN 0 WHEN instr(i.search_name,?1)=1 THEN 2 ELSE 4 END rank FROM ingredients i WHERE i.origin='personal' AND instr(i.search_name,?1)>0 UNION ALL SELECT c.id,'catalog',coalesce(i.name,n.name),CASE WHEN n.search_key=?1 OR e.search_key=?2 THEN 'name' ELSE 'alias' END,CASE WHEN n.search_key=?1 OR e.search_key=?2 THEN 0 WHEN EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=c.id AND a.search_key=CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END) OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=c.id AND a.search_key=?1) THEN 1 WHEN instr(n.search_key,?1)=1 OR instr(e.search_key,?2)=1 THEN 2 ELSE 4 END FROM catalog_ingredients c JOIN catalog_names n ON n.ingredient_id=c.id AND n.locale='tr' LEFT JOIN catalog_names e ON e.ingredient_id=c.id AND e.locale='en' LEFT JOIN ingredients i ON i.id=c.id AND i.origin='catalog' WHERE instr(n.search_key,?1)>0 OR instr(e.search_key,?2)>0 OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=c.id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0) OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=c.id AND instr(a.search_key,?1)>0)) ORDER BY rank,name,id LIMIT 8")?;
+        let mut s=self.conn.prepare(r#"
+            WITH candidates AS (
+              SELECT i.id,i.origin,i.name,
+                CASE WHEN i.search_name=?1 THEN 'exact_name' ELSE 'ambiguous' END reason,
+                CASE WHEN i.search_name=?1 THEN 0 WHEN instr(i.search_name,?1)=1 THEN 3 ELSE 4 END rank
+              FROM ingredients i WHERE i.origin='personal' AND instr(i.search_name,?1)>0
+              UNION ALL
+              SELECT c.id,'catalog',coalesce(i.name,n.name),
+                CASE WHEN n.search_key=?1 OR e.search_key=?2 OR i.search_name=?1 THEN 'exact_name'
+                  WHEN EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=c.id AND a.search_key=CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)
+                    OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=c.id AND a.search_key=?1) THEN 'possible_synonym'
+                  ELSE 'ambiguous' END,
+                CASE WHEN n.search_key=?1 OR e.search_key=?2 OR i.search_name=?1 THEN 0
+                  WHEN EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=c.id AND a.search_key=CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)
+                    OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=c.id AND a.search_key=?1) THEN 1
+                  WHEN instr(n.search_key,?1)=1 OR instr(e.search_key,?2)=1 THEN 3 ELSE 4 END
+              FROM catalog_ingredients c JOIN catalog_names n ON n.ingredient_id=c.id AND n.locale='tr'
+                LEFT JOIN catalog_names e ON e.ingredient_id=c.id AND e.locale='en'
+                LEFT JOIN ingredients i ON i.id=c.id AND i.origin='catalog'
+              WHERE instr(n.search_key,?1)>0 OR instr(e.search_key,?2)>0 OR instr(i.search_name,?1)>0
+                OR EXISTS(SELECT 1 FROM catalog_aliases a WHERE a.ingredient_id=c.id AND instr(a.search_key,CASE WHEN a.locale='tr' THEN ?1 ELSE ?2 END)>0)
+                OR EXISTS(SELECT 1 FROM ingredient_personal_aliases a WHERE a.catalog_id=c.id AND instr(a.search_key,?1)>0)
+            ) SELECT id,origin,name,reason FROM candidates ORDER BY rank,name,id LIMIT 6
+        "#)?;
         let rows = s
             .query_map(params![tr, en], |r| {
                 Ok(IngredientCandidate {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { IngredientLibraryClient } from '../../shared/api/ingredientLibrary';
 import type { RecipeClient } from '../../shared/api/recipes';
-import type { LibraryItem } from '../../shared/contracts/ingredientLibrary';
+import type { LibraryItem, LibraryPage } from '../../shared/contracts/ingredientLibrary';
 import type { Unit } from '../../shared/contracts/recipe';
 import { normalizeError } from '../../shared/api/client';
 import { errorMessage } from '../../shared/i18n';
@@ -9,8 +9,10 @@ import { recipesTr as r } from '../../shared/i18n/recipes';
 import { ingredientsTr as t } from '../../shared/i18n/ingredients';
 import { Button } from '../../shared/ui/button';
 import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
-export function PersonalIngredientEditor({ item, client, library, onDone, onSelectCandidate, registerLeaveGuard }: {
+import { orderedCategoryOptions } from './categoryTree';
+export function PersonalIngredientEditor({ item, categories, client, library, onDone, onSelectCandidate, registerLeaveGuard }: {
     item: LibraryItem;
+    categories?: LibraryPage['categories'];
     client: RecipeClient;
     library: IngredientLibraryClient;
     onSelectCandidate: (target:{id:string;origin:'catalog'|'personal'})=>void;
@@ -20,6 +22,7 @@ export function PersonalIngredientEditor({ item, client, library, onDone, onSele
     const [name, setName] = useState(item.name);
     const [notes, setNotes] = useState(item.notes ?? '');
     const [unit, setUnit] = useState(item.preferredUnit ?? '');
+    const [categoryIds, setCategoryIds] = useState<string[]>(item.ingredientType === null ? item.categories.map(c => c.id) : []);
     const [units, setUnits] = useState<Unit[]>([]);
     const [error, setError] = useState('');
     const [candidates, setCandidates] = useState<Awaited<ReturnType<IngredientLibraryClient['candidates']>>>([]);
@@ -41,7 +44,7 @@ export function PersonalIngredientEditor({ item, client, library, onDone, onSele
       const timer=setTimeout(() => { void library.candidates(name).then(value => { if (active) setCandidates(value.filter(v => v.id !== item.id)); },cause => { if (active) setError(errorMessage(normalizeError(cause).messageKey)); }); },150);
       return () => { active=false; clearTimeout(timer); };
     },[library,name,item.id,item.name]);
-    const dirty = name !== item.name || notes !== (item.notes ?? '') || unit !== (item.preferredUnit ?? '');
+    const dirty = name !== item.name || notes !== (item.notes ?? '') || unit !== (item.preferredUnit ?? '') || (item.ingredientType === null && (categoryIds.length !== item.categories.length || categoryIds.some(id => !item.categories.some(c => c.id === id))));
     const askLeave = () => dirty ? new Promise<boolean>(resolve => { resolver.current = resolve; setLeaving(true); }) : Promise.resolve(true);
     useEffect(() => {
       registerLeaveGuard?.(askLeave);
@@ -56,7 +59,7 @@ export function PersonalIngredientEditor({ item, client, library, onDone, onSele
             const matches=(await library.candidates(name)).filter(value => value.id!==item.id);
             setCandidates(matches);
             if (matches.length && !acknowledged) { setError(t.duplicateWarning); return false; }
-            await client.editIngredient({ id: item.id, revision: item.revision, name, notes: notes || null, preferredUnit: unit || null });
+            await client.editIngredient({ id: item.id, revision: item.revision, name, notes: notes || null, preferredUnit: unit || null, ...(item.ingredientType === null ? {categoryIds} : {}) });
             if (finish) onDone();
             return true;
         }
@@ -89,11 +92,12 @@ export function PersonalIngredientEditor({ item, client, library, onDone, onSele
     <h2>{r.personalIngredients}</h2><p>{r.ingredientEditHelp}</p>
     {error && <p role="alert" className="recipe-error">{error}</p>}
     {dirty && <p role="status">{r.unsaved}</p>}
-    {candidates.length>0 && <div role="status"><p>{t.duplicateWarning}</p><ul>{candidates.map(value => <li key={value.origin+value.id}>{value.name} · {t[value.origin]} <Button type="button" variant="outline" onClick={() => { void askLeave().then(allowed => { if (allowed) onSelectCandidate({id:value.id,origin:value.origin}); }); }}>{t.useExisting}</Button></li>)}</ul><Button type="button" variant="outline" onClick={() => { setAcknowledged(true); setError(''); }}>{t.createAnyway}</Button></div>}
+    {candidates.length>0 && <div role="status"><p>{t.duplicateWarning}</p><ul>{candidates.map(value => <li key={value.origin+value.id}>{value.name} · {t[value.origin]} · {t[value.reason as keyof typeof t] ?? t.ambiguous} <Button type="button" variant="outline" onClick={() => { void askLeave().then(allowed => { if (allowed) onSelectCandidate({id:value.id,origin:value.origin}); }); }}>{t.useExisting}</Button></li>)}</ul><Button type="button" variant="outline" onClick={() => { setAcknowledged(true); setError(''); }}>{t.createAnyway}</Button></div>}
     <fieldset className="recipe-fieldset" disabled={busy}>
       <label>{r.ingredientName}<input required maxLength={200} value={name} onChange={e => { setName(e.target.value); setAcknowledged(false); }}/></label>
       <label>{r.notes}<textarea maxLength={2000} value={notes} onChange={e => setNotes(e.target.value)}/></label>
       <label>{r.preferredUnit}<select value={unit} onChange={e => setUnit(e.target.value)}><option value="">{r.noPreferredUnit}</option>{units.map(u => <option key={u.code}>{u.code}</option>)}</select></label>
+      {item.ingredientType === null && <fieldset className="ingredient-category-assign"><legend>{t.personalCategories}</legend><p>{t.categoryAssignHelp}</p><div className="ingredient-category-options">{orderedCategoryOptions(categories ?? []).map(category => <label key={category.id}><input type="checkbox" checked={categoryIds.includes(category.id)} onChange={e => setCategoryIds(ids => e.target.checked ? [...ids,category.id] : ids.filter(id => id !== category.id))}/>{category.label}</label>)}</div></fieldset>}
       <div className="recipe-actions"><Button type="submit">{r.saveIngredient}</Button><Button type="button" variant="outline" onClick={() => dirty ? setConfirm('discard') : onDone()}>{r.cancel}</Button><Button type="button" variant="ghost" onClick={() => setConfirm('delete')}>{r.deleteIngredient}</Button></div>
     </fieldset>
     {leaving && <ConfirmDialog title={t.leaveTitle} description={t.leaveHelp} confirm={t.leaveSave} cancel={t.continue} busy={busy} error={error} extra={{label:t.leaveDiscard,onClick:()=>{setLeaving(false);resolver.current?.(true);resolver.current=null;}}} onConfirm={() => { void save(false).then(ok => { if (ok) { setLeaving(false); resolver.current?.(true); resolver.current=null; } }); }} onCancel={() => { setLeaving(false); resolver.current?.(false); resolver.current=null; }} />}

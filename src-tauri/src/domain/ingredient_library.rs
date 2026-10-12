@@ -10,6 +10,8 @@ pub struct LibraryQuery {
     pub limit: i64,
     #[serde(default)]
     pub view: Option<String>,
+    #[serde(default)]
+    pub uncategorized: bool,
 }
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]

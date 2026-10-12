@@ -200,6 +200,7 @@ fn catalog_upgrade_preserves_customizations_and_unchanged_revisions() {
             name: "Benim balım".into(),
             notes: Some("Kişisel not".into()),
             preferred_unit: Some("kg".into()),
+            category_ids: None,
         })
         .unwrap();
     assert_eq!(changed.revision, 2);
@@ -209,7 +210,8 @@ fn catalog_upgrade_preserves_customizations_and_unchanged_revisions() {
             revision: 1,
             name: "Eski oturum".into(),
             notes: None,
-            preferred_unit: None
+            preferred_unit: None,
+            category_ids: None,
         })
         .unwrap_err()
         .code,
@@ -644,6 +646,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
         name: "Benim balım".into(),
         notes: Some("Korunsun".into()),
         preferred_unit: Some("kg".into()),
+        category_ids: None,
     })
     .unwrap();
     db.install_bundled_catalog().unwrap();
@@ -806,6 +809,7 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
         name: "Özel aile balım".into(),
         notes: Some("Değişmesin".into()),
         preferred_unit: Some("kg".into()),
+        category_ids: None,
     })
     .unwrap();
     let upgraded = catalog_tool::bundled().unwrap();

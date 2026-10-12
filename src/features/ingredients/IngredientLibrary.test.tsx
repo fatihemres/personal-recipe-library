@@ -18,11 +18,20 @@ test('view, category and search filters compose; paging is delegated to IPC', as
   await waitFor(() => expect(screen.getByRole('combobox')).toBeEnabled());
   await user.selectOptions(screen.getByRole('combobox'), category.id);
   await user.type(screen.getByRole('searchbox'), 'ŞEK');
-  await waitFor(() => expect(library.browse).toHaveBeenLastCalledWith({ search: 'ŞEK', origin: 'catalog', categoryId: category.id, offset: 0, limit: 30, view: null }));
+  await waitFor(() => expect(library.browse).toHaveBeenLastCalledWith({ search: 'ŞEK', origin: 'catalog', categoryId: category.id, offset: 0, limit: 30, view: null, uncategorized:false }));
   await user.click(screen.getByRole('button', { name: 'Sonraki sayfa' }));
   await waitFor(() => expect(library.browse).toHaveBeenLastCalledWith(expect.objectContaining({ offset: 30 })));
   await user.click(screen.getByRole('button', { name: 'Filtreleri temizle' }));
   expect(screen.getByRole('searchbox')).toHaveValue('');
+});
+test('uncategorized filter combines with personal origin and Turkish search', async () => {
+  const library=api(); const user=userEvent.setup(); render(<IngredientLibrary client={rendererRecipeClient()} library={library}/>);
+  await screen.findByText('508 eşleşme');
+  await user.click(screen.getByRole('button',{name:'Kişisel Malzemeler 0'}));
+  await waitFor(()=>expect(screen.getByRole('combobox')).toBeEnabled());
+  await user.selectOptions(screen.getByRole('combobox'), 'uncategorized');
+  await user.type(screen.getByRole('searchbox'), 'İçli');
+  await waitFor(()=>expect(library.browse).toHaveBeenLastCalledWith(expect.objectContaining({origin:'personal',uncategorized:true,categoryId:null,search:'İçli'})));
 });
 test('catalog details are readonly and explicitly distinguish unknown metadata', async () => {
   const library = api(); const user = userEvent.setup(); render(<IngredientLibrary client={rendererRecipeClient()} library={library} />);
@@ -73,15 +82,26 @@ test('favorites remain connected between card, filter and detail, and catalog pr
   await waitFor(()=>expect(library.presentation).toHaveBeenCalledWith(expect.objectContaining({id:item.id,name:'Bizim şeker',revision:2})));
 });
 test('creation warns for canonical alias collision before mutation and offers existing record', async () => {
-  const library=api();vi.mocked(library.candidates).mockResolvedValue([{id:item.id,origin:'catalog',name:'Toz şeker',reason:'alias'}]);
+  const library=api();vi.mocked(library.candidates).mockResolvedValue([{id:item.id,origin:'catalog',name:'Toz şeker',reason:'possible_synonym'}]);
   const recipe=rendererRecipeClient();const user=userEvent.setup();render(<IngredientLibrary client={recipe} library={library}/>);
   await user.click(screen.getByRole('button',{name:'Kişisel malzeme ekle'}));
   await user.type(screen.getByLabelText('Yeni malzemenin adı'),'Şeker');
   await user.click(screen.getAllByRole('button',{name:'Kişisel malzeme ekle'})[1]);
-  expect(await screen.findByText('Benzer malzemeler bulundu. Yeni kayıt oluşturmadan önce gözden geçirin.')).toBeVisible();
+  expect(await screen.findByText(/Olası eşleşmeler bulundu/)).toBeVisible();
   expect(recipe.createIngredient).not.toHaveBeenCalled();
-  await user.click(screen.getByRole('button',{name:'Mevcut kaydı görüntüle'}));
+  expect(screen.getByText(/Diğer adla olası eşleşme/)).toBeVisible();
+  await user.click(screen.getByRole('button',{name:'Kaydı görüntüle'}));
   expect(await screen.findByRole('heading',{name:'Toz şeker'})).toBeVisible();
+});
+test('exact collision cannot be acknowledged as a new personal ingredient', async () => {
+  const library=api();vi.mocked(library.candidates).mockResolvedValue([{id:item.id,origin:'catalog',name:'Toz şeker',reason:'exact_name'}]);
+  const recipe=rendererRecipeClient();const user=userEvent.setup();render(<IngredientLibrary client={recipe} library={library}/>);
+  await user.click(screen.getByRole('button',{name:'Kişisel malzeme ekle'}));
+  await user.type(screen.getByLabelText('Yeni malzemenin adı'),'Toz şeker');
+  await user.click(screen.getAllByRole('button',{name:'Kişisel malzeme ekle'})[1]);
+  expect((await screen.findAllByText(/Bu ad mevcut bir ad veya diğer adla eşleşiyor/)).length).toBeGreaterThan(0);
+  expect(recipe.createIngredient).not.toHaveBeenCalled();
+  expect(screen.queryByRole('button',{name:'Farklı malzeme olarak devam et'})).not.toBeInTheDocument();
 });
 test('unfinished personal creation can continue editing or explicitly discard before navigation', async () => {
   const library=api();const user=userEvent.setup();let guard:(()=>Promise<boolean>)|null=null;

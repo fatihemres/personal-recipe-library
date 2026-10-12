@@ -213,6 +213,7 @@ fn ingredient_rename_duplicate_conflicts_stale_writes_and_draft_references_are_s
         revision,
         notes: Some("Kişisel bilgi".into()),
         preferred_unit: Some("g".into()),
+        category_ids: None,
     };
     assert_eq!(
         db.edit_ingredient(edit("TUZ", 1)).unwrap_err().code,

@@ -244,6 +244,7 @@ impl Database {
         valid_id(&input.id)?;
         let name = input.name.trim();
         let key = search_name(name);
+        let categories = input.category_ids.as_deref();
         if key.is_empty()
             || name.chars().count() > 200
             || name.contains('\0')
@@ -251,12 +252,33 @@ impl Database {
                 .notes
                 .as_ref()
                 .is_some_and(|n| n.chars().count() > 2000 || n.contains('\0'))
+            || categories.is_some_and(|c| c.len() > 50)
         {
             return Err(invalid());
+        }
+        if let Some(ids) = categories {
+            let mut unique = std::collections::HashSet::new();
+            for id in ids {
+                valid_id(id)?;
+                if !unique.insert(id) {
+                    return Err(invalid());
+                }
+            }
         }
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
+        if let Some(ids) = categories {
+            for id in ids {
+                if !tx.query_row(
+                    "SELECT EXISTS(SELECT 1 FROM ingredient_categories WHERE id=?1)",
+                    [id],
+                    |r| r.get::<_, bool>(0),
+                )? {
+                    return Err(invalid());
+                }
+            }
+        }
         if tx.query_row(
             "SELECT EXISTS(SELECT 1 FROM ingredients WHERE search_name=?1 AND id<>?2)",
             params![key, input.id],
@@ -269,6 +291,15 @@ impl Database {
             ));
         }
         if tx.execute("UPDATE ingredients SET name=?3,search_name=?4,notes=?5,preferred_unit=?6,revision=revision+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1 AND revision=?2 AND origin='personal'",params![input.id,input.revision,name,key,input.notes,input.preferred_unit])?!=1 {return Err(conflict());}
+        if let Some(ids) = categories {
+            tx.execute(
+                "DELETE FROM personal_category_memberships WHERE ingredient_id=?1",
+                [&input.id],
+            )?;
+            for id in ids {
+                tx.execute("INSERT INTO personal_category_memberships(ingredient_id,category_id) VALUES(?1,?2)",params![input.id,id])?;
+            }
+        }
         let result = tx.query_row(
             "SELECT id,name,notes,preferred_unit,revision,origin FROM ingredients WHERE id=?1",
             [&input.id],
@@ -299,6 +330,22 @@ impl Database {
                 true,
             ));
         }
+        // Personal category links are user-owned; they must be removed within
+        // the same transaction before the restrictive ingredient FK is checked.
+        let current: Option<i64> = tx
+            .query_row(
+                "SELECT revision FROM ingredients WHERE id=?1 AND origin='personal'",
+                [id],
+                |r| r.get(0),
+            )
+            .optional()?;
+        if current != Some(revision) {
+            return Err(conflict());
+        }
+        tx.execute(
+            "DELETE FROM personal_category_memberships WHERE ingredient_id=?1",
+            [id],
+        )?;
         if tx.execute(
             "DELETE FROM ingredients WHERE id=?1 AND revision=?2 AND origin='personal'",
             params![id, revision],

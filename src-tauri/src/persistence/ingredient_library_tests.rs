@@ -13,7 +13,199 @@ fn query(search: &str, origin: &str, category: Option<&str>, offset: i64) -> Lib
         offset,
         limit: 30,
         view: None,
+        uncategorized: false,
     }
+}
+#[test]
+fn personal_category_assignment_is_atomic_and_facets_count_distinct_descendants() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let own = db.create_ingredient("Özel şifalı ot").unwrap();
+    let herb = stable_id("category", "herbs");
+    let food = stable_id("category", "food");
+    let edited = db
+        .edit_ingredient(IngredientEdit {
+            id: own.id.clone(),
+            revision: 1,
+            name: own.name.clone(),
+            notes: None,
+            preferred_unit: None,
+            category_ids: Some(vec![herb.clone(), food.clone()]),
+        })
+        .unwrap();
+    assert_eq!(edited.revision, 2);
+    let detail = db.ingredient_detail(&own.id, "personal").unwrap();
+    assert_eq!(detail.item.categories.len(), 2);
+    let personal = db
+        .ingredient_library(query("Özel şifalı", "personal", Some("food"), 0))
+        .unwrap();
+    assert_eq!(personal.total, 1);
+    assert_eq!(
+        personal
+            .categories
+            .iter()
+            .find(|c| c.category.key == "food")
+            .unwrap()
+            .count,
+        1
+    );
+    let mut uncategorized = query("Özel şifalı", "personal", None, 0);
+    uncategorized.uncategorized = true;
+    assert_eq!(
+        db.ingredient_library(uncategorized.clone()).unwrap().total,
+        0
+    );
+    let bad = db.edit_ingredient(IngredientEdit {
+        id: own.id.clone(),
+        revision: 2,
+        name: "Changed without commit".into(),
+        notes: None,
+        preferred_unit: None,
+        category_ids: Some(vec![uuid::Uuid::new_v4().to_string()]),
+    });
+    assert!(bad.is_err());
+    assert_eq!(
+        db.ingredient_detail(&own.id, "personal").unwrap().item.name,
+        own.name
+    );
+    assert_eq!(
+        db.ingredient_detail(&own.id, "personal")
+            .unwrap()
+            .item
+            .categories
+            .len(),
+        2
+    );
+    db.edit_ingredient(IngredientEdit {
+        id: own.id.clone(),
+        revision: 2,
+        name: own.name.clone(),
+        notes: None,
+        preferred_unit: None,
+        category_ids: Some(vec![]),
+    })
+    .unwrap();
+    assert_eq!(db.ingredient_library(uncategorized).unwrap().total, 1);
+    drop(db);
+    let mut db = Database::open(dir.path()).unwrap();
+    assert!(db
+        .ingredient_detail(&own.id, "personal")
+        .unwrap()
+        .item
+        .categories
+        .is_empty());
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
+    db.edit_ingredient(IngredientEdit {
+        id: own.id.clone(),
+        revision: 3,
+        name: own.name.clone(),
+        notes: None,
+        preferred_unit: None,
+        category_ids: Some(vec![herb]),
+    })
+    .unwrap();
+    db.delete_ingredient(&own.id, 4).unwrap();
+    assert!(db.ingredient_detail(&own.id, "personal").is_err());
+}
+
+#[test]
+fn collision_candidates_separate_exact_alias_and_ambiguous_forms_without_merging() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let own = db.create_ingredient("İçli karışım").unwrap();
+    for spelling in ["İÇLİ KARIŞIM", "içli karışım", "I\u{0307}ÇLİ KARIŞIM"] {
+        let matches = db.ingredient_candidates(spelling).unwrap();
+        assert!(
+            matches
+                .iter()
+                .any(|c| c.id == own.id && c.reason == "exact_name"),
+            "{spelling}"
+        );
+    }
+    assert!(!db
+        .ingredient_candidates("IÇLI KARIŞIM")
+        .unwrap()
+        .iter()
+        .any(|c| c.id == own.id));
+    let dotless = db.create_ingredient("Iğdır karışımı").unwrap();
+    assert!(db
+        .ingredient_candidates("ığdır karışımı")
+        .unwrap()
+        .iter()
+        .any(|c| c.id == dotless.id && c.reason == "exact_name"));
+    let sugar = db.ingredient_candidates("Granulated sugar").unwrap();
+    assert!(sugar
+        .iter()
+        .any(|c| c.id == stable_id("ingredient", "sugar-granulated") && c.reason == "exact_name"));
+    let variants = db.ingredient_candidates("badem ezmesi").unwrap();
+    assert!(variants
+        .iter()
+        .any(|c| c.id == stable_id("ingredient", "usda-sr-168588")));
+    assert!(variants
+        .iter()
+        .any(|c| c.id == stable_id("ingredient", "usda-sr-170160")));
+    assert_ne!(
+        stable_id("ingredient", "usda-sr-168588"),
+        stable_id("ingredient", "usda-sr-170160")
+    );
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
+}
+
+#[test]
+fn category_edit_keeps_saved_recipe_reference_and_exact_quantity_after_restart() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let own = db.create_ingredient("Deneme kategori otu").unwrap();
+    let saved = db
+        .save_recipe(RecipeInput {
+            id: uuid::Uuid::new_v4().to_string(),
+            expected_revision: None,
+            title: "Kategori bağlantısı".into(),
+            description: None,
+            kind: "food".into(),
+            servings: "1".into(),
+            prep_minutes: None,
+            cook_minutes: None,
+            notes: None,
+            ingredients: vec![RecipeIngredient {
+                id: uuid::Uuid::new_v4().to_string(),
+                ingredient_id: own.id.clone(),
+                quantity: Some("0.123456".into()),
+                unit_code: "g".into(),
+                note: None,
+            }],
+            steps: vec![],
+        })
+        .unwrap();
+    db.edit_ingredient(IngredientEdit {
+        id: own.id.clone(),
+        revision: 1,
+        name: own.name.clone(),
+        notes: None,
+        preferred_unit: None,
+        category_ids: Some(vec![stable_id("category", "herbs")]),
+    })
+    .unwrap();
+    assert_eq!(
+        db.delete_ingredient(&own.id, 2).unwrap_err().code,
+        "INGREDIENT_REFERENCED"
+    );
+    drop(db);
+    let db = Database::open(dir.path()).unwrap();
+    let recipe = db.recipe(&saved.id).unwrap();
+    assert_eq!(recipe.ingredients[0].ingredient_id, own.id);
+    assert_eq!(recipe.ingredients[0].quantity.as_deref(), Some("0.123456"));
+    assert_eq!(
+        db.ingredient_detail(&own.id, "personal")
+            .unwrap()
+            .item
+            .categories[0]
+            .key,
+        "herbs"
+    );
 }
 #[test]
 fn library_pages_real_catalog_and_personal_rows_with_exact_distinct_counts() {
@@ -193,6 +385,7 @@ fn library_details_and_personal_edit_preserve_recipe_draft_and_restart() {
         name: "İçli özel karışımım".into(),
         notes: Some("Aile notu".into()),
         preferred_unit: Some("cc".into()),
+        category_ids: None,
     })
     .unwrap();
     assert_eq!(
@@ -205,7 +398,8 @@ fn library_details_and_personal_edit_preserve_recipe_draft_and_restart() {
             revision: 1,
             name: "Dokunma".into(),
             notes: None,
-            preferred_unit: None
+            preferred_unit: None,
+            category_ids: None,
         })
         .is_err());
     drop(db);
@@ -255,6 +449,7 @@ fn library_keeps_pending_catalog_definitions_visible_and_preserves_existing_over
         name: "Aile balı".into(),
         notes: None,
         preferred_unit: Some("kg".into()),
+        category_ids: None,
     })
     .unwrap();
     let d = db.ingredient_detail(&honey, "catalog").unwrap();
@@ -283,6 +478,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
     assert_eq!(
         db.ingredient_library(LibraryQuery {
             view: Some("favorites".into()),
+            uncategorized: false,
             ..query("", "all", None, 0)
         })
         .unwrap()
@@ -365,6 +561,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
     assert_eq!(
         db.ingredient_library(LibraryQuery {
             view: Some("recent".into()),
+            uncategorized: false,
             ..query("", "all", None, 0)
         })
         .unwrap()
@@ -377,6 +574,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
     assert_eq!(
         db.ingredient_library(LibraryQuery {
             view: Some("favorites".into()),
+            uncategorized: false,
             ..query("", "all", None, 0)
         })
         .unwrap()
@@ -412,6 +610,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
     assert_eq!(
         db.ingredient_library(LibraryQuery {
             view: Some("favorites".into()),
+            uncategorized: false,
             ..query("", "all", None, 0)
         })
         .unwrap()
@@ -423,6 +622,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
     assert_eq!(
         db.ingredient_library(LibraryQuery {
             view: Some("favorites".into()),
+            uncategorized: false,
             ..query("", "all", None, 0)
         })
         .unwrap()

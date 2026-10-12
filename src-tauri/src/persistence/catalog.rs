@@ -374,7 +374,8 @@ impl Database {
     ) -> Result<crate::domain::reliability::PersonalIngredient, AppError> {
         use crate::domain::reliability::PersonalIngredient;
         valid_id(&input.id)?;
-        if !text(&input.name, 200)
+        if input.category_ids.is_some()
+            || !text(&input.name, 200)
             || input
                 .notes
                 .as_ref()

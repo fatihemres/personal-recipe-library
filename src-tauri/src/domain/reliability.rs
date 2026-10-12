@@ -35,6 +35,8 @@ pub struct IngredientEdit {
     pub name: String,
     pub notes: Option<String>,
     pub preferred_unit: Option<String>,
+    #[serde(default)]
+    pub category_ids: Option<Vec<String>>,
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
