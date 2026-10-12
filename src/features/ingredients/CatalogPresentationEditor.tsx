@@ -61,6 +61,6 @@ export function CatalogPresentationEditor({ detail, client, library, onDone, reg
       <label>{r.notes}<textarea maxLength={2000} value={notes} onChange={event => setNotes(event.target.value)} /></label>
       <div className="recipe-actions"><Button type="submit">{t.savePresentation}</Button><Button type="button" variant="outline" onClick={() => void apply(true)}>{t.resetPresentation}</Button><Button type="button" variant="ghost" onClick={() => { void askLeave().then(allowed=>{if(allowed)onDone();}); }}>{r.cancel}</Button></div>
     </fieldset>
-    {leaving && <ConfirmDialog title={t.leaveTitle} description={t.leaveHelp} confirm={t.leaveSave} cancel={t.continue} extra={{label:t.leaveDiscard,onClick:()=>{setLeaving(false);resolver.current?.(true);resolver.current=null;}}} onConfirm={()=>{void apply(false,false).then(ok=>{if(ok){setLeaving(false);resolver.current?.(true);resolver.current=null;}});}} onCancel={()=>{setLeaving(false);resolver.current?.(false);resolver.current=null;}} />}
+    {leaving && <ConfirmDialog title={t.leaveTitle} description={t.leaveHelp} confirm={t.leaveSave} cancel={t.continue} busy={busy} error={error} extra={{label:t.leaveDiscard,onClick:()=>{setLeaving(false);resolver.current?.(true);resolver.current=null;}}} onConfirm={()=>{void apply(false,false).then(ok=>{if(ok){setLeaving(false);resolver.current?.(true);resolver.current=null;}});}} onCancel={()=>{setLeaving(false);resolver.current?.(false);resolver.current=null;}} />}
   </form>;
 }

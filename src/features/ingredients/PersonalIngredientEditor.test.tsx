@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react';
+import { act, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { expect, test, vi } from 'vitest';
 import { PersonalIngredientEditor } from './PersonalIngredientEditor';
@@ -14,7 +14,20 @@ test('sidebar guard offers save, discard and continue, and failed save retains e
  await screen.findByText('Kaydedilmemiş değişiklikler');
  let decision!:Promise<boolean>;act(()=>{decision=guard!();});await user.click(screen.getByRole('button',{name:'Düzenlemeye devam et'}));expect(await decision).toBe(false);
  act(()=>{decision=guard!();});vi.mocked(client.editIngredient).mockRejectedValueOnce({code:'CONFLICT',messageKey:'errors.conflict',recoverable:true});
- await user.click(screen.getByRole('button',{name:'Kaydet ve devam et'}));expect((await screen.findAllByRole('alert'))[0]).toHaveTextContent('başka bir işlemde değiştirildi');expect(screen.getByRole('textbox',{name:'Malzeme adı'})).toHaveValue('İçli baharat');
+ await user.click(screen.getByRole('button',{name:'Kaydet ve devam et'}));
+ expect(await within(screen.getByRole('dialog')).findByRole('alert')).toHaveTextContent('başka bir işlemde değiştirildi');
+ expect(screen.getByRole('textbox',{name:'Malzeme adı'})).toHaveValue('İçli baharat');
  await user.click(screen.getByRole('button',{name:'Vazgeç ve devam et'}));expect(await decision).toBe(true);
  expect(onDone).not.toHaveBeenCalled();
+});
+
+test('successful Save and Continue commits the personal edit before allowing navigation', async()=>{
+ const client=rendererRecipeClient();let guard:(()=>Promise<boolean>)|null=null;
+ const user=userEvent.setup();render(<PersonalIngredientEditor item={item} client={client} library={library} onDone={vi.fn()} onSelectCandidate={vi.fn()} registerLeaveGuard={value=>{guard=value;}}/>);
+ await user.clear(screen.getByRole('textbox',{name:'Malzeme adı'}));
+ await user.type(screen.getByRole('textbox',{name:'Malzeme adı'}),'İçli baharat');
+ let decision!:Promise<boolean>;act(()=>{decision=guard!();});
+ await user.click(await screen.findByRole('button',{name:'Kaydet ve devam et'}));
+ expect(await decision).toBe(true);
+ expect(client.editIngredient).toHaveBeenCalledWith(expect.objectContaining({id:item.id,revision:2,name:'İçli baharat'}));
 });
