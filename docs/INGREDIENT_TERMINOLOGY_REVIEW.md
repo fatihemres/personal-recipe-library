@@ -1,4 +1,6 @@
-# Ingredient terminology review — M3B-3 evidence, M3C-4 decisions
+# Ingredient terminology review — M3B-3 evidence, M3C-4 and M3C-5 decisions
+
+M3C-5 applies two further user-authorized display names: `usda-sr-174842` Turkish **Club soda (kokteyl sodası)** and `project-siyez-grain` English **Einkorn wheat (siyez)**. The ten other records named in `CATALOG_M3C5_QUALITY_AUDIT.md` retain their existing names by the user's limited implementation decision. Three records remain unresolved: `usda-sr-171319`, `usda-sr-170874`, and `usda-sr-168412`. The older observations below are historical evidence, not newly approved suggestions. No named reviewer, date, or independent linguistic expert judgment was inferred. The current 18-row status and decision fields are in `INGREDIENT_LOCALIZATION_REVIEW.csv` and the filterable workbook.
 
 M3C-4 applied exactly three user-selected Turkish names: `usda-sr-170918` → **Frenk kimyonu tohumu**, `usda-sr-168921` → **Tam tahıllı mavi mısır unu**, and `usda-sr-168588` → **Badem püresi (sade, tuz ilavesiz)**. Their stable IDs, English identities and source descriptors did not change. The original review observations below remain as historical evidence; the current decision states are in `INGREDIENT_LOCALIZATION_REVIEW.csv` and the companion workbook. The other 15 decisions remain pending. No reviewer identity, timestamp, or independent expert approval was inferred.
 

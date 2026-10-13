@@ -570,7 +570,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
             && i.observations.is_empty()));
     assert_eq!(report.category_coverage["vegetables"], 57);
     assert_eq!(report.category_coverage["spirits"], 25);
-    assert_eq!(count(&db, "catalog_provenance"), 965);
+    assert_eq!(count(&db, "catalog_provenance"), 967);
     assert_eq!(count(&db, "catalog_observations"), 0);
     assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
     for q in ["Şek", "şek", "ŞEK", "şeker", "S\u{0327}EK"] {
@@ -671,7 +671,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
         .unwrap();
     assert_eq!(preserved, ("Korunsun".into(), "kg".into()));
     assert_eq!(count(&db, "ingredients"), 508);
-    assert_eq!(count(&db, "catalog_sources"), 5);
+    assert_eq!(count(&db, "catalog_sources"), 6);
 }
 
 #[test]
@@ -760,7 +760,7 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
     db.install_bundled_catalog().unwrap();
     db.conn
         .execute(
-            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=5",
+            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=6",
             ["0".repeat(64)],
         )
         .unwrap();
@@ -787,12 +787,20 @@ fn actual_v4_upgrade_preserves_every_identity_personal_draft_recipe_override_and
 }
 
 #[test]
+fn actual_v5_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
+    verify_historical_upgrade(5, 508, "Ailelik sos");
+}
+
+#[test]
 fn terminology_v5_fresh_and_v4_upgrade_keep_ids_overrides_search_recipe_and_integrity() {
     let old = catalog_tool::load(
         &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/4/manifest.json"),
     )
     .unwrap();
-    let new = catalog_tool::bundled().unwrap();
+    let new = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/5/manifest.json"),
+    )
+    .unwrap();
     let cases = [
         (
             "usda-sr-170918",
@@ -837,7 +845,7 @@ fn terminology_v5_fresh_and_v4_upgrade_keep_ids_overrides_search_recipe_and_inte
     }
     let fresh = tempfile::tempdir().unwrap();
     let mut fresh_db = Database::open(fresh.path()).unwrap();
-    fresh_db.install_bundled_catalog().unwrap();
+    fresh_db.import_catalog(&new).unwrap();
     for (_, id, name, _) in cases {
         assert_eq!(fresh_db.ingredients(name).unwrap()[0].id, id);
     }
@@ -964,9 +972,7 @@ fn terminology_v5_fresh_and_v4_upgrade_keep_ids_overrides_search_recipe_and_inte
     assert_ne!(butter, stable_id("ingredient", "usda-sr-170160"));
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    let runs = count(&db, "catalog_import_runs");
-    db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "catalog_import_runs"), runs);
+    assert!(db.import_catalog(&new).unwrap().unchanged);
     let retained = db.recipe(&saved.id).unwrap();
     assert_eq!(retained.ingredients[0].ingredient_id, butter);
     assert_eq!(
@@ -1011,9 +1017,14 @@ fn terminology_v5_name_collision_rolls_back_without_changing_personal_or_recipe_
     let personal = db.create_ingredient("Frenk kimyonu tohumu").unwrap();
     let saved = db.save_recipe(recipe(&personal)).unwrap();
     assert_eq!(
-        db.import_catalog(&catalog_tool::bundled().unwrap())
-            .unwrap_err()
-            .code,
+        db.import_catalog(
+            &catalog_tool::load(
+                &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/5/manifest.json"),
+            )
+            .unwrap()
+        )
+        .unwrap_err()
+        .code,
         "CATALOG_NAME_CONFLICT"
     );
     assert_eq!(count(&db, "catalog_releases"), 1);
@@ -1034,6 +1045,258 @@ fn terminology_v5_name_collision_rolls_back_without_changing_personal_or_recipe_
             )
             .unwrap(),
         "Karaman kimyonu tohumu"
+    );
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
+}
+
+#[test]
+fn terminology_v6_fresh_and_v5_upgrade_preserve_users_recipes_and_search() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/5/manifest.json"),
+    )
+    .unwrap();
+    let new = catalog_tool::bundled().unwrap();
+    assert_eq!((old.manifest.version, new.manifest.version), (5, 6));
+    let changes = [
+        (
+            "usda-sr-174842",
+            "b824153c-c098-8309-ac77-8538c4fb3c4c",
+            "Club soda (kokteyl sodası)",
+            "Club soda",
+        ),
+        (
+            "project-siyez-grain",
+            "ee71c0f4-6d4f-858c-8ae0-32ccb416ea9e",
+            "Siyez buğdayı",
+            "Einkorn wheat (siyez)",
+        ),
+    ];
+    for (key, id, tr, en) in changes {
+        let record = new.data.ingredients.iter().find(|i| i.key == key).unwrap();
+        assert_eq!(
+            (
+                &record.id[..],
+                &record.names["tr"][..],
+                &record.names["en"][..]
+            ),
+            (id, tr, en)
+        );
+        if key == "project-siyez-grain" {
+            assert_eq!(record.canonical_name, en);
+        }
+    }
+    let fresh = tempfile::tempdir().unwrap();
+    let mut db = Database::open(fresh.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(
+        (
+            count(&db, "catalog_ingredients"),
+            count(&db, "catalog_aliases"),
+            count(&db, "ingredient_categories")
+        ),
+        (508, 260, 50)
+    );
+    for (_, id, tr, en) in changes {
+        for name in [tr, en] {
+            assert!(db
+                .available_ingredients(name)
+                .unwrap()
+                .items
+                .iter()
+                .any(|i| i.id == id));
+        }
+    }
+    assert!(db
+        .available_ingredients("KOKTEYL SODASI")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == changes[0].1));
+    assert!(db
+        .available_ingredients("einkorn wheat")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == changes[1].1));
+    drop(db);
+
+    let upgrade = tempfile::tempdir().unwrap();
+    let mut db = Database::open(upgrade.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    let personal = db.create_ingredient("Aile aroması").unwrap();
+    db.set_ingredient_favorite(&personal.id, "personal", true)
+        .unwrap();
+    let club = db
+        .ingredients("Club soda")
+        .unwrap()
+        .into_iter()
+        .find(|i| i.id == changes[0].1)
+        .unwrap();
+    let saved = db.save_recipe(recipe(&club)).unwrap();
+    let draft = db
+        .save_draft(DraftWrite {
+            id: uuid::Uuid::new_v4().to_string(),
+            expected_revision: None,
+            input: recipe(&personal),
+        })
+        .unwrap();
+    db.set_ingredient_favorite(&club.id, "catalog", true)
+        .unwrap();
+    let revision = db
+        .ingredient_detail(&club.id, "catalog")
+        .unwrap()
+        .item
+        .revision
+        .unwrap();
+    db.set_catalog_presentation(
+        crate::domain::ingredient_library::CatalogPresentationInput {
+            id: club.id.clone(),
+            revision,
+            name: Some("Kendi kokteyl sodam".into()),
+            alias: Some("Ev sodası".into()),
+            preferred_unit: Some("cc".into()),
+            notes: Some("Özel".into()),
+        },
+    )
+    .unwrap();
+    let report = db.import_catalog(&new).unwrap();
+    assert_eq!(
+        (report.inserted, report.updated, report.validated),
+        (0, 2, 508)
+    );
+    assert!(db.import_catalog(&new).unwrap().unchanged);
+    assert_eq!(
+        db.ingredient_detail(&club.id, "catalog")
+            .unwrap()
+            .canonical_tr
+            .as_deref(),
+        Some("Club soda (kokteyl sodası)")
+    );
+    assert_eq!(
+        db.ingredients("Kendi kokteyl sodam").unwrap()[0].id,
+        club.id
+    );
+    assert!(db
+        .available_ingredients("Ev sodası")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == club.id));
+    assert_eq!(db.ingredients("Aile aroması").unwrap()[0].id, personal.id);
+    assert_eq!(
+        db.draft(&draft.id).unwrap().input.ingredients[0].ingredient_id,
+        personal.id
+    );
+    for (id, origin) in [(&club.id[..], "catalog"), (&personal.id[..], "personal")] {
+        assert!(db
+            .ingredient_library(crate::domain::ingredient_library::LibraryQuery {
+                view: Some("favorites".into()),
+                origin: origin.into(),
+                search: String::new(),
+                category_id: None,
+                uncategorized: false,
+                offset: 0,
+                limit: 30,
+            })
+            .unwrap()
+            .items
+            .iter()
+            .any(|i| i.id == id));
+    }
+    assert!(db
+        .available_ingredients_mode("", "recent")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == club.id));
+    for (key, name) in [
+        ("usda-sr-171329", "Paprika"),
+        ("usda-sr-170927", "Öğütülmüş muskat çiçeği"),
+        ("usda-sr-170936", "Öğütülmüş sater otu"),
+        ("usda-sr-171318", "Kuru Frenk maydanozu"),
+        ("usda-sr-170160", "Badem ezmesi (pastacılık)"),
+        ("usda-sr-170903", "Sade az yağlı Yunan tipi yoğurt"),
+        ("usda-sr-175142", "Levrek (karışık türler, çiğ)"),
+        ("project-salep-drink", "Salep (hazırlanmış içecek)"),
+        ("project-aromatic-bitters", "Aromatik kokteyl bitteri"),
+        ("project-creme-de-cassis", "Crème de cassis"),
+        ("usda-sr-171319", "Chili tozu"),
+        ("usda-sr-170874", "Fermente az yağlı buttermilk"),
+        ("usda-sr-168412", "Hindiba (endivyen, çiğ)"),
+    ] {
+        assert_eq!(db.conn.query_row("SELECT n.name FROM catalog_names n JOIN catalog_ingredients i ON i.id=n.ingredient_id WHERE i.canonical_key=?1 AND n.locale='tr'", [key], |r| r.get::<_, String>(0)).unwrap(), name);
+    }
+    drop(db);
+    let mut db = Database::open(upgrade.path()).unwrap();
+    let runs = count(&db, "catalog_import_runs");
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "catalog_import_runs"), runs);
+    let retained = db.recipe(&saved.id).unwrap();
+    assert_eq!(
+        (
+            retained.ingredients[0].ingredient_id.as_str(),
+            retained.ingredients[0].quantity.as_deref(),
+            retained.ingredients[0].unit_code.as_str()
+        ),
+        (club.id.as_str(), Some("35.000001"), "cc")
+    );
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
+    assert_eq!(
+        db.conn
+            .query_row("SELECT count(*) FROM pragma_foreign_key_check", [], |r| r
+                .get::<_, i64>(
+                0
+            ))
+            .unwrap(),
+        0
+    );
+}
+
+#[test]
+fn terminology_v6_new_name_collision_rolls_back_release() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/5/manifest.json"),
+    )
+    .unwrap();
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    let personal = db.create_ingredient("Club soda (kokteyl sodası)").unwrap();
+    let saved = db.save_recipe(recipe(&personal)).unwrap();
+    assert_eq!(
+        db.import_catalog(&catalog_tool::bundled().unwrap())
+            .unwrap_err()
+            .code,
+        "CATALOG_NAME_CONFLICT"
+    );
+    assert_eq!(count(&db, "catalog_releases"), 1);
+    assert_eq!(
+        db.ingredients("Club soda (kokteyl sodası)").unwrap()[0].id,
+        personal.id
+    );
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
+        personal.id
+    );
+    assert_eq!(
+        db.conn
+            .query_row(
+                "SELECT name FROM catalog_names WHERE ingredient_id=?1 AND locale='tr'",
+                ["b824153c-c098-8309-ac77-8538c4fb3c4c"],
+                |r| r.get::<_, String>(0)
+            )
+            .unwrap(),
+        "Soda (club soda)"
     );
     assert_eq!(
         db.conn
@@ -1088,8 +1351,14 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
         (
             508,
             508 - previous_count,
-            if version == 4 { 3 } else { previous_count },
-            if version == 4 { 0 } else { 1 }
+            if version == 4 {
+                5
+            } else if version == 5 {
+                2
+            } else {
+                previous_count
+            },
+            if version >= 4 { 0 } else { 1 }
         )
     );
     for item in &old.data.ingredients {
@@ -1158,7 +1427,7 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
     );
     assert_eq!(
         db.catalog_status().unwrap().pending_collisions,
-        if version == 4 { 0 } else { 1 }
+        if version >= 4 { 0 } else { 1 }
     );
     assert_eq!(
         db.conn
@@ -1175,7 +1444,7 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
             .unwrap(),
         0
     );
-    eprintln!("actual v{version}->v5 import: {import_time:?}");
+    eprintln!("actual v{version}->v6 import: {import_time:?}");
 }
 
 #[test]
@@ -1186,7 +1455,7 @@ fn expanded_catalog_search_forms_aliases_source_boundaries_and_real_performance(
     for (key, queries) in [
         (
             "project-siyez-grain",
-            vec!["SİYEZ BUĞ", "siyez buğ", "Siyez einkorn"],
+            vec!["SİYEZ BUĞ", "siyez buğ", "Einkorn wheat"],
         ),
         ("project-raki", vec!["RAKI", "rakı", "Rakı"]),
         ("project-india-pale-ale", vec!["IPA", "India pale ale"]),
@@ -1247,7 +1516,14 @@ fn expanded_catalog_search_forms_aliases_source_boundaries_and_real_performance(
         .iter()
         .filter(|i| i.key.starts_with("project-"))
     {
-        assert_eq!(item.provenance.len(), 1);
+        assert_eq!(
+            item.provenance.len(),
+            if item.key == "project-siyez-grain" {
+                2
+            } else {
+                1
+            }
+        );
         assert_eq!(item.provenance[0].source_id, "recipeatlas-curation");
         assert!(item.provenance[0].description.contains("https://"));
     }

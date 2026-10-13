@@ -32,6 +32,8 @@ def artifact(path, value):
 
 
 def main():
+    if (OUT / "manifest.json").exists():
+        assert json.loads((OUT / "manifest.json").read_text())["version"] == 5, "Historical v5 generator cannot overwrite a later release"
     manifest_bytes = (BASE / "manifest.json").read_bytes()
     assert hashlib.sha256(manifest_bytes).hexdigest() == BASE_MANIFEST_SHA256
     old_manifest = json.loads(manifest_bytes)

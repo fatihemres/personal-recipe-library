@@ -84,3 +84,7 @@ No migration was needed. Unlinked personal category edits use the existing `pers
 ## M3C-4 catalog version 5
 
 No schema migration. The versioned, checksummed shared importer updates three Turkish `catalog_names` and uncustomized recipe-facing catalog display names in one transaction. `ingredients.id`, English names, aliases, category links, source descriptors, recipe references, quantities, units, favorites, personal ingredients and overrides are preserved. `recipeatlas-terminology/user-decisions-1` records only the three user naming decisions; historical v4 source snapshots remain immutable. A changed system name colliding with an unlinked personal ingredient rejects the entire update for explicit review. Repeated startup skips the same version/hash without extra writes.
+
+## M3C-5 catalog version 6
+
+Schema remains 5; no migration is needed. Release 6 updates exactly one Turkish `catalog_names` value (`usda-sr-174842`) and one English `catalog_names` plus matching `catalog_ingredients.canonical_name` value (`project-siyez-grain`). Stable IDs, aliases, category links and observations remain unchanged. The separate versioned terminology evidence carries only the two approved display-name changes. The shared transaction keeps user-owned presentation overrides, favorites, personal entries and recipe/draft references; a changed label colliding with an unlinked personal entry aborts the release. Review decisions for ten unchanged and three unresolved records are documentation metadata, not ingredient updates.

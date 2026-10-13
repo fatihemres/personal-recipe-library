@@ -38,24 +38,27 @@ class CatalogAuditTests(unittest.TestCase):
         report = json.loads((audit_catalog.OUT / 'quality-audit.json').read_text())
         self.assertEqual(report['auditedIdentities'], 508)
         self.assertEqual(report['stableHistoricalIds'], 482)
-        self.assertEqual(report['linguisticReviewCount'], 15)
-        self.assertEqual(report['userApprovedTerminologyCount'], 3)
+        self.assertEqual(report['linguisticReviewCount'], 3)
+        self.assertEqual(report['userApprovedTerminologyCount'], 5)
+        self.assertEqual(report['userAuthorizedRetainCount'], 10)
         self.assertEqual(report['independentlyHumanReviewed'], 0)
 
-    def test_only_three_explicit_user_names_are_approved_and_fifteen_remain_pending(self):
+    def test_five_names_ten_retained_and_three_unresolved(self):
         with (self.original_root / 'docs/INGREDIENT_LOCALIZATION_REVIEW.csv').open(newline='', encoding='utf-8') as handle:
             rows = list(csv.DictReader(handle))
-        expected = {
+        expected_tr = {
             'usda-sr-170918': 'Frenk kimyonu tohumu',
             'usda-sr-168921': 'Tam tahıllı mavi mısır unu',
             'usda-sr-168588': 'Badem püresi (sade, tuz ilavesiz)',
+            'usda-sr-174842': 'Club soda (kokteyl sodası)',
         }
-        approved = [row for row in rows if row['human_approved'] == 'true']
-        pending = [row for row in rows if row['human_approved'] == 'false']
-        self.assertEqual(len(approved), 3)
-        self.assertEqual(len(pending), 15)
-        self.assertEqual({row['canonical_key']: row['selected_turkish'] for row in approved}, expected)
-        self.assertTrue(all(row['decision'] == 'retain-pending-human-review' and not row['selected_turkish'] for row in pending))
+        applied = [row for row in rows if row['decision'] == 'user-approved-name']
+        retained = [row for row in rows if row['decision'] == 'user-authorized-retain-name']
+        pending = [row for row in rows if row['decision'] == 'retain-pending-human-review']
+        self.assertEqual((len(applied), len(retained), len(pending)), (5, 10, 3))
+        self.assertEqual({row['canonical_key']: row['selected_turkish'] for row in applied if row['selected_turkish']}, expected_tr)
+        self.assertEqual({row['canonical_key']: row['selected_english'] for row in applied if row['selected_english']}, {'project-siyez-grain': 'Einkorn wheat (siyez)'})
+        self.assertTrue(all(not row['selected_turkish'] and not row['selected_english'] for row in retained + pending))
 
     def test_malformed_labels_aliases_source_units_and_ids_fail(self):
         path = audit_catalog.OUT / 'ingredients.json'

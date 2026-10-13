@@ -127,3 +127,6 @@ The only bundled source data licenses remain USDA CC0 and original project curat
 ## M3C-4 user-selected terminology snapshot
 
 Catalog version 5 retains the April 2018 USDA selection-4 facts and production-3 project curation snapshots byte-for-byte. A new `recipeatlas-terminology/user-decisions-1` CC0 project-authored snapshot records only three explicit user-selected Turkish display names, with stable IDs and previous labels. It is not a new USDA release or an external translation dataset. No third-party material, empirical metadata, images, or branded products were added. The source registry pins this snapshot and the manifest checks its evidence hash. The original version-4 package remains in `catalog/releases/4` for provenance and upgrade verification.
+## M3C-5 release 6 terminology evidence
+
+Release 6 adds a separate project-authored `recipeatlas-terminology-final/user-decisions-2` evidence snapshot for two user-authorized display names. It is not a new external dataset or USDA translation. The existing USDA, project-curation and release-5 terminology source snapshots remain byte-for-byte preserved. Ten retain-name decisions and three unresolved items are review metadata only; no external license or factual provenance was inferred from them. Source permissions and exclusions elsewhere in this document are unchanged.

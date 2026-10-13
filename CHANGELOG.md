@@ -1,5 +1,11 @@
 # Changelog
 
+## M3C-5 — Final scoped terminology decisions (2026-10-13, unreleased)
+
+- Shipped offline catalog release 6 with exactly two display-name changes: Turkish `Club soda (kokteyl sodası)` and English `Einkorn wheat (siyez)`. Preserved 508 canonical IDs, 260 aliases, 50 categories and schema 5.
+- Archived release 5, recorded ten user-authorized retain-name decisions and left three ambiguous terms unresolved. The review decisions do not claim independent expert linguistic verification.
+- Verified transactional release upgrades, collision rollback, user presentation/favorite/personal/recipe/draft preservation, offline CLI imports, and isolated native macOS startup.
+
 ## M3C-4 — User-selected ingredient terminology (2026-10-13, unreleased)
 
 - Applied three explicit Turkish naming decisions through offline catalog release 5, retaining all 508 IDs, 260 aliases, 50 categories, recipe references and user overrides. No schema migration or new ingredient was added.

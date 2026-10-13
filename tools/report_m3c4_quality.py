@@ -11,10 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def build():
-    catalog = json.loads((ROOT / "catalog/production/ingredients.json").read_text())
-    audit = json.loads((ROOT / "catalog/production/quality-audit.json").read_text())
-    manifest = json.loads((ROOT / "catalog/production/manifest.json").read_text())
-    with (ROOT / "docs/INGREDIENT_LOCALIZATION_REVIEW.csv").open(newline="", encoding="utf-8") as handle:
+    catalog = json.loads((ROOT / "catalog/releases/5/ingredients.json").read_text())
+    audit = json.loads((ROOT / "catalog/releases/5/quality-audit.json").read_text())
+    manifest = json.loads((ROOT / "catalog/releases/5/manifest.json").read_text())
+    with (ROOT / "catalog/releases/5/ingredient-localization-review.csv").open(newline="", encoding="utf-8") as handle:
         review = list(csv.DictReader(handle))
     by_key = {row["key"]: row for row in catalog["ingredients"]}
     approved = [row for row in review if row["human_approved"] == "true"]

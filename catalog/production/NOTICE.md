@@ -1,4 +1,4 @@
-# Production catalog notices — version 5
+# Production catalog notices — version 6
 
 508 canonical culinary identities: 454 selected USDA SR Legacy April 2018
 identities and 54 original project-authored reference-backed identities.
@@ -17,8 +17,9 @@ no recipe instructions, quantities, regulatory definitions or health claims copi
 
 Turkish and English labels are project curation, not USDA translations or
 independently certified terminology. All 508 were structurally audited; three
-Turkish display names were explicitly selected by the user and 15 questions
-remain for culinary review. Unknown nutrition,
+earlier and two current display names were authorized by the user, ten names
+were retained under the current limited decision, and three questions remain
+unresolved. No independent expert linguistic verification is claimed. Unknown nutrition,
 density, allergens and ABV are absent. Regulatory minimum strengths are never
 actual ingredient ABV defaults, and non-alcoholic naming never implies 0% ABV.
 
@@ -34,3 +35,12 @@ alias, category, factual observation or USDA descriptor. The user-selected
 wording is recorded separately as `recipeatlas-terminology/user-decisions-1`;
 prior curation snapshots remain intact. The exact version 4 package is archived
 under `catalog/releases/4` for upgrade and historical verification.
+
+Version 6 changes only `usda-sr-174842` Turkish to Club soda (kokteyl sodası)
+and `project-siyez-grain` English to Einkorn wheat (siyez), including the
+matching English `canonicalName`. It adds no ingredient, alias, category,
+observation, botanical claim or USDA descriptor. Club soda remains distinct
+from mineral water. These two user-authorized label choices have separate
+`recipeatlas-terminology-final/user-decisions-2` provenance. Ten unchanged
+names and three unresolved terms are review metadata, not source facts. The
+exact version 5 package is archived under `catalog/releases/5`.

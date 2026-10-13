@@ -50,6 +50,17 @@
       "decision": "Three explicit user-selected Turkish display names; no USDA descriptor, alias, observation or ingredient identity changes."
     },
     {
+      "id": "recipeatlas-terminology-final",
+      "name": "Tarif Atlası final user-authorized terminology decisions",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "user-decisions-2",
+      "retrievedAt": "2026-10-13",
+      "imagesApproved": false,
+      "decision": "Two explicit display-name changes only; ten retain-name decisions and three unresolved terms are review metadata, not independent expert verification."
+    },
+    {
       "id": "usda-foundation",
       "name": "USDA Foundation Foods",
       "url": "https://fdc.nal.usda.gov/download-datasets/",

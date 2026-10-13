@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "capitalizationAndTranslationWarnings": [],
   "conceptReviewCandidates": [
     {
@@ -212,10 +212,11 @@
   "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],
-  "linguisticReviewCount": 15,
-  "userApprovedTerminologyCount": 3,
+  "linguisticReviewCount": 3,
+  "userApprovedTerminologyCount": 5,
+  "userAuthorizedRetainCount": 10,
   "independentlyHumanReviewed": 0,
-  "reviewBoundary": "Structural audit plus three explicit user-selected Turkish names; 15 other terms remain pending independent culinary review.",
+  "reviewBoundary": "Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification.",
   "selectionExclusions": [
     {
       "externalId": "175186",

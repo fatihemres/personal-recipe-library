@@ -64,8 +64,8 @@
     "beverage": 97,
     "food": 411
   },
-  "linguisticReviewCount": 15,
-  "localizationReview": "Three user-selected Turkish names applied; 15 decisions remain pending.",
+  "linguisticReviewCount": 3,
+  "localizationReview": "3 earlier names and 2 current names applied; 10 user-authorized retain-name decisions; 3 unresolved. No independent expert verification.",
   "missingMetadata": {
     "abv": 508,
     "allergens": 508,
@@ -85,5 +85,5 @@
     "usda-sr-legacy": 454
   },
   "usdaRecords": 454,
-  "version": 5
+  "version": 6
 }

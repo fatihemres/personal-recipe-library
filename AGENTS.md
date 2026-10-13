@@ -71,3 +71,8 @@ Build a local-first food and beverage recipe management desktop application for 
 - Production catalog version 5 retains 508 canonical IDs, 260 aliases and 50 categories. Only three explicit user-selected Turkish names changed; 15 terminology decisions remain pending. See `docs/CATALOG_M3C4_QUALITY_AUDIT.md` and the review workbook.
 - Version 4 is archived in `catalog/releases/4`. Generate version 5 only with `tools/apply_terminology_decisions.py`; never edit version 4, previously applied migrations, or historical source snapshots. The new terminology provenance is separate from USDA and old curation evidence.
 - Old Turkish labels were not promoted to aliases; almond butter stays distinct from almond paste/marzipan. Catalog import preserves user name/unit overrides and personal records. An upgrade colliding with an unlinked personal name fails transactionally for explicit review.
+
+## Final terminology release invariants (M3C-5)
+- Production catalog version 6 retains 508 canonical IDs, 260 aliases and 50 categories. Version 5 is archived at `catalog/releases/5`; generate version 6 only with `tools/apply_final_terminology_decisions.py` from its pinned checksum.
+- Exactly two canonical name fields changed: `usda-sr-174842` Turkish and `project-siyez-grain` English (including its matching `canonicalName`). Ten reviewed names were expressly retained and three remain unresolved; no independent expert linguistic verification is claimed. See `docs/CATALOG_M3C5_QUALITY_AUDIT.md` and the review workbook.
+- Preserve historical evidence, IDs, aliases, user overrides, personal records, favorites, drafts and recipe quantities. Catalog update collisions still reject the whole transaction. Migrations 001–005 remain unchanged.

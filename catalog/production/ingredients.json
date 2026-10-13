@@ -2081,7 +2081,7 @@
     },
     {
       "aliases": [],
-      "canonicalName": "Siyez einkorn wheat",
+      "canonicalName": "Einkorn wheat (siyez)",
       "categories": [
         "grains",
         "turkish-regional"
@@ -2093,7 +2093,7 @@
       "ingredientType": "food",
       "key": "project-siyez-grain",
       "names": {
-        "en": "Siyez einkorn wheat",
+        "en": "Einkorn wheat (siyez)",
         "tr": "Siyez buğdayı"
       },
       "observations": [],
@@ -2104,6 +2104,12 @@
           "externalId": "project-siyez-grain",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        },
+        {
+          "sourceId": "recipeatlas-terminology-final",
+          "sourceVersion": "user-decisions-2",
+          "externalId": "project-siyez-grain",
+          "description": "{\"decision\":\"User-authorized display name; no source fact or alias change.\",\"identityId\":\"ee71c0f4-6d4f-858c-8ae0-32ccb416ea9e\",\"locale\":\"en\",\"previous\":\"Siyez einkorn wheat\",\"selected\":\"Einkorn wheat (siyez)\"}"
         }
       ],
       "relations": []
@@ -17906,7 +17912,7 @@
       "key": "usda-sr-174842",
       "names": {
         "en": "Club soda",
-        "tr": "Soda (club soda)"
+        "tr": "Club soda (kokteyl sodası)"
       },
       "observations": [],
       "preferredUnit": "mL",
@@ -17922,6 +17928,12 @@
           "externalId": "usda-sr-174842",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        },
+        {
+          "sourceId": "recipeatlas-terminology-final",
+          "sourceVersion": "user-decisions-2",
+          "externalId": "usda-sr-174842",
+          "description": "{\"decision\":\"User-authorized display name; no source fact or alias change.\",\"identityId\":\"b824153c-c098-8309-ac77-8538c4fb3c4c\",\"locale\":\"tr\",\"previous\":\"Soda (club soda)\",\"selected\":\"Club soda (kokteyl sodası)\"}"
         }
       ],
       "relations": []

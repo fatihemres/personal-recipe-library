@@ -1,6 +1,6 @@
 # Architecture
 
-Status: M1 through M3C-4 implemented locally as of 2026-10-13; subsequent milestones remain pending. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
+Status: M1 through M3C-5 implemented locally as of 2026-10-13; subsequent milestones remain pending. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.
 
 ## Boundaries and technology decisions
 
@@ -211,3 +211,6 @@ The library's `uncategorized` flag composes with origin/search/favorites/recent 
 ## M3C-4 terminology-only catalog release
 
 Version 5 is built deterministically from the archived, checksummed version 4 package. It changes three Turkish canonical display names and appends a distinct project-owned terminology provenance record to those three identities. USDA and original curation evidence snapshots are reused unchanged. Bundled startup and CLI still use the same verified, transactional importer; there is no new schema, IPC command, renderer data source or online dependency. Every ID, English label, alias, category and empirical observation stays fixed. The importer refreshes an uncustomized recipe-facing display name while leaving an explicit user name/unit override alone. Exact personal-name collisions reject the whole update for review. Version/hash checks make repeated launch a no-write operation.
+## M3C-5 catalog release 6
+
+The existing embedded, transactional importer remains the catalog update boundary. Release 6 is data-only: one Turkish and one English canonical display name change, the latter also updating the corresponding English `canonical_name`. A separate project-authored evidence snapshot records the user authorization; ten retained and three unresolved names live in review artifacts. No schema migration, extra identity layer, online dependency or change to override precedence was introduced.
