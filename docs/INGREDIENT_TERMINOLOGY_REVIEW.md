@@ -1,6 +1,8 @@
-# Ingredient terminology review — M3B-3
+# Ingredient terminology review — M3B-3 evidence, M3C-4 decisions
 
-All 17 original items and one new endive terminology question remain explicitly pending human review. Proposals retain existing labels when stronger Turkish evidence is absent. Confidence is project judgment about identity/form matching, not independent approval.
+M3C-4 applied exactly three user-selected Turkish names: `usda-sr-170918` → **Frenk kimyonu tohumu**, `usda-sr-168921` → **Tam tahıllı mavi mısır unu**, and `usda-sr-168588` → **Badem püresi (sade, tuz ilavesiz)**. Their stable IDs, English identities and source descriptors did not change. The original review observations below remain as historical evidence; the current decision states are in `INGREDIENT_LOCALIZATION_REVIEW.csv` and the companion workbook. The other 15 decisions remain pending. No reviewer identity, timestamp, or independent expert approval was inferred.
+
+At the M3B-3 audit, all 17 original items and one new endive terminology question were pending human review. The historical observations below retain their then-current labels and statuses. Confidence is project judgment about identity/form matching, not independent approval.
 
 ## usda-sr-171329
 

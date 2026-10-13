@@ -47,6 +47,9 @@ def save(name, value):
  return {'file': name, 'sha256': hashlib.sha256(data).hexdigest()}
 
 def main():
+ current_manifest = OUT / 'manifest.json'
+ if current_manifest.exists() and json.loads(current_manifest.read_text())['version'] != 4:
+  raise ValueError('This historical v4 generator cannot replace a newer production catalog. Use the archived v4 package and apply_terminology_decisions.py.')
  raw = pathlib.Path(sys.argv[1]).read_bytes()
  if hashlib.sha256(raw).hexdigest() != ARCHIVE_HASH:
   raise ValueError('Pinned USDA archive checksum mismatch')

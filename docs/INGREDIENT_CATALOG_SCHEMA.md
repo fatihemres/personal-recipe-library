@@ -80,3 +80,7 @@ Migrations 001–004 remain byte-for-byte unchanged. Migration 005 adds `catalog
 ## M3C-3 use of existing schema
 
 No migration was needed. Unlinked personal category edits use the existing `personal_category_memberships` join inside the same revision-checked transaction as the personal ingredient edit. The `categoryIds` IPC field is optional for earlier callers. Canonical category definitions and membership rows remain immutable. The library's optional `uncategorized` read flag tests absence of direct or inherited membership; parent filters use the existing descendant closure and distinct counts. Catalog package 4 and migrations 001–005 remain unchanged.
+
+## M3C-4 catalog version 5
+
+No schema migration. The versioned, checksummed shared importer updates three Turkish `catalog_names` and uncustomized recipe-facing catalog display names in one transaction. `ingredients.id`, English names, aliases, category links, source descriptors, recipe references, quantities, units, favorites, personal ingredients and overrides are preserved. `recipeatlas-terminology/user-decisions-1` records only the three user naming decisions; historical v4 source snapshots remain immutable. A changed system name colliding with an unlinked personal ingredient rejects the entire update for explicit review. Repeated startup skips the same version/hash without extra writes.

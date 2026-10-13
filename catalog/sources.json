@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-09",
+  "reviewedAt": "2026-10-13",
   "sources": [
     {
       "id": "usda-sr-legacy",
@@ -37,6 +37,17 @@
         "production-2",
         "production-3"
       ]
+    },
+    {
+      "id": "recipeatlas-terminology",
+      "name": "Tarif Atlası user-selected terminology",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "user-decisions-1",
+      "retrievedAt": "2026-10-13",
+      "imagesApproved": false,
+      "decision": "Three explicit user-selected Turkish display names; no USDA descriptor, alias, observation or ingredient identity changes."
     },
     {
       "id": "usda-foundation",

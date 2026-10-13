@@ -570,7 +570,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
             && i.observations.is_empty()));
     assert_eq!(report.category_coverage["vegetables"], 57);
     assert_eq!(report.category_coverage["spirits"], 25);
-    assert_eq!(count(&db, "catalog_provenance"), 962);
+    assert_eq!(count(&db, "catalog_provenance"), 965);
     assert_eq!(count(&db, "catalog_observations"), 0);
     assert_eq!(db.catalog_status().unwrap().production_definitions, 508);
     for q in ["Şek", "şek", "ŞEK", "şeker", "S\u{0327}EK"] {
@@ -671,7 +671,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
         .unwrap();
     assert_eq!(preserved, ("Korunsun".into(), "kg".into()));
     assert_eq!(count(&db, "ingredients"), 508);
-    assert_eq!(count(&db, "catalog_sources"), 4);
+    assert_eq!(count(&db, "catalog_sources"), 5);
 }
 
 #[test]
@@ -760,7 +760,7 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
     db.install_bundled_catalog().unwrap();
     db.conn
         .execute(
-            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=4",
+            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=5",
             ["0".repeat(64)],
         )
         .unwrap();
@@ -779,6 +779,268 @@ fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and
 #[test]
 fn actual_v3_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
     verify_historical_upgrade(3, 482, "Bal şurubu");
+}
+
+#[test]
+fn actual_v4_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
+    verify_historical_upgrade(4, 508, "Ailelik sos");
+}
+
+#[test]
+fn terminology_v5_fresh_and_v4_upgrade_keep_ids_overrides_search_recipe_and_integrity() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/4/manifest.json"),
+    )
+    .unwrap();
+    let new = catalog_tool::bundled().unwrap();
+    let cases = [
+        (
+            "usda-sr-170918",
+            "8f3055ee-2f8e-8300-87a4-2755af76b4e6",
+            "Frenk kimyonu tohumu",
+            "Caraway seed",
+        ),
+        (
+            "usda-sr-168921",
+            "3d663734-ceaf-8fcf-945f-74298021320a",
+            "Tam tahıllı mavi mısır unu",
+            "Whole-grain blue corn flour",
+        ),
+        (
+            "usda-sr-168588",
+            "6d96fb7b-4669-8b54-ad19-b006e3fb2873",
+            "Badem püresi (sade, tuz ilavesiz)",
+            "Almond butter (plain, no salt added)",
+        ),
+    ];
+    assert_eq!(old.manifest.version, 4);
+    assert_eq!(new.manifest.version, 5);
+    assert_eq!(new.data.ingredients.len(), 508);
+    assert_eq!(
+        new.data
+            .ingredients
+            .iter()
+            .map(|i| i.aliases.len())
+            .sum::<usize>(),
+        260
+    );
+    for (key, id, name, english) in cases {
+        let entry = new.data.ingredients.iter().find(|i| i.key == key).unwrap();
+        assert_eq!(
+            (
+                entry.id.as_str(),
+                entry.names["tr"].as_str(),
+                entry.names["en"].as_str()
+            ),
+            (id, name, english)
+        );
+    }
+    let fresh = tempfile::tempdir().unwrap();
+    let mut fresh_db = Database::open(fresh.path()).unwrap();
+    fresh_db.install_bundled_catalog().unwrap();
+    for (_, id, name, _) in cases {
+        assert_eq!(fresh_db.ingredients(name).unwrap()[0].id, id);
+    }
+    assert_eq!(count(&fresh_db, "catalog_ingredients"), 508);
+    assert_eq!(count(&fresh_db, "catalog_aliases"), 260);
+    drop(fresh_db);
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    let personal = db.create_ingredient("Ev baharatı").unwrap();
+    let butter = cases[2].1;
+    let saved = db
+        .save_recipe(recipe(&db.ingredients("Almond butter").unwrap().remove(0)))
+        .unwrap();
+    let caraway = cases[0].1;
+    db.customize_catalog_ingredient(IngredientEdit {
+        id: caraway.into(),
+        revision: 1,
+        name: "Benim Frenk kimyonum".into(),
+        notes: Some("Kişisel not".into()),
+        preferred_unit: Some("kg".into()),
+        category_ids: None,
+    })
+    .unwrap();
+    db.set_ingredient_favorite(caraway, "catalog", true)
+        .unwrap();
+    let revision = db
+        .ingredient_detail(caraway, "catalog")
+        .unwrap()
+        .item
+        .revision
+        .unwrap();
+    db.set_catalog_presentation(
+        crate::domain::ingredient_library::CatalogPresentationInput {
+            id: caraway.into(),
+            revision,
+            name: Some("Benim Frenk kimyonum".into()),
+            alias: Some("Aile kimyonu".into()),
+            preferred_unit: Some("kg".into()),
+            notes: Some("Kişisel not".into()),
+        },
+    )
+    .unwrap();
+    let report = db.import_catalog(&new).unwrap();
+    assert_eq!((report.inserted, report.updated), (0, 3));
+    assert!(db.import_catalog(&new).unwrap().unchanged);
+    assert_eq!(db.ingredients("Ev baharatı").unwrap()[0].id, personal.id);
+    assert_eq!(
+        db.ingredients("Benim Frenk kimyonum").unwrap()[0].id,
+        caraway
+    );
+    assert_eq!(
+        db.available_ingredients("Aile kimyonu").unwrap().items[0].id,
+        caraway
+    );
+    assert!(db
+        .ingredient_library(crate::domain::ingredient_library::LibraryQuery {
+            view: Some("favorites".into()),
+            origin: "catalog".into(),
+            search: String::new(),
+            category_id: None,
+            uncategorized: false,
+            offset: 0,
+            limit: 30,
+        })
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == caraway));
+    for (_, id, name, english) in cases {
+        assert_eq!(
+            db.conn
+                .query_row(
+                    "SELECT name FROM catalog_names WHERE ingredient_id=?1 AND locale='tr'",
+                    [id],
+                    |r| r.get::<_, String>(0)
+                )
+                .unwrap(),
+            name
+        );
+        assert!(db
+            .available_ingredients(name)
+            .unwrap()
+            .items
+            .iter()
+            .any(|i| i.id == id));
+        assert!(db
+            .available_ingredients(english)
+            .unwrap()
+            .items
+            .iter()
+            .any(|i| i.id == id));
+    }
+    assert!(db
+        .available_ingredients("Frenk kimyonu")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == caraway));
+    assert_eq!(
+        db.conn
+            .query_row(
+                "SELECT name,notes,preferred_unit FROM ingredients WHERE id=?1",
+                [caraway],
+                |r| Ok((
+                    r.get::<_, String>(0)?,
+                    r.get::<_, String>(1)?,
+                    r.get::<_, String>(2)?
+                ))
+            )
+            .unwrap(),
+        (
+            "Benim Frenk kimyonum".into(),
+            "Kişisel not".into(),
+            "kg".into()
+        )
+    );
+    assert!(!db
+        .available_ingredients("Tuz eklenmemiş sade badem ezmesi")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == butter));
+    assert_ne!(butter, stable_id("ingredient", "usda-sr-170160"));
+    drop(db);
+    let mut db = Database::open(dir.path()).unwrap();
+    let runs = count(&db, "catalog_import_runs");
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "catalog_import_runs"), runs);
+    let retained = db.recipe(&saved.id).unwrap();
+    assert_eq!(retained.ingredients[0].ingredient_id, butter);
+    assert_eq!(
+        (
+            retained.ingredients[0].quantity.as_deref(),
+            retained.ingredients[0].unit_code.as_str()
+        ),
+        (Some("35.000001"), "cc")
+    );
+    assert!(db
+        .available_ingredients_mode("", "recent")
+        .unwrap()
+        .items
+        .iter()
+        .any(|i| i.id == butter));
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
+    assert_eq!(
+        db.conn
+            .query_row("SELECT count(*) FROM pragma_foreign_key_check", [], |r| r
+                .get::<_, i64>(
+                0
+            ))
+            .unwrap(),
+        0
+    );
+}
+
+#[test]
+fn terminology_v5_name_collision_rolls_back_without_changing_personal_or_recipe_data() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/4/manifest.json"),
+    )
+    .unwrap();
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    let personal = db.create_ingredient("Frenk kimyonu tohumu").unwrap();
+    let saved = db.save_recipe(recipe(&personal)).unwrap();
+    assert_eq!(
+        db.import_catalog(&catalog_tool::bundled().unwrap())
+            .unwrap_err()
+            .code,
+        "CATALOG_NAME_CONFLICT"
+    );
+    assert_eq!(count(&db, "catalog_releases"), 1);
+    assert_eq!(
+        db.ingredients("Frenk kimyonu tohumu").unwrap()[0].id,
+        personal.id
+    );
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
+        personal.id
+    );
+    assert_eq!(
+        db.conn
+            .query_row(
+                "SELECT name FROM catalog_names WHERE ingredient_id=?1 AND locale='tr'",
+                ["8f3055ee-2f8e-8300-87a4-2755af76b4e6"],
+                |r| r.get::<_, String>(0)
+            )
+            .unwrap(),
+        "Karaman kimyonu tohumu"
+    );
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
 }
 
 fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name: &str) {
@@ -823,7 +1085,12 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
             report.updated,
             report.collisions
         ),
-        (508, 508 - previous_count, previous_count, 1)
+        (
+            508,
+            508 - previous_count,
+            if version == 4 { 3 } else { previous_count },
+            if version == 4 { 0 } else { 1 }
+        )
     );
     for item in &old.data.ingredients {
         let id: String = db
@@ -889,7 +1156,10 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
             .as_deref(),
         Some("35.000001")
     );
-    assert_eq!(db.catalog_status().unwrap().pending_collisions, 1);
+    assert_eq!(
+        db.catalog_status().unwrap().pending_collisions,
+        if version == 4 { 0 } else { 1 }
+    );
     assert_eq!(
         db.conn
             .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
@@ -905,7 +1175,7 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
             .unwrap(),
         0
     );
-    eprintln!("actual v{version}->v4 import: {import_time:?}");
+    eprintln!("actual v{version}->v5 import: {import_time:?}");
 }
 
 #[test]

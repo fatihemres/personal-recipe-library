@@ -9,7 +9,7 @@ import { rendererRecipeClient } from '../../test/recipeClient';
 const item: LibraryItem = { id: crypto.randomUUID(), origin: 'catalog', name: 'Toz şeker', englishName: 'Granulated sugar', categories: [], recipeId: null, notes: null, preferredUnit: 'g', revision: null, ingredientType: 'food', favorite:false, lastUsedAt:null };
 const category = { id: crypto.randomUUID(), parentId: null, key: 'sweeteners', tr: 'Tatlandırıcılar', en: 'Sweeteners' };
 const page: LibraryPage = { items: [item], total: 508, catalogCount: 508, personalCount: 0, categories: [{ category, count: 7 }], offset: 0, limit: 30 };
-const detail: LibraryDetail = { item, aliases: [{ locale: 'tr', name: 'Şeker' }], canonicalTr: 'Toz şeker', dimensions: ['mass'], sources: [], metadata: [], catalogVersion: 4, personalAlias:null };
+const detail: LibraryDetail = { item, aliases: [{ locale: 'tr', name: 'Şeker' }], canonicalTr: 'Toz şeker', dimensions: ['mass'], sources: [], metadata: [], catalogVersion: 5, personalAlias:null };
 function api(): IngredientLibraryClient { return { browse: vi.fn().mockResolvedValue(page), detail: vi.fn().mockResolvedValue(detail), favorite:vi.fn().mockResolvedValue(true), presentation:vi.fn().mockResolvedValue(detail), candidates:vi.fn().mockResolvedValue([]) }; }
 test('view, category and search filters compose; paging is delegated to IPC', async () => {
   const library = api(); const user = userEvent.setup(); render(<IngredientLibrary client={rendererRecipeClient()} library={library} />);

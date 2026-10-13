@@ -64,16 +64,16 @@
     "beverage": 97,
     "food": 411
   },
-  "linguisticReviewCount": 18,
-  "localizationReview": "Project semantic review against pinned English descriptors; no independent Turkish culinary expert review.",
+  "linguisticReviewCount": 15,
+  "localizationReview": "Three user-selected Turkish names applied; 15 decisions remain pending.",
   "missingMetadata": {
     "abv": 508,
     "allergens": 508,
     "density": 508,
     "nutrition": 508
   },
-  "newlyAddedIngredients": 26,
-  "previousIngredientCount": 482,
+  "newlyAddedIngredients": 0,
+  "previousIngredientCount": 508,
   "productionReadyMeaning": "Validated identity/provenance and importer compatibility; not independent linguistic certification",
   "productionReadyRecords": 508,
   "projectOnlyRecords": 54,
@@ -85,5 +85,5 @@
     "usda-sr-legacy": 454
   },
   "usdaRecords": 454,
-  "version": 4
+  "version": 5
 }

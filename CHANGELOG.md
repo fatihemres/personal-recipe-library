@@ -1,5 +1,10 @@
 # Changelog
 
+## M3C-4 — User-selected ingredient terminology (2026-10-13, unreleased)
+
+- Applied three explicit Turkish naming decisions through offline catalog release 5, retaining all 508 IDs, 260 aliases, 50 categories, recipe references and user overrides. No schema migration or new ingredient was added.
+- Archived release 4; added checksummed decision provenance, reproducible build/audit reports and an updated review workbook. Fifteen terminology decisions remain pending. Exact personal-name collisions roll back the upgrade for review.
+
 ## M3C-3 — Catalog quality and category workflows (2026-10-12, unreleased)
 
 - Classified personal-ingredient collision candidates as exact names, matching aliases or weaker similarities; strong matches guide users to the existing record or a more precise name. No automatic merge.

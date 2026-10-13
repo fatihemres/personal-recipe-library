@@ -10,7 +10,7 @@ test('catalog presentation leave guard retains edits after failure and only navi
   const id=crypto.randomUUID();
   const detail: LibraryDetail={
     item:{id,origin:'catalog',recipeId:id,name:'Toz şeker',englishName:'Granulated sugar',notes:null,preferredUnit:'g',revision:2,ingredientType:'food',categories:[],favorite:false,lastUsedAt:null},
-    canonicalTr:'Toz şeker',personalAlias:null,aliases:[],dimensions:['mass'],sources:[],metadata:[],catalogVersion:4,
+    canonicalTr:'Toz şeker',personalAlias:null,aliases:[],dimensions:['mass'],sources:[],metadata:[],catalogVersion:5,
   };
   const presentation=vi.fn().mockRejectedValueOnce({code:'CONFLICT',messageKey:'errors.conflict',recoverable:true}).mockResolvedValue(detail);
   const library={presentation} as unknown as IngredientLibraryClient;

@@ -1,7 +1,7 @@
 {
   "artifact": {
     "file": "ingredients.json",
-    "sha256": "d46469b0c6236b99edbf7bd7eaf10c151fc7b0b92cc07c025fa98e0c478c825f"
+    "sha256": "273efc41194383c28f81235f1f1d43215832d8069197e25428d7f98c1f1d453c"
   },
   "dataset": "recipeatlas-ingredients",
   "evidence": {
@@ -12,6 +12,10 @@
     "usda-sr-legacy": {
       "file": "usda-records.json",
       "sha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+    },
+    "recipeatlas-terminology": {
+      "file": "terminology-records.json",
+      "sha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
     }
   },
   "formatVersion": 1,
@@ -36,7 +40,17 @@
       "retrievedAt": "2026-10-09",
       "url": "https://github.com/fatihemres/personal-recipe-library",
       "version": "production-3"
+    },
+    {
+      "id": "recipeatlas-terminology",
+      "version": "user-decisions-1",
+      "name": "Tarif Atlası user-selected Turkish terminology",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "attribution": "Three user-selected Turkish display names; not USDA translations or factual observations.",
+      "retrievedAt": "2026-10-13",
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
     }
   ],
-  "version": 4
+  "version": 5
 }

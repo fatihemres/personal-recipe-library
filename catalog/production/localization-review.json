@@ -103,7 +103,7 @@
   },
   {
     "key": "usda-sr-170918",
-    "status": "human-review-needed",
+    "status": "user-approved",
     "reason": "Caraway versus cumin: confirm Karaman/Frenk kimyonu regional usage; keep identities distinct.",
     "id": "8f3055ee-2f8e-8300-87a4-2755af76b4e6",
     "existingTr": "Karaman kimyonu tohumu",
@@ -129,11 +129,12 @@
       }
     ],
     "proposedTr": "Karaman kimyonu tohumu",
-    "decision": "retain-pending-human-review",
+    "decision": "user-approved-name",
     "confidence": "moderate",
     "confidenceReason": "Pinned source supports the English identity/form. Independent Turkish culinary terminology approval is absent.",
-    "humanReviewNecessary": true,
-    "humanApproved": false
+    "humanReviewNecessary": false,
+    "humanApproved": true,
+    "selectedTr": "Frenk kimyonu tohumu"
   },
   {
     "key": "usda-sr-171318",
@@ -205,7 +206,7 @@
   },
   {
     "key": "usda-sr-168921",
-    "status": "human-review-needed",
+    "status": "user-approved",
     "reason": "Blue corn versus Spanish harina de maiz morado wording: colour terminology needs expert review.",
     "id": "3d663734-ceaf-8fcf-945f-74298021320a",
     "existingTr": "Tam taneli mavi mısır unu",
@@ -232,15 +233,16 @@
       }
     ],
     "proposedTr": "Tam taneli mavi mısır unu",
-    "decision": "retain-pending-human-review",
+    "decision": "user-approved-name",
     "confidence": "moderate",
     "confidenceReason": "Pinned source supports the English identity/form. Independent Turkish culinary terminology approval is absent.",
-    "humanReviewNecessary": true,
-    "humanApproved": false
+    "humanReviewNecessary": false,
+    "humanApproved": true,
+    "selectedTr": "Tam tahıllı mavi mısır unu"
   },
   {
     "key": "usda-sr-168588",
-    "status": "human-review-needed",
+    "status": "user-approved",
     "reason": "Almond butter is different from baking almond paste; broad badem ezmesi alias removed.",
     "id": "6d96fb7b-4669-8b54-ad19-b006e3fb2873",
     "existingTr": "Tuz eklenmemiş sade badem ezmesi",
@@ -266,11 +268,12 @@
       }
     ],
     "proposedTr": "Tuz eklenmemiş sade badem ezmesi",
-    "decision": "retain-pending-human-review",
+    "decision": "user-approved-name",
     "confidence": "moderate",
     "confidenceReason": "Pinned source supports the English identity/form. Independent Turkish culinary terminology approval is absent.",
-    "humanReviewNecessary": true,
-    "humanApproved": false
+    "humanReviewNecessary": false,
+    "humanApproved": true,
+    "selectedTr": "Badem püresi (sade, tuz ilavesiz)"
   },
   {
     "key": "usda-sr-170160",

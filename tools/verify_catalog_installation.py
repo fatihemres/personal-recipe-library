@@ -17,19 +17,21 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--deny-network', action='store_true')
+    parser.add_argument('--include-v4', action='store_true', help='Also verify the archived version-4 upgrade')
     parser.add_argument('--output', type=pathlib.Path, required=True)
     args = parser.parse_args()
     executable = ROOT / 'src-tauri/target/debug/examples/catalog_import'
     prefix = ['/usr/bin/sandbox-exec', '-p', '(version 1)(allow default)(deny network*)'] if args.deny_network else []
     results = []
     # Freshly allocated databases only. TemporaryDirectory owns their lifecycle.
-    with tempfile.TemporaryDirectory(prefix='recipeatlas-m3b3-') as base:
-        for previous in (None, 2, 3):
+    with tempfile.TemporaryDirectory(prefix='recipeatlas-catalog-') as base:
+        for previous in ((None, 2, 3, 4) if args.include_v4 else (None, 2, 3)):
             profile = pathlib.Path(base) / str(previous or 'clean')
             manifests = []
             if previous:
                 manifests.append(ROOT / f'catalog/releases/{previous}/manifest.json')
-            manifests += [ROOT / 'catalog/production/manifest.json'] * 2
+            target = ROOT / ('catalog/production/manifest.json' if args.include_v4 else 'catalog/releases/4/manifest.json')
+            manifests += [target] * 2
             for index, manifest in enumerate(manifests):
                 start = time.perf_counter()
                 process = subprocess.run(prefix + [str(executable), str(profile), str(manifest)], check=True, capture_output=True, text=True)

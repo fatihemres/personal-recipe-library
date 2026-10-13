@@ -110,19 +110,26 @@ def audit():
         item['id'] = entries[item['key']]['id']
         item['tr'] = entries[item['key']]['names']['tr']
         item['en'] = entries[item['key']]['names']['en']
-    report = dict(version=manifest['version'], capitalizationAndTranslationWarnings=warnings, conceptReviewCandidates=[dict(concept=c,keys=sorted(keys),meaning='Same English base label; qualified culinary forms may be distinct. Not automatically merged.') for c,keys in sorted(concepts.items()) if len(keys)>1], previousIdentities=len(old['ingredients']), auditedIdentities=len(entries), newlyAddedIdentities=len(entries)-len(old['ingredients']), stableHistoricalIds=len(old['ingredients']), structuralErrors=errors, aliasCollisionCandidates=collisions, linguisticReviewCount=len(queue), independentlyHumanReviewed=0, reviewBoundary='Structural and project semantic audit; human culinary terminology review remains open.', selectionExclusions=[dict(externalId='175186', reason='Black turtle bean mapping needs comparison with existing black bean identity; not added.'),dict(reference='Van otlu peyniri', reason='Excluded at v3 due unavailable primary page; reconsider only after current primary verification.')])
+    approved = [item for item in queue if item.get('humanApproved') is True]
+    pending = [item for item in queue if item.get('humanApproved') is not True]
+    assert len(approved) == 3 and len(pending) == 15
+    for item in approved:
+        assert item['status'] == 'user-approved' and item['selectedTr'] == item['tr']
+    for item in pending:
+        assert item['status'] in ('human-review-needed', 'human-review') and item['tr'] == item['existingTr']
+    report = dict(version=manifest['version'], capitalizationAndTranslationWarnings=warnings, conceptReviewCandidates=[dict(concept=c,keys=sorted(keys),meaning='Same English base label; qualified culinary forms may be distinct. Not automatically merged.') for c,keys in sorted(concepts.items()) if len(keys)>1], previousIdentities=len(old['ingredients']), auditedIdentities=len(entries), newlyAddedIdentities=len(entries)-len(old['ingredients']), stableHistoricalIds=len(old['ingredients']), structuralErrors=errors, aliasCollisionCandidates=collisions, linguisticReviewCount=len(pending), userApprovedTerminologyCount=len(approved), independentlyHumanReviewed=0, reviewBoundary='Structural audit plus three explicit user-selected Turkish names; 15 other terms remain pending independent culinary review.', selectionExclusions=[dict(externalId='175186', reason='Black turtle bean mapping needs comparison with existing black bean identity; not added.'),dict(reference='Van otlu peyniri', reason='Excluded at v3 due unavailable primary page; reconsider only after current primary verification.')])
     if errors or collisions:
         raise ValueError(json.dumps(report, ensure_ascii=False))
-    md = ['# Ingredient localization review queue', '', f'All {len(entries)} production identities were structurally audited; {len(queue)} terminology items require human review. No independent human review occurred.', '', 'These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.', '', '| Stable key | Turkish label | English label | Review question |', '| --- | --- | --- | --- |']
+    md = ['# Ingredient localization review queue', '', f'All {len(entries)} production identities were structurally audited; {len(approved)} names were explicitly selected by the user and {len(pending)} terminology items remain pending. No independent culinary expert review occurred.', '', 'These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.', '', '| Stable key | Turkish label | English label | Review status | Review question |', '| --- | --- | --- | --- | --- |']
     for item in sorted(queue, key=lambda x: x['key']):
-        md.append(f"| {item['key']} | {item['tr']} | {item['en']} | {item['reason']} |")
+        md.append(f"| {item['key']} | {item['tr']} | {item['en']} | {item['status']} | {item['reason']} |")
     artifacts = {OUT / 'quality-audit.json': json.dumps(report, ensure_ascii=False, indent=2)+'\n', ROOT / 'docs/INGREDIENT_LOCALIZATION_REVIEW.md': '\n'.join(md)+'\n'}
     for path, text in artifacts.items():
         if '--check' in sys.argv:
             assert path.read_text() == text, f'Stale audit artifact: {path}'
         else:
             path.write_text(text)
-    print(f"Audited {len(entries)} identities; historical IDs intact; {len(queue)} human review items; no structural errors or exact alias collisions.")
+    print(f"Audited {len(entries)} identities; historical IDs intact; {len(approved)} user-approved, {len(pending)} pending; no structural errors or exact alias collisions.")
 
 
 if __name__ == '__main__':

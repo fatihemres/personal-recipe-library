@@ -3804,7 +3804,7 @@
       "key": "usda-sr-168588",
       "names": {
         "en": "Almond butter (plain, no salt added)",
-        "tr": "Tuz eklenmemiş sade badem ezmesi"
+        "tr": "Badem püresi (sade, tuz ilavesiz)"
       },
       "observations": [],
       "preferredUnit": "g",
@@ -3820,6 +3820,12 @@
           "externalId": "usda-sr-168588",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        },
+        {
+          "sourceId": "recipeatlas-terminology",
+          "sourceVersion": "user-decisions-1",
+          "externalId": "usda-sr-168588",
+          "description": "{\"decision\":\"User-selected Turkish display name; English identity and aliases unchanged.\",\"identityId\":\"6d96fb7b-4669-8b54-ad19-b006e3fb2873\",\"previousTr\":\"Tuz eklenmemiş sade badem ezmesi\",\"selectedTr\":\"Badem püresi (sade, tuz ilavesiz)\"}"
         }
       ],
       "relations": []
@@ -4557,7 +4563,7 @@
       "key": "usda-sr-168921",
       "names": {
         "en": "Whole-grain blue corn flour",
-        "tr": "Tam taneli mavi mısır unu"
+        "tr": "Tam tahıllı mavi mısır unu"
       },
       "observations": [],
       "preferredUnit": "g",
@@ -4573,6 +4579,12 @@
           "externalId": "usda-sr-168921",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        },
+        {
+          "sourceId": "recipeatlas-terminology",
+          "sourceVersion": "user-decisions-1",
+          "externalId": "usda-sr-168921",
+          "description": "{\"decision\":\"User-selected Turkish display name; English identity and aliases unchanged.\",\"identityId\":\"3d663734-ceaf-8fcf-945f-74298021320a\",\"previousTr\":\"Tam taneli mavi mısır unu\",\"selectedTr\":\"Tam tahıllı mavi mısır unu\"}"
         }
       ],
       "relations": []
@@ -10509,7 +10521,7 @@
       "key": "usda-sr-170918",
       "names": {
         "en": "Caraway seed",
-        "tr": "Karaman kimyonu tohumu"
+        "tr": "Frenk kimyonu tohumu"
       },
       "observations": [],
       "preferredUnit": "g",
@@ -10525,6 +10537,12 @@
           "externalId": "usda-sr-170918",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        },
+        {
+          "sourceId": "recipeatlas-terminology",
+          "sourceVersion": "user-decisions-1",
+          "externalId": "usda-sr-170918",
+          "description": "{\"decision\":\"User-selected Turkish display name; English identity and aliases unchanged.\",\"identityId\":\"8f3055ee-2f8e-8300-87a4-2755af76b4e6\",\"previousTr\":\"Karaman kimyonu tohumu\",\"selectedTr\":\"Frenk kimyonu tohumu\"}"
         }
       ],
       "relations": []

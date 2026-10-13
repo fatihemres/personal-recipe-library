@@ -4,10 +4,11 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / 'catalog/production'
+OUT = ROOT / 'catalog/releases/4'
+REPORT_DIR = ROOT / 'catalog/production'
 coverage = json.loads((OUT / 'coverage.json').read_text())
 audit = json.loads((OUT / 'quality-audit.json').read_text())
-installation = json.loads((OUT / 'm3b3-installation-report.json').read_text())
+installation = json.loads((REPORT_DIR / 'm3b3-installation-report.json').read_text())
 data = json.loads((OUT / 'ingredients.json').read_text())
 previous = {i['key'] for i in json.loads((ROOT / 'catalog/releases/3/ingredients.json').read_text())['ingredients']}
 added = [i for i in data['ingredients'] if i['key'] not in previous]
@@ -34,7 +35,7 @@ report = dict(
     addedIdentities=[dict(id=i['id'], key=i['key'], names=i['names'], categories=i['categories']) for i in added],
     offlineInstallation=installation, remainingGaps=gaps,
 )
-(OUT / 'm3b3-final-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+(REPORT_DIR / 'm3b3-final-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
 lines = ['# M3B-3 final catalog coverage', '',
     f"Version 4 contains **508 identities**: **26 additions**, **411 food / 97 beverage**, **260 aliases**, **50 category nodes**. All 482 version-3 IDs remain intact. Eight shared validation identities are counted once, not added again.", '',
     '454 identities are USDA-backed; 54 are original reference-backed project identities. All 508 carry project-authored localized labels/classification. No branded-product dump or empirical observations were added.', '',

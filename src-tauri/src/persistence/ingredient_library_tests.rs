@@ -139,13 +139,18 @@ fn collision_candidates_separate_exact_alias_and_ambiguous_forms_without_merging
     assert!(sugar
         .iter()
         .any(|c| c.id == stable_id("ingredient", "sugar-granulated") && c.reason == "exact_name"));
-    let variants = db.ingredient_candidates("badem ezmesi").unwrap();
-    assert!(variants
+    let paste = db.ingredient_candidates("badem ezmesi").unwrap();
+    assert!(!paste
         .iter()
         .any(|c| c.id == stable_id("ingredient", "usda-sr-168588")));
-    assert!(variants
+    assert!(paste
         .iter()
         .any(|c| c.id == stable_id("ingredient", "usda-sr-170160")));
+    assert!(db
+        .ingredient_candidates("badem püresi")
+        .unwrap()
+        .iter()
+        .any(|c| c.id == stable_id("ingredient", "usda-sr-168588")));
     assert_ne!(
         stable_id("ingredient", "usda-sr-168588"),
         stable_id("ingredient", "usda-sr-170160")

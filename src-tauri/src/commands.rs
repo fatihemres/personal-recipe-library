@@ -578,7 +578,7 @@ mod tests {
         )
         .unwrap();
         assert_eq!(detail["item"]["name"], "India pale ale");
-        assert_eq!(detail["catalogVersion"], 4);
+        assert_eq!(detail["catalogVersion"], 5);
         let personal = invoke(
             &window,
             "create_ingredient",

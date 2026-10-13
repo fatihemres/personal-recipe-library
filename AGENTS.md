@@ -65,4 +65,9 @@ Build a local-first food and beverage recipe management desktop application for 
 ## Ingredient library invariants (M3C-3)
 - Schema 5 and production catalog version 4 are current; no M3C-3 migration or seed change occurred. Existing personal category links are owned by `personal_category_memberships` and edited atomically with expected-revision personal changes. Canonical category memberships remain source-owned.
 - Candidate reasons express name/alias similarity, not proven ingredient equivalence. Never auto-merge or reassign recipe IDs. A strong name/alias match blocks misleading personal creation; ambiguous variants need explicit user judgment.
-- The 18 terminology items in `docs/INGREDIENT_TERMINOLOGY_REVIEW.xlsx` remain human-pending. `docs/CATALOG_M3C3_QUALITY_AUDIT.md` and `catalog/production/m3c3-quality-report.json` are static audit outputs, not linguistic approval. Regenerate/check them with `tools/report_m3c3_quality.py` after catalog changes.
+- The M3C-3 audit recorded 18 then-pending terminology items. Its `docs/CATALOG_M3C3_QUALITY_AUDIT.md` and `catalog/production/m3c3-quality-report.json` are immutable historical outputs, not linguistic approval; `tools/report_m3c3_quality.py --check` reads archived version 4 inputs.
+
+## Terminology release invariants (M3C-4)
+- Production catalog version 5 retains 508 canonical IDs, 260 aliases and 50 categories. Only three explicit user-selected Turkish names changed; 15 terminology decisions remain pending. See `docs/CATALOG_M3C4_QUALITY_AUDIT.md` and the review workbook.
+- Version 4 is archived in `catalog/releases/4`. Generate version 5 only with `tools/apply_terminology_decisions.py`; never edit version 4, previously applied migrations, or historical source snapshots. The new terminology provenance is separate from USDA and old curation evidence.
+- Old Turkish labels were not promoted to aliases; almond butter stays distinct from almond paste/marzipan. Catalog import preserves user name/unit overrides and personal records. An upgrade colliding with an unlinked personal name fails transactionally for explicit review.

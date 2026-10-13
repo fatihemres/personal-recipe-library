@@ -149,6 +149,9 @@ pub(crate) fn bundled() -> Result<VerifiedSeed, AppError> {
                 "curation-records.json" => {
                     include_bytes!("../../catalog/production/curation-records.json")
                 }
+                "terminology-records.json" => {
+                    include_bytes!("../../catalog/production/terminology-records.json")
+                }
                 _ => return Err(catalog_error("CATALOG_ARTIFACT")),
             };
             use sha2::{Digest, Sha256};

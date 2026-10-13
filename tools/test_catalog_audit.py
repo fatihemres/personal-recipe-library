@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Audit safety tests using copies of real version-2 and version-3 artifacts."""
 import contextlib
+import csv
 import io
 import json
 import pathlib
@@ -37,8 +38,24 @@ class CatalogAuditTests(unittest.TestCase):
         report = json.loads((audit_catalog.OUT / 'quality-audit.json').read_text())
         self.assertEqual(report['auditedIdentities'], 508)
         self.assertEqual(report['stableHistoricalIds'], 482)
-        self.assertEqual(report['linguisticReviewCount'], 18)
+        self.assertEqual(report['linguisticReviewCount'], 15)
+        self.assertEqual(report['userApprovedTerminologyCount'], 3)
         self.assertEqual(report['independentlyHumanReviewed'], 0)
+
+    def test_only_three_explicit_user_names_are_approved_and_fifteen_remain_pending(self):
+        with (self.original_root / 'docs/INGREDIENT_LOCALIZATION_REVIEW.csv').open(newline='', encoding='utf-8') as handle:
+            rows = list(csv.DictReader(handle))
+        expected = {
+            'usda-sr-170918': 'Frenk kimyonu tohumu',
+            'usda-sr-168921': 'Tam tahıllı mavi mısır unu',
+            'usda-sr-168588': 'Badem püresi (sade, tuz ilavesiz)',
+        }
+        approved = [row for row in rows if row['human_approved'] == 'true']
+        pending = [row for row in rows if row['human_approved'] == 'false']
+        self.assertEqual(len(approved), 3)
+        self.assertEqual(len(pending), 15)
+        self.assertEqual({row['canonical_key']: row['selected_turkish'] for row in approved}, expected)
+        self.assertTrue(all(row['decision'] == 'retain-pending-human-review' and not row['selected_turkish'] for row in pending))
 
     def test_malformed_labels_aliases_source_units_and_ids_fail(self):
         path = audit_catalog.OUT / 'ingredients.json'

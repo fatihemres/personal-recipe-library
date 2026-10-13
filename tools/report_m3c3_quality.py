@@ -9,7 +9,8 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "catalog/production"
+CATALOG = ROOT / "catalog/releases/4"
+REPORT_DIR = ROOT / "catalog/production"
 
 
 def build():
@@ -17,7 +18,7 @@ def build():
     audit = json.loads((CATALOG / "quality-audit.json").read_text())
     records = data["ingredients"]
     by_key = {row["key"]: row for row in records}
-    with (ROOT / "docs/INGREDIENT_LOCALIZATION_REVIEW.csv").open(newline="", encoding="utf-8") as handle:
+    with (CATALOG / "ingredient-localization-review.csv").open(newline="", encoding="utf-8") as handle:
         review = list(csv.DictReader(handle))
     assert len(records) == len(by_key) == 508
     assert len(review) == audit["linguisticReviewCount"] == 18
@@ -71,7 +72,7 @@ def build():
         lines.append("| " + " | ".join(map(clean, [finding["severity"], finding["code"], ", ".join(finding["ingredientIds"]), finding["concern"], finding["proposedResolution"], finding["status"]])) + " |")
     lines += ["", "The companion spreadsheet `docs/INGREDIENT_TERMINOLOGY_REVIEW.xlsx` has source evidence and blank human-decision fields. Source links support identity provenance, not independent approval of Turkish wording.", ""]
     return {
-        CATALOG / "m3c3-quality-report.json": json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        REPORT_DIR / "m3c3-quality-report.json": json.dumps(report, ensure_ascii=False, indent=2) + "\n",
         ROOT / "docs/CATALOG_M3C3_QUALITY_AUDIT.md": "\n".join(lines),
     }
 
