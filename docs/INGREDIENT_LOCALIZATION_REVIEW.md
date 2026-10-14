@@ -1,6 +1,6 @@
 # Ingredient localization review queue
 
-All 508 production identities were structurally audited; 5 user-authorized name changes, 10 user-authorized retain-name decisions and 3 unresolved terminology items are tracked. No independent culinary expert review occurred.
+All 568 production identities were structurally audited; 5 user-authorized name changes, 10 user-authorized retain-name decisions and 3 unresolved terminology items are tracked. No independent culinary expert review occurred.
 
 These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.
 
@@ -24,3 +24,5 @@ These are naming refinements, not missing or invented source identities. Qualifi
 | usda-sr-171329 | Paprika | Paprika (spice) | user-retained | Paprika sweetness is unspecified upstream; unsupported sweet alias removed. Review preferred Turkish culinary label. |
 | usda-sr-174842 | Club soda (kokteyl sodası) | Club soda | user-approved | Club soda is distinct from mineral water; qualified Turkish soda label retained. |
 | usda-sr-175142 | Levrek (karışık türler, çiğ) | Sea bass (mixed species, raw) | user-retained | Mixed-species sea bass is not necessarily European levrek; preserve qualifier. |
+
+M3D-1 adds 3 pending naming questions and 1 deferred identity question. See INGREDIENT_M3D1_REVIEW.xlsx and CATALOG_M3D1_QUALITY_AUDIT.md; the table above preserves the 18 historical decisions. Total included-record terminology questions: 6.

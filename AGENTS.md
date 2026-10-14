@@ -76,3 +76,9 @@ Build a local-first food and beverage recipe management desktop application for 
 - Production catalog version 6 retains 508 canonical IDs, 260 aliases and 50 categories. Version 5 is archived at `catalog/releases/5`; generate version 6 only with `tools/apply_final_terminology_decisions.py` from its pinned checksum.
 - Exactly two canonical name fields changed: `usda-sr-174842` Turkish and `project-siyez-grain` English (including its matching `canonicalName`). Ten reviewed names were expressly retained and three remain unresolved; no independent expert linguistic verification is claimed. See `docs/CATALOG_M3C5_QUALITY_AUDIT.md` and the review workbook.
 - Preserve historical evidence, IDs, aliases, user overrides, personal records, favorites, drafts and recipe quantities. Catalog update collisions still reject the whole transaction. Migrations 001–005 remain unchanged.
+
+## Expansion release invariants (M3D-1)
+- Current production release is 7: 568 identities, 269 aliases, 50 categories; schema stays 5. Earlier version/count sections above are historical. Release 6 is archived unchanged at `catalog/releases/6`.
+- Reproduce with `tools/prepare_m3d1_catalog.py` using the pinned USDA archive or `--evidence` for checked offline extracts. Run `tools/report_m3d1_quality.py --check`, catalog audits and SQLite upgrade tests. Preserve all 508 complete baseline ingredient objects.
+- The 61 proposed candidates yielded 60 additions. `usda-sr-169406` is deferred for possible overlap with existing raw tahini; never silently install or merge it. Three new naming questions plus the deferred identity are in `docs/INGREDIENT_M3D1_REVIEW.xlsx`. The three historical unresolved terms remain pending.
+- Leave the pre-existing root `INGREDIENT_TERMINOLOGY_REVIEW.xlsx` untouched and untracked unless the user explicitly authorizes work on it.

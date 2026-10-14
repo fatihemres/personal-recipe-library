@@ -308,3 +308,41 @@ The resumed session had no native GUI automation tool, so the final focus-restor
 - `npm run typecheck`, `npm run lint`, `npm test` (**50 passed in 15 files**), `npm run test:ui` (**2 Chromium browser tests**), `npm run build`, `cargo fmt --manifest-path src-tauri/Cargo.toml -- --check`, `cargo check --locked --offline --manifest-path src-tauri/Cargo.toml` and all-target Clippy with warnings denied passed. Browser tests cover the renderer shell, not native SQLite.
 - `cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import` and `python3 tools/verify_catalog_installation.py --include-v5 --deny-network --output catalog/production/m3c5-installation-report.json` passed **14 isolated real CLI imports/opens** under process-local network denial: fresh release 6 inserted 508; v2→v6 inserted 273/updated 235; v3→v6 inserted 26/updated 482; v4→v6 updated 5; v5→v6 updated exactly 2. Repeats were unchanged. A nested `sandbox-exec` attempt exited 71; the same command passed outside the nested command sandbox. No normal user database was used.
 - `npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3c5-verification"}' -- --locked --offline` built an unsigned arm64 app (36.35 MiB). LaunchServices returned `kLSNoExecutableErr` inside the command sandbox; `open -n` outside it launched the isolated bundle. Its new `com.recipeatlas.m3c5-verification` profile has release 6/schema 5, 508 identities, 260 aliases, 50 categories, both names and stable IDs, `integrity_check=ok`, zero FK violations and one successful import. All test-app processes were then closed; a complete relaunch of the final bundle kept one successful import and all counts. The test process was closed again. The normal user profile was untouched. Computer-use inventory saw the running test app, but could not bind to its window; fresh GUI search/detail/recipe interaction was **not** exercised in this session. SQLite-backed Rust IPC/search/recipe tests provide functional evidence, but do not replace GUI verification. Windows, Intel macOS, installer, signing and notarization remain unverified.
+
+
+## M3D-1 final verification — 2026-10-14
+
+Passed on this macOS arm64 host: TypeScript, ESLint, 50 Vitest tests, 2 Chromium browser tests, 72 Rust tests, Cargo fmt/check/all-target Clippy with warnings denied, production frontend build, unsigned native debug app bundle, 5 existing Python audit tests plus 4 new release-generation tests, current/historical audit freshness and Git whitespace checks. Applied migrations 001–005 were untouched.
+
+The first browser attempt failed to bind localhost with sandbox EPERM; the authorized run passed both tests. The default development port 1420 was already occupied; the existing server was left untouched. An isolated Tauri dev launch on port1438 reached Running target/debug/personal-recipe-library and was stopped with Ctrl-C. These were environment constraints, not passing tests or timeouts.
+
+```sh
+npm run typecheck
+npm run lint
+npm test
+npm run test:ui
+npm run build
+cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+cargo test --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo check --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+python3 tools/test_catalog_audit.py
+python3 tools/test_m3d1_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d1_quality.py --check
+npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3d1-verification"}' -- --locked --offline
+# Normal local development:
+npm run tauri -- dev
+# Isolated smoke when the normal port is occupied:
+npm run tauri -- dev --config '{"identifier":"com.recipeatlas.m3d1-dev-verification","build":{"beforeDevCommand":"npm run dev -- --port 1438","devUrl":"http://localhost:1438"}}' -- --locked --offline
+```
+
+Real SQLite coverage: archived release6→7 inserts60, updates0, retains508 complete source objects and50 category objects; clean7 inserts568 with269aliases. All60 additions were queried by both names and every alias, inspected through detail DTOs and combined category filters. Turkish dotted/dotless case and decomposed Ş search pass. Injected mid-expansion SQLite failure leaves release6/source/count state unchanged, retry succeeds, and unauthorized source ID fails before profile creation. Restart checks retain favorites, recent usage, custom alias/name/unit/notes, personal IDs, drafts and exact recipe quantities/units. Existing crash-interruption, migration, rollback and M1–M3C regressions also pass.
+
+Offline CLI: rebuilt catalog_import with the current compiled registry before testing. Seventeen isolated imports/opens ran with process-local network denial; report catalog/production/m3d1-installation-report.json records fresh/v2/v3/v4/v5/v6 upgrades and repeats. Local debug wall time: fresh7 770.895ms, v6→7 262.396ms, unchanged v7 CLI open93.300ms (v6 scenario); these include process startup and are not universal performance guarantees. Worker repeat-startup tests assert no extra SQLite changes/audit rows.
+
+Native: bundle identifier com.recipeatlas.m3d1-verification, 36.46MiB unsigned debug app. First launch and full process restart independently read568catalog/269aliases/50categories, schema5, release7, personal0, one successful import, integrity ok and zero FK violations. Test process identity was verified by its open isolated database before stopping. Native report: catalog/production/m3d1-native-report.json. Computer-use tooling resolved the bundle path to an obsolete identifier and rejected the direct M3D-1 identifier, so no fresh GUI interactions are claimed. Browser/component tests and real-worker/SQLite tests do not substitute for native GUI testing. Normal personal profile was not touched. Windows, Intel macOS, signing/notarization and installers remain unverified.
+
+The new review workbook contains4rows/11columns with readable rendering, filter table, frozen header and blank human-decision/reviewer cells. Three historical terms remain pending in the existing review system. Root-level pre-existing workbook was not modified or used.
+
+Focused final SQLite measurement: all60 new identity bilingual/alias lookups, detail reads and category-filter checks completed in810.175ms on this debug build (combined operations, not a single-query latency). The final lint pass also checked the new workbook builder; explicit Node process/console imports resolved its initial no-undef findings.

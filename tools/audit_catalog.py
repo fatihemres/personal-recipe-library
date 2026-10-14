@@ -70,9 +70,10 @@ def audit():
         for provenance in i['provenance']:
             assert (provenance['sourceId'], provenance['sourceVersion']) in sources, 'Unknown provenance source/version'
             assert evidence[provenance['sourceId']].get(provenance['externalId']) == provenance['description'], 'Unverified source identifier or descriptor'
-            if provenance['sourceId'] == 'usda-sr-legacy':
+            if provenance['sourceId'].startswith('usda-sr-legacy'):
                 assert re.fullmatch(r'[0-9]{6}', provenance['externalId']), 'Invalid USDA identifier'
-            source_owners[(provenance['sourceId'], provenance['externalId'])].add(key)
+            family = 'usda-sr-legacy' if provenance['sourceId'].startswith('usda-sr-legacy') else provenance['sourceId']
+            source_owners[(family, provenance['externalId'])].add(key)
         assert i['ingredientType'] in ('food', 'beverage', 'alcohol', 'garnish', 'other'), 'Invalid ingredient type'
         assert not set(i['categories']) - category_keys, 'Invalid ingredient category reference'
         for related in i['relations']:
@@ -98,7 +99,7 @@ def audit():
             errors.append({'key': key, 'problem': 'Missing provenance or category'})
         if i['observations']:
             errors.append({'key': key, 'problem': 'Unexpected empirical metadata in identity-only batch'})
-        if any(p['sourceId'] == 'usda-sr-legacy' for p in i['provenance']) == key.startswith('project-'):
+        if any(p['sourceId'].startswith('usda-sr-legacy') for p in i['provenance']) == key.startswith('project-'):
             errors.append({'key': key, 'problem': 'Incorrect source identity ownership'})
         if any(word in i['names']['en'].lower() for word in ('powder', 'flour')) and i['preferredUnit'] != 'g':
             errors.append({'key': key, 'problem': 'Powder default is not mass'})
@@ -113,6 +114,15 @@ def audit():
     approved = [item for item in queue if item.get('decision') == 'user-approved-name']
     retained = [item for item in queue if item.get('decision') == 'user-authorized-retain-name']
     pending = [item for item in queue if item.get('decision') == 'retain-pending-human-review']
+    supplemental_path = OUT / 'm3d1-review.json'
+    supplemental = json.loads(supplemental_path.read_text()) if supplemental_path.exists() else []
+    new_pending = [item for item in supplemental if item['includedInRelease']]
+    deferred = [item for item in supplemental if not item['includedInRelease']]
+    for item in supplemental:
+        assert item['humanDecision'] is None, 'New review cannot silently acquire human approval'
+        assert item['includedInRelease'] == (item['key'] in entries), 'Incorrect review inclusion status'
+        if item['includedInRelease']:
+            assert item['id'] == entries[item['key']]['id'], 'Review ID mismatch'
     assert len(approved) == 5 and len(retained) == 10 and len(pending) == 3
     for item in approved:
         assert item['status'] == 'user-approved' and item['humanApproved'] is True
@@ -126,16 +136,23 @@ def audit():
     report = dict(version=manifest['version'], capitalizationAndTranslationWarnings=warnings, conceptReviewCandidates=[dict(concept=c,keys=sorted(keys),meaning='Same English base label; qualified culinary forms may be distinct. Not automatically merged.') for c,keys in sorted(concepts.items()) if len(keys)>1], previousIdentities=len(old['ingredients']), auditedIdentities=len(entries), newlyAddedIdentities=len(entries)-len(old['ingredients']), stableHistoricalIds=len(old['ingredients']), structuralErrors=errors, aliasCollisionCandidates=collisions, linguisticReviewCount=len(pending), userApprovedTerminologyCount=len(approved), userAuthorizedRetainCount=len(retained), independentlyHumanReviewed=0, reviewBoundary='Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification.', selectionExclusions=[dict(externalId='175186', reason='Black turtle bean mapping needs comparison with existing black bean identity; not added.'),dict(reference='Van otlu peyniri', reason='Excluded at v3 due unavailable primary page; reconsider only after current primary verification.')])
     if errors or collisions:
         raise ValueError(json.dumps(report, ensure_ascii=False))
+    report['historicalLinguisticReviewCount'] = len(pending)
+    report['newLinguisticReviewCount'] = len(new_pending)
+    report['linguisticReviewCount'] = len(pending) + len(new_pending)
+    report['deferredIdentityReviewCount'] = len(deferred)
+    report['reviewBoundary'] += f' Separately, {len(new_pending)} new naming questions and {len(deferred)} deferred identity question remain unapproved.'
     md = ['# Ingredient localization review queue', '', f'All {len(entries)} production identities were structurally audited; {len(approved)} user-authorized name changes, {len(retained)} user-authorized retain-name decisions and {len(pending)} unresolved terminology items are tracked. No independent culinary expert review occurred.', '', 'These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.', '', '| Stable key | Turkish label | English label | Review status | Review question |', '| --- | --- | --- | --- | --- |']
     for item in sorted(queue, key=lambda x: x['key']):
         md.append(f"| {item['key']} | {item['tr']} | {item['en']} | {item['status']} | {item['reason']} |")
+    if supplemental:
+        md += ['', f'M3D-1 adds {len(new_pending)} pending naming questions and {len(deferred)} deferred identity question. See INGREDIENT_M3D1_REVIEW.xlsx and CATALOG_M3D1_QUALITY_AUDIT.md; the table above preserves the 18 historical decisions. Total included-record terminology questions: {len(pending) + len(new_pending)}.']
     artifacts = {OUT / 'quality-audit.json': json.dumps(report, ensure_ascii=False, indent=2)+'\n', ROOT / 'docs/INGREDIENT_LOCALIZATION_REVIEW.md': '\n'.join(md)+'\n'}
     for path, text in artifacts.items():
         if '--check' in sys.argv:
             assert path.read_text() == text, f'Stale audit artifact: {path}'
         else:
             path.write_text(text)
-    print(f"Audited {len(entries)} identities; historical IDs intact; {len(approved)} names applied, {len(retained)} retained, {len(pending)} pending; no structural errors or exact alias collisions.")
+    print(f"Audited {len(entries)} identities; historical IDs intact; {len(approved)} names applied, {len(retained)} retained, {len(pending)} historical + {len(new_pending)} new names pending, {len(deferred)} identity deferred; no structural errors or exact alias collisions.")
 
 
 if __name__ == '__main__':

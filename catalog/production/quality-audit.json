@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "capitalizationAndTranslationWarnings": [],
   "conceptReviewCandidates": [
     {
@@ -133,6 +133,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "european chestnuts",
+      "keys": [
+        "usda-sr-170574",
+        "usda-sr-170575"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "fava beans",
       "keys": [
         "usda-sr-168574",
@@ -153,6 +161,22 @@
       "keys": [
         "usda-sr-172197",
         "usda-sr-173435"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "grape juice",
+      "keys": [
+        "usda-sr-173041",
+        "usda-sr-173042"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "lotus seeds",
+      "keys": [
+        "usda-sr-168591",
+        "usda-sr-170149"
       ],
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
@@ -207,16 +231,16 @@
     }
   ],
   "previousIdentities": 482,
-  "auditedIdentities": 508,
-  "newlyAddedIdentities": 26,
+  "auditedIdentities": 568,
+  "newlyAddedIdentities": 86,
   "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],
-  "linguisticReviewCount": 3,
+  "linguisticReviewCount": 6,
   "userApprovedTerminologyCount": 5,
   "userAuthorizedRetainCount": 10,
   "independentlyHumanReviewed": 0,
-  "reviewBoundary": "Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification.",
+  "reviewBoundary": "Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification. Separately, 3 new naming questions and 1 deferred identity question remain unapproved.",
   "selectionExclusions": [
     {
       "externalId": "175186",
@@ -226,5 +250,8 @@
       "reference": "Van otlu peyniri",
       "reason": "Excluded at v3 due unavailable primary page; reconsider only after current primary verification."
     }
-  ]
+  ],
+  "historicalLinguisticReviewCount": 3,
+  "newLinguisticReviewCount": 3,
+  "deferredIdentityReviewCount": 1
 }

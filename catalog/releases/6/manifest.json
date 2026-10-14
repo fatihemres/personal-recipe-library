@@ -1,0 +1,70 @@
+{
+  "artifact": {
+    "file": "ingredients.json",
+    "sha256": "462264b9c12d62f5aeb2493bd8321844ba3fab7485ff1327037d9156f20abc4c"
+  },
+  "dataset": "recipeatlas-ingredients",
+  "evidence": {
+    "recipeatlas-curation": {
+      "file": "curation-records.json",
+      "sha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea"
+    },
+    "usda-sr-legacy": {
+      "file": "usda-records.json",
+      "sha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+    },
+    "recipeatlas-terminology": {
+      "file": "terminology-records.json",
+      "sha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
+    },
+    "recipeatlas-terminology-final": {
+      "file": "terminology-final-records.json",
+      "sha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee"
+    }
+  },
+  "formatVersion": 1,
+  "purpose": "production",
+  "sources": [
+    {
+      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned, not a new USDA release.",
+      "id": "usda-sr-legacy",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — production selection 4",
+      "retrievedAt": "2026-10-08",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-4"
+    },
+    {
+      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea",
+      "attribution": "Project-authored Turkish/English culinary labels, aliases and classifications; not USDA translations. No empirical metadata inferred.",
+      "id": "recipeatlas-curation",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası production label curation",
+      "retrievedAt": "2026-10-09",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-3"
+    },
+    {
+      "id": "recipeatlas-terminology",
+      "version": "user-decisions-1",
+      "name": "Tarif Atlası user-selected Turkish terminology",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "attribution": "Three user-selected Turkish display names; not USDA translations or factual observations.",
+      "retrievedAt": "2026-10-13",
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
+    },
+    {
+      "id": "recipeatlas-terminology-final",
+      "version": "user-decisions-2",
+      "name": "Tarif Atlası final user-authorized terminology decisions",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "attribution": "Two user-authorized display names; not independent linguistic verification or USDA translations.",
+      "retrievedAt": "2026-10-13",
+      "artifactSha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee"
+    }
+  ],
+  "version": 6
+}

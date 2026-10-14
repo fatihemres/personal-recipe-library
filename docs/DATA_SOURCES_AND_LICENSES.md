@@ -130,3 +130,10 @@ Catalog version 5 retains the April 2018 USDA selection-4 facts and production-3
 ## M3C-5 release 6 terminology evidence
 
 Release 6 adds a separate project-authored `recipeatlas-terminology-final/user-decisions-2` evidence snapshot for two user-authorized display names. It is not a new external dataset or USDA translation. The existing USDA, project-curation and release-5 terminology source snapshots remain byte-for-byte preserved. Ten retain-name decisions and three unresolved items are review metadata only; no external license or factual provenance was inferred from them. Source permissions and exclusions elsewhere in this document are unchanged.
+
+
+## M3D-1 review and immutable source additions
+
+See CATALOG_M3D1_SOURCE_DECISIONS.md for the official source/license matrix reviewed during this milestone. No new external dataset was merged. The already-approved CC0 USDA SR Legacy April 2018 archive was retrieved and SHA-256 verified; 60 additional exact descriptors/IDs form usda-sr-legacy-m3d1/2018-04-selection-5. Separate recipeatlas-curation-m3d1/production-4 evidence records project-authored labels/aliases/classification under the existing CC0 dedication. Original source snapshots and release-6 provenance remain unchanged. 514 production identities now carry USDA facts; 54 retain project-only primary-reference provenance. No nutrition, ABV, density or allergen data were inferred.
+
+FoodOn remains conditional on pinned ontology/dependency rights and attribution review. Open Food Facts remains excluded from the combined bundle pending ODbL/DbCL derivative-database review; images have separate rights. TheCocktailDB remains excluded for unresolved offline redistribution rights. API availability does not authorize database redistribution. New curation is not independent linguistic approval; three new naming questions and one deferred identity question have blank human decisions.

@@ -3,7 +3,7 @@
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
-Current state: M1 through M3C-3 implemented and verified locally. The latest dated handoff at the end of this file is authoritative; earlier checkpoints are historical.
+Current state: M1 through M3D-1 implemented and verified locally, subject to the explicit host/GUI limits below. The latest dated handoff at the end of this file is authoritative; earlier checkpoints are historical.
 
 ## Existing project
 - `package.json` / `package-lock.json`: npm scripts and locked frontend dependencies; scripts for dev, build, preview, and Tauri.
@@ -620,3 +620,22 @@ Production catalog release 6 was generated from the archived, checksum-pinned re
 Verification: **69 Rust tests**, **50 frontend tests**, **2 browser tests**, **5 Python audit tests** passed, as did TypeScript, ESLint, Rust format/check/Clippy, frontend build and catalog report checks. A first combined browser run hit a transient localhost `EPERM`; a standalone rerun passed. Fourteen actual isolated CLI imports/opens under process-local network denial covered fresh/v2/v3/v4/v5→v6 plus unchanged repeats; v5→v6 updated exactly 2. Real SQLite tests cover name collision rollback, recipe and draft reference stability, exact quantity/unit, favorites/recent, user override and personal ingredient preservation. An unsigned arm64 native app bundle built and launched with isolated `com.recipeatlas.m3c5-verification`; after closing all test processes and fully relaunching, its SQLite profile still contained release 6, 508/260/50, the two names, one successful import, integrity `ok` and zero FK violations. The final test process was closed. The normal profile was not opened. The native GUI could not be bound by computer-use tooling, so fresh GUI interaction is unverified; Windows/Intel/signing/installers remain unverified. Details and exact commands are in `docs/TESTING.md`.
 
 Next task requires new user scope. Three terminology questions still need review; other V1 modules remain in MASTER_SPEC.md. Do not infer approval of additional labels or start M3C-6/measurement work. A pre-existing untracked root-level `INGREDIENT_TERMINOLOGY_REVIEW.xlsx` was left untouched; the tracked workbook is `docs/INGREDIENT_TERMINOLOGY_REVIEW.xlsx`. No push.
+
+
+## M3D-1 completion — controlled release 7 (2026-10-14)
+
+Resumed uncommitted work from 7edf0e8 without resetting it. The prior session had already rebuilt the importer and measured 569/269/50, but the full suite still contained release-6 assumptions. Reviewed and updated current-package assertions while preserving archived v5/v6 terminology tests. No migrations or user profiles were changed.
+
+The prepared 61 candidates were screened further. Corrected hulled barley to Kabuğu alınmış arpa, cranberry juice to Şekersiz turna yemişi suyu, and kale's ambiguous karalahana alias to Kale. Deferred USDA 169406 unroasted-kernel tahini because overlap with existing raw stone-ground tahini is unresolved. Its original row/evidence remains in the deferred review artifact. Final release 7: **60 additions, 568 identities, 269 aliases, 50 categories; 464 food / 104 beverage**. All 508 complete historical ingredient objects remain identical, including the three unresolved M3C-5 terms. Three new naming questions plus the deferred identity remain human-pending in docs/INGREDIENT_M3D1_REVIEW.xlsx. No linguistic expert approval is claimed.
+
+Approved new source extracts use the same pinned USDA CC0 archive and separate CC0 project-label provenance. FoodOn remains conditional, Open Food Facts/TheCocktailDB excluded. Added release-6 archive, deterministic offline evidence reproduction, source/coverage/quality reports and source-allowlist validation. No additional third-party dataset, UI feature, schema or dependency was introduced.
+
+Checks passed: **72 Rust tests, 50 frontend tests, 2 browser tests, 5 existing Python audits plus 4 M3D-1 tests**, TypeScript, ESLint, Rust formatting/check/Clippy with denied warnings, frontend build, deterministic generation and historical/current audits. Real SQLite tests include every new bilingual name/alias/detail/category query, stable IDs, failed-upgrade rollback and retry, unauthorized source rejection before DB creation, exact recipe quantities/units, favorites/recent/overrides, drafts, integrity/FKs and restarts. 17 isolated CLI imports/opens with process-local network denial cover fresh and v2–v6 upgrades plus repeats.
+
+Unsigned arm64 native bundle built and launched with com.recipeatlas.m3d1-verification. Complete test-process shutdown/relaunch retained release7, 568/269/50, zero personal test records, one successful import, integrity ok and no FK violations. Only processes confirmed to hold the isolated test database were stopped. Computer-use tooling could not bind the native window, so fresh native GUI interaction is unverified; backend integration and renderer tests are separate evidence. Normal personal data was untouched. Windows/Intel macOS, installers, signing and notarization remain unverified.
+
+Reports: CATALOG_M3D1_COVERAGE_ASSESSMENT.md, CATALOG_M3D1_QUALITY_AUDIT.md, CATALOG_M3D1_SOURCE_DECISIONS.md and catalog/production/m3d1-{coverage,quality-report,installation-report,native-report}.json. The pre-existing root INGREDIENT_TERMINOLOGY_REVIEW.xlsx remains untouched/untracked (SHA-256 0a6e3e4cef3abba34d6d5b7295f155352a831b2c8970f7c6b9fc5993810c2b93). Final local commit follows verified diff review; no push.
+
+Next recommended scope is M3D-2 targeted source/terminology review and high-value regional/beverage gaps described in IMPLEMENTATION_PLAN.md; it has not started.
+
+Final development smoke also reached the native Running state with the isolated dev identifier on port1438, then stopped cleanly. Port1420 was occupied, so no existing server was stopped. Native/automated evidence and exact commands are recorded in docs/TESTING.md.

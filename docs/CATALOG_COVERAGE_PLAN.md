@@ -136,3 +136,10 @@ Version 4: **508 identities**, **26 additions** from 482; 411 food/97 beverage,2
 Added vegetables (endive,radicchio,yer elması,turnip greens,watercress), wheat bran, coconut milk forms, agave, salted tomato juice, poppyseed oil; pilaf/köfte bulgur grades, nar ekşisi, Edirne cheese; lager/ale/porter/stout/IPA, Orgeat/honey syrups and meaningful rum forms. Existing482 labels/IDs retained.17 original terminology questions plus new endive usage remain open; 18 total with zero independent human approvals. No numeric target substituted for evidence.
 
 Still incomplete: regional cheeses/ferments/plants, international specialties, coffee beans/loose tea, vermouth/additional spirit and mixer varieties, empirical metadata. Preserve these goals in V1; M3C discovery work must not silently erase them. Additional future source-curation increments require explicit scope and new snapshots.
+
+
+## M3D-1 measured result and next priorities
+
+Release 7 has 568 identities (464 food / 104 beverage), 269 aliases and the same 50 categories. The first 61-candidate batch yielded 60 additions; unroasted tahini was deferred for identity comparison. See CATALOG_M3D1_COVERAGE_ASSESSMENT.md and catalog/production/m3d1-coverage.json for actual isolated SQLite direct-distinct counts, and CATALOG_M3D1_QUALITY_AUDIT.md for every added key. Direct memberships overlap and cannot be summed.
+
+High-impact gains include vegetables 57→81, international-specialty 7→24, fruit 47→52, seafood 21→26, nuts/seeds 23→28, juices 13→19, mushrooms 8→10, legumes 19→21, meat 7→10 and syrups 11→12. Turkish-regional remains 16, fermented 4, dairy-alternatives 5, coffee 4, tea 6, infusions 2, bitters 1 and mixers 3. These unchanged groups remain priorities; no artificial increase is claimed. Cuisine coverage is not exhaustively represented by category memberships. Turkish regional, South Asian, Middle Eastern/North African and Latin American specialties need targeted source and language curation; the current batch mainly improves explicit generic forms and selected East Asian/Latin American ingredients.

@@ -88,3 +88,8 @@ No schema migration. The versioned, checksummed shared importer updates three Tu
 ## M3C-5 catalog version 6
 
 Schema remains 5; no migration is needed. Release 6 updates exactly one Turkish `catalog_names` value (`usda-sr-174842`) and one English `catalog_names` plus matching `catalog_ingredients.canonical_name` value (`project-siyez-grain`). Stable IDs, aliases, category links and observations remain unchanged. The separate versioned terminology evidence carries only the two approved display-name changes. The shared transaction keeps user-owned presentation overrides, favorites, personal entries and recipe/draft references; a changed label colliding with an unlinked personal entry aborts the release. Review decisions for ten unchanged and three unresolved records are documentation metadata, not ingredient updates.
+
+
+## M3D-1 catalog version 7
+
+Schema stays 5; migrations 001–005 are unchanged. Release 7 adds 60 canonical rows, 9 aliases, and their normalized category/provenance links through the existing transaction. Expected clean counts: 568 canonical identities, 269 aliases, 50 category nodes; 464 food and 104 beverage. Source provenance has 1,087 links. The original 508 ingredient objects (including unresolved terminology) remain unchanged. New evidence snapshots use source IDs usda-sr-legacy-m3d1 and recipeatlas-curation-m3d1, preserving historical source/version rows. An initial new-name collision retains the personal identity and a pending canonical collision; it never merges IDs. Changed historical system-name collisions retain the existing whole-package rejection behavior. All factual observations remain unknown.

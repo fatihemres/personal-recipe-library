@@ -1,5 +1,12 @@
 # Changelog
 
+## M3D-1 — First controlled expansion release (2026-10-14, unreleased)
+
+- Embedded catalog release 7: 60 USDA-backed additions, 568 canonical identities, 269 aliases and the existing 50 categories (464 food / 104 beverage). Archived release 6 unchanged and preserved all original 508 complete ingredient records.
+- Screened 61 candidates; deferred unroasted-kernel tahini because its distinction from an existing raw tahini identity remains uncertain. Corrected candidate barley/cranberry labels and removed the misleading karalahana equivalence from the kale alias before release.
+- Added reproducible offline preparation, database-backed coverage, source decisions, quality/review artifacts and a four-item review workbook. Three historical terminology questions remain pending; no independent linguistic approval is claimed.
+- Verified real SQLite upgrade/rollback/restart, source allowlisting, personal/recipe/draft/favorite/override preservation, complete automated regressions and isolated unsigned macOS arm64 build/startup/restart. Native GUI interaction and other platforms remain unverified.
+
 ## M3C-5 — Final scoped terminology decisions (2026-10-13, unreleased)
 
 - Shipped offline catalog release 6 with exactly two display-name changes: Turkish `Club soda (kokteyl sodası)` and English `Einkorn wheat (siyez)`. Preserved 508 canonical IDs, 260 aliases, 50 categories and schema 5.

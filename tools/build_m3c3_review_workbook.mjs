@@ -11,7 +11,8 @@ const parsed = await Workbook.fromCSV(source, { sheetName: 'Source' });
 const rows = parsed.worksheets.getItemAt(0).getUsedRange().values;
 const [header, ...body] = rows;
 const index = Object.fromEntries(header.map((name, position) => [name, position]));
-const catalog = JSON.parse(await fs.readFile(path.join(root, 'catalog/production/ingredients.json'), 'utf8'));
+// Preserve the final 18-item historical review independently of later expansion.
+const catalog = JSON.parse(await fs.readFile(path.join(root, 'catalog/releases/6/ingredients.json'), 'utf8'));
 const byId = new Map(catalog.ingredients.map(record => [record.id, record]));
 if (body.length !== 18 || byId.size !== 508) throw new Error('Unexpected source review or catalog size');
 const workbook = Workbook.create();

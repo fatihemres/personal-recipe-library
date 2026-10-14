@@ -214,3 +214,8 @@ Version 5 is built deterministically from the archived, checksummed version 4 pa
 ## M3C-5 catalog release 6
 
 The existing embedded, transactional importer remains the catalog update boundary. Release 6 is data-only: one Turkish and one English canonical display name change, the latter also updating the corresponding English `canonical_name`. A separate project-authored evidence snapshot records the user authorization; ten retained and three unresolved names live in review artifacts. No schema migration, extra identity layer, online dependency or change to override precedence was introduced.
+
+
+## M3D-1 catalog release 7
+
+No runtime service, schema, migration, dependency or IPC shape changed. The compile-time package loader includes two additional checksummed evidence files and the reviewed source allowlist entries. The existing Rust worker still performs version/hash checks and a transactional offline installation; repeated startup does not import again. New source IDs isolate immutable M3D-1 extracts from historical source snapshots. All 508 release-6 ingredient objects and all 50 category objects remain identical; 60 additions retain stable deterministic IDs. A separate audit distinguishes source descriptors, project linguistic curation and human-pending review. Version 6 remains reproducible in catalog/releases/6. Future expansion must repeat these preservation/rollback gates rather than alter applied migrations.

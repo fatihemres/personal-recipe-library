@@ -165,3 +165,26 @@ The exact release-5 package is retained in `catalog/releases/5`, including sourc
 The shared Rust importer validates all four checksummed evidence files, writes the release and ingredient updates in one transaction, and respects user presentation overrides. Fresh installation and versions 2–5 upgrades can be reproduced with `cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import` followed by `python3 tools/verify_catalog_installation.py --include-v5 --deny-network --output catalog/production/m3c5-installation-report.json` on macOS. This uses temporary profiles only; sandbox-exec may need execution outside the nested command sandbox. Repeat starts skip the same package. Exact personal-name conflicts reject the update without merging or changing user records. Run `python3 tools/audit_catalog.py --check`, `python3 tools/report_m3c3_quality.py --check`, `python3 tools/report_m3c4_quality.py --check`, `python3 tools/report_m3c5_quality.py --check` and `python3 tools/test_catalog_audit.py` for package/review checks. Historical generators refuse to overwrite newer releases.
 
 For the 11-run isolated CLI check, first build `cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import`, then run `python3 tools/verify_catalog_installation.py --include-v4 --deny-network --output /private/tmp/m3c4-catalog-installation-report.json`. The `--include-v4` option keeps historical M3B-3 reproduction at its original eight runs by default. On macOS, nested sandbox restrictions may require approved local execution for `sandbox-exec` network denial; no user profile is reset.
+
+
+## M3D-1 release 7 reproduction and verification
+
+Release 6 is preserved byte-for-byte under catalog/releases/6. The new generator asserts its pinned manifest/artifact/evidence hashes, exact selected source descriptors, identity/name/alias uniqueness, units and category references before writing release 7. All original ingredient/category objects remain unchanged. It adds 60 identities from the screened batch; the 61st is held in m3d1-deferred.json. Two additional source artifacts are embedded by the existing loader. No schema migration or network dependency is added.
+
+```sh
+# Full source reproduction with the previously documented pinned USDA archive:
+python3 tools/prepare_m3d1_catalog.py /path/to/FoodData_Central_sr_legacy_food_csv_2018-04.zip
+# Equivalent offline reproduction from committed, checksummed source extracts:
+python3 tools/prepare_m3d1_catalog.py --evidence
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d1_quality.py --check
+python3 tools/test_catalog_audit.py
+python3 tools/test_m3d1_catalog.py
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d1_coverage.py
+python3 tools/verify_catalog_installation.py --include-v6 --deny-network --output catalog/production/m3d1-installation-report.json
+```
+
+The final two commands allocate isolated temporary databases. The coverage command must use the freshly built importer so its compiled source allowlist is current. --deny-network is a macOS process-local sandbox; other hosts should omit it and record that limitation. The measured report covers 17 fresh/historical/repeat opens. Fresh v7 inserted 568, v6→v7 inserted exactly 60 and updated zero, repeated import changed zero. Explicit CLI reimports create successful audit rows; normal worker startup skips unchanged packages without writes.
+
+Offline evidence reproduction matches all five generated artifact files byte-for-byte. This proves deterministic preparation and integrity, not upstream authenticity or expert translation quality. The official archive checksum pins the original extraction. The separate M3D-1 review workbook can be regenerated with tools/build_m3d1_review_workbook.mjs using the documented bundled artifact-tool runtime; root-level unrelated workbooks are never inputs.

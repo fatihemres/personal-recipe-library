@@ -1,6 +1,6 @@
-# Production catalog notices — version 6
+# Production catalog notices — version 7
 
-508 canonical culinary identities: 454 selected USDA SR Legacy April 2018
+568 canonical culinary identities: 514 selected USDA SR Legacy April 2018
 identities and 54 original project-authored reference-backed identities.
 The USDA source facts and IDs remain unchanged in usda-records.json; factual
 data is CC0: https://fdc.nal.usda.gov/api-guide/#licensing . USDA Agricultural
@@ -16,7 +16,7 @@ Original factual names/classifications were prepared from narrow identity checks
 no recipe instructions, quantities, regulatory definitions or health claims copied.
 
 Turkish and English labels are project curation, not USDA translations or
-independently certified terminology. All 508 were structurally audited; three
+independently certified terminology. All 568 were structurally audited; three
 earlier and two current display names were authorized by the user, ten names
 were retained under the current limited decision, and three questions remain
 unresolved. No independent expert linguistic verification is claimed. Unknown nutrition,
@@ -44,3 +44,13 @@ from mineral water. These two user-authorized label choices have separate
 `recipeatlas-terminology-final/user-decisions-2` provenance. Ten unchanged
 names and three unresolved terms are review metadata, not source facts. The
 exact version 5 package is archived under `catalog/releases/5`.
+
+Version 7 adds 60 selected USDA identities and nine project-curated aliases.
+The original 508 ingredient objects and 50 category objects are unchanged.
+Separate immutable `usda-sr-legacy-m3d1/2018-04-selection-5` and
+`recipeatlas-curation-m3d1/production-4` evidence preserves the boundary between
+source facts and editorial translations/classification. The same CC0 dedication
+above covers new project-authored labels. The exact release 6 package is archived
+at `catalog/releases/6`. Three new naming questions and one deferred candidate
+identity question remain in the M3D-1 review queue; the three historical unresolved
+terms are unchanged. The held tahini candidate is not part of production counts.
