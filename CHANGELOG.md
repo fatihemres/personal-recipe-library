@@ -70,3 +70,9 @@
 - Added 235 source-verified bilingual USDA ingredient identities, reproducible production extraction, coverage plan/reports and CC0 notices.
 - Embedded checked offline seed installation through the SQLite worker, preserving personal collisions/overrides and existing IDs; no schema migration.
 - Added production clean/upgrade/rollback/search/recipe-restart/version regressions and isolated macOS verification. Extensive catalog and signed cross-platform releases remain pending.
+
+## M3D-2A — catalog expansion preparation
+
+- Added a separate, reproducible 194-concept USDA/FoodOn candidate ledger, source-rights review, collision assessments and four-sheet terminology workbook. Human approvals remain blank; all imports remain unauthorized.
+- Measured unchanged release 7 in isolated SQLite: 568 ingredients, 269 aliases, 50 categories. Added direct/descendant category coverage and cuisine-specific gap priorities.
+- Preserved seven existing review questions and deferred tahini. No production catalog, schema or runtime changes; release 8 remains a future milestone.

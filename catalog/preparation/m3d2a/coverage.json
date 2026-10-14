@@ -1,0 +1,517 @@
+{
+  "categories": [
+    {
+      "candidates": 6,
+      "direct": 37,
+      "en": "Flour and baking",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 38,
+      "key": "baking",
+      "parent": "food",
+      "tr": "Un ve fırıncılık"
+    },
+    {
+      "candidates": 0,
+      "direct": 7,
+      "en": "Beers",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 7,
+      "key": "beers",
+      "parent": "beverage",
+      "tr": "Biralar"
+    },
+    {
+      "candidates": 0,
+      "direct": 3,
+      "en": "Beverage ingredients",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 110,
+      "key": "beverage",
+      "parent": null,
+      "tr": "İçecek malzemeleri"
+    },
+    {
+      "candidates": 0,
+      "direct": 1,
+      "en": "Cocktail bitters",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 1,
+      "key": "bitters",
+      "parent": "beverage",
+      "tr": "Kokteyl bitterleri"
+    },
+    {
+      "candidates": 0,
+      "direct": 6,
+      "en": "Brandy and fruit spirits",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 6,
+      "key": "brandy",
+      "parent": "spirits",
+      "tr": "Brandi ve meyve distilatları"
+    },
+    {
+      "candidates": 14,
+      "direct": 30,
+      "en": "Cheeses",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 30,
+      "key": "cheeses",
+      "parent": "dairy",
+      "tr": "Peynirler"
+    },
+    {
+      "candidates": 1,
+      "direct": 5,
+      "en": "Chocolate and cocoa",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 5,
+      "key": "chocolate-cocoa",
+      "parent": "baking",
+      "tr": "Çikolata ve kakao"
+    },
+    {
+      "candidates": 6,
+      "direct": 4,
+      "en": "Coffee",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 4,
+      "key": "coffee",
+      "parent": "coffee-tea",
+      "tr": "Kahve"
+    },
+    {
+      "candidates": 0,
+      "direct": 2,
+      "en": "Coffee and tea",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 10,
+      "key": "coffee-tea",
+      "parent": "beverage",
+      "tr": "Kahve ve çay"
+    },
+    {
+      "candidates": 2,
+      "direct": 13,
+      "en": "Condiments",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 13,
+      "key": "condiments",
+      "parent": "food",
+      "tr": "Çeşniler"
+    },
+    {
+      "candidates": 2,
+      "direct": 42,
+      "en": "Dairy",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 42,
+      "key": "dairy",
+      "parent": "food",
+      "tr": "Süt ürünleri"
+    },
+    {
+      "candidates": 3,
+      "direct": 5,
+      "en": "Dairy alternatives",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 5,
+      "key": "dairy-alternatives",
+      "parent": "food",
+      "tr": "Süt alternatifleri"
+    },
+    {
+      "candidates": 7,
+      "direct": 10,
+      "en": "Dried fruits",
+      "higherConfidenceCandidates": 6,
+      "includingDescendants": 10,
+      "key": "dried-fruit",
+      "parent": "fruit",
+      "tr": "Kuru meyveler"
+    },
+    {
+      "candidates": 0,
+      "direct": 7,
+      "en": "Eggs",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 7,
+      "key": "eggs",
+      "parent": "food",
+      "tr": "Yumurtalar"
+    },
+    {
+      "candidates": 3,
+      "direct": 4,
+      "en": "Fermented foods",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 4,
+      "key": "fermented",
+      "parent": "food",
+      "tr": "Fermente gıdalar"
+    },
+    {
+      "candidates": 4,
+      "direct": 23,
+      "en": "Flours",
+      "higherConfidenceCandidates": 3,
+      "includingDescendants": 23,
+      "key": "flours",
+      "parent": "baking",
+      "tr": "Unlar"
+    },
+    {
+      "candidates": 0,
+      "direct": 0,
+      "en": "Food ingredients",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 469,
+      "key": "food",
+      "parent": null,
+      "tr": "Gıda malzemeleri"
+    },
+    {
+      "candidates": 27,
+      "direct": 52,
+      "en": "Fruit",
+      "higherConfidenceCandidates": 17,
+      "includingDescendants": 53,
+      "key": "fruit",
+      "parent": "food",
+      "tr": "Meyveler"
+    },
+    {
+      "candidates": 3,
+      "direct": 6,
+      "en": "Garnishes",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 6,
+      "key": "garnishes",
+      "parent": "beverage",
+      "tr": "Süsleme malzemeleri"
+    },
+    {
+      "candidates": 0,
+      "direct": 2,
+      "en": "Gin",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 2,
+      "key": "gin",
+      "parent": "spirits",
+      "tr": "Cin"
+    },
+    {
+      "candidates": 2,
+      "direct": 36,
+      "en": "Grains",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 36,
+      "key": "grains",
+      "parent": "food",
+      "tr": "Tahıllar"
+    },
+    {
+      "candidates": 14,
+      "direct": 20,
+      "en": "Herbs",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 20,
+      "key": "herbs",
+      "parent": "food",
+      "tr": "Otlar"
+    },
+    {
+      "candidates": 6,
+      "direct": 2,
+      "en": "Herbal infusions",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 2,
+      "key": "infusions",
+      "parent": "beverage",
+      "tr": "Bitki demlemeleri"
+    },
+    {
+      "candidates": 32,
+      "direct": 24,
+      "en": "International specialty ingredients",
+      "higherConfidenceCandidates": 3,
+      "includingDescendants": 24,
+      "key": "international-specialty",
+      "parent": "food",
+      "tr": "Uluslararası özel malzemeler"
+    },
+    {
+      "candidates": 4,
+      "direct": 19,
+      "en": "Fruit and vegetable juices",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 19,
+      "key": "juices",
+      "parent": "beverage",
+      "tr": "Meyve ve sebze suları"
+    },
+    {
+      "candidates": 4,
+      "direct": 21,
+      "en": "Legumes",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 21,
+      "key": "legumes",
+      "parent": "food",
+      "tr": "Baklagiller"
+    },
+    {
+      "candidates": 1,
+      "direct": 8,
+      "en": "Liqueurs",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 8,
+      "key": "liqueurs",
+      "parent": "beverage",
+      "tr": "Likörler"
+    },
+    {
+      "candidates": 1,
+      "direct": 10,
+      "en": "Meat",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 10,
+      "key": "meat",
+      "parent": "food",
+      "tr": "Et"
+    },
+    {
+      "candidates": 0,
+      "direct": 2,
+      "en": "Milk powders",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 2,
+      "key": "milk-powders",
+      "parent": "dairy",
+      "tr": "Süt tozları"
+    },
+    {
+      "candidates": 2,
+      "direct": 3,
+      "en": "Mixers",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 3,
+      "key": "mixers",
+      "parent": "beverage",
+      "tr": "Karışım içecekleri"
+    },
+    {
+      "candidates": 2,
+      "direct": 10,
+      "en": "Mushrooms",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 10,
+      "key": "mushrooms",
+      "parent": "vegetables",
+      "tr": "Mantarlar"
+    },
+    {
+      "candidates": 1,
+      "direct": 9,
+      "en": "Noodles and pasta",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 9,
+      "key": "noodles-pasta",
+      "parent": "grains",
+      "tr": "Makarna ve erişte"
+    },
+    {
+      "candidates": 4,
+      "direct": 28,
+      "en": "Nuts and seeds",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 28,
+      "key": "nuts-seeds",
+      "parent": "food",
+      "tr": "Kuruyemiş ve tohumlar"
+    },
+    {
+      "candidates": 2,
+      "direct": 19,
+      "en": "Oils",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 19,
+      "key": "oils",
+      "parent": "food",
+      "tr": "Yağlar"
+    },
+    {
+      "candidates": 0,
+      "direct": 5,
+      "en": "Other beverage ingredients",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 5,
+      "key": "other-beverages",
+      "parent": "beverage",
+      "tr": "Diğer içecek malzemeleri"
+    },
+    {
+      "candidates": 0,
+      "direct": 7,
+      "en": "Poultry",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 7,
+      "key": "poultry",
+      "parent": "food",
+      "tr": "Kümes hayvanları"
+    },
+    {
+      "candidates": 10,
+      "direct": 16,
+      "en": "Sauces",
+      "higherConfidenceCandidates": 3,
+      "includingDescendants": 16,
+      "key": "sauces",
+      "parent": "food",
+      "tr": "Soslar"
+    },
+    {
+      "candidates": 4,
+      "direct": 26,
+      "en": "Seafood",
+      "higherConfidenceCandidates": 2,
+      "includingDescendants": 26,
+      "key": "seafood",
+      "parent": "food",
+      "tr": "Deniz ürünleri"
+    },
+    {
+      "candidates": 1,
+      "direct": 3,
+      "en": "Sodas and soft drinks",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 3,
+      "key": "soft-drinks",
+      "parent": "beverage",
+      "tr": "Gazlı içecekler"
+    },
+    {
+      "candidates": 10,
+      "direct": 29,
+      "en": "Spices",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 29,
+      "key": "spices",
+      "parent": "food",
+      "tr": "Baharatlar"
+    },
+    {
+      "candidates": 2,
+      "direct": 25,
+      "en": "Spirits",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 25,
+      "key": "spirits",
+      "parent": "beverage",
+      "tr": "Distile alkollü içkiler"
+    },
+    {
+      "candidates": 2,
+      "direct": 7,
+      "en": "Sweeteners",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 7,
+      "key": "sweeteners",
+      "parent": "food",
+      "tr": "Tatlandırıcılar"
+    },
+    {
+      "candidates": 11,
+      "direct": 12,
+      "en": "Syrups",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 12,
+      "key": "syrups",
+      "parent": "beverage",
+      "tr": "Şuruplar"
+    },
+    {
+      "candidates": 3,
+      "direct": 6,
+      "en": "Tea",
+      "higherConfidenceCandidates": 1,
+      "includingDescendants": 6,
+      "key": "tea",
+      "parent": "coffee-tea",
+      "tr": "Çay"
+    },
+    {
+      "candidates": 0,
+      "direct": 4,
+      "en": "Traditional Turkish drinks",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 4,
+      "key": "traditional-drinks",
+      "parent": "other-beverages",
+      "tr": "Geleneksel Türk içecekleri"
+    },
+    {
+      "candidates": 2,
+      "direct": 16,
+      "en": "Regional Turkish ingredients",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 16,
+      "key": "turkish-regional",
+      "parent": "food",
+      "tr": "Yöresel Türk malzemeleri"
+    },
+    {
+      "candidates": 40,
+      "direct": 81,
+      "en": "Vegetables",
+      "higherConfidenceCandidates": 25,
+      "includingDescendants": 83,
+      "key": "vegetables",
+      "parent": "food",
+      "tr": "Sebzeler"
+    },
+    {
+      "candidates": 0,
+      "direct": 2,
+      "en": "Water and mineral water",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 2,
+      "key": "water",
+      "parent": "beverage",
+      "tr": "Su ve maden suyu"
+    },
+    {
+      "candidates": 0,
+      "direct": 8,
+      "en": "Whisky",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 8,
+      "key": "whisky",
+      "parent": "spirits",
+      "tr": "Viski"
+    },
+    {
+      "candidates": 4,
+      "direct": 5,
+      "en": "Wines",
+      "higherConfidenceCandidates": 0,
+      "includingDescendants": 5,
+      "key": "wines",
+      "parent": "beverage",
+      "tr": "Şaraplar"
+    }
+  ],
+  "foreignKeyViolations": 0,
+  "integrity": "ok",
+  "method": "Fresh temporary SQLite profile; real Rust importer; unique direct and descendant membership counts overlap.",
+  "release": 7,
+  "totals": {
+    "catalog_aliases": 269,
+    "catalog_ingredients": 568,
+    "ingredient_categories": 50
+  },
+  "types": {
+    "beverage": 104,
+    "food": 464
+  }
+}

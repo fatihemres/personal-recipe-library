@@ -1,0 +1,1557 @@
+[
+  {
+    "source": "usda",
+    "id": "167714",
+    "label": "Hearts of palm, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167714/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167744",
+    "label": "Mollusks, snail, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167744/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167749",
+    "label": "Lemon peel, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167749/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167750",
+    "label": "Prickly pears, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167750/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167754",
+    "label": "Pummelo, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167754/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167758",
+    "label": "Rhubarb, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167758/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167759",
+    "label": "Sapodilla, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167759/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167760",
+    "label": "Sapote, mamey, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167760/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "167761",
+    "label": "Soursop, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167761/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168148",
+    "label": "Frog legs, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168148/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168150",
+    "label": "Java-plum, (jambolan), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168150/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168151",
+    "label": "Jujube, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168151/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168152",
+    "label": "Jujube, Chinese, fresh, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/168152/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168170",
+    "label": "Roselle, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168170/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168176",
+    "label": "Feijoa, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168176/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168177",
+    "label": "Pears, asian, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168177/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168192",
+    "label": "Durian, raw or frozen",
+    "url": "https://fdc.nal.usda.gov/food-details/168192/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168195",
+    "label": "Clementines, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168195/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168384",
+    "label": "Alfalfa seeds, sprouted, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168385",
+    "label": "Amaranth leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168385/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168393",
+    "label": "Balsam-pear (bitter gourd), pods, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168393/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168416",
+    "label": "Drumstick leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168416/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168419",
+    "label": "Jute, potherb, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168419/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168424",
+    "label": "Kohlrabi, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168424/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168453",
+    "label": "Radishes, oriental, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/168453/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168454",
+    "label": "Rutabagas, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168454/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168487",
+    "label": "Taro leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168487/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168489",
+    "label": "Taro shoots, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168489/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168490",
+    "label": "Arrowroot, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168490/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168491",
+    "label": "Chrysanthemum leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168491/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168571",
+    "label": "Nopales, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168571/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168581",
+    "label": "Fungi, Cloud ears, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/168581/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168582",
+    "label": "Mushrooms, straw, canned, drained solids",
+    "url": "https://fdc.nal.usda.gov/food-details/168582/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168583",
+    "label": "Wasabi, root, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168583/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168585",
+    "label": "Nuts, coconut meat, dried (desiccated), creamed",
+    "url": "https://fdc.nal.usda.gov/food-details/168585/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168872",
+    "label": "Oat bran, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168872/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "168888",
+    "label": "Triticale flour, whole-grain",
+    "url": "https://fdc.nal.usda.gov/food-details/168888/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169086",
+    "label": "Litchis, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169086/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169087",
+    "label": "Litchis, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/169087/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169089",
+    "label": "Longans, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169089/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169091",
+    "label": "Mango, dried, sweetened",
+    "url": "https://fdc.nal.usda.gov/food-details/169091/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169103",
+    "label": "Orange peel, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169103/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169110",
+    "label": "Passion-fruit juice, yellow, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169110/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169121",
+    "label": "Pears, dried, sulfured, uncooked",
+    "url": "https://fdc.nal.usda.gov/food-details/169121/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169129",
+    "label": "Pitanga, (surinam-cherry), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169129/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169219",
+    "label": "Cornsalad, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169219/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169222",
+    "label": "Yardlong bean, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169222/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169226",
+    "label": "Dandelion greens, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169226/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169241",
+    "label": "Kanpyo, (dried gourd strips)",
+    "url": "https://fdc.nal.usda.gov/food-details/169241/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169244",
+    "label": "Lambsquarters, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169244/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169250",
+    "label": "Lotus root, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169250/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169256",
+    "label": "Mustard greens, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169256/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169272",
+    "label": "Pumpkin leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169272/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169277",
+    "label": "Salsify, (vegetable oyster), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169277/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169298",
+    "label": "Squash, winter, spaghetti, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169298/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169301",
+    "label": "Water convolvulus,raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169301/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169303",
+    "label": "Sweet potato leaves, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169303/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169308",
+    "label": "Taro, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169308/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169398",
+    "label": "Epazote, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169398/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169407",
+    "label": "Seeds, watermelon seed kernels, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/169407/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169726",
+    "label": "Wild rice, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169726/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169733",
+    "label": "Noodles, egg, spinach, enriched, dry",
+    "url": "https://fdc.nal.usda.gov/food-details/169733/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169907",
+    "label": "Longans, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/169907/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169925",
+    "label": "Tangerine juice, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169925/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169934",
+    "label": "Peaches, dried, sulfured, uncooked",
+    "url": "https://fdc.nal.usda.gov/food-details/169934/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169942",
+    "label": "Persimmons, japanese, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/169942/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169974",
+    "label": "Burdock root, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169974/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169981",
+    "label": "Cardoon, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169981/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169985",
+    "label": "Cassava, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169985/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169990",
+    "label": "Celtuce, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169990/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "169993",
+    "label": "Chicory roots, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169993/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170075",
+    "label": "Chives, freeze-dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170075/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170082",
+    "label": "Shallots, freeze-dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170082/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170090",
+    "label": "Seaweed, agar, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170090/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170095",
+    "label": "Radish seeds, sprouted, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170095/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170153",
+    "label": "Seeds, sesame flour, partially defatted",
+    "url": "https://fdc.nal.usda.gov/food-details/170153/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170156",
+    "label": "Seeds, sunflower seed flour, partially defatted",
+    "url": "https://fdc.nal.usda.gov/food-details/170156/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170167",
+    "label": "Nuts, chestnuts, european, dried, peeled",
+    "url": "https://fdc.nal.usda.gov/food-details/170167/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170186",
+    "label": "Nuts, walnuts, black, dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170186/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170381",
+    "label": "Broccoli raab, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170381/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170481",
+    "label": "Borage, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170481/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170483",
+    "label": "Drumstick pods, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170483/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170485",
+    "label": "Leeks, (bulb and lower-leaf portion), freeze-dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170485/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170486",
+    "label": "Parsley, freeze-dried",
+    "url": "https://fdc.nal.usda.gov/food-details/170486/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "170898",
+    "label": "Cheese, mexican, queso cotija",
+    "url": "https://fdc.nal.usda.gov/food-details/170898/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171031",
+    "label": "Oil, almond",
+    "url": "https://fdc.nal.usda.gov/food-details/171031/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171032",
+    "label": "Oil, apricot kernel",
+    "url": "https://fdc.nal.usda.gov/food-details/171032/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171575",
+    "label": "Sauce, peanut, made from coconut, water, sugar, peanuts",
+    "url": "https://fdc.nal.usda.gov/food-details/171575/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171595",
+    "label": "Sauce, tomato chili sauce, bottled, with salt",
+    "url": "https://fdc.nal.usda.gov/food-details/171595/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171687",
+    "label": "Acerola juice, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/171687/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171714",
+    "label": "Breadfruit, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/171714/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171715",
+    "label": "Carambola, (starfruit), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/171715/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171727",
+    "label": "Elderberries, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/171727/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171823",
+    "label": "Sauce, duck, ready-to-serve",
+    "url": "https://fdc.nal.usda.gov/food-details/171823/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171825",
+    "label": "Sauce, steak, tomato based",
+    "url": "https://fdc.nal.usda.gov/food-details/171825/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171826",
+    "label": "Sauce, tartar, ready-to-serve",
+    "url": "https://fdc.nal.usda.gov/food-details/171826/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171833",
+    "label": "Sauce, horseradish",
+    "url": "https://fdc.nal.usda.gov/food-details/171833/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171871",
+    "label": "Beverages, carbonated, root beer",
+    "url": "https://fdc.nal.usda.gov/food-details/171871/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171882",
+    "label": "Beverages, Clam and tomato juice, canned",
+    "url": "https://fdc.nal.usda.gov/food-details/171882/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "171897",
+    "label": "Beverages, coffee, instant, with chicory",
+    "url": "https://fdc.nal.usda.gov/food-details/171897/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "174811",
+    "label": "Beverages, Whiskey sour mix, bottled",
+    "url": "https://fdc.nal.usda.gov/food-details/174811/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "174866",
+    "label": "Beverages, malted drink mix, chocolate, powder",
+    "url": "https://fdc.nal.usda.gov/food-details/174866/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "174872",
+    "label": "Beverages, tea, instant, decaffeinated, unsweetened",
+    "url": "https://fdc.nal.usda.gov/food-details/174872/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "175132",
+    "label": "Fish, roe, mixed species, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/175132/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "175164",
+    "label": "Crustaceans, crab, alaska king, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/175164/nutrients"
+  },
+  {
+    "source": "usda",
+    "id": "175206",
+    "label": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, solids and liquids",
+    "url": "https://fdc.nal.usda.gov/food-details/175206/nutrients"
+  },
+  {
+    "source": "foodon",
+    "id": "00001018",
+    "label": "cheese starter culture",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001018",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001022",
+    "label": "Bleu de Bresse cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001022",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001033",
+    "label": "emmenthal cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001033",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001034",
+    "label": "harzer cheese food product",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001034",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001036",
+    "label": "pont ieveque cheese food product",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001036",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001037",
+    "label": "vacherin mont dor cheese food product",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001037",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00001295",
+    "label": "pecorino cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00001295",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Pecorino"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002389",
+    "label": "azuki bean paste",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002389",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Red_bean_paste"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002421",
+    "label": "cambozola cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002421",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00002425",
+    "label": "stracchino cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002425",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00002484",
+    "label": "harissa chili paste",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002484",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Harissa"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002540",
+    "label": "añejo cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002540",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/A%C3%B1ejo_cheese"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002543",
+    "label": "oaxaca cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002543",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00002569",
+    "label": "hibiscus tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002569",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Hibiscus_tea"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002924",
+    "label": "green cardamom pod",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002924",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00002925",
+    "label": "black cardamom pod",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002925",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00002936",
+    "label": "asafoetida",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002936",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Asafoetida"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002946",
+    "label": "kimchi",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002946",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Kimchi"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00002994",
+    "label": "ancho pepper",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00002994",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003021",
+    "label": "turmeric root (raw)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003021",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003036",
+    "label": "tarragon leaf (fresh)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003036",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003086",
+    "label": "young jackfruit",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003086",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Jackfruit"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003146",
+    "label": "tapioca pearls",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003146",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Tapioca#Tapioca_pearls"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003255",
+    "label": "mascarpone",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003255",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Mascarpone"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003323",
+    "label": "yuzu (raw)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003323",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003340",
+    "label": "lemongrass stalk",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003340",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003399",
+    "label": "arabica coffee bean",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003399",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003400",
+    "label": "robusta coffee bean",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003400",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003401",
+    "label": "excelsa coffee bean",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003401",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003471",
+    "label": "red sichuan peppercorn",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003471",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Sichuan_pepper"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003472",
+    "label": "green sichuan peppercorn",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003472",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Sichuan_pepper"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003620",
+    "label": "fenugreek leaf",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003620",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Fenugreek"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003733",
+    "label": "sumac berry",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003733",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Sumac"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003810",
+    "label": "pink peppercorn",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003810",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Pink_peppercorn"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003818",
+    "label": "pandan leaf",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003818",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003866",
+    "label": "cashew milk",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003866",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Plant_milk#Nut_milk"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003867",
+    "label": "cashew cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003867",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003868",
+    "label": "almond cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003868",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00003870",
+    "label": "aji amarillo paste",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003870",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://www.eatperu.com/aji-amarillo-sauce-recipe/"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00003918",
+    "label": "lemongrass powder",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00003918",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00004408",
+    "label": "labneh",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00004408",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00004638",
+    "label": "lemongrass leaf (dried)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00004638",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00005196",
+    "label": "stinging nettle leaf",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00005196",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Dendrocnide"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "00005363",
+    "label": "pasilla pepper",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00005363",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00005587",
+    "label": "malt syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00005587",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00005789",
+    "label": "vanilla seed",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00005789",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "00005790",
+    "label": "glucose syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_00005790",
+    "lineage": []
+  },
+  {
+    "source": "foodon",
+    "id": "03000122",
+    "label": "curry leaf",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03000122",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Curry_tree"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03301250",
+    "label": "fig paste",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03301250",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F1250"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03301344",
+    "label": "arak",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03301344",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F1344"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03301631",
+    "label": "herbal tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03301631",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F1631"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03301972",
+    "label": "barley miso",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03301972",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F1972"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03301973",
+    "label": "brown rice miso",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03301973",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F1973"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03302659",
+    "label": "coffee bean (roasted, medium ground)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03302659",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F2659"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03303115",
+    "label": "coffee bean (unroasted)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03303115",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F3115"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304323",
+    "label": "coffee syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304323",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4323"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304329",
+    "label": "pineapple beverage syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304329",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4329"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304330",
+    "label": "orange beverage syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304330",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4330"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304592",
+    "label": "banana syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304592",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4592"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304677",
+    "label": "darjeeling black tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304677",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4677"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304784",
+    "label": "oolong tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304784",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4784"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03304826",
+    "label": "blackberry beverage syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03304826",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F4826"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03305067",
+    "label": "fenugreek tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03305067",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F5067"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03305101",
+    "label": "raspberry beverage syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03305101",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F5101"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03305860",
+    "label": "cherry liqueur",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03305860",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F5860"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03306113",
+    "label": "lingonberry syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03306113",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F6113"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03306361",
+    "label": "mustard (dijon)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03306361",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F6361"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03307523",
+    "label": "coconut syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03307523",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F7523"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03307690",
+    "label": "rooibos tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03307690",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F7690"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03307709",
+    "label": "blueberry beverage syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03307709",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F7709"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03307716",
+    "label": "black currant syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03307716",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F7716"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03307722",
+    "label": "rice syrup",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03307722",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F7722"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03309568",
+    "label": "peppermint tea (dry)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03309568",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F9568"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03309898",
+    "label": "adzuki bean flour",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03309898",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F9898"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310136",
+    "label": "sago",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310136",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Sago"
+      },
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10136"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310612",
+    "label": "lupine bean in brine",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310612",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10612"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310729",
+    "label": "mirin japanese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310729",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10729"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310760",
+    "label": "sherry",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310760",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10760"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310850",
+    "label": "manchego cheese",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310850",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Manchego"
+      },
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10850"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310957",
+    "label": "madeira wine",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310957",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10957"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310990",
+    "label": "vermouth sweet",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310990",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10990"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03310991",
+    "label": "vermouth dry",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03310991",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F10991"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03311193",
+    "label": "fenugreek leaf (dried)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03311193",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F11193"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03311286",
+    "label": "black bean sauce",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03311286",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F11286"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03315482",
+    "label": "wonton pastry (case)",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03315482",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F15482"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03316072",
+    "label": "pastirma",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03316072",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F16072"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03317464",
+    "label": "ouzo",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03317464",
+    "lineage": [
+      {
+        "property": "hasDbXref",
+        "value": "https://bioregistry.io/reference/siren:F17464"
+      }
+    ]
+  },
+  {
+    "source": "foodon",
+    "id": "03601045",
+    "label": "paneer",
+    "url": "http://purl.obolibrary.org/obo/FOODON_03601045",
+    "lineage": [
+      {
+        "property": "IAO_0000119",
+        "value": "https://en.wikipedia.org/wiki/Paneer"
+      }
+    ]
+  }
+]

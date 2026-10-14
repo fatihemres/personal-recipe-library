@@ -1,0 +1,108 @@
+[
+  {
+    "categories": [
+      "vegetables"
+    ],
+    "descriptor": "Squash, winter, acorn, raw",
+    "en": "Acorn squash (raw)",
+    "humanDecision": null,
+    "id": "439b2c2a-7f2a-8369-96bc-b120eff1872c",
+    "includedInRelease": true,
+    "key": "usda-sr-168472",
+    "proposedCorrection": null,
+    "reason": "Acorn squash: confirm natural Turkish cultivar/type terminology; the source winter-squash identity remains explicit.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168472/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Palamut kabağı (çiğ)"
+  },
+  {
+    "categories": [
+      "condiments"
+    ],
+    "descriptor": "Seeds, sesame butter, tahini, from unroasted kernels (non-chemically removed seed coat)",
+    "en": "Tahini from unroasted sesame kernels",
+    "humanDecision": null,
+    "id": "5c625c36-0fcd-89d2-a2a2-e96c722bab15",
+    "includedInRelease": false,
+    "key": "usda-sr-169406",
+    "proposedCorrection": null,
+    "reason": "Unroasted kernels may overlap existing usda-sr-169410 raw stone-ground tahini; separate USDA record alone does not establish a distinct culinary identity. Non-chemical hull removal is a processing detail requiring comparison.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169406/nutrients",
+    "status": "identity-review-needed",
+    "tr": "Kavrulmamış susam içinden tahin"
+  },
+  {
+    "categories": [
+      "vegetables"
+    ],
+    "descriptor": "Onions, welsh, raw",
+    "en": "Welsh onion (raw)",
+    "humanDecision": null,
+    "id": "67cc4853-bf83-8a60-b726-9b3ae91ce6ae",
+    "includedInRelease": true,
+    "key": "usda-sr-170007",
+    "proposedCorrection": null,
+    "reason": "Welsh onion: Turkish regional naming and distinction from generic green onion need culinary review; no equivalence alias added.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/170007/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Galler soğanı (çiğ)"
+  },
+  {
+    "categories": [
+      "seafood"
+    ],
+    "descriptor": "Crustaceans, lobster, northern, raw",
+    "en": "Northern lobster (raw)",
+    "humanDecision": null,
+    "id": "badc5b25-e0e7-8592-b37c-ec00ce9b8c14",
+    "includedInRelease": true,
+    "key": "usda-sr-174208",
+    "proposedCorrection": null,
+    "reason": "Northern lobster: confirm preferred Turkish species/common-name terminology; no unsupported species synonym added.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174208/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Kuzey ıstakozu (çiğ)"
+  },
+  {
+    "categories": [
+      "spices"
+    ],
+    "en": "Chili powder",
+    "humanDecision": null,
+    "id": "446d792c-63a5-8a10-a88f-462829cf9a9b",
+    "includedInRelease": true,
+    "key": "usda-sr-171319",
+    "reason": "Chili powder composition is not given by source; no blend/sweetness assumption.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171319/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Chili tozu"
+  },
+  {
+    "categories": [
+      "dairy"
+    ],
+    "en": "Cultured lowfat buttermilk",
+    "humanDecision": null,
+    "id": "b833e71e-a5f7-80c2-941c-150e27d88360",
+    "includedInRelease": true,
+    "key": "usda-sr-170874",
+    "reason": "Buttermilk is not ayran; review natural Turkish naming without conflating products.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/170874/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Fermente az yağlı buttermilk"
+  },
+  {
+    "categories": [
+      "vegetables"
+    ],
+    "en": "Endive (raw)",
+    "humanDecision": null,
+    "id": "9b96f8d8-3d19-8c85-8573-666cbff189a1",
+    "includedInRelease": true,
+    "key": "usda-sr-168412",
+    "reason": "Endive/hindiba/endivyen terminology can refer to different chicory forms regionally. USDA confirms generic raw endive, not a specific cultivar; verify natural Turkish usage without silently equating Belgian endive or radicchio.",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168412/nutrients",
+    "status": "terminology-review-needed",
+    "tr": "Hindiba (endivyen, çiğ)"
+  }
+]
