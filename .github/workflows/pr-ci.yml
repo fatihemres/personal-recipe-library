@@ -105,7 +105,7 @@ jobs:
           mkdir -p artifacts
           ditto -c -k --sequesterRsrc --keepParent "$app" artifacts/recipe-library-macos-arm64.app.zip
           cp "$dmg" artifacts/
-          shasum -a 256 artifacts/* > artifacts/SHA256SUMS.txt
+          (cd artifacts && shasum -a 256 ./*.zip ./*.dmg > SHA256SUMS.txt)
       - uses: actions/upload-artifact@v4
         with:
           name: unsigned-macos-arm64
@@ -144,7 +144,7 @@ jobs:
           mkdir -p artifacts
           ditto -c -k --sequesterRsrc --keepParent "$app" artifacts/recipe-library-macos-intel.app.zip
           cp "$dmg" artifacts/
-          shasum -a 256 artifacts/* > artifacts/SHA256SUMS.txt
+          (cd artifacts && shasum -a 256 ./*.zip ./*.dmg > SHA256SUMS.txt)
       - uses: actions/upload-artifact@v4
         with:
           name: unsigned-macos-intel
@@ -180,7 +180,8 @@ jobs:
           if ($installers.Count -eq 0) { throw 'NSIS installer missing' }
           New-Item -ItemType Directory -Path artifacts | Out-Null
           $installers | Copy-Item -Destination artifacts
-          Get-ChildItem artifacts -File | ForEach-Object { "$(Get-FileHash $_.FullName -Algorithm SHA256 | Select-Object -ExpandProperty Hash)  $($_.Name)" } | Set-Content artifacts/SHA256SUMS.txt
+          $lines = @(Get-ChildItem artifacts -File | ForEach-Object { "$(Get-FileHash $_.FullName -Algorithm SHA256 | Select-Object -ExpandProperty Hash)  $($_.Name)" })
+          [System.IO.File]::WriteAllText((Join-Path (Resolve-Path artifacts) 'SHA256SUMS.txt'), (($lines -join "`n") + "`n"), [System.Text.UTF8Encoding]::new($false))
       - uses: actions/upload-artifact@v4
         with:
           name: unsigned-windows-x64
