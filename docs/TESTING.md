@@ -383,3 +383,9 @@ npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipe
 ```
 
 The `--deny-network` wrapper may need to run outside a nested command sandbox on macOS. The native bundle identifier is test-only; never use the normal application profile for release verification.
+
+## DEVOPS-1 CI evidence and limits
+
+The PR workflow at `.github/workflows/pr-ci.yml` runs `npm ci`, TypeScript, ESLint, Vitest, installed Chromium Playwright, and frontend production build on Ubuntu. The independent Rust job runs Cargo fmt/check/Clippy/tests; the Rust tests include real SQLite migrations, recipe persistence and catalog upgrade/rollback. It also runs deterministic catalog generation/audits and the real `catalog_import` CLI on disposable fresh and historical SQLite databases. Its generated coverage report must exactly match the tracked report. No frontend formatter script is configured; ESLint and TypeScript are the available frontend static gates.
+
+Three dependent native packaging jobs build unsigned PR artifacts on macOS 15 arm64, macOS 15 Intel and Windows 2025 x64. They verify output files and attach seven-day artifacts and checksums. These jobs do not launch the app or exercise GUI flows. Run actual device/installer smoke tests and database upgrade checks before a public release; signing/notarization is a separate release gate. The CI workflow needs no repository secrets and has read-only token permission. Its first actual GitHub run and artifact availability must be recorded from the PR; YAML validation or a local arm64 build alone is not a CI pass.

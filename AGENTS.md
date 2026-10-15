@@ -18,6 +18,13 @@ Build a local-first food and beverage recipe management desktop application for 
 - Keep recipe data local by default. Do not add cloud accounts, synchronization, or network dependencies to core recipe workflows without a scoped requirement.
 - Do not store user databases, backups, or secrets in the repository. Resolve application data paths through Tauri rather than hardcoding OS paths.
 
+## PR-based development and release safety (DEVOPS-1)
+- Read `docs/DEVELOPMENT_AND_RELEASE_PROCESS.md` before branch, CI, tag, merge, or release work. `origin/main` is the integration branch; never push a milestone directly to it.
+- Start future milestones from a verified, fast-forwarded local `main` on a dedicated feature branch. Keep pre-existing local/untracked work, especially the root `INGREDIENT_TERMINOLOGY_REVIEW.xlsx`, untouched unless separately authorized.
+- Run scoped local checks, commit the milestone, push only its feature branch, open a PR to `main`, inspect all CI jobs and artifacts, fix failures, and obtain explicit Product Owner review before merging. Do not auto-merge.
+- Use a merge commit for the one-time release-8/CI transition PR to preserve M3D-2A and M3D-2B ancestry. Do not reset, force-push, rewrite history, or delete unmerged branches. Add unique annotated milestone tags only after a verified merge; catalog release numbers and application semver are separate.
+- The private repository's current plan does not permit enforced branch protection. Follow the documented manual no-direct-main-push policy. Never change visibility or buy a plan to work around that limit.
+
 ## Proposed module boundaries
 - React: application shell, feature UI, and reusable components. Keep domain types and Tauri calls outside presentation components.
 - Rust: thin Tauri commands, domain validation/services, and a separate SQLite persistence layer with versioned migrations.

@@ -82,3 +82,9 @@
 - Added 79 distinct, source-pinned USDA ingredients after an auditable review of all 106 USDA candidates. Deferred 27 USDA concepts; retained all 88 FoodOn proposals outside production pending term-level source clearance. No human linguistic approval was implied.
 - Archived release 7 and embedded checksummed release 8: 647 canonical identities, 269 aliases, 50 categories. Existing IDs, source snapshots, personal data and schema migrations remain unchanged.
 - Added real SQLite fresh/upgrade/repeat/rollback, search/detail/category, recipe quantity, draft, favorite and override tests; source/coverage/decision reports and isolated macOS verification. No new application module or online requirement.
+
+## DEVOPS-1 — PR validation and release safety
+
+- Added a PR-only GitHub Actions workflow with independent frontend/browser and Rust/SQLite/catalog gates, followed by unsigned macOS Apple Silicon, macOS Intel and Windows packaging jobs and short-lived test artifacts.
+- Documented feature-branch development, explicit Product Owner review before merge, preservation of the transition commits, milestone tags, semantic application versions, catalog releases and separate database recovery.
+- Kept the repository private. Current GitHub plan rejects private-repository branch protection, so the no-direct-main-push policy is manual until enforcement becomes available.
