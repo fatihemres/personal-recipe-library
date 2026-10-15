@@ -93,6 +93,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: src-tauri -> target
+      - run: npm run build
+      - name: Rust and SQLite integration tests on macOS arm64
+        run: cargo test --locked --manifest-path src-tauri/Cargo.toml
       - run: npm run tauri -- build --target aarch64-apple-darwin --bundles app,dmg -- --locked
         env:
           APPLE_SIGNING_IDENTITY: '-'
@@ -132,6 +135,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: src-tauri -> target
+      - run: npm run build
+      - name: Rust and SQLite integration tests on macOS Intel
+        run: cargo test --locked --manifest-path src-tauri/Cargo.toml
       - run: npm run tauri -- build --target x86_64-apple-darwin --bundles app,dmg -- --locked
         env:
           APPLE_SIGNING_IDENTITY: '-'
@@ -172,6 +178,9 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: src-tauri -> target
+      - run: npm run build
+      - name: Rust and SQLite integration tests on Windows x64
+        run: cargo test --locked --manifest-path src-tauri/Cargo.toml
       - run: npm run tauri -- build --target x86_64-pc-windows-msvc --bundles nsis -- --locked
       - name: Verify installer and checksum
         shell: pwsh
