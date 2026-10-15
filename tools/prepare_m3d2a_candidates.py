@@ -31,7 +31,8 @@ def normalize(text):
 
 def check_baseline():
     for name, checksum in read('baseline-checksums.json').items():
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == checksum, f'Protected file changed: {name}'
+        archived = name.replace('catalog/production/', 'catalog/releases/7/', 1) if name.startswith('catalog/production/') else 'catalog/releases/7/sources.json' if name == 'catalog/sources.json' else name
+        assert hashlib.sha256((ROOT / archived).read_bytes()).hexdigest() == checksum, f'Protected file changed: {name}'
 
 
 def extract(archive, ontology, selection):
@@ -119,7 +120,7 @@ def main():
     if args.archive or args.ontology:
         assert args.archive and args.ontology, 'Supply both pinned artifacts'
         assert extract(args.archive, args.ontology, selection) == evidence, 'Source extract drift'
-    catalog = json.loads((ROOT / 'catalog/production/ingredients.json').read_text())
+    catalog = json.loads((ROOT / 'catalog/releases/7/ingredients.json').read_text())
     sources = {s['id']: s for s in read('sources.json')}
     candidates = build(selection, evidence, catalog, sources)
     review = read('collision-review.json')

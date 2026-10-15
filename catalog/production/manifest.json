@@ -1,7 +1,7 @@
 {
   "artifact": {
     "file": "ingredients.json",
-    "sha256": "75e152c64968de37473d117c96ad1abce9c24fa32a92b64bb02f3eb7e2edc938"
+    "sha256": "9a73d045c5f9addd913c128fa01d3759eeaeeb95599d022bc164ea5841dedc59"
   },
   "dataset": "recipeatlas-ingredients",
   "evidence": {
@@ -12,6 +12,10 @@
     "recipeatlas-curation-m3d1": {
       "file": "m3d1-curation-records.json",
       "sha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd"
+    },
+    "recipeatlas-curation-m3d2b": {
+      "file": "m3d2b-curation-records.json",
+      "sha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58"
     },
     "recipeatlas-terminology": {
       "file": "terminology-records.json",
@@ -28,6 +32,10 @@
     "usda-sr-legacy-m3d1": {
       "file": "m3d1-usda-records.json",
       "sha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4"
+    },
+    "usda-sr-legacy-m3d2b": {
+      "file": "m3d2b-usda-records.json",
+      "sha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a"
     }
   },
   "formatVersion": 1,
@@ -92,7 +100,27 @@
       "retrievedAt": "2026-10-13",
       "url": "https://github.com/fatihemres/personal-recipe-library",
       "version": "production-4"
+    },
+    {
+      "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d2b",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-2B selection",
+      "retrievedAt": "2026-10-15",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-6"
+    },
+    {
+      "artifactSha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58",
+      "attribution": "Project-authored bilingual labels and classifications; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d2b",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-2B editorial labels",
+      "retrievedAt": "2026-10-15",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-5"
     }
   ],
-  "version": 7
+  "version": 8
 }

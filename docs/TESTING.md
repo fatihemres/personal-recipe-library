@@ -352,3 +352,34 @@ Focused final SQLite measurement: all60 new identity bilingual/alias lookups, de
 Run `python3 tools/prepare_m3d2a_candidates.py --check` and `python3 tools/test_m3d2a_candidates.py` (10 tests). Optional pinned-artifact re-extraction is documented in CATALOG_M3D2A_PREPARATION.md. Rebuild `catalog_import` before `python3 tools/report_m3d2a_coverage.py`; it imports unchanged release 7 into a temporary database and verifies 568/269/50, 464 food/104 beverage, foreign keys and integrity. It never uses a personal profile. Candidate generator tests cover source traceability, duplicate IDs, invalid categories, Unicode/Turkish alias matching, source-identity detection, legal deferral, seven prior pending decisions, empty factual metadata and immutable production/history checksums.
 
 Executed this milestone: rebuilt offline Rust example; isolated SQLite measurement; pinned USDA/FoodOn extraction comparison and offline drift check; 10 candidate + 5 catalog-audit + 4 M3D-1 Python tests; static production and M3D-1 quality checks. Workbook: all four sheets rendered/visually inspected; saved XLSX read-only inspection confirmed table filters, frozen headers, 194 candidate rows + seven prior decisions and blank human fields. Excel desktop interactions were not executed. No runtime source changes, so native GUI/Windows/Intel/signed builds and full runtime regression suites were not repeated for this documentation/preparation task.
+
+## M3D-2B release 8 verification — 2026-10-15
+
+Passed: **73 Rust tests**, **50 Vitest tests**, **2 Chromium browser tests**, **five new release-8 Python tests**, ten historical candidate tests, four release-7 generator tests, five catalog-audit tests, deterministic package/report checks, pinned USDA/FoodOn preparation extract comparison, TypeScript, ESLint, Cargo fmt/check/all-target Clippy with warnings denied, frontend production build and unsigned macOS arm64 debug app build. Applied migrations 001–005 were not edited. Rust test count includes real SQLite/worker/IPC migration, recipe, draft, favorites, overrides and interrupted-import regressions; browser tests verify renderer shell behavior, not native persistence.
+
+The new real-SQLite test imports archived release 7, injects an insert trigger failure during release-8 import and confirms the transaction leaves release 7, user recipe, source ledger and draft intact; retry inserts 79, updates zero, and a repeat is unchanged. It compares all 568 previous ingredient objects, checks stable IDs/provenance/unknown metadata, queries all 79 new ingredients by both names plus category/detail, and verifies Turkish partial/case search. A saved new-ingredient recipe retains `0.123456 g`; an older personal recipe retains `35.000001 cc` and its ingredient ID across complete database reopen. Personal and catalog favorites, catalog name/alias/unit override, draft, integrity and foreign keys persist. A separate source-allowlist test rejects FoodOn before creating a database profile.
+
+The rebuilt CLI performed **20 fresh/historical/repeat imports/opens** in disposable SQLite profiles: clean v8 inserts 647, v7→v8 inserts 79/updates zero, and repeats change zero; v2–v6 upgrades also passed. Process-local network denial passed when the command ran outside the nested command sandbox. The initial nested `sandbox-exec` attempt exited 71 before importing; that environmental wrapper error is not a catalog failure. Machine reports: `catalog/production/m3d2b-{sqlite,installation,native}-report.json`.
+
+Native unsigned debug bundle `com.recipeatlas.m3d2b-verification` was built and launched on this macOS arm64 host. A full process shutdown/relaunch retained release 8, schema 5, 647/269/50 records, one successful seed import, zero personal records, SQLite integrity `ok` and zero foreign-key violations. The normal app profile was untouched and the test process was closed. In the command sandbox LaunchServices returned `kLSNoExecutableErr` and direct execution exited 134; outside it, `open -n` launched the bundle. Computer-use inventory listed the app, but direct bundle-ID binding failed and path binding resolved a stale M3D-1 identifier, so **native GUI search/recipe interaction is not claimed**. The real SQLite-backed Rust/IPC tests provide functional evidence but are distinct from manual GUI use. Windows, Intel macOS, installers, signing and notarization remain unverified.
+
+Reproduction commands:
+
+```sh
+python3 tools/prepare_m3d2a_candidates.py --archive /path/to/pinned-usda.zip --ontology /path/to/pinned-foodon-base.owl --check
+python3 tools/prepare_m3d2b_catalog.py --check
+python3 tools/test_m3d2b_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d2b_quality.py --check
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d2b_coverage.py
+python3 tools/verify_catalog_installation.py --include-v7 --deny-network --output catalog/production/m3d2b-installation-report.json
+npm run typecheck && npm run lint && npm test && npm run test:ui && npm run build
+cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+cargo test --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo check --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3d2b-verification"}' -- --locked --offline
+```
+
+The `--deny-network` wrapper may need to run outside a nested command sandbox on macOS. The native bundle identifier is test-only; never use the normal application profile for release verification.

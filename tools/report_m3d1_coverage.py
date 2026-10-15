@@ -51,7 +51,7 @@ def measure(manifest: Path):
 
 def main():
     baseline = measure(ROOT / "catalog/releases/6/manifest.json")
-    current = measure(ROOT / "catalog/production/manifest.json")
+    current = measure(ROOT / "catalog/releases/7/manifest.json")
     output = dict(method="Separate temporary SQLite databases imported through the real Rust catalog_import CLI; direct distinct category memberships, which overlap.",
                   baseline=baseline, current=current)
     target = ROOT / "catalog/production/m3d1-coverage.json"

@@ -13,7 +13,7 @@ def measure():
     check_baseline()
     cli = ROOT / 'src-tauri/target/debug/examples/catalog_import'
     with tempfile.TemporaryDirectory(prefix='recipeatlas-m3d2a-') as temp:
-        result = subprocess.run([str(cli), temp, str(ROOT / 'catalog/production/manifest.json')], text=True, capture_output=True, check=True)
+        result = subprocess.run([str(cli), temp, str(ROOT / 'catalog/releases/7/manifest.json')], text=True, capture_output=True, check=True)
         installed = json.loads(result.stdout)
         db = sqlite3.connect(Path(temp) / 'library.sqlite3')
         totals = {table: db.execute(f'SELECT count(*) FROM {table}').fetchone()[0] for table in ['catalog_ingredients','catalog_aliases','ingredient_categories']}

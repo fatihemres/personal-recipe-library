@@ -1,0 +1,127 @@
+fdc_id	tr	en	category	aliases_tr	aliases_en	expected_description
+170918	Karaman kimyonu tohumu	Caraway seed	spices	Frenk kimyonu		Spices, caraway seed
+170920	Kereviz tohumu	Celery seed	spices			Spices, celery seed
+170921	Kuru kişniş yaprağı	Coriander leaf (dried)	herbs		Dried cilantro	Spices, coriander leaf, dried
+170924	Köri tozu	Curry powder	spices			Spices, curry powder
+170925	Dereotu tohumu	Dill seed	spices			Spices, dill seed
+170927	Öğütülmüş muskat çiçeği	Mace (ground)	spices	Makis		Spices, mace, ground
+170928	Kuru mercanköşk	Marjoram (dried)	herbs	Mercanköşk		Spices, marjoram, dried
+170929	Öğütülmüş hardal tohumu	Mustard seed (ground)	spices	Hardal tozu		Spices, mustard seed, ground
+170930	Kuru maydanoz	Parsley (dried)	herbs			Spices, parsley, dried
+170932	Acı kırmızı biber (baharat)	Red or cayenne pepper (spice)	spices	Cayenne biberi		Spices, pepper, red or cayenne
+170935	Öğütülmüş adaçayı	Sage (ground)	herbs			Spices, sage, ground
+170936	Öğütülmüş sater otu	Savory (ground)	herbs			Spices, savory, ground
+170937	Kuru tarhun	Tarragon (dried)	herbs	Tarhun		Spices, tarragon, dried
+171318	Kuru Frenk maydanozu	Chervil (dried)	herbs			Spices, chervil, dried
+171319	Chili tozu	Chili powder	spices			Spices, chili powder
+171322	Kuru dereotu yaprağı	Dill weed (dried)	herbs			Spices, dill weed, dried
+171331	Kümes hayvanları için baharat karışımı	Poultry seasoning	spices			Spices, poultry seasoning
+171332	Balkabağı turtası baharatı	Pumpkin pie spice	spices			Spices, pumpkin pie spice
+170843	Fontina peyniri	Fontina cheese	dairy			Cheese, fontina
+170844	Monterey peyniri	Monterey cheese	dairy			Cheese, monterey
+170845	Tam yağlı sütten mozzarella	Mozzarella (whole milk)	dairy	Mozzarella		Cheese, mozzarella, whole milk
+170848	Sert Parmesan peyniri	Parmesan cheese (hard)	dairy	Parmesan		Cheese, parmesan, hard
+170849	Port Salut peyniri	Port de Salut cheese	dairy			Cheese, port de salut
+170850	Provolone peyniri	Provolone cheese	dairy			Cheese, provolone
+170851	Tam yağlı sütten ricotta	Ricotta (whole milk)	dairy	Ricotta		Cheese, ricotta, whole milk
+170852	Tilsit peyniri	Tilsit cheese	dairy			Cheese, tilsit
+171240	Gjetost peyniri	Gjetost cheese	dairy			Cheese, gjetost
+171241	Gouda peyniri	Gouda cheese	dairy			Cheese, gouda
+171242	Gruyère peyniri	Gruyere cheese	dairy	Gravyer	Gruyère	Cheese, gruyere
+171243	Limburger peyniri	Limburger cheese	dairy			Cheese, limburger
+171245	Muenster peyniri	Muenster cheese	dairy			Cheese, muenster
+171246	Neufchâtel peyniri	Neufchatel cheese	dairy			Cheese, neufchatel
+171249	Romano peyniri	Romano cheese	dairy			Cheese, romano
+171250	Roquefort peyniri	Roquefort cheese	dairy	Rokfor		Cheese, roquefort
+171251	İsviçre tipi peynir	Swiss cheese	dairy			Cheese, swiss
+172175	Mavi küflü peynir	Blue cheese	dairy			Cheese, blue
+172179	Kremalı cottage peyniri	Cottage cheese (creamed)	dairy			Cheese, cottage, creamed, large or small curd
+172197	Sert keçi peyniri	Goat cheese (hard)	dairy			Cheese, goat, hard type
+173435	Yumuşak keçi peyniri	Goat cheese (soft)	dairy			Cheese, goat, soft type
+172223	Queso fresco peyniri	Queso fresco cheese	dairy			Cheese, fresh, queso fresco
+172224	Queso blanco peyniri	Queso blanco cheese	dairy			Cheese, white, queso blanco
+173419	Edam peyniri	Edam cheese	dairy			Cheese, edam
+170857	Düşük yağlı sıvı krema	Light fluid cream	dairy	Kahve kreması		Cream, fluid, light (coffee cream or table cream)
+171257	Kültürlenmiş ekşi krema	Sour cream (cultured)	dairy	Ekşi krema		Cream, sour, cultured
+172184	Çiğ taze yumurta sarısı	Egg yolk (raw, fresh)	eggs	Yumurta sarısı		Egg, yolk, raw, fresh
+172189	Çiğ ördek yumurtası	Duck egg (raw, fresh)	eggs			Egg, duck, whole, fresh, raw
+172191	Çiğ bıldırcın yumurtası	Quail egg (raw, fresh)	eggs			Egg, quail, whole, fresh, raw
+172204	Kurutulmuş yumurta akı	Egg white (dried)	eggs			Egg, white, dried
+173428	Kurutulmuş yumurta sarısı	Egg yolk (dried)	eggs			Egg, yolk, dried
+168446	Patates unu	Potato flour	baking			Potato flour
+168885	Koyu çavdar unu	Rye flour (dark)	baking			Rye flour, dark
+168887	Açık çavdar unu	Rye flour (light)	baking			Rye flour, light
+168898	Esmer pirinç unu	Brown rice flour	baking			Rice flour, brown
+168913	Ekmeklik buğday unu (zenginleştirilmemiş)	Bread wheat flour (unenriched)	baking			Wheat flours, bread, unenriched
+168921	Tam taneli mavi mısır unu	Whole-grain blue corn flour	baking		Harina de maiz morado	Corn flour, whole-grain, blue (harina de maiz morado)
+168943	Tam taneli sorgum unu	Whole-grain sorghum flour	baking	Sorgum unu		Sorghum flour, whole-grain
+169696	Beyaz masa mısır unu (zenginleştirilmemiş)	White masa corn flour (unenriched)	baking	Masa harina		Corn flour, masa, unenriched, white
+169739	Arpa unu	Barley flour or meal	baking			Barley flour or meal
+169740	Arpa maltı unu	Barley malt flour	baking			Barley malt flour
+169741	Kısmen kepeği alınmış yulaf unu	Oat flour (partially debranned)	baking			Oat flour, partially debranned
+169748	Tam taneli beyaz mısır unu	Whole-grain white corn flour	baking			Corn flour, whole-grain, white
+170684	Ararot unu	Arrowroot flour	baking	Ararot		Arrowroot flour
+170687	Tam karabuğday unu	Whole-groat buckwheat flour	baking			Buckwheat flour, whole-groat
+172023	Darı unu	Millet flour	baking			Millet flour
+173755	Keçiboynuzu unu	Carob flour	baking	Harnup unu		Carob flour
+174288	Nohut unu	Chickpea flour	baking		Besan	Chickpea flour (besan)
+174275	Yağı alınmış soya unu	Soy flour (defatted)	baking			Soy flour, defatted
+168820	Melas	Molasses	sweeteners			Molasses
+169658	Akçaağaç şekeri	Maple sugar	sweeteners			Sugars, maple
+168836	Koyu mısır şurubu	Dark corn syrup	syrups			Syrups, corn, dark
+168837	Açık mısır şurubu	Light corn syrup	syrups			Syrups, corn, light
+169660	Malt şurubu	Malt syrup	syrups			Syrups, malt
+169662	Sorgum şurubu	Sorghum syrup	syrups			Syrups, sorghum
+168835	Yoğun çikolata şurubu (fudge tipi)	Chocolate syrup (fudge type)	syrups			Syrups, chocolate, fudge-type
+168604	Tahin (susam içi türü belirtilmemiş)	Tahini (kernel type unspecified)	condiments	Tahin		Seeds, sesame butter, tahini, type of kernels unspecified
+170189	Kavrulmuş susamdan tahin	Tahini (roasted sesame)	condiments			Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)
+169410	Çiğ, taşta öğütülmüş susamdan tahin	Tahini (raw, stone ground sesame)	condiments			Seeds, sesame butter, tahini, from raw and stone ground kernels
+170568	Kabuksuz badem	Almonds (blanched)	nuts-seeds			Nuts, almonds, blanched
+170569	Kuru, kabuğu alınmamış Brezilya cevizi	Brazil nuts (dried, unblanched)	nuts-seeds	Brezilya cevizi		Nuts, brazilnuts, dried, unblanched
+170574	Çiğ kabuklu Avrupa kestanesi	European chestnuts (raw, unpeeled)	nuts-seeds	Kestane		Nuts, chestnuts, european, raw, unpeeled
+170591	Kuru çam fıstığı	Pine nuts (dried)	nuts-seeds	Çam fıstığı		Nuts, pine nuts, dried
+170170	Şekersiz kuru Hindistan cevizi içi	Coconut meat (dried, unsweetened)	nuts-seeds			Nuts, coconut meat, dried (desiccated), not sweetened
+170580	Çiğ Hindistan cevizi kreması	Coconut cream (raw)	dairy-alternatives			Nuts, coconut cream, raw (liquid expressed from grated meat)
+170148	Kabuğu alınmış kenevir tohumu	Hemp seed (hulled)	nuts-seeds			Seeds, hemp seed, hulled
+169412	Kuru susam içi (kabuksuz)	Sesame kernels (dried, decorticated)	nuts-seeds			Seeds, sesame seed kernels, dried (decorticated)
+168588	Tuz eklenmemiş sade badem ezmesi	Almond butter (plain, no salt added)	nuts-seeds			Nuts, almond butter, plain, without salt added
+170163	Tuz eklenmemiş sade kaju ezmesi	Cashew butter (plain, no salt added)	nuts-seeds	Kaju ezmesi		Nuts, cashew butter, plain, without salt added
+170160	Badem ezmesi (pastacılık)	Almond paste	baking			Nuts, almond paste
+171013	Pirinç kepeği yağı	Rice bran oil	oils			Oil, rice bran
+171014	Buğday ruşeymi yağı	Wheat germ oil	oils			Oil, wheat germ
+171016	Susam yağı	Sesame oil	oils			Oil, sesame, salad or cooking
+171028	Üzüm çekirdeği yağı	Grapeseed oil	oils			Oil, grapeseed
+171029	Mısır yağı	Corn oil	oils			Oil, corn, industrial and retail, all purpose salad or cooking
+171030	Ceviz yağı	Walnut oil	oils			Oil, walnut
+171410	Yer fıstığı yağı	Peanut oil	oils			Oil, peanut, salad or cooking
+171411	Soya yağı	Soybean oil	oils			Oil, soybean, salad or cooking
+171412	Hindistan cevizi yağı	Coconut oil	oils			Oil, coconut
+171421	Kakao yağı	Cocoa butter	oils			Oil, cocoa butter
+171427	Fındık yağı	Hazelnut oil	oils			Oil, hazelnut
+171167	Teriyaki sosu	Teriyaki sauce (ready to serve)	sauces	Teriyaki		Sauce, teriyaki, ready-to-serve
+171186	Sriracha acı biber sosu	Sriracha hot chili sauce	sauces	Sriracha		Sauce, hot chile, sriracha
+171579	Soğuk saklanan hazır pesto	Pesto sauce (refrigerated)	sauces			Sauce, pesto, ready-to-serve, refrigerated
+171610	Worcestershire sosu	Worcestershire sauce	sauces			Sauce, worcestershire
+174523	Barbekü sosu	Barbecue sauce	sauces	BBQ sos		Sauce, barbecue
+174524	Hazır salsa sosu	Salsa (ready to serve)	sauces	Salsa		Sauce, salsa, ready-to-serve
+171824	Hazır salsa verde	Salsa verde (ready to serve)	sauces	Salsa verde		Sauce, salsa, verde, ready-to-serve
+174074	Hafif acılı kırmızı enchilada sosu	Red enchilada sauce (mild, ready to serve)	sauces			Sauce, enchilada, red, mild, ready to serve
+172879	Hazır erik sosu	Plum sauce (ready to serve)	sauces			Sauce, plum, ready-to-serve
+172442	Miso	Miso	fermented	Miso ezmesi		Miso
+174272	Tempeh	Tempeh	fermented			Tempeh
+172475	Sert tofu (çiğ, kalsiyum sülfatla hazırlanmış)	Firm tofu (raw, calcium sulfate)	legumes			Tofu, raw, firm, prepared with calcium sulfate
+172476	Normal tofu (çiğ, kalsiyum sülfatla hazırlanmış)	Regular tofu (raw, calcium sulfate)	legumes			Tofu, raw, regular, prepared with calcium sulfate
+172448	Sert tofu (kalsiyum sülfat ve nigari)	Firm tofu (calcium sulfate and nigari)	legumes			Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)
+172449	Yumuşak tofu (kalsiyum sülfat ve nigari)	Soft tofu (calcium sulfate and nigari)	legumes			Tofu, soft, prepared with calcium sulfate and magnesium chloride (nigari)
+172450	Koyadofu (dondurularak kurutulmuş tofu)	Koyadofu (freeze-dried tofu)	legumes			Tofu, dried-frozen (koyadofu)
+172451	Kızarmış tofu	Fried tofu	legumes			Tofu, fried
+174280	Tuzlu fermente tofu (fuyu)	Fermented salted tofu (fuyu)	fermented	Fuyu		Tofu, salted and fermented (fuyu)
+168905	Chow mein eriştesi	Chow mein noodles	grains			Noodles, chinese, chow mein
+168906	Kuru soba eriştesi	Soba noodles (dry)	grains	Soba		Noodles, japanese, soba, dry
+168908	Kuru somen eriştesi	Somen noodles (dry)	grains	Somen		Noodles, japanese, somen, dry
+169742	Kuru pirinç eriştesi	Rice noodles (dry)	grains			Rice noodles, dry
+174258	Kuru maş fasulyesi eriştesi	Mung bean cellophane noodles (dry)	grains	Cam erişte		Noodles, chinese, cellophane or long rice (mung beans), dehydrated
+169755	Kuru yumurtalı erişte (zenginleştirilmemiş)	Egg noodles (dry, unenriched)	grains			Noodles, egg, dry, unenriched
+168927	Kuru makarna (zenginleştirilmemiş)	Pasta (dry, unenriched)	grains			Pasta, dry, unenriched
+169738	Kuru tam buğday makarnası	Whole-wheat pasta (dry)	grains	Tam buğday makarnası		Pasta, whole-wheat, dry (Includes foods for USDA's Food Distribution Program)
+169727	Taze sade makarna	Fresh plain pasta (refrigerated)	grains			Pasta, fresh-refrigerated, plain, as purchased

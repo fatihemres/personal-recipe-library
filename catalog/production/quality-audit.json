@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "capitalizationAndTranslationWarnings": [],
   "conceptReviewCandidates": [
     {
@@ -231,8 +231,8 @@
     }
   ],
   "previousIdentities": 482,
-  "auditedIdentities": 568,
-  "newlyAddedIdentities": 86,
+  "auditedIdentities": 647,
+  "newlyAddedIdentities": 165,
   "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],

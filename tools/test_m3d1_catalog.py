@@ -17,7 +17,8 @@ class ReleaseTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.original = prepare.ROOT
         root = Path(self.temp.name)
-        shutil.copytree(self.original/'catalog/production', root/'catalog/production')
+        shutil.copytree(self.original/'catalog/releases/7', root/'catalog/production')
+        shutil.copytree(self.original/'catalog/releases/7', root/'catalog/releases/7')
         shutil.copytree(self.original/'catalog/releases/6', root/'catalog/releases/6')
         prepare.ROOT = quality.ROOT = root
         prepare.OUT = root/'catalog/production'
@@ -46,7 +47,7 @@ class ReleaseTests(unittest.TestCase):
             prepare.main('--evidence')
 
     def test_changed_historical_identity_is_not_accepted(self):
-        path = prepare.OUT/'ingredients.json'
+        path = prepare.ROOT / 'catalog/releases/7/ingredients.json'
         data = json.loads(path.read_text())
         next(i for i in data['ingredients'] if i['key']=='honey')['names']['tr']='Wrong'
         path.write_text(json.dumps(data))

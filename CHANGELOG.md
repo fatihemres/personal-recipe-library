@@ -76,3 +76,9 @@
 - Added a separate, reproducible 194-concept USDA/FoodOn candidate ledger, source-rights review, collision assessments and four-sheet terminology workbook. Human approvals remain blank; all imports remain unauthorized.
 - Measured unchanged release 7 in isolated SQLite: 568 ingredients, 269 aliases, 50 categories. Added direct/descendant category coverage and cuisine-specific gap priorities.
 - Preserved seven existing review questions and deferred tahini. No production catalog, schema or runtime changes; release 8 remains a future milestone.
+
+## M3D-2B — controlled catalog release 8
+
+- Added 79 distinct, source-pinned USDA ingredients after an auditable review of all 106 USDA candidates. Deferred 27 USDA concepts; retained all 88 FoodOn proposals outside production pending term-level source clearance. No human linguistic approval was implied.
+- Archived release 7 and embedded checksummed release 8: 647 canonical identities, 269 aliases, 50 categories. Existing IDs, source snapshots, personal data and schema migrations remain unchanged.
+- Added real SQLite fresh/upgrade/repeat/rollback, search/detail/category, recipe quantity, draft, favorite and override tests; source/coverage/decision reports and isolated macOS verification. No new application module or online requirement.

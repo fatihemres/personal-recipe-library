@@ -95,7 +95,7 @@ fn personal_category_assignment_is_atomic_and_facets_count_distinct_descendants(
         .item
         .categories
         .is_empty());
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 568);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 647);
     db.edit_ingredient(IngredientEdit {
         id: own.id.clone(),
         revision: 3,
@@ -155,7 +155,7 @@ fn collision_candidates_separate_exact_alias_and_ambiguous_forms_without_merging
         stable_id("ingredient", "usda-sr-168588"),
         stable_id("ingredient", "usda-sr-170160")
     );
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 568);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 647);
 }
 
 #[test]
@@ -221,7 +221,7 @@ fn library_pages_real_catalog_and_personal_rows_with_exact_distinct_counts() {
     let first = db.ingredient_library(query("", "all", None, 0)).unwrap();
     assert_eq!(
         (first.catalog_count, first.personal_count, first.total),
-        (568, 1, 569)
+        (647, 1, 648)
     );
     assert_eq!(first.categories.len(), 50);
     let changes: i64 = db
@@ -230,18 +230,18 @@ fn library_pages_real_catalog_and_personal_rows_with_exact_distinct_counts() {
         .unwrap();
     let start = std::time::Instant::now();
     let mut ids = std::collections::HashSet::new();
-    for offset in (0..568).step_by(30) {
+    for offset in (0..647).step_by(30) {
         let page = db
             .ingredient_library(query("", "catalog", None, offset))
             .unwrap();
-        assert_eq!(page.total, 568);
+        assert_eq!(page.total, 647);
         assert!(page.items.len() <= 30);
         for i in page.items {
             assert_eq!(i.origin, "catalog");
             assert!(ids.insert(i.id));
         }
     }
-    assert_eq!(ids.len(), 568);
+    assert_eq!(ids.len(), 647);
     assert_eq!(
         db.conn
             .query_row("SELECT total_changes()", [], |r| r.get::<_, i64>(0))
@@ -249,7 +249,7 @@ fn library_pages_real_catalog_and_personal_rows_with_exact_distinct_counts() {
         changes
     );
     eprintln!(
-        "19 real library pages / 568 distinct definitions: {:?}",
+        "22 real library pages / 647 distinct definitions: {:?}",
         start.elapsed()
     );
     let own = db
@@ -258,7 +258,7 @@ fn library_pages_real_catalog_and_personal_rows_with_exact_distinct_counts() {
     assert_eq!(own.total, 1);
     assert_eq!(own.items[0].id, personal.id);
     assert!(db
-        .ingredient_library(query("", "catalog", None, 569))
+        .ingredient_library(query("", "catalog", None, 648))
         .unwrap()
         .items
         .is_empty());
@@ -319,7 +319,7 @@ fn library_search_and_descendant_facets_compose_without_duplicate_alias_matches(
     let cheeses = db
         .ingredient_library(query("", "catalog", Some("cheeses"), 0))
         .unwrap();
-    assert_eq!(cheeses.total, 30);
+    assert_eq!(cheeses.total, 31);
     let dairy = db
         .ingredient_library(query("", "catalog", Some("dairy"), 0))
         .unwrap();
@@ -435,7 +435,7 @@ fn library_keeps_pending_catalog_definitions_visible_and_preserves_existing_over
     let own = db.create_ingredient("Toz şeker").unwrap();
     db.install_bundled_catalog().unwrap();
     let p = db.ingredient_library(query("", "all", None, 0)).unwrap();
-    assert_eq!((p.total, p.catalog_count, p.personal_count), (569, 568, 1));
+    assert_eq!((p.total, p.catalog_count, p.personal_count), (648, 647, 1));
     let sugar = db
         .ingredient_detail(&stable_id("ingredient", "sugar-granulated"), "catalog")
         .unwrap();

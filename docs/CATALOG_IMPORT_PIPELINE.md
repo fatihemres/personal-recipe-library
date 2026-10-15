@@ -187,4 +187,22 @@ python3 tools/verify_catalog_installation.py --include-v6 --deny-network --outpu
 
 The final two commands allocate isolated temporary databases. The coverage command must use the freshly built importer so its compiled source allowlist is current. --deny-network is a macOS process-local sandbox; other hosts should omit it and record that limitation. The measured report covers 17 fresh/historical/repeat opens. Fresh v7 inserted 568, v6→v7 inserted exactly 60 and updated zero, repeated import changed zero. Explicit CLI reimports create successful audit rows; normal worker startup skips unchanged packages without writes.
 
+After release 8, the first two historical release-7 generation commands must run only in a disposable copy of the archived release-7 package; do not point the generator at current production. `tools/test_m3d1_catalog.py` performs that safe copy-based reproducibility check. `tools/report_m3d1_coverage.py` reads archived release 7.
+
 Offline evidence reproduction matches all five generated artifact files byte-for-byte. This proves deterministic preparation and integrity, not upstream authenticity or expert translation quality. The official archive checksum pins the original extraction. The separate M3D-1 review workbook can be regenerated with tools/build_m3d1_review_workbook.mjs using the documented bundled artifact-tool runtime; root-level unrelated workbooks are never inputs.
+
+## M3D-2B release 8
+
+Release 7 is archived at `catalog/releases/7` with its exact package and protected M3D-2A baseline files. The release-8 generator pins its manifest hash, validates the M3D-2A selection/evidence hashes, enumerates a decision for every one of 194 candidate IDs, and admits only 79 USDA ACCEPT outcomes. The 27 other USDA questions and all 88 FoodOn terms remain outside the package. It preserves every release-7 ingredient/category object and produces two new checksummed evidence snapshots for source descriptors versus project editorial labels. There is no migration or second ingredient system.
+
+```sh
+python3 tools/prepare_m3d2b_catalog.py --check
+python3 tools/test_m3d2b_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d2b_quality.py --check
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d2b_coverage.py
+python3 tools/verify_catalog_installation.py --include-v7 --output catalog/production/m3d2b-installation-report.json
+```
+
+The report/import commands create disposable SQLite profiles. `--include-v7` checks fresh and historical v2–v7 upgrades plus unchanged repeats; the normal application profile is not used. A macOS `--deny-network` wrapper is optional only where `sandbox-exec` is available; a host denial of the wrapper is not an importer failure. The embedded app package contains the release-8 manifest, ingredient records and all eight source evidence files; runtime startup still performs the shared version/hash/transactional import once and skips unchanged releases without writes.

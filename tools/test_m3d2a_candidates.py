@@ -14,7 +14,7 @@ from prepare_m3d2a_candidates import ROOT, OUT, read, build, collisions, normali
 class CandidateTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.catalog = json.loads((ROOT/'catalog/production/ingredients.json').read_text())
+        cls.catalog = json.loads((ROOT/'catalog/releases/7/ingredients.json').read_text())
         cls.rows = read('candidates.json')
         cls.evidence = read('source-records.json')
         cls.selection = list(csv.DictReader(io.StringIO((OUT/'selection.tsv').read_text()), delimiter='\t'))

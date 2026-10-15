@@ -1,0 +1,23 @@
+[
+  {
+    "candidate": {
+      "fdc_id": "169406",
+      "tr": "Kavrulmamış susam içinden tahin",
+      "en": "Tahini from unroasted sesame kernels",
+      "category": "condiments",
+      "extra_categories": "",
+      "preferred_unit": "g",
+      "dimensions": "mass",
+      "aliases_tr": "",
+      "aliases_en": "",
+      "expected_description": "Seeds, sesame butter, tahini, from unroasted kernels (non-chemically removed seed coat)"
+    },
+    "status": "identity-review-needed",
+    "reason": "Unroasted kernels may overlap existing usda-sr-169410 raw stone-ground tahini; separate USDA record alone does not establish a distinct culinary identity. Non-chemical hull removal is a processing detail requiring comparison.",
+    "relatedKeys": [
+      "usda-sr-169410",
+      "usda-sr-168604"
+    ],
+    "humanDecision": null
+  }
+]
