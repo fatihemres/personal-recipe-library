@@ -1,0 +1,394 @@
+[
+  {
+    "description": "Tofu yogurt",
+    "externalId": "167722"
+  },
+  {
+    "description": "Tamarind nectar, canned",
+    "externalId": "167786"
+  },
+  {
+    "description": "Pork, fresh, belly, raw",
+    "externalId": "167812"
+  },
+  {
+    "description": "Vital wheat gluten",
+    "externalId": "168147"
+  },
+  {
+    "description": "Jackfruit, canned, syrup pack",
+    "externalId": "168190"
+  },
+  {
+    "description": "Edamame, frozen, unprepared",
+    "externalId": "168410"
+  },
+  {
+    "description": "Beef, brisket, whole, separable lean only, all grades, raw",
+    "externalId": "168607"
+  },
+  {
+    "description": "Beef, ground, 70% lean meat / 30% fat, raw",
+    "externalId": "168652"
+  },
+  {
+    "description": "Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",
+    "externalId": "168751"
+  },
+  {
+    "description": "Rye flour, medium",
+    "externalId": "168886"
+  },
+  {
+    "description": "Wheat flour, white, all-purpose, enriched, bleached",
+    "externalId": "168894"
+  },
+  {
+    "description": "Wheat flour, white, all-purpose, self-rising, enriched",
+    "externalId": "168895"
+  },
+  {
+    "description": "Wheat flour, white, bread, enriched",
+    "externalId": "168896"
+  },
+  {
+    "description": "Asparagus, canned, drained solids",
+    "externalId": "169207"
+  },
+  {
+    "description": "Bamboo shoots, canned, drained solids",
+    "externalId": "169212"
+  },
+  {
+    "description": "Soybeans, green, raw",
+    "externalId": "169282"
+  },
+  {
+    "description": "Soybeans, mature seeds, sprouted, raw",
+    "externalId": "169284"
+  },
+  {
+    "description": "Corn flour, yellow, degermed, unenriched",
+    "externalId": "169695"
+  },
+  {
+    "description": "Cornmeal, whole-grain, yellow",
+    "externalId": "169697"
+  },
+  {
+    "description": "Hominy, canned, white",
+    "externalId": "169701"
+  },
+  {
+    "description": "Rice bran, crude",
+    "externalId": "169713"
+  },
+  {
+    "description": "Tapioca, pearl, dry",
+    "externalId": "169717"
+  },
+  {
+    "description": "Wheat flour, white, cake, enriched",
+    "externalId": "169723"
+  },
+  {
+    "description": "Wheat, sprouted",
+    "externalId": "169725"
+  },
+  {
+    "description": "Spelt, uncooked",
+    "externalId": "169745"
+  },
+  {
+    "description": "Teff, uncooked",
+    "externalId": "169747"
+  },
+  {
+    "description": "Peppers, hot pickled, canned",
+    "externalId": "169766"
+  },
+  {
+    "description": "Cabbage, japanese style, fresh, pickled",
+    "externalId": "169890"
+  },
+  {
+    "description": "Eggplant, pickled",
+    "externalId": "169892"
+  },
+  {
+    "description": "Mung beans, mature seeds, sprouted, raw",
+    "externalId": "169957"
+  },
+  {
+    "description": "Beets, canned, drained solids",
+    "externalId": "169966"
+  },
+  {
+    "description": "Yam, raw",
+    "externalId": "170071"
+  },
+  {
+    "description": "Yambean (jicama), raw",
+    "externalId": "170073"
+  },
+  {
+    "description": "Peppers, hot chili, red, raw",
+    "externalId": "170106"
+  },
+  {
+    "description": "Seeds, sesame seed kernels, toasted, without salt added (decorticated)",
+    "externalId": "170152"
+  },
+  {
+    "description": "Seeds, sunflower seed butter, without salt",
+    "externalId": "170155"
+  },
+  {
+    "description": "Nuts, coconut cream, canned, sweetened",
+    "externalId": "170171"
+  },
+  {
+    "description": "Nuts, chestnuts, european, roasted",
+    "externalId": "170190"
+  },
+  {
+    "description": "Corn bran, crude",
+    "externalId": "170289"
+  },
+  {
+    "description": "Beet greens, raw",
+    "externalId": "170375"
+  },
+  {
+    "description": "Cabbage, kimchi",
+    "externalId": "170392"
+  },
+  {
+    "description": "Beets, pickled, canned, solids and liquids",
+    "externalId": "170480"
+  },
+  {
+    "description": "Peppers, hot chili, green, raw",
+    "externalId": "170497"
+  },
+  {
+    "description": "Carrot, dehydrated",
+    "externalId": "170500"
+  },
+  {
+    "description": "Nuts, acorn flour, full fat",
+    "externalId": "170566"
+  },
+  {
+    "description": "Nuts, coconut meat, dried (desiccated), toasted",
+    "externalId": "170579"
+  },
+  {
+    "description": "Nuts, hazelnuts or filberts, blanched",
+    "externalId": "170582"
+  },
+  {
+    "description": "Nuts, pilinuts, dried",
+    "externalId": "170590"
+  },
+  {
+    "description": "Nuts, pine nuts, pinyon, dried",
+    "externalId": "170592"
+  },
+  {
+    "description": "Cheese, mozzarella, whole milk, low moisture",
+    "externalId": "170846"
+  },
+  {
+    "description": "Yogurt, plain, low fat",
+    "externalId": "170886"
+  },
+  {
+    "description": "Yogurt, plain, skim milk",
+    "externalId": "170887"
+  },
+  {
+    "description": "Oil, palm",
+    "externalId": "171015"
+  },
+  {
+    "description": "Salad dressing, honey mustard, regular",
+    "externalId": "171043"
+  },
+  {
+    "description": "Cheese, ricotta, part skim milk",
+    "externalId": "171248"
+  },
+  {
+    "description": "Oil, teaseed",
+    "externalId": "171425"
+  },
+  {
+    "description": "Sauce, pesto, ready-to-serve, shelf stable",
+    "externalId": "171580"
+  },
+  {
+    "description": "Sauce, peppers, hot, chili, mature red, canned",
+    "externalId": "171604"
+  },
+  {
+    "description": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+    "externalId": "171891"
+  },
+  {
+    "description": "Beverages, tea, green, ready to drink, unsweetened",
+    "externalId": "171911"
+  },
+  {
+    "description": "Cheese, mexican, queso anejo",
+    "externalId": "172201"
+  },
+  {
+    "description": "Cheese, dry white, queso seco",
+    "externalId": "172222"
+  },
+  {
+    "description": "Mustard, prepared, yellow",
+    "externalId": "172234"
+  },
+  {
+    "description": "Spearmint, dried",
+    "externalId": "172239"
+  },
+  {
+    "description": "Seasoning mix, dry, sazon, coriander & annatto",
+    "externalId": "172242"
+  },
+  {
+    "description": "Seasoning mix, dry, taco, original",
+    "externalId": "172243"
+  },
+  {
+    "description": "Oil, mustard",
+    "externalId": "172337"
+  },
+  {
+    "description": "Duck, domesticated, meat only, raw",
+    "externalId": "172410"
+  },
+  {
+    "description": "Lentils, mature seeds, cooked, boiled, without salt",
+    "externalId": "172421"
+  },
+  {
+    "description": "Guavas, strawberry, raw",
+    "externalId": "173045"
+  },
+  {
+    "description": "Beverages, chocolate almond milk, unsweetened, shelf-stable, fortified with vitamin D2 and E",
+    "externalId": "173187"
+  },
+  {
+    "description": "Lemonade, frozen concentrate, white",
+    "externalId": "173216"
+  },
+  {
+    "description": "Cheese, cheshire",
+    "externalId": "173415"
+  },
+  {
+    "description": "Cheese, colby",
+    "externalId": "173416"
+  },
+  {
+    "description": "Cheese, goat, semisoft type",
+    "externalId": "173433"
+  },
+  {
+    "description": "Cheese, mexican, queso asadero",
+    "externalId": "173437"
+  },
+  {
+    "description": "Cheese, mexican, queso chihuahua",
+    "externalId": "173438"
+  },
+  {
+    "description": "Thyme, fresh",
+    "externalId": "173470"
+  },
+  {
+    "description": "Vanilla extract",
+    "externalId": "173471"
+  },
+  {
+    "description": "Horseradish, prepared",
+    "externalId": "173472"
+  },
+  {
+    "description": "Rosemary, fresh",
+    "externalId": "173473"
+  },
+  {
+    "description": "Peppermint, fresh",
+    "externalId": "173474"
+  },
+  {
+    "description": "Seasoning mix, dry, chili, original",
+    "externalId": "173476"
+  },
+  {
+    "description": "Broadbeans (fava beans), mature seeds, canned",
+    "externalId": "173754"
+  },
+  {
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained, rinsed in tap water",
+    "externalId": "173801"
+  },
+  {
+    "description": "Sauce, sweet and sour, ready-to-serve",
+    "externalId": "174066"
+  },
+  {
+    "description": "Beverages, coffee, brewed, espresso, restaurant-prepared, decaffeinated",
+    "externalId": "174125"
+  },
+  {
+    "description": "Beverages, tea, black, ready to drink",
+    "externalId": "174144"
+  },
+  {
+    "description": "Mollusks, octopus, common, cooked, moist heat",
+    "externalId": "174249"
+  },
+  {
+    "description": "Lima beans, large, mature seeds, raw",
+    "externalId": "174252"
+  },
+  {
+    "description": "Lima beans, thin seeded (baby), mature seeds, raw",
+    "externalId": "174255"
+  },
+  {
+    "description": "Beans, kidney, red, mature seeds, canned, drained solids",
+    "externalId": "174285"
+  },
+  {
+    "description": "Beans, pinto, canned, drained solids",
+    "externalId": "174286"
+  },
+  {
+    "description": "Jackfruit, raw",
+    "externalId": "174687"
+  },
+  {
+    "description": "Beverages, almond milk, chocolate, ready-to-drink",
+    "externalId": "174820"
+  },
+  {
+    "description": "Beverages, Lemonade, powder",
+    "externalId": "174858"
+  },
+  {
+    "description": "Fish, sardine, Pacific, canned in tomato sauce, drained solids with bone",
+    "externalId": "175140"
+  },
+  {
+    "description": "Veal, ground, raw",
+    "externalId": "175290"
+  }
+]

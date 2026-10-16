@@ -1,0 +1,99 @@
+fdc_id	tr	en	categories	unit	decision_reason
+172234	Sarı hardal (hazır)	Prepared yellow mustard	condiments	g	Distinct prepared condiment, not ground mustard seed.
+172239	Kuru yeşil nane	Dried spearmint	herbs	g	Dried form differs from fresh spearmint.
+172242	Sazon baharat karışımı (kişniş ve annatto)	Sazon seasoning (coriander and annatto)	spices;international-specialty	g	Source specifies a dry seasoning mixture.
+172243	Taco baharat karışımı (kuru)	Dry taco seasoning mix	spices;international-specialty	g	Source specifies a dry seasoning mixture.
+173470	Taze kekik	Fresh thyme	herbs	g	Fresh herb differs from catalog dried thyme.
+173471	Vanilya özütü	Vanilla extract	baking	mL	Extract is distinct from vanilla bean or imitation extract.
+173472	Hazır yaban turpu	Prepared horseradish	condiments	g	Prepared condiment differs from catalog horseradish sauce.
+173473	Taze biberiye	Fresh rosemary	herbs	g	Fresh herb differs from catalog dried rosemary.
+173474	Taze biber nanesi	Fresh peppermint	herbs	g	Peppermint is not the catalog spearmint identity.
+173476	Chili baharat karışımı (kuru)	Dry chili seasoning mix	spices	g	Source explicitly says mix; not equated with unresolved chili powder.
+168147	Vital buğday gluteni	Vital wheat gluten	baking;flours	g	Distinct concentrated baking ingredient.
+168886	Orta öğütülmüş çavdar unu	Medium rye flour	flours	g	Milling grade differs from existing light and dark rye flours.
+168894	Ağartılmış çok amaçlı beyaz buğday unu	Bleached all-purpose wheat flour	flours	g	Bleached enriched flour is a distinct baking form.
+168895	Kendiliğinden kabaran beyaz buğday unu	Self-rising white wheat flour	flours	g	Leavened flour differs from plain flour.
+168896	Beyaz ekmeklik buğday unu	White bread wheat flour	flours	g	Bread flour has a distinct culinary use.
+169695	Rüşeymi alınmış sarı mısır unu	Degermed yellow corn flour	flours	g	Source identifies a distinct degermed corn flour.
+169697	Tam tahıllı sarı mısır irmiği	Whole-grain yellow cornmeal	grains	g	Whole-grain cornmeal differs from degermed corn flour.
+169701	Konserve beyaz hominy mısırı	Canned white hominy	grains;international-specialty	g	Nixtamalized canned maize differs from raw corn.
+169713	Pirinç kepeği	Rice bran	grains	g	Bran is distinct from whole rice and rice flour.
+169717	Kuru tapiyoka incileri	Dry tapioca pearls	baking;international-specialty	g	Pearl preparation differs from tapioca starch.
+169723	Beyaz pastalık buğday unu	White cake wheat flour	flours	g	Cake flour differs from bread and all-purpose flour.
+169725	Filizlendirilmiş buğday	Sprouted wheat	grains	g	Sprouted grain is distinct from dry wheat.
+169745	Spelt buğdayı (pişmemiş)	Spelt wheat (uncooked)	grains	g	Spelt is distinct from the existing siyez einkorn identity.
+169747	Teff (pişmemiş)	Teff (uncooked)	grains;international-specialty	g	Distinct grain identity with source-explicit raw form.
+170289	Ham mısır kepeği	Crude corn bran	grains	g	Bran is distinct from flour and whole corn.
+170155	Tuzsuz ayçiçeği çekirdeği ezmesi	Unsalted sunflower seed butter	nuts-seeds	g	Seed butter is distinct from whole kernels.
+170171	Konserve şekerli Hindistan cevizi kreması	Canned sweetened coconut cream	dairy-alternatives	mL	Sweetened canned cream differs from existing raw coconut cream.
+170190	Kavrulmuş Avrupa kestanesi	Roasted European chestnuts	nuts-seeds	g	Roasted form differs from existing raw and dried chestnuts.
+170152	Tuzsuz kavrulmuş susam içi	Unsalted toasted sesame kernels	nuts-seeds	g	Toasted kernels differ from whole dried sesame seeds.
+170566	Tam yağlı meşe palamudu unu	Full-fat acorn flour	flours;international-specialty	g	Flour is distinct from whole acorns.
+170579	Kavrulmuş kuru Hindistan cevizi eti	Toasted desiccated coconut meat	nuts-seeds	g	Toasted dried form differs from raw coconut.
+170582	Zarı soyulmuş fındık	Blanched hazelnuts	nuts-seeds	g	Blanched form differs from whole nuts with skin.
+170590	Kuru pili fıstığı	Dried pili nuts	nuts-seeds;international-specialty	g	Distinct tree-nut identity in the pinned source.
+170592	Kuru pinyon çam fıstığı	Dried pinyon pine nuts	nuts-seeds	g	Pinyon form is source-specific; not merged with general pine nuts.
+168410	Dondurulmuş edamame (hazırlanmamış)	Frozen edamame (unprepared)	legumes;international-specialty	g	Frozen immature soybeans are distinct from mature dry soybeans.
+169282	Yeşil soya fasulyesi (çiğ)	Green soybeans (raw)	legumes	g	Immature raw soybeans differ from mature dry beans.
+169284	Soya filizi (çiğ)	Raw soybean sprouts	legumes	g	Sprouts are distinct from soybean seeds.
+169957	Maş fasulyesi filizi (çiğ)	Raw mung bean sprouts	legumes;vegetables	g	Sprouts are distinct from dry mung beans.
+173754	Konserve bakla	Canned fava beans	legumes	g	Canned form differs from dry fava beans.
+173801	Süzülüp yıkanmış konserve nohut	Canned chickpeas (drained and rinsed)	legumes	g	Canned drained form differs from raw dry chickpeas.
+174252	İri lima fasulyesi (çiğ)	Large lima beans (raw)	legumes	g	Source specifies large-seed form.
+174255	Küçük lima fasulyesi (çiğ)	Baby lima beans (raw)	legumes	g	Source specifies thin-seeded baby form.
+174285	Süzülmüş konserve kırmızı kidney fasulyesi	Canned red kidney beans (drained)	legumes	g	Canned drained form is distinct from dry beans.
+174286	Süzülmüş konserve pinto fasulyesi	Canned pinto beans (drained)	legumes	g	Canned drained form is distinct from dry pinto beans.
+172421	Tuzsuz haşlanmış mercimek	Boiled lentils (without salt)	legumes	g	Prepared plain lentils are distinct from dry lentils.
+167722	Tofu yoğurdu	Tofu yogurt	dairy-alternatives;fermented	g	Cultured tofu product differs from uncultured tofu.
+169207	Süzülmüş konserve kuşkonmaz	Canned asparagus (drained)	vegetables	g	Canned drained form differs from raw asparagus.
+169212	Süzülmüş konserve bambu filizi	Canned bamboo shoots (drained)	vegetables;international-specialty	g	Canned shoots differ from raw bamboo shoots.
+169766	Konserve acı biber turşusu	Canned pickled hot peppers	condiments	g	Pickled peppers differ from raw chilies.
+169890	Japon usulü taze lahana turşusu	Japanese-style fresh pickled cabbage	condiments;international-specialty	g	Source says pickled, not asserted to be fermented.
+169892	Patlıcan turşusu	Pickled eggplant	condiments	g	Pickled form differs from raw eggplant.
+169966	Süzülmüş konserve pancar	Canned beets (drained)	vegetables	g	Canned drained form differs from raw beetroot.
+170073	Jicama (çiğ)	Jicama (raw)	vegetables;international-specialty	g	Distinct yam bean root, not yam or sweet potato.
+170106	Kırmızı acı chili biberi (çiğ)	Hot red chili pepper (raw)	vegetables	g	Fresh hot red chili differs from dried chili and sweet pepper.
+170375	Pancar yaprağı (çiğ)	Beet greens (raw)	vegetables	g	Edible leaf differs from beetroot.
+170392	Kimchi lahana turşusu	Cabbage kimchi	fermented;international-specialty	g	Named fermented cabbage preparation; not any pickled cabbage.
+170480	Konserve pancar turşusu	Canned pickled beets	condiments	g	Pickled form differs from plain canned beets.
+170497	Yeşil acı chili biberi (çiğ)	Hot green chili pepper (raw)	vegetables	g	Fresh hot green chili differs from sweet green pepper.
+170500	Kurutulmuş havuç	Dehydrated carrot	vegetables	g	Dehydrated form differs from raw carrot.
+170071	Yam kökü (çiğ)	Yam (raw)	vegetables;international-specialty	g	Yam is distinct from sweet potato.
+174687	Jackfruit (çiğ)	Jackfruit (raw)	fruit;international-specialty	g	Distinct tropical fruit identity and raw form.
+168190	Şurupta konserve jackfruit	Canned jackfruit in syrup	fruit	g	Sweet canned form differs from raw jackfruit.
+173045	Çilek guavası (çiğ)	Strawberry guava (raw)	fruit	g	Source-specific guava species/type, not strawberry or generic guava.
+170886	Sade az yağlı yoğurt	Plain low-fat yogurt	dairy	g	Fat-level form differs from whole-milk yogurt.
+170887	Sade yağsız yoğurt	Plain skim-milk yogurt	dairy	g	Skim-milk form differs from whole and low-fat yogurt.
+171248	Yarım yağlı sütten ricotta peyniri	Part-skim ricotta cheese	cheeses	g	Source-explicit part-skim form.
+172201	Queso añejo peyniri	Queso añejo cheese	cheeses;international-specialty	g	Distinct Mexican aged cheese variety.
+172222	Queso seco peyniri	Queso seco cheese	cheeses;international-specialty	g	Distinct dry white Mexican cheese variety.
+173415	Cheshire peyniri	Cheshire cheese	cheeses	g	Distinct cheese identity.
+173416	Colby peyniri	Colby cheese	cheeses	g	Distinct cheese identity.
+173433	Yarı yumuşak keçi peyniri	Semisoft goat cheese	cheeses	g	Texture form differs from existing soft and hard goat cheeses.
+173437	Queso asadero peyniri	Queso asadero cheese	cheeses;international-specialty	g	Distinct Mexican melting cheese variety.
+173438	Queso Chihuahua peyniri	Queso Chihuahua cheese	cheeses;international-specialty	g	Distinct Mexican cheese variety.
+170846	Düşük nemli tam yağlı mozzarella	Low-moisture whole-milk mozzarella	cheeses	g	Low-moisture form differs from existing whole-milk mozzarella.
+168751	Vanilya aromalı şekerli badem sütü	Sweetened vanilla almond milk	dairy-alternatives	mL	Flavored sweetened form differs from existing unsweetened almond milk.
+173187	Raf ömürlü şekersiz çikolatalı badem sütü	Unsweetened shelf-stable chocolate almond milk	dairy-alternatives;chocolate-cocoa	mL	Chocolate form differs from plain almond milk.
+171891	Espresso kahve (hazırlanmış)	Prepared espresso coffee	coffee	mL	Prepared espresso is distinct from roasted coffee bean.
+174125	Kafeinsiz espresso kahve (hazırlanmış)	Prepared decaffeinated espresso	coffee	mL	Decaffeinated espresso differs from regular prepared espresso.
+171911	Şekersiz hazır yeşil çay (içecek)	Unsweetened ready-to-drink green tea	tea	mL	Bottled prepared tea differs from dry leaves and brewed tea.
+174144	Hazır siyah çay (içecek)	Ready-to-drink black tea	tea	mL	Prepared bottled tea differs from dry leaves.
+173216	Dondurulmuş limonata konsantresi	Frozen lemonade concentrate	mixers	mL	Concentrate differs from prepared lemonade.
+174858	Limonata tozu	Lemonade powder	mixers	g	Dry powder is measured by mass, not beverage volume.
+167786	Konserve demirhindi nektarı	Canned tamarind nectar	juices	mL	Nectar differs from whole tamarind fruit.
+174820	Çikolatalı badem sütü (hazır içecek)	Chocolate almond milk (ready to drink)	dairy-alternatives	mL	Sweetened ready drink differs from unsweetened chocolate form.
+168652	Yağ oranı %30 çiğ dana kıyması	Ground beef (70% lean, raw)	meat	g	Source-explicit 70/30 ratio differs from catalog 85/15 ground beef.
+168607	Çiğ dana döşü (yağsız)	Beef brisket (lean, raw)	meat	g	Distinct beef cut; label retains lean-only qualifier.
+167812	Çiğ domuz göbeği	Pork belly (raw)	meat	g	Distinct pork cut and raw form.
+172410	Çiğ ördek eti (derisiz)	Duck meat (skinless, raw)	poultry	g	Distinct poultry species and skinless form.
+175290	Çiğ süt danası kıyması	Ground veal (raw)	meat	g	Veal differs from adult beef; no equivalence claimed.
+174249	Pişmiş ahtapot	Cooked octopus	seafood	g	Prepared species differs from raw octopus.
+175140	Domates soslu konserve Pasifik sardalyası	Canned Pacific sardines in tomato sauce	seafood	g	Canned sauced form differs from raw sardine.
+171015	Palm yağı	Palm oil	oils	mL	Distinct culinary oil source.
+171425	Çay tohumu yağı	Tea seed oil	oils	mL	Oil from tea seed, not tea infusion.
+171043	Ballı hardal sosu	Honey mustard dressing	condiments	g	Prepared dressing differs from plain mustard.
+171580	Raf ömürlü hazır pesto sosu	Shelf-stable pesto sauce	sauces	g	Prepared sauce is a reusable ingredient, not a complete recipe record.
+171604	Konserve kırmızı acı biber sosu	Canned red hot chili sauce	sauces	g	Sauce differs from fresh chili pepper.
+172337	Hardal yağı	Mustard oil	oils	mL	Oil differs from mustard seed and prepared mustard.
+174066	Hazır tatlı-ekşi sos	Ready-to-serve sweet and sour sauce	sauces	g	Prepared condiment can be an ingredient in recipes.

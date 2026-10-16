@@ -1,0 +1,919 @@
+[
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Tofu yogurt",
+    "fdc_id": "167722",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lemon peel, raw",
+    "fdc_id": "167749",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sapodilla, raw",
+    "fdc_id": "167759",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sapote, mamey, raw",
+    "fdc_id": "167760",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Soursop, raw",
+    "fdc_id": "167761",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Tamarind nectar, canned",
+    "fdc_id": "167786",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Pork, fresh, belly, raw",
+    "fdc_id": "167812",
+    "food_category_id": "10",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Vital wheat gluten",
+    "fdc_id": "168147",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Frog legs, raw",
+    "fdc_id": "168148",
+    "food_category_id": "15",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Java-plum, (jambolan), raw",
+    "fdc_id": "168150",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Jujube, Chinese, fresh, dried",
+    "fdc_id": "168152",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Roselle, raw",
+    "fdc_id": "168170",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Jackfruit, canned, syrup pack",
+    "fdc_id": "168190",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Durian, raw or frozen",
+    "fdc_id": "168192",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Edamame, frozen, unprepared",
+    "fdc_id": "168410",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Jute, potherb, raw",
+    "fdc_id": "168419",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Radishes, oriental, dried",
+    "fdc_id": "168453",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Rutabagas, raw",
+    "fdc_id": "168454",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Chrysanthemum leaves, raw",
+    "fdc_id": "168491",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nopales, raw",
+    "fdc_id": "168571",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Fungi, Cloud ears, dried",
+    "fdc_id": "168581",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, coconut meat, dried (desiccated), creamed",
+    "fdc_id": "168585",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beef, brisket, whole, separable lean only, all grades, raw",
+    "fdc_id": "168607",
+    "food_category_id": "13",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beef, ground, 70% lean meat / 30% fat, raw",
+    "fdc_id": "168652",
+    "food_category_id": "13",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",
+    "fdc_id": "168751",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Rye flour, medium",
+    "fdc_id": "168886",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Wheat flour, white, all-purpose, enriched, bleached",
+    "fdc_id": "168894",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Wheat flour, white, all-purpose, self-rising, enriched",
+    "fdc_id": "168895",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Wheat flour, white, bread, enriched",
+    "fdc_id": "168896",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Orange peel, raw",
+    "fdc_id": "169103",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Asparagus, canned, drained solids",
+    "fdc_id": "169207",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Bamboo shoots, canned, drained solids",
+    "fdc_id": "169212",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lambsquarters, raw",
+    "fdc_id": "169244",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Salsify, (vegetable oyster), raw",
+    "fdc_id": "169277",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Soybeans, green, raw",
+    "fdc_id": "169282",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Soybeans, mature seeds, sprouted, raw",
+    "fdc_id": "169284",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Corn flour, yellow, degermed, unenriched",
+    "fdc_id": "169695",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cornmeal, whole-grain, yellow",
+    "fdc_id": "169697",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Hominy, canned, white",
+    "fdc_id": "169701",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Rice bran, crude",
+    "fdc_id": "169713",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Tapioca, pearl, dry",
+    "fdc_id": "169717",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Wheat flour, white, cake, enriched",
+    "fdc_id": "169723",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Wheat, sprouted",
+    "fdc_id": "169725",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Spelt, uncooked",
+    "fdc_id": "169745",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Teff, uncooked",
+    "fdc_id": "169747",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Ginger root, pickled, canned, with artificial sweetener",
+    "fdc_id": "169765",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Peppers, hot pickled, canned",
+    "fdc_id": "169766",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cabbage, japanese style, fresh, pickled",
+    "fdc_id": "169890",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Eggplant, pickled",
+    "fdc_id": "169892",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Mung beans, mature seeds, sprouted, raw",
+    "fdc_id": "169957",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beets, canned, drained solids",
+    "fdc_id": "169966",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cardoon, raw",
+    "fdc_id": "169981",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Celtuce, raw",
+    "fdc_id": "169990",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Chicory roots, raw",
+    "fdc_id": "169993",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Yam, raw",
+    "fdc_id": "170071",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Yambean (jicama), raw",
+    "fdc_id": "170073",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Peppers, hot chili, red, raw",
+    "fdc_id": "170106",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Seeds, sesame seed kernels, toasted, without salt added (decorticated)",
+    "fdc_id": "170152",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Seeds, sunflower seed butter, without salt",
+    "fdc_id": "170155",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, coconut cream, canned, sweetened",
+    "fdc_id": "170171",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)",
+    "fdc_id": "170172",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, chestnuts, european, roasted",
+    "fdc_id": "170190",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Corn bran, crude",
+    "fdc_id": "170289",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beet greens, raw",
+    "fdc_id": "170375",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cabbage, kimchi",
+    "fdc_id": "170392",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beets, pickled, canned, solids and liquids",
+    "fdc_id": "170480",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Borage, raw",
+    "fdc_id": "170481",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Drumstick pods, raw",
+    "fdc_id": "170483",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Peppers, hot chili, green, raw",
+    "fdc_id": "170497",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Carrot, dehydrated",
+    "fdc_id": "170500",
+    "food_category_id": "11",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, acorn flour, full fat",
+    "fdc_id": "170566",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, coconut meat, dried (desiccated), toasted",
+    "fdc_id": "170579",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, hazelnuts or filberts, blanched",
+    "fdc_id": "170582",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, pilinuts, dried",
+    "fdc_id": "170590",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Nuts, pine nuts, pinyon, dried",
+    "fdc_id": "170592",
+    "food_category_id": "12",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Bulgur, dry",
+    "fdc_id": "170688",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, mozzarella, whole milk, low moisture",
+    "fdc_id": "170846",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Yogurt, plain, low fat",
+    "fdc_id": "170886",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Yogurt, plain, skim milk",
+    "fdc_id": "170887",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Oil, palm",
+    "fdc_id": "171015",
+    "food_category_id": "4",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Salad dressing, honey mustard, regular",
+    "fdc_id": "171043",
+    "food_category_id": "4",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, ricotta, part skim milk",
+    "fdc_id": "171248",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Oil, teaseed",
+    "fdc_id": "171425",
+    "food_category_id": "4",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sauce, pesto, ready-to-serve, shelf stable",
+    "fdc_id": "171580",
+    "food_category_id": "6",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sauce, peppers, hot, chili, mature red, canned",
+    "fdc_id": "171604",
+    "food_category_id": "6",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sauce, duck, ready-to-serve",
+    "fdc_id": "171823",
+    "food_category_id": "6",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, Clam and tomato juice, canned",
+    "fdc_id": "171882",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+    "fdc_id": "171891",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, coffee, instant, regular, powder",
+    "fdc_id": "171893",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, tea, green, ready to drink, unsweetened",
+    "fdc_id": "171911",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Mollusks, clam, mixed species, canned, drained solids",
+    "fdc_id": "171976",
+    "food_category_id": "15",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Pasta, gluten-free, brown rice flour, cooked, TINKYADA",
+    "fdc_id": "172026",
+    "food_category_id": "20",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, mexican, queso anejo",
+    "fdc_id": "172201",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, dry white, queso seco",
+    "fdc_id": "172222",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Mustard, prepared, yellow",
+    "fdc_id": "172234",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Spearmint, dried",
+    "fdc_id": "172239",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Seasoning mix, dry, sazon, coriander & annatto",
+    "fdc_id": "172242",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Seasoning mix, dry, taco, original",
+    "fdc_id": "172243",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Oil, mustard",
+    "fdc_id": "172337",
+    "food_category_id": "4",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Duck, domesticated, meat only, raw",
+    "fdc_id": "172410",
+    "food_category_id": "5",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lentils, mature seeds, cooked, boiled, without salt",
+    "fdc_id": "172421",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Guavas, strawberry, raw",
+    "fdc_id": "173045",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, chocolate almond milk, unsweetened, shelf-stable, fortified with vitamin D2 and E",
+    "fdc_id": "173187",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lemonade, frozen concentrate, white",
+    "fdc_id": "173216",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, cheshire",
+    "fdc_id": "173415",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, colby",
+    "fdc_id": "173416",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, goat, semisoft type",
+    "fdc_id": "173433",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, mexican, queso asadero",
+    "fdc_id": "173437",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Cheese, mexican, queso chihuahua",
+    "fdc_id": "173438",
+    "food_category_id": "1",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Thyme, fresh",
+    "fdc_id": "173470",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Vanilla extract",
+    "fdc_id": "173471",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Horseradish, prepared",
+    "fdc_id": "173472",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Rosemary, fresh",
+    "fdc_id": "173473",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Peppermint, fresh",
+    "fdc_id": "173474",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Seasoning mix, dry, chili, original",
+    "fdc_id": "173476",
+    "food_category_id": "2",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Broadbeans (fava beans), mature seeds, canned",
+    "fdc_id": "173754",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained, rinsed in tap water",
+    "fdc_id": "173801",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Sauce, sweet and sour, ready-to-serve",
+    "fdc_id": "174066",
+    "food_category_id": "6",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, coffee, brewed, espresso, restaurant-prepared, decaffeinated",
+    "fdc_id": "174125",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, tea, black, ready to drink",
+    "fdc_id": "174144",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Mollusks, octopus, common, cooked, moist heat",
+    "fdc_id": "174249",
+    "food_category_id": "15",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lima beans, large, mature seeds, raw",
+    "fdc_id": "174252",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Lima beans, thin seeded (baby), mature seeds, raw",
+    "fdc_id": "174255",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beans, kidney, red, mature seeds, canned, drained solids",
+    "fdc_id": "174285",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beans, pinto, canned, drained solids",
+    "fdc_id": "174286",
+    "food_category_id": "16",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Jackfruit, raw",
+    "fdc_id": "174687",
+    "food_category_id": "9",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, Whiskey sour mix, bottled",
+    "fdc_id": "174811",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, almond milk, chocolate, ready-to-drink",
+    "fdc_id": "174820",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Beverages, Lemonade, powder",
+    "fdc_id": "174858",
+    "food_category_id": "14",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Fish, sardine, Pacific, canned in tomato sauce, drained solids with bone",
+    "fdc_id": "175140",
+    "food_category_id": "15",
+    "publication_date": "2019-04-01"
+  },
+  {
+    "data_type": "sr_legacy_food",
+    "description": "Veal, ground, raw",
+    "fdc_id": "175290",
+    "food_category_id": "17",
+    "publication_date": "2019-04-01"
+  }
+]

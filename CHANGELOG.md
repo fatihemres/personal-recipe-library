@@ -1,5 +1,11 @@
 # Changelog
 
+## M3D-3 — Global catalog Release 9 (2026-10-16, unreleased)
+
+- Prepared 131 source-traceable USDA decisions: 98 accepted, 29 deferred, 3 existing and 1 rejected. Release 9 bundles 745 canonical identities (624 food / 121 beverage), 269 aliases and 50 categories; all 647 Release-8 ingredient objects are unchanged.
+- Archived Release 8 and pinned distinct checksummed source versions for the new USDA evidence and project-authored bilingual curation. Kept FoodOn and other uncleared sources outside production. No SQLite migration, user-data rewrite, new alias or category.
+- Added isolated fresh/upgrade/rollback and source-version collision regressions plus catalog coverage and quality reports. Native and cross-platform verification are documented separately.
+
 ## DEVOPS-1C — resource lifecycle audit and version display (2026-10-16, unreleased)
 
 - Replaced the stale sidebar milestone label with the installed Tauri application version and added a Turkish Settings/About section. Metadata failure leaves the sidebar usable. The version remains 0.1.0; catalog release 8 is tracked separately.

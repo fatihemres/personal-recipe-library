@@ -13,8 +13,8 @@ def upgrade():
     with tempfile.TemporaryDirectory(prefix='recipeatlas-m3d2b-upgrade-') as name:
         path = Path(name)
         previous = json.loads(subprocess.run([str(CLI), str(path), str(ROOT/'catalog/releases/7/manifest.json')], check=True, text=True, capture_output=True).stdout)
-        changed = json.loads(subprocess.run([str(CLI), str(path), str(ROOT/'catalog/production/manifest.json')], check=True, text=True, capture_output=True).stdout)
-        repeat = json.loads(subprocess.run([str(CLI), str(path), str(ROOT/'catalog/production/manifest.json')], check=True, text=True, capture_output=True).stdout)
+        changed = json.loads(subprocess.run([str(CLI), str(path), str(ROOT/'catalog/releases/8/manifest.json')], check=True, text=True, capture_output=True).stdout)
+        repeat = json.loads(subprocess.run([str(CLI), str(path), str(ROOT/'catalog/releases/8/manifest.json')], check=True, text=True, capture_output=True).stdout)
         db = sqlite3.connect(path/'library.sqlite3')
         counts = {table: db.execute(f'SELECT count(*) FROM {table}').fetchone()[0] for table in ('catalog_ingredients','catalog_aliases','ingredient_categories')}
         integrity = db.execute('PRAGMA integrity_check').fetchone()[0]
@@ -29,13 +29,13 @@ def upgrade():
 
 def main():
     old = measure(ROOT/'catalog/releases/7/manifest.json')
-    current = measure(ROOT/'catalog/production/manifest.json')
+    current = measure(ROOT/'catalog/releases/8/manifest.json')
     upgraded = upgrade()
     assert old['totals'] == {'catalog_ingredients':568,'catalog_aliases':269,'ingredient_categories':50}
     assert current['totals'] == {'catalog_ingredients':647,'catalog_aliases':269,'ingredient_categories':50}
     assert current['ingredientTypes'] == {'food':536,'beverage':111}
     report = dict(method='Real Rust catalog_import CLI and disposable SQLite profiles; direct category membership counts overlap.',baseline=old,current=current,upgrade=upgraded)
-    (ROOT/'catalog/production/m3d2b-sqlite-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    (ROOT/'catalog/releases/8/m3d2b-sqlite-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     baseline = {c['key']:c['directCount'] for c in old['categories']}
     rows = ['# M3D-2B measured release 8 coverage','','All counts below come from fresh isolated SQLite imports through the real Rust catalog importer. Category memberships overlap and must not be summed as a catalog total.','','Release 7: **568 identities, 464 food / 104 beverage, 269 aliases, 50 categories.**','','Release 8: **647 identities, 536 food / 111 beverage, 269 aliases, 50 categories.** The 79 additions are 72 food and 7 beverage identities. No new aliases or category nodes were introduced.','','Release-7→8 upgrade inserted 79 and updated source-version provenance for 60 existing M3D-1 identities; names, IDs and categories did not change. Repeated import changed zero. SQLite integrity was `ok` with zero foreign-key violations. The normal user profile was not opened.','','| Category | Parent | Release 7 direct | Release 8 direct | Change |','| --- | --- | ---: | ---: | ---: |']
     for category in current['categories']:

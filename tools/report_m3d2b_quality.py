@@ -6,7 +6,7 @@ from pathlib import Path
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'catalog/production'
+OUT=ROOT/'catalog/releases/8'
 
 
 def read(path):

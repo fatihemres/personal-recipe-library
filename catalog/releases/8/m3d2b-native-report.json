@@ -1,0 +1,23 @@
+{
+  "host": "macOS arm64",
+  "bundleIdentifier": "com.recipeatlas.m3d2b-verification",
+  "build": "unsigned debug app bundle, 36.60 MiB",
+  "firstLaunch": true,
+  "fullProcessRestart": true,
+  "countsAfterRestart": {
+    "catalog_ingredients": 647,
+    "catalog_aliases": 269,
+    "ingredient_categories": 50,
+    "successful_catalog_import_runs": 1
+  },
+  "catalogRelease": 8,
+  "schemaVersion": 5,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "personalIngredients": 0,
+  "guiInteractionVerified": false,
+  "guiLimitation": "Computer-use inventory saw the running verification app but direct bundle-ID binding returned Invalid app; bundle-path binding resolved a stale M3D-1 identifier. No fresh GUI interaction is claimed.",
+  "normalProfileTouched": false,
+  "testProcessStopped": true,
+  "networkDenial": "Separate 20-run CLI suite passed under process-local network denial; native GUI was not disconnected separately."
+}

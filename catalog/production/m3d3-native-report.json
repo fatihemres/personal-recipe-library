@@ -1,0 +1,33 @@
+{
+  "bundleIdentifier": "com.recipeatlas.m3d3-verification",
+  "bundleType": "unsigned macOS arm64 release .app",
+  "installedApplicationVersion": "0.1.0",
+  "observedCatalogRelease": 9,
+  "canonicalDefinitions": 745,
+  "aliases": 269,
+  "categories": 50,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "successfulImportRuns": 1,
+  "nativeGuiObserved": [
+    "Turkish recipe and Ingredient Library windows",
+    "745 built-in catalog count",
+    "English peppermint and Turkish partial biber nan search",
+    "new ingredient detail with provenance",
+    "new catalog ingredient selected into saved recipe",
+    "saved recipe reopened after full app quit/relaunch with exact 0.125 g and preparation step"
+  ],
+  "testRecipeRows": 1,
+  "testIngredientQuantity": [
+    [
+      "0.125",
+      "g",
+      "usda-sr-173474"
+    ]
+  ],
+  "normalUserProfileTouched": false,
+  "limits": [
+    "Windows and Intel native GUI were not exercised locally",
+    "Unsigned bundle is not a signed/notarized public release"
+  ]
+}

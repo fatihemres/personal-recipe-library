@@ -1,0 +1,17 @@
+{
+  "archiveSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+  "baselineManifestSha256": "9bad5c51370bb6d13c2bbd313b3279244a58b8d57e1a720be1a9d4e75f213e65",
+  "baselineRelease": 8,
+  "candidates": 131,
+  "candidatesSha256": "f5cf636917e6e325d7aca7e84a98fb53dca3725ca318685f8bd579017b46f686",
+  "decisions": {
+    "ACCEPT": 98,
+    "DEFER": 29,
+    "EXISTING": 3,
+    "REJECT": 1
+  },
+  "otherDecisionsSha256": "42bdf3166ebcd6340d73c2054faf35604d5c9bb57a3f030f85cc176b960ec0a7",
+  "selectionSha256": "722934216eb6ff1cb796820bcfdbee06760ce4798dead5f87e14f3854b5580b7",
+  "source": "USDA FoodData Central SR Legacy 2018-04",
+  "sourceRecordsSha256": "a7d1a2b3630a4dc61d7aaf4e36ec90a3843813fb3e07f89bd424b4209dc9f2ab"
+}

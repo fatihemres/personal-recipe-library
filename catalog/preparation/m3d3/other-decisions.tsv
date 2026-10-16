@@ -1,0 +1,7 @@
+fdc_id	decision	reason
+169765	DEFER	Artificially sweetened pickled ginger is narrow and its naming is not yet reviewed.
+171976	DEFER	Clam species and natural Turkish culinary name need review; do not label it scallop.
+170688	EXISTING	Dry bulgur is already represented by this exact USDA source ID in release 8.
+171893	EXISTING	Instant coffee powder is already represented by this exact USDA source ID in release 8.
+170172	EXISTING	Raw coconut milk is already represented by this exact USDA source ID in release 8.
+172026	REJECT	Branded cooked pasta product is not a generic canonical ingredient.

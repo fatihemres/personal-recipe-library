@@ -15,7 +15,7 @@ from prepare_m3d2a_candidates import normalize
 
 ROOT = Path(__file__).resolve().parents[1]
 OLD = ROOT / 'catalog/releases/7'
-OUT = ROOT / 'catalog/production'
+OUT = ROOT / 'catalog/releases/8'
 PREP = ROOT / 'catalog/preparation/m3d2a'
 MANIFEST_SHA = '16b4b2a4120aefb28034dfd4142478ef515d4a8473f1e1d791db48aa9535634d'
 USDA_SOURCE = 'usda-sr-legacy-m3d2b'

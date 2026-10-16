@@ -1,0 +1,66 @@
+[
+  {
+    "id": "439b2c2a-7f2a-8369-96bc-b120eff1872c",
+    "key": "usda-sr-168472",
+    "tr": "Palamut kabağı (çiğ)",
+    "en": "Acorn squash (raw)",
+    "categories": [
+      "vegetables"
+    ],
+    "descriptor": "Squash, winter, acorn, raw",
+    "reason": "Acorn squash: confirm natural Turkish cultivar/type terminology; the source winter-squash identity remains explicit.",
+    "status": "terminology-review-needed",
+    "includedInRelease": true,
+    "proposedCorrection": null,
+    "humanDecision": null,
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168472/nutrients"
+  },
+  {
+    "id": "5c625c36-0fcd-89d2-a2a2-e96c722bab15",
+    "key": "usda-sr-169406",
+    "tr": "Kavrulmamış susam içinden tahin",
+    "en": "Tahini from unroasted sesame kernels",
+    "categories": [
+      "condiments"
+    ],
+    "descriptor": "Seeds, sesame butter, tahini, from unroasted kernels (non-chemically removed seed coat)",
+    "reason": "Unroasted kernels may overlap existing usda-sr-169410 raw stone-ground tahini; separate USDA record alone does not establish a distinct culinary identity. Non-chemical hull removal is a processing detail requiring comparison.",
+    "status": "identity-review-needed",
+    "includedInRelease": false,
+    "proposedCorrection": null,
+    "humanDecision": null,
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169406/nutrients"
+  },
+  {
+    "id": "67cc4853-bf83-8a60-b726-9b3ae91ce6ae",
+    "key": "usda-sr-170007",
+    "tr": "Galler soğanı (çiğ)",
+    "en": "Welsh onion (raw)",
+    "categories": [
+      "vegetables"
+    ],
+    "descriptor": "Onions, welsh, raw",
+    "reason": "Welsh onion: Turkish regional naming and distinction from generic green onion need culinary review; no equivalence alias added.",
+    "status": "terminology-review-needed",
+    "includedInRelease": true,
+    "proposedCorrection": null,
+    "humanDecision": null,
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/170007/nutrients"
+  },
+  {
+    "id": "badc5b25-e0e7-8592-b37c-ec00ce9b8c14",
+    "key": "usda-sr-174208",
+    "tr": "Kuzey ıstakozu (çiğ)",
+    "en": "Northern lobster (raw)",
+    "categories": [
+      "seafood"
+    ],
+    "descriptor": "Crustaceans, lobster, northern, raw",
+    "reason": "Northern lobster: confirm preferred Turkish species/common-name terminology; no unsupported species synonym added.",
+    "status": "terminology-review-needed",
+    "includedInRelease": true,
+    "proposedCorrection": null,
+    "humanDecision": null,
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174208/nutrients"
+  }
+]
