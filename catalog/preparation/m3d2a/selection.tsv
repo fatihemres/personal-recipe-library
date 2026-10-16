@@ -1,0 +1,195 @@
+source	id	tr	categories	type	confidence	concern
+usda	167714	Palmiye göbeği (çiğ)	vegetables	food	high	""
+usda	167744	Salyangoz (çiğ)	seafood	food	high	""
+usda	167749	Limon kabuğu (çiğ)	garnishes	food	high	Kabuk ile mevcut limon zestesi ayrı mı incelenmeli.
+usda	167750	Dikenli incir (çiğ)	fruit	food	high	""
+usda	167754	Pomelo (çiğ)	fruit	food	high	""
+usda	167758	Ravent (çiğ)	vegetables	food	high	""
+usda	167759	Sapodilla (çiğ)	fruit	food	medium	Yerleşik Türkçe ortak ad incelenmeli.
+usda	167760	Mamey sapote (çiğ)	fruit	food	medium	Mamey elmasıyla aynı meyve olarak ele alınmamalı.
+usda	167761	Guanabana (çiğ)	fruit	food	medium	Türkçe ad ve soursop karşılığı incelenmeli.
+usda	168148	Kurbağa bacağı (çiğ)	seafood	food	medium	Mevcut hiyerarşide deniz ürünleri yerine ayrı sınıflama gerekebilir.
+usda	168150	Jambolan (çiğ)	fruit	food	medium	Türkçe ortak ad incelenmeli.
+usda	168151	Hünnap (çiğ)	fruit	food	high	""
+usda	168152	Kurutulmuş Çin hünnabı	fruit,dried-fruit	food	medium	Kaynak tanımındaki fresh/dried çelişkisi doğrulanmalı.
+usda	168170	Roselle (çiğ)	herbs	food	medium	Çiçek çanağı mı başka bitki kısmı mı doğrulanmalı.
+usda	168176	Feyhoa (çiğ)	fruit	food	high	""
+usda	168177	Asya armudu (çiğ)	fruit	food	high	""
+usda	168192	Durian (çiğ veya dondurulmuş)	fruit	food	medium	Tek kaynak kaydında iki saklama formu var.
+usda	168195	Klementin (çiğ)	fruit	food	high	""
+usda	168384	Yonca filizi (çiğ)	vegetables	food	high	""
+usda	168385	Amarant yaprağı (çiğ)	vegetables	food	high	""
+usda	168393	Kudret narı (çiğ meyve)	vegetables	food	high	""
+usda	168416	Moringa yaprağı (çiğ)	vegetables	food	high	""
+usda	168419	Jüt yaprağı (çiğ)	vegetables	food	medium	Molehiya ile otomatik eşleştirilmemeli; tür doğrulanmalı.
+usda	168424	Alabaş (çiğ)	vegetables	food	high	""
+usda	168453	Kurutulmuş Doğu Asya turpu	vegetables	food	medium	Daikon ile form ilişkisi doğrulanmalı.
+usda	168454	Şalgam turpu (rutabaga, çiğ)	vegetables	food	medium	Şalgam köküyle eşdeğerlik iddiası yok; Türkçe ad incelenmeli.
+usda	168487	Taro yaprağı (çiğ)	vegetables	food	high	""
+usda	168489	Taro sürgünü (çiğ)	vegetables	food	high	""
+usda	168490	Ararot kökü (çiğ)	vegetables	food	high	""
+usda	168491	Krizantem yaprağı (çiğ)	vegetables	food	medium	Yenilebilir tür ve Türkçe ad incelenmeli.
+usda	168571	Nopal kaktüs yaprağı (çiğ)	vegetables,international-specialty	food	medium	Botanik olarak gövde; Türkçe mutfak adı incelenmeli.
+usda	168581	Kurutulmuş bulut kulağı mantarı	mushrooms	food	medium	Mevcut odun kulağı mantarıyla tür/form karşılaştırması gerekli.
+usda	168582	Saman mantarı (konserve, süzülmüş)	mushrooms	food	high	""
+usda	168583	Wasabi kökü (çiğ)	vegetables,international-specialty	food	high	Yaban turpu bazlı taklit wasabi ile karıştırılmamalı.
+usda	168585	Hindistan cevizi kreması (kurutulmuş etinden)	nuts-seeds	food	medium	Sıvı coconut cream ile aynı form değil; creamed coconut ayrımı.
+usda	168872	Yulaf kepeği (çiğ)	grains	food	high	""
+usda	168888	Tam tahıllı tritikale unu	flours	food	high	""
+usda	169086	Liçi (çiğ)	fruit	food	high	""
+usda	169087	Kurutulmuş liçi	fruit,dried-fruit	food	high	""
+usda	169089	Longan (çiğ)	fruit	food	high	""
+usda	169091	Kurutulmuş mango (şeker eklenmiş)	fruit,dried-fruit	food	high	""
+usda	169103	Portakal kabuğu (çiğ)	garnishes	food	high	Mevcut portakal zestesiyle form ilişkisi incelenmeli.
+usda	169110	Sarı çarkıfelek meyvesi suyu (çiğ)	juices	beverage	high	""
+usda	169121	Kurutulmuş armut (kükürtlenmiş, pişirilmemiş)	fruit,dried-fruit	food	high	""
+usda	169129	Pitanga (çiğ)	fruit	food	medium	Türkçe ortak ad incelenmeli.
+usda	169219	Kuzu marulu (çiğ)	vegetables	food	high	""
+usda	169222	Uzun börülce (çiğ)	vegetables,legumes	food	high	""
+usda	169226	Karahindiba yaprağı (çiğ)	vegetables	food	high	""
+usda	169241	Kanpyo (kurutulmuş kabak şeritleri)	vegetables,international-specialty	food	high	""
+usda	169244	Sirken otu (çiğ)	vegetables	food	medium	Lambsquarters tür/ad eşleşmesi incelenmeli.
+usda	169250	Lotus kökü (çiğ)	vegetables,international-specialty	food	high	""
+usda	169256	Hardal yaprağı (çiğ)	vegetables	food	high	""
+usda	169272	Bal kabağı yaprağı (çiğ)	vegetables	food	high	""
+usda	169277	Yemlik kökü (salsify, çiğ)	vegetables	food	medium	Scorzonera ile otomatik eşleştirilmemeli.
+usda	169298	Spagetti kabağı (çiğ)	vegetables	food	high	""
+usda	169301	Su ıspanağı (çiğ)	vegetables,international-specialty	food	high	""
+usda	169303	Tatlı patates yaprağı (çiğ)	vegetables	food	high	""
+usda	169308	Taro (çiğ)	vegetables	food	high	""
+usda	169398	Epazote (çiğ)	herbs,international-specialty	food	medium	Türkçe ortak ad yerine kültürel ad korunuyor; doğrulama gerekli.
+usda	169407	Kurutulmuş karpuz çekirdeği içi	nuts-seeds	food	high	""
+usda	169726	Yabani pirinç (çiğ)	grains	food	high	""
+usda	169733	Ispanaklı yumurtalı erişte (zenginleştirilmiş, kuru)	noodles-pasta	food	high	""
+usda	169907	Kurutulmuş longan	fruit,dried-fruit	food	high	""
+usda	169925	Mandalina suyu (çiğ)	juices	beverage	high	""
+usda	169934	Kurutulmuş şeftali (kükürtlenmiş, pişirilmemiş)	fruit,dried-fruit	food	high	""
+usda	169942	Kurutulmuş Japon hurması	fruit,dried-fruit	food	high	""
+usda	169974	Dulavratotu kökü (çiğ)	vegetables	food	high	""
+usda	169981	Kardon (çiğ)	vegetables	food	medium	Türkçe şevketibostan adıyla otomatik eşleştirilmemeli.
+usda	169985	Manyok (çiğ)	vegetables	food	high	""
+usda	169990	Sap marul (celtuce, çiğ)	vegetables	food	medium	Türkçe mutfak terimi incelenmeli.
+usda	169993	Hindiba kökü (çiğ)	vegetables	food	medium	Mevcut endivyen kararını çözmez; kök kimliği ayrıca incelenmeli.
+usda	170075	Dondurarak kurutulmuş frenk soğanı	herbs	food	high	""
+usda	170082	Dondurarak kurutulmuş arpacık soğanı	vegetables	food	high	""
+usda	170090	Kurutulmuş agar deniz yosunu	vegetables	food	medium	Arıtılmış agar tozuyla aynı kimlik değil.
+usda	170095	Turp filizi (çiğ)	vegetables	food	high	""
+usda	170153	Kısmen yağı alınmış susam unu	flours	food	high	""
+usda	170156	Kısmen yağı alınmış ayçiçeği çekirdeği unu	flours	food	high	""
+usda	170167	Kurutulmuş Avrupa kestanesi (soyulmuş)	nuts-seeds	food	high	""
+usda	170186	Kurutulmuş siyah ceviz	nuts-seeds	food	medium	Adi cevizle aynı tür olarak ele alınmamalı.
+usda	170381	Rapini (çiğ)	vegetables	food	high	""
+usda	170481	Hodan (çiğ)	herbs	food	medium	Kaynakta yenilen bitki kısmı net değil.
+usda	170483	Moringa meyve kapsülü (çiğ)	vegetables	food	medium	Drumstick pod için doğal Türkçe terim incelenmeli.
+usda	170485	Dondurarak kurutulmuş pırasa (baş ve alt yaprak kısmı)	vegetables	food	high	""
+usda	170486	Dondurarak kurutulmuş maydanoz	herbs	food	high	""
+usda	170898	Cotija peyniri	cheeses	food	high	""
+usda	171031	Badem yağı	oils	food	high	""
+usda	171032	Kayısı çekirdeği yağı	oils	food	high	""
+usda	171575	Yer fıstığı sosu (Hindistan cevizi, su, şeker ve fıstıkla)	sauces	food	high	Hazır sos; içerdiği fıstıkla aynı kimlik değildir.
+usda	171595	Domatesli chili sosu (şişelenmiş, tuzlu)	sauces	food	high	Chili tozu kararını çözmez.
+usda	171687	Aserola suyu (çiğ)	juices	beverage	high	""
+usda	171714	Ekmek ağacı meyvesi (çiğ)	fruit	food	high	""
+usda	171715	Karambola (çiğ)	fruit	food	high	""
+usda	171727	Mürver meyvesi (çiğ)	fruit	food	high	""
+usda	171823	Duck sauce (hazır sos)	sauces	food	medium	Ördek eti içerdiği anlamına gelmez; doğal Türkçe ad incelenmeli.
+usda	171825	Domates bazlı biftek sosu	sauces	food	high	""
+usda	171826	Tartar sos (hazır)	sauces	food	high	""
+usda	171833	Yaban turpu sosu	sauces	food	high	""
+usda	171871	Root beer (gazlı içecek)	soft-drinks	beverage	medium	Bira kategorisine atanmamalı; Türkçe terim incelenmeli.
+usda	171882	Midye ve domates suyu (konserve)	mixers,juices	beverage	medium	Clam için midye/genel çift kabuklu ayrımı incelenmeli.
+usda	171897	Hindibalı çözünebilir kahve	coffee	beverage	high	""
+usda	174811	Whiskey sour karışımı (şişelenmiş)	mixers	beverage	medium	Hazır kokteyl değil; karışımın alkol durumu bilinmiyor.
+usda	174866	Çikolatalı malt içeceği karışımı (toz)	chocolate-cocoa	beverage	high	""
+usda	174872	Kafeinsiz şekersiz çözünebilir çay	tea	beverage	high	""
+usda	175132	Balık yumurtası (karışık türler, çiğ)	seafood	food	high	Havyarla otomatik eşleştirilmemeli.
+usda	175164	Alaska kral yengeci (çiğ)	seafood	food	high	""
+usda	175206	Nohut (olgun tane, konserve, katı ve sıvı birlikte)	legumes	food	high	""
+foodon	00001018	Peynir mayalama kültürü	baking,dairy	food	medium	Pıhtılaştırıcı peynir mayasıyla eşdeğer sayılmamalı.
+foodon	00001022	Bleu de Bresse peyniri	cheeses	food	high	""
+foodon	00001033	Emmental peyniri	cheeses	food	high	Mevcut Swiss cheese ile kapsam ilişkisi incelenmeli.
+foodon	00001034	Harzer peyniri	cheeses	food	high	""
+foodon	00001036	Pont-l'Évêque peyniri	cheeses	food	medium	Kaynak yazımı ile coğrafi ad doğrulanmalı.
+foodon	00001037	Vacherin Mont d'Or peyniri	cheeses	food	medium	Korunan coğrafi ürün kapsamı doğrulanmalı.
+foodon	00001295	Pecorino peyniri	cheeses	food	high	Mevcut Romano ve alt türlerle kapsam ilişkisi incelenmeli.
+foodon	00002389	Azuki fasulyesi ezmesi	legumes,international-specialty	food	medium	Şeker eklenip eklenmediği belirtilmiyor.
+foodon	00002421	Cambozola peyniri	cheeses	food	medium	Ticari ad/generic kimlik sınırı incelenmeli.
+foodon	00002425	Stracchino peyniri	cheeses	food	high	""
+foodon	00002484	Harissa biber ezmesi	sauces,international-specialty	food	high	""
+foodon	00002540	Añejo peyniri	cheeses,international-specialty	food	high	""
+foodon	00002543	Oaxaca peyniri	cheeses,international-specialty	food	high	""
+foodon	00002569	Kurutulmuş hibiskus çayı	infusions	beverage	high	Demlenmiş çayla farklı form.
+foodon	00002924	Yeşil kakule kapsülü	spices	food	high	Mevcut öğütülmüş kakuleyle farklı form.
+foodon	00002925	Siyah kakule kapsülü	spices	food	high	""
+foodon	00002936	Asafoetida	spices,international-specialty	food	medium	Saf reçine ve katkılı toz ayrımı belirtilmiyor.
+foodon	00002946	Kimchi	fermented,international-specialty	food	high	Hazır fermente çeşni; ham lahanayla aynı değil.
+foodon	00002994	Ancho biberi	spices,international-specialty	food	medium	Kurutulmuş form kaynak açıklamasıyla doğrulanmalı.
+foodon	00003021	Zerdeçal kökü (çiğ)	spices	food	high	Öğütülmüş baharatla farklı form.
+foodon	00003036	Taze tarhun yaprağı	herbs	food	high	""
+foodon	00003086	Olgunlaşmamış jackfruit	fruit,international-specialty	food	high	Olgun jackfruit ile mutfak kullanımı farklı.
+foodon	00003146	Tapyoka incileri	baking	food	high	Tapyoka nişastasından farklı form.
+foodon	00003255	Mascarpone	cheeses	food	high	""
+foodon	00003323	Yuzu (çiğ)	fruit,garnishes	food	high	""
+foodon	00003340	Limon otu sapı	herbs,international-specialty	food	high	Yaprak ve sap ayrı; mevcut lemongrass kapsamıyla karşılaştırılmalı.
+foodon	00003399	Arabica kahve çekirdeği	coffee	beverage	high	Kavurma durumu belirtilmemiştir.
+foodon	00003400	Robusta kahve çekirdeği	coffee	beverage	high	Kavurma durumu belirtilmemiştir.
+foodon	00003401	Excelsa kahve çekirdeği	coffee	beverage	medium	Kaynak takson/kültivar kapsamı doğrulanmalı.
+foodon	00003471	Kırmızı Siçuan biberi	spices,international-specialty	food	high	Karabiberle eşdeğer değil.
+foodon	00003472	Yeşil Siçuan biberi	spices,international-specialty	food	high	""
+foodon	00003620	Çemen otu yaprağı	herbs,international-specialty	food	high	Çemen tohumu ve çemen ezmesiyle farklı kimlik.
+foodon	00003733	Sumak meyvesi	spices	food	high	Mevcut öğütülmüş sumakla form ilişkisi incelenmeli.
+foodon	00003810	Pembe biber tanesi	spices	food	medium	Bitki türü ve karabiberden ayrımı doğrulanmalı.
+foodon	00003818	Pandan yaprağı	herbs,international-specialty	food	high	""
+foodon	00003866	Kaju sütü	dairy-alternatives	beverage	high	""
+foodon	00003867	Kaju bazlı peynir alternatifi	dairy-alternatives	food	high	""
+foodon	00003868	Badem bazlı peynir alternatifi	dairy-alternatives	food	high	""
+foodon	00003870	Ají amarillo ezmesi	sauces,international-specialty	food	high	""
+foodon	00003918	Limon otu tozu	herbs,international-specialty	food	high	""
+foodon	00004408	Labne	dairy	food	medium	Mevcut süzme yoğurt ve ticari labneyle kapsam ilişkisi incelenmeli.
+foodon	00004638	Kurutulmuş limon otu yaprağı	herbs,infusions	food	high	""
+foodon	00005196	Isırgan otu yaprağı	herbs,turkish-regional	food	high	""
+foodon	00005363	Pasilla biberi	spices,international-specialty	food	medium	Kurutulmuş chilaca kapsamı doğrulanmalı.
+foodon	00005587	Malt şurubu	syrups	beverage	medium	Arpa maltı alt türüyle kapsam ilişkisi incelenmeli.
+foodon	00005789	Vanilya tohumu	baking	food	high	Vanilya çubuğuyla farklı form.
+foodon	00005790	Glikoz şurubu	sweeteners	food	high	Mısır şurubuyla otomatik eşdeğer sayılmamalı.
+foodon	03000122	Köri yaprağı	herbs,international-specialty	food	high	Köri baharat karışımıyla farklı kimlik.
+foodon	03301250	İncir ezmesi	fruit,baking	food	high	""
+foodon	03301344	Arak	spirits	beverage	medium	Türk rakısıyla eşdeğer sayılmamalı; genel ürün kapsamı gerekli.
+foodon	03301631	Kurutulmuş bitki çayı	infusions	beverage	medium	Aşırı genel kimlik; belirli bitkiye daraltılamaz.
+foodon	03301972	Arpa misosu	fermented,international-specialty	food	high	Mevcut genel misoyla alt tür ilişkisi incelenmeli.
+foodon	03301973	Esmer pirinç misosu	fermented,international-specialty	food	high	""
+foodon	03302659	Orta öğütülmüş kavrulmuş kahve	coffee	beverage	high	Çekirdek ve demlenmiş kahveyle farklı form.
+foodon	03303115	Kavrulmamış kahve çekirdeği	coffee	beverage	high	""
+foodon	03304323	Kahve şurubu	syrups	beverage	high	""
+foodon	03304329	Ananas içecek şurubu	syrups	beverage	high	Meyve oranı bilinmiyor.
+foodon	03304330	Portakal içecek şurubu	syrups	beverage	high	Meyve oranı bilinmiyor.
+foodon	03304592	Muz şurubu	syrups	beverage	high	""
+foodon	03304677	Kuru Darjeeling siyah çayı	tea	beverage	high	""
+foodon	03304784	Kuru oolong çayı	tea	beverage	high	""
+foodon	03304826	Böğürtlen içecek şurubu	syrups	beverage	high	""
+foodon	03305067	Kurutulmuş çemen otu çayı	infusions	beverage	medium	Tohum/yaprak kısmı belirtilmiyor.
+foodon	03305101	Ahududu içecek şurubu	syrups	beverage	high	""
+foodon	03305860	Kiraz likörü	liqueurs	beverage	medium	Vişne/kiraz ve maraschino ilişkisi incelenmeli.
+foodon	03306113	Lingonberry şurubu	syrups	beverage	medium	Turna yemişiyle aynı tür olarak ele alınmamalı.
+foodon	03306361	Dijon hardalı	condiments	food	high	""
+foodon	03307523	Hindistan cevizi şurubu	syrups	beverage	high	""
+foodon	03307690	Kuru rooibos çayı	infusions	beverage	high	""
+foodon	03307709	Yaban mersini içecek şurubu	syrups	beverage	high	""
+foodon	03307716	Siyah frenk üzümü şurubu	syrups	beverage	high	Cassis likörüyle farklı; alkol bilgisi çıkarılmamalı.
+foodon	03307722	Pirinç şurubu	sweeteners	food	high	""
+foodon	03309568	Kurutulmuş peppermint çayı	infusions	beverage	medium	Türkçe nane tür karşılığı incelenmeli.
+foodon	03309898	Azuki fasulyesi unu	flours,international-specialty	food	high	""
+foodon	03310136	Sago	baking,international-specialty	food	medium	Gerçek sago ve tapyoka taklidi ayrımı gerekli.
+foodon	03310612	Salamura acı bakla	legumes,condiments	food	high	""
+foodon	03310729	Mirin	sauces,international-specialty	food	medium	Hon mirin ile alkolsüz çeşni aynı kabul edilmemeli.
+foodon	03310760	Sherry	wines	beverage	high	""
+foodon	03310850	Manchego peyniri	cheeses	food	high	""
+foodon	03310957	Madeira şarabı	wines	beverage	high	""
+foodon	03310990	Tatlı vermut	wines	beverage	high	""
+foodon	03310991	Sek vermut	wines	beverage	high	""
+foodon	03311193	Kurutulmuş çemen otu yaprağı	herbs,international-specialty	food	high	""
+foodon	03311286	Siyah fasulye sosu	sauces,international-specialty	food	medium	Fermente soya sosu kimliği mi doğrulanmalı.
+foodon	03315482	Wonton hamuru	baking,international-specialty	food	high	Doldurulmuş wonton yemeğiyle farklı kimlik.
+foodon	03316072	Pastırma	meat,turkish-regional	food	high	Genel ürün; bölgesel ad/üretim iddiası eklenmez.
+foodon	03317464	Uzo	spirits	beverage	high	Rakı ve arakla aynı kimlik değil.
+foodon	03601045	Paneer	cheeses,international-specialty	food	high	""

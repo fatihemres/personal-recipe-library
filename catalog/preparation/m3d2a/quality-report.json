@@ -1,0 +1,70 @@
+{
+  "authorizedImports": 0,
+  "baselineRelease": 7,
+  "bySource": {
+    "foodon": 88,
+    "usda": 106
+  },
+  "byStatus": {
+    "defer-probable-duplicate": 3,
+    "defer-source-clearance": 84,
+    "proposed-after-editorial-review": 66,
+    "reject-brand-specific": 1,
+    "review-identity-or-terminology": 40
+  },
+  "byType": {
+    "beverage": 40,
+    "food": 154
+  },
+  "candidateCategoryMemberships": {
+    "baking": 6,
+    "cheeses": 14,
+    "chocolate-cocoa": 1,
+    "coffee": 6,
+    "condiments": 2,
+    "dairy": 2,
+    "dairy-alternatives": 3,
+    "dried-fruit": 7,
+    "fermented": 3,
+    "flours": 4,
+    "fruit": 27,
+    "garnishes": 3,
+    "grains": 2,
+    "herbs": 14,
+    "infusions": 6,
+    "international-specialty": 32,
+    "juices": 4,
+    "legumes": 4,
+    "liqueurs": 1,
+    "meat": 1,
+    "mixers": 2,
+    "mushrooms": 2,
+    "noodles-pasta": 1,
+    "nuts-seeds": 4,
+    "oils": 2,
+    "sauces": 10,
+    "seafood": 4,
+    "soft-drinks": 1,
+    "spices": 10,
+    "spirits": 2,
+    "sweeteners": 2,
+    "syrups": 11,
+    "tea": 3,
+    "turkish-regional": 2,
+    "vegetables": 40,
+    "wines": 4
+  },
+  "candidates": 194,
+  "candidatesWithCollisionSignals": 12,
+  "evidenceSha256": "a7efa8e0190cfe3d77d3c26a4d859ea90fa8ad32412559f20c820a7448a7d570",
+  "higherConfidenceByType": {
+    "beverage": 5,
+    "food": 61
+  },
+  "priorPending": 7,
+  "productionAliases": 269,
+  "productionCategories": 50,
+  "productionIdentities": 568,
+  "productionUnchanged": true,
+  "selectionSha256": "6bf5f4184775604698403e83890544410170ea92c394ba0b96e7ef47a5ef0c78"
+}

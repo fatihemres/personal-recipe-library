@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def build():
-    out = ROOT / 'catalog/production'
+    out = ROOT / 'catalog/releases/7'
     old = json.loads((ROOT / 'catalog/releases/6/ingredients.json').read_text())
     new = json.loads((out / 'ingredients.json').read_text())
     manifest = json.loads((out / 'manifest.json').read_text())
@@ -77,8 +77,8 @@ def build():
     lines += ['', '## Additions', '', '| Stable key | Turkish | English | Categories |', '| --- | --- | --- | --- |']
     lines += [f"| {i['key']} | {i['names']['tr']} | {i['names']['en']} | {', '.join(i['categories'])} |" for i in additions]
     lines += ['', 'Counts are package audit values; actual SQLite counts and overlapping category distribution are in CATALOG_M3D1_COVERAGE_ASSESSMENT.md. Licensing and remaining cuisine/beverage gaps are documented in CATALOG_M3D1_SOURCE_DECISIONS.md. The controlled batch is smaller than the original aspirational target because additional regional and bar ingredients need separate source/identity/translation review.', '']
-    return {out/'m3d1-quality-report.json': json.dumps(report, ensure_ascii=False, indent=2)+'\n',
-            out/'m3d1-review.json': json.dumps(review, ensure_ascii=False, indent=2)+'\n',
+    return {ROOT/'catalog/production/m3d1-quality-report.json': json.dumps(report, ensure_ascii=False, indent=2)+'\n',
+            ROOT/'catalog/production/m3d1-review.json': json.dumps(review, ensure_ascii=False, indent=2)+'\n',
             ROOT/'docs/CATALOG_M3D1_QUALITY_AUDIT.md': '\n'.join(lines)}
 
 

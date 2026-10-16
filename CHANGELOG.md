@@ -1,5 +1,17 @@
 # Changelog
 
+## DEVOPS-1C — resource lifecycle audit and version display (2026-10-16, unreleased)
+
+- Replaced the stale sidebar milestone label with the installed Tauri application version and added a Turkish Settings/About section. Metadata failure leaves the sidebar usable. The version remains 0.1.0; catalog release 8 is tracked separately.
+- Resolved pending ingredient leave decisions on unmount and reused one decision for repeated navigation attempts. Prevented the periodic draft checkpoint timer from queuing more writes while an earlier periodic write is stalled. No catalog, SQLite migration, or user data changed.
+- Added a lightweight three-manifest version consistency check to PR CI and documented native resource evidence and remaining profiling limits.
+
+## PR #1 startup hotfix — catalog source-snapshot compatibility (2026-10-16, unreleased)
+
+- Fixed release-8 startup on an existing 61-record M3D-1 preview profile. The corrected 60-record source evidence now has distinct reviewed snapshot versions; old checksummed source rows and recipe-facing ingredient IDs remain intact. No SQLite migration, catalog identity, alias or category was added or removed.
+- Kept the exact earlier, successfully installed release-8 preview usable without rewriting it. Other same-version manifest drift remains an error.
+- Startup errors now display their stable diagnostic code in Turkish without exposing database paths or personal content. Added SQLite-backed collision and preview-compatibility regressions.
+
 ## M3D-1 — First controlled expansion release (2026-10-14, unreleased)
 
 - Embedded catalog release 7: 60 USDA-backed additions, 568 canonical identities, 269 aliases and the existing 50 categories (464 food / 104 beverage). Archived release 6 unchanged and preserved all original 508 complete ingredient records.
@@ -70,3 +82,21 @@
 - Added 235 source-verified bilingual USDA ingredient identities, reproducible production extraction, coverage plan/reports and CC0 notices.
 - Embedded checked offline seed installation through the SQLite worker, preserving personal collisions/overrides and existing IDs; no schema migration.
 - Added production clean/upgrade/rollback/search/recipe-restart/version regressions and isolated macOS verification. Extensive catalog and signed cross-platform releases remain pending.
+
+## M3D-2A — catalog expansion preparation
+
+- Added a separate, reproducible 194-concept USDA/FoodOn candidate ledger, source-rights review, collision assessments and four-sheet terminology workbook. Human approvals remain blank; all imports remain unauthorized.
+- Measured unchanged release 7 in isolated SQLite: 568 ingredients, 269 aliases, 50 categories. Added direct/descendant category coverage and cuisine-specific gap priorities.
+- Preserved seven existing review questions and deferred tahini. No production catalog, schema or runtime changes; release 8 remains a future milestone.
+
+## M3D-2B — controlled catalog release 8
+
+- Added 79 distinct, source-pinned USDA ingredients after an auditable review of all 106 USDA candidates. Deferred 27 USDA concepts; retained all 88 FoodOn proposals outside production pending term-level source clearance. No human linguistic approval was implied.
+- Archived release 7 and embedded checksummed release 8: 647 canonical identities, 269 aliases, 50 categories. Existing IDs, source snapshots, personal data and schema migrations remain unchanged.
+- Added real SQLite fresh/upgrade/repeat/rollback, search/detail/category, recipe quantity, draft, favorite and override tests; source/coverage/decision reports and isolated macOS verification. No new application module or online requirement.
+
+## DEVOPS-1 — PR validation and release safety
+
+- Added a PR-only GitHub Actions workflow with independent frontend/browser and Rust/SQLite/catalog gates, followed by unsigned macOS Apple Silicon, macOS Intel and Windows packaging jobs and short-lived test artifacts.
+- Documented feature-branch development, explicit Product Owner review before merge, preservation of the transition commits, milestone tags, semantic application versions, catalog releases and separate database recovery.
+- Kept the repository private. Current GitHub plan rejects private-repository branch protection, so the no-direct-main-push policy is manual until enforcement becomes available.

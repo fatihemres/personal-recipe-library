@@ -1,0 +1,318 @@
+[
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hearts of palm, raw\",\"preferredUnit\":\"g\",\"tr\":\"Palmiye göbeği (çiğ)\"}",
+    "externalId": "usda-sr-167714"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Mollusks, snail, raw\",\"preferredUnit\":\"g\",\"tr\":\"Salyangoz (çiğ)\"}",
+    "externalId": "usda-sr-167744"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Prickly pears, raw\",\"preferredUnit\":\"g\",\"tr\":\"Dikenli incir (çiğ)\"}",
+    "externalId": "usda-sr-167750"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Pummelo, raw\",\"preferredUnit\":\"g\",\"tr\":\"Pomelo (çiğ)\"}",
+    "externalId": "usda-sr-167754"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Rhubarb, raw\",\"preferredUnit\":\"g\",\"tr\":\"Ravent (çiğ)\"}",
+    "externalId": "usda-sr-167758"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Jujube, raw\",\"preferredUnit\":\"g\",\"tr\":\"Hünnap (çiğ)\"}",
+    "externalId": "usda-sr-168151"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Feijoa, raw\",\"preferredUnit\":\"g\",\"tr\":\"Feyhoa (çiğ)\"}",
+    "externalId": "usda-sr-168176"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Pears, asian, raw\",\"preferredUnit\":\"g\",\"tr\":\"Asya armudu (çiğ)\"}",
+    "externalId": "usda-sr-168177"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Clementines, raw\",\"preferredUnit\":\"g\",\"tr\":\"Klementin (çiğ)\"}",
+    "externalId": "usda-sr-168195"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Alfalfa seeds, sprouted, raw\",\"preferredUnit\":\"g\",\"tr\":\"Yonca filizi (çiğ)\"}",
+    "externalId": "usda-sr-168384"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Amaranth leaves, raw\",\"preferredUnit\":\"g\",\"tr\":\"Amarant yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-168385"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Balsam-pear (bitter gourd), pods, raw\",\"preferredUnit\":\"g\",\"tr\":\"Kudret narı (çiğ meyve)\"}",
+    "externalId": "usda-sr-168393"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Drumstick leaves, raw\",\"preferredUnit\":\"g\",\"tr\":\"Moringa yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-168416"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Kohlrabi, raw\",\"preferredUnit\":\"g\",\"tr\":\"Alabaş (çiğ)\"}",
+    "externalId": "usda-sr-168424"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Taro leaves, raw\",\"preferredUnit\":\"g\",\"tr\":\"Taro yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-168487"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Taro shoots, raw\",\"preferredUnit\":\"g\",\"tr\":\"Taro sürgünü (çiğ)\"}",
+    "externalId": "usda-sr-168489"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Arrowroot, raw\",\"preferredUnit\":\"g\",\"tr\":\"Ararot kökü (çiğ)\"}",
+    "externalId": "usda-sr-168490"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"mushrooms\"],\"dimensions\":[\"mass\"],\"en\":\"Mushrooms, straw, canned, drained solids\",\"preferredUnit\":\"g\",\"tr\":\"Saman mantarı (konserve, süzülmüş)\"}",
+    "externalId": "usda-sr-168582"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Wasabi, root, raw\",\"preferredUnit\":\"g\",\"tr\":\"Wasabi kökü (çiğ)\"}",
+    "externalId": "usda-sr-168583"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Oat bran, raw\",\"preferredUnit\":\"g\",\"tr\":\"Yulaf kepeği (çiğ)\"}",
+    "externalId": "usda-sr-168872"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Triticale flour, whole-grain\",\"preferredUnit\":\"g\",\"tr\":\"Tam tahıllı tritikale unu\"}",
+    "externalId": "usda-sr-168888"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Litchis, raw\",\"preferredUnit\":\"g\",\"tr\":\"Liçi (çiğ)\"}",
+    "externalId": "usda-sr-169086"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Litchis, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş liçi\"}",
+    "externalId": "usda-sr-169087"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Longans, raw\",\"preferredUnit\":\"g\",\"tr\":\"Longan (çiğ)\"}",
+    "externalId": "usda-sr-169089"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Mango, dried, sweetened\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş mango (şeker eklenmiş)\"}",
+    "externalId": "usda-sr-169091"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Passion-fruit juice, yellow, raw\",\"preferredUnit\":\"mL\",\"tr\":\"Sarı çarkıfelek meyvesi suyu (çiğ)\"}",
+    "externalId": "usda-sr-169110"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Pears, dried, sulfured, uncooked\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş armut (kükürtlenmiş, pişirilmemiş)\"}",
+    "externalId": "usda-sr-169121"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Pitanga, (surinam-cherry), raw\",\"preferredUnit\":\"g\",\"tr\":\"Pitanga (çiğ)\"}",
+    "externalId": "usda-sr-169129"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Cornsalad, raw\",\"preferredUnit\":\"g\",\"tr\":\"Kuzu marulu (çiğ)\"}",
+    "externalId": "usda-sr-169219"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Yardlong bean, raw\",\"preferredUnit\":\"g\",\"tr\":\"Uzun börülce (çiğ)\"}",
+    "externalId": "usda-sr-169222"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Dandelion greens, raw\",\"preferredUnit\":\"g\",\"tr\":\"Karahindiba yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-169226"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Kanpyo, (dried gourd strips)\",\"preferredUnit\":\"g\",\"tr\":\"Kanpyo (kurutulmuş kabak şeritleri)\"}",
+    "externalId": "usda-sr-169241"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Lotus root, raw\",\"preferredUnit\":\"g\",\"tr\":\"Lotus kökü (çiğ)\"}",
+    "externalId": "usda-sr-169250"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Mustard greens, raw\",\"preferredUnit\":\"g\",\"tr\":\"Hardal yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-169256"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Pumpkin leaves, raw\",\"preferredUnit\":\"g\",\"tr\":\"Bal kabağı yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-169272"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Squash, winter, spaghetti, raw\",\"preferredUnit\":\"g\",\"tr\":\"Spagetti kabağı (çiğ)\"}",
+    "externalId": "usda-sr-169298"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Water convolvulus,raw\",\"preferredUnit\":\"g\",\"tr\":\"Su ıspanağı (çiğ)\"}",
+    "externalId": "usda-sr-169301"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Sweet potato leaves, raw\",\"preferredUnit\":\"g\",\"tr\":\"Tatlı patates yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-169303"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Taro, raw\",\"preferredUnit\":\"g\",\"tr\":\"Taro (çiğ)\"}",
+    "externalId": "usda-sr-169308"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Epazote, raw\",\"preferredUnit\":\"g\",\"tr\":\"Epazote (çiğ)\"}",
+    "externalId": "usda-sr-169398"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Seeds, watermelon seed kernels, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş karpuz çekirdeği içi\"}",
+    "externalId": "usda-sr-169407"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Wild rice, raw\",\"preferredUnit\":\"g\",\"tr\":\"Yabani pirinç (çiğ)\"}",
+    "externalId": "usda-sr-169726"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"noodles-pasta\"],\"dimensions\":[\"mass\"],\"en\":\"Noodles, egg, spinach, enriched, dry\",\"preferredUnit\":\"g\",\"tr\":\"Ispanaklı yumurtalı erişte (zenginleştirilmiş, kuru)\"}",
+    "externalId": "usda-sr-169733"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Longans, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş longan\"}",
+    "externalId": "usda-sr-169907"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tangerine juice, raw\",\"preferredUnit\":\"mL\",\"tr\":\"Mandalina suyu (çiğ)\"}",
+    "externalId": "usda-sr-169925"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Peaches, dried, sulfured, uncooked\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş şeftali (kükürtlenmiş, pişirilmemiş)\"}",
+    "externalId": "usda-sr-169934"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Persimmons, japanese, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş Japon hurması\"}",
+    "externalId": "usda-sr-169942"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Burdock root, raw\",\"preferredUnit\":\"g\",\"tr\":\"Dulavratotu kökü (çiğ)\"}",
+    "externalId": "usda-sr-169974"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Cassava, raw\",\"preferredUnit\":\"g\",\"tr\":\"Manyok (çiğ)\"}",
+    "externalId": "usda-sr-169985"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Chives, freeze-dried\",\"preferredUnit\":\"g\",\"tr\":\"Dondurarak kurutulmuş frenk soğanı\"}",
+    "externalId": "usda-sr-170075"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Shallots, freeze-dried\",\"preferredUnit\":\"g\",\"tr\":\"Dondurarak kurutulmuş arpacık soğanı\"}",
+    "externalId": "usda-sr-170082"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Seaweed, agar, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş agar deniz yosunu\"}",
+    "externalId": "usda-sr-170090"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Radish seeds, sprouted, raw\",\"preferredUnit\":\"g\",\"tr\":\"Turp filizi (çiğ)\"}",
+    "externalId": "usda-sr-170095"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Seeds, sesame flour, partially defatted\",\"preferredUnit\":\"g\",\"tr\":\"Kısmen yağı alınmış susam unu\"}",
+    "externalId": "usda-sr-170153"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Seeds, sunflower seed flour, partially defatted\",\"preferredUnit\":\"g\",\"tr\":\"Kısmen yağı alınmış ayçiçeği çekirdeği unu\"}",
+    "externalId": "usda-sr-170156"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Nuts, chestnuts, european, dried, peeled\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş Avrupa kestanesi (soyulmuş)\"}",
+    "externalId": "usda-sr-170167"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Nuts, walnuts, black, dried\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş siyah ceviz\"}",
+    "externalId": "usda-sr-170186"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Broccoli raab, raw\",\"preferredUnit\":\"g\",\"tr\":\"Rapini (çiğ)\"}",
+    "externalId": "usda-sr-170381"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Leeks, (bulb and lower-leaf portion), freeze-dried\",\"preferredUnit\":\"g\",\"tr\":\"Dondurarak kurutulmuş pırasa (baş ve alt yaprak kısmı)\"}",
+    "externalId": "usda-sr-170485"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Parsley, freeze-dried\",\"preferredUnit\":\"g\",\"tr\":\"Dondurarak kurutulmuş maydanoz\"}",
+    "externalId": "usda-sr-170486"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Cheese, mexican, queso cotija\",\"preferredUnit\":\"g\",\"tr\":\"Cotija peyniri\"}",
+    "externalId": "usda-sr-170898"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"mass\"],\"en\":\"Oil, almond\",\"preferredUnit\":\"g\",\"tr\":\"Badem yağı\"}",
+    "externalId": "usda-sr-171031"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"mass\"],\"en\":\"Oil, apricot kernel\",\"preferredUnit\":\"g\",\"tr\":\"Kayısı çekirdeği yağı\"}",
+    "externalId": "usda-sr-171032"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Sauce, peanut, made from coconut, water, sugar, peanuts\",\"preferredUnit\":\"g\",\"tr\":\"Yer fıstığı sosu (Hindistan cevizi, su, şeker ve fıstıkla)\"}",
+    "externalId": "usda-sr-171575"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Sauce, tomato chili sauce, bottled, with salt\",\"preferredUnit\":\"g\",\"tr\":\"Domatesli chili sosu (şişelenmiş, tuzlu)\"}",
+    "externalId": "usda-sr-171595"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Acerola juice, raw\",\"preferredUnit\":\"mL\",\"tr\":\"Aserola suyu (çiğ)\"}",
+    "externalId": "usda-sr-171687"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Breadfruit, raw\",\"preferredUnit\":\"g\",\"tr\":\"Ekmek ağacı meyvesi (çiğ)\"}",
+    "externalId": "usda-sr-171714"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Carambola, (starfruit), raw\",\"preferredUnit\":\"g\",\"tr\":\"Karambola (çiğ)\"}",
+    "externalId": "usda-sr-171715"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Elderberries, raw\",\"preferredUnit\":\"g\",\"tr\":\"Mürver meyvesi (çiğ)\"}",
+    "externalId": "usda-sr-171727"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Sauce, steak, tomato based\",\"preferredUnit\":\"g\",\"tr\":\"Domates bazlı biftek sosu\"}",
+    "externalId": "usda-sr-171825"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Sauce, tartar, ready-to-serve\",\"preferredUnit\":\"g\",\"tr\":\"Tartar sos (hazır)\"}",
+    "externalId": "usda-sr-171826"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Sauce, horseradish\",\"preferredUnit\":\"g\",\"tr\":\"Yaban turpu sosu\"}",
+    "externalId": "usda-sr-171833"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Beverages, carbonated, root beer\",\"preferredUnit\":\"mL\",\"tr\":\"Root beer (gazlı içecek)\"}",
+    "externalId": "usda-sr-171871"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Beverages, coffee, instant, with chicory\",\"preferredUnit\":\"g\",\"tr\":\"Hindibalı çözünebilir kahve\"}",
+    "externalId": "usda-sr-171897"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"chocolate-cocoa\",\"other-beverages\"],\"dimensions\":[\"mass\"],\"en\":\"Beverages, malted drink mix, chocolate, powder\",\"preferredUnit\":\"g\",\"tr\":\"Çikolatalı malt içeceği karışımı (toz)\"}",
+    "externalId": "usda-sr-174866"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Beverages, tea, instant, decaffeinated, unsweetened\",\"preferredUnit\":\"g\",\"tr\":\"Kafeinsiz şekersiz çözünebilir çay\"}",
+    "externalId": "usda-sr-174872"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Fish, roe, mixed species, raw\",\"preferredUnit\":\"g\",\"tr\":\"Balık yumurtası (karışık türler, çiğ)\"}",
+    "externalId": "usda-sr-175132"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Crustaceans, crab, alaska king, raw\",\"preferredUnit\":\"g\",\"tr\":\"Alaska kral yengeci (çiğ)\"}",
+    "externalId": "usda-sr-175164"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous project editorial selection against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, solids and liquids\",\"preferredUnit\":\"g\",\"tr\":\"Nohut (olgun tane, konserve, katı ve sıvı birlikte)\"}",
+    "externalId": "usda-sr-175206"
+  }
+]

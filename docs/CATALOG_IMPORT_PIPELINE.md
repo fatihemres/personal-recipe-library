@@ -44,6 +44,14 @@ Unexpected process termination before commit rolls back the data; the initial au
 
 Each changed package needs a greater release version. Source snapshots cannot mutate at the same source/version. A new source artifact needs a new reviewed pinned source version. User-owned records and overrides have priority; no record-removal pass exists. Pre-migration snapshots protect schema changes; the importer itself provides transaction rollback, not a portable backup.
 
+### PR #1 release-8 startup compatibility
+
+An earlier locally installed M3D-1 preview contained 61 selected records, including the subsequently deferred tahini candidate. It used `usda-sr-legacy-m3d1/2018-04-selection-5` and `recipeatlas-curation-m3d1/production-4` with evidence hashes `f6a9b1d9…` and `fecf768a…`. The committed 60-record release 7 reused those source/version labels with different evidence hashes. On the affected profile, release-8 installation correctly returned `CATALOG_SOURCE_CHANGED`, leaving the previous data intact.
+
+The corrected bundled release-8 package gives the 60-record evidence distinct `2018-04-selection-5-reviewed` and `production-4-reviewed` source versions. The importer still checks the allowlist, source metadata, evidence checksums and per-ingredient provenance. Existing source snapshots and provenance remain in place; the 60 existing ingredient objects gain reviewed-version provenance without changing IDs, names or categories. A profile with the historical extra candidate retains it as an older catalog identity, so its cumulative installed count is 648 after the 79 release-8 additions; the packaged release itself contains 647. This is not an authorization to newly import the deferred tahini candidate.
+
+Because an unmerged release-8 preview was already successfully installed on some clean test profiles, startup also recognizes only its exact known manifest and artifact SHA-256 pair when a successful release-8 import audit exists. It leaves that already validated preview unchanged. Arbitrary same-version drift still fails with `CATALOG_VERSION_CHANGED`. No previous migration or archived catalog release is edited.
+
 Coverage counts direct memberships, so root `food` has 0 direct members even though its children contain ingredients. A record in both food and beverage categories counts in both; category totals cannot be summed into total ingredients. `validated` counts current package rows; `available` counts resolved recipe-facing canonical identities; pending collision pairs are reported separately. Retained older catalog definitions can remain available across upgrades; distinguish package coverage from cumulative database coverage. `purpose` distinguishes validation from production, including Settings counts.
 
 M3B must extend preparation tools and license allowlist consciously, create a reviewed coverage matrix and actual report, and embed an approved production package for automatic idempotent offline installation through the Rust worker. It must test application packaging, first install and updates while preserving M2B data. This task does not claim production catalog completion.
@@ -187,4 +195,22 @@ python3 tools/verify_catalog_installation.py --include-v6 --deny-network --outpu
 
 The final two commands allocate isolated temporary databases. The coverage command must use the freshly built importer so its compiled source allowlist is current. --deny-network is a macOS process-local sandbox; other hosts should omit it and record that limitation. The measured report covers 17 fresh/historical/repeat opens. Fresh v7 inserted 568, v6→v7 inserted exactly 60 and updated zero, repeated import changed zero. Explicit CLI reimports create successful audit rows; normal worker startup skips unchanged packages without writes.
 
+After release 8, the first two historical release-7 generation commands must run only in a disposable copy of the archived release-7 package; do not point the generator at current production. `tools/test_m3d1_catalog.py` performs that safe copy-based reproducibility check. `tools/report_m3d1_coverage.py` reads archived release 7.
+
 Offline evidence reproduction matches all five generated artifact files byte-for-byte. This proves deterministic preparation and integrity, not upstream authenticity or expert translation quality. The official archive checksum pins the original extraction. The separate M3D-1 review workbook can be regenerated with tools/build_m3d1_review_workbook.mjs using the documented bundled artifact-tool runtime; root-level unrelated workbooks are never inputs.
+
+## M3D-2B release 8
+
+Release 7 is archived at `catalog/releases/7` with its exact package and protected M3D-2A baseline files. The release-8 generator pins its manifest hash, validates the M3D-2A selection/evidence hashes, enumerates a decision for every one of 194 candidate IDs, and admits only 79 USDA ACCEPT outcomes. The 27 other USDA questions and all 88 FoodOn terms remain outside the package. It preserves every release-7 ingredient/category object and produces two new checksummed evidence snapshots for source descriptors versus project editorial labels. There is no migration or second ingredient system.
+
+```sh
+python3 tools/prepare_m3d2b_catalog.py --check
+python3 tools/test_m3d2b_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d2b_quality.py --check
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d2b_coverage.py
+python3 tools/verify_catalog_installation.py --include-v7 --output catalog/production/m3d2b-installation-report.json
+```
+
+The report/import commands create disposable SQLite profiles. `--include-v7` checks fresh and historical v2–v7 upgrades plus unchanged repeats; the normal application profile is not used. A macOS `--deny-network` wrapper is optional only where `sandbox-exec` is available; a host denial of the wrapper is not an importer failure. The embedded app package contains the release-8 manifest, ingredient records and all eight source evidence files; runtime startup still performs the shared version/hash/transactional import once and skips unchanged releases without writes.

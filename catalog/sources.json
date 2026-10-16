@@ -68,6 +68,7 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "2018-04-selection-5",
+      "pinnedVersions": ["2018-04-selection-5", "2018-04-selection-5-reviewed"],
       "retrievedAt": "2026-10-13",
       "upstreamArtifactUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
       "upstreamSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
@@ -81,9 +82,35 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "production-4",
+      "pinnedVersions": ["production-4", "production-4-reviewed"],
       "retrievedAt": "2026-10-13",
       "imagesApproved": false,
       "decision": "Project-authored bilingual culinary labels, aliases and classifications; not USDA translations or expert approval."
+    },
+    {
+      "id": "usda-sr-legacy-m3d2b",
+      "name": "USDA FoodData Central SR Legacy — M3D-2B selected descriptors",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "licenseUrl": "https://fdc.nal.usda.gov/api-guide/#licensing",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "2018-04-selection-6",
+      "retrievedAt": "2026-10-15",
+      "upstreamArtifactUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+      "upstreamSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+      "imagesApproved": false,
+      "decision": "Approved 79 selected factual descriptors from the previously pinned CC0 archive; no nutrient, image or branded bulk import."
+    },
+    {
+      "id": "recipeatlas-curation-m3d2b",
+      "name": "Tarif Atlası M3D-2B autonomous editorial labels",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "production-5",
+      "retrievedAt": "2026-10-15",
+      "imagesApproved": false,
+      "decision": "Project-authored bilingual labels/classification; auditable autonomous editorial choices, not independent human linguistic approval."
     },
     {
       "id": "usda-foundation",

@@ -1,6 +1,6 @@
 # Ingredient localization review queue
 
-All 568 production identities were structurally audited; 5 user-authorized name changes, 10 user-authorized retain-name decisions and 3 unresolved terminology items are tracked. No independent culinary expert review occurred.
+All 647 production identities were structurally audited; 5 user-authorized name changes, 10 user-authorized retain-name decisions and 3 unresolved terminology items are tracked. No independent culinary expert review occurred.
 
 These are naming refinements, not missing or invented source identities. Qualified forms remain separate. Review changes through a new catalog version; never reassign IDs.
 

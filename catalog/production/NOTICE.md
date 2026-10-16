@@ -54,3 +54,13 @@ above covers new project-authored labels. The exact release 6 package is archive
 at `catalog/releases/6`. Three new naming questions and one deferred candidate
 identity question remain in the M3D-1 review queue; the three historical unresolved
 terms are unchanged. The held tahini candidate is not part of production counts.
+
+Version 8 adds 79 further USDA-backed identities from the same pinned CC0
+archive, with separate project-authored label evidence. The bundled package
+contains 647 identities. Its 60 inherited M3D-1 records use distinct reviewed
+source-snapshot versions `2018-04-selection-5-reviewed` and
+`production-4-reviewed`: an earlier locally installed 61-record preview had
+used the original version labels for different evidence checksums. Historical
+source snapshots remain untouched in existing databases; release 7 is archived
+unchanged at `catalog/releases/7`. No new nutrition, density, allergen or ABV
+facts are asserted by this compatibility change.

@@ -1,0 +1,3 @@
+# Catalog manifests, evidence, and seed data are checked against byte-level SHA-256.
+# Windows checkouts must preserve the committed LF bytes for offline verification.
+catalog/** text eol=lf

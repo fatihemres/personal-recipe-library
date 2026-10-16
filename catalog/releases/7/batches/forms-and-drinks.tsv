@@ -1,0 +1,83 @@
+fdc_id	tr	en	category	aliases_tr	aliases_en	expected_description
+168162	Kuru erik	Prunes (dried)	fruit			Plums, dried (prunes), uncooked
+168164	Sarı kuru üzüm	Golden raisins	fruit			Raisins, golden, seedless
+168165	Koyu renkli kuru üzüm	Dark raisins	fruit			Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)
+168191	Medjool hurması	Medjool dates	fruit			Dates, medjool
+171726	Deglet Noor hurması	Deglet Noor dates	fruit			Dates, deglet noor
+173941	Kuru kayısı (kükürtlü)	Dried apricots (sulfured)	fruit			Apricots, dried, sulfured, uncooked
+174665	Kuru incir	Dried figs	fruit			Figs, dried, uncooked
+171688	Elma (kabuklu, çiğ)	Apple (with skin, raw)	fruit			Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)
+171691	Kuru elma (kükürtlü)	Dried apple (sulfured)	fruit			Apples, dried, sulfured, uncooked
+168158	Kuru yaban mersini (şekerli)	Dried blueberries (sweetened)	fruit			Blueberries, dried, sweetened
+169926	Papaya (çiğ)	Papaya (raw)	fruit			Papayas, raw
+169108	Mor çarkıfelek meyvesi (çiğ)	Purple passion fruit (raw)	fruit			Passion-fruit, (granadilla), purple, raw
+173044	Guava (çiğ)	Common guava (raw)	fruit			Guavas, common, raw
+174683	Kırmızı veya yeşil üzüm (çiğ)	Red or green grapes (raw)	fruit			Grapes, red or green (European type, such as Thompson seedless), raw
+168422	Kantarell mantarı (çiğ)	Chanterelle mushroom (raw)	vegetables			Mushrooms, Chanterelle, raw
+168423	Kuzugöbeği mantarı (çiğ)	Morel mushroom (raw)	vegetables			Mushrooms, morel, raw
+168434	Kahverengi kültür mantarı (çiğ)	Crimini mushroom (raw)	vegetables			Mushrooms, brown, italian, or crimini, raw
+168436	Kuru shiitake mantarı	Shiitake mushroom (dried)	vegetables			Mushrooms, shiitake, dried
+169255	Portobello mantarı (çiğ)	Portabella mushroom (raw)	vegetables			Mushrooms, portabella, raw
+168567	Kurutulmuş domates	Sun-dried tomatoes	vegetables			Tomatoes, sun-dried
+168570	Kurutulmuş acı biber	Sun-dried hot chile peppers	vegetables			Peppers, hot chile, sun-dried
+168576	Jalapeño biberi (çiğ)	Jalapeño pepper (raw)	vegetables			Peppers, jalapeno, raw
+168579	Kuru pasilla biberi	Pasilla pepper (dried)	vegetables			Peppers, pasilla, dried
+169094	Olgun zeytin (konserve)	Ripe olives (canned)	condiments			Olives, ripe, canned (small-extra large)
+169096	Yeşil zeytin (salamura)	Green olives (pickled)	condiments			Olives, pickled, canned or bottled, green
+169270	Kabak çiçeği (çiğ)	Pumpkin flowers (raw)	vegetables			Pumpkin flowers, raw
+168574	Taze bakla (kabuklu, çiğ)	Fava beans (in pod, raw)	vegetables			Beans, fava, in pod, raw
+169703	Uzun taneli esmer pirinç (çiğ)	Long-grain brown rice (raw)	grains			Rice, brown, long-grain, raw (Includes foods for USDA's Food Distribution Program)
+169706	Orta taneli esmer pirinç (çiğ)	Medium-grain brown rice (raw)	grains			Rice, brown, medium-grain, raw (Includes foods for USDA's Food Distribution Program)
+168883	Yapışkan beyaz pirinç (zenginleştirilmemiş)	Glutinous white rice (unenriched)	grains			Rice, white, glutinous, unenriched, uncooked
+168884	Çavdar tanesi	Rye grain	grains			Rye grain
+168892	Buğday ruşeymi (işlenmemiş)	Wheat germ (crude)	grains			Wheat germ, crude
+168933	İrmik (zenginleştirilmemiş)	Semolina (unenriched)	baking			Semolina, unenriched
+169716	Sorgum tanesi	Sorghum grain	grains			Sorghum grain
+169721	Durum buğdayı	Durum wheat	grains			Wheat, durum
+170682	Amarant (pişmemiş)	Amaranth (uncooked)	grains			Amaranth grain, uncooked
+173727	Adzuki fasulyesi (kuru)	Adzuki beans (dry)	legumes			Beans, adzuki, mature seeds, raw
+175199	Pinto fasulyesi (kuru)	Pinto beans (dry)	legumes			Beans, pinto, mature seeds, raw (Includes foods for USDA's Food Distribution Program)
+173757	Haşlanmış nohut (tuzsuz)	Chickpeas (boiled, no salt)	legumes			Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt
+173800	Nohut (konserve, süzülmüş)	Chickpeas (canned, drained)	legumes			Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids
+169451	Sığır karaciğeri (çiğ)	Beef liver (raw)	meat			Beef, variety meats and by-products, liver, raw
+170196	Sığır dili (çiğ)	Beef tongue (raw)	meat			Beef, variety meats and by-products, tongue, raw
+170599	Sığır işkembesi (çiğ)	Beef tripe (raw)	meat			Beef, variety meats and by-products, tripe, raw
+172531	Kuzu karaciğeri (çiğ)	Lamb liver (raw)	meat			Lamb, variety meats and by-products, liver, raw
+171052	Tavuk eti (derisiz, çiğ)	Chicken meat (skinless, raw)	poultry			Chicken, broilers or fryers, meat only, raw
+172385	Tavuk but (derili, çiğ)	Chicken thigh (with skin, raw)	poultry			Chicken, broilers or fryers, thigh, meat and skin, raw
+172390	Tavuk kanat (derili, çiğ)	Chicken wing (with skin, raw)	poultry			Chicken, broilers or fryers, wing, meat and skin, raw
+173627	Tavuk but (derisiz, çiğ)	Chicken thigh (skinless, raw)	poultry			Chicken, broilers or fryers, dark meat, thigh, meat only, raw
+174182	Avrupa hamsisi (çiğ)	European anchovy (raw)	seafood			Fish, anchovy, european, raw
+174183	Avrupa hamsisi (yağda konserve, süzülmüş)	European anchovy (canned in oil, drained)	seafood			Fish, anchovy, european, canned in oil, drained solids
+171955	Atlantik morinası (çiğ)	Atlantic cod (raw)	seafood			Fish, cod, Atlantic, raw
+173717	Gökkuşağı alabalığı (çiftlik, çiğ)	Rainbow trout (farmed, raw)	seafood			Fish, trout, rainbow, farmed, raw
+175154	Gökkuşağı alabalığı (yabani, çiğ)	Rainbow trout (wild, raw)	seafood			Fish, trout, rainbow, wild, raw
+175116	Atlantik ringası (çiğ)	Atlantic herring (raw)	seafood			Fish, herring, Atlantic, raw
+175123	Çizgili kefal (çiğ)	Striped mullet (raw)	seafood			Fish, mullet, striped, raw
+171952	Sazan (çiğ)	Carp (raw)	seafood			Fish, carp, raw
+175142	Levrek (karışık türler, çiğ)	Sea bass (mixed species, raw)	seafood			Fish, sea bass, mixed species, raw
+175139	Atlantik sardalyası (yağda konserve, kılçıklı)	Atlantic sardine (canned in oil, with bone)	seafood			Fish, sardine, Atlantic, canned in oil, drained solids with bone
+175159	Sarı yüzgeçli ton balığı (çiğ)	Yellowfin tuna (raw)	seafood			Fish, tuna, fresh, yellowfin, raw
+174216	Mavi midye (çiğ)	Blue mussel (raw)	seafood			Mollusks, mussel, blue, raw
+174214	Kum midyesi (karışık türler, çiğ)	Clams (mixed species, raw)	seafood			Mollusks, clam, mixed species, raw
+174204	Mavi yengeç (çiğ)	Blue crab (raw)	seafood			Crustaceans, crab, blue, raw
+173454	Tam yağlı süt tozu (D vitamini eklenmemiş)	Whole milk powder (without added vitamin D)	dairy			Milk, dry, whole, without added vitamin D
+170877	Yağsız süt tozu (A ve D vitamini eklenmemiş)	Nonfat milk powder (without added vitamins A and D)	dairy			Milk, dry, nonfat, regular, without added vitamin A and vitamin D
+170882	Koyun sütü	Sheep milk	dairy			Milk, sheep, fluid
+171278	Keçi sütü (D vitamini eklenmiş)	Goat milk (with added vitamin D)	dairy			Milk, goat, fluid, with added vitamin D
+170874	Fermente az yağlı buttermilk	Cultured lowfat buttermilk	dairy			Milk, buttermilk, fluid, cultured, lowfat
+170903	Sade az yağlı Yunan tipi yoğurt	Plain lowfat Greek yogurt	dairy			Yogurt, Greek, plain, lowfat
+169594	Kakao tozu (alkalize)	Cocoa powder (alkalized)	baking			Cocoa, dry powder, unsweetened, processed with alkali
+170271	Bitter çikolata (%45–59 kakao)	Dark chocolate (45–59% cocoa)	baking			Chocolate, dark, 45- 59% cacao solids
+170272	Bitter çikolata (%60–69 kakao)	Dark chocolate (60–69% cocoa)	baking			Chocolate, dark, 60-69% cacao solids
+170273	Bitter çikolata (%70–85 kakao)	Dark chocolate (70–85% cocoa)	baking			Chocolate, dark, 70-85% cacao solids
+167774	Pembe greyfurt suyu (çiğ)	Pink grapefruit juice (raw)	juices			Grapefruit juice, pink, raw
+173039	Beyaz greyfurt suyu (çiğ)	White grapefruit juice (raw)	juices			Grapefruit juice, white, raw
+167787	Nar suyu (şişelenmiş)	Pomegranate juice (bottled)	juices			Pomegranate juice, bottled
+169109	Mor çarkıfelek meyvesi suyu (çiğ)	Purple passion fruit juice (raw)	juices			Passion-fruit juice, purple, raw
+171889	Kafeinsiz demlenmiş kahve	Decaffeinated brewed coffee	coffee			Beverages, coffee, brewed, prepared with tap water, decaffeinated
+174133	Kafeinsiz çözünebilir kahve tozu	Decaffeinated instant coffee powder	coffee			Beverages, coffee, instant, decaffeinated, powder
+173230	Şekersiz çözünebilir çay tozu	Unsweetened instant tea powder	tea			Beverages, tea, instant, unsweetened, powder
+174871	Kafeinsiz demlenmiş siyah çay	Decaffeinated brewed black tea	tea			Beverages, tea, black, brewed, prepared with tap water, decaffeinated
+171910	Kafeinsiz demlenmiş yeşil çay	Decaffeinated brewed green tea	tea			Beverages, tea, green, brewed, decaffeinated
+174157	Alkolsüz şarap	Non-alcoholic wine	wines			Beverages, Wine, non-alcoholic

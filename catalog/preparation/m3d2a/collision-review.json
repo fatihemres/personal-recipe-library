@@ -1,0 +1,15 @@
+{
+  "m3d2a-foodon-00002994": {"classification":"probable-existing-concept", "existingKeys":["usda-sr-169396"], "reason":"Ancho normally denotes dried poblano; existing dried ancho already covers this useful form. Do not create another identity without contrary evidence."},
+  "m3d2a-foodon-00005363": {"classification":"probable-existing-concept", "existingKeys":["usda-sr-168579"], "reason":"Pasilla normally denotes dried chilaca; compare existing dried pasilla before adding anything."},
+  "m3d2a-foodon-00005587": {"classification":"probable-existing-concept", "existingKeys":["usda-sr-169660"], "reason":"Both English labels identify malt syrup. Treat as a cross-source mapping candidate, not net new coverage."},
+  "m3d2a-usda-167749": {"classification":"possible-synonym", "existingKeys":["project-lemon-peel"], "reason":"Source raw peel may already be covered by generic peel; source descriptor alone does not establish a separate identity."},
+  "m3d2a-usda-169103": {"classification":"possible-synonym", "existingKeys":["project-orange-peel"], "reason":"Source raw peel may already be covered by generic peel; do not duplicate without a clear pith/zest/form decision."},
+  "m3d2a-usda-169110": {"classification":"distinct-form-or-variety", "existingKeys":["usda-sr-169109"], "reason":"Yellow versus purple passion fruit juice is explicit in the USDA descriptors. Similar names do not justify merging."},
+  "m3d2a-usda-170167": {"classification":"distinct-form-or-variety", "existingKeys":["usda-sr-170575"], "reason":"Dried versus raw chestnut form is explicit; maintain preparation-state distinction."},
+  "m3d2a-foodon-00002569": {"classification":"distinct-form-or-variety", "existingKeys":["usda-sr-171946"], "reason":"Dry infusion material differs from brewed beverage; verify botanical part before production."},
+  "m3d2a-foodon-03304784": {"classification":"distinct-form-or-variety", "existingKeys":["usda-sr-174120"], "reason":"Dry tea differs from brewed beverage."},
+  "m3d2a-usda-168385": {"classification":"lexical-false-positive", "existingKeys":["usda-sr-168575"], "reason":"Amaranth leaves and grape leaves share a Turkish suffix, not identity."},
+  "m3d2a-usda-169985": {"classification":"lexical-false-positive", "existingKeys":["usda-sr-169910"], "reason":"Manyok and mango are different ingredients despite string similarity."},
+  "m3d2a-foodon-03307523": {"classification":"lexical-false-positive", "existingKeys":["usda-sr-174831"], "reason":"Coconut syrup and coconut water are different forms; no equivalence alias."},
+  "m3d2a-foodon-00002421": {"classification":"reject-brand-specific", "existingKeys":[], "reason":"Cambozola is a commercial cheese name, not a priority generic identity; exclude from the proposed production expansion."}
+}

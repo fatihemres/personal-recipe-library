@@ -46,6 +46,11 @@ export function IngredientLibrary({ client, library = ingredientLibraryClient, r
     const [busy, setBusy] = useState(false);
     const [createLeaving, setCreateLeaving] = useState(false);
     const createLeaveResolver = useRef<((allowed:boolean)=>void)|null>(null);
+    const pendingCreateLeave = useRef<Promise<boolean>|null>(null);
+    useEffect(() => () => {
+      createLeaveResolver.current?.(false);
+      createLeaveResolver.current = null;
+    }, []);
     const mutation = useRef(false);
     const key = JSON.stringify([query, generation]);
     useEffect(() => {
@@ -79,7 +84,15 @@ export function IngredientLibrary({ client, library = ingredientLibraryClient, r
         return () => { alive = false; };
     }, [target, detailKey, library]);
     function filter(patch: Partial<LibraryQuery>) { setQuery(q => ({ ...q, ...patch, offset: patch.offset ?? 0 })); }
-    const askCreateLeave = () => creating && newName.trim() ? new Promise<boolean>(resolve => { createLeaveResolver.current = resolve; setCreateLeaving(true); }) : Promise.resolve(true);
+    const askCreateLeave = () => {
+      if (pendingCreateLeave.current) return pendingCreateLeave.current;
+      if (!creating || !newName.trim()) return Promise.resolve(true);
+      pendingCreateLeave.current = new Promise<boolean>(resolve => {
+        createLeaveResolver.current = allowed => { pendingCreateLeave.current = null; resolve(allowed); };
+        setCreateLeaving(true);
+      });
+      return pendingCreateLeave.current;
+    };
     useEffect(() => {
       if (target || !creating) return;
       registerLeaveGuard?.(askCreateLeave);

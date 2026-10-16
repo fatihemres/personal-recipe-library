@@ -8,6 +8,7 @@ npm run typecheck
 npm run lint
 npm test
 npm run build
+python3 tools/check_app_version.py
 npx playwright install chromium
 npm run test:ui
 cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
@@ -19,6 +20,12 @@ npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline
 ```
 
 `--offline` requires cached Rust crates; fetch dependencies on a connected development machine first. Playwright installation is a development-only network operation, not a runtime requirement. Tests use temporary DBs/files, not the personal application DB. UI test output and compiled artifacts are ignored by Git. Frontend typechecking covers src, Vite/Vitest/Playwright configurations and browser test source.
+
+## DEVOPS-1C resource and version checks (2026-10-16)
+
+The installed version is read once from Tauri's `getVersion()` API in the shell, independently of SQLite bootstrap. Focused renderer tests verify the sidebar, Turkish Settings/About section, accessible fallback on metadata failure, and no repeated request during page navigation. `tools/check_app_version.py` fails CI if the package, Cargo and Tauri-config versions diverge. No frontend version constant or new capability was introduced.
+
+Ingredient leave-decision tests cover repeated guard requests and unmount while a dialog is open; all waiters receive the same decision and unmount denies navigation. A fake-clock hook test holds a draft client write unresolved while several periodic ticks pass, proving the timer does not enqueue unlimited additional writes. Existing save-failure tests ensure edits remain available. The full memory/resource methodology and its native evidence limits are recorded in [MEMORY_AND_RESOURCE_AUDIT.md](MEMORY_AND_RESOURCE_AUDIT.md). Browser/Vitest client doubles do not demonstrate native SQLite persistence.
 
 ## Evidence boundaries
 
@@ -346,3 +353,70 @@ Native: bundle identifier com.recipeatlas.m3d1-verification, 36.46MiB unsigned d
 The new review workbook contains4rows/11columns with readable rendering, filter table, frozen header and blank human-decision/reviewer cells. Three historical terms remain pending in the existing review system. Root-level pre-existing workbook was not modified or used.
 
 Focused final SQLite measurement: all60 new identity bilingual/alias lookups, detail reads and category-filter checks completed in810.175ms on this debug build (combined operations, not a single-query latency). The final lint pass also checked the new workbook builder; explicit Node process/console imports resolved its initial no-undef findings.
+
+## M3D-2A preparation verification
+
+Run `python3 tools/prepare_m3d2a_candidates.py --check` and `python3 tools/test_m3d2a_candidates.py` (10 tests). Optional pinned-artifact re-extraction is documented in CATALOG_M3D2A_PREPARATION.md. Rebuild `catalog_import` before `python3 tools/report_m3d2a_coverage.py`; it imports unchanged release 7 into a temporary database and verifies 568/269/50, 464 food/104 beverage, foreign keys and integrity. It never uses a personal profile. Candidate generator tests cover source traceability, duplicate IDs, invalid categories, Unicode/Turkish alias matching, source-identity detection, legal deferral, seven prior pending decisions, empty factual metadata and immutable production/history checksums.
+
+Executed this milestone: rebuilt offline Rust example; isolated SQLite measurement; pinned USDA/FoodOn extraction comparison and offline drift check; 10 candidate + 5 catalog-audit + 4 M3D-1 Python tests; static production and M3D-1 quality checks. Workbook: all four sheets rendered/visually inspected; saved XLSX read-only inspection confirmed table filters, frozen headers, 194 candidate rows + seven prior decisions and blank human fields. Excel desktop interactions were not executed. No runtime source changes, so native GUI/Windows/Intel/signed builds and full runtime regression suites were not repeated for this documentation/preparation task.
+
+## M3D-2B release 8 verification — 2026-10-15
+
+Passed: **73 Rust tests**, **50 Vitest tests**, **2 Chromium browser tests**, **five new release-8 Python tests**, ten historical candidate tests, four release-7 generator tests, five catalog-audit tests, deterministic package/report checks, pinned USDA/FoodOn preparation extract comparison, TypeScript, ESLint, Cargo fmt/check/all-target Clippy with warnings denied, frontend production build and unsigned macOS arm64 debug app build. Applied migrations 001–005 were not edited. Rust test count includes real SQLite/worker/IPC migration, recipe, draft, favorites, overrides and interrupted-import regressions; browser tests verify renderer shell behavior, not native persistence.
+
+The new real-SQLite test imports archived release 7, injects an insert trigger failure during release-8 import and confirms the transaction leaves release 7, user recipe, source ledger and draft intact; retry inserts 79, updates zero, and a repeat is unchanged. It compares all 568 previous ingredient objects, checks stable IDs/provenance/unknown metadata, queries all 79 new ingredients by both names plus category/detail, and verifies Turkish partial/case search. A saved new-ingredient recipe retains `0.123456 g`; an older personal recipe retains `35.000001 cc` and its ingredient ID across complete database reopen. Personal and catalog favorites, catalog name/alias/unit override, draft, integrity and foreign keys persist. A separate source-allowlist test rejects FoodOn before creating a database profile.
+
+The rebuilt CLI performed **20 fresh/historical/repeat imports/opens** in disposable SQLite profiles: clean v8 inserts 647, v7→v8 inserts 79/updates zero, and repeats change zero; v2–v6 upgrades also passed. Process-local network denial passed when the command ran outside the nested command sandbox. The initial nested `sandbox-exec` attempt exited 71 before importing; that environmental wrapper error is not a catalog failure. Machine reports: `catalog/production/m3d2b-{sqlite,installation,native}-report.json`.
+
+Native unsigned debug bundle `com.recipeatlas.m3d2b-verification` was built and launched on this macOS arm64 host. A full process shutdown/relaunch retained release 8, schema 5, 647/269/50 records, one successful seed import, zero personal records, SQLite integrity `ok` and zero foreign-key violations. The normal app profile was untouched and the test process was closed. In the command sandbox LaunchServices returned `kLSNoExecutableErr` and direct execution exited 134; outside it, `open -n` launched the bundle. Computer-use inventory listed the app, but direct bundle-ID binding failed and path binding resolved a stale M3D-1 identifier, so **native GUI search/recipe interaction is not claimed**. The real SQLite-backed Rust/IPC tests provide functional evidence but are distinct from manual GUI use. Windows, Intel macOS, installers, signing and notarization remain unverified.
+
+Reproduction commands:
+
+```sh
+python3 tools/prepare_m3d2a_candidates.py --archive /path/to/pinned-usda.zip --ontology /path/to/pinned-foodon-base.owl --check
+python3 tools/prepare_m3d2b_catalog.py --check
+python3 tools/test_m3d2b_catalog.py
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d2b_quality.py --check
+cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d2b_coverage.py
+python3 tools/verify_catalog_installation.py --include-v7 --deny-network --output catalog/production/m3d2b-installation-report.json
+npm run typecheck && npm run lint && npm test && npm run test:ui && npm run build
+cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
+cargo test --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo check --locked --offline --manifest-path src-tauri/Cargo.toml
+cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings
+npm run tauri -- build --debug --bundles app --config '{"identifier":"com.recipeatlas.m3d2b-verification"}' -- --locked --offline
+```
+
+The `--deny-network` wrapper may need to run outside a nested command sandbox on macOS. The native bundle identifier is test-only; never use the normal application profile for release verification.
+
+## DEVOPS-1 CI evidence and limits
+
+The PR workflow at `.github/workflows/pr-ci.yml` runs `npm ci`, TypeScript, ESLint, Vitest, installed Chromium Playwright, and frontend production build on Ubuntu. The independent Rust job runs Cargo fmt/check/Clippy/tests; the Rust tests include real SQLite migrations, recipe persistence and catalog upgrade/rollback. It also runs deterministic catalog generation/audits and the real `catalog_import` CLI on disposable fresh and historical SQLite databases. Its generated coverage report must exactly match the tracked report. No frontend formatter script is configured; ESLint and TypeScript are the available frontend static gates.
+
+Three dependent native packaging jobs build unsigned PR artifacts on macOS 15 arm64, macOS 15 Intel and Windows 2025 x64. They verify output files and attach seven-day artifacts and checksums. These jobs do not launch the app or exercise GUI flows. Run actual device/installer smoke tests and database upgrade checks before a public release; signing/notarization is a separate release gate. The CI workflow needs no repository secrets and has read-only token permission. Its first actual GitHub run and artifact availability must be recorded from the PR; YAML validation or a local arm64 build alone is not a CI pass.
+
+The first PR #1 run exposed a post-download checksum usability defect even though the packaging and upload steps passed: the original macOS manifest paths were relative to the runner workspace, and the original Windows file used CRLF. The workflow was corrected to write artifact-root-relative names with LF line endings. The corrected arm64 command was reproduced against a downloaded artifact and `actionlint` passed; the corrected GitHub run and all three downloaded manifests must be checked before final success is claimed.
+
+## DEVOPS-1B cross-platform SQLite test gate
+
+Each PR packaging job now builds the frontend assets and runs `cargo test --locked --manifest-path src-tauri/Cargo.toml` **on that job's native host** before packaging. These are the existing real Rust tests, including temporary SQLite migrations, FTS5/foreign keys, recipe/draft/reference persistence, catalog release installation/upgrade/rollback and user-state preservation. A successful Ubuntu job alone does not satisfy this gate. Read each macOS arm64, macOS Intel and Windows x64 job log for the actual test count and result; platform builds and uploaded artifacts still require their separate steps.
+
+Local pre-push macOS arm64 smoke: an unsigned debug bundle with isolated identifier `com.recipeatlas.devops1b-verification` built and launched. Its separate application-data SQLite profile contained schema 5, release-8 counts **647 identities / 269 aliases / 50 categories**, integrity `ok` and zero foreign-key violations. After terminating only the process holding that isolated database and launching again, the same counts/integrity remained; the test process was then closed. The normal application profile was not opened. Computer-use inventory saw the running test bundle, but bundle-ID binding returned `Invalid app` and path binding resolved a stale M3D-1 identifier. A read-only AppleScript accessibility attempt was denied by macOS (`osascript` helper access, -1728). Therefore this is native **launch/restart and SQLite** evidence, not a verified GUI click/search/recipe interaction. Windows/Intel native GUI and installer use remain unverified until exercised on their devices.
+
+The first DEVOPS-1B PR run exposed a Windows-specific loader failure: the Rust test binary compiled but exited before running tests with `0xc0000139` (`STATUS_ENTRYPOINT_NOT_FOUND`). Tauri's default Common Controls v6 manifest is embedded in the application resource, but Cargo's separate unit-test executable lacks it. `src-tauri/build.rs` now embeds the explicit `src-tauri/windows-common-controls.manifest` through the MSVC linker for both app and test executables, with Tauri's duplicate resource manifest disabled on Windows. This follows the [upstream Tauri test-harness issue](https://github.com/tauri-apps/tauri/issues/14580) and [Microsoft's manifest linker guidance](https://learn.microsoft.com/en-us/cpp/build/reference/manifest-create-side-by-side-assembly-manifest?view=msvc-170). An initial inline `/MANIFESTDEPENDENCY` argument failed to link on the GitHub runner because MSVC split it at spaces (`LNK1181`); the manifest-file input removes that argument quoting issue. The follow-up CI run must prove both the Windows tests and installer packaging work; macOS/Linux build behavior is unchanged.
+
+The next Windows run executed the real Rust suite and exposed a different portability defect: catalog evidence and seed files were checked out with CRLF, changing their SHA-256 bytes and causing `CATALOG_CHECKSUM` failures. `.gitattributes` now pins the entire `catalog/**` tree to LF on every platform. `git check-attr` confirms this applies to production, validation and historical release artifacts, and a local `core.autocrlf=true` checkout-index reproduction retained the production seed SHA-256. The next native Windows CI run must still confirm all catalog-backed tests and installer packaging.
+
+PR run [38741509466](https://github.com/fatihemres/personal-recipe-library/actions/runs/38741509466) confirmed that gate: 73 Rust tests passed on macOS arm64, 73 on macOS Intel, and 72 on Windows x64; the Windows-only difference is a Unix-gated test. The existing frontend/browser and Linux Rust/catalog jobs passed. All three Tauri package jobs passed and uploaded unsigned artifacts. Downloaded artifact checksum manifests verified both macOS app ZIPs, both DMGs and the Windows NSIS installer. These results establish native runner test execution and packaging, not GUI interaction on those remote hosts. The local isolated macOS bundle was launched, stopped and relaunched with SQLite profile/catalog integrity preserved, but GUI automation was denied by macOS accessibility permissions; Windows/Intel GUI and installer execution remain manual acceptance work.
+
+## PR #1 packaged-app startup regression (2026-10-16)
+
+The normal profile was inspected read-only (`mode=ro&immutable=1`) for release metadata and failed-audit codes. Its installed binary SHA-256 exactly matched the downloaded prior arm64 artifact binary. Failed release-8 audits reported `CATALOG_SOURCE_CHANGED`; source snapshots for M3D-1 retained the early 61-record evidence hashes under the final 60-record source/version labels. A SQLite backup into `/private/tmp/recipe-startup-investigation/profile` reproduced the same code through the real Rust importer before the fix. The normal database was neither reset nor imported into.
+
+After assigning reviewed source versions in the bundled package, the same isolated copy imported successfully: 79 inserts, 60 existing provenance-version updates, 648 cumulative historical identities (the package contains 647), 269 aliases, 50 categories. Every pre-existing recipe, recipe-ingredient, recipe-step, draft, draft-ingredient, preference, migration and unit row matched the original in count and row digest. Old source rows matched exactly; all previous ingredient IDs remained. Two catalog display names were brought from the early preview to the already reviewed final release-7 values; no personal ingredient row changed. SQLite integrity was `ok`, foreign-key violations zero.
+
+The production arm64 Tauri build used a temporary config override with identifier `com.recipeatlas.startup-verification` and application-data root `/private/tmp/recipe-startup-investigation/native-profile`. It launched a fresh profile with release 8 and 647/269/50; the native accessibility tree showed the real recipe-library window and offline status. It then launched against an isolated SQLite backup of the affected profile, installed release 8, and restarted with exactly one successful release-8 import and no new failure. The earlier downloaded artifact cannot be launched against a separate profile without changing its embedded Tauri path configuration or switching OS users; its installed copy and audit records provide direct failure evidence, while the fixed package was exercised natively. The native GUI was inspected for the clean profile only; full recipe/ingredient click workflows and Windows/Intel GUI runs remain unverified.
+
+The focused Rust regressions cover the exact old source hashes, preservation of both immutable old snapshots, and acceptance only of the exact previously successful release-8 preview manifest/artifact hash pair. Arbitrary same-version drift still fails. The frontend error state displays `CATALOG_SOURCE_CHANGED` as a bounded stable code. Final local checks passed: 75 Rust tests, 50 Vitest tests, 2 Chromium browser tests, Python source/catalog audits, TypeScript, ESLint, Cargo fmt/check/Clippy and frontend production build. One browser attempt hit sandbox localhost `EPERM`; the unsandboxed rerun passed. A copy of the prior successfully installed release-8 preview also opened through the rebuilt native bundle with no new import or integrity error. New PR Actions results must be recorded after the hotfix commit.

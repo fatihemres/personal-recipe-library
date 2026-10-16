@@ -9,8 +9,19 @@ const choices = [
   { theme: 'system', Icon: Monitor, label: t.system, description: t.systemBody },
 ] as const;
 
-export function SettingsPage({ data, saving, onTheme }: {
-  data: Bootstrap; saving: boolean; onTheme: (theme: Theme) => void;
+export function AboutPanel({ appVersion }: { appVersion: string | null }) {
+  return <section className="panel settings-panel" aria-labelledby="about-heading">
+    <h2 id="about-heading">{t.aboutTitle}</h2>
+    <dl className="storage-grid">
+      <div><dt>{t.aboutName}</dt><dd>{t.brand}</dd></div>
+      <div><dt>{t.aboutVersion}</dt><dd>{appVersion ? `v${appVersion}` : t.versionUnavailable}</dd></div>
+      <div><dt>{t.aboutStatus}</dt><dd>{t.developmentStatus}</dd></div>
+    </dl>
+  </section>;
+}
+
+export function SettingsPage({ data, appVersion, saving, onTheme }: {
+  data: Bootstrap; appVersion: string | null; saving: boolean; onTheme: (theme: Theme) => void;
 }) {
   return (
     <>
@@ -51,6 +62,7 @@ export function SettingsPage({ data, saving, onTheme }: {
         </dl>
       </section>
       <CatalogStatusPanel />
+      <AboutPanel appVersion={appVersion} />
     </>
   );
 }

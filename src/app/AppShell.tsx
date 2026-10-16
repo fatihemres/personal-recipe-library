@@ -8,11 +8,12 @@ import { errorMessage, messages as t } from '../shared/i18n';
 import { Button } from '../shared/ui/button';
 import { recipeClient, type RecipeClient } from '../shared/api/recipes';
 import { LibraryPage } from '../features/recipes/LibraryPage';
-import { SettingsPage } from '../features/settings/SettingsPage';
+import { AboutPanel, SettingsPage } from '../features/settings/SettingsPage';
 import { useFoundation } from './useFoundation';
 import { installNativeExitHandler } from './nativeExit';
 import { IngredientLibrary } from '../features/ingredients';
 import { useTheme } from './theme';
+import { useAppVersion } from './useAppVersion';
 
 const futureModules = [
   { label: t.dashboard, Icon: ChartNoAxesCombined },
@@ -25,6 +26,7 @@ const futureModules = [
 
 export function AppShell({ client = foundationClient, recipes = recipeClient }: { client?: FoundationClient; recipes?: RecipeClient }) {
   const { data, error, loading, saving, load, saveTheme } = useFoundation(client);
+  const appVersion = useAppVersion();
   const [page, setPage] = useState<'library' | 'settings' | 'ingredients'>('library');
   const [menuOpen, setMenuOpen] = useState(false);
   const [exitError, setExitError] = useState('');
@@ -90,7 +92,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
           ))}</ul>
         </section>
         <div className="sidebar-footer">
-          <span className="badge">{t.milestone}</span><span>{t.foundation}</span>
+          <span>{t.brand} · {appVersion ? `v${appVersion}` : t.versionUnavailable}</span>
         </div>
       </aside>
       <div className="workspace">
@@ -123,12 +125,14 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               <div>
                 <h2>{data ? t.operationError : t.errorTitle}</h2>
                 <p>{errorMessage(error.messageKey)}</p>
+                <p>{t.errorCode}: <code>{/^[A-Z][A-Z0-9_]{0,63}$/.test(error.code) ? error.code : 'UNKNOWN'}</code></p>
                 {!data && <p>{t.errorBody}</p>}
                 <Button variant="outline" onClick={() => void load()}>{t.retry}</Button>
               </div>
             </section>
           )}
-          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {!loading && !data && page === 'settings' && <AboutPanel appVersion={appVersion} />}
+          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} appVersion={appVersion} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>
