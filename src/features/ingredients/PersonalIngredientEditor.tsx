@@ -31,6 +31,11 @@ export function PersonalIngredientEditor({ item, categories, client, library, on
     const [confirm, setConfirm] = useState<'discard' | 'delete'>();
     const [leaving, setLeaving] = useState(false);
     const resolver = useRef<((allowed:boolean)=>void)|null>(null);
+    const pendingLeave = useRef<Promise<boolean>|null>(null);
+    useEffect(() => () => {
+      resolver.current?.(false);
+      resolver.current = null;
+    }, []);
     useEffect(() => {
         let alive = true;
         void client.units().then(v => { if (alive)
@@ -45,7 +50,15 @@ export function PersonalIngredientEditor({ item, categories, client, library, on
       return () => { active=false; clearTimeout(timer); };
     },[library,name,item.id,item.name]);
     const dirty = name !== item.name || notes !== (item.notes ?? '') || unit !== (item.preferredUnit ?? '') || (item.ingredientType === null && (categoryIds.length !== item.categories.length || categoryIds.some(id => !item.categories.some(c => c.id === id))));
-    const askLeave = () => dirty ? new Promise<boolean>(resolve => { resolver.current = resolve; setLeaving(true); }) : Promise.resolve(true);
+    const askLeave = () => {
+      if (pendingLeave.current) return pendingLeave.current;
+      if (!dirty) return Promise.resolve(true);
+      pendingLeave.current = new Promise<boolean>(resolve => {
+        resolver.current = allowed => { pendingLeave.current = null; resolve(allowed); };
+        setLeaving(true);
+      });
+      return pendingLeave.current;
+    };
     useEffect(() => {
       registerLeaveGuard?.(askLeave);
       return () => registerLeaveGuard?.(null);

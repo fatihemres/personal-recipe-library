@@ -51,22 +51,29 @@ export function useDurableDraft(
     return () => clearTimeout(timer);
   }, [input, dirty, session]);
   useEffect(() => {
+    let active = true;
+    let periodicInFlight = false;
     const timer = setInterval(() => {
       const value = latest.current;
-      if (value.dirty) {
+      if (value.dirty && !periodicInFlight) {
+        periodicInFlight = true;
         void session.flush(value.input).then(
           () => {
-            setStatus('saved');
-            setFailure(undefined);
+            if (active) {
+              setStatus('saved');
+              setFailure(undefined);
+            }
           },
           (e) => {
-            setStatus('failed');
-            setFailure(e);
+            if (active) {
+              setStatus('failed');
+              setFailure(e);
+            }
           },
-        );
+        ).finally(() => { periodicInFlight = false; });
       }
     }, 2000);
-    return () => clearInterval(timer);
+    return () => { active = false; clearInterval(timer); };
   }, [session]);
   useEffect(
     () =>

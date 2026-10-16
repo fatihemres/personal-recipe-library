@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { expect, test, vi } from 'vitest';
 import { IngredientLibrary } from './IngredientLibrary';
@@ -116,4 +116,18 @@ test('unfinished personal creation can continue editing or explicitly discard be
   const second=guard!();
   await user.click(await screen.findByRole('button',{name:'Vazgeç ve devam et'}));
   expect(await second).toBe(true);
+});
+
+test('unmount cancels an open personal creation leave decision', async () => {
+  const user=userEvent.setup();let guard:(()=>Promise<boolean>)|null=null;
+  const view=render(<IngredientLibrary client={rendererRecipeClient()} library={api()} registerLeaveGuard={value=>{guard=value;}}/>);
+  await user.click(screen.getByRole('button',{name:'Kişisel malzeme ekle'}));
+  await user.type(screen.getByLabelText('Yeni malzemenin adı'),'Yeni baharat');
+  let decision!:Promise<boolean>;
+  act(()=>{decision=guard!();});
+  expect(guard!()).toBe(decision);
+  expect(await screen.findByRole('dialog')).toBeVisible();
+  view.unmount();
+  expect(await decision).toBe(false);
+  expect(guard).toBeNull();
 });

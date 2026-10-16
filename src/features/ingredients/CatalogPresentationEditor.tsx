@@ -26,8 +26,21 @@ export function CatalogPresentationEditor({ detail, client, library, onDone, reg
   const [busy, setBusy] = useState(false);
   const [leaving,setLeaving]=useState(false);
   const resolver=useRef<((allowed:boolean)=>void)|null>(null);
+  const pendingLeave=useRef<Promise<boolean>|null>(null);
+  useEffect(() => () => {
+    resolver.current?.(false);
+    resolver.current = null;
+  }, []);
   const dirty=name!==detail.item.name || alias!==(detail.personalAlias??'') || notes!==(detail.item.notes??'') || unit!==(detail.item.preferredUnit??'');
-  const askLeave=()=>dirty ? new Promise<boolean>(resolve=>{resolver.current=resolve;setLeaving(true);}) : Promise.resolve(true);
+  const askLeave=()=>{
+    if(pendingLeave.current) return pendingLeave.current;
+    if(!dirty) return Promise.resolve(true);
+    pendingLeave.current=new Promise<boolean>(resolve=>{
+      resolver.current=allowed=>{pendingLeave.current=null;resolve(allowed);};
+      setLeaving(true);
+    });
+    return pendingLeave.current;
+  };
   useEffect(()=>{registerLeaveGuard?.(askLeave);return()=>registerLeaveGuard?.(null);});
   useEffect(() => {
     let active = true;

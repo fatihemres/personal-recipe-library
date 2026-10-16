@@ -176,8 +176,8 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  font-size: 9px;
-  letter-spacing: .12em;
+  font-size: 11px;
+  letter-spacing: .02em;
   color: var(--secondary-text);
 }
 .badge {

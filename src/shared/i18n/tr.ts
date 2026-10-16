@@ -6,7 +6,7 @@ export const tr = {
   storageUnavailable: 'Depolama bağlantısı doğrulanamadı', operationError: 'İşlem tamamlanamadı', offline: 'Bu cihazda · Çevrimdışı', connecting: 'Yerel depolama hazırlanıyor', loading: 'Kütüphaneniz için güvenli bir alan hazırlanıyor…',
   libraryEyebrow: 'MUTFAĞINIZIN HİKÂYESİ', libraryIntro: 'Sevdiğiniz lezzetler için kişisel bir alan.',
   emptyTitle: 'Kütüphaneniz yeni tariflere hazırlanıyor', emptyBody: 'Tarif oluşturma ve düzenleme bir sonraki geliştirme aşamasında açılacak. Bu aşamada yerel depolamanız hazır; görünüm tercihlerinizi ayarlayabilirsiniz.',
-  foundation: 'TEMEL ALTYAPI', milestone: 'Aşama 3C-3', next: 'Sıradaki aşama: Tarif keşfi ve düzenleme',
+  versionUnavailable: 'Sürüm bilgisi alınamadı', aboutTitle: 'Uygulama Hakkında', aboutName: 'Uygulama', aboutVersion: 'Uygulama sürümü', aboutStatus: 'Geliştirme durumu', developmentStatus: 'Geliştirme sürümü',
   settingsLink: 'Görünümü kişiselleştir', privacyTitle: 'Verileriniz size ait', privacyBody: 'Tercihleriniz bu bilgisayarda saklanır. Hesap, bulut bağlantısı veya internet gerekmez.',
   settingsIntro: 'Çalışma alanınızı kendinize göre düzenleyin.', appearance: 'Görünüm', appearanceBody: 'Okuma ve çalışma alışkanlıklarınıza uygun temayı seçin.',
   themeLabel: 'Renk teması', light: 'Açık', dark: 'Koyu', system: 'Sistem', lightBody: 'Sıcak ve aydınlık', darkBody: 'Yumuşak ve sakin', systemBody: 'Cihazınızla uyumlu',

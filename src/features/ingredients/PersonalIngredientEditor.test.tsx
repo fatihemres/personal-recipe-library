@@ -27,6 +27,7 @@ test('successful Save and Continue commits the personal edit before allowing nav
  await user.clear(screen.getByRole('textbox',{name:'Malzeme adı'}));
  await user.type(screen.getByRole('textbox',{name:'Malzeme adı'}),'İçli baharat');
  let decision!:Promise<boolean>;act(()=>{decision=guard!();});
+ expect(guard!()).toBe(decision);
  await user.click(await screen.findByRole('button',{name:'Kaydet ve devam et'}));
  expect(await decision).toBe(true);
  expect(client.editIngredient).toHaveBeenCalledWith(expect.objectContaining({id:item.id,revision:2,name:'İçli baharat'}));
@@ -37,4 +38,16 @@ test('personal category selections are included in the same revision-checked ing
  await user.click(screen.getByRole('checkbox',{name:'Özel'}));
  await user.click(screen.getByRole('button',{name:'Malzemeyi kaydet'}));
  expect(client.editIngredient).toHaveBeenCalledWith(expect.objectContaining({id:item.id,categoryIds:[category.id]}));
+});
+
+test('unmount cancels a pending personal edit leave decision', async()=>{
+ const client=rendererRecipeClient();let guard:(()=>Promise<boolean>)|null=null;
+ const user=userEvent.setup();const view=render(<PersonalIngredientEditor item={item} client={client} library={library} onDone={vi.fn()} onSelectCandidate={vi.fn()} registerLeaveGuard={value=>{guard=value;}}/>);
+ await user.type(screen.getByRole('textbox',{name:'Malzeme adı'}),' ek');
+ let decision!:Promise<boolean>;act(()=>{decision=guard!();});
+ expect(await screen.findByRole('dialog')).toBeVisible();
+ view.unmount();
+ expect(await decision).toBe(false);
+ expect(guard).toBeNull();
+ expect(client.editIngredient).not.toHaveBeenCalled();
 });

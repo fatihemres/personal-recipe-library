@@ -8,6 +8,7 @@ npm run typecheck
 npm run lint
 npm test
 npm run build
+python3 tools/check_app_version.py
 npx playwright install chromium
 npm run test:ui
 cargo fmt --manifest-path src-tauri/Cargo.toml -- --check
@@ -19,6 +20,12 @@ npm run tauri -- build --debug --bundles app --no-sign -- --locked --offline
 ```
 
 `--offline` requires cached Rust crates; fetch dependencies on a connected development machine first. Playwright installation is a development-only network operation, not a runtime requirement. Tests use temporary DBs/files, not the personal application DB. UI test output and compiled artifacts are ignored by Git. Frontend typechecking covers src, Vite/Vitest/Playwright configurations and browser test source.
+
+## DEVOPS-1C resource and version checks (2026-10-16)
+
+The installed version is read once from Tauri's `getVersion()` API in the shell, independently of SQLite bootstrap. Focused renderer tests verify the sidebar, Turkish Settings/About section, accessible fallback on metadata failure, and no repeated request during page navigation. `tools/check_app_version.py` fails CI if the package, Cargo and Tauri-config versions diverge. No frontend version constant or new capability was introduced.
+
+Ingredient leave-decision tests cover repeated guard requests and unmount while a dialog is open; all waiters receive the same decision and unmount denies navigation. A fake-clock hook test holds a draft client write unresolved while several periodic ticks pass, proving the timer does not enqueue unlimited additional writes. Existing save-failure tests ensure edits remain available. The full memory/resource methodology and its native evidence limits are recorded in [MEMORY_AND_RESOURCE_AUDIT.md](MEMORY_AND_RESOURCE_AUDIT.md). Browser/Vitest client doubles do not demonstrate native SQLite persistence.
 
 ## Evidence boundaries
 

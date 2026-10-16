@@ -1,5 +1,11 @@
 # Changelog
 
+## DEVOPS-1C — resource lifecycle audit and version display (2026-10-16, unreleased)
+
+- Replaced the stale sidebar milestone label with the installed Tauri application version and added a Turkish Settings/About section. Metadata failure leaves the sidebar usable. The version remains 0.1.0; catalog release 8 is tracked separately.
+- Resolved pending ingredient leave decisions on unmount and reused one decision for repeated navigation attempts. Prevented the periodic draft checkpoint timer from queuing more writes while an earlier periodic write is stalled. No catalog, SQLite migration, or user data changed.
+- Added a lightweight three-manifest version consistency check to PR CI and documented native resource evidence and remaining profiling limits.
+
 ## PR #1 startup hotfix — catalog source-snapshot compatibility (2026-10-16, unreleased)
 
 - Fixed release-8 startup on an existing 61-record M3D-1 preview profile. The corrected 60-record source evidence now has distinct reviewed snapshot versions; old checksummed source rows and recipe-facing ingredient IDs remain intact. No SQLite migration, catalog identity, alias or category was added or removed.

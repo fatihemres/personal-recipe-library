@@ -1,5 +1,12 @@
 # Project progress
 
+## DEVOPS-1C locally verified — 2026-10-16
+
+Existing PR #1 remains open on `feature/m3d-2b-release8-ci` at starting HEAD `0c722d9`; the Product Owner has explicitly declined merge for now. Read-only audit found reproducible pending-Promise defects in ingredient leave confirmations and periodic draft checkpoints under a stalled SQLite write. Repeated leave requests now share one pending decision and unmount settles it as “stay”; the periodic timer allows only one in-flight write. Focused tests cover both cases. The sidebar shows the installed Tauri application version and Settings includes Turkish About information, independently of SQLite bootstrap. The application remains 0.1.0; catalog release 8 and schema 5 are unchanged. The root untracked workbook and normal app profile remain untouched.
+
+Final local checks passed: **56 Vitest tests**, two Chromium browser tests, **75 Rust/SQLite tests**, TypeScript, ESLint, Cargo fmt/check/Clippy, frontend production build, release-8 generator/audits and three-manifest version consistency. A final production arm64 `.app` was rebuilt after the last source change. It launched, quit and relaunched with an isolated app-data override; the committed recipe with 125.5 g tomato and its step survived restart, as did the sidebar/Settings v0.1.0 and **647/269/50** catalog. SQLite integrity was `ok`, foreign-key check empty, and the test process released its database on exit. Native UI verification also exercised 48 bilingual searches, 47 ingredient detail views, category filters, and recipe create/edit/cancel choices. An initial 16.05-minute idle series stabilized below startup RSS; a 6.47-minute active series peaked at 126.64 MiB then declined; a further 5.07-minute post-workload series fell from 85.67 to 71.89 MiB. No unbounded thread or descriptor growth was demonstrated. The session interruption shortened the first two planned series; no leak-free claim follows. See `docs/MEMORY_AND_RESOURCE_AUDIT.md` for exact measurements and limits. Remaining: review diff, commit/push only this branch, inspect all five PR jobs and package artifacts. Do not merge.
+
+
 ## Objective and current milestone
 Local-first food and beverage recipe management for macOS and Windows with Tauri 2, React, TypeScript, and SQLite.
 
