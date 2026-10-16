@@ -123,6 +123,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               <div>
                 <h2>{data ? t.operationError : t.errorTitle}</h2>
                 <p>{errorMessage(error.messageKey)}</p>
+                <p>{t.errorCode}: <code>{/^[A-Z][A-Z0-9_]{0,63}$/.test(error.code) ? error.code : 'UNKNOWN'}</code></p>
                 {!data && <p>{t.errorBody}</p>}
                 <Button variant="outline" onClick={() => void load()}>{t.retry}</Button>
               </div>

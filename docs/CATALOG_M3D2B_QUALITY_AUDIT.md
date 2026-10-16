@@ -1,6 +1,6 @@
 # M3D-2B release 8 catalog quality and decisions
 
-**79 new canonical USDA identities; 647 total, 269 aliases, 50 categories.** All 568 complete release-7 ingredient objects and all category objects remain unchanged. The 79 additions comprise 72 food and 7 beverage identities. No new alias was asserted without equivalence evidence.
+**79 new canonical USDA identities; 647 total, 269 aliases, 50 categories.** All 568 release-7 identities, names, categories and factual values remain unchanged. The 60 M3D-1 records use distinct reviewed source-snapshot versions to prevent a collision with a 61-record preview installation. The 79 additions comprise 72 food and 7 beverage identities. No new alias was asserted without equivalence evidence.
 
 The decision ledger contains **194 evaluated candidates**: USDA 79 ACCEPT and 27 DEFER; FoodOn 84 DEFER for source clearance, three EXISTING/probable concepts and one REJECT brand-specific concept. A FoodOn EXISTING label is a conservative no-import disposition, not a completed cross-source merge. None of the 88 FoodOn terms is in release 8. No individual human linguistic approval is claimed.
 

@@ -39,8 +39,9 @@ test('loading is explicit, storage error retry recovers without fake library', a
   const api = client(); vi.mocked(api.bootstrap).mockImplementationOnce(() => new Promise((_, fail) => { reject = fail; }));
   const user = userEvent.setup(); render(<AppShell recipes={recipes} client={api} />);
   expect(screen.getByRole('status')).toHaveTextContent('hazırlanıyor');
-  await act(async () => reject({ code: 'STORAGE_UNAVAILABLE', messageKey: 'errors.storage', recoverable: true }));
+  await act(async () => reject({ code: 'CATALOG_SOURCE_CHANGED', messageKey: 'errors.catalog', recoverable: true }));
   expect(screen.getByRole('alert')).toHaveTextContent('silinmedi');
+  expect(screen.getByRole('alert')).toHaveTextContent('Tanı kodu: CATALOG_SOURCE_CHANGED');
   expect(screen.queryByRole('heading', { name: 'Tarif kütüphanesi' })).not.toBeInTheDocument();
   await user.click(screen.getByRole('button', { name: 'Yeniden dene' }));
   expect(await screen.findByRole('heading', { name: 'Tarif kütüphanesi' })).toBeVisible();

@@ -1,7 +1,7 @@
 {
   "artifact": {
     "file": "ingredients.json",
-    "sha256": "9a73d045c5f9addd913c128fa01d3759eeaeeb95599d022bc164ea5841dedc59"
+    "sha256": "8628fc4b2ef52075b865b13d8d2e8c35c5f3b7518730e719d329bd3f6f7f4dcc"
   },
   "dataset": "recipeatlas-ingredients",
   "evidence": {
@@ -89,7 +89,7 @@
       "name": "USDA SR Legacy April 2018 — M3D-1 selection",
       "retrievedAt": "2026-10-13",
       "url": "https://fdc.nal.usda.gov/download-datasets/",
-      "version": "2018-04-selection-5"
+      "version": "2018-04-selection-5-reviewed"
     },
     {
       "artifactSha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd",
@@ -99,7 +99,7 @@
       "name": "Tarif Atlası M3D-1 curated labels",
       "retrievedAt": "2026-10-13",
       "url": "https://github.com/fatihemres/personal-recipe-library",
-      "version": "production-4"
+      "version": "production-4-reviewed"
     },
     {
       "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a",

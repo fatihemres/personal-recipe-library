@@ -772,6 +772,38 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
 }
 
 #[test]
+fn bundled_startup_keeps_exact_successfully_installed_release8_preview() {
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.install_bundled_catalog().unwrap();
+    let releases_before = count(&db, "catalog_import_runs");
+    db.conn
+        .execute(
+            "UPDATE catalog_releases SET manifest_sha256=?1,artifact_sha256=?2 WHERE version=8",
+            rusqlite::params![
+                "86c0aac8e69ace4a3d75b7beb915a7990aac1fb8656d70bc1e2ea19a8d9b3749",
+                "9a73d045c5f9addd913c128fa01d3759eeaeeb95599d022bc164ea5841dedc59"
+            ],
+        )
+        .unwrap();
+    db.install_bundled_catalog().unwrap();
+    assert_eq!(count(&db, "catalog_import_runs"), releases_before);
+    assert_eq!(count(&db, "catalog_ingredients"), 647);
+    // Merely knowing the manifest is insufficient: the matching artifact and
+    // successful installation audit are also required.
+    db.conn
+        .execute(
+            "UPDATE catalog_releases SET artifact_sha256=?1 WHERE version=8",
+            ["0".repeat(64)],
+        )
+        .unwrap();
+    assert_eq!(
+        db.install_bundled_catalog().unwrap_err().code,
+        "CATALOG_VERSION_CHANGED"
+    );
+}
+
+#[test]
 fn actual_v2_upgrade_preserves_every_identity_personal_draft_recipe_override_and_restart() {
     verify_historical_upgrade(2, 235, "Cin");
 }
@@ -1785,6 +1817,20 @@ fn m3d2b_release8_upgrades_v7_atomically_and_preserves_user_state() {
             .iter()
             .find(|item| item.id == previous.id)
             .unwrap();
+        let mut current = current.clone();
+        for provenance in &mut current.provenance {
+            match provenance.source_id.as_str() {
+                "usda-sr-legacy-m3d1" => {
+                    assert_eq!(provenance.source_version, "2018-04-selection-5-reviewed");
+                    provenance.source_version = "2018-04-selection-5".into();
+                }
+                "recipeatlas-curation-m3d1" => {
+                    assert_eq!(provenance.source_version, "production-4-reviewed");
+                    provenance.source_version = "production-4".into();
+                }
+                _ => {}
+            }
+        }
         assert_eq!(
             serde_json::to_value(previous).unwrap(),
             serde_json::to_value(current).unwrap()
@@ -1846,7 +1892,7 @@ fn m3d2b_release8_upgrades_v7_atomically_and_preserves_user_state() {
     let report = db.import_catalog(&new).unwrap();
     assert_eq!(
         (report.inserted, report.updated, report.collisions),
-        (79, 0, 0)
+        (79, 60, 0)
     );
     assert!(db.import_catalog(&new).unwrap().unchanged);
     for item in additions {
@@ -1895,7 +1941,7 @@ fn m3d2b_release8_upgrades_v7_atomically_and_preserves_user_state() {
         ),
         (647, 269, 50)
     );
-    assert_eq!(count(&db, "catalog_sources"), source_count + 2);
+    assert_eq!(count(&db, "catalog_sources"), source_count + 4);
     let kept = db.recipe(&saved.id).unwrap();
     assert_eq!(kept.ingredients[0].ingredient_id, personal.id);
     assert_eq!(kept.ingredients[0].quantity.as_deref(), Some("35.000001"));
@@ -1926,6 +1972,83 @@ fn m3d2b_release8_upgrades_v7_atomically_and_preserves_user_state() {
         Some("Özel bal araması")
     );
     assert_eq!(honey_detail.item.preferred_unit.as_deref(), Some("kg"));
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
+    );
+    assert_eq!(
+        db.conn
+            .query_row("SELECT count(*) FROM pragma_foreign_key_check", [], |r| r
+                .get::<_, i64>(
+                0
+            ))
+            .unwrap(),
+        0
+    );
+}
+
+#[test]
+fn release8_accepts_earlier_m3d1_snapshot_without_rewriting_its_provenance() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/7/manifest.json"),
+    )
+    .unwrap();
+    let dir = tempfile::tempdir().unwrap();
+    let mut db = Database::open(dir.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    // A locally installed 61-record M3D-1 preview used these same source/version
+    // pairs with different evidence. Preserve those immutable snapshots.
+    let preview = [
+        (
+            "usda-sr-legacy-m3d1",
+            "2018-04-selection-5",
+            "f6a9b1d959554177f4ccde64cd75892fba1e0acfca7a17077e06668572ac5042",
+        ),
+        (
+            "recipeatlas-curation-m3d1",
+            "production-4",
+            "fecf768a94cff14b0eb343e49e2376c7fedac8ef95c131eed8b289d8d35c11b4",
+        ),
+    ];
+    for (source, version, hash) in preview {
+        db.conn
+            .execute(
+                "UPDATE catalog_sources SET artifact_sha256=?3 WHERE id=?1 AND version=?2",
+                rusqlite::params![source, version, hash],
+            )
+            .unwrap();
+    }
+    let report = db.install_bundled_catalog();
+    assert!(
+        report.is_ok(),
+        "preview source snapshot blocked startup: {report:?}"
+    );
+    assert_eq!(count(&db, "catalog_ingredients"), 647);
+    assert_eq!(count(&db, "catalog_aliases"), 269);
+    for (source, version, hash) in preview {
+        let kept: String = db
+            .conn
+            .query_row(
+                "SELECT artifact_sha256 FROM catalog_sources WHERE id=?1 AND version=?2",
+                rusqlite::params![source, version],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert_eq!(kept, hash);
+        let reviewed = format!("{version}-reviewed");
+        assert_eq!(
+            db.conn
+                .query_row(
+                    "SELECT count(*) FROM catalog_sources WHERE id=?1 AND version=?2",
+                    rusqlite::params![source, reviewed],
+                    |r| r.get::<_, i64>(0),
+                )
+                .unwrap(),
+            1
+        );
+    }
     assert_eq!(
         db.conn
             .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))

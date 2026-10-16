@@ -1,5 +1,11 @@
 # Changelog
 
+## PR #1 startup hotfix — catalog source-snapshot compatibility (2026-10-16, unreleased)
+
+- Fixed release-8 startup on an existing 61-record M3D-1 preview profile. The corrected 60-record source evidence now has distinct reviewed snapshot versions; old checksummed source rows and recipe-facing ingredient IDs remain intact. No SQLite migration, catalog identity, alias or category was added or removed.
+- Kept the exact earlier, successfully installed release-8 preview usable without rewriting it. Other same-version manifest drift remains an error.
+- Startup errors now display their stable diagnostic code in Turkish without exposing database paths or personal content. Added SQLite-backed collision and preview-compatibility regressions.
+
 ## M3D-1 — First controlled expansion release (2026-10-14, unreleased)
 
 - Embedded catalog release 7: 60 USDA-backed additions, 568 canonical identities, 269 aliases and the existing 50 categories (464 food / 104 beverage). Archived release 6 unchanged and preserved all original 508 complete ingredient records.

@@ -34,7 +34,14 @@ class ReleaseEightTests(unittest.TestCase):
         self.assertEqual(self.old['categories'],self.current['categories'])
         self.assertEqual(len(old),568)
         self.assertEqual(len(new),647)
-        self.assertTrue(all(new[k]==v for k,v in old.items()))
+        for key, previous in old.items():
+            current=json.loads(json.dumps(new[key]))
+            for provenance in current['provenance']:
+                versions=release.REVIEWED_M3D1_VERSIONS.get(provenance['sourceId'])
+                if versions:
+                    self.assertEqual(provenance['sourceVersion'],versions[1])
+                    provenance['sourceVersion']=versions[0]
+            self.assertEqual(current,previous)
         accepted = {d['sourceIdentifier'] for d in self.decisions if d['decision']=='ACCEPT'}
         added = [i for k,i in new.items() if k not in old]
         self.assertEqual({i['key'] for i in added},{'usda-sr-'+external for external in accepted})

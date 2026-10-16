@@ -20,7 +20,7 @@ def upgrade():
         integrity = db.execute('PRAGMA integrity_check').fetchone()[0]
         violations = len(db.execute('PRAGMA foreign_key_check').fetchall())
         db.close()
-    assert previous['inserted'] == 568 and changed['inserted'] == 79 and changed['updated'] == 0
+    assert previous['inserted'] == 568 and changed['inserted'] == 79 and changed['updated'] == 60
     assert repeat['unchanged'] and repeat['inserted'] == repeat['updated'] == 0
     assert counts == {'catalog_ingredients':647,'catalog_aliases':269,'ingredient_categories':50}
     assert integrity == 'ok' and violations == 0
@@ -37,7 +37,7 @@ def main():
     report = dict(method='Real Rust catalog_import CLI and disposable SQLite profiles; direct category membership counts overlap.',baseline=old,current=current,upgrade=upgraded)
     (ROOT/'catalog/production/m3d2b-sqlite-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     baseline = {c['key']:c['directCount'] for c in old['categories']}
-    rows = ['# M3D-2B measured release 8 coverage','','All counts below come from fresh isolated SQLite imports through the real Rust catalog importer. Category memberships overlap and must not be summed as a catalog total.','','Release 7: **568 identities, 464 food / 104 beverage, 269 aliases, 50 categories.**','','Release 8: **647 identities, 536 food / 111 beverage, 269 aliases, 50 categories.** The 79 additions are 72 food and 7 beverage identities. No new aliases or category nodes were introduced.','','Release-7→8 upgrade inserted 79, updated zero; repeated import changed zero. SQLite integrity was `ok` with zero foreign-key violations. The normal user profile was not opened.','','| Category | Parent | Release 7 direct | Release 8 direct | Change |','| --- | --- | ---: | ---: | ---: |']
+    rows = ['# M3D-2B measured release 8 coverage','','All counts below come from fresh isolated SQLite imports through the real Rust catalog importer. Category memberships overlap and must not be summed as a catalog total.','','Release 7: **568 identities, 464 food / 104 beverage, 269 aliases, 50 categories.**','','Release 8: **647 identities, 536 food / 111 beverage, 269 aliases, 50 categories.** The 79 additions are 72 food and 7 beverage identities. No new aliases or category nodes were introduced.','','Release-7→8 upgrade inserted 79 and updated source-version provenance for 60 existing M3D-1 identities; names, IDs and categories did not change. Repeated import changed zero. SQLite integrity was `ok` with zero foreign-key violations. The normal user profile was not opened.','','| Category | Parent | Release 7 direct | Release 8 direct | Change |','| --- | --- | ---: | ---: | ---: |']
     for category in current['categories']:
         before=baseline[category['key']]
         after=category['directCount']

@@ -22,6 +22,13 @@ USDA_SOURCE = 'usda-sr-legacy-m3d2b'
 CURATION_SOURCE = 'recipeatlas-curation-m3d2b'
 USDA_VERSION = '2018-04-selection-6'
 CURATION_VERSION = 'production-5'
+# An earlier, locally installed 61-record M3D-1 preview used these source
+# versions with different evidence hashes. Source snapshots are immutable, so
+# release 8 must use distinct versions for the reviewed 60-record extraction.
+REVIEWED_M3D1_VERSIONS = {
+    'usda-sr-legacy-m3d1': ('2018-04-selection-5', '2018-04-selection-5-reviewed'),
+    'recipeatlas-curation-m3d1': ('production-4', 'production-4-reviewed'),
+}
 
 # Individual re-review of the forty M3D-2A questions. These thirteen have
 # source-explicit distinctions and cautious Turkish labels. The other 27 retain
@@ -59,6 +66,17 @@ def build():
     assert previous_manifest['version'] == 7 and len(previous['ingredients']) == 568
     for descriptor in [previous_manifest['artifact'], *previous_manifest['evidence'].values()]:
         assert hashlib.sha256((OLD / descriptor['file']).read_bytes()).hexdigest() == descriptor['sha256'], 'Release 7 artifact changed'
+    for source in previous_manifest['sources']:
+        if source['id'] in REVIEWED_M3D1_VERSIONS:
+            old_version, reviewed_version = REVIEWED_M3D1_VERSIONS[source['id']]
+            assert source['version'] == old_version
+            source['version'] = reviewed_version
+    for item in previous['ingredients']:
+        for provenance in item['provenance']:
+            if provenance['sourceId'] in REVIEWED_M3D1_VERSIONS:
+                old_version, reviewed_version = REVIEWED_M3D1_VERSIONS[provenance['sourceId']]
+                assert provenance['sourceVersion'] == old_version
+                provenance['sourceVersion'] = reviewed_version
     catalog = {item['key']: item for item in previous['ingredients']}
     category_keys = {c['key'] for c in previous['categories']}
     preparation_report = load(PREP / 'quality-report.json')

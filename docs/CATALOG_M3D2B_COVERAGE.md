@@ -6,7 +6,7 @@ Release 7: **568 identities, 464 food / 104 beverage, 269 aliases, 50 categories
 
 Release 8: **647 identities, 536 food / 111 beverage, 269 aliases, 50 categories.** The 79 additions are 72 food and 7 beverage identities. No new aliases or category nodes were introduced.
 
-Release-7→8 upgrade inserted 79, updated zero; repeated import changed zero. SQLite integrity was `ok` with zero foreign-key violations. The normal user profile was not opened.
+Release-7→8 upgrade inserted 79 and updated source-version provenance for 60 existing M3D-1 identities; names, IDs and categories did not change. Repeated import changed zero. SQLite integrity was `ok` with zero foreign-key violations. The normal user profile was not opened.
 
 | Category | Parent | Release 7 direct | Release 8 direct | Change |
 | --- | --- | ---: | ---: | ---: |

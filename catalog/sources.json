@@ -68,6 +68,7 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "2018-04-selection-5",
+      "pinnedVersions": ["2018-04-selection-5", "2018-04-selection-5-reviewed"],
       "retrievedAt": "2026-10-13",
       "upstreamArtifactUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
       "upstreamSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
@@ -81,6 +82,7 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "production-4",
+      "pinnedVersions": ["production-4", "production-4-reviewed"],
       "retrievedAt": "2026-10-13",
       "imagesApproved": false,
       "decision": "Project-authored bilingual culinary labels, aliases and classifications; not USDA translations or expert approval."
