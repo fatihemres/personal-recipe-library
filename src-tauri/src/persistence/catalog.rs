@@ -25,7 +25,7 @@ impl Database {
                 params![seed.manifest.dataset, seed.manifest.version],
                 |r| Ok((r.get(0)?, r.get(1)?)),
             )?;
-            if hash != seed.manifest_hash {
+            if hash != seed.manifest_hash || artifact_hash != seed.artifact_hash {
                 // The unmerged PR's first release-8 preview was checksummed and
                 // successfully installed on clean profiles. Its replacement only
                 // assigns new provenance-snapshot versions; identities, names and

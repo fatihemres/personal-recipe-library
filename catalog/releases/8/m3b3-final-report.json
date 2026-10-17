@@ -1,0 +1,1147 @@
+{
+  "milestone": "M3B-3",
+  "version": 4,
+  "previousIdentities": 482,
+  "newIdentities": 26,
+  "totalIdentities": 508,
+  "ingredientTypeCounts": {
+    "beverage": 97,
+    "food": 411
+  },
+  "aliases": 260,
+  "categoryNodes": 50,
+  "categoryMembershipCounts": {
+    "baking": 37,
+    "beers": 7,
+    "beverage": 3,
+    "bitters": 1,
+    "brandy": 6,
+    "cheeses": 30,
+    "chocolate-cocoa": 5,
+    "coffee": 4,
+    "coffee-tea": 2,
+    "condiments": 13,
+    "dairy": 42,
+    "dairy-alternatives": 5,
+    "dried-fruit": 9,
+    "eggs": 7,
+    "fermented": 4,
+    "flours": 22,
+    "fruit": 47,
+    "garnishes": 6,
+    "gin": 2,
+    "grains": 33,
+    "herbs": 20,
+    "infusions": 2,
+    "international-specialty": 7,
+    "juices": 13,
+    "legumes": 19,
+    "liqueurs": 8,
+    "meat": 7,
+    "milk-powders": 2,
+    "mixers": 3,
+    "mushrooms": 8,
+    "noodles-pasta": 9,
+    "nuts-seeds": 23,
+    "oils": 18,
+    "other-beverages": 5,
+    "poultry": 7,
+    "sauces": 16,
+    "seafood": 21,
+    "soft-drinks": 3,
+    "spices": 28,
+    "spirits": 25,
+    "sweeteners": 7,
+    "syrups": 11,
+    "tea": 6,
+    "traditional-drinks": 4,
+    "turkish-regional": 16,
+    "vegetables": 57,
+    "water": 2,
+    "whisky": 8,
+    "wines": 5
+  },
+  "identitySources": {
+    "usdaBacked": 454,
+    "projectOnly": 54
+  },
+  "projectLocalizedIdentities": 508,
+  "missingTranslations": 0,
+  "missingMetadata": {
+    "abv": 508,
+    "allergens": 508,
+    "density": 508,
+    "nutrition": 508
+  },
+  "structuralErrors": [],
+  "exactAliasCollisions": [],
+  "conceptCandidateGroups": [
+    {
+      "concept": "almonds",
+      "keys": [
+        "usda-sr-170567",
+        "usda-sr-170568"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "apple",
+      "keys": [
+        "usda-sr-171688",
+        "usda-sr-171689"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "baker's yeast",
+      "keys": [
+        "usda-sr-175042",
+        "usda-sr-175043"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "basil",
+      "keys": [
+        "usda-sr-171317",
+        "usda-sr-172232"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "beer",
+      "keys": [
+        "usda-sr-168746",
+        "usda-sr-168749"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "butter",
+      "keys": [
+        "usda-sr-173410",
+        "usda-sr-173430"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "chicken thigh",
+      "keys": [
+        "usda-sr-172385",
+        "usda-sr-173627"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "chickpeas",
+      "keys": [
+        "usda-sr-173756",
+        "usda-sr-173757",
+        "usda-sr-173800"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "cocoa powder",
+      "keys": [
+        "usda-sr-169593",
+        "usda-sr-169594"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "coconut meat",
+      "keys": [
+        "usda-sr-170169",
+        "usda-sr-170170"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "coconut milk",
+      "keys": [
+        "usda-sr-170172",
+        "usda-sr-170173"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "dark chocolate",
+      "keys": [
+        "usda-sr-170271",
+        "usda-sr-170272",
+        "usda-sr-170273"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "dill weed",
+      "keys": [
+        "usda-sr-171322",
+        "usda-sr-172233"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "egg white",
+      "keys": [
+        "usda-sr-172183",
+        "usda-sr-172204"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "egg yolk",
+      "keys": [
+        "usda-sr-172184",
+        "usda-sr-173428"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "european anchovy",
+      "keys": [
+        "usda-sr-174182",
+        "usda-sr-174183"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "fava beans",
+      "keys": [
+        "usda-sr-168574",
+        "usda-sr-175205"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "firm tofu",
+      "keys": [
+        "usda-sr-172448",
+        "usda-sr-172475"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "goat cheese",
+      "keys": [
+        "usda-sr-172197",
+        "usda-sr-173435"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "parsley",
+      "keys": [
+        "usda-sr-170416",
+        "usda-sr-170930"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "rainbow trout",
+      "keys": [
+        "usda-sr-173717",
+        "usda-sr-175154"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "rye flour",
+      "keys": [
+        "usda-sr-168885",
+        "usda-sr-168887"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "shiitake mushroom",
+      "keys": [
+        "usda-sr-168436",
+        "usda-sr-169242"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "tahini",
+      "keys": [
+        "usda-sr-168604",
+        "usda-sr-169410",
+        "usda-sr-170189"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "tomato juice",
+      "keys": [
+        "usda-sr-170458",
+        "usda-sr-170545"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    }
+  ],
+  "pendingTerminologyItems": 18,
+  "independentlyHumanApproved": 0,
+  "rejectedSelectedRecords": 0,
+  "excludedCandidates": [
+    {
+      "externalId": "175186",
+      "reason": "Black turtle bean mapping needs comparison with existing black bean identity; not added."
+    },
+    {
+      "reference": "Van otlu peyniri",
+      "reason": "Excluded at v3 due unavailable primary page; reconsider only after current primary verification."
+    }
+  ],
+  "coverageBoundary": "Identity/provenance and automated structural validation, not independent human linguistic approval or complete global coverage.",
+  "addedIdentities": [
+    {
+      "id": "8911d3ad-3885-8ee6-b7b3-77f42e2c864b",
+      "key": "project-aged-blended-rum",
+      "names": {
+        "en": "Blended aged rum",
+        "tr": "Harmanlanmış yıllanmış rom"
+      },
+      "categories": [
+        "spirits"
+      ]
+    },
+    {
+      "id": "be5b8ae1-24f4-8808-ae62-e0967e3e2a83",
+      "key": "project-agricole-rum",
+      "names": {
+        "en": "Agricole rum",
+        "tr": "Agricole rom"
+      },
+      "categories": [
+        "spirits"
+      ]
+    },
+    {
+      "id": "76ce110f-ac4e-8c89-8c36-56056ab5cd89",
+      "key": "project-ale-beer",
+      "names": {
+        "en": "Ale beer",
+        "tr": "Ale bira"
+      },
+      "categories": [
+        "beers"
+      ]
+    },
+    {
+      "id": "22590cb0-ed33-8529-96eb-011e5bec19c8",
+      "key": "project-coarse-pilaf-bulgur",
+      "names": {
+        "en": "Coarse bulgur for pilaf",
+        "tr": "İri pilavlık bulgur"
+      },
+      "categories": [
+        "grains",
+        "turkish-regional"
+      ]
+    },
+    {
+      "id": "95f22b7b-d570-8a30-9e5a-316b9c8bd2f7",
+      "key": "project-edirne-cheese",
+      "names": {
+        "en": "Edirne white cheese",
+        "tr": "Edirne beyaz peyniri"
+      },
+      "categories": [
+        "dairy",
+        "turkish-regional",
+        "cheeses"
+      ]
+    },
+    {
+      "id": "03bc599e-aa1c-876f-85a0-2da521deb631",
+      "key": "project-fine-koftelik-bulgur",
+      "names": {
+        "en": "Fine bulgur for köfte",
+        "tr": "İnce köftelik bulgur"
+      },
+      "categories": [
+        "grains",
+        "turkish-regional"
+      ]
+    },
+    {
+      "id": "68d52769-fab8-8d21-ab83-2c3088856862",
+      "key": "project-honey-syrup",
+      "names": {
+        "en": "Honey syrup",
+        "tr": "Bal şurubu"
+      },
+      "categories": [
+        "syrups"
+      ]
+    },
+    {
+      "id": "ef7f6a64-bbed-8b3c-965e-22229d716bf8",
+      "key": "project-india-pale-ale",
+      "names": {
+        "en": "India pale ale",
+        "tr": "India pale ale"
+      },
+      "categories": [
+        "beers"
+      ]
+    },
+    {
+      "id": "0bed4e8e-b91d-8e5b-b957-f8dca2946b8c",
+      "key": "project-koftelik-bulgur",
+      "names": {
+        "en": "Bulgur for köfte",
+        "tr": "Köftelik bulgur"
+      },
+      "categories": [
+        "grains",
+        "turkish-regional"
+      ]
+    },
+    {
+      "id": "df590dd4-9ba0-8107-99c7-c4c71f470801",
+      "key": "project-lager-beer",
+      "names": {
+        "en": "Lager beer",
+        "tr": "Lager bira"
+      },
+      "categories": [
+        "beers"
+      ]
+    },
+    {
+      "id": "c9b18d28-3358-80e6-8fc0-9c755bad2c86",
+      "key": "project-nar-eksisi",
+      "names": {
+        "en": "Nar ekşisi (pomegranate reduction)",
+        "tr": "Nar ekşisi"
+      },
+      "categories": [
+        "condiments",
+        "turkish-regional"
+      ]
+    },
+    {
+      "id": "b9af6e0c-6629-8b89-9e83-a173efa56146",
+      "key": "project-orgeat-syrup",
+      "names": {
+        "en": "Orgeat almond syrup",
+        "tr": "Orgeat badem şurubu"
+      },
+      "categories": [
+        "syrups"
+      ]
+    },
+    {
+      "id": "5e7c02fe-b39d-845c-b88d-4cc89bddc6d3",
+      "key": "project-pilaf-bulgur",
+      "names": {
+        "en": "Bulgur for pilaf",
+        "tr": "Pilavlık bulgur"
+      },
+      "categories": [
+        "grains",
+        "turkish-regional"
+      ]
+    },
+    {
+      "id": "67e64ec6-f661-8f78-9401-2ec17c289711",
+      "key": "project-porter-beer",
+      "names": {
+        "en": "Porter beer",
+        "tr": "Porter bira"
+      },
+      "categories": [
+        "beers"
+      ]
+    },
+    {
+      "id": "fee76ebc-1bf2-8150-8fd8-9b9d18ccad98",
+      "key": "project-stout-beer",
+      "names": {
+        "en": "Stout beer",
+        "tr": "Stout bira"
+      },
+      "categories": [
+        "beers"
+      ]
+    },
+    {
+      "id": "9b96f8d8-3d19-8c85-8573-666cbff189a1",
+      "key": "usda-sr-168412",
+      "names": {
+        "en": "Endive (raw)",
+        "tr": "Hindiba (endivyen, çiğ)"
+      },
+      "categories": [
+        "vegetables"
+      ]
+    },
+    {
+      "id": "fd7d3c23-8b22-8c4a-be62-a53ed47fda2b",
+      "key": "usda-sr-168564",
+      "names": {
+        "en": "Radicchio (raw)",
+        "tr": "Radicchio (çiğ)"
+      },
+      "categories": [
+        "vegetables"
+      ]
+    },
+    {
+      "id": "ec767fde-0724-818b-bb1e-1b6d7899d7bc",
+      "key": "usda-sr-169236",
+      "names": {
+        "en": "Jerusalem artichoke (raw)",
+        "tr": "Yer elması (çiğ)"
+      },
+      "categories": [
+        "vegetables"
+      ]
+    },
+    {
+      "id": "0205a076-9ce2-8504-9023-4497cf1c2692",
+      "key": "usda-sr-169722",
+      "names": {
+        "en": "Wheat bran (crude)",
+        "tr": "Buğday kepeği"
+      },
+      "categories": [
+        "grains"
+      ]
+    },
+    {
+      "id": "06c4fc04-381a-8f43-8a0a-ec8052e352af",
+      "key": "usda-sr-170061",
+      "names": {
+        "en": "Turnip greens (raw)",
+        "tr": "Şalgam yaprakları (çiğ)"
+      },
+      "categories": [
+        "vegetables"
+      ]
+    },
+    {
+      "id": "ca9bcdcd-9708-818a-b5f6-0a0b6c9f7bad",
+      "key": "usda-sr-170068",
+      "names": {
+        "en": "Watercress (raw)",
+        "tr": "Su teresi (çiğ)"
+      },
+      "categories": [
+        "vegetables"
+      ]
+    },
+    {
+      "id": "4128d27c-17c0-88c8-8d72-6747d4552344",
+      "key": "usda-sr-170172",
+      "names": {
+        "en": "Coconut milk (raw)",
+        "tr": "Hindistan cevizi sütü (çiğ)"
+      },
+      "categories": [
+        "dairy-alternatives"
+      ]
+    },
+    {
+      "id": "65c50bed-6a09-86db-a769-044a46600d3f",
+      "key": "usda-sr-170173",
+      "names": {
+        "en": "Coconut milk (canned)",
+        "tr": "Hindistan cevizi sütü (konserve)"
+      },
+      "categories": [
+        "dairy-alternatives"
+      ]
+    },
+    {
+      "id": "d26e4215-448d-8219-aa4e-f1c65309f512",
+      "key": "usda-sr-170277",
+      "names": {
+        "en": "Agave syrup",
+        "tr": "Agave şurubu"
+      },
+      "categories": [
+        "syrups"
+      ]
+    },
+    {
+      "id": "303f8081-128d-88c1-b566-2ab69e168696",
+      "key": "usda-sr-170458",
+      "names": {
+        "en": "Tomato juice (canned, with salt added)",
+        "tr": "Tuz eklenmiş konserve domates suyu"
+      },
+      "categories": [
+        "juices"
+      ]
+    },
+    {
+      "id": "2ddc6f5c-27f0-890e-87ed-b95176b14770",
+      "key": "usda-sr-171423",
+      "names": {
+        "en": "Poppyseed oil",
+        "tr": "Haşhaş yağı"
+      },
+      "categories": [
+        "oils"
+      ]
+    }
+  ],
+  "offlineInstallation": {
+    "networkDenied": true,
+    "measurements": "Local debug CLI wall time including process startup; not a universal performance guarantee.",
+    "runs": [
+      {
+        "previousVersion": null,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": false,
+        "elapsedMilliseconds": 238.593,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": false,
+          "validated": 508,
+          "inserted": 508,
+          "updated": 0,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": null,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": true,
+        "elapsedMilliseconds": 80.939,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": true,
+          "validated": 508,
+          "inserted": 0,
+          "updated": 0,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": 2,
+        "manifest": "catalog/releases/2/manifest.json",
+        "repeat": false,
+        "elapsedMilliseconds": 113.096,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 2,
+          "purpose": "production",
+          "unchanged": false,
+          "validated": 235,
+          "inserted": 235,
+          "updated": 0,
+          "available": 235,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 11,
+            "beers": 2,
+            "beverage": 3,
+            "bitters": 0,
+            "coffee": 2,
+            "coffee-tea": 2,
+            "condiments": 7,
+            "dairy": 8,
+            "dairy-alternatives": 2,
+            "eggs": 2,
+            "fermented": 1,
+            "food": 0,
+            "fruit": 33,
+            "garnishes": 4,
+            "grains": 9,
+            "herbs": 12,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 8,
+            "legumes": 9,
+            "liqueurs": 3,
+            "meat": 3,
+            "mixers": 3,
+            "nuts-seeds": 14,
+            "oils": 6,
+            "other-beverages": 1,
+            "poultry": 3,
+            "sauces": 7,
+            "seafood": 7,
+            "soft-drinks": 3,
+            "spices": 18,
+            "spirits": 3,
+            "sweeteners": 4,
+            "syrups": 2,
+            "tea": 3,
+            "turkish-regional": 0,
+            "vegetables": 41,
+            "water": 2,
+            "wines": 4
+          }
+        }
+      },
+      {
+        "previousVersion": 2,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": false,
+        "elapsedMilliseconds": 232.644,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": false,
+          "validated": 508,
+          "inserted": 273,
+          "updated": 235,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": 2,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": true,
+        "elapsedMilliseconds": 82.956,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": true,
+          "validated": 508,
+          "inserted": 0,
+          "updated": 0,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": 3,
+        "manifest": "catalog/releases/3/manifest.json",
+        "repeat": false,
+        "elapsedMilliseconds": 219.731,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 3,
+          "purpose": "production",
+          "unchanged": false,
+          "validated": 482,
+          "inserted": 482,
+          "updated": 0,
+          "available": 482,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 2,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 29,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 12,
+            "dairy": 41,
+            "dairy-alternatives": 3,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 28,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 12,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 17,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 23,
+            "sweeteners": 7,
+            "syrups": 8,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 10,
+            "vegetables": 52,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": 3,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": false,
+        "elapsedMilliseconds": 230.483,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": false,
+          "validated": 508,
+          "inserted": 26,
+          "updated": 482,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      },
+      {
+        "previousVersion": 3,
+        "manifest": "catalog/production/manifest.json",
+        "repeat": true,
+        "elapsedMilliseconds": 82.97,
+        "report": {
+          "dataset": "recipeatlas-ingredients",
+          "version": 4,
+          "purpose": "production",
+          "unchanged": true,
+          "validated": 508,
+          "inserted": 0,
+          "updated": 0,
+          "available": 508,
+          "collisions": 0,
+          "categoryCoverage": {
+            "baking": 37,
+            "beers": 7,
+            "beverage": 3,
+            "bitters": 1,
+            "brandy": 6,
+            "cheeses": 30,
+            "chocolate-cocoa": 5,
+            "coffee": 4,
+            "coffee-tea": 2,
+            "condiments": 13,
+            "dairy": 42,
+            "dairy-alternatives": 5,
+            "dried-fruit": 9,
+            "eggs": 7,
+            "fermented": 4,
+            "flours": 22,
+            "food": 0,
+            "fruit": 47,
+            "garnishes": 6,
+            "gin": 2,
+            "grains": 33,
+            "herbs": 20,
+            "infusions": 2,
+            "international-specialty": 7,
+            "juices": 13,
+            "legumes": 19,
+            "liqueurs": 8,
+            "meat": 7,
+            "milk-powders": 2,
+            "mixers": 3,
+            "mushrooms": 8,
+            "noodles-pasta": 9,
+            "nuts-seeds": 23,
+            "oils": 18,
+            "other-beverages": 5,
+            "poultry": 7,
+            "sauces": 16,
+            "seafood": 21,
+            "soft-drinks": 3,
+            "spices": 28,
+            "spirits": 25,
+            "sweeteners": 7,
+            "syrups": 11,
+            "tea": 6,
+            "traditional-drinks": 4,
+            "turkish-regional": 16,
+            "vegetables": 57,
+            "water": 2,
+            "whisky": 8,
+            "wines": 5
+          }
+        }
+      }
+    ]
+  },
+  "remainingGaps": [
+    "Regional Turkish cheeses (including Van otlu), fermentation starters and regional plants need primary identity/terminology curation.",
+    "Asian and Latin American specialty sauces, grains and fresh culinary forms remain unevenly covered.",
+    "Coffee beans/roasts, loose tea varieties and herbal infusions need further verified identity selections.",
+    "Vermouth, additional liqueur/rum/vodka/tequila varieties, tonic variants and specialty bar concentrates remain incomplete.",
+    "Generic-to-specific ingredient relationships are extensible but not comprehensively curated; do not assume interchangeability.",
+    "Nutrition, density, allergens and ABV remain unknown for every identity in this identity-only catalog."
+  ]
+}

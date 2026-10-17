@@ -1,0 +1,394 @@
+[
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Tofu yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Tofu yoğurdu\"}",
+    "externalId": "usda-sr-167722"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Canned tamarind nectar\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve demirhindi nektarı\"}",
+    "externalId": "usda-sr-167786"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Pork belly (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ domuz göbeği\"}",
+    "externalId": "usda-sr-167812"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Vital wheat gluten\",\"preferredUnit\":\"g\",\"tr\":\"Vital buğday gluteni\"}",
+    "externalId": "usda-sr-168147"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Canned jackfruit in syrup\",\"preferredUnit\":\"g\",\"tr\":\"Şurupta konserve jackfruit\"}",
+    "externalId": "usda-sr-168190"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Frozen edamame (unprepared)\",\"preferredUnit\":\"g\",\"tr\":\"Dondurulmuş edamame (hazırlanmamış)\"}",
+    "externalId": "usda-sr-168410"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Beef brisket (lean, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ dana döşü (yağsız)\"}",
+    "externalId": "usda-sr-168607"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground beef (70% lean, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yağ oranı %30 çiğ dana kıyması\"}",
+    "externalId": "usda-sr-168652"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Sweetened vanilla almond milk\",\"preferredUnit\":\"mL\",\"tr\":\"Vanilya aromalı şekerli badem sütü\"}",
+    "externalId": "usda-sr-168751"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Medium rye flour\",\"preferredUnit\":\"g\",\"tr\":\"Orta öğütülmüş çavdar unu\"}",
+    "externalId": "usda-sr-168886"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Bleached all-purpose wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Ağartılmış çok amaçlı beyaz buğday unu\"}",
+    "externalId": "usda-sr-168894"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Self-rising white wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Kendiliğinden kabaran beyaz buğday unu\"}",
+    "externalId": "usda-sr-168895"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White bread wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz ekmeklik buğday unu\"}",
+    "externalId": "usda-sr-168896"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Canned asparagus (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve kuşkonmaz\"}",
+    "externalId": "usda-sr-169207"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Canned bamboo shoots (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve bambu filizi\"}",
+    "externalId": "usda-sr-169212"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Green soybeans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil soya fasulyesi (çiğ)\"}",
+    "externalId": "usda-sr-169282"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Raw soybean sprouts\",\"preferredUnit\":\"g\",\"tr\":\"Soya filizi (çiğ)\"}",
+    "externalId": "usda-sr-169284"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Degermed yellow corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Rüşeymi alınmış sarı mısır unu\"}",
+    "externalId": "usda-sr-169695"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain yellow cornmeal\",\"preferredUnit\":\"g\",\"tr\":\"Tam tahıllı sarı mısır irmiği\"}",
+    "externalId": "usda-sr-169697"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Canned white hominy\",\"preferredUnit\":\"g\",\"tr\":\"Konserve beyaz hominy mısırı\"}",
+    "externalId": "usda-sr-169701"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Rice bran\",\"preferredUnit\":\"g\",\"tr\":\"Pirinç kepeği\"}",
+    "externalId": "usda-sr-169713"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dry tapioca pearls\",\"preferredUnit\":\"g\",\"tr\":\"Kuru tapiyoka incileri\"}",
+    "externalId": "usda-sr-169717"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White cake wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz pastalık buğday unu\"}",
+    "externalId": "usda-sr-169723"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Sprouted wheat\",\"preferredUnit\":\"g\",\"tr\":\"Filizlendirilmiş buğday\"}",
+    "externalId": "usda-sr-169725"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Spelt wheat (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Spelt buğdayı (pişmemiş)\"}",
+    "externalId": "usda-sr-169745"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Teff (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Teff (pişmemiş)\"}",
+    "externalId": "usda-sr-169747"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pickled hot peppers\",\"preferredUnit\":\"g\",\"tr\":\"Konserve acı biber turşusu\"}",
+    "externalId": "usda-sr-169766"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Japanese-style fresh pickled cabbage\",\"preferredUnit\":\"g\",\"tr\":\"Japon usulü taze lahana turşusu\"}",
+    "externalId": "usda-sr-169890"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Pickled eggplant\",\"preferredUnit\":\"g\",\"tr\":\"Patlıcan turşusu\"}",
+    "externalId": "usda-sr-169892"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Raw mung bean sprouts\",\"preferredUnit\":\"g\",\"tr\":\"Maş fasulyesi filizi (çiğ)\"}",
+    "externalId": "usda-sr-169957"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Canned beets (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve pancar\"}",
+    "externalId": "usda-sr-169966"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Yam (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yam kökü (çiğ)\"}",
+    "externalId": "usda-sr-170071"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Jicama (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jicama (çiğ)\"}",
+    "externalId": "usda-sr-170073"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hot red chili pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı acı chili biberi (çiğ)\"}",
+    "externalId": "usda-sr-170106"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Unsalted toasted sesame kernels\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz kavrulmuş susam içi\"}",
+    "externalId": "usda-sr-170152"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Unsalted sunflower seed butter\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz ayçiçeği çekirdeği ezmesi\"}",
+    "externalId": "usda-sr-170155"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Canned sweetened coconut cream\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve şekerli Hindistan cevizi kreması\"}",
+    "externalId": "usda-sr-170171"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Roasted European chestnuts\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş Avrupa kestanesi\"}",
+    "externalId": "usda-sr-170190"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Crude corn bran\",\"preferredUnit\":\"g\",\"tr\":\"Ham mısır kepeği\"}",
+    "externalId": "usda-sr-170289"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Beet greens (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Pancar yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-170375"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Cabbage kimchi\",\"preferredUnit\":\"g\",\"tr\":\"Kimchi lahana turşusu\"}",
+    "externalId": "usda-sr-170392"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pickled beets\",\"preferredUnit\":\"g\",\"tr\":\"Konserve pancar turşusu\"}",
+    "externalId": "usda-sr-170480"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hot green chili pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil acı chili biberi (çiğ)\"}",
+    "externalId": "usda-sr-170497"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Dehydrated carrot\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş havuç\"}",
+    "externalId": "usda-sr-170500"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Full-fat acorn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam yağlı meşe palamudu unu\"}",
+    "externalId": "usda-sr-170566"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Toasted desiccated coconut meat\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş kuru Hindistan cevizi eti\"}",
+    "externalId": "usda-sr-170579"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Blanched hazelnuts\",\"preferredUnit\":\"g\",\"tr\":\"Zarı soyulmuş fındık\"}",
+    "externalId": "usda-sr-170582"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dried pili nuts\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pili fıstığı\"}",
+    "externalId": "usda-sr-170590"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Dried pinyon pine nuts\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pinyon çam fıstığı\"}",
+    "externalId": "usda-sr-170592"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Low-moisture whole-milk mozzarella\",\"preferredUnit\":\"g\",\"tr\":\"Düşük nemli tam yağlı mozzarella\"}",
+    "externalId": "usda-sr-170846"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Plain low-fat yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade az yağlı yoğurt\"}",
+    "externalId": "usda-sr-170886"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Plain skim-milk yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade yağsız yoğurt\"}",
+    "externalId": "usda-sr-170887"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Palm oil\",\"preferredUnit\":\"mL\",\"tr\":\"Palm yağı\"}",
+    "externalId": "usda-sr-171015"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Honey mustard dressing\",\"preferredUnit\":\"g\",\"tr\":\"Ballı hardal sosu\"}",
+    "externalId": "usda-sr-171043"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Part-skim ricotta cheese\",\"preferredUnit\":\"g\",\"tr\":\"Yarım yağlı sütten ricotta peyniri\"}",
+    "externalId": "usda-sr-171248"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Tea seed oil\",\"preferredUnit\":\"mL\",\"tr\":\"Çay tohumu yağı\"}",
+    "externalId": "usda-sr-171425"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Shelf-stable pesto sauce\",\"preferredUnit\":\"g\",\"tr\":\"Raf ömürlü hazır pesto sosu\"}",
+    "externalId": "usda-sr-171580"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Canned red hot chili sauce\",\"preferredUnit\":\"g\",\"tr\":\"Konserve kırmızı acı biber sosu\"}",
+    "externalId": "usda-sr-171604"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Prepared espresso coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Espresso kahve (hazırlanmış)\"}",
+    "externalId": "usda-sr-171891"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened ready-to-drink green tea\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz hazır yeşil çay (içecek)\"}",
+    "externalId": "usda-sr-171911"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso añejo cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso añejo peyniri\"}",
+    "externalId": "usda-sr-172201"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso seco cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso seco peyniri\"}",
+    "externalId": "usda-sr-172222"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Prepared yellow mustard\",\"preferredUnit\":\"g\",\"tr\":\"Sarı hardal (hazır)\"}",
+    "externalId": "usda-sr-172234"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Dried spearmint\",\"preferredUnit\":\"g\",\"tr\":\"Kuru yeşil nane\"}",
+    "externalId": "usda-sr-172239"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Sazon seasoning (coriander and annatto)\",\"preferredUnit\":\"g\",\"tr\":\"Sazon baharat karışımı (kişniş ve annatto)\"}",
+    "externalId": "usda-sr-172242"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dry taco seasoning mix\",\"preferredUnit\":\"g\",\"tr\":\"Taco baharat karışımı (kuru)\"}",
+    "externalId": "usda-sr-172243"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Mustard oil\",\"preferredUnit\":\"mL\",\"tr\":\"Hardal yağı\"}",
+    "externalId": "usda-sr-172337"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Duck meat (skinless, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ ördek eti (derisiz)\"}",
+    "externalId": "usda-sr-172410"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Boiled lentils (without salt)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz haşlanmış mercimek\"}",
+    "externalId": "usda-sr-172421"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Strawberry guava (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çilek guavası (çiğ)\"}",
+    "externalId": "usda-sr-173045"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"chocolate-cocoa\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened shelf-stable chocolate almond milk\",\"preferredUnit\":\"mL\",\"tr\":\"Raf ömürlü şekersiz çikolatalı badem sütü\"}",
+    "externalId": "usda-sr-173187"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen lemonade concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş limonata konsantresi\"}",
+    "externalId": "usda-sr-173216"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Cheshire cheese\",\"preferredUnit\":\"g\",\"tr\":\"Cheshire peyniri\"}",
+    "externalId": "usda-sr-173415"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Colby cheese\",\"preferredUnit\":\"g\",\"tr\":\"Colby peyniri\"}",
+    "externalId": "usda-sr-173416"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Semisoft goat cheese\",\"preferredUnit\":\"g\",\"tr\":\"Yarı yumuşak keçi peyniri\"}",
+    "externalId": "usda-sr-173433"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso asadero cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso asadero peyniri\"}",
+    "externalId": "usda-sr-173437"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso Chihuahua cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso Chihuahua peyniri\"}",
+    "externalId": "usda-sr-173438"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh thyme\",\"preferredUnit\":\"g\",\"tr\":\"Taze kekik\"}",
+    "externalId": "usda-sr-173470"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\"],\"dimensions\":[\"volume\"],\"en\":\"Vanilla extract\",\"preferredUnit\":\"mL\",\"tr\":\"Vanilya özütü\"}",
+    "externalId": "usda-sr-173471"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Prepared horseradish\",\"preferredUnit\":\"g\",\"tr\":\"Hazır yaban turpu\"}",
+    "externalId": "usda-sr-173472"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh rosemary\",\"preferredUnit\":\"g\",\"tr\":\"Taze biberiye\"}",
+    "externalId": "usda-sr-173473"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh peppermint\",\"preferredUnit\":\"g\",\"tr\":\"Taze biber nanesi\"}",
+    "externalId": "usda-sr-173474"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Dry chili seasoning mix\",\"preferredUnit\":\"g\",\"tr\":\"Chili baharat karışımı (kuru)\"}",
+    "externalId": "usda-sr-173476"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned fava beans\",\"preferredUnit\":\"g\",\"tr\":\"Konserve bakla\"}",
+    "externalId": "usda-sr-173754"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned chickpeas (drained and rinsed)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülüp yıkanmış konserve nohut\"}",
+    "externalId": "usda-sr-173801"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Ready-to-serve sweet and sour sauce\",\"preferredUnit\":\"g\",\"tr\":\"Hazır tatlı-ekşi sos\"}",
+    "externalId": "usda-sr-174066"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Prepared decaffeinated espresso\",\"preferredUnit\":\"mL\",\"tr\":\"Kafeinsiz espresso kahve (hazırlanmış)\"}",
+    "externalId": "usda-sr-174125"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Ready-to-drink black tea\",\"preferredUnit\":\"mL\",\"tr\":\"Hazır siyah çay (içecek)\"}",
+    "externalId": "usda-sr-174144"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Cooked octopus\",\"preferredUnit\":\"g\",\"tr\":\"Pişmiş ahtapot\"}",
+    "externalId": "usda-sr-174249"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Large lima beans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İri lima fasulyesi (çiğ)\"}",
+    "externalId": "usda-sr-174252"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Baby lima beans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Küçük lima fasulyesi (çiğ)\"}",
+    "externalId": "usda-sr-174255"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned red kidney beans (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve kırmızı kidney fasulyesi\"}",
+    "externalId": "usda-sr-174285"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pinto beans (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve pinto fasulyesi\"}",
+    "externalId": "usda-sr-174286"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Jackfruit (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jackfruit (çiğ)\"}",
+    "externalId": "usda-sr-174687"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Chocolate almond milk (ready to drink)\",\"preferredUnit\":\"mL\",\"tr\":\"Çikolatalı badem sütü (hazır içecek)\"}",
+    "externalId": "usda-sr-174820"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"mass\"],\"en\":\"Lemonade powder\",\"preferredUnit\":\"g\",\"tr\":\"Limonata tozu\"}",
+    "externalId": "usda-sr-174858"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Canned Pacific sardines in tomato sauce\",\"preferredUnit\":\"g\",\"tr\":\"Domates soslu konserve Pasifik sardalyası\"}",
+    "externalId": "usda-sr-175140"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground veal (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ süt danası kıyması\"}",
+    "externalId": "usda-sr-175290"
+  }
+]

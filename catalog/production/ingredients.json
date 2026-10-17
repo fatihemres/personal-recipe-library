@@ -2399,6 +2399,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Tofu yogurt",
+      "categories": [
+        "dairy-alternatives",
+        "fermented"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "899ab723-8895-8796-ae32-93ee77f1522e",
+      "ingredientType": "food",
+      "key": "usda-sr-167722",
+      "names": {
+        "en": "Tofu yogurt",
+        "tr": "Tofu yoğurdu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Tofu yogurt",
+          "externalId": "167722",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"fermented\"],\"dimensions\":[\"mass\"],\"en\":\"Tofu yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Tofu yoğurdu\"}",
+          "externalId": "usda-sr-167722",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Sake rice wine",
       "categories": [
         "wines"
@@ -2980,6 +3015,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Canned tamarind nectar",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "37de2b3f-6ffb-87e4-ba3b-48f5fcc945f4",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167786",
+      "names": {
+        "en": "Canned tamarind nectar",
+        "tr": "Konserve demirhindi nektarı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Tamarind nectar, canned",
+          "externalId": "167786",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Canned tamarind nectar\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve demirhindi nektarı\"}",
+          "externalId": "usda-sr-167786",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Pomegranate juice (bottled)",
       "categories": [
         "juices"
@@ -3008,6 +3077,40 @@
           "externalId": "usda-sr-167787",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pork belly (raw)",
+      "categories": [
+        "meat"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "e034eca1-b4f6-8160-9c79-8583ed0c721b",
+      "ingredientType": "food",
+      "key": "usda-sr-167812",
+      "names": {
+        "en": "Pork belly (raw)",
+        "tr": "Çiğ domuz göbeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Pork, fresh, belly, raw",
+          "externalId": "167812",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Pork belly (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ domuz göbeği\"}",
+          "externalId": "usda-sr-167812",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -3081,6 +3184,41 @@
           "externalId": "usda-sr-168117",
           "sourceId": "recipeatlas-curation-m3d1",
           "sourceVersion": "production-4-reviewed"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Vital wheat gluten",
+      "categories": [
+        "baking",
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "72924b82-ff76-888e-88ca-a417530a2cb8",
+      "ingredientType": "food",
+      "key": "usda-sr-168147",
+      "names": {
+        "en": "Vital wheat gluten",
+        "tr": "Vital buğday gluteni"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Vital wheat gluten",
+          "externalId": "168147",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\",\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Vital wheat gluten\",\"preferredUnit\":\"g\",\"tr\":\"Vital buğday gluteni\"}",
+          "externalId": "usda-sr-168147",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -3526,6 +3664,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Canned jackfruit in syrup",
+      "categories": [
+        "fruit"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1aaf8bac-6bf9-8ca1-9a76-651dcc28f940",
+      "ingredientType": "food",
+      "key": "usda-sr-168190",
+      "names": {
+        "en": "Canned jackfruit in syrup",
+        "tr": "Şurupta konserve jackfruit"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Jackfruit, canned, syrup pack",
+          "externalId": "168190",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Canned jackfruit in syrup\",\"preferredUnit\":\"g\",\"tr\":\"Şurupta konserve jackfruit\"}",
+          "externalId": "usda-sr-168190",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Medjool dates",
       "categories": [
         "fruit",
@@ -3811,6 +3983,41 @@
           "externalId": "usda-sr-168409",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Frozen edamame (unprepared)",
+      "categories": [
+        "legumes",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ee8e3663-e980-8b62-a76a-698d919ab802",
+      "ingredientType": "food",
+      "key": "usda-sr-168410",
+      "names": {
+        "en": "Frozen edamame (unprepared)",
+        "tr": "Dondurulmuş edamame (hazırlanmamış)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Edamame, frozen, unprepared",
+          "externalId": "168410",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Frozen edamame (unprepared)\",\"preferredUnit\":\"g\",\"tr\":\"Dondurulmuş edamame (hazırlanmamış)\"}",
+          "externalId": "usda-sr-168410",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -5121,6 +5328,74 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Beef brisket (lean, raw)",
+      "categories": [
+        "meat"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5b7a6a62-448b-8f93-96a9-43e5217d6994",
+      "ingredientType": "food",
+      "key": "usda-sr-168607",
+      "names": {
+        "en": "Beef brisket (lean, raw)",
+        "tr": "Çiğ dana döşü (yağsız)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beef, brisket, whole, separable lean only, all grades, raw",
+          "externalId": "168607",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Beef brisket (lean, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ dana döşü (yağsız)\"}",
+          "externalId": "usda-sr-168607",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Ground beef (70% lean, raw)",
+      "categories": [
+        "meat"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c48ab54c-1c3a-8b1e-a013-d82348f7c502",
+      "ingredientType": "food",
+      "key": "usda-sr-168652",
+      "names": {
+        "en": "Ground beef (70% lean, raw)",
+        "tr": "Yağ oranı %30 çiğ dana kıyması"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beef, ground, 70% lean meat / 30% fat, raw",
+          "externalId": "168652",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground beef (70% lean, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yağ oranı %30 çiğ dana kıyması\"}",
+          "externalId": "usda-sr-168652",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -5189,6 +5464,40 @@
           "externalId": "usda-sr-168749",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sweetened vanilla almond milk",
+      "categories": [
+        "dairy-alternatives"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "29c90ecd-63d2-8f00-8380-f4315a7c7e30",
+      "ingredientType": "beverage",
+      "key": "usda-sr-168751",
+      "names": {
+        "en": "Sweetened vanilla almond milk",
+        "tr": "Vanilya aromalı şekerli badem sütü"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, almond milk, sweetened, vanilla flavor, ready-to-drink",
+          "externalId": "168751",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Sweetened vanilla almond milk\",\"preferredUnit\":\"mL\",\"tr\":\"Vanilya aromalı şekerli badem sütü\"}",
+          "externalId": "usda-sr-168751",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -5541,6 +5850,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Medium rye flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "dfe17093-409e-8f26-b578-6eedb7935973",
+      "ingredientType": "food",
+      "key": "usda-sr-168886",
+      "names": {
+        "en": "Medium rye flour",
+        "tr": "Orta öğütülmüş çavdar unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Rye flour, medium",
+          "externalId": "168886",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Medium rye flour\",\"preferredUnit\":\"g\",\"tr\":\"Orta öğütülmüş çavdar unu\"}",
+          "externalId": "usda-sr-168886",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Rye flour (light)",
       "categories": [
         "baking",
@@ -5673,6 +6016,108 @@
           "externalId": "usda-sr-168893",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Bleached all-purpose wheat flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "bac56e7a-5d80-8040-b7f8-8b55cc62d48b",
+      "ingredientType": "food",
+      "key": "usda-sr-168894",
+      "names": {
+        "en": "Bleached all-purpose wheat flour",
+        "tr": "Ağartılmış çok amaçlı beyaz buğday unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wheat flour, white, all-purpose, enriched, bleached",
+          "externalId": "168894",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Bleached all-purpose wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Ağartılmış çok amaçlı beyaz buğday unu\"}",
+          "externalId": "usda-sr-168894",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Self-rising white wheat flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "73d31d1b-bcd9-8c5c-8797-d94636deda53",
+      "ingredientType": "food",
+      "key": "usda-sr-168895",
+      "names": {
+        "en": "Self-rising white wheat flour",
+        "tr": "Kendiliğinden kabaran beyaz buğday unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wheat flour, white, all-purpose, self-rising, enriched",
+          "externalId": "168895",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Self-rising white wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Kendiliğinden kabaran beyaz buğday unu\"}",
+          "externalId": "usda-sr-168895",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "White bread wheat flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "79ca4608-ac39-86f4-a00c-a47341a0afd9",
+      "ingredientType": "food",
+      "key": "usda-sr-168896",
+      "names": {
+        "en": "White bread wheat flour",
+        "tr": "Beyaz ekmeklik buğday unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wheat flour, white, bread, enriched",
+          "externalId": "168896",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White bread wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz ekmeklik buğday unu\"}",
+          "externalId": "usda-sr-168896",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -6868,6 +7313,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Canned asparagus (drained)",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f23cf8a2-6b06-8857-b028-8fc98d5f4639",
+      "ingredientType": "food",
+      "key": "usda-sr-169207",
+      "names": {
+        "en": "Canned asparagus (drained)",
+        "tr": "Süzülmüş konserve kuşkonmaz"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Asparagus, canned, drained solids",
+          "externalId": "169207",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Canned asparagus (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve kuşkonmaz\"}",
+          "externalId": "usda-sr-169207",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Bamboo shoots (raw)",
       "categories": [
         "vegetables",
@@ -6897,6 +7376,41 @@
           "externalId": "usda-sr-169210",
           "sourceId": "recipeatlas-curation-m3d1",
           "sourceVersion": "production-4-reviewed"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned bamboo shoots (drained)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "67877e7c-eacb-835b-a16c-ce0700e255bb",
+      "ingredientType": "food",
+      "key": "usda-sr-169212",
+      "names": {
+        "en": "Canned bamboo shoots (drained)",
+        "tr": "Süzülmüş konserve bambu filizi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Bamboo shoots, canned, drained solids",
+          "externalId": "169212",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Canned bamboo shoots (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve bambu filizi\"}",
+          "externalId": "usda-sr-169212",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -7732,6 +8246,74 @@
           "externalId": "usda-sr-169279",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Green soybeans (raw)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "bfbafa9d-dc41-85f7-b5eb-ebbd60dc32be",
+      "ingredientType": "food",
+      "key": "usda-sr-169282",
+      "names": {
+        "en": "Green soybeans (raw)",
+        "tr": "Yeşil soya fasulyesi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Soybeans, green, raw",
+          "externalId": "169282",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Green soybeans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil soya fasulyesi (çiğ)\"}",
+          "externalId": "usda-sr-169282",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Raw soybean sprouts",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "24f52560-eb24-898e-af9d-3c6bed9a299f",
+      "ingredientType": "food",
+      "key": "usda-sr-169284",
+      "names": {
+        "en": "Raw soybean sprouts",
+        "tr": "Soya filizi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Soybeans, mature seeds, sprouted, raw",
+          "externalId": "169284",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Raw soybean sprouts\",\"preferredUnit\":\"g\",\"tr\":\"Soya filizi (çiğ)\"}",
+          "externalId": "usda-sr-169284",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -8777,6 +9359,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Degermed yellow corn flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "60d910cf-1811-8d0d-bdc5-27c42ffbd130",
+      "ingredientType": "food",
+      "key": "usda-sr-169695",
+      "names": {
+        "en": "Degermed yellow corn flour",
+        "tr": "Rüşeymi alınmış sarı mısır unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Corn flour, yellow, degermed, unenriched",
+          "externalId": "169695",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Degermed yellow corn flour\",\"preferredUnit\":\"g\",\"tr\":\"Rüşeymi alınmış sarı mısır unu\"}",
+          "externalId": "usda-sr-169695",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -8812,6 +9428,40 @@
           "externalId": "usda-sr-169696",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Whole-grain yellow cornmeal",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "6412b348-1021-8ef4-99cc-d986f5f930ea",
+      "ingredientType": "food",
+      "key": "usda-sr-169697",
+      "names": {
+        "en": "Whole-grain yellow cornmeal",
+        "tr": "Tam tahıllı sarı mısır irmiği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cornmeal, whole-grain, yellow",
+          "externalId": "169697",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Whole-grain yellow cornmeal\",\"preferredUnit\":\"g\",\"tr\":\"Tam tahıllı sarı mısır irmiği\"}",
+          "externalId": "usda-sr-169697",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -8890,6 +9540,41 @@
           "externalId": "usda-sr-169699",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned white hominy",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "d1988ece-a667-84f3-a214-25a71a31c6b8",
+      "ingredientType": "food",
+      "key": "usda-sr-169701",
+      "names": {
+        "en": "Canned white hominy",
+        "tr": "Konserve beyaz hominy mısırı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Hominy, canned, white",
+          "externalId": "169701",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Canned white hominy\",\"preferredUnit\":\"g\",\"tr\":\"Konserve beyaz hominy mısırı\"}",
+          "externalId": "usda-sr-169701",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -9036,6 +9721,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Rice bran",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "27f42a1b-3949-8b56-8621-87243b5aa1c6",
+      "ingredientType": "food",
+      "key": "usda-sr-169713",
+      "names": {
+        "en": "Rice bran",
+        "tr": "Pirinç kepeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Rice bran, crude",
+          "externalId": "169713",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Rice bran\",\"preferredUnit\":\"g\",\"tr\":\"Pirinç kepeği\"}",
+          "externalId": "usda-sr-169713",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -9111,6 +9830,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Dry tapioca pearls",
+      "categories": [
+        "baking",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "e865bfcc-13f4-8c49-9e9b-e33521db3327",
+      "ingredientType": "food",
+      "key": "usda-sr-169717",
+      "names": {
+        "en": "Dry tapioca pearls",
+        "tr": "Kuru tapiyoka incileri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Tapioca, pearl, dry",
+          "externalId": "169717",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dry tapioca pearls\",\"preferredUnit\":\"g\",\"tr\":\"Kuru tapiyoka incileri\"}",
+          "externalId": "usda-sr-169717",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Durum wheat",
       "categories": [
         "grains"
@@ -9173,6 +9927,74 @@
           "externalId": "usda-sr-169722",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "White cake wheat flour",
+      "categories": [
+        "flours"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a4ff016c-0d83-89eb-bea3-34700f1fe00f",
+      "ingredientType": "food",
+      "key": "usda-sr-169723",
+      "names": {
+        "en": "White cake wheat flour",
+        "tr": "Beyaz pastalık buğday unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wheat flour, white, cake, enriched",
+          "externalId": "169723",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"White cake wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz pastalık buğday unu\"}",
+          "externalId": "usda-sr-169723",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sprouted wheat",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "455711e3-42dd-8617-a4bd-d32ea83cd262",
+      "ingredientType": "food",
+      "key": "usda-sr-169725",
+      "names": {
+        "en": "Sprouted wheat",
+        "tr": "Filizlendirilmiş buğday"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wheat, sprouted",
+          "externalId": "169725",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Sprouted wheat\",\"preferredUnit\":\"g\",\"tr\":\"Filizlendirilmiş buğday\"}",
+          "externalId": "usda-sr-169725",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -9462,6 +10284,75 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Spelt wheat (uncooked)",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a8ada332-633e-8d59-9418-1c91581af16a",
+      "ingredientType": "food",
+      "key": "usda-sr-169745",
+      "names": {
+        "en": "Spelt wheat (uncooked)",
+        "tr": "Spelt buğdayı (pişmemiş)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Spelt, uncooked",
+          "externalId": "169745",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Spelt wheat (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Spelt buğdayı (pişmemiş)\"}",
+          "externalId": "usda-sr-169745",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Teff (uncooked)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "98bfd639-818a-8bf2-b245-e94d1186d068",
+      "ingredientType": "food",
+      "key": "usda-sr-169747",
+      "names": {
+        "en": "Teff (uncooked)",
+        "tr": "Teff (pişmemiş)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Teff, uncooked",
+          "externalId": "169747",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Teff (uncooked)\",\"preferredUnit\":\"g\",\"tr\":\"Teff (pişmemiş)\"}",
+          "externalId": "usda-sr-169747",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Whole-grain white corn flour",
       "categories": [
         "baking",
@@ -9595,6 +10486,109 @@
           "externalId": "usda-sr-169761",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned pickled hot peppers",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "21f333d4-cf31-814d-b4da-ec48ba80ee0a",
+      "ingredientType": "food",
+      "key": "usda-sr-169766",
+      "names": {
+        "en": "Canned pickled hot peppers",
+        "tr": "Konserve acı biber turşusu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, hot pickled, canned",
+          "externalId": "169766",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pickled hot peppers\",\"preferredUnit\":\"g\",\"tr\":\"Konserve acı biber turşusu\"}",
+          "externalId": "usda-sr-169766",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Japanese-style fresh pickled cabbage",
+      "categories": [
+        "condiments",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "3c6816b8-ed1c-8438-8e31-4b1d83441c2e",
+      "ingredientType": "food",
+      "key": "usda-sr-169890",
+      "names": {
+        "en": "Japanese-style fresh pickled cabbage",
+        "tr": "Japon usulü taze lahana turşusu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cabbage, japanese style, fresh, pickled",
+          "externalId": "169890",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Japanese-style fresh pickled cabbage\",\"preferredUnit\":\"g\",\"tr\":\"Japon usulü taze lahana turşusu\"}",
+          "externalId": "usda-sr-169890",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pickled eggplant",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "40a7665a-f1a7-8282-b80d-ef6755f5927d",
+      "ingredientType": "food",
+      "key": "usda-sr-169892",
+      "names": {
+        "en": "Pickled eggplant",
+        "tr": "Patlıcan turşusu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Eggplant, pickled",
+          "externalId": "169892",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Pickled eggplant\",\"preferredUnit\":\"g\",\"tr\":\"Patlıcan turşusu\"}",
+          "externalId": "usda-sr-169892",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -10162,6 +11156,41 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Raw mung bean sprouts",
+      "categories": [
+        "legumes",
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f7612655-519b-883e-ab7e-5c88711dcf0b",
+      "ingredientType": "food",
+      "key": "usda-sr-169957",
+      "names": {
+        "en": "Raw mung bean sprouts",
+        "tr": "Maş fasulyesi filizi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mung beans, mature seeds, sprouted, raw",
+          "externalId": "169957",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Raw mung bean sprouts\",\"preferredUnit\":\"g\",\"tr\":\"Maş fasulyesi filizi (çiğ)\"}",
+          "externalId": "usda-sr-169957",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -10197,6 +11226,40 @@
           "externalId": "usda-sr-169961",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned beets (drained)",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2f6fbe13-943c-8fff-9fbc-2acc8d6de967",
+      "ingredientType": "food",
+      "key": "usda-sr-169966",
+      "names": {
+        "en": "Canned beets (drained)",
+        "tr": "Süzülmüş konserve pancar"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beets, canned, drained solids",
+          "externalId": "169966",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Canned beets (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve pancar\"}",
+          "externalId": "usda-sr-169966",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -10924,6 +11987,76 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Yam (raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7653292f-56a1-8e4d-af1a-d3f9b3f4972d",
+      "ingredientType": "food",
+      "key": "usda-sr-170071",
+      "names": {
+        "en": "Yam (raw)",
+        "tr": "Yam kökü (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Yam, raw",
+          "externalId": "170071",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Yam (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yam kökü (çiğ)\"}",
+          "externalId": "usda-sr-170071",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Jicama (raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "4deeb51e-f835-8235-99a1-e5d627d20eb2",
+      "ingredientType": "food",
+      "key": "usda-sr-170073",
+      "names": {
+        "en": "Jicama (raw)",
+        "tr": "Jicama (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Yambean (jicama), raw",
+          "externalId": "170073",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Jicama (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jicama (çiğ)\"}",
+          "externalId": "usda-sr-170073",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Chives, freeze-dried",
       "categories": [
         "herbs"
@@ -11088,6 +12221,40 @@
           "externalId": "usda-sr-170096",
           "sourceId": "recipeatlas-curation-m3d1",
           "sourceVersion": "production-4-reviewed"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Hot red chili pepper (raw)",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "44a26bf6-6cba-8551-85fc-df419c91ea6c",
+      "ingredientType": "food",
+      "key": "usda-sr-170106",
+      "names": {
+        "en": "Hot red chili pepper (raw)",
+        "tr": "Kırmızı acı chili biberi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, hot chili, red, raw",
+          "externalId": "170106",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hot red chili pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı acı chili biberi (çiğ)\"}",
+          "externalId": "usda-sr-170106",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -11276,6 +12443,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Unsalted toasted sesame kernels",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "d4d02c90-e153-8d8d-9bdc-acf905da09c1",
+      "ingredientType": "food",
+      "key": "usda-sr-170152",
+      "names": {
+        "en": "Unsalted toasted sesame kernels",
+        "tr": "Tuzsuz kavrulmuş susam içi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Seeds, sesame seed kernels, toasted, without salt added (decorticated)",
+          "externalId": "170152",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Unsalted toasted sesame kernels\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz kavrulmuş susam içi\"}",
+          "externalId": "usda-sr-170152",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Seeds, sesame flour, partially defatted",
       "categories": [
         "flours"
@@ -11304,6 +12505,40 @@
           "externalId": "usda-sr-170153",
           "sourceId": "recipeatlas-curation-m3d2b",
           "sourceVersion": "production-5"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Unsalted sunflower seed butter",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "0fa94c37-b5e5-87aa-b23e-1679c99f2f56",
+      "ingredientType": "food",
+      "key": "usda-sr-170155",
+      "names": {
+        "en": "Unsalted sunflower seed butter",
+        "tr": "Tuzsuz ayçiçeği çekirdeği ezmesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Seeds, sunflower seed butter, without salt",
+          "externalId": "170155",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Unsalted sunflower seed butter\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz ayçiçeği çekirdeği ezmesi\"}",
+          "externalId": "usda-sr-170155",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -11557,6 +12792,40 @@
           "externalId": "usda-sr-170170",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned sweetened coconut cream",
+      "categories": [
+        "dairy-alternatives"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "13fc2675-082b-8d0b-b22d-9430d031c756",
+      "ingredientType": "food",
+      "key": "usda-sr-170171",
+      "names": {
+        "en": "Canned sweetened coconut cream",
+        "tr": "Konserve şekerli Hindistan cevizi kreması"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Nuts, coconut cream, canned, sweetened",
+          "externalId": "170171",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Canned sweetened coconut cream\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve şekerli Hindistan cevizi kreması\"}",
+          "externalId": "usda-sr-170171",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -11852,6 +13121,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Roasted European chestnuts",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7d51acdd-6fb3-815e-bf54-bd880037dc26",
+      "ingredientType": "food",
+      "key": "usda-sr-170190",
+      "names": {
+        "en": "Roasted European chestnuts",
+        "tr": "Kavrulmuş Avrupa kestanesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, chestnuts, european, roasted",
+          "externalId": "170190",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Roasted European chestnuts\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş Avrupa kestanesi\"}",
+          "externalId": "usda-sr-170190",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Beef tongue (raw)",
       "categories": [
         "meat"
@@ -12136,6 +13439,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Crude corn bran",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "cdb1f9be-0b6a-83aa-93d6-1b91217135ba",
+      "ingredientType": "food",
+      "key": "usda-sr-170289",
+      "names": {
+        "en": "Crude corn bran",
+        "tr": "Ham mısır kepeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Corn bran, crude",
+          "externalId": "170289",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Crude corn bran\",\"preferredUnit\":\"g\",\"tr\":\"Ham mısır kepeği\"}",
+          "externalId": "usda-sr-170289",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -12171,6 +13508,40 @@
           "externalId": "usda-sr-170290",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Beet greens (raw)",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "b31001a7-8518-8afd-9acf-ce2c1f940503",
+      "ingredientType": "food",
+      "key": "usda-sr-170375",
+      "names": {
+        "en": "Beet greens (raw)",
+        "tr": "Pancar yaprağı (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beet greens, raw",
+          "externalId": "170375",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Beet greens (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Pancar yaprağı (çiğ)\"}",
+          "externalId": "usda-sr-170375",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -12319,6 +13690,41 @@
           "externalId": "usda-sr-170388",
           "sourceId": "recipeatlas-curation-m3d1",
           "sourceVersion": "production-4-reviewed"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cabbage kimchi",
+      "categories": [
+        "fermented",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1d4c6c1e-5fe5-8555-b2ff-40e23714c19a",
+      "ingredientType": "food",
+      "key": "usda-sr-170392",
+      "names": {
+        "en": "Cabbage kimchi",
+        "tr": "Kimchi lahana turşusu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cabbage, kimchi",
+          "externalId": "170392",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Cabbage kimchi\",\"preferredUnit\":\"g\",\"tr\":\"Kimchi lahana turşusu\"}",
+          "externalId": "usda-sr-170392",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -12782,6 +14188,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Canned pickled beets",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "638f14f3-7887-8b8a-b321-ca304b8965d7",
+      "ingredientType": "food",
+      "key": "usda-sr-170480",
+      "names": {
+        "en": "Canned pickled beets",
+        "tr": "Konserve pancar turşusu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beets, pickled, canned, solids and liquids",
+          "externalId": "170480",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pickled beets\",\"preferredUnit\":\"g\",\"tr\":\"Konserve pancar turşusu\"}",
+          "externalId": "usda-sr-170480",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Leeks, (bulb and lower-leaf portion), freeze-dried",
       "categories": [
         "vegetables"
@@ -12883,6 +14323,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Hot green chili pepper (raw)",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f89d74c6-1e63-82cd-a8c5-36f785316c2c",
+      "ingredientType": "food",
+      "key": "usda-sr-170497",
+      "names": {
+        "en": "Hot green chili pepper (raw)",
+        "tr": "Yeşil acı chili biberi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, hot chili, green, raw",
+          "externalId": "170497",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hot green chili pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil acı chili biberi (çiğ)\"}",
+          "externalId": "usda-sr-170497",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -12918,6 +14392,40 @@
           "externalId": "usda-sr-170499",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dehydrated carrot",
+      "categories": [
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f22b22a4-581a-81da-88f5-c3a903f5fc20",
+      "ingredientType": "food",
+      "key": "usda-sr-170500",
+      "names": {
+        "en": "Dehydrated carrot",
+        "tr": "Kurutulmuş havuç"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Carrot, dehydrated",
+          "externalId": "170500",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Dehydrated carrot\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş havuç\"}",
+          "externalId": "usda-sr-170500",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -13069,6 +14577,41 @@
           "externalId": "usda-sr-170562",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Full-fat acorn flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "e09ce724-a5eb-89f0-8ede-ffd7e3fc79e4",
+      "ingredientType": "food",
+      "key": "usda-sr-170566",
+      "names": {
+        "en": "Full-fat acorn flour",
+        "tr": "Tam yağlı meşe palamudu unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, acorn flour, full fat",
+          "externalId": "170566",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Full-fat acorn flour\",\"preferredUnit\":\"g\",\"tr\":\"Tam yağlı meşe palamudu unu\"}",
+          "externalId": "usda-sr-170566",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -13255,6 +14798,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Toasted desiccated coconut meat",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "aeed0701-2085-8fc6-acca-2f503f73f51e",
+      "ingredientType": "food",
+      "key": "usda-sr-170579",
+      "names": {
+        "en": "Toasted desiccated coconut meat",
+        "tr": "Kavrulmuş kuru Hindistan cevizi eti"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, coconut meat, dried (desiccated), toasted",
+          "externalId": "170579",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Toasted desiccated coconut meat\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş kuru Hindistan cevizi eti\"}",
+          "externalId": "usda-sr-170579",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Coconut cream (raw)",
       "categories": [
         "dairy-alternatives"
@@ -13328,6 +14905,75 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Blanched hazelnuts",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2318750e-34db-80ee-a9e3-339f164d8797",
+      "ingredientType": "food",
+      "key": "usda-sr-170582",
+      "names": {
+        "en": "Blanched hazelnuts",
+        "tr": "Zarı soyulmuş fındık"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, hazelnuts or filberts, blanched",
+          "externalId": "170582",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Blanched hazelnuts\",\"preferredUnit\":\"g\",\"tr\":\"Zarı soyulmuş fındık\"}",
+          "externalId": "usda-sr-170582",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dried pili nuts",
+      "categories": [
+        "nuts-seeds",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1a576f25-b9d6-86ef-8d49-e92e5d04892c",
+      "ingredientType": "food",
+      "key": "usda-sr-170590",
+      "names": {
+        "en": "Dried pili nuts",
+        "tr": "Kuru pili fıstığı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, pilinuts, dried",
+          "externalId": "170590",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dried pili nuts\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pili fıstığı\"}",
+          "externalId": "usda-sr-170590",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -13362,6 +15008,40 @@
           "externalId": "usda-sr-170591",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dried pinyon pine nuts",
+      "categories": [
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a6b54075-f784-8387-8387-c4cebde16ca0",
+      "ingredientType": "food",
+      "key": "usda-sr-170592",
+      "names": {
+        "en": "Dried pinyon pine nuts",
+        "tr": "Kuru pinyon çam fıstığı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Nuts, pine nuts, pinyon, dried",
+          "externalId": "170592",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Dried pinyon pine nuts\",\"preferredUnit\":\"g\",\"tr\":\"Kuru pinyon çam fıstığı\"}",
+          "externalId": "usda-sr-170592",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -13725,6 +15405,40 @@
           "externalId": "usda-sr-170845",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Low-moisture whole-milk mozzarella",
+      "categories": [
+        "cheeses"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "0facc3b6-cc40-87b6-8f9a-83edb878ec91",
+      "ingredientType": "food",
+      "key": "usda-sr-170846",
+      "names": {
+        "en": "Low-moisture whole-milk mozzarella",
+        "tr": "Düşük nemli tam yağlı mozzarella"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, mozzarella, whole milk, low moisture",
+          "externalId": "170846",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Low-moisture whole-milk mozzarella\",\"preferredUnit\":\"g\",\"tr\":\"Düşük nemli tam yağlı mozzarella\"}",
+          "externalId": "usda-sr-170846",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -14095,6 +15809,74 @@
           "externalId": "usda-sr-170882",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Plain low-fat yogurt",
+      "categories": [
+        "dairy"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "61940598-bdfa-89ee-bac2-16719dee2828",
+      "ingredientType": "food",
+      "key": "usda-sr-170886",
+      "names": {
+        "en": "Plain low-fat yogurt",
+        "tr": "Sade az yağlı yoğurt"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Yogurt, plain, low fat",
+          "externalId": "170886",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Plain low-fat yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade az yağlı yoğurt\"}",
+          "externalId": "usda-sr-170886",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Plain skim-milk yogurt",
+      "categories": [
+        "dairy"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2031cfa0-7789-8a85-b3de-e6d00fd1aab1",
+      "ingredientType": "food",
+      "key": "usda-sr-170887",
+      "names": {
+        "en": "Plain skim-milk yogurt",
+        "tr": "Sade yağsız yoğurt"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Yogurt, plain, skim milk",
+          "externalId": "170887",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Plain skim-milk yogurt\",\"preferredUnit\":\"g\",\"tr\":\"Sade yağsız yoğurt\"}",
+          "externalId": "usda-sr-170887",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -15044,6 +16826,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Palm oil",
+      "categories": [
+        "oils"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "b3aa8c13-1224-8cf1-b1d8-ce1fe82e3605",
+      "ingredientType": "food",
+      "key": "usda-sr-171015",
+      "names": {
+        "en": "Palm oil",
+        "tr": "Palm yağı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Oil, palm",
+          "externalId": "171015",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Palm oil\",\"preferredUnit\":\"mL\",\"tr\":\"Palm yağı\"}",
+          "externalId": "usda-sr-171015",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Sesame oil",
       "categories": [
         "oils"
@@ -15246,6 +17062,40 @@
           "externalId": "usda-sr-171032",
           "sourceId": "recipeatlas-curation-m3d2b",
           "sourceVersion": "production-5"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Honey mustard dressing",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "3c73bb8e-a644-81e9-9e47-50ec872bec50",
+      "ingredientType": "food",
+      "key": "usda-sr-171043",
+      "names": {
+        "en": "Honey mustard dressing",
+        "tr": "Ballı hardal sosu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Salad dressing, honey mustard, regular",
+          "externalId": "171043",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Honey mustard dressing\",\"preferredUnit\":\"g\",\"tr\":\"Ballı hardal sosu\"}",
+          "externalId": "usda-sr-171043",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -15585,6 +17435,40 @@
           "externalId": "usda-sr-171246",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Part-skim ricotta cheese",
+      "categories": [
+        "cheeses"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "fead0da2-6c7c-8aca-bc13-21c1a152f64d",
+      "ingredientType": "food",
+      "key": "usda-sr-171248",
+      "names": {
+        "en": "Part-skim ricotta cheese",
+        "tr": "Yarım yağlı sütten ricotta peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, ricotta, part skim milk",
+          "externalId": "171248",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Part-skim ricotta cheese\",\"preferredUnit\":\"g\",\"tr\":\"Yarım yağlı sütten ricotta peyniri\"}",
+          "externalId": "usda-sr-171248",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -16710,6 +18594,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Tea seed oil",
+      "categories": [
+        "oils"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "6c35c21c-068c-8757-a674-a9deac0df718",
+      "ingredientType": "food",
+      "key": "usda-sr-171425",
+      "names": {
+        "en": "Tea seed oil",
+        "tr": "Çay tohumu yağı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Oil, teaseed",
+          "externalId": "171425",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Tea seed oil\",\"preferredUnit\":\"mL\",\"tr\":\"Çay tohumu yağı\"}",
+          "externalId": "usda-sr-171425",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Hazelnut oil",
       "categories": [
         "oils"
@@ -16848,6 +18766,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Shelf-stable pesto sauce",
+      "categories": [
+        "sauces"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "9aba4568-8c8a-8e35-9f93-b69c3b6109d4",
+      "ingredientType": "food",
+      "key": "usda-sr-171580",
+      "names": {
+        "en": "Shelf-stable pesto sauce",
+        "tr": "Raf ömürlü hazır pesto sosu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Sauce, pesto, ready-to-serve, shelf stable",
+          "externalId": "171580",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Shelf-stable pesto sauce\",\"preferredUnit\":\"g\",\"tr\":\"Raf ömürlü hazır pesto sosu\"}",
+          "externalId": "usda-sr-171580",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Sauce, tomato chili sauce, bottled, with salt",
       "categories": [
         "sauces"
@@ -16876,6 +18828,40 @@
           "externalId": "usda-sr-171595",
           "sourceId": "recipeatlas-curation-m3d2b",
           "sourceVersion": "production-5"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned red hot chili sauce",
+      "categories": [
+        "sauces"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5f03ff80-2f83-8f22-aa92-788bf5c44894",
+      "ingredientType": "food",
+      "key": "usda-sr-171604",
+      "names": {
+        "en": "Canned red hot chili sauce",
+        "tr": "Konserve kırmızı acı biber sosu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Sauce, peppers, hot, chili, mature red, canned",
+          "externalId": "171604",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Canned red hot chili sauce\",\"preferredUnit\":\"g\",\"tr\":\"Konserve kırmızı acı biber sosu\"}",
+          "externalId": "usda-sr-171604",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -17715,6 +19701,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Prepared espresso coffee",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "2ceff520-94f9-8a78-8942-865a9f58aa05",
+      "ingredientType": "beverage",
+      "key": "usda-sr-171891",
+      "names": {
+        "en": "Prepared espresso coffee",
+        "tr": "Espresso kahve (hazırlanmış)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+          "externalId": "171891",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Prepared espresso coffee\",\"preferredUnit\":\"mL\",\"tr\":\"Espresso kahve (hazırlanmış)\"}",
+          "externalId": "usda-sr-171891",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -17861,6 +19881,40 @@
           "externalId": "usda-sr-171910",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Unsweetened ready-to-drink green tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "f5551623-5708-8552-8fd8-9a91c8c4dfaa",
+      "ingredientType": "beverage",
+      "key": "usda-sr-171911",
+      "names": {
+        "en": "Unsweetened ready-to-drink green tea",
+        "tr": "Şekersiz hazır yeşil çay (içecek)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, tea, green, ready to drink, unsweetened",
+          "externalId": "171911",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened ready-to-drink green tea\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz hazır yeşil çay (içecek)\"}",
+          "externalId": "usda-sr-171911",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -18496,6 +20550,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Queso añejo cheese",
+      "categories": [
+        "cheeses",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a1f4c150-e8ff-879d-9287-927200ee6bd6",
+      "ingredientType": "food",
+      "key": "usda-sr-172201",
+      "names": {
+        "en": "Queso añejo cheese",
+        "tr": "Queso añejo peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, mexican, queso anejo",
+          "externalId": "172201",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso añejo cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso añejo peyniri\"}",
+          "externalId": "usda-sr-172201",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Egg white (dried)",
       "categories": [
         "eggs"
@@ -18525,6 +20614,41 @@
           "externalId": "usda-sr-172204",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Queso seco cheese",
+      "categories": [
+        "cheeses",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a7c2f9e5-79f9-8103-aafe-df2354a396f6",
+      "ingredientType": "food",
+      "key": "usda-sr-172222",
+      "names": {
+        "en": "Queso seco cheese",
+        "tr": "Queso seco peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, dry white, queso seco",
+          "externalId": "172222",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso seco cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso seco peyniri\"}",
+          "externalId": "usda-sr-172222",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -18719,6 +20843,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Prepared yellow mustard",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a6a2fefe-89f4-86d4-bec4-4876841d08a7",
+      "ingredientType": "food",
+      "key": "usda-sr-172234",
+      "names": {
+        "en": "Prepared yellow mustard",
+        "tr": "Sarı hardal (hazır)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mustard, prepared, yellow",
+          "externalId": "172234",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Prepared yellow mustard\",\"preferredUnit\":\"g\",\"tr\":\"Sarı hardal (hazır)\"}",
+          "externalId": "usda-sr-172234",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -18798,6 +20956,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Dried spearmint",
+      "categories": [
+        "herbs"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "d145fa83-602d-8f64-aae7-838455667b3b",
+      "ingredientType": "food",
+      "key": "usda-sr-172239",
+      "names": {
+        "en": "Dried spearmint",
+        "tr": "Kuru yeşil nane"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Spearmint, dried",
+          "externalId": "172239",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Dried spearmint\",\"preferredUnit\":\"g\",\"tr\":\"Kuru yeşil nane\"}",
+          "externalId": "usda-sr-172239",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Red wine vinegar",
       "categories": [
         "condiments"
@@ -18871,6 +21063,76 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Sazon seasoning (coriander and annatto)",
+      "categories": [
+        "spices",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5655d416-a715-8209-988a-04067e003e8c",
+      "ingredientType": "food",
+      "key": "usda-sr-172242",
+      "names": {
+        "en": "Sazon seasoning (coriander and annatto)",
+        "tr": "Sazon baharat karışımı (kişniş ve annatto)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Seasoning mix, dry, sazon, coriander & annatto",
+          "externalId": "172242",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Sazon seasoning (coriander and annatto)\",\"preferredUnit\":\"g\",\"tr\":\"Sazon baharat karışımı (kişniş ve annatto)\"}",
+          "externalId": "usda-sr-172242",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dry taco seasoning mix",
+      "categories": [
+        "spices",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "e95ff871-b1cb-866d-ab4a-37ee7bd06b9f",
+      "ingredientType": "food",
+      "key": "usda-sr-172243",
+      "names": {
+        "en": "Dry taco seasoning mix",
+        "tr": "Taco baharat karışımı (kuru)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Seasoning mix, dry, taco, original",
+          "externalId": "172243",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Dry taco seasoning mix\",\"preferredUnit\":\"g\",\"tr\":\"Taco baharat karışımı (kuru)\"}",
+          "externalId": "usda-sr-172243",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Canola oil",
       "categories": [
         "oils"
@@ -18900,6 +21162,40 @@
           "externalId": "usda-sr-172336",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Mustard oil",
+      "categories": [
+        "oils"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d2154a23-83dd-86b2-8d72-9e9a343f1e0c",
+      "ingredientType": "food",
+      "key": "usda-sr-172337",
+      "names": {
+        "en": "Mustard oil",
+        "tr": "Hardal yağı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Oil, mustard",
+          "externalId": "172337",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"oils\"],\"dimensions\":[\"volume\"],\"en\":\"Mustard oil\",\"preferredUnit\":\"mL\",\"tr\":\"Hardal yağı\"}",
+          "externalId": "usda-sr-172337",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -18973,6 +21269,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Duck meat (skinless, raw)",
+      "categories": [
+        "poultry"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "25ff4dcf-0046-839a-b3ca-3f7a223e8722",
+      "ingredientType": "food",
+      "key": "usda-sr-172410",
+      "names": {
+        "en": "Duck meat (skinless, raw)",
+        "tr": "Çiğ ördek eti (derisiz)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Duck, domesticated, meat only, raw",
+          "externalId": "172410",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"poultry\"],\"dimensions\":[\"mass\"],\"en\":\"Duck meat (skinless, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ ördek eti (derisiz)\"}",
+          "externalId": "usda-sr-172410",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -19007,6 +21337,40 @@
           "externalId": "usda-sr-172420",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Boiled lentils (without salt)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1560babc-d258-8522-8040-0ab7421c9af9",
+      "ingredientType": "food",
+      "key": "usda-sr-172421",
+      "names": {
+        "en": "Boiled lentils (without salt)",
+        "tr": "Tuzsuz haşlanmış mercimek"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Lentils, mature seeds, cooked, boiled, without salt",
+          "externalId": "172421",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Boiled lentils (without salt)\",\"preferredUnit\":\"g\",\"tr\":\"Tuzsuz haşlanmış mercimek\"}",
+          "externalId": "usda-sr-172421",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -19724,6 +22088,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Strawberry guava (raw)",
+      "categories": [
+        "fruit"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "df0010c9-77e3-85e1-aee2-97b23a2710ea",
+      "ingredientType": "food",
+      "key": "usda-sr-173045",
+      "names": {
+        "en": "Strawberry guava (raw)",
+        "tr": "Çilek guavası (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Guavas, strawberry, raw",
+          "externalId": "173045",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Strawberry guava (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çilek guavası (çiğ)\"}",
+          "externalId": "usda-sr-173045",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Creme de menthe (72 US proof)",
       "categories": [
         "liqueurs"
@@ -19752,6 +22150,41 @@
           "externalId": "usda-sr-173168",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Unsweetened shelf-stable chocolate almond milk",
+      "categories": [
+        "dairy-alternatives",
+        "chocolate-cocoa"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "ed76189d-5c52-8074-8534-ff3bcc909dcc",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173187",
+      "names": {
+        "en": "Unsweetened shelf-stable chocolate almond milk",
+        "tr": "Raf ömürlü şekersiz çikolatalı badem sütü"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, chocolate almond milk, unsweetened, shelf-stable, fortified with vitamin D2 and E",
+          "externalId": "173187",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"chocolate-cocoa\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened shelf-stable chocolate almond milk\",\"preferredUnit\":\"mL\",\"tr\":\"Raf ömürlü şekersiz çikolatalı badem sütü\"}",
+          "externalId": "usda-sr-173187",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -19825,6 +22258,40 @@
           "externalId": "usda-sr-173205",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Frozen lemonade concentrate",
+      "categories": [
+        "mixers"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "396d65af-ac12-8374-84bc-4bddffdb2f0b",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173216",
+      "names": {
+        "en": "Frozen lemonade concentrate",
+        "tr": "Dondurulmuş limonata konsantresi"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Lemonade, frozen concentrate, white",
+          "externalId": "173216",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen lemonade concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş limonata konsantresi\"}",
+          "externalId": "usda-sr-173216",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -20014,6 +22481,74 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Cheshire cheese",
+      "categories": [
+        "cheeses"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "09eafc6d-07e2-8dd8-a585-4a603a3abac5",
+      "ingredientType": "food",
+      "key": "usda-sr-173415",
+      "names": {
+        "en": "Cheshire cheese",
+        "tr": "Cheshire peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, cheshire",
+          "externalId": "173415",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Cheshire cheese\",\"preferredUnit\":\"g\",\"tr\":\"Cheshire peyniri\"}",
+          "externalId": "usda-sr-173415",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Colby cheese",
+      "categories": [
+        "cheeses"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c2d93e81-b01d-8b05-8ff9-67d56b8c8e6a",
+      "ingredientType": "food",
+      "key": "usda-sr-173416",
+      "names": {
+        "en": "Colby cheese",
+        "tr": "Colby peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, colby",
+          "externalId": "173416",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Colby cheese\",\"preferredUnit\":\"g\",\"tr\":\"Colby peyniri\"}",
+          "externalId": "usda-sr-173416",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Cream cheese",
       "categories": [
         "dairy",
@@ -20197,6 +22732,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Semisoft goat cheese",
+      "categories": [
+        "cheeses"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2915aeef-96db-895c-b407-202ceec91b76",
+      "ingredientType": "food",
+      "key": "usda-sr-173433",
+      "names": {
+        "en": "Semisoft goat cheese",
+        "tr": "Yarı yumuşak keçi peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, goat, semisoft type",
+          "externalId": "173433",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\"],\"dimensions\":[\"mass\"],\"en\":\"Semisoft goat cheese\",\"preferredUnit\":\"g\",\"tr\":\"Yarı yumuşak keçi peyniri\"}",
+          "externalId": "usda-sr-173433",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Goat cheese (soft)",
       "categories": [
         "dairy",
@@ -20227,6 +22796,76 @@
           "externalId": "usda-sr-173435",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Queso asadero cheese",
+      "categories": [
+        "cheeses",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c69f0e79-c83d-80cc-80ad-1311a7567917",
+      "ingredientType": "food",
+      "key": "usda-sr-173437",
+      "names": {
+        "en": "Queso asadero cheese",
+        "tr": "Queso asadero peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, mexican, queso asadero",
+          "externalId": "173437",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso asadero cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso asadero peyniri\"}",
+          "externalId": "usda-sr-173437",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Queso Chihuahua cheese",
+      "categories": [
+        "cheeses",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "223686ae-1b2a-8bcc-b8cc-6272eda68955",
+      "ingredientType": "food",
+      "key": "usda-sr-173438",
+      "names": {
+        "en": "Queso Chihuahua cheese",
+        "tr": "Queso Chihuahua peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Cheese, mexican, queso chihuahua",
+          "externalId": "173438",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Queso Chihuahua cheese\",\"preferredUnit\":\"g\",\"tr\":\"Queso Chihuahua peyniri\"}",
+          "externalId": "usda-sr-173438",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -20345,6 +22984,176 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Fresh thyme",
+      "categories": [
+        "herbs"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5b330ef2-8a28-8770-acd6-ecc16d4c008c",
+      "ingredientType": "food",
+      "key": "usda-sr-173470",
+      "names": {
+        "en": "Fresh thyme",
+        "tr": "Taze kekik"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Thyme, fresh",
+          "externalId": "173470",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh thyme\",\"preferredUnit\":\"g\",\"tr\":\"Taze kekik\"}",
+          "externalId": "usda-sr-173470",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Vanilla extract",
+      "categories": [
+        "baking"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "3bbf804e-aa07-8594-baa4-83b61cbc8c10",
+      "ingredientType": "food",
+      "key": "usda-sr-173471",
+      "names": {
+        "en": "Vanilla extract",
+        "tr": "Vanilya özütü"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Vanilla extract",
+          "externalId": "173471",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"baking\"],\"dimensions\":[\"volume\"],\"en\":\"Vanilla extract\",\"preferredUnit\":\"mL\",\"tr\":\"Vanilya özütü\"}",
+          "externalId": "usda-sr-173471",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Prepared horseradish",
+      "categories": [
+        "condiments"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "69a9a6c5-bd51-8256-b5a3-0876f5d45709",
+      "ingredientType": "food",
+      "key": "usda-sr-173472",
+      "names": {
+        "en": "Prepared horseradish",
+        "tr": "Hazır yaban turpu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Horseradish, prepared",
+          "externalId": "173472",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"condiments\"],\"dimensions\":[\"mass\"],\"en\":\"Prepared horseradish\",\"preferredUnit\":\"g\",\"tr\":\"Hazır yaban turpu\"}",
+          "externalId": "usda-sr-173472",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Fresh rosemary",
+      "categories": [
+        "herbs"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "9ff67613-516b-81ec-96d2-6ac00e55c012",
+      "ingredientType": "food",
+      "key": "usda-sr-173473",
+      "names": {
+        "en": "Fresh rosemary",
+        "tr": "Taze biberiye"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Rosemary, fresh",
+          "externalId": "173473",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh rosemary\",\"preferredUnit\":\"g\",\"tr\":\"Taze biberiye\"}",
+          "externalId": "usda-sr-173473",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Fresh peppermint",
+      "categories": [
+        "herbs"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "622abe75-ff10-861b-b31d-b7278ae06120",
+      "ingredientType": "food",
+      "key": "usda-sr-173474",
+      "names": {
+        "en": "Fresh peppermint",
+        "tr": "Taze biber nanesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppermint, fresh",
+          "externalId": "173474",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Fresh peppermint\",\"preferredUnit\":\"g\",\"tr\":\"Taze biber nanesi\"}",
+          "externalId": "usda-sr-173474",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -20380,6 +23189,40 @@
           "externalId": "usda-sr-173475",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dry chili seasoning mix",
+      "categories": [
+        "spices"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "fca2b478-62a5-811f-b171-6ceb180cf7bc",
+      "ingredientType": "food",
+      "key": "usda-sr-173476",
+      "names": {
+        "en": "Dry chili seasoning mix",
+        "tr": "Chili baharat karışımı (kuru)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Seasoning mix, dry, chili, original",
+          "externalId": "173476",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"spices\"],\"dimensions\":[\"mass\"],\"en\":\"Dry chili seasoning mix\",\"preferredUnit\":\"g\",\"tr\":\"Chili baharat karışımı (kuru)\"}",
+          "externalId": "usda-sr-173476",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -20561,6 +23404,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Canned fava beans",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "84e16be7-682b-858f-880e-98b046aa0d57",
+      "ingredientType": "food",
+      "key": "usda-sr-173754",
+      "names": {
+        "en": "Canned fava beans",
+        "tr": "Konserve bakla"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Broadbeans (fava beans), mature seeds, canned",
+          "externalId": "173754",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned fava beans\",\"preferredUnit\":\"g\",\"tr\":\"Konserve bakla\"}",
+          "externalId": "usda-sr-173754",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -20707,6 +23584,40 @@
           "externalId": "usda-sr-173800",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned chickpeas (drained and rinsed)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "d7f6c2ad-d838-8547-b672-3b19f92696be",
+      "ingredientType": "food",
+      "key": "usda-sr-173801",
+      "names": {
+        "en": "Canned chickpeas (drained and rinsed)",
+        "tr": "Süzülüp yıkanmış konserve nohut"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained, rinsed in tap water",
+          "externalId": "173801",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned chickpeas (drained and rinsed)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülüp yıkanmış konserve nohut\"}",
+          "externalId": "usda-sr-173801",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -20937,6 +23848,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Ready-to-serve sweet and sour sauce",
+      "categories": [
+        "sauces"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "cab0ed65-0541-8b48-806c-00c01ba1b6b9",
+      "ingredientType": "food",
+      "key": "usda-sr-174066",
+      "names": {
+        "en": "Ready-to-serve sweet and sour sauce",
+        "tr": "Hazır tatlı-ekşi sos"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Sauce, sweet and sour, ready-to-serve",
+          "externalId": "174066",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"sauces\"],\"dimensions\":[\"mass\"],\"en\":\"Ready-to-serve sweet and sour sauce\",\"preferredUnit\":\"g\",\"tr\":\"Hazır tatlı-ekşi sos\"}",
+          "externalId": "usda-sr-174066",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Red enchilada sauce (mild, ready to serve)",
       "categories": [
         "sauces"
@@ -21012,6 +23957,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Prepared decaffeinated espresso",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "17505581-d78e-88e3-bf4b-0c85d4fae953",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174125",
+      "names": {
+        "en": "Prepared decaffeinated espresso",
+        "tr": "Kafeinsiz espresso kahve (hazırlanmış)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, coffee, brewed, espresso, restaurant-prepared, decaffeinated",
+          "externalId": "174125",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Prepared decaffeinated espresso\",\"preferredUnit\":\"mL\",\"tr\":\"Kafeinsiz espresso kahve (hazırlanmış)\"}",
+          "externalId": "usda-sr-174125",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Decaffeinated instant coffee powder",
       "categories": [
         "coffee"
@@ -21040,6 +24019,40 @@
           "externalId": "usda-sr-174133",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Ready-to-drink black tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "dfe91ef8-7fe8-8022-bd8d-9b5b8551bf4f",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174144",
+      "names": {
+        "en": "Ready-to-drink black tea",
+        "tr": "Hazır siyah çay (içecek)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, tea, black, ready to drink",
+          "externalId": "174144",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"volume\"],\"en\":\"Ready-to-drink black tea\",\"preferredUnit\":\"mL\",\"tr\":\"Hazır siyah çay (içecek)\"}",
+          "externalId": "usda-sr-174144",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -21546,6 +24559,108 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Cooked octopus",
+      "categories": [
+        "seafood"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "13a3bd93-80ad-83c1-80f9-d17142325efc",
+      "ingredientType": "food",
+      "key": "usda-sr-174249",
+      "names": {
+        "en": "Cooked octopus",
+        "tr": "Pişmiş ahtapot"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mollusks, octopus, common, cooked, moist heat",
+          "externalId": "174249",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Cooked octopus\",\"preferredUnit\":\"g\",\"tr\":\"Pişmiş ahtapot\"}",
+          "externalId": "usda-sr-174249",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Large lima beans (raw)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7a1197c1-0a2d-8d7c-a79c-51f724303481",
+      "ingredientType": "food",
+      "key": "usda-sr-174252",
+      "names": {
+        "en": "Large lima beans (raw)",
+        "tr": "İri lima fasulyesi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Lima beans, large, mature seeds, raw",
+          "externalId": "174252",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Large lima beans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"İri lima fasulyesi (çiğ)\"}",
+          "externalId": "usda-sr-174252",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Baby lima beans (raw)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ebb5cc0f-889c-878e-8b4f-ad5b61cb3040",
+      "ingredientType": "food",
+      "key": "usda-sr-174255",
+      "names": {
+        "en": "Baby lima beans (raw)",
+        "tr": "Küçük lima fasulyesi (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Lima beans, thin seeded (baby), mature seeds, raw",
+          "externalId": "174255",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Baby lima beans (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Küçük lima fasulyesi (çiğ)\"}",
+          "externalId": "usda-sr-174255",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -21888,6 +25003,74 @@
           "externalId": "usda-sr-174284",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned red kidney beans (drained)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "6350bba7-4419-8bee-9aa2-1b7eeb3bcd88",
+      "ingredientType": "food",
+      "key": "usda-sr-174285",
+      "names": {
+        "en": "Canned red kidney beans (drained)",
+        "tr": "Süzülmüş konserve kırmızı kidney fasulyesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beans, kidney, red, mature seeds, canned, drained solids",
+          "externalId": "174285",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned red kidney beans (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve kırmızı kidney fasulyesi\"}",
+          "externalId": "usda-sr-174285",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned pinto beans (drained)",
+      "categories": [
+        "legumes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7edfe457-71c9-8d5e-80e4-4b1f2079eb6a",
+      "ingredientType": "food",
+      "key": "usda-sr-174286",
+      "names": {
+        "en": "Canned pinto beans (drained)",
+        "tr": "Süzülmüş konserve pinto fasulyesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beans, pinto, canned, drained solids",
+          "externalId": "174286",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Canned pinto beans (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Süzülmüş konserve pinto fasulyesi\"}",
+          "externalId": "usda-sr-174286",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -22264,6 +25447,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Jackfruit (raw)",
+      "categories": [
+        "fruit",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "74b6fb5d-37cc-82dc-bde0-e04fcddf95e4",
+      "ingredientType": "food",
+      "key": "usda-sr-174687",
+      "names": {
+        "en": "Jackfruit (raw)",
+        "tr": "Jackfruit (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Jackfruit, raw",
+          "externalId": "174687",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"fruit\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Jackfruit (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jackfruit (çiğ)\"}",
+          "externalId": "usda-sr-174687",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Rum (80 US proof)",
       "categories": [
         "spirits"
@@ -22365,6 +25583,40 @@
           "externalId": "usda-sr-174819",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Chocolate almond milk (ready to drink)",
+      "categories": [
+        "dairy-alternatives"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "8a73cece-6314-89cf-a247-f7e1b5c21b82",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174820",
+      "names": {
+        "en": "Chocolate almond milk (ready to drink)",
+        "tr": "Çikolatalı badem sütü (hazır içecek)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, almond milk, chocolate, ready-to-drink",
+          "externalId": "174820",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\"],\"dimensions\":[\"volume\"],\"en\":\"Chocolate almond milk (ready to drink)\",\"preferredUnit\":\"mL\",\"tr\":\"Çikolatalı badem sütü (hazır içecek)\"}",
+          "externalId": "usda-sr-174820",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -22640,6 +25892,40 @@
           "externalId": "usda-sr-174854",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Lemonade powder",
+      "categories": [
+        "mixers"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "0e6f3cce-ba2f-89bb-b351-7465b0375b65",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174858",
+      "names": {
+        "en": "Lemonade powder",
+        "tr": "Limonata tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beverages, Lemonade, powder",
+          "externalId": "174858",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"mass\"],\"en\":\"Lemonade powder\",\"preferredUnit\":\"g\",\"tr\":\"Limonata tozu\"}",
+          "externalId": "usda-sr-174858",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []
@@ -23187,6 +26473,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Canned Pacific sardines in tomato sauce",
+      "categories": [
+        "seafood"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "801e2199-7450-8d88-8776-7ac885f2931a",
+      "ingredientType": "food",
+      "key": "usda-sr-175140",
+      "names": {
+        "en": "Canned Pacific sardines in tomato sauce",
+        "tr": "Domates soslu konserve Pasifik sardalyası"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Fish, sardine, Pacific, canned in tomato sauce, drained solids with bone",
+          "externalId": "175140",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Canned Pacific sardines in tomato sauce\",\"preferredUnit\":\"g\",\"tr\":\"Domates soslu konserve Pasifik sardalyası\"}",
+          "externalId": "usda-sr-175140",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Sea bass (mixed species, raw)",
       "categories": [
         "seafood"
@@ -23613,6 +26933,40 @@
           "externalId": "usda-sr-175206",
           "sourceId": "recipeatlas-curation-m3d2b",
           "sourceVersion": "production-5"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Ground veal (raw)",
+      "categories": [
+        "meat"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f5cb94fb-2b93-8ac1-a1af-5a08331c2e22",
+      "ingredientType": "food",
+      "key": "usda-sr-175290",
+      "names": {
+        "en": "Ground veal (raw)",
+        "tr": "Çiğ süt danası kıyması"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Veal, ground, raw",
+          "externalId": "175290",
+          "sourceId": "usda-sr-legacy-m3d3",
+          "sourceVersion": "2018-04-selection-7"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned USDA descriptor; not a USDA translation or independent human linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Ground veal (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ süt danası kıyması\"}",
+          "externalId": "usda-sr-175290",
+          "sourceId": "recipeatlas-curation-m3d3",
+          "sourceVersion": "production-6"
         }
       ],
       "relations": []

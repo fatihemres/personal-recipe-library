@@ -63,17 +63,22 @@ jobs:
           python3 tools/prepare_m3d2a_candidates.py --check
           python3 tools/prepare_m3d2b_catalog.py --check
           python3 tools/report_m3d2b_quality.py --check
+          python3 tools/prepare_m3d3_candidates.py --check
+          python3 tools/prepare_m3d3_catalog.py --check
+          python3 tools/report_m3d3_quality.py --check
           python3 tools/audit_catalog.py --check
           python3 tools/test_catalog_audit.py
           python3 tools/test_m3d1_catalog.py
           python3 tools/test_m3d2a_candidates.py
           python3 tools/test_m3d2b_catalog.py
+          python3 tools/test_m3d3_catalog.py
       - name: Verify fresh and historical SQLite catalog imports
         run: |
           cargo build --locked --manifest-path src-tauri/Cargo.toml --example catalog_import
           python3 tools/report_m3d2b_coverage.py
-          python3 tools/verify_catalog_installation.py --include-v7 --output "${RUNNER_TEMP}/catalog-installation.json"
-          git diff --exit-code -- catalog/production/m3d2b-sqlite-report.json docs/CATALOG_M3D2B_COVERAGE.md
+          python3 tools/report_m3d3_coverage.py
+          python3 tools/verify_catalog_installation.py --include-v8 --output "${RUNNER_TEMP}/catalog-installation.json"
+          git diff --exit-code -- catalog/releases/8/m3d2b-sqlite-report.json docs/CATALOG_M3D2B_COVERAGE.md
 
   macos-arm64:
     name: macOS Apple Silicon package

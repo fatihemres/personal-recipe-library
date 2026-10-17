@@ -214,3 +214,20 @@ python3 tools/verify_catalog_installation.py --include-v7 --output catalog/produ
 ```
 
 The report/import commands create disposable SQLite profiles. `--include-v7` checks fresh and historical v2–v7 upgrades plus unchanged repeats; the normal application profile is not used. A macOS `--deny-network` wrapper is optional only where `sandbox-exec` is available; a host denial of the wrapper is not an importer failure. The embedded app package contains the release-8 manifest, ingredient records and all eight source evidence files; runtime startup still performs the shared version/hash/transactional import once and skips unchanged releases without writes.
+
+## Release 9 (M3D-3)
+
+`catalog/releases/8` is the byte-identical historical Release-8 production package. `tools/prepare_m3d3_candidates.py --check` verifies 131 decisions against pinned USDA SR Legacy descriptors without network access. Initial extraction requires the official archive with SHA-256 `b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0`; `selection.tsv` and `other-decisions.tsv` are the auditable editorial inputs. `tools/prepare_m3d3_catalog.py --check` deterministically regenerates Release 9 from the archive and candidate evidence. Two new immutable source/version pairs (`usda-sr-legacy-m3d3/2018-04-selection-7` and `recipeatlas-curation-m3d3/production-6`) prevent prior `CATALOG_SOURCE_CHANGED` snapshot collisions. No schema migration, alias or category change occurs. All 647 Release-8 ingredient objects remain unchanged; 98 new objects have stable IDs, source descriptors and separate authored labels. The Rust worker embeds the entire release and imports it transactionally on startup, with no runtime network call. A failed source-version collision rolls back the package; stored recipes, drafts and user overrides are unchanged.
+
+Reproduce after building `cargo build --locked --manifest-path src-tauri/Cargo.toml --example catalog_import`:
+
+```sh
+python3 tools/prepare_m3d3_candidates.py --check
+python3 tools/prepare_m3d3_catalog.py --check
+python3 tools/audit_catalog.py --check
+python3 tools/report_m3d3_quality.py --check
+python3 tools/report_m3d3_coverage.py
+python3 tools/verify_catalog_installation.py --include-v8 --output /private/tmp/m3d3-installation.json
+```
+
+The ordinary coverage command uses only temporary SQLite profiles. Its optional `--historical-profile` input is an **already isolated** 648-record preview-profile copy; it makes a second temporary SQLite backup before import. Never pass the Product Owner's normal application database to this tool. `docs/CATALOG_M3D3_COVERAGE.md`, `docs/CATALOG_M3D3_QUALITY_AUDIT.md`, and the machine reports under `catalog/production` give counts, decisions and integrity results. Candidate acceptance is project editorial screening, not independent human linguistic approval.
