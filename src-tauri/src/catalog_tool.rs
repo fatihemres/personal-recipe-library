@@ -173,6 +173,15 @@ pub(crate) fn bundled() -> Result<VerifiedSeed, AppError> {
                 "m3d3-curation-records.json" => {
                     include_bytes!("../../catalog/production/m3d3-curation-records.json")
                 }
+                "m3d4-foundation-records.json" => {
+                    include_bytes!("../../catalog/production/m3d4-foundation-records.json")
+                }
+                "m3d4-wikidata-records.json" => {
+                    include_bytes!("../../catalog/production/m3d4-wikidata-records.json")
+                }
+                "m3d4-curation-records.json" => {
+                    include_bytes!("../../catalog/production/m3d4-curation-records.json")
+                }
                 _ => return Err(catalog_error("CATALOG_ARTIFACT")),
             };
             use sha2::{Digest, Sha256};

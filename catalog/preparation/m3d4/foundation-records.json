@@ -1,0 +1,248 @@
+[
+  {
+    "description": "Hummus, commercial",
+    "fdcId": "321358",
+    "foodCategory": "Legumes and Legume Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/321358/nutrients"
+  },
+  {
+    "description": "Flour, rice, glutinous",
+    "fdcId": "1104867",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1104867/nutrients"
+  },
+  {
+    "description": "Mushroom, lion's mane",
+    "fdcId": "1999626",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999626/nutrients"
+  },
+  {
+    "description": "Mushroom, oyster",
+    "fdcId": "1999627",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999627/nutrients"
+  },
+  {
+    "description": "Mushrooms, shiitake",
+    "fdcId": "1999628",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999628/nutrients"
+  },
+  {
+    "description": "Soy milk, unsweetened, plain, shelf stable",
+    "fdcId": "1999630",
+    "foodCategory": "Legumes and Legume Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999630/nutrients"
+  },
+  {
+    "description": "Flour, 00",
+    "fdcId": "2003586",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003586/nutrients"
+  },
+  {
+    "description": "Flour, semolina, coarse and semi-coarse",
+    "fdcId": "2003588",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003588/nutrients"
+  },
+  {
+    "description": "Flour, semolina, fine",
+    "fdcId": "2003589",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003589/nutrients"
+  },
+  {
+    "description": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
+    "fdcId": "2003593",
+    "foodCategory": "Fruits and Fruit Juices",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003593/nutrients"
+  },
+  {
+    "description": "Cranberry juice, not fortified, from concentrate, shelf stable",
+    "fdcId": "2003594",
+    "foodCategory": "Fruits and Fruit Juices",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003594/nutrients"
+  },
+  {
+    "description": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
+    "fdcId": "2003595",
+    "foodCategory": "Fruits and Fruit Juices",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003595/nutrients"
+  },
+  {
+    "description": "Mushroom, king oyster",
+    "fdcId": "2003599",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003599/nutrients"
+  },
+  {
+    "description": "Mushroom, crimini",
+    "fdcId": "2003601",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003601/nutrients"
+  },
+  {
+    "description": "Mushroom, pioppini",
+    "fdcId": "2003604",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003604/nutrients"
+  },
+  {
+    "description": "Almond milk, unsweetened, plain, refrigerated",
+    "fdcId": "2257045",
+    "foodCategory": "Beverages",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2257045/nutrients"
+  },
+  {
+    "description": "Oat milk, unsweetened, plain, refrigerated",
+    "fdcId": "2257046",
+    "foodCategory": "Beverages",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2257046/nutrients"
+  },
+  {
+    "description": "Flour, almond",
+    "fdcId": "2261420",
+    "foodCategory": "Nut and Seed Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2261420/nutrients"
+  },
+  {
+    "description": "Sesame butter, creamy",
+    "fdcId": "2262073",
+    "foodCategory": "Nut and Seed Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2262073/nutrients"
+  },
+  {
+    "description": "Flour, amaranth",
+    "fdcId": "2512371",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512371/nutrients"
+  },
+  {
+    "description": "Flour, quinoa",
+    "fdcId": "2512372",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512372/nutrients"
+  },
+  {
+    "description": "Flour, cassava",
+    "fdcId": "2512377",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512377/nutrients"
+  },
+  {
+    "description": "Buckwheat, whole grain",
+    "fdcId": "2512378",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512378/nutrients"
+  },
+  {
+    "description": "Flour, chestnut",
+    "fdcId": "2515377",
+    "foodCategory": "Nut and Seed Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2515377/nutrients"
+  },
+  {
+    "description": "Flour, coconut",
+    "fdcId": "2515382",
+    "foodCategory": "Nut and Seed Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2515382/nutrients"
+  },
+  {
+    "description": "Beans, cannellini, dry",
+    "fdcId": "2644281",
+    "foodCategory": "Legumes and Legume Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644281/nutrients"
+  },
+  {
+    "description": "Beans, navy, canned, sodium added, drained and rinsed",
+    "fdcId": "2644286",
+    "foodCategory": "Legumes and Legume Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644286/nutrients"
+  },
+  {
+    "description": "Beans, cannellini, canned, sodium added, drained and rinsed",
+    "fdcId": "2644287",
+    "foodCategory": "Legumes and Legume Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644287/nutrients"
+  },
+  {
+    "description": "Cheese, oaxaca, solid",
+    "fdcId": "2647441",
+    "foodCategory": "Dairy and Egg Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2647441/nutrients"
+  },
+  {
+    "description": "Wild rice, dry, raw",
+    "fdcId": "2710821",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710821/nutrients"
+  },
+  {
+    "description": "Rice, black, unenriched, raw",
+    "fdcId": "2710825",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710825/nutrients"
+  },
+  {
+    "description": "Einkorn, grain, dry, raw",
+    "fdcId": "2710827",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710827/nutrients"
+  },
+  {
+    "description": "Fonio, grain, dry, raw",
+    "fdcId": "2710829",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710829/nutrients"
+  },
+  {
+    "description": "Khorasan, grain, dry, raw",
+    "fdcId": "2710830",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710830/nutrients"
+  },
+  {
+    "description": "Rice, red, unenriched, dry, raw",
+    "fdcId": "2710838",
+    "foodCategory": "Cereal Grains and Pasta",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710838/nutrients"
+  },
+  {
+    "description": "Tomatillos, dehusked, raw",
+    "fdcId": "2727582",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727582/nutrients"
+  },
+  {
+    "description": "Juice, pomegranate, from concentrate, shelf-stable",
+    "fdcId": "2727588",
+    "foodCategory": "Fruits and Fruit Juices",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727588/nutrients"
+  },
+  {
+    "description": "Juice, tart cherry, from concentrate, shelf-stable",
+    "fdcId": "2727589",
+    "foodCategory": "Fruits and Fruit Juices",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727589/nutrients"
+  },
+  {
+    "description": "Peppers, jalapeno, seeded, raw",
+    "fdcId": "2747661",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747661/nutrients"
+  },
+  {
+    "description": "Peppers, poblano, seeded, raw",
+    "fdcId": "2747662",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747662/nutrients"
+  },
+  {
+    "description": "Peppers, serrano, seeded, raw",
+    "fdcId": "2747663",
+    "foodCategory": "Vegetables and Vegetable Products",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747663/nutrients"
+  }
+]

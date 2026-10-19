@@ -1,0 +1,574 @@
+{
+  "release": 8,
+  "licenseReview": "USDA SR Legacy April 2018 CC0; FoodOn term lineage/attribution unresolved and excluded",
+  "sources": [
+    {
+      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned, not a new USDA release.",
+      "id": "usda-sr-legacy",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — production selection 4",
+      "retrievedAt": "2026-10-08",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-4"
+    },
+    {
+      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea",
+      "attribution": "Project-authored Turkish/English culinary labels, aliases and classifications; not USDA translations. No empirical metadata inferred.",
+      "id": "recipeatlas-curation",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası production label curation",
+      "retrievedAt": "2026-10-09",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-3"
+    },
+    {
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf",
+      "attribution": "Three user-selected Turkish display names; not USDA translations or factual observations.",
+      "id": "recipeatlas-terminology",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası user-selected Turkish terminology",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "user-decisions-1"
+    },
+    {
+      "artifactSha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee",
+      "attribution": "Two user-authorized display names; not independent linguistic verification or USDA translations.",
+      "id": "recipeatlas-terminology-final",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası final user-authorized terminology decisions",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "user-decisions-2"
+    },
+    {
+      "artifactSha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d1",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-1 selection",
+      "retrievedAt": "2026-10-13",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-5-reviewed"
+    },
+    {
+      "artifactSha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd",
+      "attribution": "Project-authored bilingual labels and classifications against USDA descriptors; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d1",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-1 curated labels",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-4-reviewed"
+    },
+    {
+      "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d2b",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-2B selection",
+      "retrievedAt": "2026-10-15",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-6"
+    },
+    {
+      "artifactSha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58",
+      "attribution": "Project-authored bilingual labels and classifications; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d2b",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-2B editorial labels",
+      "retrievedAt": "2026-10-15",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-5"
+    }
+  ],
+  "provenanceLinksBySource": {
+    "recipeatlas-curation": 508,
+    "recipeatlas-curation-m3d1": 60,
+    "recipeatlas-curation-m3d2b": 79,
+    "recipeatlas-terminology": 3,
+    "recipeatlas-terminology-final": 2,
+    "usda-sr-legacy": 454,
+    "usda-sr-legacy-m3d1": 60,
+    "usda-sr-legacy-m3d2b": 79
+  },
+  "acceptedUSDA": [
+    {
+      "key": "usda-sr-167714",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "167714",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/167714/nutrients"
+    },
+    {
+      "key": "usda-sr-167744",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "167744",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/167744/nutrients"
+    },
+    {
+      "key": "usda-sr-167750",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "167750",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/167750/nutrients"
+    },
+    {
+      "key": "usda-sr-167754",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "167754",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/167754/nutrients"
+    },
+    {
+      "key": "usda-sr-167758",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "167758",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/167758/nutrients"
+    },
+    {
+      "key": "usda-sr-168151",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168151",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168151/nutrients"
+    },
+    {
+      "key": "usda-sr-168176",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168176",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168176/nutrients"
+    },
+    {
+      "key": "usda-sr-168177",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168177",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168177/nutrients"
+    },
+    {
+      "key": "usda-sr-168195",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168195",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168195/nutrients"
+    },
+    {
+      "key": "usda-sr-168384",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168384",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168384/nutrients"
+    },
+    {
+      "key": "usda-sr-168385",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168385",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168385/nutrients"
+    },
+    {
+      "key": "usda-sr-168393",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168393",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168393/nutrients"
+    },
+    {
+      "key": "usda-sr-168416",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168416",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168416/nutrients"
+    },
+    {
+      "key": "usda-sr-168424",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168424",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168424/nutrients"
+    },
+    {
+      "key": "usda-sr-168487",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168487",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168487/nutrients"
+    },
+    {
+      "key": "usda-sr-168489",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168489",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168489/nutrients"
+    },
+    {
+      "key": "usda-sr-168490",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168490",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168490/nutrients"
+    },
+    {
+      "key": "usda-sr-168582",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168582",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168582/nutrients"
+    },
+    {
+      "key": "usda-sr-168583",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168583",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168583/nutrients"
+    },
+    {
+      "key": "usda-sr-168872",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168872",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168872/nutrients"
+    },
+    {
+      "key": "usda-sr-168888",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "168888",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/168888/nutrients"
+    },
+    {
+      "key": "usda-sr-169086",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169086",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169086/nutrients"
+    },
+    {
+      "key": "usda-sr-169087",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169087",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169087/nutrients"
+    },
+    {
+      "key": "usda-sr-169089",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169089",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169089/nutrients"
+    },
+    {
+      "key": "usda-sr-169091",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169091",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169091/nutrients"
+    },
+    {
+      "key": "usda-sr-169110",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169110",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169110/nutrients"
+    },
+    {
+      "key": "usda-sr-169121",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169121",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169121/nutrients"
+    },
+    {
+      "key": "usda-sr-169129",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169129",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169129/nutrients"
+    },
+    {
+      "key": "usda-sr-169219",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169219",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169219/nutrients"
+    },
+    {
+      "key": "usda-sr-169222",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169222",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169222/nutrients"
+    },
+    {
+      "key": "usda-sr-169226",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169226",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169226/nutrients"
+    },
+    {
+      "key": "usda-sr-169241",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169241",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169241/nutrients"
+    },
+    {
+      "key": "usda-sr-169250",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169250",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169250/nutrients"
+    },
+    {
+      "key": "usda-sr-169256",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169256",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169256/nutrients"
+    },
+    {
+      "key": "usda-sr-169272",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169272",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169272/nutrients"
+    },
+    {
+      "key": "usda-sr-169298",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169298",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169298/nutrients"
+    },
+    {
+      "key": "usda-sr-169301",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169301",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169301/nutrients"
+    },
+    {
+      "key": "usda-sr-169303",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169303",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169303/nutrients"
+    },
+    {
+      "key": "usda-sr-169308",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169308",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169308/nutrients"
+    },
+    {
+      "key": "usda-sr-169398",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169398",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169398/nutrients"
+    },
+    {
+      "key": "usda-sr-169407",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169407",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169407/nutrients"
+    },
+    {
+      "key": "usda-sr-169726",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169726",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169726/nutrients"
+    },
+    {
+      "key": "usda-sr-169733",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169733",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169733/nutrients"
+    },
+    {
+      "key": "usda-sr-169907",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169907",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169907/nutrients"
+    },
+    {
+      "key": "usda-sr-169925",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169925",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169925/nutrients"
+    },
+    {
+      "key": "usda-sr-169934",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169934",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169934/nutrients"
+    },
+    {
+      "key": "usda-sr-169942",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169942",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169942/nutrients"
+    },
+    {
+      "key": "usda-sr-169974",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169974",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169974/nutrients"
+    },
+    {
+      "key": "usda-sr-169985",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "169985",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/169985/nutrients"
+    },
+    {
+      "key": "usda-sr-170075",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170075",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170075/nutrients"
+    },
+    {
+      "key": "usda-sr-170082",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170082",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170082/nutrients"
+    },
+    {
+      "key": "usda-sr-170090",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170090",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170090/nutrients"
+    },
+    {
+      "key": "usda-sr-170095",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170095",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170095/nutrients"
+    },
+    {
+      "key": "usda-sr-170153",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170153",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170153/nutrients"
+    },
+    {
+      "key": "usda-sr-170156",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170156",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170156/nutrients"
+    },
+    {
+      "key": "usda-sr-170167",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170167",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170167/nutrients"
+    },
+    {
+      "key": "usda-sr-170186",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170186",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170186/nutrients"
+    },
+    {
+      "key": "usda-sr-170381",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170381",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170381/nutrients"
+    },
+    {
+      "key": "usda-sr-170485",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170485",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170485/nutrients"
+    },
+    {
+      "key": "usda-sr-170486",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170486",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170486/nutrients"
+    },
+    {
+      "key": "usda-sr-170898",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "170898",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/170898/nutrients"
+    },
+    {
+      "key": "usda-sr-171031",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171031",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171031/nutrients"
+    },
+    {
+      "key": "usda-sr-171032",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171032",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171032/nutrients"
+    },
+    {
+      "key": "usda-sr-171575",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171575",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171575/nutrients"
+    },
+    {
+      "key": "usda-sr-171595",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171595",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171595/nutrients"
+    },
+    {
+      "key": "usda-sr-171687",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171687",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171687/nutrients"
+    },
+    {
+      "key": "usda-sr-171714",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171714",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171714/nutrients"
+    },
+    {
+      "key": "usda-sr-171715",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171715",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171715/nutrients"
+    },
+    {
+      "key": "usda-sr-171727",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171727",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171727/nutrients"
+    },
+    {
+      "key": "usda-sr-171825",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171825",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171825/nutrients"
+    },
+    {
+      "key": "usda-sr-171826",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171826",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171826/nutrients"
+    },
+    {
+      "key": "usda-sr-171833",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171833",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171833/nutrients"
+    },
+    {
+      "key": "usda-sr-171871",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171871",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171871/nutrients"
+    },
+    {
+      "key": "usda-sr-171897",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "171897",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/171897/nutrients"
+    },
+    {
+      "key": "usda-sr-174866",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "174866",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/174866/nutrients"
+    },
+    {
+      "key": "usda-sr-174872",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "174872",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/174872/nutrients"
+    },
+    {
+      "key": "usda-sr-175132",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "175132",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/175132/nutrients"
+    },
+    {
+      "key": "usda-sr-175164",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "175164",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/175164/nutrients"
+    },
+    {
+      "key": "usda-sr-175206",
+      "sourceId": "usda-sr-legacy-m3d2b",
+      "externalId": "175206",
+      "sourceUrl": "https://fdc.nal.usda.gov/food-details/175206/nutrients"
+    }
+  ],
+  "foodOnImported": 0,
+  "independentHumanLinguisticApprovals": 0
+}

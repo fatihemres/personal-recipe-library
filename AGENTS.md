@@ -23,7 +23,7 @@ Build a local-first food and beverage recipe management desktop application for 
 - Start future milestones from a verified, fast-forwarded local `main` on a dedicated feature branch. Keep pre-existing local/untracked work, especially the root `INGREDIENT_TERMINOLOGY_REVIEW.xlsx`, untouched unless separately authorized.
 - Run scoped local checks, commit the milestone, push only its feature branch, open a PR to `main`, inspect all CI jobs and artifacts, fix failures, and obtain explicit Product Owner review before merging. Do not auto-merge.
 - Use a merge commit for the one-time release-8/CI transition PR to preserve M3D-2A and M3D-2B ancestry. Do not reset, force-push, rewrite history, or delete unmerged branches. Add unique annotated milestone tags only after a verified merge; catalog release numbers and application semver are separate.
-- The private repository's current plan does not permit enforced branch protection. Follow the documented manual no-direct-main-push policy. Never change visibility or buy a plan to work around that limit.
+- The repository became public after the earlier private-plan limitation; `main` now has mandatory PRs and five required Actions checks. Never bypass protection, push directly to main, merge without Product Owner approval, or expose personal data in public commits.
 
 ## Proposed module boundaries
 - React: application shell, feature UI, and reusable components. Keep domain types and Tauri calls outside presentation components.
@@ -85,13 +85,19 @@ Build a local-first food and beverage recipe management desktop application for 
 - Preserve historical evidence, IDs, aliases, user overrides, personal records, favorites, drafts and recipe quantities. Catalog update collisions still reject the whole transaction. Migrations 001–005 remain unchanged.
 
 ## Expansion release invariants (M3D-1)
-- Current production release is 7: 568 identities, 269 aliases, 50 categories; schema stays 5. Earlier version/count sections above are historical. Release 6 is archived unchanged at `catalog/releases/6`.
+- Historical production release 7 has 568 identities, 269 aliases and 50 categories; schema stays 5. Earlier version/count sections are historical. Release 6 is archived unchanged at `catalog/releases/6`.
 - Reproduce with `tools/prepare_m3d1_catalog.py` using the pinned USDA archive or `--evidence` for checked offline extracts. Run `tools/report_m3d1_quality.py --check`, catalog audits and SQLite upgrade tests. Preserve all 508 complete baseline ingredient objects.
 - The 61 proposed candidates yielded 60 additions. `usda-sr-169406` is deferred for possible overlap with existing raw tahini; never silently install or merge it. Three new naming questions plus the deferred identity are in `docs/INGREDIENT_M3D1_REVIEW.xlsx`. The three historical unresolved terms remain pending.
 - Leave the pre-existing root `INGREDIENT_TERMINOLOGY_REVIEW.xlsx` untouched and untracked unless the user explicitly authorizes work on it.
 
 ## Curated expansion invariants (M3D-2B)
-- Current production catalog is release 8: 647 identities, 269 aliases, 50 categories; schema remains 5. Release 7 and the M3D-2A protected baseline are archived unchanged at `catalog/releases/7`.
+- Historical production release 8 has 647 identities, 269 aliases and 50 categories; schema remains 5. Release 7 and the M3D-2A protected baseline are archived unchanged at `catalog/releases/7`.
 - Generate/check release 8 only through `tools/prepare_m3d2b_catalog.py`. `catalog/production/m3d2b-decisions.json` records all 194 candidate dispositions: 79 USDA accepted, 27 USDA deferred, 84 FoodOn source deferrals, three probable existing FoodOn concepts, one brand-specific rejection. These are autonomous editorial decisions, not human linguistic approvals.
 - New source IDs are `usda-sr-legacy-m3d2b/2018-04-selection-6` and `recipeatlas-curation-m3d2b/production-5`. FoodOn remains outside the runtime source allowlist until term-level lineage/attribution/redistribution clearance. No new aliases, categories, factual observations or migrations were added.
 - Preserve all 568 complete release-7 ingredient objects, stable recipe references and user state. Before later expansion, read `docs/CATALOG_M3D2B_QUALITY_AUDIT.md`, `docs/CATALOG_M3D2B_COVERAGE.md`, `docs/CATALOG_M3D2B_SOURCE_PLAN.md` and the seven prior pending review items. Future additions require a higher release and the same isolated fresh/upgrade/rollback/native gates.
+
+## Global and regional expansion invariants (M3D-3/M3D-4)
+- Historical Release 9 has 745 identities (624 food/121 beverage), 269 aliases and 50 categories, and is archived unchanged at `catalog/releases/9`; Release 8 is at `catalog/releases/8`.
+- Current Release 10 has 795 identities (666 food/129 beverage), 269 aliases and 50 categories. Its 50 additions come from a screened 65-candidate ledger: 35 selected USDA Foundation April 2026 descriptors and 15 pinned Wikidata CC0 entity revisions. See `docs/CATALOG_M3D4_SOURCE_EVALUATION.md`, `docs/CATALOG_M3D4_QUALITY_AUDIT.md` and `catalog/preparation/m3d4` before any later source change.
+- Generate/check only through `tools/prepare_m3d4_candidates.py` and `tools/prepare_m3d4_catalog.py`. Source/version/checksum pairs are immutable. Keep 9 new deferrals, 29 earlier deferrals and seven prior review questions pending; do not turn autonomous editorial labels into claims of independent human linguistic approval.
+- FoodOn, Open Food Facts, TürKomp and TheCocktailDB remain outside the runtime seed. The protected GI registry is reference-only; a generic catalog label does not certify product origin. No prior migration, ingredient ID, user-owned record, alias, category node or factual observation was changed.

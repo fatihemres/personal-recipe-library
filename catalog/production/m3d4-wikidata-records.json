@@ -1,0 +1,62 @@
+[
+  {
+    "description": "{\"descriptions\":{\"en\":\"Korean fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"doenjang\",\"tr\":\"Doenjang\"},\"qid\":\"Q1196289\",\"revision\":2552440448}",
+    "externalId": "Q1196289"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"dried and processed red pepper spice from Şanlıurfa, Turkey\",\"tr\":\"Şanlıurfa'ya özgü kurutulmuş ve işlenmiş kırmızı biber baharatı\"},\"labels\":{\"en\":\"Urfa biber\",\"tr\":\"isot\"},\"qid\":\"Q12812990\",\"revision\":2543281212}",
+    "externalId": "Q12812990"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"dry, spicy, fermented sausage of several Anatolian, Balkan, Middle Eastern and Central Asian cuisines\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"sujuk\",\"tr\":\"sucuk\"},\"qid\":\"Q1432724\",\"revision\":2539736104}",
+    "externalId": "Q1432724"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"natural symbiotic clusters of bacteria and yeasts, used in preparation of kefir\",\"tr\":null},\"labels\":{\"en\":\"kefir grains\",\"tr\":null},\"qid\":\"Q16620197\",\"revision\":2067936241}",
+    "externalId": "Q16620197"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Anatolian cuisine cold cut, also found in neighbouring countries\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"pastırma\",\"tr\":\"Pastırma\"},\"qid\":\"Q2056399\",\"revision\":2490072075}",
+    "externalId": "Q2056399"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"dried mixture of flour, yogurt and vegetables\",\"tr\":null},\"labels\":{\"en\":\"tarhana\",\"tr\":\"tarhana\"},\"qid\":\"Q2118339\",\"revision\":2500795983}",
+    "externalId": "Q2118339"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"traditional Turkish goat's milk cheese ripened in a goatskin casing\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"tulum cheese\",\"tr\":\"tulum peyniri\"},\"qid\":\"Q3183584\",\"revision\":2556524328}",
+    "externalId": "Q3183584"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"resin traditionally obtained from the mastic tree on the island of Chios\",\"tr\":\"Damla sakızı, sakız ağacından elde edilen bir reçinedir\"},\"labels\":{\"en\":\"mastic\",\"tr\":\"Damla sakızı\"},\"qid\":\"Q318367\",\"revision\":2537480791}",
+    "externalId": "Q318367"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"traditional egg noodles found in various Turkic cuisines\",\"tr\":null},\"labels\":{\"en\":\"kesme\",\"tr\":\"erişte\"},\"qid\":\"Q3668413\",\"revision\":2553117911}",
+    "externalId": "Q3668413"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"spice made from cherry pits\",\"tr\":null},\"labels\":{\"en\":\"mahleb\",\"tr\":null},\"qid\":\"Q465554\",\"revision\":2475402700}",
+    "externalId": "Q465554"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"creamy dairy product similar to clotted cream\",\"tr\":\"krema türü\"},\"labels\":{\"en\":\"kaymak\",\"tr\":\"Kaymak\"},\"qid\":\"Q478654\",\"revision\":2537650278}",
+    "externalId": "Q478654"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Turkish cheese\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"çökelek\",\"tr\":\"Çökelek\"},\"qid\":\"Q6027754\",\"revision\":2439800899}",
+    "externalId": "Q6027754"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"A cheese with herbs (otlu peynir), from Turkey, whose most famous version is from the province of Van\",\"tr\":null},\"labels\":{\"en\":\"Van herbed cheese\",\"tr\":\"Van otlu peyniri\"},\"qid\":\"Q6062076\",\"revision\":1352521981}",
+    "externalId": "Q6062076"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"runny paste made by diluting tamarind pulp with water\",\"tr\":null},\"labels\":{\"en\":\"tamarind paste\",\"tr\":null},\"qid\":\"Q67207722\",\"revision\":2480222626}",
+    "externalId": "Q67207722"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Korean red chilli paste\",\"tr\":null},\"labels\":{\"en\":\"gochujang\",\"tr\":\"Gochujang\"},\"qid\":\"Q699637\",\"revision\":2488883660}",
+    "externalId": "Q699637"
+  }
+]

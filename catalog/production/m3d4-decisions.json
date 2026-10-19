@@ -1,0 +1,1512 @@
+[
+  {
+    "candidateId": "m3d4-foundation-1104867",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Glutinous rice flour",
+    "proposedTurkish": "Yapışkan pirinç unu",
+    "reason": "Distinct sticky-rice flour; glutinous is a rice-type descriptor, not added gluten.",
+    "source": "foundation",
+    "sourceDescription": "Flour, rice, glutinous",
+    "sourceEvidence": {
+      "description": "Flour, rice, glutinous",
+      "externalId": "1104867"
+    },
+    "sourceIdentifier": "1104867",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1104867/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-1999626",
+    "categories": [
+      "mushrooms",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Lion's mane mushroom",
+    "proposedTurkish": "Aslan yelesi mantarı",
+    "reason": "Distinct edible mushroom.",
+    "source": "foundation",
+    "sourceDescription": "Mushroom, lion's mane",
+    "sourceEvidence": {
+      "description": "Mushroom, lion's mane",
+      "externalId": "1999626"
+    },
+    "sourceIdentifier": "1999626",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999626/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-1999627",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Existing oyster-mushroom form may cover the descriptor; compare species and preparation before accepting.",
+    "source": "foundation",
+    "sourceDescription": "Mushroom, oyster",
+    "sourceEvidence": {
+      "description": "Mushroom, oyster",
+      "externalId": "1999627"
+    },
+    "sourceIdentifier": "1999627",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999627/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-1999628",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Existing raw shiitake mushroom identity covers this form.",
+    "source": "foundation",
+    "sourceDescription": "Mushrooms, shiitake",
+    "sourceEvidence": {
+      "description": "Mushrooms, shiitake",
+      "externalId": "1999628"
+    },
+    "sourceIdentifier": "1999628",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999628/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-1999630",
+    "categories": [
+      "dairy-alternatives",
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Soy milk (unsweetened, shelf-stable)",
+    "proposedTurkish": "Şekersiz soya içeceği (raf ömrü uzun)",
+    "reason": "Distinct shelf-stable unsweetened soy beverage form.",
+    "source": "foundation",
+    "sourceDescription": "Soy milk, unsweetened, plain, shelf stable",
+    "sourceEvidence": {
+      "description": "Soy milk, unsweetened, plain, shelf stable",
+      "externalId": "1999630"
+    },
+    "sourceIdentifier": "1999630",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/1999630/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003586",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Tipo 00 wheat flour",
+    "proposedTurkish": "Tipo 00 buğday unu",
+    "reason": "Distinct fine-milled Italian flour grade.",
+    "source": "foundation",
+    "sourceDescription": "Flour, 00",
+    "sourceEvidence": {
+      "description": "Flour, 00",
+      "externalId": "2003586"
+    },
+    "sourceIdentifier": "2003586",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003586/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003588",
+    "categories": [
+      "flours",
+      "grains"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Coarse semolina",
+    "proposedTurkish": "İri taneli irmik",
+    "reason": "Coarse semolina is a useful distinct milling form.",
+    "source": "foundation",
+    "sourceDescription": "Flour, semolina, coarse and semi-coarse",
+    "sourceEvidence": {
+      "description": "Flour, semolina, coarse and semi-coarse",
+      "externalId": "2003588"
+    },
+    "sourceIdentifier": "2003588",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003588/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003589",
+    "categories": [
+      "flours",
+      "grains"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Fine semolina",
+    "proposedTurkish": "İnce taneli irmik",
+    "reason": "Fine semolina is distinct from coarse semolina.",
+    "source": "foundation",
+    "sourceDescription": "Flour, semolina, fine",
+    "sourceEvidence": {
+      "description": "Flour, semolina, fine",
+      "externalId": "2003589"
+    },
+    "sourceIdentifier": "2003589",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003589/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003593",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "White grape juice (from concentrate, shelf-stable)",
+    "proposedTurkish": "Beyaz üzüm suyu (konsantreden, raf ömrü uzun)",
+    "reason": "White grape juice form differs from grape fruit.",
+    "source": "foundation",
+    "sourceDescription": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
+    "sourceEvidence": {
+      "description": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
+      "externalId": "2003593"
+    },
+    "sourceIdentifier": "2003593",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003593/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003594",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Cranberry juice (from concentrate, shelf-stable)",
+    "proposedTurkish": "Turna yemişi suyu (konsantreden, raf ömrü uzun)",
+    "reason": "Cranberry is turna yemişi, not Turkish kızılcık.",
+    "source": "foundation",
+    "sourceDescription": "Cranberry juice, not fortified, from concentrate, shelf stable",
+    "sourceEvidence": {
+      "description": "Cranberry juice, not fortified, from concentrate, shelf stable",
+      "externalId": "2003594"
+    },
+    "sourceIdentifier": "2003594",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003594/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003595",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Red grapefruit juice (not from concentrate)",
+    "proposedTurkish": "Kırmızı greyfurt suyu (konsantre değil)",
+    "reason": "Distinct grapefruit-juice form.",
+    "source": "foundation",
+    "sourceDescription": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
+    "sourceEvidence": {
+      "description": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
+      "externalId": "2003595"
+    },
+    "sourceIdentifier": "2003595",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003595/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003599",
+    "categories": [
+      "mushrooms",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "King oyster mushroom",
+    "proposedTurkish": "Kral istiridye mantarı",
+    "reason": "Distinct mushroom species or market form.",
+    "source": "foundation",
+    "sourceDescription": "Mushroom, king oyster",
+    "sourceEvidence": {
+      "description": "Mushroom, king oyster",
+      "externalId": "2003599"
+    },
+    "sourceIdentifier": "2003599",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003599/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003601",
+    "categories": [
+      "mushrooms"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Crimini mushroom",
+    "proposedTurkish": "Kestane mantarı (crimini)",
+    "reason": "Distinct marketed brown button-mushroom form; identity retained for review.",
+    "source": "foundation",
+    "sourceDescription": "Mushroom, crimini",
+    "sourceEvidence": {
+      "description": "Mushroom, crimini",
+      "externalId": "2003601"
+    },
+    "sourceIdentifier": "2003601",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003601/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2003604",
+    "categories": [
+      "mushrooms",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Pioppino mushroom",
+    "proposedTurkish": "Pioppino mantarı",
+    "reason": "Distinct edible mushroom.",
+    "source": "foundation",
+    "sourceDescription": "Mushroom, pioppini",
+    "sourceEvidence": {
+      "description": "Mushroom, pioppini",
+      "externalId": "2003604"
+    },
+    "sourceIdentifier": "2003604",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2003604/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2257045",
+    "categories": [
+      "dairy-alternatives",
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Almond milk (unsweetened, refrigerated)",
+    "proposedTurkish": "Şekersiz badem içeceği (soğuk zincir)",
+    "reason": "Distinct unsweetened refrigerated almond beverage form.",
+    "source": "foundation",
+    "sourceDescription": "Almond milk, unsweetened, plain, refrigerated",
+    "sourceEvidence": {
+      "description": "Almond milk, unsweetened, plain, refrigerated",
+      "externalId": "2257045"
+    },
+    "sourceIdentifier": "2257045",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2257045/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2257046",
+    "categories": [
+      "dairy-alternatives",
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Oat milk (unsweetened, refrigerated)",
+    "proposedTurkish": "Şekersiz yulaf içeceği (soğuk zincir)",
+    "reason": "Distinct unsweetened refrigerated oat beverage form.",
+    "source": "foundation",
+    "sourceDescription": "Oat milk, unsweetened, plain, refrigerated",
+    "sourceEvidence": {
+      "description": "Oat milk, unsweetened, plain, refrigerated",
+      "externalId": "2257046"
+    },
+    "sourceIdentifier": "2257046",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2257046/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2261420",
+    "categories": [
+      "flours",
+      "nuts-seeds"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Almond flour",
+    "proposedTurkish": "Badem unu",
+    "reason": "Distinct ground almond flour for baking; not almond paste or butter.",
+    "source": "foundation",
+    "sourceDescription": "Flour, almond",
+    "sourceEvidence": {
+      "description": "Flour, almond",
+      "externalId": "2261420"
+    },
+    "sourceIdentifier": "2261420",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2261420/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2262073",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Sesame butter overlaps historical deferred tahini identity; do not import without identity review.",
+    "source": "foundation",
+    "sourceDescription": "Sesame butter, creamy",
+    "sourceEvidence": {
+      "description": "Sesame butter, creamy",
+      "externalId": "2262073"
+    },
+    "sourceIdentifier": "2262073",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2262073/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2512371",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Amaranth flour",
+    "proposedTurkish": "Amarant unu",
+    "reason": "Distinct flour from amaranth grain.",
+    "source": "foundation",
+    "sourceDescription": "Flour, amaranth",
+    "sourceEvidence": {
+      "description": "Flour, amaranth",
+      "externalId": "2512371"
+    },
+    "sourceIdentifier": "2512371",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512371/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2512372",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Quinoa flour",
+    "proposedTurkish": "Kinoa unu",
+    "reason": "Distinct milled quinoa flour.",
+    "source": "foundation",
+    "sourceDescription": "Flour, quinoa",
+    "sourceEvidence": {
+      "description": "Flour, quinoa",
+      "externalId": "2512372"
+    },
+    "sourceIdentifier": "2512372",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512372/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2512377",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cassava flour",
+    "proposedTurkish": "Manyok unu",
+    "reason": "Distinct cassava flour; not tapioca starch.",
+    "source": "foundation",
+    "sourceDescription": "Flour, cassava",
+    "sourceEvidence": {
+      "description": "Flour, cassava",
+      "externalId": "2512377"
+    },
+    "sourceIdentifier": "2512377",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512377/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2512378",
+    "categories": [
+      "grains"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Whole buckwheat grain",
+    "proposedTurkish": "Karabuğday tanesi",
+    "reason": "Whole grain differs from buckwheat flour.",
+    "source": "foundation",
+    "sourceDescription": "Buckwheat, whole grain",
+    "sourceEvidence": {
+      "description": "Buckwheat, whole grain",
+      "externalId": "2512378"
+    },
+    "sourceIdentifier": "2512378",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2512378/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2515377",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Chestnut flour",
+    "proposedTurkish": "Kestane unu",
+    "reason": "Distinct chestnut flour for baking.",
+    "source": "foundation",
+    "sourceDescription": "Flour, chestnut",
+    "sourceEvidence": {
+      "description": "Flour, chestnut",
+      "externalId": "2515377"
+    },
+    "sourceIdentifier": "2515377",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2515377/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2515382",
+    "categories": [
+      "flours",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Coconut flour",
+    "proposedTurkish": "Hindistan cevizi unu",
+    "reason": "Distinct coconut flour; not shredded coconut.",
+    "source": "foundation",
+    "sourceDescription": "Flour, coconut",
+    "sourceEvidence": {
+      "description": "Flour, coconut",
+      "externalId": "2515382"
+    },
+    "sourceIdentifier": "2515382",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2515382/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2644281",
+    "categories": [
+      "legumes",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cannellini beans (dry)",
+    "proposedTurkish": "Kuru cannellini fasulyesi",
+    "reason": "Distinct dry white-bean variety.",
+    "source": "foundation",
+    "sourceDescription": "Beans, cannellini, dry",
+    "sourceEvidence": {
+      "description": "Beans, cannellini, dry",
+      "externalId": "2644281"
+    },
+    "sourceIdentifier": "2644281",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644281/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2644286",
+    "categories": [
+      "legumes",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Navy beans (canned, drained and rinsed)",
+    "proposedTurkish": "Konserve navy fasulyesi (süzülmüş ve durulanmış)",
+    "reason": "Prepared canned navy-bean form distinct from dry beans.",
+    "source": "foundation",
+    "sourceDescription": "Beans, navy, canned, sodium added, drained and rinsed",
+    "sourceEvidence": {
+      "description": "Beans, navy, canned, sodium added, drained and rinsed",
+      "externalId": "2644286"
+    },
+    "sourceIdentifier": "2644286",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644286/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2644287",
+    "categories": [
+      "legumes",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cannellini beans (canned, drained and rinsed)",
+    "proposedTurkish": "Konserve cannellini fasulyesi (süzülmüş ve durulanmış)",
+    "reason": "Prepared canned form distinct from dry beans.",
+    "source": "foundation",
+    "sourceDescription": "Beans, cannellini, canned, sodium added, drained and rinsed",
+    "sourceEvidence": {
+      "description": "Beans, cannellini, canned, sodium added, drained and rinsed",
+      "externalId": "2644287"
+    },
+    "sourceIdentifier": "2644287",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2644287/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2647441",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Oaxaca cheese may already be covered by a related Mexican cheese; verify culinary identity and category before adding.",
+    "source": "foundation",
+    "sourceDescription": "Cheese, oaxaca, solid",
+    "sourceEvidence": {
+      "description": "Cheese, oaxaca, solid",
+      "externalId": "2647441"
+    },
+    "sourceIdentifier": "2647441",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2647441/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710821",
+    "categories": [
+      "grains",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Wild rice (dry)",
+    "proposedTurkish": "Yabani pirinç (kuru)",
+    "reason": "Distinct culinary grain; not ordinary rice.",
+    "source": "foundation",
+    "sourceDescription": "Wild rice, dry, raw",
+    "sourceEvidence": {
+      "description": "Wild rice, dry, raw",
+      "externalId": "2710821"
+    },
+    "sourceIdentifier": "2710821",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710821/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710825",
+    "categories": [
+      "grains",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Black rice (raw)",
+    "proposedTurkish": "Siyah pirinç (çiğ)",
+    "reason": "Distinct black rice grain.",
+    "source": "foundation",
+    "sourceDescription": "Rice, black, unenriched, raw",
+    "sourceEvidence": {
+      "description": "Rice, black, unenriched, raw",
+      "externalId": "2710825"
+    },
+    "sourceIdentifier": "2710825",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710825/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710827",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Existing siyez grain identity already covers einkorn wheat.",
+    "source": "foundation",
+    "sourceDescription": "Einkorn, grain, dry, raw",
+    "sourceEvidence": {
+      "description": "Einkorn, grain, dry, raw",
+      "externalId": "2710827"
+    },
+    "sourceIdentifier": "2710827",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710827/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710829",
+    "categories": [
+      "grains",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Fonio grain (dry)",
+    "proposedTurkish": "Fonio tahılı (kuru)",
+    "reason": "Distinct West African grain.",
+    "source": "foundation",
+    "sourceDescription": "Fonio, grain, dry, raw",
+    "sourceEvidence": {
+      "description": "Fonio, grain, dry, raw",
+      "externalId": "2710829"
+    },
+    "sourceIdentifier": "2710829",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710829/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710830",
+    "categories": [
+      "grains",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Khorasan wheat grain (dry)",
+    "proposedTurkish": "Horasan buğdayı tanesi (kuru)",
+    "reason": "Distinct wheat grain; no cultivar or trademark claim.",
+    "source": "foundation",
+    "sourceDescription": "Khorasan, grain, dry, raw",
+    "sourceEvidence": {
+      "description": "Khorasan, grain, dry, raw",
+      "externalId": "2710830"
+    },
+    "sourceIdentifier": "2710830",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710830/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2710838",
+    "categories": [
+      "grains",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Red rice (raw)",
+    "proposedTurkish": "Kırmızı pirinç (çiğ)",
+    "reason": "Distinct red rice grain.",
+    "source": "foundation",
+    "sourceDescription": "Rice, red, unenriched, dry, raw",
+    "sourceEvidence": {
+      "description": "Rice, red, unenriched, dry, raw",
+      "externalId": "2710838"
+    },
+    "sourceIdentifier": "2710838",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2710838/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2727582",
+    "categories": [
+      "vegetables",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Tomatillo (dehusked, raw)",
+    "proposedTurkish": "Tomatillo (kabuksuz, çiğ)",
+    "reason": "Distinct tomatillo fruit; not tomato.",
+    "source": "foundation",
+    "sourceDescription": "Tomatillos, dehusked, raw",
+    "sourceEvidence": {
+      "description": "Tomatillos, dehusked, raw",
+      "externalId": "2727582"
+    },
+    "sourceIdentifier": "2727582",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727582/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2727588",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Pomegranate juice (from concentrate, shelf-stable)",
+    "proposedTurkish": "Nar suyu (konsantreden, raf ömrü uzun)",
+    "reason": "Concentrate-derived shelf-stable juice differs from whole fruit.",
+    "source": "foundation",
+    "sourceDescription": "Juice, pomegranate, from concentrate, shelf-stable",
+    "sourceEvidence": {
+      "description": "Juice, pomegranate, from concentrate, shelf-stable",
+      "externalId": "2727588"
+    },
+    "sourceIdentifier": "2727588",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727588/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2727589",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Tart cherry juice (from concentrate, shelf-stable)",
+    "proposedTurkish": "Vişne suyu (konsantreden, raf ömrü uzun)",
+    "reason": "Tart cherry juice differs from sweet cherry fruit.",
+    "source": "foundation",
+    "sourceDescription": "Juice, tart cherry, from concentrate, shelf-stable",
+    "sourceEvidence": {
+      "description": "Juice, tart cherry, from concentrate, shelf-stable",
+      "externalId": "2727589"
+    },
+    "sourceIdentifier": "2727589",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2727589/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2747661",
+    "categories": [
+      "vegetables",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Jalapeño pepper (seeded, raw)",
+    "proposedTurkish": "Jalapeño biberi (çekirdeksiz, çiğ)",
+    "reason": "Seeded raw jalapeño form.",
+    "source": "foundation",
+    "sourceDescription": "Peppers, jalapeno, seeded, raw",
+    "sourceEvidence": {
+      "description": "Peppers, jalapeno, seeded, raw",
+      "externalId": "2747661"
+    },
+    "sourceIdentifier": "2747661",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747661/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2747662",
+    "categories": [
+      "vegetables",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Poblano pepper (seeded, raw)",
+    "proposedTurkish": "Poblano biberi (çekirdeksiz, çiğ)",
+    "reason": "Seeded raw poblano form; not dried ancho.",
+    "source": "foundation",
+    "sourceDescription": "Peppers, poblano, seeded, raw",
+    "sourceEvidence": {
+      "description": "Peppers, poblano, seeded, raw",
+      "externalId": "2747662"
+    },
+    "sourceIdentifier": "2747662",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747662/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-2747663",
+    "categories": [
+      "vegetables",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Serrano pepper (seeded, raw)",
+    "proposedTurkish": "Serrano biberi (çekirdeksiz, çiğ)",
+    "reason": "Seeded raw serrano form.",
+    "source": "foundation",
+    "sourceDescription": "Peppers, serrano, seeded, raw",
+    "sourceEvidence": {
+      "description": "Peppers, serrano, seeded, raw",
+      "externalId": "2747663"
+    },
+    "sourceIdentifier": "2747663",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/2747663/nutrients"
+  },
+  {
+    "candidateId": "m3d4-foundation-321358",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "REJECT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Commercial prepared hummus is a ready dish rather than a base ingredient for this catalog batch.",
+    "source": "foundation",
+    "sourceDescription": "Hummus, commercial",
+    "sourceEvidence": {
+      "description": "Hummus, commercial",
+      "externalId": "321358"
+    },
+    "sourceIdentifier": "321358",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/321358/nutrients"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q108946643",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Existing nar ekşisi covers pomegranate reduction; do not create a duplicate.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"a middle eastern condiment made from boiled down pomegranate juice\",\"tr\":null},\"labels\":{\"en\":\"pomegranate molasses\",\"tr\":\"Nar ekşisi\"},\"qid\":\"Q108946643\",\"revision\":2557959353}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"a middle eastern condiment made from boiled down pomegranate juice\",\"tr\":null},\"labels\":{\"en\":\"pomegranate molasses\",\"tr\":\"Nar ekşisi\"},\"qid\":\"Q108946643\",\"revision\":2557959353}",
+      "externalId": "Q108946643"
+    },
+    "sourceIdentifier": "Q108946643",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q108946643.json?revision=2557959353"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q1196289",
+    "categories": [
+      "fermented",
+      "sauces",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Doenjang",
+    "proposedTurkish": "Doenjang",
+    "reason": "Korean fermented soybean paste distinct from miso.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Korean fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"doenjang\",\"tr\":\"Doenjang\"},\"qid\":\"Q1196289\",\"revision\":2552440448}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Korean fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"doenjang\",\"tr\":\"Doenjang\"},\"qid\":\"Q1196289\",\"revision\":2552440448}",
+      "externalId": "Q1196289"
+    },
+    "sourceIdentifier": "Q1196289",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1196289.json?revision=2552440448"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q12812990",
+    "categories": [
+      "spices",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Urfa biber",
+    "proposedTurkish": "İsot biberi",
+    "reason": "Dried processed Şanlıurfa red pepper spice; no GI certification claim.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"dried and processed red pepper spice from Şanlıurfa, Turkey\",\"tr\":\"Şanlıurfa'ya özgü kurutulmuş ve işlenmiş kırmızı biber baharatı\"},\"labels\":{\"en\":\"Urfa biber\",\"tr\":\"isot\"},\"qid\":\"Q12812990\",\"revision\":2543281212}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"dried and processed red pepper spice from Şanlıurfa, Turkey\",\"tr\":\"Şanlıurfa'ya özgü kurutulmuş ve işlenmiş kırmızı biber baharatı\"},\"labels\":{\"en\":\"Urfa biber\",\"tr\":\"isot\"},\"qid\":\"Q12812990\",\"revision\":2543281212}",
+      "externalId": "Q12812990"
+    },
+    "sourceIdentifier": "Q12812990",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q12812990.json?revision=2543281212"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q1432724",
+    "categories": [
+      "meat",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Sucuk",
+    "proposedTurkish": "Sucuk",
+    "reason": "Distinct fermented spiced sausage used in cooking.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"dry, spicy, fermented sausage of several Anatolian, Balkan, Middle Eastern and Central Asian cuisines\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"sujuk\",\"tr\":\"sucuk\"},\"qid\":\"Q1432724\",\"revision\":2539736104}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"dry, spicy, fermented sausage of several Anatolian, Balkan, Middle Eastern and Central Asian cuisines\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"sujuk\",\"tr\":\"sucuk\"},\"qid\":\"Q1432724\",\"revision\":2539736104}",
+      "externalId": "Q1432724"
+    },
+    "sourceIdentifier": "Q1432724",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1432724.json?revision=2539736104"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q148306",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Zahter may denote herb or mixed seasoning; entity description is ambiguous.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"herbal spice used in seasoning\",\"tr\":\"Levanten otu veya ot karışımı\"},\"labels\":{\"en\":\"za'atar\",\"tr\":\"Zahter\"},\"qid\":\"Q148306\",\"revision\":2553152846}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"herbal spice used in seasoning\",\"tr\":\"Levanten otu veya ot karışımı\"},\"labels\":{\"en\":\"za'atar\",\"tr\":\"Zahter\"},\"qid\":\"Q148306\",\"revision\":2553152846}",
+      "externalId": "Q148306"
+    },
+    "sourceIdentifier": "Q148306",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q148306.json?revision=2553152846"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q16620197",
+    "categories": [
+      "fermented",
+      "dairy"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Kefir grains",
+    "proposedTurkish": "Kefir mayası taneleri",
+    "reason": "Live symbiotic starter culture; not prepared kefir drink.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"natural symbiotic clusters of bacteria and yeasts, used in preparation of kefir\",\"tr\":null},\"labels\":{\"en\":\"kefir grains\",\"tr\":null},\"qid\":\"Q16620197\",\"revision\":2067936241}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"natural symbiotic clusters of bacteria and yeasts, used in preparation of kefir\",\"tr\":null},\"labels\":{\"en\":\"kefir grains\",\"tr\":null},\"qid\":\"Q16620197\",\"revision\":2067936241}",
+      "externalId": "Q16620197"
+    },
+    "sourceIdentifier": "Q16620197",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q16620197.json?revision=2067936241"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q1817099",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "REJECT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "QID is a music project, not the edible lemongrass ingredient.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"German music project and record label\",\"tr\":null},\"labels\":{\"en\":\"Lemongrass\",\"tr\":null},\"qid\":\"Q1817099\",\"revision\":2302378824}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"German music project and record label\",\"tr\":null},\"labels\":{\"en\":\"Lemongrass\",\"tr\":null},\"qid\":\"Q1817099\",\"revision\":2302378824}",
+      "externalId": "Q1817099"
+    },
+    "sourceIdentifier": "Q1817099",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1817099.json?revision=2302378824"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q1866347",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Phyllo and regional yufka may have different thickness/use; do not conflate without independent evidence.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"unleavened dough\",\"tr\":\"Mayasız hamur\"},\"labels\":{\"en\":\"phyllo\",\"tr\":\"Yufka\"},\"qid\":\"Q1866347\",\"revision\":2557231067}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"unleavened dough\",\"tr\":\"Mayasız hamur\"},\"labels\":{\"en\":\"phyllo\",\"tr\":\"Yufka\"},\"qid\":\"Q1866347\",\"revision\":2557231067}",
+      "externalId": "Q1866347"
+    },
+    "sourceIdentifier": "Q1866347",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1866347.json?revision=2557231067"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q2056399",
+    "categories": [
+      "meat",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Pastırma",
+    "proposedTurkish": "Pastırma",
+    "reason": "Distinct cured meat used in cooking; not a complete prepared dish.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Anatolian cuisine cold cut, also found in neighbouring countries\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"pastırma\",\"tr\":\"Pastırma\"},\"qid\":\"Q2056399\",\"revision\":2490072075}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Anatolian cuisine cold cut, also found in neighbouring countries\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"pastırma\",\"tr\":\"Pastırma\"},\"qid\":\"Q2056399\",\"revision\":2490072075}",
+      "externalId": "Q2056399"
+    },
+    "sourceIdentifier": "Q2056399",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q2056399.json?revision=2490072075"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q2118339",
+    "categories": [
+      "fermented",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Tarhana (dried mixture)",
+    "proposedTurkish": "Tarhana (kuru karışım)",
+    "reason": "Dried fermented mixture used as an ingredient, not prepared soup.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"dried mixture of flour, yogurt and vegetables\",\"tr\":null},\"labels\":{\"en\":\"tarhana\",\"tr\":\"tarhana\"},\"qid\":\"Q2118339\",\"revision\":2500795983}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"dried mixture of flour, yogurt and vegetables\",\"tr\":null},\"labels\":{\"en\":\"tarhana\",\"tr\":\"tarhana\"},\"qid\":\"Q2118339\",\"revision\":2500795983}",
+      "externalId": "Q2118339"
+    },
+    "sourceIdentifier": "Q2118339",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q2118339.json?revision=2500795983"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q235169",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Existing miso identity covers fermented soybean paste.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"miso\",\"tr\":\"Miso\"},\"qid\":\"Q235169\",\"revision\":2517552095}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"miso\",\"tr\":\"Miso\"},\"qid\":\"Q235169\",\"revision\":2517552095}",
+      "externalId": "Q235169"
+    },
+    "sourceIdentifier": "Q235169",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q235169.json?revision=2517552095"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q27943",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Salicornia species and marketed deniz börülcesi may not be coterminous.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"halophytic perennial dicot\",\"tr\":null},\"labels\":{\"en\":\"Salicornia europaea\",\"tr\":\"Deniz börülcesi\"},\"qid\":\"Q27943\",\"revision\":2556895689}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"halophytic perennial dicot\",\"tr\":null},\"labels\":{\"en\":\"Salicornia europaea\",\"tr\":\"Deniz börülcesi\"},\"qid\":\"Q27943\",\"revision\":2556895689}",
+      "externalId": "Q27943"
+    },
+    "sourceIdentifier": "Q27943",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q27943.json?revision=2556895689"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q3183584",
+    "categories": [
+      "cheeses",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Tulum cheese",
+    "proposedTurkish": "Tulum peyniri",
+    "reason": "Turkish ripened cheese identity; no protected-origin certification implied.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"traditional Turkish goat's milk cheese ripened in a goatskin casing\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"tulum cheese\",\"tr\":\"tulum peyniri\"},\"qid\":\"Q3183584\",\"revision\":2556524328}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"traditional Turkish goat's milk cheese ripened in a goatskin casing\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"tulum cheese\",\"tr\":\"tulum peyniri\"},\"qid\":\"Q3183584\",\"revision\":2556524328}",
+      "externalId": "Q3183584"
+    },
+    "sourceIdentifier": "Q3183584",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3183584.json?revision=2556524328"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q318367",
+    "categories": [
+      "spices",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Mastic resin",
+    "proposedTurkish": "Damla sakızı",
+    "reason": "Culinary mastic resin; no Chios protected-origin certification implied.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"resin traditionally obtained from the mastic tree on the island of Chios\",\"tr\":\"Damla sakızı, sakız ağacından elde edilen bir reçinedir\"},\"labels\":{\"en\":\"mastic\",\"tr\":\"Damla sakızı\"},\"qid\":\"Q318367\",\"revision\":2537480791}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"resin traditionally obtained from the mastic tree on the island of Chios\",\"tr\":\"Damla sakızı, sakız ağacından elde edilen bir reçinedir\"},\"labels\":{\"en\":\"mastic\",\"tr\":\"Damla sakızı\"},\"qid\":\"Q318367\",\"revision\":2537480791}",
+      "externalId": "Q318367"
+    },
+    "sourceIdentifier": "Q318367",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q318367.json?revision=2537480791"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q3337007",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Botanical madımak species does not alone establish edible harvested ingredient form.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"species of plant\",\"tr\":null},\"labels\":{\"en\":\"Polygonum cognatum\",\"tr\":\"Madımak\"},\"qid\":\"Q3337007\",\"revision\":2535968927}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"species of plant\",\"tr\":null},\"labels\":{\"en\":\"Polygonum cognatum\",\"tr\":\"Madımak\"},\"qid\":\"Q3337007\",\"revision\":2535968927}",
+      "externalId": "Q3337007"
+    },
+    "sourceIdentifier": "Q3337007",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3337007.json?revision=2535968927"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q3668413",
+    "categories": [
+      "noodles-pasta",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Kesme noodles",
+    "proposedTurkish": "Kesme erişte",
+    "reason": "Distinct hand-cut Turkic egg-noodle form.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"traditional egg noodles found in various Turkic cuisines\",\"tr\":null},\"labels\":{\"en\":\"kesme\",\"tr\":\"erişte\"},\"qid\":\"Q3668413\",\"revision\":2553117911}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"traditional egg noodles found in various Turkic cuisines\",\"tr\":null},\"labels\":{\"en\":\"kesme\",\"tr\":\"erişte\"},\"qid\":\"Q3668413\",\"revision\":2553117911}",
+      "externalId": "Q3668413"
+    },
+    "sourceIdentifier": "Q3668413",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3668413.json?revision=2553117911"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q465554",
+    "categories": [
+      "spices",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Mahleb",
+    "proposedTurkish": "Mahlep",
+    "reason": "Spice from mahaleb cherry kernels; not whole cherries.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"spice made from cherry pits\",\"tr\":null},\"labels\":{\"en\":\"mahleb\",\"tr\":null},\"qid\":\"Q465554\",\"revision\":2475402700}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"spice made from cherry pits\",\"tr\":null},\"labels\":{\"en\":\"mahleb\",\"tr\":null},\"qid\":\"Q465554\",\"revision\":2475402700}",
+      "externalId": "Q465554"
+    },
+    "sourceIdentifier": "Q465554",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q465554.json?revision=2475402700"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q478654",
+    "categories": [
+      "dairy",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Kaymak",
+    "proposedTurkish": "Kaymak",
+    "reason": "Clotted cream-like dairy product; not ordinary cream.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"creamy dairy product similar to clotted cream\",\"tr\":\"krema türü\"},\"labels\":{\"en\":\"kaymak\",\"tr\":\"Kaymak\"},\"qid\":\"Q478654\",\"revision\":2537650278}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"creamy dairy product similar to clotted cream\",\"tr\":\"krema türü\"},\"labels\":{\"en\":\"kaymak\",\"tr\":\"Kaymak\"},\"qid\":\"Q478654\",\"revision\":2537650278}",
+      "externalId": "Q478654"
+    },
+    "sourceIdentifier": "Q478654",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q478654.json?revision=2537650278"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q6027754",
+    "categories": [
+      "cheeses",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Çökelek cheese",
+    "proposedTurkish": "Çökelek",
+    "reason": "Distinct Turkish curd cheese identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Turkish cheese\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"çökelek\",\"tr\":\"Çökelek\"},\"qid\":\"Q6027754\",\"revision\":2439800899}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Turkish cheese\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"çökelek\",\"tr\":\"Çökelek\"},\"qid\":\"Q6027754\",\"revision\":2439800899}",
+      "externalId": "Q6027754"
+    },
+    "sourceIdentifier": "Q6027754",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q6027754.json?revision=2439800899"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q6062076",
+    "categories": [
+      "cheeses",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Van herbed cheese",
+    "proposedTurkish": "Van otlu peyniri",
+    "reason": "Distinct regional herbed cheese; label denotes culinary identity, not certified origin.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"A cheese with herbs (otlu peynir), from Turkey, whose most famous version is from the province of Van\",\"tr\":null},\"labels\":{\"en\":\"Van herbed cheese\",\"tr\":\"Van otlu peyniri\"},\"qid\":\"Q6062076\",\"revision\":1352521981}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"A cheese with herbs (otlu peynir), from Turkey, whose most famous version is from the province of Van\",\"tr\":null},\"labels\":{\"en\":\"Van herbed cheese\",\"tr\":\"Van otlu peyniri\"},\"qid\":\"Q6062076\",\"revision\":1352521981}",
+      "externalId": "Q6062076"
+    },
+    "sourceIdentifier": "Q6062076",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q6062076.json?revision=1352521981"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q67207722",
+    "categories": [
+      "sauces",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Tamarind paste (diluted)",
+    "proposedTurkish": "Demirhindi ezmesi (sulandırılmış)",
+    "reason": "Diluted tamarind-pulp paste; not raw tamarind fruit.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"runny paste made by diluting tamarind pulp with water\",\"tr\":null},\"labels\":{\"en\":\"tamarind paste\",\"tr\":null},\"qid\":\"Q67207722\",\"revision\":2480222626}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"runny paste made by diluting tamarind pulp with water\",\"tr\":null},\"labels\":{\"en\":\"tamarind paste\",\"tr\":null},\"qid\":\"Q67207722\",\"revision\":2480222626}",
+      "externalId": "Q67207722"
+    },
+    "sourceIdentifier": "Q67207722",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q67207722.json?revision=2480222626"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q699637",
+    "categories": [
+      "fermented",
+      "sauces",
+      "international-specialty"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Gochujang",
+    "proposedTurkish": "Gochujang",
+    "reason": "Korean fermented red-pepper paste identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Korean red chilli paste\",\"tr\":null},\"labels\":{\"en\":\"gochujang\",\"tr\":\"Gochujang\"},\"qid\":\"Q699637\",\"revision\":2488883660}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Korean red chilli paste\",\"tr\":null},\"labels\":{\"en\":\"gochujang\",\"tr\":\"Gochujang\"},\"qid\":\"Q699637\",\"revision\":2488883660}",
+      "externalId": "Q699637"
+    },
+    "sourceIdentifier": "Q699637",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q699637.json?revision=2488883660"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q734727",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Galangal spans several species; exact culinary rhizome identity requires a narrower source.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"rhizome of several plants from the ginger family (Zingiberaceae)\",\"tr\":null},\"labels\":{\"en\":\"galangal\",\"tr\":null},\"qid\":\"Q734727\",\"revision\":2558005692}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"rhizome of several plants from the ginger family (Zingiberaceae)\",\"tr\":null},\"labels\":{\"en\":\"galangal\",\"tr\":null},\"qid\":\"Q734727\",\"revision\":2558005692}",
+      "externalId": "Q734727"
+    },
+    "sourceIdentifier": "Q734727",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q734727.json?revision=2558005692"
+  },
+  {
+    "candidateId": "m3d4-wikidata-Q966327",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Harissa entity has an identity description but lacks stable English/Turkish labels in this revision.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Tunisian hot chili pepper paste\",\"tr\":\"Kuzey Afrika kökenli bir biber salçası\"},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q966327\",\"revision\":2511176634}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Tunisian hot chili pepper paste\",\"tr\":\"Kuzey Afrika kökenli bir biber salçası\"},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q966327\",\"revision\":2511176634}",
+      "externalId": "Q966327"
+    },
+    "sourceIdentifier": "Q966327",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q966327.json?revision=2511176634"
+  }
+]

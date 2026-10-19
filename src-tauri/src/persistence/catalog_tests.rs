@@ -377,7 +377,7 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
     assert_eq!(db.draft(&draft.id).unwrap().revision, 1);
     db.import_catalog(&seed()).unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 745);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 795);
     assert_eq!(
         db.recipe(&r.id).unwrap().ingredients[0].ingredient_id,
         ingredient.id
@@ -494,7 +494,7 @@ fn verify_killed_import(production: bool) {
     };
     assert_eq!(
         db.import_catalog(&package).unwrap().inserted,
-        if production { 745 } else { 8 }
+        if production { 795 } else { 8 }
     );
 }
 
@@ -530,7 +530,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
     )
     .unwrap();
     assert_eq!(seed.manifest_hash, disk.manifest_hash);
-    assert_eq!(seed.data.ingredients.len(), 745);
+    assert_eq!(seed.data.ingredients.len(), 795);
     assert_eq!(seed.data.categories.len(), 50);
     let dir = tempfile::tempdir().unwrap();
     let mut db = Database::open(dir.path()).unwrap();
@@ -542,7 +542,7 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
             report.available,
             report.collisions
         ),
-        (745, 745, 745, 0)
+        (795, 795, 795, 0)
     );
     let coverage: serde_json::Value =
         serde_json::from_str(include_str!("../../../catalog/production/coverage.json")).unwrap();
@@ -568,11 +568,11 @@ fn production_embedded_package_offline_counts_attribution_search_and_recipe_rest
         .all(|i| i.names.contains_key("tr")
             && i.names.contains_key("en")
             && i.observations.is_empty()));
-    assert_eq!(report.category_coverage["vegetables"], 120);
+    assert_eq!(report.category_coverage["vegetables"], 124);
     assert_eq!(report.category_coverage["spirits"], 25);
-    assert_eq!(count(&db, "catalog_provenance"), 1441);
+    assert_eq!(count(&db, "catalog_provenance"), 1541);
     assert_eq!(count(&db, "catalog_observations"), 0);
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 745);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 795);
     for q in ["Şek", "şek", "ŞEK", "şeker", "S\u{0327}EK"] {
         assert!(db
             .available_ingredients(q)
@@ -650,7 +650,7 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
     })
     .unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(db.catalog_status().unwrap().production_definitions, 745);
+    assert_eq!(db.catalog_status().unwrap().production_definitions, 795);
     assert_eq!(db.catalog_status().unwrap().pending_collisions, 1);
     assert_eq!(
         db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
@@ -670,8 +670,8 @@ fn production_upgrade_retains_personal_collisions_overrides_drafts_and_recipes()
         )
         .unwrap();
     assert_eq!(preserved, ("Korunsun".into(), "kg".into()));
-    assert_eq!(count(&db, "ingredients"), 745);
-    assert_eq!(count(&db, "catalog_sources"), 12);
+    assert_eq!(count(&db, "ingredients"), 795);
+    assert_eq!(count(&db, "catalog_sources"), 15);
 }
 
 #[test]
@@ -694,7 +694,7 @@ fn production_invalid_duplicate_and_failure_roll_back_package() {
         .execute_batch("DROP TRIGGER fail_production")
         .unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "ingredients"), 745);
+    assert_eq!(count(&db, "ingredients"), 795);
 }
 
 #[test]
@@ -709,7 +709,7 @@ fn actual_default_worker_installs_offline_and_reopens_without_reimport() {
                 .execute(|db| Ok(db.catalog_status()?.production_definitions))
                 .await
                 .unwrap(),
-            745
+            795
         );
         let recipe_id = service
             .execute(|db| {
@@ -760,7 +760,7 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
     db.install_bundled_catalog().unwrap();
     db.conn
         .execute(
-            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=9",
+            "UPDATE catalog_releases SET manifest_sha256=?1 WHERE version=10",
             ["0".repeat(64)],
         )
         .unwrap();
@@ -768,7 +768,7 @@ fn bundled_startup_retains_newer_catalog_and_rejects_same_version_drift() {
         db.install_bundled_catalog().unwrap_err().code,
         "CATALOG_VERSION_CHANGED"
     );
-    assert_eq!(count(&db, "ingredients"), 745);
+    assert_eq!(count(&db, "ingredients"), 795);
 }
 
 #[test]
@@ -792,7 +792,7 @@ fn bundled_startup_upgrades_successfully_installed_release8_preview() {
         .unwrap();
     db.install_bundled_catalog().unwrap();
     assert_eq!(count(&db, "catalog_import_runs"), releases_before + 1);
-    assert_eq!(count(&db, "catalog_ingredients"), 745);
+    assert_eq!(count(&db, "catalog_ingredients"), 795);
     assert_eq!(count(&db, "catalog_releases"), 2);
     db.install_bundled_catalog().unwrap();
     assert_eq!(count(&db, "catalog_import_runs"), releases_before + 1);
@@ -800,7 +800,7 @@ fn bundled_startup_upgrades_successfully_installed_release8_preview() {
     // successful installation audit are also required.
     db.conn
         .execute(
-            "UPDATE catalog_releases SET artifact_sha256=?1 WHERE version=9",
+            "UPDATE catalog_releases SET artifact_sha256=?1 WHERE version=10",
             ["0".repeat(64)],
         )
         .unwrap();
@@ -1396,8 +1396,8 @@ fn verify_historical_upgrade(version: u32, previous_count: usize, collision_name
             report.collisions
         ),
         (
-            745,
-            745 - previous_count,
+            795,
+            795 - previous_count,
             if version == 4 {
                 5
             } else if version == 6 {
@@ -1608,7 +1608,7 @@ fn failed_actual_v2_upgrade_keeps_previous_release_and_retries_atomically() {
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "catalog_ingredients"), 745);
+    assert_eq!(count(&db, "catalog_ingredients"), 795);
     assert_eq!(count(&db, "catalog_releases"), 2);
 }
 
@@ -1763,7 +1763,7 @@ fn m3d1_expansion_preserves_v6_and_rolls_back_before_retry_with_real_search() {
             count(&db, "catalog_aliases"),
             count(&db, "ingredient_categories")
         ),
-        (745, 269, 50)
+        (795, 269, 50)
     );
     for (id, ingredient_id, unit) in [
         (&saved.id, &personal.id, "cc"),
@@ -1949,9 +1949,9 @@ fn m3d2b_release8_upgrades_v7_atomically_and_preserves_user_state() {
             count(&db, "catalog_aliases"),
             count(&db, "ingredient_categories")
         ),
-        (745, 269, 50)
+        (795, 269, 50)
     );
-    assert_eq!(count(&db, "catalog_sources"), source_count + 6);
+    assert_eq!(count(&db, "catalog_sources"), source_count + 9);
     let kept = db.recipe(&saved.id).unwrap();
     assert_eq!(kept.ingredients[0].ingredient_id, personal.id);
     assert_eq!(kept.ingredients[0].quantity.as_deref(), Some("35.000001"));
@@ -2035,7 +2035,7 @@ fn release8_accepts_earlier_m3d1_snapshot_without_rewriting_its_provenance() {
         report.is_ok(),
         "preview source snapshot blocked startup: {report:?}"
     );
-    assert_eq!(count(&db, "catalog_ingredients"), 745);
+    assert_eq!(count(&db, "catalog_ingredients"), 795);
     assert_eq!(count(&db, "catalog_aliases"), 269);
     for (source, version, hash) in preview {
         let kept: String = db
@@ -2115,7 +2115,10 @@ fn m3d3_release9_upgrades_v8_and_rejects_reused_source_version_atomically() {
         &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/8/manifest.json"),
     )
     .unwrap();
-    let current = catalog_tool::bundled().unwrap();
+    let current = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/9/manifest.json"),
+    )
+    .unwrap();
     assert_eq!(
         (previous.manifest.version, current.manifest.version),
         (8, 9)
@@ -2193,7 +2196,7 @@ fn m3d3_release9_upgrades_v8_and_rejects_reused_source_version_atomically() {
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
     db.install_bundled_catalog().unwrap();
-    assert_eq!(count(&db, "catalog_ingredients"), 745);
+    assert_eq!(count(&db, "catalog_ingredients"), 795);
     assert_eq!(count(&db, "catalog_aliases"), 269);
     assert_eq!(
         db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
@@ -2254,5 +2257,181 @@ fn m3d3_release9_upgrades_v8_and_rejects_reused_source_version_atomically() {
             ))
             .unwrap(),
         0
+    );
+}
+
+#[test]
+fn m3d4_release10_fresh_and_historical_upgrades_preserve_user_state() {
+    let current = catalog_tool::bundled().unwrap();
+    assert_eq!(
+        (current.manifest.version, current.data.ingredients.len()),
+        (10, 795)
+    );
+    for previous_version in [7, 8, 9] {
+        let previous = catalog_tool::load(&Path::new(env!("CARGO_MANIFEST_DIR")).join(format!(
+            "../catalog/releases/{previous_version}/manifest.json"
+        )))
+        .unwrap();
+        let directory = tempfile::tempdir().unwrap();
+        let mut db = Database::open(directory.path()).unwrap();
+        db.import_catalog(&previous).unwrap();
+        let own = db.create_ingredient("Aile mutfağı malzemesi").unwrap();
+        let saved = db.save_recipe(recipe(&own)).unwrap();
+        let draft = db
+            .save_draft(DraftWrite {
+                id: uuid::Uuid::new_v4().to_string(),
+                expected_revision: None,
+                input: recipe(&own),
+            })
+            .unwrap();
+        db.set_ingredient_favorite(&own.id, "personal", true)
+            .unwrap();
+        let honey = db.ingredients("Honey").unwrap().remove(0);
+        db.set_ingredient_favorite(&honey.id, "catalog", true)
+            .unwrap();
+        db.set_catalog_presentation(
+            crate::domain::ingredient_library::CatalogPresentationInput {
+                id: honey.id.clone(),
+                revision: 1,
+                name: Some("Evimizin balı".into()),
+                alias: None,
+                preferred_unit: Some("kg".into()),
+                notes: None,
+            },
+        )
+        .unwrap();
+        let before_ids = previous
+            .data
+            .ingredients
+            .iter()
+            .map(|i| (&i.key, &i.id))
+            .collect::<std::collections::HashMap<_, _>>();
+        let report = db.import_catalog(&current).unwrap();
+        assert_eq!(report.inserted, 795 - previous.data.ingredients.len());
+        assert_eq!(report.collisions, 0);
+        assert!(db.import_catalog(&current).unwrap().unchanged);
+        for item in &previous.data.ingredients {
+            assert_eq!(before_ids[&item.key], &item.id);
+            let now = current
+                .data
+                .ingredients
+                .iter()
+                .find(|i| i.key == item.key)
+                .unwrap();
+            assert_eq!(item.id, now.id);
+            assert_eq!(item.names, now.names);
+            assert_eq!(item.categories, now.categories);
+            assert_eq!(
+                serde_json::to_value(&item.aliases).unwrap(),
+                serde_json::to_value(&now.aliases).unwrap()
+            );
+            assert_eq!(item.preferred_unit, now.preferred_unit);
+            if previous_version == 9 {
+                assert_eq!(
+                    serde_json::to_value(item).unwrap(),
+                    serde_json::to_value(now).unwrap()
+                );
+            }
+        }
+        drop(db);
+        let mut db = Database::open(directory.path()).unwrap();
+        db.install_bundled_catalog().unwrap();
+        assert_eq!(count(&db, "catalog_ingredients"), 795);
+        assert_eq!(count(&db, "catalog_aliases"), 269);
+        assert_eq!(count(&db, "ingredient_categories"), 50);
+        assert_eq!(
+            db.recipe(&saved.id).unwrap().ingredients[0].ingredient_id,
+            own.id
+        );
+        assert_eq!(
+            db.recipe(&saved.id).unwrap().ingredients[0]
+                .quantity
+                .as_deref(),
+            Some("35.000001")
+        );
+        assert_eq!(db.recipe(&saved.id).unwrap().ingredients[0].unit_code, "cc");
+        assert_eq!(
+            db.draft(&draft.id).unwrap().input.ingredients[0].ingredient_id,
+            own.id
+        );
+        assert!(
+            db.ingredient_detail(&own.id, "personal")
+                .unwrap()
+                .item
+                .favorite
+        );
+        let detail = db.ingredient_detail(&honey.id, "catalog").unwrap();
+        assert_eq!(detail.item.name, "Evimizin balı");
+        assert!(detail.item.favorite);
+        for name in ["İSOT", "isot", "Urfa biber", "Fonio", "fonio", "TULUM"] {
+            assert!(
+                !db.available_ingredients(name).unwrap().items.is_empty(),
+                "Missing search: {name}"
+            );
+        }
+        assert_eq!(
+            db.conn
+                .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+                .unwrap(),
+            "ok"
+        );
+        assert_eq!(
+            db.conn
+                .query_row("SELECT count(*) FROM pragma_foreign_key_check", [], |r| r
+                    .get::<_, i64>(
+                    0
+                ))
+                .unwrap(),
+            0
+        );
+    }
+}
+
+#[test]
+fn m3d4_reused_source_version_rolls_back_and_recovers_without_mutating_release9() {
+    let old = catalog_tool::load(
+        &Path::new(env!("CARGO_MANIFEST_DIR")).join("../catalog/releases/9/manifest.json"),
+    )
+    .unwrap();
+    let current = catalog_tool::bundled().unwrap();
+    let directory = tempfile::tempdir().unwrap();
+    let mut db = Database::open(directory.path()).unwrap();
+    db.import_catalog(&old).unwrap();
+    let own = db.create_ingredient("Saklanacak aile malzemesi").unwrap();
+    let saved = db.save_recipe(recipe(&own)).unwrap();
+    let source = current
+        .manifest
+        .sources
+        .iter()
+        .find(|s| s.id == "wikidata-m3d4")
+        .unwrap();
+    db.conn.execute("INSERT INTO catalog_sources(id,version,name,url,license,attribution,retrieved_at,artifact_sha256) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",
+        rusqlite::params![source.id,source.version,source.name,source.url,source.license,source.attribution,source.retrieved_at,"0".repeat(64)]).unwrap();
+    assert_eq!(
+        db.import_catalog(&current).unwrap_err().code,
+        "CATALOG_SOURCE_CHANGED"
+    );
+    assert_eq!(count(&db, "catalog_ingredients"), 745);
+    assert_eq!(count(&db, "catalog_releases"), 1);
+    assert_eq!(
+        db.recipe(&saved.id).unwrap().ingredients[0]
+            .quantity
+            .as_deref(),
+        Some("35.000001")
+    );
+    db.conn
+        .execute(
+            "DELETE FROM catalog_sources WHERE id=?1 AND version=?2",
+            rusqlite::params![source.id, source.version],
+        )
+        .unwrap();
+    assert_eq!(db.import_catalog(&current).unwrap().inserted, 50);
+    assert!(db.import_catalog(&current).unwrap().unchanged);
+    assert_eq!(count(&db, "catalog_ingredients"), 795);
+    assert_eq!(
+        db.conn
+            .query_row("PRAGMA integrity_check", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "ok"
     );
 }

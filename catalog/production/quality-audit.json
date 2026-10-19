@@ -1,7 +1,15 @@
 {
-  "version": 9,
+  "version": 10,
   "capitalizationAndTranslationWarnings": [],
   "conceptReviewCandidates": [
+    {
+      "concept": "almond milk",
+      "keys": [
+        "usda-foundation-2257045",
+        "usda-sr-174832"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
     {
       "concept": "almonds",
       "keys": [
@@ -51,6 +59,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "cannellini beans",
+      "keys": [
+        "usda-foundation-2644281",
+        "usda-foundation-2644287"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "chicken thigh",
       "keys": [
         "usda-sr-172385",
@@ -88,6 +104,22 @@
       "keys": [
         "usda-sr-170172",
         "usda-sr-170173"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "cranberry juice",
+      "keys": [
+        "usda-foundation-2003594",
+        "usda-sr-168117"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "crimini mushroom",
+      "keys": [
+        "usda-foundation-2003601",
+        "usda-sr-168434"
       ],
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
@@ -181,6 +213,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "jalapeño pepper",
+      "keys": [
+        "usda-foundation-2747661",
+        "usda-sr-168576"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "lotus seeds",
       "keys": [
         "usda-sr-168591",
@@ -197,6 +237,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "pomegranate juice",
+      "keys": [
+        "usda-foundation-2727588",
+        "usda-sr-167787"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "rainbow trout",
       "keys": [
         "usda-sr-173717",
@@ -209,6 +257,14 @@
       "keys": [
         "usda-sr-168885",
         "usda-sr-168887"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "serrano pepper",
+      "keys": [
+        "usda-foundation-2747663",
+        "usda-sr-169395"
       ],
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
@@ -230,6 +286,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "tomatillo",
+      "keys": [
+        "usda-foundation-2727582",
+        "usda-sr-168566"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "tomato juice",
       "keys": [
         "usda-sr-170458",
@@ -239,8 +303,8 @@
     }
   ],
   "previousIdentities": 482,
-  "auditedIdentities": 745,
-  "newlyAddedIdentities": 263,
+  "auditedIdentities": 795,
+  "newlyAddedIdentities": 313,
   "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],
@@ -253,10 +317,6 @@
     {
       "externalId": "175186",
       "reason": "Black turtle bean mapping needs comparison with existing black bean identity; not added."
-    },
-    {
-      "reference": "Van otlu peyniri",
-      "reason": "Excluded at v3 due unavailable primary page; reconsider only after current primary verification."
     }
   ],
   "historicalLinguisticReviewCount": 3,

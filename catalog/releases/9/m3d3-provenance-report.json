@@ -1,0 +1,556 @@
+{
+  "release": 9,
+  "source": "USDA SR Legacy April 2018",
+  "sourceLicense": "CC0-1.0",
+  "sourceArchiveSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+  "sourceVersions": [
+    {
+      "id": "usda-sr-legacy",
+      "version": "2018-04-selection-4",
+      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+    },
+    {
+      "id": "recipeatlas-curation",
+      "version": "production-3",
+      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea"
+    },
+    {
+      "id": "recipeatlas-terminology",
+      "version": "user-decisions-1",
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
+    },
+    {
+      "id": "recipeatlas-terminology-final",
+      "version": "user-decisions-2",
+      "artifactSha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee"
+    },
+    {
+      "id": "usda-sr-legacy-m3d1",
+      "version": "2018-04-selection-5-reviewed",
+      "artifactSha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4"
+    },
+    {
+      "id": "recipeatlas-curation-m3d1",
+      "version": "production-4-reviewed",
+      "artifactSha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd"
+    },
+    {
+      "id": "usda-sr-legacy-m3d2b",
+      "version": "2018-04-selection-6",
+      "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a"
+    },
+    {
+      "id": "recipeatlas-curation-m3d2b",
+      "version": "production-5",
+      "artifactSha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58"
+    },
+    {
+      "id": "usda-sr-legacy-m3d3",
+      "version": "2018-04-selection-7",
+      "artifactSha256": "192fac76f0f046aeb52306ca141d35cbf8722c6f8b78d07f967c3b9cea2b812b"
+    },
+    {
+      "id": "recipeatlas-curation-m3d3",
+      "version": "production-6",
+      "artifactSha256": "58b19fe1bf63537a7e5ec3b3683a4b94cf58bd0e2796f15632f5064717f18f04"
+    }
+  ],
+  "additions": [
+    {
+      "key": "usda-sr-167722",
+      "id": "899ab723-8895-8796-ae32-93ee77f1522e",
+      "sourceExternalId": "167722"
+    },
+    {
+      "key": "usda-sr-167786",
+      "id": "37de2b3f-6ffb-87e4-ba3b-48f5fcc945f4",
+      "sourceExternalId": "167786"
+    },
+    {
+      "key": "usda-sr-167812",
+      "id": "e034eca1-b4f6-8160-9c79-8583ed0c721b",
+      "sourceExternalId": "167812"
+    },
+    {
+      "key": "usda-sr-168147",
+      "id": "72924b82-ff76-888e-88ca-a417530a2cb8",
+      "sourceExternalId": "168147"
+    },
+    {
+      "key": "usda-sr-168190",
+      "id": "1aaf8bac-6bf9-8ca1-9a76-651dcc28f940",
+      "sourceExternalId": "168190"
+    },
+    {
+      "key": "usda-sr-168410",
+      "id": "ee8e3663-e980-8b62-a76a-698d919ab802",
+      "sourceExternalId": "168410"
+    },
+    {
+      "key": "usda-sr-168607",
+      "id": "5b7a6a62-448b-8f93-96a9-43e5217d6994",
+      "sourceExternalId": "168607"
+    },
+    {
+      "key": "usda-sr-168652",
+      "id": "c48ab54c-1c3a-8b1e-a013-d82348f7c502",
+      "sourceExternalId": "168652"
+    },
+    {
+      "key": "usda-sr-168751",
+      "id": "29c90ecd-63d2-8f00-8380-f4315a7c7e30",
+      "sourceExternalId": "168751"
+    },
+    {
+      "key": "usda-sr-168886",
+      "id": "dfe17093-409e-8f26-b578-6eedb7935973",
+      "sourceExternalId": "168886"
+    },
+    {
+      "key": "usda-sr-168894",
+      "id": "bac56e7a-5d80-8040-b7f8-8b55cc62d48b",
+      "sourceExternalId": "168894"
+    },
+    {
+      "key": "usda-sr-168895",
+      "id": "73d31d1b-bcd9-8c5c-8797-d94636deda53",
+      "sourceExternalId": "168895"
+    },
+    {
+      "key": "usda-sr-168896",
+      "id": "79ca4608-ac39-86f4-a00c-a47341a0afd9",
+      "sourceExternalId": "168896"
+    },
+    {
+      "key": "usda-sr-169207",
+      "id": "f23cf8a2-6b06-8857-b028-8fc98d5f4639",
+      "sourceExternalId": "169207"
+    },
+    {
+      "key": "usda-sr-169212",
+      "id": "67877e7c-eacb-835b-a16c-ce0700e255bb",
+      "sourceExternalId": "169212"
+    },
+    {
+      "key": "usda-sr-169282",
+      "id": "bfbafa9d-dc41-85f7-b5eb-ebbd60dc32be",
+      "sourceExternalId": "169282"
+    },
+    {
+      "key": "usda-sr-169284",
+      "id": "24f52560-eb24-898e-af9d-3c6bed9a299f",
+      "sourceExternalId": "169284"
+    },
+    {
+      "key": "usda-sr-169695",
+      "id": "60d910cf-1811-8d0d-bdc5-27c42ffbd130",
+      "sourceExternalId": "169695"
+    },
+    {
+      "key": "usda-sr-169697",
+      "id": "6412b348-1021-8ef4-99cc-d986f5f930ea",
+      "sourceExternalId": "169697"
+    },
+    {
+      "key": "usda-sr-169701",
+      "id": "d1988ece-a667-84f3-a214-25a71a31c6b8",
+      "sourceExternalId": "169701"
+    },
+    {
+      "key": "usda-sr-169713",
+      "id": "27f42a1b-3949-8b56-8621-87243b5aa1c6",
+      "sourceExternalId": "169713"
+    },
+    {
+      "key": "usda-sr-169717",
+      "id": "e865bfcc-13f4-8c49-9e9b-e33521db3327",
+      "sourceExternalId": "169717"
+    },
+    {
+      "key": "usda-sr-169723",
+      "id": "a4ff016c-0d83-89eb-bea3-34700f1fe00f",
+      "sourceExternalId": "169723"
+    },
+    {
+      "key": "usda-sr-169725",
+      "id": "455711e3-42dd-8617-a4bd-d32ea83cd262",
+      "sourceExternalId": "169725"
+    },
+    {
+      "key": "usda-sr-169745",
+      "id": "a8ada332-633e-8d59-9418-1c91581af16a",
+      "sourceExternalId": "169745"
+    },
+    {
+      "key": "usda-sr-169747",
+      "id": "98bfd639-818a-8bf2-b245-e94d1186d068",
+      "sourceExternalId": "169747"
+    },
+    {
+      "key": "usda-sr-169766",
+      "id": "21f333d4-cf31-814d-b4da-ec48ba80ee0a",
+      "sourceExternalId": "169766"
+    },
+    {
+      "key": "usda-sr-169890",
+      "id": "3c6816b8-ed1c-8438-8e31-4b1d83441c2e",
+      "sourceExternalId": "169890"
+    },
+    {
+      "key": "usda-sr-169892",
+      "id": "40a7665a-f1a7-8282-b80d-ef6755f5927d",
+      "sourceExternalId": "169892"
+    },
+    {
+      "key": "usda-sr-169957",
+      "id": "f7612655-519b-883e-ab7e-5c88711dcf0b",
+      "sourceExternalId": "169957"
+    },
+    {
+      "key": "usda-sr-169966",
+      "id": "2f6fbe13-943c-8fff-9fbc-2acc8d6de967",
+      "sourceExternalId": "169966"
+    },
+    {
+      "key": "usda-sr-170071",
+      "id": "7653292f-56a1-8e4d-af1a-d3f9b3f4972d",
+      "sourceExternalId": "170071"
+    },
+    {
+      "key": "usda-sr-170073",
+      "id": "4deeb51e-f835-8235-99a1-e5d627d20eb2",
+      "sourceExternalId": "170073"
+    },
+    {
+      "key": "usda-sr-170106",
+      "id": "44a26bf6-6cba-8551-85fc-df419c91ea6c",
+      "sourceExternalId": "170106"
+    },
+    {
+      "key": "usda-sr-170152",
+      "id": "d4d02c90-e153-8d8d-9bdc-acf905da09c1",
+      "sourceExternalId": "170152"
+    },
+    {
+      "key": "usda-sr-170155",
+      "id": "0fa94c37-b5e5-87aa-b23e-1679c99f2f56",
+      "sourceExternalId": "170155"
+    },
+    {
+      "key": "usda-sr-170171",
+      "id": "13fc2675-082b-8d0b-b22d-9430d031c756",
+      "sourceExternalId": "170171"
+    },
+    {
+      "key": "usda-sr-170190",
+      "id": "7d51acdd-6fb3-815e-bf54-bd880037dc26",
+      "sourceExternalId": "170190"
+    },
+    {
+      "key": "usda-sr-170289",
+      "id": "cdb1f9be-0b6a-83aa-93d6-1b91217135ba",
+      "sourceExternalId": "170289"
+    },
+    {
+      "key": "usda-sr-170375",
+      "id": "b31001a7-8518-8afd-9acf-ce2c1f940503",
+      "sourceExternalId": "170375"
+    },
+    {
+      "key": "usda-sr-170392",
+      "id": "1d4c6c1e-5fe5-8555-b2ff-40e23714c19a",
+      "sourceExternalId": "170392"
+    },
+    {
+      "key": "usda-sr-170480",
+      "id": "638f14f3-7887-8b8a-b321-ca304b8965d7",
+      "sourceExternalId": "170480"
+    },
+    {
+      "key": "usda-sr-170497",
+      "id": "f89d74c6-1e63-82cd-a8c5-36f785316c2c",
+      "sourceExternalId": "170497"
+    },
+    {
+      "key": "usda-sr-170500",
+      "id": "f22b22a4-581a-81da-88f5-c3a903f5fc20",
+      "sourceExternalId": "170500"
+    },
+    {
+      "key": "usda-sr-170566",
+      "id": "e09ce724-a5eb-89f0-8ede-ffd7e3fc79e4",
+      "sourceExternalId": "170566"
+    },
+    {
+      "key": "usda-sr-170579",
+      "id": "aeed0701-2085-8fc6-acca-2f503f73f51e",
+      "sourceExternalId": "170579"
+    },
+    {
+      "key": "usda-sr-170582",
+      "id": "2318750e-34db-80ee-a9e3-339f164d8797",
+      "sourceExternalId": "170582"
+    },
+    {
+      "key": "usda-sr-170590",
+      "id": "1a576f25-b9d6-86ef-8d49-e92e5d04892c",
+      "sourceExternalId": "170590"
+    },
+    {
+      "key": "usda-sr-170592",
+      "id": "a6b54075-f784-8387-8387-c4cebde16ca0",
+      "sourceExternalId": "170592"
+    },
+    {
+      "key": "usda-sr-170846",
+      "id": "0facc3b6-cc40-87b6-8f9a-83edb878ec91",
+      "sourceExternalId": "170846"
+    },
+    {
+      "key": "usda-sr-170886",
+      "id": "61940598-bdfa-89ee-bac2-16719dee2828",
+      "sourceExternalId": "170886"
+    },
+    {
+      "key": "usda-sr-170887",
+      "id": "2031cfa0-7789-8a85-b3de-e6d00fd1aab1",
+      "sourceExternalId": "170887"
+    },
+    {
+      "key": "usda-sr-171015",
+      "id": "b3aa8c13-1224-8cf1-b1d8-ce1fe82e3605",
+      "sourceExternalId": "171015"
+    },
+    {
+      "key": "usda-sr-171043",
+      "id": "3c73bb8e-a644-81e9-9e47-50ec872bec50",
+      "sourceExternalId": "171043"
+    },
+    {
+      "key": "usda-sr-171248",
+      "id": "fead0da2-6c7c-8aca-bc13-21c1a152f64d",
+      "sourceExternalId": "171248"
+    },
+    {
+      "key": "usda-sr-171425",
+      "id": "6c35c21c-068c-8757-a674-a9deac0df718",
+      "sourceExternalId": "171425"
+    },
+    {
+      "key": "usda-sr-171580",
+      "id": "9aba4568-8c8a-8e35-9f93-b69c3b6109d4",
+      "sourceExternalId": "171580"
+    },
+    {
+      "key": "usda-sr-171604",
+      "id": "5f03ff80-2f83-8f22-aa92-788bf5c44894",
+      "sourceExternalId": "171604"
+    },
+    {
+      "key": "usda-sr-171891",
+      "id": "2ceff520-94f9-8a78-8942-865a9f58aa05",
+      "sourceExternalId": "171891"
+    },
+    {
+      "key": "usda-sr-171911",
+      "id": "f5551623-5708-8552-8fd8-9a91c8c4dfaa",
+      "sourceExternalId": "171911"
+    },
+    {
+      "key": "usda-sr-172201",
+      "id": "a1f4c150-e8ff-879d-9287-927200ee6bd6",
+      "sourceExternalId": "172201"
+    },
+    {
+      "key": "usda-sr-172222",
+      "id": "a7c2f9e5-79f9-8103-aafe-df2354a396f6",
+      "sourceExternalId": "172222"
+    },
+    {
+      "key": "usda-sr-172234",
+      "id": "a6a2fefe-89f4-86d4-bec4-4876841d08a7",
+      "sourceExternalId": "172234"
+    },
+    {
+      "key": "usda-sr-172239",
+      "id": "d145fa83-602d-8f64-aae7-838455667b3b",
+      "sourceExternalId": "172239"
+    },
+    {
+      "key": "usda-sr-172242",
+      "id": "5655d416-a715-8209-988a-04067e003e8c",
+      "sourceExternalId": "172242"
+    },
+    {
+      "key": "usda-sr-172243",
+      "id": "e95ff871-b1cb-866d-ab4a-37ee7bd06b9f",
+      "sourceExternalId": "172243"
+    },
+    {
+      "key": "usda-sr-172337",
+      "id": "d2154a23-83dd-86b2-8d72-9e9a343f1e0c",
+      "sourceExternalId": "172337"
+    },
+    {
+      "key": "usda-sr-172410",
+      "id": "25ff4dcf-0046-839a-b3ca-3f7a223e8722",
+      "sourceExternalId": "172410"
+    },
+    {
+      "key": "usda-sr-172421",
+      "id": "1560babc-d258-8522-8040-0ab7421c9af9",
+      "sourceExternalId": "172421"
+    },
+    {
+      "key": "usda-sr-173045",
+      "id": "df0010c9-77e3-85e1-aee2-97b23a2710ea",
+      "sourceExternalId": "173045"
+    },
+    {
+      "key": "usda-sr-173187",
+      "id": "ed76189d-5c52-8074-8534-ff3bcc909dcc",
+      "sourceExternalId": "173187"
+    },
+    {
+      "key": "usda-sr-173216",
+      "id": "396d65af-ac12-8374-84bc-4bddffdb2f0b",
+      "sourceExternalId": "173216"
+    },
+    {
+      "key": "usda-sr-173415",
+      "id": "09eafc6d-07e2-8dd8-a585-4a603a3abac5",
+      "sourceExternalId": "173415"
+    },
+    {
+      "key": "usda-sr-173416",
+      "id": "c2d93e81-b01d-8b05-8ff9-67d56b8c8e6a",
+      "sourceExternalId": "173416"
+    },
+    {
+      "key": "usda-sr-173433",
+      "id": "2915aeef-96db-895c-b407-202ceec91b76",
+      "sourceExternalId": "173433"
+    },
+    {
+      "key": "usda-sr-173437",
+      "id": "c69f0e79-c83d-80cc-80ad-1311a7567917",
+      "sourceExternalId": "173437"
+    },
+    {
+      "key": "usda-sr-173438",
+      "id": "223686ae-1b2a-8bcc-b8cc-6272eda68955",
+      "sourceExternalId": "173438"
+    },
+    {
+      "key": "usda-sr-173470",
+      "id": "5b330ef2-8a28-8770-acd6-ecc16d4c008c",
+      "sourceExternalId": "173470"
+    },
+    {
+      "key": "usda-sr-173471",
+      "id": "3bbf804e-aa07-8594-baa4-83b61cbc8c10",
+      "sourceExternalId": "173471"
+    },
+    {
+      "key": "usda-sr-173472",
+      "id": "69a9a6c5-bd51-8256-b5a3-0876f5d45709",
+      "sourceExternalId": "173472"
+    },
+    {
+      "key": "usda-sr-173473",
+      "id": "9ff67613-516b-81ec-96d2-6ac00e55c012",
+      "sourceExternalId": "173473"
+    },
+    {
+      "key": "usda-sr-173474",
+      "id": "622abe75-ff10-861b-b31d-b7278ae06120",
+      "sourceExternalId": "173474"
+    },
+    {
+      "key": "usda-sr-173476",
+      "id": "fca2b478-62a5-811f-b171-6ceb180cf7bc",
+      "sourceExternalId": "173476"
+    },
+    {
+      "key": "usda-sr-173754",
+      "id": "84e16be7-682b-858f-880e-98b046aa0d57",
+      "sourceExternalId": "173754"
+    },
+    {
+      "key": "usda-sr-173801",
+      "id": "d7f6c2ad-d838-8547-b672-3b19f92696be",
+      "sourceExternalId": "173801"
+    },
+    {
+      "key": "usda-sr-174066",
+      "id": "cab0ed65-0541-8b48-806c-00c01ba1b6b9",
+      "sourceExternalId": "174066"
+    },
+    {
+      "key": "usda-sr-174125",
+      "id": "17505581-d78e-88e3-bf4b-0c85d4fae953",
+      "sourceExternalId": "174125"
+    },
+    {
+      "key": "usda-sr-174144",
+      "id": "dfe91ef8-7fe8-8022-bd8d-9b5b8551bf4f",
+      "sourceExternalId": "174144"
+    },
+    {
+      "key": "usda-sr-174249",
+      "id": "13a3bd93-80ad-83c1-80f9-d17142325efc",
+      "sourceExternalId": "174249"
+    },
+    {
+      "key": "usda-sr-174252",
+      "id": "7a1197c1-0a2d-8d7c-a79c-51f724303481",
+      "sourceExternalId": "174252"
+    },
+    {
+      "key": "usda-sr-174255",
+      "id": "ebb5cc0f-889c-878e-8b4f-ad5b61cb3040",
+      "sourceExternalId": "174255"
+    },
+    {
+      "key": "usda-sr-174285",
+      "id": "6350bba7-4419-8bee-9aa2-1b7eeb3bcd88",
+      "sourceExternalId": "174285"
+    },
+    {
+      "key": "usda-sr-174286",
+      "id": "7edfe457-71c9-8d5e-80e4-4b1f2079eb6a",
+      "sourceExternalId": "174286"
+    },
+    {
+      "key": "usda-sr-174687",
+      "id": "74b6fb5d-37cc-82dc-bde0-e04fcddf95e4",
+      "sourceExternalId": "174687"
+    },
+    {
+      "key": "usda-sr-174820",
+      "id": "8a73cece-6314-89cf-a247-f7e1b5c21b82",
+      "sourceExternalId": "174820"
+    },
+    {
+      "key": "usda-sr-174858",
+      "id": "0e6f3cce-ba2f-89bb-b351-7465b0375b65",
+      "sourceExternalId": "174858"
+    },
+    {
+      "key": "usda-sr-175140",
+      "id": "801e2199-7450-8d88-8776-7ac885f2931a",
+      "sourceExternalId": "175140"
+    },
+    {
+      "key": "usda-sr-175290",
+      "id": "f5cb94fb-2b93-8ac1-a1af-5a08331c2e22",
+      "sourceExternalId": "175290"
+    }
+  ],
+  "accepted": 98,
+  "existing": 3,
+  "deferred": 29,
+  "rejected": 1,
+  "foodOnImported": 0,
+  "independentlyHumanApprovedAdditions": 0
+}

@@ -12,7 +12,7 @@ from prepare_m3d3_candidates import normalize
 ROOT = Path(__file__).resolve().parents[1]
 OLD = ROOT / 'catalog/releases/8'
 PREP = ROOT / 'catalog/preparation/m3d3'
-OUT = ROOT / 'catalog/production'
+OUT = ROOT / 'catalog/releases/9'
 OLD_SHA = '9bad5c51370bb6d13c2bbd313b3279244a58b8d57e1a720be1a9d4e75f213e65'
 USDA_SOURCE = 'usda-sr-legacy-m3d3'
 CURATION_SOURCE = 'recipeatlas-curation-m3d3'

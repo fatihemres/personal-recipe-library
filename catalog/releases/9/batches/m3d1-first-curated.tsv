@@ -1,0 +1,61 @@
+fdc_id	tr	en	category	extra_categories	preferred_unit	dimensions	aliases_tr	aliases_en	expected_description
+168421	Kale yaprağı (çiğ)	Kale (raw)	vegetables		g	mass	Kale		Kale, raw
+169404	Çin brokolisi (çiğ)	Chinese broccoli (raw)	vegetables	international-specialty	g	mass	Gai lan	Gai lan	Broccoli, chinese, raw
+169210	Bambu filizi (çiğ)	Bamboo shoots (raw)	vegetables	international-specialty	g	mass			Bamboo shoots, raw
+168451	Daikon turpu (çiğ)	Daikon radish (raw)	vegetables	international-specialty	g	mass	Japon turpu	Oriental radish	Radishes, oriental, raw
+169385	Rezene soğanı (çiğ)	Fennel bulb (raw)	vegetables		g	mass			Fennel, bulb, raw
+169395	Serrano biberi (çiğ)	Serrano pepper (raw)	vegetables	international-specialty	g	mass			Peppers, serrano, raw
+169396	Kurutulmuş ancho biberi	Ancho pepper (dried)	spices	international-specialty	g	mass			Peppers, ancho, dried
+168578	Macar biberi (çiğ)	Hungarian pepper (raw)	vegetables		g	mass			Peppers, hungarian, raw
+170008	Tatlı soğan (çiğ)	Sweet onion (raw)	vegetables		g	mass			Onions, sweet, raw
+170456	Yeşil domates (çiğ)	Green tomato (raw)	vegetables		g	mass			Tomatoes, green, raw
+169384	Yağda güneşte kurutulmuş domates (süzülmüş)	Sun-dried tomato in oil (drained)	vegetables		g	mass			Tomatoes, sun-dried, packed in oil, drained
+170096	Sarı domates (çiğ)	Yellow tomato (raw)	vegetables		g	mass			Tomatoes, yellow, raw
+170402	Çayote kabağı (çiğ)	Chayote (raw)	vegetables	international-specialty	g	mass	Chayote		Chayote, fruit, raw
+168566	Tomatillo (çiğ)	Tomatillo (raw)	vegetables	international-specialty	g	mass			Tomatillos, raw
+168215	Yeşil plantain muzu (çiğ)	Green plantain (raw)	fruit	international-specialty	g	mass			Plantains, green, raw
+169130	Sarı plantain muzu (çiğ)	Yellow plantain (raw)	fruit	international-specialty	g	mass			Plantains, yellow, raw
+168457	Kelp deniz yosunu (çiğ)	Kelp seaweed (raw)	vegetables	international-specialty	g	mass			Seaweed, kelp, raw
+168458	Laver deniz yosunu (çiğ)	Laver seaweed (raw)	vegetables	international-specialty	g	mass			Seaweed, laver, raw
+169382	Enoki mantarı (çiğ)	Enoki mushroom (raw)	mushrooms	international-specialty	g	mass			Mushrooms, enoki, raw
+169403	Maitake mantarı (çiğ)	Maitake mushroom (raw)	mushrooms	international-specialty	g	mass			Mushrooms, maitake, raw
+168427	Filizlenmiş mercimek (çiğ)	Lentil sprouts (raw)	legumes		g	mass			Lentils, sprouted, raw
+172428	Kuru yarma yeşil bezelye	Split green peas (dry)	legumes		g	mass			Peas, green, split, mature seeds, raw
+170283	Kabuğu alınmış arpa	Hulled barley	grains		g	mass			Barley, hulled
+170685	Kavrulmuş karabuğday taneleri (kuru)	Roasted buckwheat groats (dry)	grains		g	mass			Buckwheat groats, roasted, dry
+170683	Pişmiş amarant tanesi	Amaranth grain (cooked)	grains		g	mass			Amaranth grain, cooked
+173262	Rafine sorgum unu	Refined sorghum flour	flours		g	mass			Sorghum flour, refined, unenriched
+170151	Kavrulmuş bütün susam	Whole toasted sesame seeds	nuts-seeds		g	mass			Seeds, sesame seeds, whole, roasted and toasted
+170178	Makademya fındığı (çiğ)	Macadamia nuts (raw)	nuts-seeds		g	mass			Nuts, macadamia nuts, raw
+170575	Soyulmuş Avrupa kestanesi (çiğ)	European chestnuts (raw, peeled)	nuts-seeds		g	mass			Nuts, chestnuts, european, raw, peeled
+168591	Lotus tohumu (çiğ)	Lotus seeds (raw)	nuts-seeds	international-specialty	g	mass			Seeds, lotus seeds, raw
+170149	Lotus tohumu (kuru)	Lotus seeds (dried)	nuts-seeds	international-specialty	g	mass			Seeds, lotus seeds, dried
+171314	Sade yağ (ghee)	Clarified butter (ghee)	oils	international-specialty	g	mass	Ghee		Butter, Clarified butter (ghee)
+168117	Şekersiz turna yemişi suyu	Cranberry juice (unsweetened)	juices		mL	volume			Cranberry juice, unsweetened
+167748	Konsantreden limon suyu	Lemon juice from concentrate	juices		mL	volume			Lemon juice from concentrate, canned or bottled
+168157	Şekersiz şişelenmiş misket limonu suyu	Bottled lime juice (unsweetened)	juices		mL	volume			Lime juice, canned or bottled, unsweetened
+173041	Şekersiz üzüm suyu (C vitamini eklenmiş)	Grape juice (unsweetened, vitamin C added)	juices		mL	volume			Grape juice, canned or bottled, unsweetened, with added ascorbic acid
+169107	Papaya nektarı (konserve)	Papaya nectar (canned)	juices		mL	volume			Papaya nectar, canned
+167784	Guava nektarı (konserve, C vitamini eklenmiş)	Guava nectar (canned, vitamin C added)	juices		mL	volume			Guava nectar, canned, with added ascorbic acid
+167743	Şeker kamışı şurubu	Cane syrup	syrups		mL	volume			Syrup, Cane
+170027	Russet patates (çiğ)	Russet potato (raw)	vegetables		g	mass			Potatoes, russet, flesh and skin, raw (Includes foods for USDA's Food Distribution Program)
+170029	Kırmızı kabuklu patates (çiğ)	Red potato (raw)	vegetables		g	mass			Potatoes, red, flesh and skin, raw
+169979	Çin lahanası (pe-tsai, çiğ)	Chinese cabbage (pe-tsai, raw)	vegetables	international-specialty	g	mass	Pe-tsai		Cabbage, chinese (pe-tsai), raw
+170388	Savoy lahanası (çiğ)	Savoy cabbage (raw)	vegetables		g	mass			Cabbage, savoy, raw
+169331	Brokoli sapı (çiğ)	Broccoli stalks (raw)	vegetables		g	mass			Broccoli, stalks, raw
+168568	Bebek havuç (çiğ)	Baby carrots (raw)	vegetables		g	mass			Carrots, baby, raw
+169917	Navel portakalı (çiğ)	Navel orange (raw)	fruit		g	mass			Oranges, raw, navels (Includes foods for USDA's Food Distribution Program)
+167778	Bosc armudu (çiğ)	Bosc pear (raw)	fruit		g	mass			Pears, raw, bosc (Includes foods for USDA's Food Distribution Program)
+171722	Turna yemişi (çiğ)	Cranberries (raw)	fruit		g	mass	Cranberry (çiğ)		Cranberries, raw
+171723	Tatlandırılmış kuru turna yemişi	Sweetened dried cranberries	dried-fruit		g	mass			Cranberries, dried, sweetened (Includes foods for USDA's Food Distribution Program)
+171968	Dungeness yengeci (çiğ)	Dungeness crab (raw)	seafood		g	mass			Crustaceans, crab, dungeness, raw
+174208	Kuzey ıstakozu (çiğ)	Northern lobster (raw)	seafood		g	mass			Crustaceans, lobster, northern, raw
+174220	Deniz tarağı (karışık türler, çiğ)	Scallops (mixed species, raw)	seafood		g	mass			Mollusks, scallop, mixed species, raw
+171978	Doğu istiridyesi (yabani, çiğ)	Eastern oyster (wild, raw)	seafood		g	mass			Mollusks, oyster, eastern, wild, raw
+172521	Çiftlik tavşanı eti (çiğ)	Domestic rabbit meat (raw)	meat		g	mass			Game meat, rabbit, domesticated, composite of cuts, raw
+175297	Yaban domuzu eti (çiğ)	Wild boar meat (raw)	meat		g	mass			Game meat, boar, wild, raw
+173855	Geyik eti (çiğ)	Venison (raw)	meat		g	mass			Game meat, deer, raw
+174206	Yabani kerevit (karışık türler, çiğ)	Wild crayfish (mixed species, raw)	seafood		g	mass			Crustaceans, crayfish, mixed species, wild, raw
+169329	Brokoli yaprağı (çiğ)	Broccoli leaves (raw)	vegetables		g	mass			Broccoli, leaves, raw
+170007	Galler soğanı (çiğ)	Welsh onion (raw)	vegetables		g	mass			Onions, welsh, raw
+168472	Palamut kabağı (çiğ)	Acorn squash (raw)	vegetables		g	mass			Squash, winter, acorn, raw

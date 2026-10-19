@@ -231,3 +231,21 @@ python3 tools/verify_catalog_installation.py --include-v8 --output /private/tmp/
 ```
 
 The ordinary coverage command uses only temporary SQLite profiles. Its optional `--historical-profile` input is an **already isolated** 648-record preview-profile copy; it makes a second temporary SQLite backup before import. Never pass the Product Owner's normal application database to this tool. `docs/CATALOG_M3D3_COVERAGE.md`, `docs/CATALOG_M3D3_QUALITY_AUDIT.md`, and the machine reports under `catalog/production` give counts, decisions and integrity results. Candidate acceptance is project editorial screening, not independent human linguistic approval.
+
+## Release 10 (M3D-4)
+
+Release 9 is archived unchanged at `catalog/releases/9`. The preparation source is `catalog/preparation/m3d4/selection.tsv`; candidate decisions and selected Foundation descriptors are deterministic outputs of `tools/prepare_m3d4_candidates.py`. The official USDA Foundation April 2026 JSON ZIP is pinned at SHA-256 `186e988ec542e913f51ef62b86a47758e8cdd0d1dc3889e7b055581f3c09c77a`. Download only from the URL in `catalog/sources.json` into an isolated temporary directory. The full ZIP is not bundled; the checked selected extract is committed. The 24 Wikidata candidate entity responses are committed with exact revisions and SHA-256 hashes. `tools/fetch_m3d4_wikidata.py` verifies them offline by default and only touches the network under `--fetch` during preparation.
+
+```sh
+python3 tools/fetch_m3d4_wikidata.py
+python3 tools/prepare_m3d4_candidates.py --check
+python3 tools/prepare_m3d4_catalog.py --check
+python3 tools/report_m3d4_quality.py --check
+python3 tools/audit_catalog.py --check
+python3 tools/test_m3d4_catalog.py
+cargo build --locked --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d4_coverage.py --check
+python3 tools/verify_catalog_installation.py --include-v9 --output /private/tmp/m3d4-installation.json
+```
+
+Independent source re-extraction uses `python3 tools/prepare_m3d4_candidates.py --archive /path/to/FoodData_Central_foundation_food_json_2026-04-30.zip --check`; a different checksum is rejected. The new immutable source/version pairs are `usda-foundation-m3d4/2026-04-30-selection-1`, `wikidata-m3d4/entity-revisions-2026-10-19-1` and `recipeatlas-curation-m3d4/production-7`. The checked importer runs in one SQLite transaction, retains all existing canonical objects and user-owned data, and rejects same-version evidence drift with `CATALOG_SOURCE_CHANGED`. No startup network call or schema migration was added. The historical Release-9 generator now checks `catalog/releases/9`, so its `--check` still works without rewriting the current package. Historical measured reports are read from the archive rather than regenerated against a different current release.

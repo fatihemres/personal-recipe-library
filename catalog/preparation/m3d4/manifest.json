@@ -1,0 +1,23 @@
+{
+  "baselineManifestSha256": "3f0da2052988e65c9c543340c50ce7c8ea36323d687b5925c88e1781631b7712",
+  "baselineRelease": 9,
+  "candidateCount": 65,
+  "decisions": {
+    "ACCEPT": 50,
+    "DEFER": 9,
+    "EXISTING": 4,
+    "REJECT": 2
+  },
+  "foundationArchiveSha256": "186e988ec542e913f51ef62b86a47758e8cdd0d1dc3889e7b055581f3c09c77a",
+  "outputSha256": {
+    "candidates.json": "621e150d910ea82695c16861a77c634ed7c62ef3baf770dc37c12b5ad5de87bb",
+    "foundation-records.json": "0bf388cec1fe3e1b388636d59e6100c237915c060b772033727ef21e0bf76f5a",
+    "wikidata-records.json": "96932394d7b2b2a8e2ed3c0e474886f6790dd941db1237a8703ec42a86e998a7"
+  },
+  "selectionSha256": "51efc0483a7dedc97b46a96f8bb7b130959f4a99ce01ed8fef9ea8d10ea05b02",
+  "sourceCounts": {
+    "foundation": 41,
+    "wikidata": 24
+  },
+  "wikidataIndexSha256": "a3835520a01d6843ede06bdb9c749216947d0bfd1efc6d72702764c5928227ff"
+}

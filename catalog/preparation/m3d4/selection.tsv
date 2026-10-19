@@ -1,0 +1,66 @@
+source	id	decision	tr	en	categories	unit	reason
+foundation	2261420	ACCEPT	Badem unu	Almond flour	flours;nuts-seeds	g	Distinct ground almond flour for baking; not almond paste or butter.
+foundation	2512371	ACCEPT	Amarant unu	Amaranth flour	flours;international-specialty	g	Distinct flour from amaranth grain.
+foundation	2512377	ACCEPT	Manyok unu	Cassava flour	flours;international-specialty	g	Distinct cassava flour; not tapioca starch.
+foundation	2515377	ACCEPT	Kestane unu	Chestnut flour	flours;international-specialty	g	Distinct chestnut flour for baking.
+foundation	2515382	ACCEPT	Hindistan cevizi unu	Coconut flour	flours;international-specialty	g	Distinct coconut flour; not shredded coconut.
+foundation	2512372	ACCEPT	Kinoa unu	Quinoa flour	flours;international-specialty	g	Distinct milled quinoa flour.
+foundation	1104867	ACCEPT	Yapışkan pirinç unu	Glutinous rice flour	flours;international-specialty	g	Distinct sticky-rice flour; glutinous is a rice-type descriptor, not added gluten.
+foundation	2003586	ACCEPT	Tipo 00 buğday unu	Tipo 00 wheat flour	flours;international-specialty	g	Distinct fine-milled Italian flour grade.
+foundation	2003588	ACCEPT	İri taneli irmik	Coarse semolina	flours;grains	g	Coarse semolina is a useful distinct milling form.
+foundation	2003589	ACCEPT	İnce taneli irmik	Fine semolina	flours;grains	g	Fine semolina is distinct from coarse semolina.
+foundation	2710829	ACCEPT	Fonio tahılı (kuru)	Fonio grain (dry)	grains;international-specialty	g	Distinct West African grain.
+foundation	2710830	ACCEPT	Horasan buğdayı tanesi (kuru)	Khorasan wheat grain (dry)	grains;international-specialty	g	Distinct wheat grain; no cultivar or trademark claim.
+foundation	2512378	ACCEPT	Karabuğday tanesi	Whole buckwheat grain	grains	g	Whole grain differs from buckwheat flour.
+foundation	2710825	ACCEPT	Siyah pirinç (çiğ)	Black rice (raw)	grains;international-specialty	g	Distinct black rice grain.
+foundation	2710838	ACCEPT	Kırmızı pirinç (çiğ)	Red rice (raw)	grains;international-specialty	g	Distinct red rice grain.
+foundation	2710821	ACCEPT	Yabani pirinç (kuru)	Wild rice (dry)	grains;international-specialty	g	Distinct culinary grain; not ordinary rice.
+foundation	2003599	ACCEPT	Kral istiridye mantarı	King oyster mushroom	mushrooms;international-specialty	g	Distinct mushroom species or market form.
+foundation	1999626	ACCEPT	Aslan yelesi mantarı	Lion's mane mushroom	mushrooms;international-specialty	g	Distinct edible mushroom.
+foundation	2003604	ACCEPT	Pioppino mantarı	Pioppino mushroom	mushrooms;international-specialty	g	Distinct edible mushroom.
+foundation	2003601	ACCEPT	Kestane mantarı (crimini)	Crimini mushroom	mushrooms	g	Distinct marketed brown button-mushroom form; identity retained for review.
+foundation	2257046	ACCEPT	Şekersiz yulaf içeceği (soğuk zincir)	Oat milk (unsweetened, refrigerated)	dairy-alternatives;other-beverages	mL	Distinct unsweetened refrigerated oat beverage form.
+foundation	2257045	ACCEPT	Şekersiz badem içeceği (soğuk zincir)	Almond milk (unsweetened, refrigerated)	dairy-alternatives;other-beverages	mL	Distinct unsweetened refrigerated almond beverage form.
+foundation	1999630	ACCEPT	Şekersiz soya içeceği (raf ömrü uzun)	Soy milk (unsweetened, shelf-stable)	dairy-alternatives;other-beverages	mL	Distinct shelf-stable unsweetened soy beverage form.
+foundation	2644281	ACCEPT	Kuru cannellini fasulyesi	Cannellini beans (dry)	legumes;international-specialty	g	Distinct dry white-bean variety.
+foundation	2644287	ACCEPT	Konserve cannellini fasulyesi (süzülmüş ve durulanmış)	Cannellini beans (canned, drained and rinsed)	legumes;international-specialty	g	Prepared canned form distinct from dry beans.
+foundation	2644286	ACCEPT	Konserve navy fasulyesi (süzülmüş ve durulanmış)	Navy beans (canned, drained and rinsed)	legumes;international-specialty	g	Prepared canned navy-bean form distinct from dry beans.
+foundation	2747661	ACCEPT	Jalapeño biberi (çekirdeksiz, çiğ)	Jalapeño pepper (seeded, raw)	vegetables;international-specialty	g	Seeded raw jalapeño form.
+foundation	2747662	ACCEPT	Poblano biberi (çekirdeksiz, çiğ)	Poblano pepper (seeded, raw)	vegetables;international-specialty	g	Seeded raw poblano form; not dried ancho.
+foundation	2747663	ACCEPT	Serrano biberi (çekirdeksiz, çiğ)	Serrano pepper (seeded, raw)	vegetables;international-specialty	g	Seeded raw serrano form.
+foundation	2727582	ACCEPT	Tomatillo (kabuksuz, çiğ)	Tomatillo (dehusked, raw)	vegetables;international-specialty	g	Distinct tomatillo fruit; not tomato.
+foundation	2003594	ACCEPT	Turna yemişi suyu (konsantreden, raf ömrü uzun)	Cranberry juice (from concentrate, shelf-stable)	juices	mL	Cranberry is turna yemişi, not Turkish kızılcık.
+foundation	2727588	ACCEPT	Nar suyu (konsantreden, raf ömrü uzun)	Pomegranate juice (from concentrate, shelf-stable)	juices	mL	Concentrate-derived shelf-stable juice differs from whole fruit.
+foundation	2727589	ACCEPT	Vişne suyu (konsantreden, raf ömrü uzun)	Tart cherry juice (from concentrate, shelf-stable)	juices	mL	Tart cherry juice differs from sweet cherry fruit.
+foundation	2003593	ACCEPT	Beyaz üzüm suyu (konsantreden, raf ömrü uzun)	White grape juice (from concentrate, shelf-stable)	juices	mL	White grape juice form differs from grape fruit.
+foundation	2003595	ACCEPT	Kırmızı greyfurt suyu (konsantre değil)	Red grapefruit juice (not from concentrate)	juices	mL	Distinct grapefruit-juice form.
+foundation	2647441	DEFER					Oaxaca cheese may already be covered by a related Mexican cheese; verify culinary identity and category before adding.
+foundation	2710827	EXISTING					Existing siyez grain identity already covers einkorn wheat.
+foundation	1999628	EXISTING					Existing raw shiitake mushroom identity covers this form.
+foundation	1999627	DEFER					Existing oyster-mushroom form may cover the descriptor; compare species and preparation before accepting.
+foundation	2262073	DEFER					Sesame butter overlaps historical deferred tahini identity; do not import without identity review.
+foundation	321358	REJECT					Commercial prepared hummus is a ready dish rather than a base ingredient for this catalog batch.
+wikidata	Q3183584	ACCEPT	Tulum peyniri	Tulum cheese	cheeses;turkish-regional	g	Turkish ripened cheese identity; no protected-origin certification implied.
+wikidata	Q6062076	ACCEPT	Van otlu peyniri	Van herbed cheese	cheeses;turkish-regional	g	Distinct regional herbed cheese; label denotes culinary identity, not certified origin.
+wikidata	Q6027754	ACCEPT	Çökelek	Çökelek cheese	cheeses;turkish-regional	g	Distinct Turkish curd cheese identity.
+wikidata	Q478654	ACCEPT	Kaymak	Kaymak	dairy;turkish-regional	g	Clotted cream-like dairy product; not ordinary cream.
+wikidata	Q2118339	ACCEPT	Tarhana (kuru karışım)	Tarhana (dried mixture)	fermented;turkish-regional	g	Dried fermented mixture used as an ingredient, not prepared soup.
+wikidata	Q3668413	ACCEPT	Kesme erişte	Kesme noodles	noodles-pasta;turkish-regional	g	Distinct hand-cut Turkic egg-noodle form.
+wikidata	Q1866347	DEFER					Phyllo and regional yufka may have different thickness/use; do not conflate without independent evidence.
+wikidata	Q12812990	ACCEPT	İsot biberi	Urfa biber	spices;turkish-regional	g	Dried processed Şanlıurfa red pepper spice; no GI certification claim.
+wikidata	Q148306	DEFER					Zahter may denote herb or mixed seasoning; entity description is ambiguous.
+wikidata	Q3337007	DEFER					Botanical madımak species does not alone establish edible harvested ingredient form.
+wikidata	Q27943	DEFER					Salicornia species and marketed deniz börülcesi may not be coterminous.
+wikidata	Q2056399	ACCEPT	Pastırma	Pastırma	meat;turkish-regional	g	Distinct cured meat used in cooking; not a complete prepared dish.
+wikidata	Q1432724	ACCEPT	Sucuk	Sucuk	meat;turkish-regional	g	Distinct fermented spiced sausage used in cooking.
+wikidata	Q966327	DEFER					Harissa entity has an identity description but lacks stable English/Turkish labels in this revision.
+wikidata	Q699637	ACCEPT	Gochujang	Gochujang	fermented;sauces;international-specialty	g	Korean fermented red-pepper paste identity.
+wikidata	Q1196289	ACCEPT	Doenjang	Doenjang	fermented;sauces;international-specialty	g	Korean fermented soybean paste distinct from miso.
+wikidata	Q67207722	ACCEPT	Demirhindi ezmesi (sulandırılmış)	Tamarind paste (diluted)	sauces;international-specialty	g	Diluted tamarind-pulp paste; not raw tamarind fruit.
+wikidata	Q734727	DEFER					Galangal spans several species; exact culinary rhizome identity requires a narrower source.
+wikidata	Q465554	ACCEPT	Mahlep	Mahleb	spices;turkish-regional	g	Spice from mahaleb cherry kernels; not whole cherries.
+wikidata	Q318367	ACCEPT	Damla sakızı	Mastic resin	spices;turkish-regional	g	Culinary mastic resin; no Chios protected-origin certification implied.
+wikidata	Q16620197	ACCEPT	Kefir mayası taneleri	Kefir grains	fermented;dairy	g	Live symbiotic starter culture; not prepared kefir drink.
+wikidata	Q235169	EXISTING					Existing miso identity covers fermented soybean paste.
+wikidata	Q108946643	EXISTING					Existing nar ekşisi covers pomegranate reduction; do not create a duplicate.
+wikidata	Q1817099	REJECT					QID is a music project, not the edible lemongrass ingredient.
