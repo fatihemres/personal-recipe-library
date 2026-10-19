@@ -5,6 +5,7 @@
 - Screened 65 source-traceable candidates: 50 accepted, 9 deferred, 4 already represented and 2 rejected. Added 35 USDA Foundation Foods and 15 pinned Wikidata identities. The bundled catalog now has 795 identities (666 food / 129 beverage), 269 aliases and 50 categories; direct Turkish-regional memberships increased from 16 to 27.
 - Archived Release 9 byte-for-byte, pinned new immutable source/version/checksum evidence and kept earlier identities, categories, aliases, schema migrations and personal data compatible. No FoodOn or other legally unresolved source was imported.
 - Added reproducible candidate and Release-10 generators, rights/quality/coverage reports, real SQLite fresh/upgrade/preservation/source-conflict tests, and PR catalog verification. Automated editorial names do not imply independent human linguistic approval.
+- PR #3's five required GitHub Actions jobs passed, producing checksum-verified unsigned arm64 and Intel macOS packages and a Windows x64 installer. Native GUI acceptance remains a separate manual gate before merge.
 
 ## M3D-3 — Global catalog Release 9 (2026-10-16, unreleased)
 
