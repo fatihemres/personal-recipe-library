@@ -408,6 +408,7 @@ impl Database {
                 )?;
             }
         }
+        super::recipe_search::index_ingredient_recipes(&tx, &input.id)?;
         tx.commit()?;
         self.ingredient_detail(&input.id, "catalog")
     }

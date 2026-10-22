@@ -14,7 +14,15 @@ pub async fn save_preferences(
     state.save(preferences).await
 }
 
+use crate::domain::recipe_search::{RecipeSearchPage, RecipeSearchQuery};
 use crate::domain::recipes::{Ingredient, Recipe, RecipeInput, Unit};
+#[tauri::command]
+pub async fn search_recipes(
+    query: RecipeSearchQuery,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeSearchPage, AppError> {
+    state.execute(move |d| d.search_recipes(query)).await
+}
 #[tauri::command]
 pub async fn list_recipes(
     trash: bool,
@@ -411,7 +419,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            5
+            6
         );
     }
     #[test]

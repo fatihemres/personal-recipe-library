@@ -1,4 +1,5 @@
 use super::{
+    recipe_search::index_ingredient_recipes,
     recipes::{read_recipe, write_recipe},
     Database,
 };
@@ -291,6 +292,7 @@ impl Database {
             ));
         }
         if tx.execute("UPDATE ingredients SET name=?3,search_name=?4,notes=?5,preferred_unit=?6,revision=revision+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1 AND revision=?2 AND origin='personal'",params![input.id,input.revision,name,key,input.notes,input.preferred_unit])?!=1 {return Err(conflict());}
+        index_ingredient_recipes(&tx, &input.id)?;
         if let Some(ids) = categories {
             tx.execute(
                 "DELETE FROM personal_category_memberships WHERE ingredient_id=?1",

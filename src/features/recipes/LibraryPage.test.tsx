@@ -167,3 +167,35 @@ test('archive scopes, duplication and permanent deletion are explicit UI actions
   await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
   await waitFor(() => expect(api.purge).toHaveBeenCalledWith(recipe.id, 3));
 });
+
+test('search-first library keeps filters and card/list context with keyboard access', async () => {
+  const api = client();
+  const recipe: Recipe = {
+    id: crypto.randomUUID(), revision: 1, title: 'İncirli tatlı', kind: 'food',
+    servings: '2', description: 'Ev yapımı', prepMinutes: null, cookMinutes: null,
+    notes: null, createdAt: '2026-10-01T12:00:00Z', updatedAt: '2026-10-02T12:00:00Z',
+    deletedAt: null, archivedAt: null, ingredients: [], steps: [], ingredientNames: {},
+  };
+  vi.mocked(api.list).mockResolvedValue([recipe]);
+  vi.mocked(api.get).mockResolvedValue(recipe);
+  const user = userEvent.setup();
+  render(<LibraryPage client={api} />);
+  expect(await screen.findByRole('button', { name: /İncirli tatlı/ })).toBeVisible();
+  const search = screen.getByRole('searchbox', { name: 'Tariflerde ara' });
+  await user.type(search, 'incir');
+  await waitFor(() => expect(api.searchRecipes).toHaveBeenLastCalledWith(
+    expect.objectContaining({ text: 'incir', scope: 'active', limit: 24 }),
+  ));
+  await user.click(screen.getByRole('button', { name: 'Liste' }));
+  expect(screen.getByRole('button', { name: /İncirli tatlı/ })).toHaveClass('recipe-list-row');
+  search.focus();
+  await user.keyboard('{ArrowDown}');
+  expect(screen.getByRole('button', { name: /İncirli tatlı/ })).toHaveFocus();
+  await user.click(screen.getByRole('button', { name: /İncirli tatlı/ }));
+  expect(await screen.findByRole('button', { name: 'Kütüphaneye dön' })).toBeVisible();
+  await user.click(screen.getByRole('button', { name: 'Kütüphaneye dön' }));
+  expect(screen.getByRole('searchbox', { name: 'Tariflerde ara' })).toHaveValue('incir');
+  expect(screen.getByRole('button', { name: 'Liste' })).toHaveAttribute('aria-pressed', 'true');
+  await user.click(screen.getByRole('button', { name: 'Filtreleri temizle' }));
+  expect(screen.getByRole('searchbox', { name: 'Tariflerde ara' })).toHaveValue('');
+});

@@ -2,6 +2,7 @@ mod catalog;
 mod ingredient_library;
 pub mod migrations;
 mod preferences;
+mod recipe_search;
 mod recipes;
 mod reliability;
 use crate::domain::{AppError, Bootstrap, StorageStatus};
@@ -53,7 +54,8 @@ impl Database {
         Self::verify_fts(&conn)?;
         migrations::apply(&mut conn, &path, migrations::MIGRATIONS)?;
         conn.pragma_update(None, "journal_mode", "WAL")?;
-        let db = Self { conn };
+        let mut db = Self { conn };
+        db.ensure_recipe_search()?;
         db.bootstrap()?;
         Ok(db)
     }
@@ -104,3 +106,5 @@ mod catalog_tests;
 
 #[cfg(test)]
 mod ingredient_library_tests;
+#[cfg(test)]
+mod recipe_search_tests;

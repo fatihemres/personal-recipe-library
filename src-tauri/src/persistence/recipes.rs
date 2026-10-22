@@ -1,3 +1,4 @@
+use super::recipe_search::index_recipe_if_available;
 use super::Database;
 use crate::domain::{recipes::*, AppError};
 use rusqlite::{params, OptionalExtension, TransactionBehavior};
@@ -210,5 +211,6 @@ pub(super) fn write_recipe(
             params![s.id, input.id, position as i64, s.instructions.trim()],
         )?;
     }
+    index_recipe_if_available(tx, &input.id)?;
     Ok(())
 }
