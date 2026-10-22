@@ -1,0 +1,197 @@
+[
+  {
+    "description": "Tomato and vegetable juice, low sodium",
+    "fdcId": "167708",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167708/nutrients"
+  },
+  {
+    "description": "Prune juice, canned",
+    "fdcId": "167753",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167753/nutrients"
+  },
+  {
+    "description": "Orange Pineapple Juice Blend",
+    "fdcId": "167792",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167792/nutrients"
+  },
+  {
+    "description": "Cherry juice, tart",
+    "fdcId": "167807",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167807/nutrients"
+  },
+  {
+    "description": "Fruit syrup",
+    "fdcId": "167953",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167953/nutrients"
+  },
+  {
+    "description": "Syrup, fruit flavored",
+    "fdcId": "167957",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167957/nutrients"
+  },
+  {
+    "description": "Beverages, cranberry-apple juice drink, low calorie, with vitamin C added",
+    "fdcId": "168123",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168123/nutrients"
+  },
+  {
+    "description": "Pineapple juice, canned or bottled, unsweetened, with added ascorbic acid",
+    "fdcId": "168187",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168187/nutrients"
+  },
+  {
+    "description": "Apple juice, frozen concentrate, unsweetened, undiluted, with added ascorbic acid",
+    "fdcId": "168188",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168188/nutrients"
+  },
+  {
+    "description": "Cranberry juice blend, 100% juice, bottled, with added vitamin C and calcium",
+    "fdcId": "168212",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168212/nutrients"
+  },
+  {
+    "description": "Raspberry juice concentrate",
+    "fdcId": "168217",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168217/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, cooking",
+    "fdcId": "169070",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169070/nutrients"
+  },
+  {
+    "description": "Passion-fruit juice, yellow, raw",
+    "fdcId": "169110",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169110/nutrients"
+  },
+  {
+    "description": "Tangerine juice, raw",
+    "fdcId": "169925",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169925/nutrients"
+  },
+  {
+    "description": "Chicory roots, raw",
+    "fdcId": "169993",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169993/nutrients"
+  },
+  {
+    "description": "Acerola juice, raw",
+    "fdcId": "171687",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171687/nutrients"
+  },
+  {
+    "description": "Beverages, carbonated, root beer",
+    "fdcId": "171871",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171871/nutrients"
+  },
+  {
+    "description": "Beverages, Clam and tomato juice, canned",
+    "fdcId": "171882",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171882/nutrients"
+  },
+  {
+    "description": "Beverages, Cocoa mix, no sugar added, powder",
+    "fdcId": "171886",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171886/nutrients"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Merlot",
+    "fdcId": "171925",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171925/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, dessert, sweet",
+    "fdcId": "173176",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173176/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Riesling",
+    "fdcId": "173200",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173200/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Sauvignon Blanc",
+    "fdcId": "173201",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173201/nutrients"
+  },
+  {
+    "description": "Beverages, Malted drink mix, natural, powder, dairy based.",
+    "fdcId": "173220",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173220/nutrients"
+  },
+  {
+    "description": "Lemonade, frozen concentrate, pink",
+    "fdcId": "173666",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173666/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Chardonnay",
+    "fdcId": "174110",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174110/nutrients"
+  },
+  {
+    "description": "Beverages, Cocoa mix, powder",
+    "fdcId": "174122",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174122/nutrients"
+  },
+  {
+    "description": "Beverages, coffee substitute, cereal grain beverage, powder",
+    "fdcId": "174138",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174138/nutrients"
+  },
+  {
+    "description": "Beverages, Whiskey sour mix, bottled",
+    "fdcId": "174811",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174811/nutrients"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Cabernet Sauvignon",
+    "fdcId": "174833",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174833/nutrients"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Pinot Noir",
+    "fdcId": "174835",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174835/nutrients"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Syrah",
+    "fdcId": "174836",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174836/nutrients"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Sangiovese",
+    "fdcId": "174839",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174839/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Pinot Gris (Grigio)",
+    "fdcId": "174841",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174841/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Gewurztraminer",
+    "fdcId": "174843",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174843/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Muscat",
+    "fdcId": "174849",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174849/nutrients"
+  },
+  {
+    "description": "Malt beverage, includes non-alcoholic beer",
+    "fdcId": "174863",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174863/nutrients"
+  },
+  {
+    "description": "Beverages, malted drink mix, chocolate, powder",
+    "fdcId": "174866",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174866/nutrients"
+  },
+  {
+    "description": "Alcoholic beverage, wine, dessert, dry",
+    "fdcId": "175112",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/175112/nutrients"
+  }
+]

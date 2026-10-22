@@ -68,7 +68,10 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "2018-04-selection-5",
-      "pinnedVersions": ["2018-04-selection-5", "2018-04-selection-5-reviewed"],
+      "pinnedVersions": [
+        "2018-04-selection-5",
+        "2018-04-selection-5-reviewed"
+      ],
       "retrievedAt": "2026-10-13",
       "upstreamArtifactUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
       "upstreamSha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
@@ -82,7 +85,10 @@
       "license": "CC0-1.0",
       "seedApproved": true,
       "pinnedVersion": "production-4",
-      "pinnedVersions": ["production-4", "production-4-reviewed"],
+      "pinnedVersions": [
+        "production-4",
+        "production-4-reviewed"
+      ],
       "retrievedAt": "2026-10-13",
       "imagesApproved": false,
       "decision": "Project-authored bilingual culinary labels, aliases and classifications; not USDA translations or expert approval."
@@ -222,6 +228,39 @@
       "retrievedAt": null,
       "imagesApproved": false,
       "decision": "Excluded: production API conditions and linked terms identify TheMealDB; no clear blanket offline redistribution license. Obtain explicit applicable rights first."
+    },
+    {
+      "id": "usda-sr-legacy-m3d5",
+      "name": "USDA SR Legacy April 2018 — M3D-5 beverage selection",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "2018-04-selection-8",
+      "retrievedAt": "2026-10-22",
+      "imagesApproved": false,
+      "decision": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Project selection version is distinct from upstream release."
+    },
+    {
+      "id": "wikidata-m3d5",
+      "name": "Wikidata selected beverage entity revisions — M3D-5",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "entity-revisions-2026-10-22-1",
+      "retrievedAt": "2026-10-22",
+      "imagesApproved": false,
+      "decision": "Wikidata contributors; selected structured entity labels and descriptions at pinned QID revisions. Project culinary classification and translations are separate."
+    },
+    {
+      "id": "recipeatlas-curation-m3d5",
+      "name": "Tarif Atlası M3D-5 beverage editorial labels",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "production-8",
+      "retrievedAt": "2026-10-22",
+      "imagesApproved": false,
+      "decision": "Project-authored bilingual culinary labels and classification; no empirical metadata or independent human linguistic approval."
     }
   ]
 }

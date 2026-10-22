@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--include-v7', action='store_true', help='Verify release 8 including archived release-7 upgrade')
     parser.add_argument('--include-v8', action='store_true', help='Verify release 9 including archived release-8 upgrade')
     parser.add_argument('--include-v9', action='store_true', help='Verify release 10 including archived release-9 upgrade')
+    parser.add_argument('--include-v10', action='store_true', help='Verify release 11 including archived release-10 upgrade')
     parser.add_argument('--output', type=pathlib.Path, required=True)
     args = parser.parse_args()
     executable = ROOT / 'src-tauri/target/debug/examples/catalog_import'
@@ -30,13 +31,18 @@ def main():
     results = []
     # Freshly allocated databases only. TemporaryDirectory owns their lifecycle.
     with tempfile.TemporaryDirectory(prefix='recipeatlas-catalog-') as base:
-        previous_versions = (None, 2, 3, 4, 5, 6, 7, 8, 9) if args.include_v9 else ((None, 2, 3, 4, 5, 6, 7, 8) if args.include_v8 else ((None, 2, 3, 4, 5, 6, 7) if args.include_v7 else ((None, 2, 3, 4, 5, 6) if args.include_v6 else ((None, 2, 3, 4, 5) if args.include_v5 else ((None, 2, 3, 4) if args.include_v4 else (None, 2, 3))))))
+        latest_previous = (10 if args.include_v10 else 9 if args.include_v9 else 8 if args.include_v8
+                           else 7 if args.include_v7 else 6 if args.include_v6 else 5 if args.include_v5
+                           else 4 if args.include_v4 else 3)
+        previous_versions = (None, *range(2, latest_previous + 1))
         for previous in previous_versions:
             profile = pathlib.Path(base) / str(previous or 'clean')
             manifests = []
             if previous:
                 manifests.append(ROOT / f'catalog/releases/{previous}/manifest.json')
-            target = ROOT / ('catalog/production/manifest.json' if (args.include_v7 or args.include_v8 or args.include_v9) else ('catalog/releases/7/manifest.json' if args.include_v6 else ('catalog/releases/6/manifest.json' if args.include_v5 else ('catalog/releases/5/manifest.json' if args.include_v4 else 'catalog/releases/4/manifest.json'))))
+            target_version = 11 if args.include_v10 else 10 if args.include_v9 else 9 if args.include_v8 else 8 if args.include_v7 else 7 if args.include_v6 else 6 if args.include_v5 else 5 if args.include_v4 else 4
+            target = ROOT / ('catalog/production/manifest.json' if target_version == 11
+                             else f'catalog/releases/{target_version}/manifest.json')
             manifests += [target] * 2
             for index, manifest in enumerate(manifests):
                 start = time.perf_counter()

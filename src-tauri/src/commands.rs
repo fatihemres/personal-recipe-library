@@ -569,7 +569,7 @@ mod tests {
         invoke(&window, "bootstrap", json!({})).unwrap();
         let page=invoke(&window,"ingredient_library",json!({"query":{"search":"India pale ale","origin":"catalog","categoryId":null,"offset":0,"limit":30}})).unwrap();
         assert_eq!(page["total"], 1);
-        assert_eq!(page["catalogCount"], 795);
+        assert_eq!(page["catalogCount"], 854);
         assert_eq!(page["personalCount"], 0);
         let detail = invoke(
             &window,
@@ -578,7 +578,7 @@ mod tests {
         )
         .unwrap();
         assert_eq!(detail["item"]["name"], "India pale ale");
-        assert_eq!(detail["catalogVersion"], 10);
+        assert_eq!(detail["catalogVersion"], 11);
         let personal = invoke(
             &window,
             "create_ingredient",

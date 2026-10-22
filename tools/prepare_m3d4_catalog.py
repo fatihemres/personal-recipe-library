@@ -12,7 +12,7 @@ from prepare_m3d4_candidates import BASE_MANIFEST_SHA, normalize
 ROOT = Path(__file__).resolve().parents[1]
 OLD = ROOT / 'catalog/releases/9'
 PREP = ROOT / 'catalog/preparation/m3d4'
-OUT = ROOT / 'catalog/production'
+OUT = ROOT / 'catalog/releases/10'
 FOUNDATION_SOURCE = 'usda-foundation-m3d4'
 WIKIDATA_SOURCE = 'wikidata-m3d4'
 CURATION_SOURCE = 'recipeatlas-curation-m3d4'

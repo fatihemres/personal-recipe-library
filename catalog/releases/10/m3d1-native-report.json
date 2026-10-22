@@ -1,0 +1,21 @@
+{
+  "host": "macOS arm64",
+  "bundleIdentifier": "com.recipeatlas.m3d1-verification",
+  "build": "unsigned debug app bundle",
+  "firstLaunch": true,
+  "fullProcessRestart": true,
+  "countsAfterRestart": {
+    "catalog_ingredients": 568,
+    "catalog_aliases": 269,
+    "ingredient_categories": 50,
+    "catalog_import_runs": 1
+  },
+  "schemaVersion": 5,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "personalIngredients": 0,
+  "guiInteractionVerified": false,
+  "guiLimitation": "Computer-use getApp resolved the bundle path to an old M3C-3 identifier; direct M3D-1 identifier was rejected as invalid. No GUI interactions claimed.",
+  "normalProfileTouched": false,
+  "testProcessStopped": true
+}

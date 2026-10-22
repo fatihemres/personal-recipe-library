@@ -249,3 +249,20 @@ python3 tools/verify_catalog_installation.py --include-v9 --output /private/tmp/
 ```
 
 Independent source re-extraction uses `python3 tools/prepare_m3d4_candidates.py --archive /path/to/FoodData_Central_foundation_food_json_2026-04-30.zip --check`; a different checksum is rejected. The new immutable source/version pairs are `usda-foundation-m3d4/2026-04-30-selection-1`, `wikidata-m3d4/entity-revisions-2026-10-19-1` and `recipeatlas-curation-m3d4/production-7`. The checked importer runs in one SQLite transaction, retains all existing canonical objects and user-owned data, and rejects same-version evidence drift with `CATALOG_SOURCE_CHANGED`. No startup network call or schema migration was added. The historical Release-9 generator now checks `catalog/releases/9`, so its `--check` still works without rewriting the current package. Historical measured reports are read from the archive rather than regenerated against a different current release.
+
+## Release 11 (M3D-5)
+
+Release 10 is archived unchanged in `catalog/releases/10`. The 85-row editorial input is `catalog/preparation/m3d5/selection.tsv`; `tools/prepare_m3d5_candidates.py` produces a complete decision ledger with 59 ACCEPT, 16 DEFER and 10 EXISTING. The original USDA SR Legacy April 2018 ZIP is pinned at SHA-256 `b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0`; the 46 Wikidata candidate entity revisions and checksums are committed. Only 27 selected USDA descriptors and 32 pinned QIDs enter the runtime package. The source/version pairs `usda-sr-legacy-m3d5/2018-04-selection-8`, `wikidata-m3d5/entity-revisions-2026-10-22-1`, and `recipeatlas-curation-m3d5/production-8` are new and immutable.
+
+```sh
+python3 tools/fetch_m3d5_wikidata.py
+python3 tools/prepare_m3d5_candidates.py --check
+python3 tools/prepare_m3d5_catalog.py --check
+python3 tools/test_m3d5_catalog.py
+python3 tools/audit_catalog.py --check
+cargo build --locked --manifest-path src-tauri/Cargo.toml --example catalog_import
+python3 tools/report_m3d5_coverage.py --check
+python3 tools/verify_catalog_installation.py --include-v10 --output /private/tmp/m3d5-installation.json
+```
+
+For independent source re-extraction, add `--archive /path/to/FoodData_Central_sr_legacy_food_csv_2018-04.zip` to the candidate command. A mismatched archive checksum fails. `tools/fetch_m3d5_wikidata.py --fetch` is build-time research only; normal checks and application startup are offline. The shared transactional importer still validates source allowlisting, exact artifact hashes and provenance, preserves personal state, and rejects reused source/version evidence drift with `CATALOG_SOURCE_CHANGED`. No schema migration or independent drink database was added. Historical Release-10 generator and SQLite checks now read its archive.

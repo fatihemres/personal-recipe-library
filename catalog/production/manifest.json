@@ -1,7 +1,7 @@
 {
   "artifact": {
     "file": "ingredients.json",
-    "sha256": "ac05165f74b5b3737b9079abaa82b365a61f3dc4734224c62528f0c0beed47f1"
+    "sha256": "9ea8035f5e661a4ff105a6daf8f076a651a050c1527ffcc2f1de3f319951e149"
   },
   "dataset": "recipeatlas-ingredients",
   "evidence": {
@@ -24,6 +24,10 @@
     "recipeatlas-curation-m3d4": {
       "file": "m3d4-curation-records.json",
       "sha256": "631535c8e5949d9e1c1b5d8f3130b21d300253e526cd771f9be3d830e5c3fa43"
+    },
+    "recipeatlas-curation-m3d5": {
+      "file": "m3d5-curation-records.json",
+      "sha256": "e4be050ca3754ae33b42131ea88314a2fe7320ec745b0651e2e0c16f3b330cf5"
     },
     "recipeatlas-terminology": {
       "file": "terminology-records.json",
@@ -53,9 +57,17 @@
       "file": "m3d3-usda-records.json",
       "sha256": "192fac76f0f046aeb52306ca141d35cbf8722c6f8b78d07f967c3b9cea2b812b"
     },
+    "usda-sr-legacy-m3d5": {
+      "file": "m3d5-sr-records.json",
+      "sha256": "84fb5b9cfb8570538db31f313b659579b7957f1e9702665f1a4846353ad6ecd6"
+    },
     "wikidata-m3d4": {
       "file": "m3d4-wikidata-records.json",
       "sha256": "3c1f81b6f23bcedad22d0d0d820cb3135041cdb0ebd9da8eda37fea54d59318e"
+    },
+    "wikidata-m3d5": {
+      "file": "m3d5-wikidata-records.json",
+      "sha256": "457fbba09a0d1c60fb50bb57996bef55dcb95045df8138856f2da20ffc8d70d5"
     }
   },
   "formatVersion": 1,
@@ -190,7 +202,37 @@
       "retrievedAt": "2026-10-19",
       "url": "https://github.com/fatihemres/personal-recipe-library",
       "version": "production-7"
+    },
+    {
+      "artifactSha256": "84fb5b9cfb8570538db31f313b659579b7957f1e9702665f1a4846353ad6ecd6",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Project selection version is distinct from upstream release.",
+      "id": "usda-sr-legacy-m3d5",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-5 beverage selection",
+      "retrievedAt": "2026-10-22",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-8"
+    },
+    {
+      "artifactSha256": "457fbba09a0d1c60fb50bb57996bef55dcb95045df8138856f2da20ffc8d70d5",
+      "attribution": "Wikidata contributors; selected structured entity labels and descriptions at pinned QID revisions. Project culinary classification and translations are separate.",
+      "id": "wikidata-m3d5",
+      "license": "CC0-1.0",
+      "name": "Wikidata selected beverage entity revisions — M3D-5",
+      "retrievedAt": "2026-10-22",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "version": "entity-revisions-2026-10-22-1"
+    },
+    {
+      "artifactSha256": "e4be050ca3754ae33b42131ea88314a2fe7320ec745b0651e2e0c16f3b330cf5",
+      "attribution": "Project-authored bilingual culinary labels and classification; no empirical metadata or independent human linguistic approval.",
+      "id": "recipeatlas-curation-m3d5",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-5 beverage editorial labels",
+      "retrievedAt": "2026-10-22",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-8"
     }
   ],
-  "version": 10
+  "version": 11
 }

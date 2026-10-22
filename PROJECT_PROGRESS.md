@@ -1,5 +1,15 @@
 # Project progress
 
+## M3D-5 checkpoint C — 2026-10-22 (local implementation; final gates pending)
+
+Branch `feature/m3d-5-beverage-catalog` began at `e85c260` with only the unrelated root workbook untracked; the workbook and normal user profile remain untouched. Release 10 was archived byte-for-byte in `catalog/releases/10`. The baseline was 795 identities (666 food / 129 beverage), 269 aliases and 50 categories. A reproducible 85-candidate ledger using the checksum-pinned USDA SR Legacy archive and 46 pinned Wikidata revisions records 59 ACCEPT, 16 DEFER and 10 EXISTING. FoodOn, Open Food Facts, TürKomp and TheCocktailDB remain excluded. No unsupported nutrition, density, allergen or ABV observations were introduced.
+
+Release 11 currently generates 854 identities (666 food / 188 beverage), 269 aliases and 50 unchanged category nodes. All Release-10 ingredient objects are preserved; no migration or application-version change. Candidate/gen checks, structural audit (zero errors/exact alias collisions), 80 Rust tests, real isolated SQLite fresh and v7/v8/v9/v10 upgrades, idempotency, source-drift rollback and preservation tests passed. Process-local network denial passed 29 imports/opens outside the nested sandbox. The first fresh debug CLI import took 1023.493 ms; v10→v11 took 361.249 ms on this host, including process startup. These are not native GUI timings.
+
+Source/terminology, coverage, quality and native reports are written. Local verification passed 80 Rust tests, 56 frontend tests, two browser tests, seven Python catalog suites, TypeScript, ESLint, Cargo fmt/check/Clippy, version consistency, frontend build and historical Release-10 checks. An isolated production arm64 `.app` launched and relaunched with Release 11, schema 5, 854/269/50 and one successful import; integrity and foreign keys were valid. The Mac was locked, so native GUI actions were unavailable. Two local DMG attempts failed in `bundle_dmg.sh` without a specific Tauri diagnostic; CI packaging is still pending. See `docs/CATALOG_M3D5_NATIVE_VERIFICATION.md`.
+
+Next: review final diff, commit/push this branch, open PR and inspect all five CI jobs and package checksums. Product Owner GUI/device acceptance remains required. This checkpoint does **not** claim M3D-5 completion or native GUI verification.
+
 ## M3D-4 checkpoint — 2026-10-19 (implementation and CI verified; manual acceptance pending)
 
 Branch `feature/m3d-4-regional-sources` started clean at main merge `0d8ee9b`; only the unrelated root workbook was untracked and remains untouched. A read-only public-repository preflight found no tracked personal databases, key/environment files, high-confidence credential patterns or such files in relevant Git history; tracked review workbooks have no email-like or private-key markers. This bounded scan is not a guarantee that every historical byte is non-sensitive.

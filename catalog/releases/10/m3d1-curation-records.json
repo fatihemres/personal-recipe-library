@@ -1,0 +1,242 @@
+[
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Cane syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Şeker kamışı şurubu\"}",
+    "externalId": "usda-sr-167743"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Lemon juice from concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Konsantreden limon suyu\"}",
+    "externalId": "usda-sr-167748"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Bosc pear (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bosc armudu (çiğ)\"}",
+    "externalId": "usda-sr-167778"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Guava nectar (canned, vitamin C added)\",\"preferredUnit\":\"mL\",\"tr\":\"Guava nektarı (konserve, C vitamini eklenmiş)\"}",
+    "externalId": "usda-sr-167784"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Cranberry juice (unsweetened)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz turna yemişi suyu\"}",
+    "externalId": "usda-sr-168117"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Bottled lime juice (unsweetened)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz şişelenmiş misket limonu suyu\"}",
+    "externalId": "usda-sr-168157"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"fruit\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Green plantain (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil plantain muzu (çiğ)\"}",
+    "externalId": "usda-sr-168215"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Kale\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Kale (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kale yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-168421"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Lentil sprouts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Filizlenmiş mercimek (çiğ)\"}",
+    "externalId": "usda-sr-168427"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Oriental radish\"],\"aliasesTr\":[\"Japon turpu\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Daikon radish (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Daikon turpu (çiğ)\"}",
+    "externalId": "usda-sr-168451"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Kelp seaweed (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kelp deniz yosunu (çiğ)\"}",
+    "externalId": "usda-sr-168457"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Laver seaweed (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Laver deniz yosunu (çiğ)\"}",
+    "externalId": "usda-sr-168458"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Acorn squash (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Palamut kabağı (çiğ)\"}",
+    "externalId": "usda-sr-168472"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Tomatillo (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tomatillo (çiğ)\"}",
+    "externalId": "usda-sr-168566"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Baby carrots (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bebek havuç (çiğ)\"}",
+    "externalId": "usda-sr-168568"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Hungarian pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Macar biberi (çiğ)\"}",
+    "externalId": "usda-sr-168578"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"nuts-seeds\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Lotus seeds (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Lotus tohumu (çiğ)\"}",
+    "externalId": "usda-sr-168591"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Papaya nectar (canned)\",\"preferredUnit\":\"mL\",\"tr\":\"Papaya nektarı (konserve)\"}",
+    "externalId": "usda-sr-169107"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"fruit\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Yellow plantain (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı plantain muzu (çiğ)\"}",
+    "externalId": "usda-sr-169130"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Bamboo shoots (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Bambu filizi (çiğ)\"}",
+    "externalId": "usda-sr-169210"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Broccoli leaves (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Brokoli yaprağı (çiğ)\"}",
+    "externalId": "usda-sr-169329"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Broccoli stalks (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Brokoli sapı (çiğ)\"}",
+    "externalId": "usda-sr-169331"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"mushrooms\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Enoki mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Enoki mantarı (çiğ)\"}",
+    "externalId": "usda-sr-169382"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Sun-dried tomato in oil (drained)\",\"preferredUnit\":\"g\",\"tr\":\"Yağda güneşte kurutulmuş domates (süzülmüş)\"}",
+    "externalId": "usda-sr-169384"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Fennel bulb (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Rezene soğanı (çiğ)\"}",
+    "externalId": "usda-sr-169385"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Serrano pepper (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Serrano biberi (çiğ)\"}",
+    "externalId": "usda-sr-169395"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"spices\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Ancho pepper (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Kurutulmuş ancho biberi\"}",
+    "externalId": "usda-sr-169396"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"mushrooms\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Maitake mushroom (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Maitake mantarı (çiğ)\"}",
+    "externalId": "usda-sr-169403"
+  },
+  {
+    "description": "{\"aliasesEn\":[\"Gai lan\"],\"aliasesTr\":[\"Gai lan\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Chinese broccoli (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çin brokolisi (çiğ)\"}",
+    "externalId": "usda-sr-169404"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Navel orange (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Navel portakalı (çiğ)\"}",
+    "externalId": "usda-sr-169917"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Pe-tsai\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Chinese cabbage (pe-tsai, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çin lahanası (pe-tsai, çiğ)\"}",
+    "externalId": "usda-sr-169979"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Welsh onion (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Galler soğanı (çiğ)\"}",
+    "externalId": "usda-sr-170007"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Sweet onion (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tatlı soğan (çiğ)\"}",
+    "externalId": "usda-sr-170008"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Russet potato (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Russet patates (çiğ)\"}",
+    "externalId": "usda-sr-170027"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Red potato (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı kabuklu patates (çiğ)\"}",
+    "externalId": "usda-sr-170029"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Yellow tomato (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Sarı domates (çiğ)\"}",
+    "externalId": "usda-sr-170096"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"nuts-seeds\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Lotus seeds (dried)\",\"preferredUnit\":\"g\",\"tr\":\"Lotus tohumu (kuru)\"}",
+    "externalId": "usda-sr-170149"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Whole toasted sesame seeds\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş bütün susam\"}",
+    "externalId": "usda-sr-170151"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Macadamia nuts (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Makademya fındığı (çiğ)\"}",
+    "externalId": "usda-sr-170178"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Hulled barley\",\"preferredUnit\":\"g\",\"tr\":\"Kabuğu alınmış arpa\"}",
+    "externalId": "usda-sr-170283"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Savoy cabbage (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Savoy lahanası (çiğ)\"}",
+    "externalId": "usda-sr-170388"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Chayote\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Chayote (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çayote kabağı (çiğ)\"}",
+    "externalId": "usda-sr-170402"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Green tomato (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yeşil domates (çiğ)\"}",
+    "externalId": "usda-sr-170456"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"European chestnuts (raw, peeled)\",\"preferredUnit\":\"g\",\"tr\":\"Soyulmuş Avrupa kestanesi (çiğ)\"}",
+    "externalId": "usda-sr-170575"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Amaranth grain (cooked)\",\"preferredUnit\":\"g\",\"tr\":\"Pişmiş amarant tanesi\"}",
+    "externalId": "usda-sr-170683"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Roasted buckwheat groats (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kavrulmuş karabuğday taneleri (kuru)\"}",
+    "externalId": "usda-sr-170685"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Ghee\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"oils\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Clarified butter (ghee)\",\"preferredUnit\":\"g\",\"tr\":\"Sade yağ (ghee)\"}",
+    "externalId": "usda-sr-171314"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[\"Cranberry (çiğ)\"],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Cranberries (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Turna yemişi (çiğ)\"}",
+    "externalId": "usda-sr-171722"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"dried-fruit\"],\"dimensions\":[\"mass\"],\"en\":\"Sweetened dried cranberries\",\"preferredUnit\":\"g\",\"tr\":\"Tatlandırılmış kuru turna yemişi\"}",
+    "externalId": "usda-sr-171723"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Dungeness crab (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Dungeness yengeci (çiğ)\"}",
+    "externalId": "usda-sr-171968"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Eastern oyster (wild, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Doğu istiridyesi (yabani, çiğ)\"}",
+    "externalId": "usda-sr-171978"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"legumes\"],\"dimensions\":[\"mass\"],\"en\":\"Split green peas (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru yarma yeşil bezelye\"}",
+    "externalId": "usda-sr-172428"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Domestic rabbit meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Çiftlik tavşanı eti (çiğ)\"}",
+    "externalId": "usda-sr-172521"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Grape juice (unsweetened, vitamin C added)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz üzüm suyu (C vitamini eklenmiş)\"}",
+    "externalId": "usda-sr-173041"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"flours\"],\"dimensions\":[\"mass\"],\"en\":\"Refined sorghum flour\",\"preferredUnit\":\"g\",\"tr\":\"Rafine sorgum unu\"}",
+    "externalId": "usda-sr-173262"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Venison (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Geyik eti (çiğ)\"}",
+    "externalId": "usda-sr-173855"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Wild crayfish (mixed species, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yabani kerevit (karışık türler, çiğ)\"}",
+    "externalId": "usda-sr-174206"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Northern lobster (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kuzey ıstakozu (çiğ)\"}",
+    "externalId": "usda-sr-174208"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"seafood\"],\"dimensions\":[\"mass\"],\"en\":\"Scallops (mixed species, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Deniz tarağı (karışık türler, çiğ)\"}",
+    "externalId": "usda-sr-174220"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Project-curated culinary label and classification against pinned USDA description; not an upstream translation or independent linguistic approval\",\"categories\":[\"meat\"],\"dimensions\":[\"mass\"],\"en\":\"Wild boar meat (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Yaban domuzu eti (çiğ)\"}",
+    "externalId": "usda-sr-175297"
+  }
+]

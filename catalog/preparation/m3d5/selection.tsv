@@ -1,0 +1,86 @@
+source	id	decision	tr	en	categories	unit	reason
+sr	168217	ACCEPT	Ahududu suyu konsantresi	Raspberry juice concentrate	juices	mL	Concentrated raspberry juice is distinct from fruit and ready-to-drink juice.
+sr	167807	ACCEPT	Vişne suyu	Tart cherry juice	juices	mL	Unspecific tart-cherry juice differs from the existing shelf-stable concentrate-derived form.
+sr	168188	ACCEPT	Dondurulmuş elma suyu konsantresi (şekersiz)	Frozen apple juice concentrate (unsweetened)	juices	mL	Undiluted frozen concentrate is a distinct formulation from apple juice.
+sr	167753	ACCEPT	Konserve kuru erik suyu	Canned prune juice	juices	mL	Prune juice source form is distinct from prunes and other fruit juices.
+sr	169110	EXISTING					Release 10 already contains this yellow passion-fruit juice identity.
+sr	169925	EXISTING					Release 10 already contains this tangerine juice identity.
+sr	171687	EXISTING					Release 10 already contains this acerola juice identity.
+sr	171871	EXISTING					Release 10 already contains this root-beer soda identity.
+sr	171882	DEFER					Clam-and-tomato mixture needs Turkish shellfish identity review before naming.
+sr	174811	ACCEPT	Şişelenmiş whiskey sour karışımı	Bottled whiskey sour mix	mixers	mL	Commercially prepared cocktail mixer, not a completed cocktail; alcohol status remains unknown.
+sr	174866	EXISTING					Release 10 already contains this dry chocolate malt beverage mix.
+sr	171886	ACCEPT	Şekersiz kakao içeceği karışımı tozu	Cocoa drink mix powder (no added sugar)	chocolate-cocoa;other-beverages	g	No-added-sugar dry mix is distinct from general sweetened cocoa mix.
+sr	174122	ACCEPT	Kakao içeceği karışımı tozu	Cocoa drink mix powder	chocolate-cocoa;other-beverages	g	Dry beverage mix is distinct from cocoa powder and prepared drink.
+sr	169070	ACCEPT	Yemeklik şarap	Cooking wine	wines	mL	Source-specific cooking wine category differs from generic table wine.
+sr	173176	DEFER					Dessert-wine terminology needs a natural Turkish label that preserves the source style.
+sr	175112	DEFER					Dry dessert-wine category is unusual and needs product identity review before naming.
+sr	174110	ACCEPT	Chardonnay beyaz şarabı	Chardonnay white wine	wines	mL	Distinct source-described white wine variety useful in cooking and drinks.
+sr	174835	ACCEPT	Pinot Noir kırmızı şarabı	Pinot Noir red wine	wines	mL	Distinct source-described red wine variety.
+sr	174841	ACCEPT	Pinot Gris beyaz şarabı	Pinot Gris white wine	wines	mL	Distinct source-described white wine variety.
+sr	173200	ACCEPT	Riesling beyaz şarabı	Riesling white wine	wines	mL	Distinct source-described white wine variety.
+sr	173201	ACCEPT	Sauvignon Blanc beyaz şarabı	Sauvignon Blanc white wine	wines	mL	Distinct source-described white wine variety.
+sr	174833	ACCEPT	Cabernet Sauvignon kırmızı şarabı	Cabernet Sauvignon red wine	wines	mL	Distinct source-described red wine variety.
+sr	174836	ACCEPT	Syrah kırmızı şarabı	Syrah red wine	wines	mL	Distinct source-described red wine variety.
+sr	174849	ACCEPT	Muscat beyaz şarabı	Muscat white wine	wines	mL	Distinct source-described white wine variety.
+sr	171925	ACCEPT	Merlot kırmızı şarabı	Merlot red wine	wines	mL	Distinct source-described red wine variety.
+sr	174839	ACCEPT	Sangiovese kırmızı şarabı	Sangiovese red wine	wines	mL	Distinct source-described red wine variety.
+sr	174843	ACCEPT	Gewürztraminer beyaz şarabı	Gewürztraminer white wine	wines	mL	Distinct source-described white wine variety.
+sr	174138	ACCEPT	Tahıllı kahve alternatifi tozu	Cereal coffee substitute powder	coffee	g	Dry cereal-based coffee substitute, not brewed coffee.
+sr	169993	ACCEPT	Çiğ hindiba kökü	Raw chicory root	coffee;vegetables	g	Raw chicory root is a distinct coffee-alternative input.
+sr	173220	ACCEPT	Süt bazlı doğal malt içeceği tozu	Dairy-based malt drink mix powder	other-beverages;dairy	g	Dry dairy-based malt mix, not prepared beverage.
+sr	168187	ACCEPT	Şekersiz ananas suyu (konserve)	Unsweetened canned pineapple juice	juices	mL	Pineapple juice source form is distinct from whole pineapple.
+sr	167792	ACCEPT	Portakal-ananas suyu karışımı	Orange-pineapple juice blend	juices	mL	Source-described blend is distinct from either single-fruit juice.
+sr	167953	ACCEPT	Meyve şurubu	Fruit syrup	syrups	mL	Generic fruit syrup is distinct from specific fruit syrups and plain sugar syrup.
+sr	167957	DEFER					Fruit-flavored syrup may overlap generic fruit syrup; source does not establish distinct fruit content.
+sr	173666	ACCEPT	Dondurulmuş pembe limonata konsantresi	Frozen pink lemonade concentrate	juices;mixers	mL	Frozen concentrate is distinct from prepared lemonade.
+sr	167708	ACCEPT	Az sodyumlu domates-sebze suyu	Low-sodium tomato and vegetable juice	juices	mL	Distinct mixed vegetable juice form with explicit sodium qualifier.
+sr	168212	DEFER					Fortified cranberry juice blend has unclear fruit composition and weak culinary distinction.
+sr	168123	DEFER					Low-calorie fortified cranberry-apple drink is more product-form variation than useful generic ingredient.
+sr	174863	DEFER					Source groups malt beverage and non-alcoholic beer; cannot safely distinguish alcohol status.
+wikidata	Q104218426	ACCEPT	Arabica kahve çekirdeği	Arabica coffee bean	coffee	g	Pinned entity is Coffea arabica seed, distinct from prepared coffee.
+wikidata	Q104246054	ACCEPT	Robusta kahve çekirdeği	Robusta coffee bean	coffee	g	Pinned entity is Coffea canephora seed, distinct from arabica.
+wikidata	Q1721046	ACCEPT	Öğütülmüş kahve	Ground coffee	coffee	g	Ground beans are distinct from whole beans and brewed coffee.
+wikidata	Q238306	ACCEPT	Beyaz çay	White tea	tea	g	Minimally processed tea style; measured as tea input, not prepared drink.
+wikidata	Q690098	ACCEPT	Pu-erh çayı	Pu-erh tea	tea	g	Fermented tea style distinct from green and black tea.
+wikidata	Q822331	ACCEPT	Matcha tozu	Matcha powder	tea	g	Finely powdered green tea is a distinct culinary form.
+wikidata	Q96098098	ACCEPT	Yerba mate yaprağı	Yerba mate leaf	infusions	g	Pinned entity describes leaf for infusion, not brewed mate.
+wikidata	Q60855	ACCEPT	Yasemin çayı	Jasmine tea	tea	g	Jasmine-scented tea is a distinct tea preparation input.
+wikidata	Q519365	ACCEPT	Genmaicha çayı	Genmaicha tea	tea	g	Green tea and brown-rice blend is distinct from plain green tea.
+wikidata	Q56342268	ACCEPT	Demlenmiş rooibos	Brewed rooibos	infusions	mL	Pinned entity is prepared rooibos infusion; do not mislabel as dry leaf.
+wikidata	Q654895	ACCEPT	Portakal kokteyl bitteri	Orange cocktail bitters	bitters	mL	Orange bitters are distinct from existing aromatic bitters; ABV remains unknown.
+wikidata	Q26877308	DEFER					Entity has no English description; red-versus-sweet vermouth identity needs stronger evidence.
+wikidata	Q26877423	DEFER					Entity has no English description; dry vermouth identity needs stronger evidence.
+wikidata	Q1448819	ACCEPT	Zencefil birası (ginger beer)	Ginger beer	mixers;soft-drinks	mL	Ginger beer mixer differs from existing ginger ale; alcohol content is not inferred.
+wikidata	Q134967545	DEFER					Entity lacks an English label; cocktail-ingredient description alone does not verify ginger syrup identity.
+wikidata	Q12424061	ACCEPT	Gül şurubu	Rose syrup	syrups	mL	Rose-flavored sugar syrup differs from rose water.
+wikidata	Q5431859	ACCEPT	Falernum şurubu	Falernum syrup	syrups	mL	Pinned entity describes Caribbean drink syrup; alcohol status remains unknown.
+wikidata	Q1078150	ACCEPT	Maraschino kirazı	Maraschino cherry	garnishes	g	Preserved sweetened cherry is a garnish, distinct from maraschino liqueur.
+wikidata	Q12324500	ACCEPT	Lime cordial şurubu	Lime cordial	syrups;mixers	mL	Concentrated lime-and-sugar cordial differs from lime juice.
+wikidata	Q900450	ACCEPT	Gül suyu	Rose water	other-beverages	mL	Distilled rose-petal water differs from rose syrup.
+wikidata	Q902582	ACCEPT	Portakal çiçeği suyu	Orange blossom water	other-beverages	mL	Distilled bitter-orange blossom water differs from citrus juice.
+wikidata	Q140136320	ACCEPT	Demirhindi konsantresi	Tamarind concentrate	juices;mixers	mL	Concentrate differs from existing diluted tamarind paste and nectar.
+wikidata	Q718680	ACCEPT	Şeker kamışı suyu	Sugarcane juice	juices	mL	Pressed cane juice differs from cane syrup and sugar.
+wikidata	Q139500622	ACCEPT	Pandan yaprağı	Pandan leaf	infusions;herbs	g	Aromatic pandan leaf is an infusion input; not a pandan-flavored drink.
+wikidata	Q138542182	ACCEPT	Graviola suyu	Soursop juice	juices	mL	Pressed soursop juice differs from whole fruit.
+wikidata	Q27670710	DEFER					Entity lacks description; cannot verify passion-fruit syrup form from this revision alone.
+wikidata	Q134967538	DEFER					Entity lacks English label; cocktail-ingredient description alone does not verify vanilla syrup identity.
+wikidata	Q5140965	ACCEPT	Kahve şurubu	Coffee syrup	syrups;coffee	mL	Sweetened coffee concentrate differs from brewed coffee.
+wikidata	Q67890691	ACCEPT	Hindistan cevizi şurubu	Coconut syrup	syrups	mL	Coconut syrup differs from coconut cream and coconut water.
+wikidata	Q2916133	ACCEPT	Hurma şurubu	Date syrup	syrups;sweeteners	mL	Syrup extracted from dates differs from whole dates and generic molasses.
+wikidata	Q3485291	DEFER					Barley malt syrup may overlap existing generic malt syrup; source offers insufficient distinction.
+wikidata	Q3539556	ACCEPT	Triple sec portakal likörü	Triple sec orange liqueur	liqueurs	mL	Generic orange-liqueur type distinct from existing liqueurs; no brand or ABV claim.
+wikidata	Q548940	ACCEPT	Anisette anason likörü	Anisette anise liqueur	liqueurs	mL	Anise-flavored liqueur type distinct from sambuca.
+wikidata	Q744729	ACCEPT	Cachaça	Cachaça	spirits	mL	Distilled sugarcane spirit identity; no origin certification or ABV claim.
+wikidata	Q5139704	ACCEPT	Kokteyl soğanı	Cocktail onion	garnishes	g	Brined pearl onion garnish distinct from fresh onion.
+wikidata	Q67778134	ACCEPT	Mürver çiçeği	Elderflower	infusions;garnishes	g	Edible elderflower used in infusions and garnish; not elderflower cordial.
+wikidata	Q104704742	ACCEPT	Greyfurt kabuğu	Grapefruit peel	garnishes	g	Grapefruit peel differs from existing orange peel and grapefruit juice.
+wikidata	Q96240608	EXISTING					Raw chicory root is represented by accepted USDA FDC 169993; avoid duplicate identity.
+wikidata	Q140606571	DEFER					Multiple chamomile species share this flower label; exact infusion ingredient identity is unclear.
+wikidata	Q28208975	DEFER					Entity describes prepared butterfly pea tea rather than the dry flower ingredient sought.
+wikidata	Q192892	DEFER					Entity description oddly includes vodka; unsuitable to source a safe ayran identity.
+wikidata	Q392001	EXISTING					Agave syrup already exists in Release 10.
+wikidata	Q1139302	EXISTING					Coconut cream already exists in Release 10.
+wikidata	Q633401	EXISTING					Coconut water already exists in Release 10.
+wikidata	Q1377087	EXISTING					Simple sugar syrup already exists in Release 10.
+wikidata	Q693187	ACCEPT	Salep unu	Salep flour	traditional-drinks;turkish-regional	g	Pinned entity describes flour from orchid tubers; distinct from the prepared salep drink.
