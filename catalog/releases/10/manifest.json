@@ -1,0 +1,196 @@
+{
+  "artifact": {
+    "file": "ingredients.json",
+    "sha256": "ac05165f74b5b3737b9079abaa82b365a61f3dc4734224c62528f0c0beed47f1"
+  },
+  "dataset": "recipeatlas-ingredients",
+  "evidence": {
+    "recipeatlas-curation": {
+      "file": "curation-records.json",
+      "sha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea"
+    },
+    "recipeatlas-curation-m3d1": {
+      "file": "m3d1-curation-records.json",
+      "sha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd"
+    },
+    "recipeatlas-curation-m3d2b": {
+      "file": "m3d2b-curation-records.json",
+      "sha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58"
+    },
+    "recipeatlas-curation-m3d3": {
+      "file": "m3d3-curation-records.json",
+      "sha256": "58b19fe1bf63537a7e5ec3b3683a4b94cf58bd0e2796f15632f5064717f18f04"
+    },
+    "recipeatlas-curation-m3d4": {
+      "file": "m3d4-curation-records.json",
+      "sha256": "631535c8e5949d9e1c1b5d8f3130b21d300253e526cd771f9be3d830e5c3fa43"
+    },
+    "recipeatlas-terminology": {
+      "file": "terminology-records.json",
+      "sha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
+    },
+    "recipeatlas-terminology-final": {
+      "file": "terminology-final-records.json",
+      "sha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee"
+    },
+    "usda-foundation-m3d4": {
+      "file": "m3d4-foundation-records.json",
+      "sha256": "c4d5a70c1823eb8fe7a40b1df6117feb71160a444c06b028569e5e6660e38eb4"
+    },
+    "usda-sr-legacy": {
+      "file": "usda-records.json",
+      "sha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+    },
+    "usda-sr-legacy-m3d1": {
+      "file": "m3d1-usda-records.json",
+      "sha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4"
+    },
+    "usda-sr-legacy-m3d2b": {
+      "file": "m3d2b-usda-records.json",
+      "sha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a"
+    },
+    "usda-sr-legacy-m3d3": {
+      "file": "m3d3-usda-records.json",
+      "sha256": "192fac76f0f046aeb52306ca141d35cbf8722c6f8b78d07f967c3b9cea2b812b"
+    },
+    "wikidata-m3d4": {
+      "file": "m3d4-wikidata-records.json",
+      "sha256": "3c1f81b6f23bcedad22d0d0d820cb3135041cdb0ebd9da8eda37fea54d59318e"
+    }
+  },
+  "formatVersion": 1,
+  "purpose": "production",
+  "sources": [
+    {
+      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned, not a new USDA release.",
+      "id": "usda-sr-legacy",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — production selection 4",
+      "retrievedAt": "2026-10-08",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-4"
+    },
+    {
+      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea",
+      "attribution": "Project-authored Turkish/English culinary labels, aliases and classifications; not USDA translations. No empirical metadata inferred.",
+      "id": "recipeatlas-curation",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası production label curation",
+      "retrievedAt": "2026-10-09",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-3"
+    },
+    {
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf",
+      "attribution": "Three user-selected Turkish display names; not USDA translations or factual observations.",
+      "id": "recipeatlas-terminology",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası user-selected Turkish terminology",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "user-decisions-1"
+    },
+    {
+      "artifactSha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee",
+      "attribution": "Two user-authorized display names; not independent linguistic verification or USDA translations.",
+      "id": "recipeatlas-terminology-final",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası final user-authorized terminology decisions",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "user-decisions-2"
+    },
+    {
+      "artifactSha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d1",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-1 selection",
+      "retrievedAt": "2026-10-13",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-5-reviewed"
+    },
+    {
+      "artifactSha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd",
+      "attribution": "Project-authored bilingual labels and classifications against USDA descriptors; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d1",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-1 curated labels",
+      "retrievedAt": "2026-10-13",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-4-reviewed"
+    },
+    {
+      "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d2b",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-2B selection",
+      "retrievedAt": "2026-10-15",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-6"
+    },
+    {
+      "artifactSha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58",
+      "attribution": "Project-authored bilingual labels and classifications; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d2b",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-2B editorial labels",
+      "retrievedAt": "2026-10-15",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-5"
+    },
+    {
+      "artifactSha256": "192fac76f0f046aeb52306ca141d35cbf8722c6f8b78d07f967c3b9cea2b812b",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, SR Legacy April 2018; selected descriptors unchanged. Selection version is project-owned.",
+      "id": "usda-sr-legacy-m3d3",
+      "license": "CC0-1.0",
+      "name": "USDA SR Legacy April 2018 — M3D-3 selection",
+      "retrievedAt": "2026-10-16",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2018-04-selection-7"
+    },
+    {
+      "artifactSha256": "58b19fe1bf63537a7e5ec3b3683a4b94cf58bd0e2796f15632f5064717f18f04",
+      "attribution": "Project-authored bilingual labels and classifications; no empirical metadata or independent linguistic approval.",
+      "id": "recipeatlas-curation-m3d3",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-3 editorial labels",
+      "retrievedAt": "2026-10-16",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-6"
+    },
+    {
+      "artifactSha256": "c4d5a70c1823eb8fe7a40b1df6117feb71160a444c06b028569e5e6660e38eb4",
+      "attribution": "USDA Agricultural Research Service, FoodData Central, Foundation Foods April 2026; selected descriptors unchanged. Project selection version is distinct from upstream release.",
+      "id": "usda-foundation-m3d4",
+      "license": "CC0-1.0",
+      "name": "USDA Foundation Foods April 2026 — M3D-4 selection",
+      "retrievedAt": "2026-10-19",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "version": "2026-04-30-selection-1"
+    },
+    {
+      "artifactSha256": "3c1f81b6f23bcedad22d0d0d820cb3135041cdb0ebd9da8eda37fea54d59318e",
+      "attribution": "Wikidata contributors; selected structured entity labels and descriptions at pinned QID revisions. Project culinary classification and translations are separate.",
+      "id": "wikidata-m3d4",
+      "license": "CC0-1.0",
+      "name": "Wikidata selected ingredient entity revisions — M3D-4",
+      "retrievedAt": "2026-10-19",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "version": "entity-revisions-2026-10-19-1"
+    },
+    {
+      "artifactSha256": "631535c8e5949d9e1c1b5d8f3130b21d300253e526cd771f9be3d830e5c3fa43",
+      "attribution": "Project-authored bilingual culinary labels and classification; no empirical metadata or independent human linguistic approval.",
+      "id": "recipeatlas-curation-m3d4",
+      "license": "CC0-1.0",
+      "name": "Tarif Atlası M3D-4 editorial labels",
+      "retrievedAt": "2026-10-19",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "version": "production-7"
+    }
+  ],
+  "version": 10
+}

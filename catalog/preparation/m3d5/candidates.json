@@ -1,0 +1,1918 @@
+[
+  {
+    "candidateId": "m3d5-sr-167708",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Low-sodium tomato and vegetable juice",
+    "proposedTurkish": "Az sodyumlu domates-sebze suyu",
+    "reason": "Distinct mixed vegetable juice form with explicit sodium qualifier.",
+    "source": "sr",
+    "sourceDescription": "Tomato and vegetable juice, low sodium",
+    "sourceEvidence": {
+      "description": "Tomato and vegetable juice, low sodium",
+      "externalId": "167708"
+    },
+    "sourceIdentifier": "167708",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167708/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-167753",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Canned prune juice",
+    "proposedTurkish": "Konserve kuru erik suyu",
+    "reason": "Prune juice source form is distinct from prunes and other fruit juices.",
+    "source": "sr",
+    "sourceDescription": "Prune juice, canned",
+    "sourceEvidence": {
+      "description": "Prune juice, canned",
+      "externalId": "167753"
+    },
+    "sourceIdentifier": "167753",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167753/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-167792",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Orange-pineapple juice blend",
+    "proposedTurkish": "Portakal-ananas suyu karışımı",
+    "reason": "Source-described blend is distinct from either single-fruit juice.",
+    "source": "sr",
+    "sourceDescription": "Orange Pineapple Juice Blend",
+    "sourceEvidence": {
+      "description": "Orange Pineapple Juice Blend",
+      "externalId": "167792"
+    },
+    "sourceIdentifier": "167792",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167792/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-167807",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Tart cherry juice",
+    "proposedTurkish": "Vişne suyu",
+    "reason": "Unspecific tart-cherry juice differs from the existing shelf-stable concentrate-derived form.",
+    "source": "sr",
+    "sourceDescription": "Cherry juice, tart",
+    "sourceEvidence": {
+      "description": "Cherry juice, tart",
+      "externalId": "167807"
+    },
+    "sourceIdentifier": "167807",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167807/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-167953",
+    "categories": [
+      "syrups"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Fruit syrup",
+    "proposedTurkish": "Meyve şurubu",
+    "reason": "Generic fruit syrup is distinct from specific fruit syrups and plain sugar syrup.",
+    "source": "sr",
+    "sourceDescription": "Fruit syrup",
+    "sourceEvidence": {
+      "description": "Fruit syrup",
+      "externalId": "167953"
+    },
+    "sourceIdentifier": "167953",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167953/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-167957",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Fruit-flavored syrup may overlap generic fruit syrup; source does not establish distinct fruit content.",
+    "source": "sr",
+    "sourceDescription": "Syrup, fruit flavored",
+    "sourceEvidence": {
+      "description": "Syrup, fruit flavored",
+      "externalId": "167957"
+    },
+    "sourceIdentifier": "167957",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/167957/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-168123",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Low-calorie fortified cranberry-apple drink is more product-form variation than useful generic ingredient.",
+    "source": "sr",
+    "sourceDescription": "Beverages, cranberry-apple juice drink, low calorie, with vitamin C added",
+    "sourceEvidence": {
+      "description": "Beverages, cranberry-apple juice drink, low calorie, with vitamin C added",
+      "externalId": "168123"
+    },
+    "sourceIdentifier": "168123",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168123/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-168187",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Unsweetened canned pineapple juice",
+    "proposedTurkish": "Şekersiz ananas suyu (konserve)",
+    "reason": "Pineapple juice source form is distinct from whole pineapple.",
+    "source": "sr",
+    "sourceDescription": "Pineapple juice, canned or bottled, unsweetened, with added ascorbic acid",
+    "sourceEvidence": {
+      "description": "Pineapple juice, canned or bottled, unsweetened, with added ascorbic acid",
+      "externalId": "168187"
+    },
+    "sourceIdentifier": "168187",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168187/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-168188",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Frozen apple juice concentrate (unsweetened)",
+    "proposedTurkish": "Dondurulmuş elma suyu konsantresi (şekersiz)",
+    "reason": "Undiluted frozen concentrate is a distinct formulation from apple juice.",
+    "source": "sr",
+    "sourceDescription": "Apple juice, frozen concentrate, unsweetened, undiluted, with added ascorbic acid",
+    "sourceEvidence": {
+      "description": "Apple juice, frozen concentrate, unsweetened, undiluted, with added ascorbic acid",
+      "externalId": "168188"
+    },
+    "sourceIdentifier": "168188",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168188/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-168212",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Fortified cranberry juice blend has unclear fruit composition and weak culinary distinction.",
+    "source": "sr",
+    "sourceDescription": "Cranberry juice blend, 100% juice, bottled, with added vitamin C and calcium",
+    "sourceEvidence": {
+      "description": "Cranberry juice blend, 100% juice, bottled, with added vitamin C and calcium",
+      "externalId": "168212"
+    },
+    "sourceIdentifier": "168212",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168212/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-168217",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Raspberry juice concentrate",
+    "proposedTurkish": "Ahududu suyu konsantresi",
+    "reason": "Concentrated raspberry juice is distinct from fruit and ready-to-drink juice.",
+    "source": "sr",
+    "sourceDescription": "Raspberry juice concentrate",
+    "sourceEvidence": {
+      "description": "Raspberry juice concentrate",
+      "externalId": "168217"
+    },
+    "sourceIdentifier": "168217",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/168217/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-169070",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Cooking wine",
+    "proposedTurkish": "Yemeklik şarap",
+    "reason": "Source-specific cooking wine category differs from generic table wine.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, cooking",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, cooking",
+      "externalId": "169070"
+    },
+    "sourceIdentifier": "169070",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169070/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-169110",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Release 10 already contains this yellow passion-fruit juice identity.",
+    "source": "sr",
+    "sourceDescription": "Passion-fruit juice, yellow, raw",
+    "sourceEvidence": {
+      "description": "Passion-fruit juice, yellow, raw",
+      "externalId": "169110"
+    },
+    "sourceIdentifier": "169110",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169110/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-169925",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Release 10 already contains this tangerine juice identity.",
+    "source": "sr",
+    "sourceDescription": "Tangerine juice, raw",
+    "sourceEvidence": {
+      "description": "Tangerine juice, raw",
+      "externalId": "169925"
+    },
+    "sourceIdentifier": "169925",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169925/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-169993",
+    "categories": [
+      "coffee",
+      "vegetables"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Raw chicory root",
+    "proposedTurkish": "Çiğ hindiba kökü",
+    "reason": "Raw chicory root is a distinct coffee-alternative input.",
+    "source": "sr",
+    "sourceDescription": "Chicory roots, raw",
+    "sourceEvidence": {
+      "description": "Chicory roots, raw",
+      "externalId": "169993"
+    },
+    "sourceIdentifier": "169993",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/169993/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-171687",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Release 10 already contains this acerola juice identity.",
+    "source": "sr",
+    "sourceDescription": "Acerola juice, raw",
+    "sourceEvidence": {
+      "description": "Acerola juice, raw",
+      "externalId": "171687"
+    },
+    "sourceIdentifier": "171687",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171687/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-171871",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Release 10 already contains this root-beer soda identity.",
+    "source": "sr",
+    "sourceDescription": "Beverages, carbonated, root beer",
+    "sourceEvidence": {
+      "description": "Beverages, carbonated, root beer",
+      "externalId": "171871"
+    },
+    "sourceIdentifier": "171871",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171871/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-171882",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Clam-and-tomato mixture needs Turkish shellfish identity review before naming.",
+    "source": "sr",
+    "sourceDescription": "Beverages, Clam and tomato juice, canned",
+    "sourceEvidence": {
+      "description": "Beverages, Clam and tomato juice, canned",
+      "externalId": "171882"
+    },
+    "sourceIdentifier": "171882",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171882/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-171886",
+    "categories": [
+      "chocolate-cocoa",
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cocoa drink mix powder (no added sugar)",
+    "proposedTurkish": "Şekersiz kakao içeceği karışımı tozu",
+    "reason": "No-added-sugar dry mix is distinct from general sweetened cocoa mix.",
+    "source": "sr",
+    "sourceDescription": "Beverages, Cocoa mix, no sugar added, powder",
+    "sourceEvidence": {
+      "description": "Beverages, Cocoa mix, no sugar added, powder",
+      "externalId": "171886"
+    },
+    "sourceIdentifier": "171886",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171886/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-171925",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Merlot red wine",
+    "proposedTurkish": "Merlot kırmızı şarabı",
+    "reason": "Distinct source-described red wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic Beverage, wine, table, red, Merlot",
+    "sourceEvidence": {
+      "description": "Alcoholic Beverage, wine, table, red, Merlot",
+      "externalId": "171925"
+    },
+    "sourceIdentifier": "171925",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/171925/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-173176",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Dessert-wine terminology needs a natural Turkish label that preserves the source style.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, dessert, sweet",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, dessert, sweet",
+      "externalId": "173176"
+    },
+    "sourceIdentifier": "173176",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173176/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-173200",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Riesling white wine",
+    "proposedTurkish": "Riesling beyaz şarabı",
+    "reason": "Distinct source-described white wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Riesling",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Riesling",
+      "externalId": "173200"
+    },
+    "sourceIdentifier": "173200",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173200/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-173201",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Sauvignon Blanc white wine",
+    "proposedTurkish": "Sauvignon Blanc beyaz şarabı",
+    "reason": "Distinct source-described white wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Sauvignon Blanc",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Sauvignon Blanc",
+      "externalId": "173201"
+    },
+    "sourceIdentifier": "173201",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173201/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-173220",
+    "categories": [
+      "other-beverages",
+      "dairy"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Dairy-based malt drink mix powder",
+    "proposedTurkish": "Süt bazlı doğal malt içeceği tozu",
+    "reason": "Dry dairy-based malt mix, not prepared beverage.",
+    "source": "sr",
+    "sourceDescription": "Beverages, Malted drink mix, natural, powder, dairy based.",
+    "sourceEvidence": {
+      "description": "Beverages, Malted drink mix, natural, powder, dairy based.",
+      "externalId": "173220"
+    },
+    "sourceIdentifier": "173220",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173220/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-173666",
+    "categories": [
+      "juices",
+      "mixers"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Frozen pink lemonade concentrate",
+    "proposedTurkish": "Dondurulmuş pembe limonata konsantresi",
+    "reason": "Frozen concentrate is distinct from prepared lemonade.",
+    "source": "sr",
+    "sourceDescription": "Lemonade, frozen concentrate, pink",
+    "sourceEvidence": {
+      "description": "Lemonade, frozen concentrate, pink",
+      "externalId": "173666"
+    },
+    "sourceIdentifier": "173666",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/173666/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174110",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Chardonnay white wine",
+    "proposedTurkish": "Chardonnay beyaz şarabı",
+    "reason": "Distinct source-described white wine variety useful in cooking and drinks.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Chardonnay",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Chardonnay",
+      "externalId": "174110"
+    },
+    "sourceIdentifier": "174110",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174110/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174122",
+    "categories": [
+      "chocolate-cocoa",
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cocoa drink mix powder",
+    "proposedTurkish": "Kakao içeceği karışımı tozu",
+    "reason": "Dry beverage mix is distinct from cocoa powder and prepared drink.",
+    "source": "sr",
+    "sourceDescription": "Beverages, Cocoa mix, powder",
+    "sourceEvidence": {
+      "description": "Beverages, Cocoa mix, powder",
+      "externalId": "174122"
+    },
+    "sourceIdentifier": "174122",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174122/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174138",
+    "categories": [
+      "coffee"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cereal coffee substitute powder",
+    "proposedTurkish": "Tahıllı kahve alternatifi tozu",
+    "reason": "Dry cereal-based coffee substitute, not brewed coffee.",
+    "source": "sr",
+    "sourceDescription": "Beverages, coffee substitute, cereal grain beverage, powder",
+    "sourceEvidence": {
+      "description": "Beverages, coffee substitute, cereal grain beverage, powder",
+      "externalId": "174138"
+    },
+    "sourceIdentifier": "174138",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174138/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174811",
+    "categories": [
+      "mixers"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Bottled whiskey sour mix",
+    "proposedTurkish": "Şişelenmiş whiskey sour karışımı",
+    "reason": "Commercially prepared cocktail mixer, not a completed cocktail; alcohol status remains unknown.",
+    "source": "sr",
+    "sourceDescription": "Beverages, Whiskey sour mix, bottled",
+    "sourceEvidence": {
+      "description": "Beverages, Whiskey sour mix, bottled",
+      "externalId": "174811"
+    },
+    "sourceIdentifier": "174811",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174811/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174833",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Cabernet Sauvignon red wine",
+    "proposedTurkish": "Cabernet Sauvignon kırmızı şarabı",
+    "reason": "Distinct source-described red wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic Beverage, wine, table, red, Cabernet Sauvignon",
+    "sourceEvidence": {
+      "description": "Alcoholic Beverage, wine, table, red, Cabernet Sauvignon",
+      "externalId": "174833"
+    },
+    "sourceIdentifier": "174833",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174833/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174835",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Pinot Noir red wine",
+    "proposedTurkish": "Pinot Noir kırmızı şarabı",
+    "reason": "Distinct source-described red wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic Beverage, wine, table, red, Pinot Noir",
+    "sourceEvidence": {
+      "description": "Alcoholic Beverage, wine, table, red, Pinot Noir",
+      "externalId": "174835"
+    },
+    "sourceIdentifier": "174835",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174835/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174836",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Syrah red wine",
+    "proposedTurkish": "Syrah kırmızı şarabı",
+    "reason": "Distinct source-described red wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic Beverage, wine, table, red, Syrah",
+    "sourceEvidence": {
+      "description": "Alcoholic Beverage, wine, table, red, Syrah",
+      "externalId": "174836"
+    },
+    "sourceIdentifier": "174836",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174836/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174839",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Sangiovese red wine",
+    "proposedTurkish": "Sangiovese kırmızı şarabı",
+    "reason": "Distinct source-described red wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic Beverage, wine, table, red, Sangiovese",
+    "sourceEvidence": {
+      "description": "Alcoholic Beverage, wine, table, red, Sangiovese",
+      "externalId": "174839"
+    },
+    "sourceIdentifier": "174839",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174839/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174841",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Pinot Gris white wine",
+    "proposedTurkish": "Pinot Gris beyaz şarabı",
+    "reason": "Distinct source-described white wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Pinot Gris (Grigio)",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Pinot Gris (Grigio)",
+      "externalId": "174841"
+    },
+    "sourceIdentifier": "174841",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174841/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174843",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Gewürztraminer white wine",
+    "proposedTurkish": "Gewürztraminer beyaz şarabı",
+    "reason": "Distinct source-described white wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Gewurztraminer",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Gewurztraminer",
+      "externalId": "174843"
+    },
+    "sourceIdentifier": "174843",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174843/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174849",
+    "categories": [
+      "wines"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Muscat white wine",
+    "proposedTurkish": "Muscat beyaz şarabı",
+    "reason": "Distinct source-described white wine variety.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, table, white, Muscat",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, table, white, Muscat",
+      "externalId": "174849"
+    },
+    "sourceIdentifier": "174849",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174849/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174863",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Source groups malt beverage and non-alcoholic beer; cannot safely distinguish alcohol status.",
+    "source": "sr",
+    "sourceDescription": "Malt beverage, includes non-alcoholic beer",
+    "sourceEvidence": {
+      "description": "Malt beverage, includes non-alcoholic beer",
+      "externalId": "174863"
+    },
+    "sourceIdentifier": "174863",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174863/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-174866",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Release 10 already contains this dry chocolate malt beverage mix.",
+    "source": "sr",
+    "sourceDescription": "Beverages, malted drink mix, chocolate, powder",
+    "sourceEvidence": {
+      "description": "Beverages, malted drink mix, chocolate, powder",
+      "externalId": "174866"
+    },
+    "sourceIdentifier": "174866",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/174866/nutrients"
+  },
+  {
+    "candidateId": "m3d5-sr-175112",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Dry dessert-wine category is unusual and needs product identity review before naming.",
+    "source": "sr",
+    "sourceDescription": "Alcoholic beverage, wine, dessert, dry",
+    "sourceEvidence": {
+      "description": "Alcoholic beverage, wine, dessert, dry",
+      "externalId": "175112"
+    },
+    "sourceIdentifier": "175112",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://fdc.nal.usda.gov/food-details/175112/nutrients"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q104218426",
+    "categories": [
+      "coffee"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Arabica coffee bean",
+    "proposedTurkish": "Arabica kahve çekirdeği",
+    "reason": "Pinned entity is Coffea arabica seed, distinct from prepared coffee.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"seed from Coffea arabica\",\"tr\":null},\"labels\":{\"en\":\"arabica coffee bean\",\"tr\":null},\"qid\":\"Q104218426\",\"revision\":2553202629}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"seed from Coffea arabica\",\"tr\":null},\"labels\":{\"en\":\"arabica coffee bean\",\"tr\":null},\"qid\":\"Q104218426\",\"revision\":2553202629}",
+      "externalId": "Q104218426"
+    },
+    "sourceIdentifier": "Q104218426",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q104218426.json?revision=2553202629"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q104246054",
+    "categories": [
+      "coffee"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Robusta coffee bean",
+    "proposedTurkish": "Robusta kahve çekirdeği",
+    "reason": "Pinned entity is Coffea canephora seed, distinct from arabica.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"seed from Coffea robusta\",\"tr\":null},\"labels\":{\"en\":\"robusta coffee bean\",\"tr\":null},\"qid\":\"Q104246054\",\"revision\":2298829264}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"seed from Coffea robusta\",\"tr\":null},\"labels\":{\"en\":\"robusta coffee bean\",\"tr\":null},\"qid\":\"Q104246054\",\"revision\":2298829264}",
+      "externalId": "Q104246054"
+    },
+    "sourceIdentifier": "Q104246054",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q104246054.json?revision=2298829264"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q104704742",
+    "categories": [
+      "garnishes"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Grapefruit peel",
+    "proposedTurkish": "Greyfurt kabuğu",
+    "reason": "Grapefruit peel differs from existing orange peel and grapefruit juice.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"peel from the fruit of Citrus × paradisi\",\"tr\":null},\"labels\":{\"en\":\"grapefruit peel\",\"tr\":null},\"qid\":\"Q104704742\",\"revision\":2072868836}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"peel from the fruit of Citrus × paradisi\",\"tr\":null},\"labels\":{\"en\":\"grapefruit peel\",\"tr\":null},\"qid\":\"Q104704742\",\"revision\":2072868836}",
+      "externalId": "Q104704742"
+    },
+    "sourceIdentifier": "Q104704742",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q104704742.json?revision=2072868836"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q1078150",
+    "categories": [
+      "garnishes"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Maraschino cherry",
+    "proposedTurkish": "Maraschino kirazı",
+    "reason": "Preserved sweetened cherry is a garnish, distinct from maraschino liqueur.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"preserved, sweetened cherry\",\"tr\":null},\"labels\":{\"en\":\"maraschino cherry\",\"tr\":\"maraska kirazı\"},\"qid\":\"Q1078150\",\"revision\":2552859385}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"preserved, sweetened cherry\",\"tr\":null},\"labels\":{\"en\":\"maraschino cherry\",\"tr\":\"maraska kirazı\"},\"qid\":\"Q1078150\",\"revision\":2552859385}",
+      "externalId": "Q1078150"
+    },
+    "sourceIdentifier": "Q1078150",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1078150.json?revision=2552859385"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q1139302",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Coconut cream already exists in Release 10.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"thick coconut milk used as ingredient\",\"tr\":null},\"labels\":{\"en\":\"coconut cream\",\"tr\":null},\"qid\":\"Q1139302\",\"revision\":2557691597}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"thick coconut milk used as ingredient\",\"tr\":null},\"labels\":{\"en\":\"coconut cream\",\"tr\":null},\"qid\":\"Q1139302\",\"revision\":2557691597}",
+      "externalId": "Q1139302"
+    },
+    "sourceIdentifier": "Q1139302",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1139302.json?revision=2557691597"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q12324500",
+    "categories": [
+      "syrups",
+      "mixers"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Lime cordial",
+    "proposedTurkish": "Lime cordial şurubu",
+    "reason": "Concentrated lime-and-sugar cordial differs from lime juice.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"mixture of concentrated lime and sugar, sometimes used for cocktails\",\"tr\":null},\"labels\":{\"en\":\"lime cordial\",\"tr\":null},\"qid\":\"Q12324500\",\"revision\":2105475208}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"mixture of concentrated lime and sugar, sometimes used for cocktails\",\"tr\":null},\"labels\":{\"en\":\"lime cordial\",\"tr\":null},\"qid\":\"Q12324500\",\"revision\":2105475208}",
+      "externalId": "Q12324500"
+    },
+    "sourceIdentifier": "Q12324500",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q12324500.json?revision=2105475208"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q12424061",
+    "categories": [
+      "syrups"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Rose syrup",
+    "proposedTurkish": "Gül şurubu",
+    "reason": "Rose-flavored sugar syrup differs from rose water.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"sugar syrup flavoured with rose\",\"tr\":null},\"labels\":{\"en\":\"rose syrup\",\"tr\":null},\"qid\":\"Q12424061\",\"revision\":2499509859}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"sugar syrup flavoured with rose\",\"tr\":null},\"labels\":{\"en\":\"rose syrup\",\"tr\":null},\"qid\":\"Q12424061\",\"revision\":2499509859}",
+      "externalId": "Q12424061"
+    },
+    "sourceIdentifier": "Q12424061",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q12424061.json?revision=2499509859"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q134967538",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity lacks English label; cocktail-ingredient description alone does not verify vanilla syrup identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"ingredient for cocktails\",\"tr\":null},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q134967538\",\"revision\":2362747775}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"ingredient for cocktails\",\"tr\":null},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q134967538\",\"revision\":2362747775}",
+      "externalId": "Q134967538"
+    },
+    "sourceIdentifier": "Q134967538",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q134967538.json?revision=2362747775"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q134967545",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity lacks an English label; cocktail-ingredient description alone does not verify ginger syrup identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"ingredient for cocktails\",\"tr\":null},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q134967545\",\"revision\":2362747810}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"ingredient for cocktails\",\"tr\":null},\"labels\":{\"en\":null,\"tr\":null},\"qid\":\"Q134967545\",\"revision\":2362747810}",
+      "externalId": "Q134967545"
+    },
+    "sourceIdentifier": "Q134967545",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q134967545.json?revision=2362747810"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q1377087",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Simple sugar syrup already exists in Release 10.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"syrup made from sugar and water only\",\"tr\":null},\"labels\":{\"en\":\"sugar syrup\",\"tr\":null},\"qid\":\"Q1377087\",\"revision\":2518519654}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"syrup made from sugar and water only\",\"tr\":null},\"labels\":{\"en\":\"sugar syrup\",\"tr\":null},\"qid\":\"Q1377087\",\"revision\":2518519654}",
+      "externalId": "Q1377087"
+    },
+    "sourceIdentifier": "Q1377087",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1377087.json?revision=2518519654"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q138542182",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Soursop juice",
+    "proposedTurkish": "Graviola suyu",
+    "reason": "Pressed soursop juice differs from whole fruit.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"natural juice extracted from soursop pulp\",\"tr\":null},\"labels\":{\"en\":\"soursop juice\",\"tr\":null},\"qid\":\"Q138542182\",\"revision\":2472301536}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"natural juice extracted from soursop pulp\",\"tr\":null},\"labels\":{\"en\":\"soursop juice\",\"tr\":null},\"qid\":\"Q138542182\",\"revision\":2472301536}",
+      "externalId": "Q138542182"
+    },
+    "sourceIdentifier": "Q138542182",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q138542182.json?revision=2472301536"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q139500622",
+    "categories": [
+      "infusions",
+      "herbs"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Pandan leaf",
+    "proposedTurkish": "Pandan yaprağı",
+    "reason": "Aromatic pandan leaf is an infusion input; not a pandan-flavored drink.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"leaf of the pandan plant, Pandanus amaryllifolius\",\"tr\":null},\"labels\":{\"en\":\"pandan leaf\",\"tr\":null},\"qid\":\"Q139500622\",\"revision\":2499725578}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"leaf of the pandan plant, Pandanus amaryllifolius\",\"tr\":null},\"labels\":{\"en\":\"pandan leaf\",\"tr\":null},\"qid\":\"Q139500622\",\"revision\":2499725578}",
+      "externalId": "Q139500622"
+    },
+    "sourceIdentifier": "Q139500622",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q139500622.json?revision=2499725578"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q140136320",
+    "categories": [
+      "juices",
+      "mixers"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Tamarind concentrate",
+    "proposedTurkish": "Demirhindi konsantresi",
+    "reason": "Concentrate differs from existing diluted tamarind paste and nectar.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Concentrated tamarind product produced from tamarind pulp\",\"tr\":null},\"labels\":{\"en\":\"Tamarind Concentrate\",\"tr\":null},\"qid\":\"Q140136320\",\"revision\":2503675331}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Concentrated tamarind product produced from tamarind pulp\",\"tr\":null},\"labels\":{\"en\":\"Tamarind Concentrate\",\"tr\":null},\"qid\":\"Q140136320\",\"revision\":2503675331}",
+      "externalId": "Q140136320"
+    },
+    "sourceIdentifier": "Q140136320",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q140136320.json?revision=2503675331"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q140606571",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Multiple chamomile species share this flower label; exact infusion ingredient identity is unclear.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"flowers of several daisy-like plants referred to as chamomile, especially Matricaria chamomilla and Chamaemelum nobile\",\"tr\":null},\"labels\":{\"en\":\"chamomile flowers\",\"tr\":null},\"qid\":\"Q140606571\",\"revision\":2519135459}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"flowers of several daisy-like plants referred to as chamomile, especially Matricaria chamomilla and Chamaemelum nobile\",\"tr\":null},\"labels\":{\"en\":\"chamomile flowers\",\"tr\":null},\"qid\":\"Q140606571\",\"revision\":2519135459}",
+      "externalId": "Q140606571"
+    },
+    "sourceIdentifier": "Q140606571",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q140606571.json?revision=2519135459"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q1448819",
+    "categories": [
+      "mixers",
+      "soft-drinks"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Ginger beer",
+    "proposedTurkish": "Zencefil birası (ginger beer)",
+    "reason": "Ginger beer mixer differs from existing ginger ale; alcohol content is not inferred.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"carbonated beverage\",\"tr\":null},\"labels\":{\"en\":\"ginger beer\",\"tr\":\"zencefil birası\"},\"qid\":\"Q1448819\",\"revision\":2547938869}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"carbonated beverage\",\"tr\":null},\"labels\":{\"en\":\"ginger beer\",\"tr\":\"zencefil birası\"},\"qid\":\"Q1448819\",\"revision\":2547938869}",
+      "externalId": "Q1448819"
+    },
+    "sourceIdentifier": "Q1448819",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1448819.json?revision=2547938869"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q1721046",
+    "categories": [
+      "coffee"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Ground coffee",
+    "proposedTurkish": "Öğütülmüş kahve",
+    "reason": "Ground beans are distinct from whole beans and brewed coffee.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"coffee beans ground into grit or powder for ease of brewing\",\"tr\":null},\"labels\":{\"en\":\"ground coffee\",\"tr\":null},\"qid\":\"Q1721046\",\"revision\":2554951949}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"coffee beans ground into grit or powder for ease of brewing\",\"tr\":null},\"labels\":{\"en\":\"ground coffee\",\"tr\":null},\"qid\":\"Q1721046\",\"revision\":2554951949}",
+      "externalId": "Q1721046"
+    },
+    "sourceIdentifier": "Q1721046",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1721046.json?revision=2554951949"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q192892",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity description oddly includes vodka; unsuitable to source a safe ayran identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"drink made from yoghurt with soda water and salt, and sometimes also vodka\",\"tr\":\"ana malzemesi yoğurt ve su olan geleneksel içecek\"},\"labels\":{\"en\":\"ayran\",\"tr\":\"ayran\"},\"qid\":\"Q192892\",\"revision\":2503035945}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"drink made from yoghurt with soda water and salt, and sometimes also vodka\",\"tr\":\"ana malzemesi yoğurt ve su olan geleneksel içecek\"},\"labels\":{\"en\":\"ayran\",\"tr\":\"ayran\"},\"qid\":\"Q192892\",\"revision\":2503035945}",
+      "externalId": "Q192892"
+    },
+    "sourceIdentifier": "Q192892",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q192892.json?revision=2503035945"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q238306",
+    "categories": [
+      "tea"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "White tea",
+    "proposedTurkish": "Beyaz çay",
+    "reason": "Minimally processed tea style; measured as tea input, not prepared drink.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant\",\"tr\":null},\"labels\":{\"en\":\"white tea\",\"tr\":\"Beyaz Çay\"},\"qid\":\"Q238306\",\"revision\":2515855379}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant\",\"tr\":null},\"labels\":{\"en\":\"white tea\",\"tr\":\"Beyaz Çay\"},\"qid\":\"Q238306\",\"revision\":2515855379}",
+      "externalId": "Q238306"
+    },
+    "sourceIdentifier": "Q238306",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q238306.json?revision=2515855379"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q26877308",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity has no English description; red-versus-sweet vermouth identity needs stronger evidence.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"red vermouth\",\"tr\":null},\"qid\":\"Q26877308\",\"revision\":2519003230}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"red vermouth\",\"tr\":null},\"qid\":\"Q26877308\",\"revision\":2519003230}",
+      "externalId": "Q26877308"
+    },
+    "sourceIdentifier": "Q26877308",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q26877308.json?revision=2519003230"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q26877423",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity has no English description; dry vermouth identity needs stronger evidence.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"dry vermouth\",\"tr\":\"sek vermut\"},\"qid\":\"Q26877423\",\"revision\":2467741375}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"dry vermouth\",\"tr\":\"sek vermut\"},\"qid\":\"Q26877423\",\"revision\":2467741375}",
+      "externalId": "Q26877423"
+    },
+    "sourceIdentifier": "Q26877423",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q26877423.json?revision=2467741375"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q27670710",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity lacks description; cannot verify passion-fruit syrup form from this revision alone.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"passion fruit syrup\",\"tr\":null},\"qid\":\"Q27670710\",\"revision\":2259953113}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":null,\"tr\":null},\"labels\":{\"en\":\"passion fruit syrup\",\"tr\":null},\"qid\":\"Q27670710\",\"revision\":2259953113}",
+      "externalId": "Q27670710"
+    },
+    "sourceIdentifier": "Q27670710",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q27670710.json?revision=2259953113"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q28208975",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Entity describes prepared butterfly pea tea rather than the dry flower ingredient sought.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"herbal tea\",\"tr\":null},\"labels\":{\"en\":\"butterfly pea flower tea\",\"tr\":null},\"qid\":\"Q28208975\",\"revision\":2457296121}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"herbal tea\",\"tr\":null},\"labels\":{\"en\":\"butterfly pea flower tea\",\"tr\":null},\"qid\":\"Q28208975\",\"revision\":2457296121}",
+      "externalId": "Q28208975"
+    },
+    "sourceIdentifier": "Q28208975",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q28208975.json?revision=2457296121"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q2916133",
+    "categories": [
+      "syrups",
+      "sweeteners"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Date syrup",
+    "proposedTurkish": "Hurma şurubu",
+    "reason": "Syrup extracted from dates differs from whole dates and generic molasses.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"syrup extracted from dates\",\"tr\":null},\"labels\":{\"en\":\"date honey\",\"tr\":null},\"qid\":\"Q2916133\",\"revision\":2545657337}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"syrup extracted from dates\",\"tr\":null},\"labels\":{\"en\":\"date honey\",\"tr\":null},\"qid\":\"Q2916133\",\"revision\":2545657337}",
+      "externalId": "Q2916133"
+    },
+    "sourceIdentifier": "Q2916133",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q2916133.json?revision=2545657337"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q3485291",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "DEFER",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Barley malt syrup may overlap existing generic malt syrup; source offers insufficient distinction.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"food additive\",\"tr\":null},\"labels\":{\"en\":\"barley malt syrup\",\"tr\":null},\"qid\":\"Q3485291\",\"revision\":2456084613}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"food additive\",\"tr\":null},\"labels\":{\"en\":\"barley malt syrup\",\"tr\":null},\"qid\":\"Q3485291\",\"revision\":2456084613}",
+      "externalId": "Q3485291"
+    },
+    "sourceIdentifier": "Q3485291",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3485291.json?revision=2456084613"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q3539556",
+    "categories": [
+      "liqueurs"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Triple sec orange liqueur",
+    "proposedTurkish": "Triple sec portakal likörü",
+    "reason": "Generic orange-liqueur type distinct from existing liqueurs; no brand or ABV claim.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"variety of orange liqueur\",\"tr\":null},\"labels\":{\"en\":\"triple sec\",\"tr\":\"Triple sec\"},\"qid\":\"Q3539556\",\"revision\":2541565598}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"variety of orange liqueur\",\"tr\":null},\"labels\":{\"en\":\"triple sec\",\"tr\":\"Triple sec\"},\"qid\":\"Q3539556\",\"revision\":2541565598}",
+      "externalId": "Q3539556"
+    },
+    "sourceIdentifier": "Q3539556",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3539556.json?revision=2541565598"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q392001",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Agave syrup already exists in Release 10.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"sweetener\",\"tr\":null},\"labels\":{\"en\":\"agave syrup\",\"tr\":\"Agave şurubu\"},\"qid\":\"Q392001\",\"revision\":2498565958}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"sweetener\",\"tr\":null},\"labels\":{\"en\":\"agave syrup\",\"tr\":\"Agave şurubu\"},\"qid\":\"Q392001\",\"revision\":2498565958}",
+      "externalId": "Q392001"
+    },
+    "sourceIdentifier": "Q392001",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q392001.json?revision=2498565958"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q5139704",
+    "categories": [
+      "garnishes"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Cocktail onion",
+    "proposedTurkish": "Kokteyl soğanı",
+    "reason": "Brined pearl onion garnish distinct from fresh onion.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"pearl onion pickled in a brine\",\"tr\":null},\"labels\":{\"en\":\"cocktail onion\",\"tr\":null},\"qid\":\"Q5139704\",\"revision\":2491875560}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"pearl onion pickled in a brine\",\"tr\":null},\"labels\":{\"en\":\"cocktail onion\",\"tr\":null},\"qid\":\"Q5139704\",\"revision\":2491875560}",
+      "externalId": "Q5139704"
+    },
+    "sourceIdentifier": "Q5139704",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q5139704.json?revision=2491875560"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q5140965",
+    "categories": [
+      "syrups",
+      "coffee"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Coffee syrup",
+    "proposedTurkish": "Kahve şurubu",
+    "reason": "Sweetened coffee concentrate differs from brewed coffee.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"sweetened coffee concentrate\",\"tr\":null},\"labels\":{\"en\":\"coffee syrup\",\"tr\":null},\"qid\":\"Q5140965\",\"revision\":1772701455}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"sweetened coffee concentrate\",\"tr\":null},\"labels\":{\"en\":\"coffee syrup\",\"tr\":null},\"qid\":\"Q5140965\",\"revision\":1772701455}",
+      "externalId": "Q5140965"
+    },
+    "sourceIdentifier": "Q5140965",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q5140965.json?revision=1772701455"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q519365",
+    "categories": [
+      "tea"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Genmaicha tea",
+    "proposedTurkish": "Genmaicha çayı",
+    "reason": "Green tea and brown-rice blend is distinct from plain green tea.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Japanese green tea mixed with brown rice\",\"tr\":null},\"labels\":{\"en\":\"genmaicha\",\"tr\":\"Genmaicha\"},\"qid\":\"Q519365\",\"revision\":2528538641}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Japanese green tea mixed with brown rice\",\"tr\":null},\"labels\":{\"en\":\"genmaicha\",\"tr\":\"Genmaicha\"},\"qid\":\"Q519365\",\"revision\":2528538641}",
+      "externalId": "Q519365"
+    },
+    "sourceIdentifier": "Q519365",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q519365.json?revision=2528538641"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q5431859",
+    "categories": [
+      "syrups"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Falernum syrup",
+    "proposedTurkish": "Falernum şurubu",
+    "reason": "Pinned entity describes Caribbean drink syrup; alcohol status remains unknown.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"Caribbean syrup used in drinks\",\"tr\":null},\"labels\":{\"en\":\"Falernum\",\"tr\":\"Falernum\"},\"qid\":\"Q5431859\",\"revision\":2345004393}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"Caribbean syrup used in drinks\",\"tr\":null},\"labels\":{\"en\":\"Falernum\",\"tr\":\"Falernum\"},\"qid\":\"Q5431859\",\"revision\":2345004393}",
+      "externalId": "Q5431859"
+    },
+    "sourceIdentifier": "Q5431859",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q5431859.json?revision=2345004393"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q548940",
+    "categories": [
+      "liqueurs"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Anisette anise liqueur",
+    "proposedTurkish": "Anisette anason likörü",
+    "reason": "Anise-flavored liqueur type distinct from sambuca.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"anise-flavored liqueur\",\"tr\":null},\"labels\":{\"en\":\"anisette\",\"tr\":\"Anisette\"},\"qid\":\"Q548940\",\"revision\":2544828344}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"anise-flavored liqueur\",\"tr\":null},\"labels\":{\"en\":\"anisette\",\"tr\":\"Anisette\"},\"qid\":\"Q548940\",\"revision\":2544828344}",
+      "externalId": "Q548940"
+    },
+    "sourceIdentifier": "Q548940",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q548940.json?revision=2544828344"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q56342268",
+    "categories": [
+      "infusions"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Brewed rooibos",
+    "proposedTurkish": "Demlenmiş rooibos",
+    "reason": "Pinned entity is prepared rooibos infusion; do not mislabel as dry leaf.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"drink made from infusing water with rooibos (Aspalathus linearis) leaves\",\"tr\":null},\"labels\":{\"en\":\"rooibos\",\"tr\":null},\"qid\":\"Q56342268\",\"revision\":2519059514}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"drink made from infusing water with rooibos (Aspalathus linearis) leaves\",\"tr\":null},\"labels\":{\"en\":\"rooibos\",\"tr\":null},\"qid\":\"Q56342268\",\"revision\":2519059514}",
+      "externalId": "Q56342268"
+    },
+    "sourceIdentifier": "Q56342268",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q56342268.json?revision=2519059514"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q60855",
+    "categories": [
+      "tea"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Jasmine tea",
+    "proposedTurkish": "Yasemin çayı",
+    "reason": "Jasmine-scented tea is a distinct tea preparation input.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"tea scented with jasmine blossoms customary to China\",\"tr\":\"Çin'e özgü yasemin çiçeği aromalı çay\"},\"labels\":{\"en\":\"jasmine tea\",\"tr\":\"yasemin çayı\"},\"qid\":\"Q60855\",\"revision\":2517100551}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"tea scented with jasmine blossoms customary to China\",\"tr\":\"Çin'e özgü yasemin çiçeği aromalı çay\"},\"labels\":{\"en\":\"jasmine tea\",\"tr\":\"yasemin çayı\"},\"qid\":\"Q60855\",\"revision\":2517100551}",
+      "externalId": "Q60855"
+    },
+    "sourceIdentifier": "Q60855",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q60855.json?revision=2517100551"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q633401",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Coconut water already exists in Release 10.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"clear liquid inside young coconuts\",\"tr\":\"hindistan cevizinin içindeki berrak sıvı\"},\"labels\":{\"en\":\"coconut water\",\"tr\":\"hindistan cevizi suyu\"},\"qid\":\"Q633401\",\"revision\":2485411841}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"clear liquid inside young coconuts\",\"tr\":\"hindistan cevizinin içindeki berrak sıvı\"},\"labels\":{\"en\":\"coconut water\",\"tr\":\"hindistan cevizi suyu\"},\"qid\":\"Q633401\",\"revision\":2485411841}",
+      "externalId": "Q633401"
+    },
+    "sourceIdentifier": "Q633401",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q633401.json?revision=2485411841"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q654895",
+    "categories": [
+      "bitters"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Orange cocktail bitters",
+    "proposedTurkish": "Portakal kokteyl bitteri",
+    "reason": "Orange bitters are distinct from existing aromatic bitters; ABV remains unknown.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"cocktail flavoring\",\"tr\":null},\"labels\":{\"en\":\"orange bitters\",\"tr\":null},\"qid\":\"Q654895\",\"revision\":2480702257}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"cocktail flavoring\",\"tr\":null},\"labels\":{\"en\":\"orange bitters\",\"tr\":null},\"qid\":\"Q654895\",\"revision\":2480702257}",
+      "externalId": "Q654895"
+    },
+    "sourceIdentifier": "Q654895",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q654895.json?revision=2480702257"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q67778134",
+    "categories": [
+      "infusions",
+      "garnishes"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Elderflower",
+    "proposedTurkish": "Mürver çiçeği",
+    "reason": "Edible elderflower used in infusions and garnish; not elderflower cordial.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"edible flower of Sambucus nigra\",\"tr\":null},\"labels\":{\"en\":\"elderflower\",\"tr\":null},\"qid\":\"Q67778134\",\"revision\":2488966625}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"edible flower of Sambucus nigra\",\"tr\":null},\"labels\":{\"en\":\"elderflower\",\"tr\":null},\"qid\":\"Q67778134\",\"revision\":2488966625}",
+      "externalId": "Q67778134"
+    },
+    "sourceIdentifier": "Q67778134",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q67778134.json?revision=2488966625"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q67890691",
+    "categories": [
+      "syrups"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Coconut syrup",
+    "proposedTurkish": "Hindistan cevizi şurubu",
+    "reason": "Coconut syrup differs from coconut cream and coconut water.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"syrup made of coconuts\",\"tr\":null},\"labels\":{\"en\":\"coconut syrup\",\"tr\":null},\"qid\":\"Q67890691\",\"revision\":1342639707}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"syrup made of coconuts\",\"tr\":null},\"labels\":{\"en\":\"coconut syrup\",\"tr\":null},\"qid\":\"Q67890691\",\"revision\":1342639707}",
+      "externalId": "Q67890691"
+    },
+    "sourceIdentifier": "Q67890691",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q67890691.json?revision=1342639707"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q690098",
+    "categories": [
+      "tea"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Pu-erh tea",
+    "proposedTurkish": "Pu-erh çayı",
+    "reason": "Fermented tea style distinct from green and black tea.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"variety of fermented tea produced in the Yunnan province of China\",\"tr\":null},\"labels\":{\"en\":\"pu'er\",\"tr\":\"Pu-erh çayı\"},\"qid\":\"Q690098\",\"revision\":2540411259}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"variety of fermented tea produced in the Yunnan province of China\",\"tr\":null},\"labels\":{\"en\":\"pu'er\",\"tr\":\"Pu-erh çayı\"},\"qid\":\"Q690098\",\"revision\":2540411259}",
+      "externalId": "Q690098"
+    },
+    "sourceIdentifier": "Q690098",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q690098.json?revision=2540411259"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q693187",
+    "categories": [
+      "traditional-drinks",
+      "turkish-regional"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Salep flour",
+    "proposedTurkish": "Salep unu",
+    "reason": "Pinned entity describes flour from orchid tubers; distinct from the prepared salep drink.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"flour made from the tubers of the orchid genus Orchis\",\"tr\":null},\"labels\":{\"en\":\"salep\",\"tr\":\"salep\"},\"qid\":\"Q693187\",\"revision\":2555119039}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"flour made from the tubers of the orchid genus Orchis\",\"tr\":null},\"labels\":{\"en\":\"salep\",\"tr\":\"salep\"},\"qid\":\"Q693187\",\"revision\":2555119039}",
+      "externalId": "Q693187"
+    },
+    "sourceIdentifier": "Q693187",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q693187.json?revision=2555119039"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q718680",
+    "categories": [
+      "juices"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Sugarcane juice",
+    "proposedTurkish": "Şeker kamışı suyu",
+    "reason": "Pressed cane juice differs from cane syrup and sugar.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"liquid extracted from sugarcane\",\"tr\":null},\"labels\":{\"en\":\"sugarcane juice\",\"tr\":null},\"qid\":\"Q718680\",\"revision\":2557409707}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"liquid extracted from sugarcane\",\"tr\":null},\"labels\":{\"en\":\"sugarcane juice\",\"tr\":null},\"qid\":\"Q718680\",\"revision\":2557409707}",
+      "externalId": "Q718680"
+    },
+    "sourceIdentifier": "Q718680",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q718680.json?revision=2557409707"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q744729",
+    "categories": [
+      "spirits"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Cachaça",
+    "proposedTurkish": "Cachaça",
+    "reason": "Distilled sugarcane spirit identity; no origin certification or ABV claim.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"distilled alcoholic beverage\",\"tr\":null},\"labels\":{\"en\":\"cachaça\",\"tr\":\"Kaşasa\"},\"qid\":\"Q744729\",\"revision\":2527915221}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"distilled alcoholic beverage\",\"tr\":null},\"labels\":{\"en\":\"cachaça\",\"tr\":\"Kaşasa\"},\"qid\":\"Q744729\",\"revision\":2527915221}",
+      "externalId": "Q744729"
+    },
+    "sourceIdentifier": "Q744729",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q744729.json?revision=2527915221"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q822331",
+    "categories": [
+      "tea"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Matcha powder",
+    "proposedTurkish": "Matcha tozu",
+    "reason": "Finely powdered green tea is a distinct culinary form.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"finely powdered green tea\",\"tr\":\"özel olarak yetiştirilen ve işlenen öğütülmüş bir yeşil çay tozu\"},\"labels\":{\"en\":\"matcha\",\"tr\":\"maça çayı\"},\"qid\":\"Q822331\",\"revision\":2555390591}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"finely powdered green tea\",\"tr\":\"özel olarak yetiştirilen ve işlenen öğütülmüş bir yeşil çay tozu\"},\"labels\":{\"en\":\"matcha\",\"tr\":\"maça çayı\"},\"qid\":\"Q822331\",\"revision\":2555390591}",
+      "externalId": "Q822331"
+    },
+    "sourceIdentifier": "Q822331",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q822331.json?revision=2555390591"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q900450",
+    "categories": [
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Rose water",
+    "proposedTurkish": "Gül suyu",
+    "reason": "Distilled rose-petal water differs from rose syrup.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"flavoured water made by distilling rose petals with water\",\"tr\":\"gül yapraklarından yapılan ıtırlı sıvı\"},\"labels\":{\"en\":\"rose water\",\"tr\":\"gülsuyu\"},\"qid\":\"Q900450\",\"revision\":2557908370}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"flavoured water made by distilling rose petals with water\",\"tr\":\"gül yapraklarından yapılan ıtırlı sıvı\"},\"labels\":{\"en\":\"rose water\",\"tr\":\"gülsuyu\"},\"qid\":\"Q900450\",\"revision\":2557908370}",
+      "externalId": "Q900450"
+    },
+    "sourceIdentifier": "Q900450",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q900450.json?revision=2557908370"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q902582",
+    "categories": [
+      "other-beverages"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "mL",
+    "proposedEnglish": "Orange blossom water",
+    "proposedTurkish": "Portakal çiçeği suyu",
+    "reason": "Distilled bitter-orange blossom water differs from citrus juice.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"clear, perfumed distillation of fresh bitter-orange blossoms\",\"tr\":null},\"labels\":{\"en\":\"orange flower water\",\"tr\":null},\"qid\":\"Q902582\",\"revision\":2340260293}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"clear, perfumed distillation of fresh bitter-orange blossoms\",\"tr\":null},\"labels\":{\"en\":\"orange flower water\",\"tr\":null},\"qid\":\"Q902582\",\"revision\":2340260293}",
+      "externalId": "Q902582"
+    },
+    "sourceIdentifier": "Q902582",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q902582.json?revision=2340260293"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q96098098",
+    "categories": [
+      "infusions"
+    ],
+    "collisionSignals": [],
+    "decision": "ACCEPT",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": "g",
+    "proposedEnglish": "Yerba mate leaf",
+    "proposedTurkish": "Yerba mate yaprağı",
+    "reason": "Pinned entity describes leaf for infusion, not brewed mate.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"leaf of the yerba mate plant used to prepare infusions\",\"tr\":null},\"labels\":{\"en\":\"yerba mate leaf\",\"tr\":null},\"qid\":\"Q96098098\",\"revision\":2559474474}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"leaf of the yerba mate plant used to prepare infusions\",\"tr\":null},\"labels\":{\"en\":\"yerba mate leaf\",\"tr\":null},\"qid\":\"Q96098098\",\"revision\":2559474474}",
+      "externalId": "Q96098098"
+    },
+    "sourceIdentifier": "Q96098098",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q96098098.json?revision=2559474474"
+  },
+  {
+    "candidateId": "m3d5-wikidata-Q96240608",
+    "categories": [],
+    "collisionSignals": [],
+    "decision": "EXISTING",
+    "humanLinguisticApproval": false,
+    "observations": [],
+    "preferredUnit": null,
+    "proposedEnglish": null,
+    "proposedTurkish": null,
+    "reason": "Raw chicory root is represented by accepted USDA FDC 169993; avoid duplicate identity.",
+    "source": "wikidata",
+    "sourceDescription": "{\"descriptions\":{\"en\":\"edible root of Cichorium intybus, with medicinal and culinary uses\",\"tr\":null},\"labels\":{\"en\":\"chicory root\",\"tr\":null},\"qid\":\"Q96240608\",\"revision\":2484693720}",
+    "sourceEvidence": {
+      "description": "{\"descriptions\":{\"en\":\"edible root of Cichorium intybus, with medicinal and culinary uses\",\"tr\":null},\"labels\":{\"en\":\"chicory root\",\"tr\":null},\"qid\":\"Q96240608\",\"revision\":2484693720}",
+      "externalId": "Q96240608"
+    },
+    "sourceIdentifier": "Q96240608",
+    "sourceLicense": "CC0-1.0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q96240608.json?revision=2484693720"
+  }
+]

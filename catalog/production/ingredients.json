@@ -3583,6 +3583,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Low-sodium tomato and vegetable juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "4420d62e-9df5-88eb-a908-978a51f8fa92",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167708",
+      "names": {
+        "en": "Low-sodium tomato and vegetable juice",
+        "tr": "Az sodyumlu domates-sebze suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Tomato and vegetable juice, low sodium",
+          "externalId": "167708",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Low-sodium tomato and vegetable juice\",\"preferredUnit\":\"mL\",\"tr\":\"Az sodyumlu domates-sebze suyu\"}",
+          "externalId": "usda-sr-167708",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Hearts of palm, raw",
       "categories": [
         "vegetables"
@@ -3896,6 +3930,40 @@
           "externalId": "usda-sr-167750",
           "sourceId": "recipeatlas-curation-m3d2b",
           "sourceVersion": "production-5"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Canned prune juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d3ae3aba-1829-8aef-be2d-9a2fb7e09f9b",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167753",
+      "names": {
+        "en": "Canned prune juice",
+        "tr": "Konserve kuru erik suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Prune juice, canned",
+          "externalId": "167753",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Canned prune juice\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve kuru erik suyu\"}",
+          "externalId": "usda-sr-167753",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -4301,6 +4369,74 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Orange-pineapple juice blend",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "1ff81141-9fe5-814d-a18d-9cb25eea7f86",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167792",
+      "names": {
+        "en": "Orange-pineapple juice blend",
+        "tr": "Portakal-ananas suyu karışımı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Orange Pineapple Juice Blend",
+          "externalId": "167792",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Orange-pineapple juice blend\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal-ananas suyu karışımı\"}",
+          "externalId": "usda-sr-167792",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tart cherry juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "10528bfa-b9b4-8eae-a91f-ebfaed6677da",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167807",
+      "names": {
+        "en": "Tart cherry juice",
+        "tr": "Vişne suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Cherry juice, tart",
+          "externalId": "167807",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tart cherry juice\",\"preferredUnit\":\"mL\",\"tr\":\"Vişne suyu\"}",
+          "externalId": "usda-sr-167807",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Pork belly (raw)",
       "categories": [
         "meat"
@@ -4329,6 +4465,40 @@
           "externalId": "usda-sr-167812",
           "sourceId": "recipeatlas-curation-m3d3",
           "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Fruit syrup",
+      "categories": [
+        "syrups"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "372c78e0-095c-89f4-8569-b549151a8b9a",
+      "ingredientType": "beverage",
+      "key": "usda-sr-167953",
+      "names": {
+        "en": "Fruit syrup",
+        "tr": "Meyve şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Fruit syrup",
+          "externalId": "167953",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Fruit syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Meyve şurubu\"}",
+          "externalId": "usda-sr-167953",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -4882,6 +5052,74 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Unsweetened canned pineapple juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "1f855825-ea30-8dcc-ae23-48a6a3bad03a",
+      "ingredientType": "beverage",
+      "key": "usda-sr-168187",
+      "names": {
+        "en": "Unsweetened canned pineapple juice",
+        "tr": "Şekersiz ananas suyu (konserve)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Pineapple juice, canned or bottled, unsweetened, with added ascorbic acid",
+          "externalId": "168187",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened canned pineapple juice\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ananas suyu (konserve)\"}",
+          "externalId": "usda-sr-168187",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Frozen apple juice concentrate (unsweetened)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "7c334af3-b4d2-897e-b405-049792675b57",
+      "ingredientType": "beverage",
+      "key": "usda-sr-168188",
+      "names": {
+        "en": "Frozen apple juice concentrate (unsweetened)",
+        "tr": "Dondurulmuş elma suyu konsantresi (şekersiz)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Apple juice, frozen concentrate, unsweetened, undiluted, with added ascorbic acid",
+          "externalId": "168188",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen apple juice concentrate (unsweetened)\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş elma suyu konsantresi (şekersiz)\"}",
+          "externalId": "usda-sr-168188",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Canned jackfruit in syrup",
       "categories": [
         "fruit"
@@ -5015,6 +5253,40 @@
           "externalId": "usda-sr-168215",
           "sourceId": "recipeatlas-curation-m3d1",
           "sourceVersion": "production-4-reviewed"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Raspberry juice concentrate",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d5f156d8-4970-8207-9450-00c720885c6e",
+      "ingredientType": "beverage",
+      "key": "usda-sr-168217",
+      "names": {
+        "en": "Raspberry juice concentrate",
+        "tr": "Ahududu suyu konsantresi"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Raspberry juice concentrate",
+          "externalId": "168217",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Raspberry juice concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Ahududu suyu konsantresi\"}",
+          "externalId": "usda-sr-168217",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -7710,6 +7982,40 @@
           "externalId": "usda-sr-168943",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cooking wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "1a7ccd38-02e0-89ae-af1d-eea4aab2be0a",
+      "ingredientType": "beverage",
+      "key": "usda-sr-169070",
+      "names": {
+        "en": "Cooking wine",
+        "tr": "Yemeklik şarap"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, cooking",
+          "externalId": "169070",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Cooking wine\",\"preferredUnit\":\"mL\",\"tr\":\"Yemeklik şarap\"}",
+          "externalId": "usda-sr-169070",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -12786,6 +13092,41 @@
           "externalId": "usda-sr-169991",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Raw chicory root",
+      "categories": [
+        "coffee",
+        "vegetables"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "fed96b32-e835-8178-b98e-237282eb1a1f",
+      "ingredientType": "beverage",
+      "key": "usda-sr-169993",
+      "names": {
+        "en": "Raw chicory root",
+        "tr": "Çiğ hindiba kökü"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Chicory roots, raw",
+          "externalId": "169993",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\",\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Raw chicory root\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ hindiba kökü\"}",
+          "externalId": "usda-sr-169993",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -20886,6 +21227,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Cocoa drink mix powder (no added sugar)",
+      "categories": [
+        "chocolate-cocoa",
+        "other-beverages"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "164ed2b1-d39e-828b-90a0-31e7819894be",
+      "ingredientType": "beverage",
+      "key": "usda-sr-171886",
+      "names": {
+        "en": "Cocoa drink mix powder (no added sugar)",
+        "tr": "Şekersiz kakao içeceği karışımı tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beverages, Cocoa mix, no sugar added, powder",
+          "externalId": "171886",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"chocolate-cocoa\",\"other-beverages\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa drink mix powder (no added sugar)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kakao içeceği karışımı tozu\"}",
+          "externalId": "usda-sr-171886",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Decaffeinated brewed coffee",
       "categories": [
         "coffee"
@@ -21172,6 +21548,40 @@
           "externalId": "usda-sr-171917",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Merlot red wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "f85a25b4-a61c-84f9-aa82-49f74d8386cc",
+      "ingredientType": "beverage",
+      "key": "usda-sr-171925",
+      "names": {
+        "en": "Merlot red wine",
+        "tr": "Merlot kırmızı şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic Beverage, wine, table, red, Merlot",
+          "externalId": "171925",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Merlot red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Merlot kırmızı şarabı\"}",
+          "externalId": "usda-sr-171925",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -23448,6 +23858,74 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Riesling white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "263fd00a-7dfc-8135-8564-70b810cecbc0",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173200",
+      "names": {
+        "en": "Riesling white wine",
+        "tr": "Riesling beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Riesling",
+          "externalId": "173200",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Riesling white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Riesling beyaz şarabı\"}",
+          "externalId": "usda-sr-173200",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sauvignon Blanc white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "5d3f9bd2-a14d-814f-95cd-29a8107b11be",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173201",
+      "names": {
+        "en": "Sauvignon Blanc white wine",
+        "tr": "Sauvignon Blanc beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Sauvignon Blanc",
+          "externalId": "173201",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Sauvignon Blanc white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Sauvignon Blanc beyaz şarabı\"}",
+          "externalId": "usda-sr-173201",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Lemon-lime soda (caffeine free)",
       "categories": [
         "soft-drinks"
@@ -23510,6 +23988,41 @@
           "externalId": "usda-sr-173216",
           "sourceId": "recipeatlas-curation-m3d3",
           "sourceVersion": "production-6"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Dairy-based malt drink mix powder",
+      "categories": [
+        "other-beverages",
+        "dairy"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c71eeb29-9a35-8b3d-8856-dba43541e21f",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173220",
+      "names": {
+        "en": "Dairy-based malt drink mix powder",
+        "tr": "Süt bazlı doğal malt içeceği tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beverages, Malted drink mix, natural, powder, dairy based.",
+          "externalId": "173220",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\",\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Dairy-based malt drink mix powder\",\"preferredUnit\":\"g\",\"tr\":\"Süt bazlı doğal malt içeceği tozu\"}",
+          "externalId": "usda-sr-173220",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -24516,6 +25029,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Frozen pink lemonade concentrate",
+      "categories": [
+        "juices",
+        "mixers"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "9812120a-c713-887d-94ca-28ba9311a1f0",
+      "ingredientType": "beverage",
+      "key": "usda-sr-173666",
+      "names": {
+        "en": "Frozen pink lemonade concentrate",
+        "tr": "Dondurulmuş pembe limonata konsantresi"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Lemonade, frozen concentrate, pink",
+          "externalId": "173666",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen pink lemonade concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş pembe limonata konsantresi\"}",
+          "externalId": "usda-sr-173666",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Rainbow trout (farmed, raw)",
       "categories": [
         "seafood"
@@ -25134,6 +25682,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Chardonnay white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "20d362d3-9116-8810-89ad-9b26dcf49b9a",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174110",
+      "names": {
+        "en": "Chardonnay white wine",
+        "tr": "Chardonnay beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Chardonnay",
+          "externalId": "174110",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Chardonnay white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Chardonnay beyaz şarabı\"}",
+          "externalId": "usda-sr-174110",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -25169,6 +25751,41 @@
           "externalId": "usda-sr-174120",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cocoa drink mix powder",
+      "categories": [
+        "chocolate-cocoa",
+        "other-beverages"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "052cc9db-4ef3-884c-be29-eb07d0eff8e5",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174122",
+      "names": {
+        "en": "Cocoa drink mix powder",
+        "tr": "Kakao içeceği karışımı tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beverages, Cocoa mix, powder",
+          "externalId": "174122",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"chocolate-cocoa\",\"other-beverages\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa drink mix powder\",\"preferredUnit\":\"g\",\"tr\":\"Kakao içeceği karışımı tozu\"}",
+          "externalId": "usda-sr-174122",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -25237,6 +25854,40 @@
           "externalId": "usda-sr-174133",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cereal coffee substitute powder",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "63833dd6-66d1-8cee-bc59-96d2eb8dc237",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174138",
+      "names": {
+        "en": "Cereal coffee substitute powder",
+        "tr": "Tahıllı kahve alternatifi tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beverages, coffee substitute, cereal grain beverage, powder",
+          "externalId": "174138",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Cereal coffee substitute powder\",\"preferredUnit\":\"g\",\"tr\":\"Tahıllı kahve alternatifi tozu\"}",
+          "externalId": "usda-sr-174138",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -26700,6 +27351,40 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Bottled whiskey sour mix",
+      "categories": [
+        "mixers"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "25b68717-9d06-8397-a1b1-43ef98a47ffc",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174811",
+      "names": {
+        "en": "Bottled whiskey sour mix",
+        "tr": "Şişelenmiş whiskey sour karışımı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Beverages, Whiskey sour mix, bottled",
+          "externalId": "174811",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Bottled whiskey sour mix\",\"preferredUnit\":\"mL\",\"tr\":\"Şişelenmiş whiskey sour karışımı\"}",
+          "externalId": "usda-sr-174811",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Rum (80 US proof)",
       "categories": [
         "spirits"
@@ -26919,6 +27604,108 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Cabernet Sauvignon red wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "8a3b058d-6a62-802f-a588-3c30e00b7f15",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174833",
+      "names": {
+        "en": "Cabernet Sauvignon red wine",
+        "tr": "Cabernet Sauvignon kırmızı şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic Beverage, wine, table, red, Cabernet Sauvignon",
+          "externalId": "174833",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Cabernet Sauvignon red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Cabernet Sauvignon kırmızı şarabı\"}",
+          "externalId": "usda-sr-174833",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pinot Noir red wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "45d87b95-25df-8f8d-a548-3894d946e77b",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174835",
+      "names": {
+        "en": "Pinot Noir red wine",
+        "tr": "Pinot Noir kırmızı şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic Beverage, wine, table, red, Pinot Noir",
+          "externalId": "174835",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Pinot Noir red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Pinot Noir kırmızı şarabı\"}",
+          "externalId": "usda-sr-174835",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Syrah red wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d976dba2-f453-8bf2-a1f6-63077292e792",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174836",
+      "names": {
+        "en": "Syrah red wine",
+        "tr": "Syrah kırmızı şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic Beverage, wine, table, red, Syrah",
+          "externalId": "174836",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Syrah red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Syrah kırmızı şarabı\"}",
+          "externalId": "usda-sr-174836",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -26953,6 +27740,74 @@
           "externalId": "usda-sr-174837",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sangiovese red wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "6d7ce3f0-5c17-8064-8913-47abc65d07a1",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174839",
+      "names": {
+        "en": "Sangiovese red wine",
+        "tr": "Sangiovese kırmızı şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic Beverage, wine, table, red, Sangiovese",
+          "externalId": "174839",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Sangiovese red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Sangiovese kırmızı şarabı\"}",
+          "externalId": "usda-sr-174839",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pinot Gris white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "154e12bb-3b24-8589-91cb-3c6667525eae",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174841",
+      "names": {
+        "en": "Pinot Gris white wine",
+        "tr": "Pinot Gris beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Pinot Gris (Grigio)",
+          "externalId": "174841",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Pinot Gris white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Pinot Gris beyaz şarabı\"}",
+          "externalId": "usda-sr-174841",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -27003,6 +27858,40 @@
       "relations": []
     },
     {
+      "aliases": [],
+      "canonicalName": "Gewürztraminer white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "fdb549f4-f177-8081-bb8f-13c5a1d8c22b",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174843",
+      "names": {
+        "en": "Gewürztraminer white wine",
+        "tr": "Gewürztraminer beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Gewurztraminer",
+          "externalId": "174843",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Gewürztraminer white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Gewürztraminer beyaz şarabı\"}",
+          "externalId": "usda-sr-174843",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -27037,6 +27926,40 @@
           "externalId": "usda-sr-174846",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Muscat white wine",
+      "categories": [
+        "wines"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d2577afc-bea4-8b6f-afe5-73c98a619f9c",
+      "ingredientType": "beverage",
+      "key": "usda-sr-174849",
+      "names": {
+        "en": "Muscat white wine",
+        "tr": "Muscat beyaz şarabı"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Alcoholic beverage, wine, table, white, Muscat",
+          "externalId": "174849",
+          "sourceId": "usda-sr-legacy-m3d5",
+          "sourceVersion": "2018-04-selection-8"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Muscat white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Muscat beyaz şarabı\"}",
+          "externalId": "usda-sr-174849",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -28264,6 +29187,142 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Arabica coffee bean",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "eeb60a8f-6726-84e2-bcfc-1f6ba21bfad0",
+      "ingredientType": "beverage",
+      "key": "wikidata-q104218426",
+      "names": {
+        "en": "Arabica coffee bean",
+        "tr": "Arabica kahve çekirdeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"seed from Coffea arabica\",\"tr\":null},\"labels\":{\"en\":\"arabica coffee bean\",\"tr\":null},\"qid\":\"Q104218426\",\"revision\":2553202629}",
+          "externalId": "Q104218426",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Arabica coffee bean\",\"preferredUnit\":\"g\",\"tr\":\"Arabica kahve çekirdeği\"}",
+          "externalId": "wikidata-q104218426",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Robusta coffee bean",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "422966b1-ec35-8015-bb62-af8fd1f01e43",
+      "ingredientType": "beverage",
+      "key": "wikidata-q104246054",
+      "names": {
+        "en": "Robusta coffee bean",
+        "tr": "Robusta kahve çekirdeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"seed from Coffea robusta\",\"tr\":null},\"labels\":{\"en\":\"robusta coffee bean\",\"tr\":null},\"qid\":\"Q104246054\",\"revision\":2298829264}",
+          "externalId": "Q104246054",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Robusta coffee bean\",\"preferredUnit\":\"g\",\"tr\":\"Robusta kahve çekirdeği\"}",
+          "externalId": "wikidata-q104246054",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Grapefruit peel",
+      "categories": [
+        "garnishes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ed170fca-aca8-8cf3-867c-ee43aff05e5a",
+      "ingredientType": "beverage",
+      "key": "wikidata-q104704742",
+      "names": {
+        "en": "Grapefruit peel",
+        "tr": "Greyfurt kabuğu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"peel from the fruit of Citrus × paradisi\",\"tr\":null},\"labels\":{\"en\":\"grapefruit peel\",\"tr\":null},\"qid\":\"Q104704742\",\"revision\":2072868836}",
+          "externalId": "Q104704742",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Grapefruit peel\",\"preferredUnit\":\"g\",\"tr\":\"Greyfurt kabuğu\"}",
+          "externalId": "wikidata-q104704742",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Maraschino cherry",
+      "categories": [
+        "garnishes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "84cc5d37-e99b-873d-908a-5a1935311233",
+      "ingredientType": "beverage",
+      "key": "wikidata-q1078150",
+      "names": {
+        "en": "Maraschino cherry",
+        "tr": "Maraschino kirazı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"preserved, sweetened cherry\",\"tr\":null},\"labels\":{\"en\":\"maraschino cherry\",\"tr\":\"maraska kirazı\"},\"qid\":\"Q1078150\",\"revision\":2552859385}",
+          "externalId": "Q1078150",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Maraschino cherry\",\"preferredUnit\":\"g\",\"tr\":\"Maraschino kirazı\"}",
+          "externalId": "wikidata-q1078150",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Doenjang",
       "categories": [
         "fermented",
@@ -28294,6 +29353,75 @@
           "externalId": "wikidata-q1196289",
           "sourceId": "recipeatlas-curation-m3d4",
           "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Lime cordial",
+      "categories": [
+        "syrups",
+        "mixers"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "36ee8c51-a30e-8fdd-9231-9db7e269fd70",
+      "ingredientType": "beverage",
+      "key": "wikidata-q12324500",
+      "names": {
+        "en": "Lime cordial",
+        "tr": "Lime cordial şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"mixture of concentrated lime and sugar, sometimes used for cocktails\",\"tr\":null},\"labels\":{\"en\":\"lime cordial\",\"tr\":null},\"qid\":\"Q12324500\",\"revision\":2105475208}",
+          "externalId": "Q12324500",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Lime cordial\",\"preferredUnit\":\"mL\",\"tr\":\"Lime cordial şurubu\"}",
+          "externalId": "wikidata-q12324500",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Rose syrup",
+      "categories": [
+        "syrups"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "4031f965-f77e-84d9-a167-435435c9d62f",
+      "ingredientType": "beverage",
+      "key": "wikidata-q12424061",
+      "names": {
+        "en": "Rose syrup",
+        "tr": "Gül şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"sugar syrup flavoured with rose\",\"tr\":null},\"labels\":{\"en\":\"rose syrup\",\"tr\":null},\"qid\":\"Q12424061\",\"revision\":2499509859}",
+          "externalId": "Q12424061",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Rose syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Gül şurubu\"}",
+          "externalId": "wikidata-q12424061",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -28335,6 +29463,110 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Soursop juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "a1507b39-d740-80b7-8404-563f01d84c3d",
+      "ingredientType": "beverage",
+      "key": "wikidata-q138542182",
+      "names": {
+        "en": "Soursop juice",
+        "tr": "Graviola suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"natural juice extracted from soursop pulp\",\"tr\":null},\"labels\":{\"en\":\"soursop juice\",\"tr\":null},\"qid\":\"Q138542182\",\"revision\":2472301536}",
+          "externalId": "Q138542182",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Soursop juice\",\"preferredUnit\":\"mL\",\"tr\":\"Graviola suyu\"}",
+          "externalId": "wikidata-q138542182",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pandan leaf",
+      "categories": [
+        "infusions",
+        "herbs"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "deaf0283-35d3-82cd-9fe9-225aa424968d",
+      "ingredientType": "beverage",
+      "key": "wikidata-q139500622",
+      "names": {
+        "en": "Pandan leaf",
+        "tr": "Pandan yaprağı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"leaf of the pandan plant, Pandanus amaryllifolius\",\"tr\":null},\"labels\":{\"en\":\"pandan leaf\",\"tr\":null},\"qid\":\"Q139500622\",\"revision\":2499725578}",
+          "externalId": "Q139500622",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\",\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Pandan leaf\",\"preferredUnit\":\"g\",\"tr\":\"Pandan yaprağı\"}",
+          "externalId": "wikidata-q139500622",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tamarind concentrate",
+      "categories": [
+        "juices",
+        "mixers"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "5a33dfde-a796-88d8-9900-7bb8ff3bffc6",
+      "ingredientType": "beverage",
+      "key": "wikidata-q140136320",
+      "names": {
+        "en": "Tamarind concentrate",
+        "tr": "Demirhindi konsantresi"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Concentrated tamarind product produced from tamarind pulp\",\"tr\":null},\"labels\":{\"en\":\"Tamarind Concentrate\",\"tr\":null},\"qid\":\"Q140136320\",\"revision\":2503675331}",
+          "externalId": "Q140136320",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Tamarind concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Demirhindi konsantresi\"}",
+          "externalId": "wikidata-q140136320",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Sucuk",
       "categories": [
         "meat",
@@ -28370,6 +29602,41 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Ginger beer",
+      "categories": [
+        "mixers",
+        "soft-drinks"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "d3a3f36a-25d4-89e5-905b-c72e27181740",
+      "ingredientType": "beverage",
+      "key": "wikidata-q1448819",
+      "names": {
+        "en": "Ginger beer",
+        "tr": "Zencefil birası (ginger beer)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"carbonated beverage\",\"tr\":null},\"labels\":{\"en\":\"ginger beer\",\"tr\":\"zencefil birası\"},\"qid\":\"Q1448819\",\"revision\":2547938869}",
+          "externalId": "Q1448819",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mixers\",\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Ginger beer\",\"preferredUnit\":\"mL\",\"tr\":\"Zencefil birası (ginger beer)\"}",
+          "externalId": "wikidata-q1448819",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Kefir grains",
       "categories": [
         "fermented",
@@ -28399,6 +29666,40 @@
           "externalId": "wikidata-q16620197",
           "sourceId": "recipeatlas-curation-m3d4",
           "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Ground coffee",
+      "categories": [
+        "coffee"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a00a203d-bfb7-8295-881e-7f83e9fb0ca1",
+      "ingredientType": "beverage",
+      "key": "wikidata-q1721046",
+      "names": {
+        "en": "Ground coffee",
+        "tr": "Öğütülmüş kahve"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"coffee beans ground into grit or powder for ease of brewing\",\"tr\":null},\"labels\":{\"en\":\"ground coffee\",\"tr\":null},\"qid\":\"Q1721046\",\"revision\":2554951949}",
+          "externalId": "Q1721046",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Ground coffee\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş kahve\"}",
+          "externalId": "wikidata-q1721046",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -28475,6 +29776,75 @@
     },
     {
       "aliases": [],
+      "canonicalName": "White tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "89a6bd50-2011-87b7-8839-e0334d25c676",
+      "ingredientType": "beverage",
+      "key": "wikidata-q238306",
+      "names": {
+        "en": "White tea",
+        "tr": "Beyaz çay"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant\",\"tr\":null},\"labels\":{\"en\":\"white tea\",\"tr\":\"Beyaz Çay\"},\"qid\":\"Q238306\",\"revision\":2515855379}",
+          "externalId": "Q238306",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"White tea\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz çay\"}",
+          "externalId": "wikidata-q238306",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Date syrup",
+      "categories": [
+        "syrups",
+        "sweeteners"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "b47317dc-fecc-8591-bff6-8152509ba241",
+      "ingredientType": "beverage",
+      "key": "wikidata-q2916133",
+      "names": {
+        "en": "Date syrup",
+        "tr": "Hurma şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"syrup extracted from dates\",\"tr\":null},\"labels\":{\"en\":\"date honey\",\"tr\":null},\"qid\":\"Q2916133\",\"revision\":2545657337}",
+          "externalId": "Q2916133",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"sweeteners\"],\"dimensions\":[\"volume\"],\"en\":\"Date syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Hurma şurubu\"}",
+          "externalId": "wikidata-q2916133",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Tulum cheese",
       "categories": [
         "cheeses",
@@ -28539,6 +29909,40 @@
           "externalId": "wikidata-q318367",
           "sourceId": "recipeatlas-curation-m3d4",
           "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Triple sec orange liqueur",
+      "categories": [
+        "liqueurs"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "b67ccf48-431a-8cdf-a8cb-60c00f11766c",
+      "ingredientType": "beverage",
+      "key": "wikidata-q3539556",
+      "names": {
+        "en": "Triple sec orange liqueur",
+        "tr": "Triple sec portakal likörü"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"variety of orange liqueur\",\"tr\":null},\"labels\":{\"en\":\"triple sec\",\"tr\":\"Triple sec\"},\"qid\":\"Q3539556\",\"revision\":2541565598}",
+          "externalId": "Q3539556",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Triple sec orange liqueur\",\"preferredUnit\":\"mL\",\"tr\":\"Triple sec portakal likörü\"}",
+          "externalId": "wikidata-q3539556",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -28650,6 +30054,211 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Cocktail onion",
+      "categories": [
+        "garnishes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f2e87b06-a7c6-81ec-9d2f-6b2695b2078b",
+      "ingredientType": "beverage",
+      "key": "wikidata-q5139704",
+      "names": {
+        "en": "Cocktail onion",
+        "tr": "Kokteyl soğanı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"pearl onion pickled in a brine\",\"tr\":null},\"labels\":{\"en\":\"cocktail onion\",\"tr\":null},\"qid\":\"Q5139704\",\"revision\":2491875560}",
+          "externalId": "Q5139704",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Cocktail onion\",\"preferredUnit\":\"g\",\"tr\":\"Kokteyl soğanı\"}",
+          "externalId": "wikidata-q5139704",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Coffee syrup",
+      "categories": [
+        "syrups",
+        "coffee"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "39fb185b-3266-86b1-a067-f415399bd376",
+      "ingredientType": "beverage",
+      "key": "wikidata-q5140965",
+      "names": {
+        "en": "Coffee syrup",
+        "tr": "Kahve şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"sweetened coffee concentrate\",\"tr\":null},\"labels\":{\"en\":\"coffee syrup\",\"tr\":null},\"qid\":\"Q5140965\",\"revision\":1772701455}",
+          "externalId": "Q5140965",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Coffee syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Kahve şurubu\"}",
+          "externalId": "wikidata-q5140965",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Genmaicha tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "cdad9399-026b-85a2-959a-7d7584873f49",
+      "ingredientType": "beverage",
+      "key": "wikidata-q519365",
+      "names": {
+        "en": "Genmaicha tea",
+        "tr": "Genmaicha çayı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Japanese green tea mixed with brown rice\",\"tr\":null},\"labels\":{\"en\":\"genmaicha\",\"tr\":\"Genmaicha\"},\"qid\":\"Q519365\",\"revision\":2528538641}",
+          "externalId": "Q519365",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Genmaicha tea\",\"preferredUnit\":\"g\",\"tr\":\"Genmaicha çayı\"}",
+          "externalId": "wikidata-q519365",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Falernum syrup",
+      "categories": [
+        "syrups"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "e1f65a9d-ea0b-823b-9e99-3f59962278da",
+      "ingredientType": "beverage",
+      "key": "wikidata-q5431859",
+      "names": {
+        "en": "Falernum syrup",
+        "tr": "Falernum şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Caribbean syrup used in drinks\",\"tr\":null},\"labels\":{\"en\":\"Falernum\",\"tr\":\"Falernum\"},\"qid\":\"Q5431859\",\"revision\":2345004393}",
+          "externalId": "Q5431859",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Falernum syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Falernum şurubu\"}",
+          "externalId": "wikidata-q5431859",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Anisette anise liqueur",
+      "categories": [
+        "liqueurs"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "3cdb5f7b-5603-82c1-a202-47ae3202a311",
+      "ingredientType": "beverage",
+      "key": "wikidata-q548940",
+      "names": {
+        "en": "Anisette anise liqueur",
+        "tr": "Anisette anason likörü"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"anise-flavored liqueur\",\"tr\":null},\"labels\":{\"en\":\"anisette\",\"tr\":\"Anisette\"},\"qid\":\"Q548940\",\"revision\":2544828344}",
+          "externalId": "Q548940",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Anisette anise liqueur\",\"preferredUnit\":\"mL\",\"tr\":\"Anisette anason likörü\"}",
+          "externalId": "wikidata-q548940",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Brewed rooibos",
+      "categories": [
+        "infusions"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "b5d73573-092c-859d-905c-230b21124712",
+      "ingredientType": "beverage",
+      "key": "wikidata-q56342268",
+      "names": {
+        "en": "Brewed rooibos",
+        "tr": "Demlenmiş rooibos"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"drink made from infusing water with rooibos (Aspalathus linearis) leaves\",\"tr\":null},\"labels\":{\"en\":\"rooibos\",\"tr\":null},\"qid\":\"Q56342268\",\"revision\":2519059514}",
+          "externalId": "Q56342268",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\"],\"dimensions\":[\"volume\"],\"en\":\"Brewed rooibos\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş rooibos\"}",
+          "externalId": "wikidata-q56342268",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Çökelek cheese",
       "categories": [
         "cheeses",
@@ -28720,6 +30329,74 @@
     },
     {
       "aliases": [],
+      "canonicalName": "Jasmine tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "00d572f1-c7dd-8be5-890c-fd6c280280a1",
+      "ingredientType": "beverage",
+      "key": "wikidata-q60855",
+      "names": {
+        "en": "Jasmine tea",
+        "tr": "Yasemin çayı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"tea scented with jasmine blossoms customary to China\",\"tr\":\"Çin'e özgü yasemin çiçeği aromalı çay\"},\"labels\":{\"en\":\"jasmine tea\",\"tr\":\"yasemin çayı\"},\"qid\":\"Q60855\",\"revision\":2517100551}",
+          "externalId": "Q60855",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Jasmine tea\",\"preferredUnit\":\"g\",\"tr\":\"Yasemin çayı\"}",
+          "externalId": "wikidata-q60855",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Orange cocktail bitters",
+      "categories": [
+        "bitters"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "fda7b49d-9db0-8457-93f0-9baf11773107",
+      "ingredientType": "beverage",
+      "key": "wikidata-q654895",
+      "names": {
+        "en": "Orange cocktail bitters",
+        "tr": "Portakal kokteyl bitteri"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"cocktail flavoring\",\"tr\":null},\"labels\":{\"en\":\"orange bitters\",\"tr\":null},\"qid\":\"Q654895\",\"revision\":2480702257}",
+          "externalId": "Q654895",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"bitters\"],\"dimensions\":[\"volume\"],\"en\":\"Orange cocktail bitters\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal kokteyl bitteri\"}",
+          "externalId": "wikidata-q654895",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
       "canonicalName": "Tamarind paste (diluted)",
       "categories": [
         "sauces",
@@ -28749,6 +30426,144 @@
           "externalId": "wikidata-q67207722",
           "sourceId": "recipeatlas-curation-m3d4",
           "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Elderflower",
+      "categories": [
+        "infusions",
+        "garnishes"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "57e8a1fd-da5c-8947-b2c6-12a4e8d9a5e3",
+      "ingredientType": "beverage",
+      "key": "wikidata-q67778134",
+      "names": {
+        "en": "Elderflower",
+        "tr": "Mürver çiçeği"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"edible flower of Sambucus nigra\",\"tr\":null},\"labels\":{\"en\":\"elderflower\",\"tr\":null},\"qid\":\"Q67778134\",\"revision\":2488966625}",
+          "externalId": "Q67778134",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\",\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Elderflower\",\"preferredUnit\":\"g\",\"tr\":\"Mürver çiçeği\"}",
+          "externalId": "wikidata-q67778134",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Coconut syrup",
+      "categories": [
+        "syrups"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "be152f62-5fd3-86d9-af69-e3e2295f9e8e",
+      "ingredientType": "beverage",
+      "key": "wikidata-q67890691",
+      "names": {
+        "en": "Coconut syrup",
+        "tr": "Hindistan cevizi şurubu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"syrup made of coconuts\",\"tr\":null},\"labels\":{\"en\":\"coconut syrup\",\"tr\":null},\"qid\":\"Q67890691\",\"revision\":1342639707}",
+          "externalId": "Q67890691",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Coconut syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Hindistan cevizi şurubu\"}",
+          "externalId": "wikidata-q67890691",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pu-erh tea",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ecb9e675-7f6e-8438-8698-5b7da01c365b",
+      "ingredientType": "beverage",
+      "key": "wikidata-q690098",
+      "names": {
+        "en": "Pu-erh tea",
+        "tr": "Pu-erh çayı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"variety of fermented tea produced in the Yunnan province of China\",\"tr\":null},\"labels\":{\"en\":\"pu'er\",\"tr\":\"Pu-erh çayı\"},\"qid\":\"Q690098\",\"revision\":2540411259}",
+          "externalId": "Q690098",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Pu-erh tea\",\"preferredUnit\":\"g\",\"tr\":\"Pu-erh çayı\"}",
+          "externalId": "wikidata-q690098",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Salep flour",
+      "categories": [
+        "traditional-drinks",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "6f5a9597-4076-8611-896c-4226c4a1986b",
+      "ingredientType": "beverage",
+      "key": "wikidata-q693187",
+      "names": {
+        "en": "Salep flour",
+        "tr": "Salep unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"flour made from the tubers of the orchid genus Orchis\",\"tr\":null},\"labels\":{\"en\":\"salep\",\"tr\":\"salep\"},\"qid\":\"Q693187\",\"revision\":2555119039}",
+          "externalId": "Q693187",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Salep flour\",\"preferredUnit\":\"g\",\"tr\":\"Salep unu\"}",
+          "externalId": "wikidata-q693187",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []
@@ -28785,6 +30600,210 @@
           "externalId": "wikidata-q699637",
           "sourceId": "recipeatlas-curation-m3d4",
           "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sugarcane juice",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "2bcded8e-d633-8c34-bcf0-de13a15fff88",
+      "ingredientType": "beverage",
+      "key": "wikidata-q718680",
+      "names": {
+        "en": "Sugarcane juice",
+        "tr": "Şeker kamışı suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"liquid extracted from sugarcane\",\"tr\":null},\"labels\":{\"en\":\"sugarcane juice\",\"tr\":null},\"qid\":\"Q718680\",\"revision\":2557409707}",
+          "externalId": "Q718680",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Sugarcane juice\",\"preferredUnit\":\"mL\",\"tr\":\"Şeker kamışı suyu\"}",
+          "externalId": "wikidata-q718680",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cachaça",
+      "categories": [
+        "spirits"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "eac9b693-c262-835d-ad4a-ce43dc476949",
+      "ingredientType": "beverage",
+      "key": "wikidata-q744729",
+      "names": {
+        "en": "Cachaça",
+        "tr": "Cachaça"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"distilled alcoholic beverage\",\"tr\":null},\"labels\":{\"en\":\"cachaça\",\"tr\":\"Kaşasa\"},\"qid\":\"Q744729\",\"revision\":2527915221}",
+          "externalId": "Q744729",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Cachaça\",\"preferredUnit\":\"mL\",\"tr\":\"Cachaça\"}",
+          "externalId": "wikidata-q744729",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Matcha powder",
+      "categories": [
+        "tea"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "9f5c8bd4-51ca-82d9-9bd9-3562d0fe0b01",
+      "ingredientType": "beverage",
+      "key": "wikidata-q822331",
+      "names": {
+        "en": "Matcha powder",
+        "tr": "Matcha tozu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"finely powdered green tea\",\"tr\":\"özel olarak yetiştirilen ve işlenen öğütülmüş bir yeşil çay tozu\"},\"labels\":{\"en\":\"matcha\",\"tr\":\"maça çayı\"},\"qid\":\"Q822331\",\"revision\":2555390591}",
+          "externalId": "Q822331",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Matcha powder\",\"preferredUnit\":\"g\",\"tr\":\"Matcha tozu\"}",
+          "externalId": "wikidata-q822331",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Rose water",
+      "categories": [
+        "other-beverages"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "b1081a59-65d8-8099-95ca-f058753fcaf6",
+      "ingredientType": "beverage",
+      "key": "wikidata-q900450",
+      "names": {
+        "en": "Rose water",
+        "tr": "Gül suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"flavoured water made by distilling rose petals with water\",\"tr\":\"gül yapraklarından yapılan ıtırlı sıvı\"},\"labels\":{\"en\":\"rose water\",\"tr\":\"gülsuyu\"},\"qid\":\"Q900450\",\"revision\":2557908370}",
+          "externalId": "Q900450",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Rose water\",\"preferredUnit\":\"mL\",\"tr\":\"Gül suyu\"}",
+          "externalId": "wikidata-q900450",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Orange blossom water",
+      "categories": [
+        "other-beverages"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "4cabb70d-8693-89ac-8d29-7e58678dbbe0",
+      "ingredientType": "beverage",
+      "key": "wikidata-q902582",
+      "names": {
+        "en": "Orange blossom water",
+        "tr": "Portakal çiçeği suyu"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"clear, perfumed distillation of fresh bitter-orange blossoms\",\"tr\":null},\"labels\":{\"en\":\"orange flower water\",\"tr\":null},\"qid\":\"Q902582\",\"revision\":2340260293}",
+          "externalId": "Q902582",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Orange blossom water\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal çiçeği suyu\"}",
+          "externalId": "wikidata-q902582",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Yerba mate leaf",
+      "categories": [
+        "infusions"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f2b43c69-c782-81c6-9a89-82dd01cb9a90",
+      "ingredientType": "beverage",
+      "key": "wikidata-q96098098",
+      "names": {
+        "en": "Yerba mate leaf",
+        "tr": "Yerba mate yaprağı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"leaf of the yerba mate plant used to prepare infusions\",\"tr\":null},\"labels\":{\"en\":\"yerba mate leaf\",\"tr\":null},\"qid\":\"Q96098098\",\"revision\":2559474474}",
+          "externalId": "Q96098098",
+          "sourceId": "wikidata-m3d5",
+          "sourceVersion": "entity-revisions-2026-10-22-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\"],\"dimensions\":[\"mass\"],\"en\":\"Yerba mate leaf\",\"preferredUnit\":\"g\",\"tr\":\"Yerba mate yaprağı\"}",
+          "externalId": "wikidata-q96098098",
+          "sourceId": "recipeatlas-curation-m3d5",
+          "sourceVersion": "production-8"
         }
       ],
       "relations": []

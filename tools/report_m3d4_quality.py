@@ -6,7 +6,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'catalog/production'
+OUT = ROOT / 'catalog/releases/10'
 
 
 def load(path):

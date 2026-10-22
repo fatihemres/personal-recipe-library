@@ -1,0 +1,238 @@
+[
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Low-sodium tomato and vegetable juice\",\"preferredUnit\":\"mL\",\"tr\":\"Az sodyumlu domates-sebze suyu\"}",
+    "externalId": "usda-sr-167708"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Canned prune juice\",\"preferredUnit\":\"mL\",\"tr\":\"Konserve kuru erik suyu\"}",
+    "externalId": "usda-sr-167753"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Orange-pineapple juice blend\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal-ananas suyu karışımı\"}",
+    "externalId": "usda-sr-167792"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tart cherry juice\",\"preferredUnit\":\"mL\",\"tr\":\"Vişne suyu\"}",
+    "externalId": "usda-sr-167807"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Fruit syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Meyve şurubu\"}",
+    "externalId": "usda-sr-167953"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Unsweetened canned pineapple juice\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz ananas suyu (konserve)\"}",
+    "externalId": "usda-sr-168187"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen apple juice concentrate (unsweetened)\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş elma suyu konsantresi (şekersiz)\"}",
+    "externalId": "usda-sr-168188"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Raspberry juice concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Ahududu suyu konsantresi\"}",
+    "externalId": "usda-sr-168217"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Cooking wine\",\"preferredUnit\":\"mL\",\"tr\":\"Yemeklik şarap\"}",
+    "externalId": "usda-sr-169070"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\",\"vegetables\"],\"dimensions\":[\"mass\"],\"en\":\"Raw chicory root\",\"preferredUnit\":\"g\",\"tr\":\"Çiğ hindiba kökü\"}",
+    "externalId": "usda-sr-169993"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"chocolate-cocoa\",\"other-beverages\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa drink mix powder (no added sugar)\",\"preferredUnit\":\"g\",\"tr\":\"Şekersiz kakao içeceği karışımı tozu\"}",
+    "externalId": "usda-sr-171886"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Merlot red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Merlot kırmızı şarabı\"}",
+    "externalId": "usda-sr-171925"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Riesling white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Riesling beyaz şarabı\"}",
+    "externalId": "usda-sr-173200"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Sauvignon Blanc white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Sauvignon Blanc beyaz şarabı\"}",
+    "externalId": "usda-sr-173201"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\",\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Dairy-based malt drink mix powder\",\"preferredUnit\":\"g\",\"tr\":\"Süt bazlı doğal malt içeceği tozu\"}",
+    "externalId": "usda-sr-173220"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Frozen pink lemonade concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Dondurulmuş pembe limonata konsantresi\"}",
+    "externalId": "usda-sr-173666"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Chardonnay white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Chardonnay beyaz şarabı\"}",
+    "externalId": "usda-sr-174110"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"chocolate-cocoa\",\"other-beverages\"],\"dimensions\":[\"mass\"],\"en\":\"Cocoa drink mix powder\",\"preferredUnit\":\"g\",\"tr\":\"Kakao içeceği karışımı tozu\"}",
+    "externalId": "usda-sr-174122"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Cereal coffee substitute powder\",\"preferredUnit\":\"g\",\"tr\":\"Tahıllı kahve alternatifi tozu\"}",
+    "externalId": "usda-sr-174138"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Bottled whiskey sour mix\",\"preferredUnit\":\"mL\",\"tr\":\"Şişelenmiş whiskey sour karışımı\"}",
+    "externalId": "usda-sr-174811"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Cabernet Sauvignon red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Cabernet Sauvignon kırmızı şarabı\"}",
+    "externalId": "usda-sr-174833"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Pinot Noir red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Pinot Noir kırmızı şarabı\"}",
+    "externalId": "usda-sr-174835"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Syrah red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Syrah kırmızı şarabı\"}",
+    "externalId": "usda-sr-174836"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Sangiovese red wine\",\"preferredUnit\":\"mL\",\"tr\":\"Sangiovese kırmızı şarabı\"}",
+    "externalId": "usda-sr-174839"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Pinot Gris white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Pinot Gris beyaz şarabı\"}",
+    "externalId": "usda-sr-174841"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Gewürztraminer white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Gewürztraminer beyaz şarabı\"}",
+    "externalId": "usda-sr-174843"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"wines\"],\"dimensions\":[\"volume\"],\"en\":\"Muscat white wine\",\"preferredUnit\":\"mL\",\"tr\":\"Muscat beyaz şarabı\"}",
+    "externalId": "usda-sr-174849"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Arabica coffee bean\",\"preferredUnit\":\"g\",\"tr\":\"Arabica kahve çekirdeği\"}",
+    "externalId": "wikidata-q104218426"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Robusta coffee bean\",\"preferredUnit\":\"g\",\"tr\":\"Robusta kahve çekirdeği\"}",
+    "externalId": "wikidata-q104246054"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Grapefruit peel\",\"preferredUnit\":\"g\",\"tr\":\"Greyfurt kabuğu\"}",
+    "externalId": "wikidata-q104704742"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Maraschino cherry\",\"preferredUnit\":\"g\",\"tr\":\"Maraschino kirazı\"}",
+    "externalId": "wikidata-q1078150"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Lime cordial\",\"preferredUnit\":\"mL\",\"tr\":\"Lime cordial şurubu\"}",
+    "externalId": "wikidata-q12324500"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Rose syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Gül şurubu\"}",
+    "externalId": "wikidata-q12424061"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Soursop juice\",\"preferredUnit\":\"mL\",\"tr\":\"Graviola suyu\"}",
+    "externalId": "wikidata-q138542182"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\",\"herbs\"],\"dimensions\":[\"mass\"],\"en\":\"Pandan leaf\",\"preferredUnit\":\"g\",\"tr\":\"Pandan yaprağı\"}",
+    "externalId": "wikidata-q139500622"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\",\"mixers\"],\"dimensions\":[\"volume\"],\"en\":\"Tamarind concentrate\",\"preferredUnit\":\"mL\",\"tr\":\"Demirhindi konsantresi\"}",
+    "externalId": "wikidata-q140136320"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mixers\",\"soft-drinks\"],\"dimensions\":[\"volume\"],\"en\":\"Ginger beer\",\"preferredUnit\":\"mL\",\"tr\":\"Zencefil birası (ginger beer)\"}",
+    "externalId": "wikidata-q1448819"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"coffee\"],\"dimensions\":[\"mass\"],\"en\":\"Ground coffee\",\"preferredUnit\":\"g\",\"tr\":\"Öğütülmüş kahve\"}",
+    "externalId": "wikidata-q1721046"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"White tea\",\"preferredUnit\":\"g\",\"tr\":\"Beyaz çay\"}",
+    "externalId": "wikidata-q238306"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"sweeteners\"],\"dimensions\":[\"volume\"],\"en\":\"Date syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Hurma şurubu\"}",
+    "externalId": "wikidata-q2916133"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Triple sec orange liqueur\",\"preferredUnit\":\"mL\",\"tr\":\"Triple sec portakal likörü\"}",
+    "externalId": "wikidata-q3539556"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Cocktail onion\",\"preferredUnit\":\"g\",\"tr\":\"Kokteyl soğanı\"}",
+    "externalId": "wikidata-q5139704"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\",\"coffee\"],\"dimensions\":[\"volume\"],\"en\":\"Coffee syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Kahve şurubu\"}",
+    "externalId": "wikidata-q5140965"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Genmaicha tea\",\"preferredUnit\":\"g\",\"tr\":\"Genmaicha çayı\"}",
+    "externalId": "wikidata-q519365"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Falernum syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Falernum şurubu\"}",
+    "externalId": "wikidata-q5431859"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"liqueurs\"],\"dimensions\":[\"volume\"],\"en\":\"Anisette anise liqueur\",\"preferredUnit\":\"mL\",\"tr\":\"Anisette anason likörü\"}",
+    "externalId": "wikidata-q548940"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\"],\"dimensions\":[\"volume\"],\"en\":\"Brewed rooibos\",\"preferredUnit\":\"mL\",\"tr\":\"Demlenmiş rooibos\"}",
+    "externalId": "wikidata-q56342268"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Jasmine tea\",\"preferredUnit\":\"g\",\"tr\":\"Yasemin çayı\"}",
+    "externalId": "wikidata-q60855"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"bitters\"],\"dimensions\":[\"volume\"],\"en\":\"Orange cocktail bitters\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal kokteyl bitteri\"}",
+    "externalId": "wikidata-q654895"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\",\"garnishes\"],\"dimensions\":[\"mass\"],\"en\":\"Elderflower\",\"preferredUnit\":\"g\",\"tr\":\"Mürver çiçeği\"}",
+    "externalId": "wikidata-q67778134"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"syrups\"],\"dimensions\":[\"volume\"],\"en\":\"Coconut syrup\",\"preferredUnit\":\"mL\",\"tr\":\"Hindistan cevizi şurubu\"}",
+    "externalId": "wikidata-q67890691"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Pu-erh tea\",\"preferredUnit\":\"g\",\"tr\":\"Pu-erh çayı\"}",
+    "externalId": "wikidata-q690098"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"traditional-drinks\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Salep flour\",\"preferredUnit\":\"g\",\"tr\":\"Salep unu\"}",
+    "externalId": "wikidata-q693187"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Sugarcane juice\",\"preferredUnit\":\"mL\",\"tr\":\"Şeker kamışı suyu\"}",
+    "externalId": "wikidata-q718680"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"spirits\"],\"dimensions\":[\"volume\"],\"en\":\"Cachaça\",\"preferredUnit\":\"mL\",\"tr\":\"Cachaça\"}",
+    "externalId": "wikidata-q744729"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"tea\"],\"dimensions\":[\"mass\"],\"en\":\"Matcha powder\",\"preferredUnit\":\"g\",\"tr\":\"Matcha tozu\"}",
+    "externalId": "wikidata-q822331"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Rose water\",\"preferredUnit\":\"mL\",\"tr\":\"Gül suyu\"}",
+    "externalId": "wikidata-q900450"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Orange blossom water\",\"preferredUnit\":\"mL\",\"tr\":\"Portakal çiçeği suyu\"}",
+    "externalId": "wikidata-q902582"
+  },
+  {
+    "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"infusions\"],\"dimensions\":[\"mass\"],\"en\":\"Yerba mate leaf\",\"preferredUnit\":\"g\",\"tr\":\"Yerba mate yaprağı\"}",
+    "externalId": "wikidata-q96098098"
+  }
+]

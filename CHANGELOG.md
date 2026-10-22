@@ -1,5 +1,11 @@
 # Changelog
 
+## M3D-5 — Beverage catalog Release 11 (2026-10-22, unreleased)
+
+- Screened 85 source-traceable beverage candidates: 59 accepted, 16 deferred and 10 already represented. Added 27 USDA SR Legacy and 32 pinned Wikidata identities; the bundled catalog has 854 canonical ingredients (666 food / 188 beverage), 269 aliases and 50 unchanged categories.
+- Archived Release 10 unchanged, introduced new immutable source/version evidence and original bilingual editorial labels, and kept all prior canonical records and user data compatible. No empirical ABV, nutrition, density or allergen values were inferred; no database migration or application-version change.
+- Added reproducible preparation and quality reports plus real SQLite fresh/v7–v10 upgrade, idempotency, offline, source-conflict rollback and preservation checks. Native arm64 `.app` startup/restart passed in an isolated profile; GUI manual acceptance, local DMG packaging and cross-platform CI remain separate gates.
+
 ## M3D-4 — Regional and global catalog Release 10 (2026-10-19, unreleased)
 
 - Screened 65 source-traceable candidates: 50 accepted, 9 deferred, 4 already represented and 2 rejected. Added 35 USDA Foundation Foods and 15 pinned Wikidata identities. The bundled catalog now has 795 identities (666 food / 129 beverage), 269 aliases and 50 categories; direct Turkish-regional memberships increased from 16 to 27.

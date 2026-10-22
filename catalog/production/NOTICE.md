@@ -84,3 +84,16 @@ recorded in the manifest and `docs/CATALOG_M3D4_SOURCE_EVALUATION.md`.
 Version 10 retains all 745 Release-9 identities, 269 aliases and 50 category
 nodes; Release 9 is archived unchanged. Neither a regional catalog label nor
 a Wikidata QID certifies protected geographical origin for a user's ingredient.
+
+Version 11 adds 27 selected USDA SR Legacy beverage descriptors and 32 selected
+Wikidata structured beverage identities. The official April 2018 USDA archive
+has SHA-256 `b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0`;
+46 Wikidata candidate revisions and their response hashes are pinned under
+`catalog/preparation/m3d5`. The new source versions are
+`usda-sr-legacy-m3d5/2018-04-selection-8`,
+`wikidata-m3d5/entity-revisions-2026-10-22-1` and
+`recipeatlas-curation-m3d5/production-8`. Source facts and original bilingual
+editorial labels remain separate; no independent human linguistic approval,
+product ABV, nutrition, density, allergen, health or protected-origin claim is
+made. Release 10 is archived byte-for-byte at `catalog/releases/10`. Release 11
+contains 854 identities, 269 aliases and 50 category nodes.

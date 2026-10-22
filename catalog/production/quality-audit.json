@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "capitalizationAndTranslationWarnings": [],
   "conceptReviewCandidates": [
     {
@@ -80,6 +80,14 @@
         "usda-sr-173756",
         "usda-sr-173757",
         "usda-sr-173800"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
+      "concept": "cocoa drink mix powder",
+      "keys": [
+        "usda-sr-171886",
+        "usda-sr-174122"
       ],
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
@@ -286,6 +294,14 @@
       "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
     },
     {
+      "concept": "tart cherry juice",
+      "keys": [
+        "usda-foundation-2727589",
+        "usda-sr-167807"
+      ],
+      "meaning": "Same English base label; qualified culinary forms may be distinct. Not automatically merged."
+    },
+    {
       "concept": "tomatillo",
       "keys": [
         "usda-foundation-2727582",
@@ -303,8 +319,8 @@
     }
   ],
   "previousIdentities": 482,
-  "auditedIdentities": 795,
-  "newlyAddedIdentities": 313,
+  "auditedIdentities": 854,
+  "newlyAddedIdentities": 372,
   "stableHistoricalIds": 482,
   "structuralErrors": [],
   "aliasCollisionCandidates": [],

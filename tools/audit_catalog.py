@@ -106,7 +106,7 @@ def audit():
         source_ids = {p['sourceId'] for p in i['provenance']}
         if ((key.startswith('usda-sr-') and not any(s.startswith('usda-sr-legacy') for s in source_ids))
                 or (key.startswith('usda-foundation-') and 'usda-foundation-m3d4' not in source_ids)
-                or (key.startswith('wikidata-') and 'wikidata-m3d4' not in source_ids)
+                or (key.startswith('wikidata-') and not source_ids.intersection({'wikidata-m3d4', 'wikidata-m3d5'}))
                 or (key.startswith('project-') and any(s.startswith(('usda-', 'wikidata-')) for s in source_ids))):
             errors.append({'key': key, 'problem': 'Incorrect source identity ownership'})
         if any(word in i['names']['en'].lower() for word in ('powder', 'flour')) and i['preferredUnit'] != 'g':

@@ -1,0 +1,110 @@
+[
+  {
+    "description": "Tomato and vegetable juice, low sodium",
+    "externalId": "167708"
+  },
+  {
+    "description": "Prune juice, canned",
+    "externalId": "167753"
+  },
+  {
+    "description": "Orange Pineapple Juice Blend",
+    "externalId": "167792"
+  },
+  {
+    "description": "Cherry juice, tart",
+    "externalId": "167807"
+  },
+  {
+    "description": "Fruit syrup",
+    "externalId": "167953"
+  },
+  {
+    "description": "Pineapple juice, canned or bottled, unsweetened, with added ascorbic acid",
+    "externalId": "168187"
+  },
+  {
+    "description": "Apple juice, frozen concentrate, unsweetened, undiluted, with added ascorbic acid",
+    "externalId": "168188"
+  },
+  {
+    "description": "Raspberry juice concentrate",
+    "externalId": "168217"
+  },
+  {
+    "description": "Alcoholic beverage, wine, cooking",
+    "externalId": "169070"
+  },
+  {
+    "description": "Chicory roots, raw",
+    "externalId": "169993"
+  },
+  {
+    "description": "Beverages, Cocoa mix, no sugar added, powder",
+    "externalId": "171886"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Merlot",
+    "externalId": "171925"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Riesling",
+    "externalId": "173200"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Sauvignon Blanc",
+    "externalId": "173201"
+  },
+  {
+    "description": "Beverages, Malted drink mix, natural, powder, dairy based.",
+    "externalId": "173220"
+  },
+  {
+    "description": "Lemonade, frozen concentrate, pink",
+    "externalId": "173666"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Chardonnay",
+    "externalId": "174110"
+  },
+  {
+    "description": "Beverages, Cocoa mix, powder",
+    "externalId": "174122"
+  },
+  {
+    "description": "Beverages, coffee substitute, cereal grain beverage, powder",
+    "externalId": "174138"
+  },
+  {
+    "description": "Beverages, Whiskey sour mix, bottled",
+    "externalId": "174811"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Cabernet Sauvignon",
+    "externalId": "174833"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Pinot Noir",
+    "externalId": "174835"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Syrah",
+    "externalId": "174836"
+  },
+  {
+    "description": "Alcoholic Beverage, wine, table, red, Sangiovese",
+    "externalId": "174839"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Pinot Gris (Grigio)",
+    "externalId": "174841"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Gewurztraminer",
+    "externalId": "174843"
+  },
+  {
+    "description": "Alcoholic beverage, wine, table, white, Muscat",
+    "externalId": "174849"
+  }
+]

@@ -36,7 +36,7 @@ class CatalogAuditTests(unittest.TestCase):
     def test_real_catalog_audit_and_stable_history(self):
         self.run_audit()
         report = json.loads((audit_catalog.OUT / 'quality-audit.json').read_text())
-        self.assertEqual(report['auditedIdentities'], 795)
+        self.assertEqual(report['auditedIdentities'], 854)
         self.assertEqual(report['stableHistoricalIds'], 482)
         self.assertEqual(report['linguisticReviewCount'], 6)
         self.assertEqual(report['historicalLinguisticReviewCount'], 3)

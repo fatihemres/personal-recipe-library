@@ -14,7 +14,7 @@ def upgrade(version):
     with tempfile.TemporaryDirectory(prefix='recipeatlas-m3d4-upgrade-') as name:
         directory = Path(name)
         prior = ROOT / f'catalog/releases/{version}/manifest.json'
-        current = ROOT / 'catalog/production/manifest.json'
+        current = ROOT / 'catalog/releases/10/manifest.json'
         first = json.loads(subprocess.run([str(CLI), str(directory), str(prior)], check=True,
                                           capture_output=True, text=True).stdout)
         start = time.perf_counter()
@@ -35,13 +35,13 @@ def main():
     parser.add_argument('--check', action='store_true', help='Verify live SQLite counts without writing measured outputs')
     args = parser.parse_args()
     baseline = measure(ROOT / 'catalog/releases/9/manifest.json')
-    current = measure(ROOT / 'catalog/production/manifest.json')
+    current = measure(ROOT / 'catalog/releases/10/manifest.json')
     expected = {'catalog_ingredients': 795, 'catalog_aliases': 269, 'ingredient_categories': 50}
     assert baseline['totals'] == {'catalog_ingredients': 745, 'catalog_aliases': 269, 'ingredient_categories': 50}
     assert current['totals'] == expected
     assert current['ingredientTypes'] == {'food': 666, 'beverage': 129}
     assert current['integrity'] == 'ok' and current['foreignKeyViolations'] == 0
-    coverage = json.loads((ROOT / 'catalog/production/coverage.json').read_text(encoding='utf-8'))
+    coverage = json.loads((ROOT / 'catalog/releases/10/coverage.json').read_text(encoding='utf-8'))
     assert coverage['total'] == 795 and coverage['aliases'] == 269 and coverage['categoryNodes'] == 50
     direct = {category['key']: category['directCount'] for category in current['categories']}
     assert {key: count for key, count in direct.items() if count} == coverage['categoryMembershipCounts']
@@ -50,7 +50,7 @@ def main():
     if not args.check:
         report = dict(method='Real Rust catalog_import CLI on disposable SQLite profiles; category counts are direct unique memberships and overlap.',
                       baseline=baseline, current=current, upgrades=upgrades)
-        (ROOT / 'catalog/production/m3d4-sqlite-report.json').write_text(
+        (ROOT / 'catalog/releases/10/m3d4-sqlite-report.json').write_text(
             json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         old = {category['key']: category['directCount'] for category in baseline['categories']}
         lines = ['# Release 10 SQLite-backed category coverage', '',

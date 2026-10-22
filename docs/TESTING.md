@@ -1,5 +1,17 @@
 # Application testing
 
+## M3D-5 Release 11 local verification — 2026-10-22
+
+The committed candidate ledger and pinned evidence regenerate **59** beverage additions over archived Release 10. `tools/fetch_m3d5_wikidata.py`, candidate/catalog `--check`, the static audit and seven Python catalog suites passed; the audit reports zero structural errors and exact normalized alias collisions. The real Rust importer completed isolated fresh and v7/v8/v9/v10 upgrades, repeats and SQLite integrity checks; a process-local network-denial run completed 29 imports/opens outside the nested tool sandbox. Two new Rust regressions verify cross-version preservation, search and `CATALOG_SOURCE_CHANGED` rollback. The full Rust library suite passed **80/80**.
+
+TypeScript, ESLint, **56/56** frontend tests, **2/2** Chromium browser tests, Cargo fmt/check/Clippy, version consistency and frontend production build passed. The unsigned production arm64 `.app` compiled and launched with temporary identifier `com.recipeatlas.m3d5-verification`; SQLite installed Release 11 (854/269/50, schema 5), maintained one successful import after a full process relaunch, and passed integrity/foreign-key checks. A local DMG packaging step failed at `bundle_dmg.sh` twice without a more specific Tauri diagnostic; the subsequent macOS PR runner passed packaging. The Mac was locked and computer-use could not access the app window, so no Release-11 GUI clicks are claimed. See [CATALOG_M3D5_NATIVE_VERIFICATION.md](CATALOG_M3D5_NATIVE_VERIFICATION.md) for measurements and limits. Intel macOS and Windows package tests passed in PR CI; their application GUI behavior remains unverified.
+
+Reproduce the catalog checks with the commands in [CATALOG_IMPORT_PIPELINE.md](CATALOG_IMPORT_PIPELINE.md). Tests use disposable SQLite profiles; never pass the normal application profile. Browser tests do not establish native SQLite persistence.
+
+## M3D-5 Release 11 PR verification — 2026-10-22
+
+[PR #4 run 39758125378](https://github.com/fatihemres/personal-recipe-library/actions/runs/39758125378) passed all five required jobs after a generated coverage-report newline mismatch in the initial run was corrected. Frontend/browser, Linux Rust/SQLite/catalog, macOS arm64, macOS Intel and Windows x64 each succeeded. The three native jobs ran Rust/SQLite tests before creating unsigned app/DMG or NSIS packages. Downloaded artifacts supplied five packaged files, all passing their SHA-256 manifests. The isolated local arm64 production app launched and restarted with catalog Release 11; GUI interaction was unavailable because the Mac was locked. Intel/Windows application launch and GUI workflows remain unverified. See [CATALOG_M3D5_NATIVE_VERIFICATION.md](CATALOG_M3D5_NATIVE_VERIFICATION.md).
+
 ## Commands
 
 ```sh

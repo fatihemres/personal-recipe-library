@@ -1,0 +1,130 @@
+[
+  {
+    "description": "{\"descriptions\":{\"en\":\"seed from Coffea arabica\",\"tr\":null},\"labels\":{\"en\":\"arabica coffee bean\",\"tr\":null},\"qid\":\"Q104218426\",\"revision\":2553202629}",
+    "externalId": "Q104218426"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"seed from Coffea robusta\",\"tr\":null},\"labels\":{\"en\":\"robusta coffee bean\",\"tr\":null},\"qid\":\"Q104246054\",\"revision\":2298829264}",
+    "externalId": "Q104246054"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"peel from the fruit of Citrus × paradisi\",\"tr\":null},\"labels\":{\"en\":\"grapefruit peel\",\"tr\":null},\"qid\":\"Q104704742\",\"revision\":2072868836}",
+    "externalId": "Q104704742"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"preserved, sweetened cherry\",\"tr\":null},\"labels\":{\"en\":\"maraschino cherry\",\"tr\":\"maraska kirazı\"},\"qid\":\"Q1078150\",\"revision\":2552859385}",
+    "externalId": "Q1078150"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"mixture of concentrated lime and sugar, sometimes used for cocktails\",\"tr\":null},\"labels\":{\"en\":\"lime cordial\",\"tr\":null},\"qid\":\"Q12324500\",\"revision\":2105475208}",
+    "externalId": "Q12324500"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"sugar syrup flavoured with rose\",\"tr\":null},\"labels\":{\"en\":\"rose syrup\",\"tr\":null},\"qid\":\"Q12424061\",\"revision\":2499509859}",
+    "externalId": "Q12424061"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"natural juice extracted from soursop pulp\",\"tr\":null},\"labels\":{\"en\":\"soursop juice\",\"tr\":null},\"qid\":\"Q138542182\",\"revision\":2472301536}",
+    "externalId": "Q138542182"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"leaf of the pandan plant, Pandanus amaryllifolius\",\"tr\":null},\"labels\":{\"en\":\"pandan leaf\",\"tr\":null},\"qid\":\"Q139500622\",\"revision\":2499725578}",
+    "externalId": "Q139500622"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Concentrated tamarind product produced from tamarind pulp\",\"tr\":null},\"labels\":{\"en\":\"Tamarind Concentrate\",\"tr\":null},\"qid\":\"Q140136320\",\"revision\":2503675331}",
+    "externalId": "Q140136320"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"carbonated beverage\",\"tr\":null},\"labels\":{\"en\":\"ginger beer\",\"tr\":\"zencefil birası\"},\"qid\":\"Q1448819\",\"revision\":2547938869}",
+    "externalId": "Q1448819"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"coffee beans ground into grit or powder for ease of brewing\",\"tr\":null},\"labels\":{\"en\":\"ground coffee\",\"tr\":null},\"qid\":\"Q1721046\",\"revision\":2554951949}",
+    "externalId": "Q1721046"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant\",\"tr\":null},\"labels\":{\"en\":\"white tea\",\"tr\":\"Beyaz Çay\"},\"qid\":\"Q238306\",\"revision\":2515855379}",
+    "externalId": "Q238306"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"syrup extracted from dates\",\"tr\":null},\"labels\":{\"en\":\"date honey\",\"tr\":null},\"qid\":\"Q2916133\",\"revision\":2545657337}",
+    "externalId": "Q2916133"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"variety of orange liqueur\",\"tr\":null},\"labels\":{\"en\":\"triple sec\",\"tr\":\"Triple sec\"},\"qid\":\"Q3539556\",\"revision\":2541565598}",
+    "externalId": "Q3539556"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"pearl onion pickled in a brine\",\"tr\":null},\"labels\":{\"en\":\"cocktail onion\",\"tr\":null},\"qid\":\"Q5139704\",\"revision\":2491875560}",
+    "externalId": "Q5139704"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"sweetened coffee concentrate\",\"tr\":null},\"labels\":{\"en\":\"coffee syrup\",\"tr\":null},\"qid\":\"Q5140965\",\"revision\":1772701455}",
+    "externalId": "Q5140965"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Japanese green tea mixed with brown rice\",\"tr\":null},\"labels\":{\"en\":\"genmaicha\",\"tr\":\"Genmaicha\"},\"qid\":\"Q519365\",\"revision\":2528538641}",
+    "externalId": "Q519365"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"Caribbean syrup used in drinks\",\"tr\":null},\"labels\":{\"en\":\"Falernum\",\"tr\":\"Falernum\"},\"qid\":\"Q5431859\",\"revision\":2345004393}",
+    "externalId": "Q5431859"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"anise-flavored liqueur\",\"tr\":null},\"labels\":{\"en\":\"anisette\",\"tr\":\"Anisette\"},\"qid\":\"Q548940\",\"revision\":2544828344}",
+    "externalId": "Q548940"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"drink made from infusing water with rooibos (Aspalathus linearis) leaves\",\"tr\":null},\"labels\":{\"en\":\"rooibos\",\"tr\":null},\"qid\":\"Q56342268\",\"revision\":2519059514}",
+    "externalId": "Q56342268"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"tea scented with jasmine blossoms customary to China\",\"tr\":\"Çin'e özgü yasemin çiçeği aromalı çay\"},\"labels\":{\"en\":\"jasmine tea\",\"tr\":\"yasemin çayı\"},\"qid\":\"Q60855\",\"revision\":2517100551}",
+    "externalId": "Q60855"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"cocktail flavoring\",\"tr\":null},\"labels\":{\"en\":\"orange bitters\",\"tr\":null},\"qid\":\"Q654895\",\"revision\":2480702257}",
+    "externalId": "Q654895"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"edible flower of Sambucus nigra\",\"tr\":null},\"labels\":{\"en\":\"elderflower\",\"tr\":null},\"qid\":\"Q67778134\",\"revision\":2488966625}",
+    "externalId": "Q67778134"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"syrup made of coconuts\",\"tr\":null},\"labels\":{\"en\":\"coconut syrup\",\"tr\":null},\"qid\":\"Q67890691\",\"revision\":1342639707}",
+    "externalId": "Q67890691"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"variety of fermented tea produced in the Yunnan province of China\",\"tr\":null},\"labels\":{\"en\":\"pu'er\",\"tr\":\"Pu-erh çayı\"},\"qid\":\"Q690098\",\"revision\":2540411259}",
+    "externalId": "Q690098"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"flour made from the tubers of the orchid genus Orchis\",\"tr\":null},\"labels\":{\"en\":\"salep\",\"tr\":\"salep\"},\"qid\":\"Q693187\",\"revision\":2555119039}",
+    "externalId": "Q693187"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"liquid extracted from sugarcane\",\"tr\":null},\"labels\":{\"en\":\"sugarcane juice\",\"tr\":null},\"qid\":\"Q718680\",\"revision\":2557409707}",
+    "externalId": "Q718680"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"distilled alcoholic beverage\",\"tr\":null},\"labels\":{\"en\":\"cachaça\",\"tr\":\"Kaşasa\"},\"qid\":\"Q744729\",\"revision\":2527915221}",
+    "externalId": "Q744729"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"finely powdered green tea\",\"tr\":\"özel olarak yetiştirilen ve işlenen öğütülmüş bir yeşil çay tozu\"},\"labels\":{\"en\":\"matcha\",\"tr\":\"maça çayı\"},\"qid\":\"Q822331\",\"revision\":2555390591}",
+    "externalId": "Q822331"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"flavoured water made by distilling rose petals with water\",\"tr\":\"gül yapraklarından yapılan ıtırlı sıvı\"},\"labels\":{\"en\":\"rose water\",\"tr\":\"gülsuyu\"},\"qid\":\"Q900450\",\"revision\":2557908370}",
+    "externalId": "Q900450"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"clear, perfumed distillation of fresh bitter-orange blossoms\",\"tr\":null},\"labels\":{\"en\":\"orange flower water\",\"tr\":null},\"qid\":\"Q902582\",\"revision\":2340260293}",
+    "externalId": "Q902582"
+  },
+  {
+    "description": "{\"descriptions\":{\"en\":\"leaf of the yerba mate plant used to prepare infusions\",\"tr\":null},\"labels\":{\"en\":\"yerba mate leaf\",\"tr\":null},\"qid\":\"Q96098098\",\"revision\":2559474474}",
+    "externalId": "Q96098098"
+  }
+]

@@ -1,0 +1,646 @@
+[
+  {
+    "descriptions": {
+      "en": "seed from Coffea arabica",
+      "tr": null
+    },
+    "labels": {
+      "en": "arabica coffee bean",
+      "tr": null
+    },
+    "qid": "Q104218426",
+    "revision": 2553202629,
+    "snapshotSha256": "c429d5919d139c573078c9e76244f403aacb65dfa5bf8681b46d99cbc66d197f",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q104218426.json?revision=2553202629"
+  },
+  {
+    "descriptions": {
+      "en": "seed from Coffea robusta",
+      "tr": null
+    },
+    "labels": {
+      "en": "robusta coffee bean",
+      "tr": null
+    },
+    "qid": "Q104246054",
+    "revision": 2298829264,
+    "snapshotSha256": "fd48829f894742e4eab43d2b6db36030de25eab3221639e73413161bacc46246",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q104246054.json?revision=2298829264"
+  },
+  {
+    "descriptions": {
+      "en": "peel from the fruit of Citrus × paradisi",
+      "tr": null
+    },
+    "labels": {
+      "en": "grapefruit peel",
+      "tr": null
+    },
+    "qid": "Q104704742",
+    "revision": 2072868836,
+    "snapshotSha256": "2ff18820b1becd0c284b20d1e9cb7c6622528a0d7c3d142df713a71c6530a432",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q104704742.json?revision=2072868836"
+  },
+  {
+    "descriptions": {
+      "en": "preserved, sweetened cherry",
+      "tr": null
+    },
+    "labels": {
+      "en": "maraschino cherry",
+      "tr": "maraska kirazı"
+    },
+    "qid": "Q1078150",
+    "revision": 2552859385,
+    "snapshotSha256": "cc5908ece2de7274862eee5facf7a3e66df8c991e3cdc10213acb4fe7c282bc2",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1078150.json?revision=2552859385"
+  },
+  {
+    "descriptions": {
+      "en": "thick coconut milk used as ingredient",
+      "tr": null
+    },
+    "labels": {
+      "en": "coconut cream",
+      "tr": null
+    },
+    "qid": "Q1139302",
+    "revision": 2557691597,
+    "snapshotSha256": "a231499c952071d4603f6490d8051c5642a77b71521f6e0ed46ba18f1f20010d",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1139302.json?revision=2557691597"
+  },
+  {
+    "descriptions": {
+      "en": "mixture of concentrated lime and sugar, sometimes used for cocktails",
+      "tr": null
+    },
+    "labels": {
+      "en": "lime cordial",
+      "tr": null
+    },
+    "qid": "Q12324500",
+    "revision": 2105475208,
+    "snapshotSha256": "cf7c0f53d91a0224db85c57e4b46043e2f4007f9ccf01da75d6d0b0f25ed2a59",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q12324500.json?revision=2105475208"
+  },
+  {
+    "descriptions": {
+      "en": "sugar syrup flavoured with rose",
+      "tr": null
+    },
+    "labels": {
+      "en": "rose syrup",
+      "tr": null
+    },
+    "qid": "Q12424061",
+    "revision": 2499509859,
+    "snapshotSha256": "1140d2d9f1742754b73021f8e2bd96680ce5a5fc1c98bdf129b10cd0090e905a",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q12424061.json?revision=2499509859"
+  },
+  {
+    "descriptions": {
+      "en": "ingredient for cocktails",
+      "tr": null
+    },
+    "labels": {
+      "en": null,
+      "tr": null
+    },
+    "qid": "Q134967538",
+    "revision": 2362747775,
+    "snapshotSha256": "01d0b660b60ea6c23255b427c1a26c974a10c3ef3d5b04daf4a92fbf0d41eabd",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q134967538.json?revision=2362747775"
+  },
+  {
+    "descriptions": {
+      "en": "ingredient for cocktails",
+      "tr": null
+    },
+    "labels": {
+      "en": null,
+      "tr": null
+    },
+    "qid": "Q134967545",
+    "revision": 2362747810,
+    "snapshotSha256": "b6d110bb2ec9ed4d440691f0a7d51f329dffad07e670e82b008b24b1e5dd3f3b",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q134967545.json?revision=2362747810"
+  },
+  {
+    "descriptions": {
+      "en": "syrup made from sugar and water only",
+      "tr": null
+    },
+    "labels": {
+      "en": "sugar syrup",
+      "tr": null
+    },
+    "qid": "Q1377087",
+    "revision": 2518519654,
+    "snapshotSha256": "ca9d15b44d5c5cf952605a0f16d6a4fa70a289c8d5e94697ea743da2f31a1f42",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1377087.json?revision=2518519654"
+  },
+  {
+    "descriptions": {
+      "en": "natural juice extracted from soursop pulp",
+      "tr": null
+    },
+    "labels": {
+      "en": "soursop juice",
+      "tr": null
+    },
+    "qid": "Q138542182",
+    "revision": 2472301536,
+    "snapshotSha256": "678284c461095663d5ddcd3706e3c261b53349b628a034e70af8eb276e87729c",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q138542182.json?revision=2472301536"
+  },
+  {
+    "descriptions": {
+      "en": "leaf of the pandan plant, Pandanus amaryllifolius",
+      "tr": null
+    },
+    "labels": {
+      "en": "pandan leaf",
+      "tr": null
+    },
+    "qid": "Q139500622",
+    "revision": 2499725578,
+    "snapshotSha256": "74e6ed2705ba8f8dedf4fa911e68b58c75f0b97000db75d5b238bc44dac92ce4",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q139500622.json?revision=2499725578"
+  },
+  {
+    "descriptions": {
+      "en": "Concentrated tamarind product produced from tamarind pulp",
+      "tr": null
+    },
+    "labels": {
+      "en": "Tamarind Concentrate",
+      "tr": null
+    },
+    "qid": "Q140136320",
+    "revision": 2503675331,
+    "snapshotSha256": "c803d07d865585681506532f877d53e543643ac2a1bf8e6e05696b3294048876",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q140136320.json?revision=2503675331"
+  },
+  {
+    "descriptions": {
+      "en": "flowers of several daisy-like plants referred to as chamomile, especially Matricaria chamomilla and Chamaemelum nobile",
+      "tr": null
+    },
+    "labels": {
+      "en": "chamomile flowers",
+      "tr": null
+    },
+    "qid": "Q140606571",
+    "revision": 2519135459,
+    "snapshotSha256": "91ea61fcd40f9711077b9896eb8a9bad0097d6b68e256f9fd2a41c3c57dd84bc",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q140606571.json?revision=2519135459"
+  },
+  {
+    "descriptions": {
+      "en": "carbonated beverage",
+      "tr": null
+    },
+    "labels": {
+      "en": "ginger beer",
+      "tr": "zencefil birası"
+    },
+    "qid": "Q1448819",
+    "revision": 2547938869,
+    "snapshotSha256": "4f2158631018ef9803b93c1a817dfb925e3270f0abb68d37ff78f1544559ca7b",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1448819.json?revision=2547938869"
+  },
+  {
+    "descriptions": {
+      "en": "coffee beans ground into grit or powder for ease of brewing",
+      "tr": null
+    },
+    "labels": {
+      "en": "ground coffee",
+      "tr": null
+    },
+    "qid": "Q1721046",
+    "revision": 2554951949,
+    "snapshotSha256": "e2e1f31f838adccc8306dc0df69ded258185c042b3572e646999dec223ac5c66",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1721046.json?revision=2554951949"
+  },
+  {
+    "descriptions": {
+      "en": "drink made from yoghurt with soda water and salt, and sometimes also vodka",
+      "tr": "ana malzemesi yoğurt ve su olan geleneksel içecek"
+    },
+    "labels": {
+      "en": "ayran",
+      "tr": "ayran"
+    },
+    "qid": "Q192892",
+    "revision": 2503035945,
+    "snapshotSha256": "b9130ca091011bcc29f088ec0d16980b6cf5e74769fbcafb0ceb25b9d5139744",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q192892.json?revision=2503035945"
+  },
+  {
+    "descriptions": {
+      "en": "one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant",
+      "tr": null
+    },
+    "labels": {
+      "en": "white tea",
+      "tr": "Beyaz Çay"
+    },
+    "qid": "Q238306",
+    "revision": 2515855379,
+    "snapshotSha256": "49e5a76c0f73211e1907936d734bfe5634075131106f345679750f95afdffd33",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q238306.json?revision=2515855379"
+  },
+  {
+    "descriptions": {
+      "en": null,
+      "tr": null
+    },
+    "labels": {
+      "en": "red vermouth",
+      "tr": null
+    },
+    "qid": "Q26877308",
+    "revision": 2519003230,
+    "snapshotSha256": "62be20a00508dd5f7d00612540f4b59bf0b1eb511ae7c89ae15e98990b2ff10e",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q26877308.json?revision=2519003230"
+  },
+  {
+    "descriptions": {
+      "en": null,
+      "tr": null
+    },
+    "labels": {
+      "en": "dry vermouth",
+      "tr": "sek vermut"
+    },
+    "qid": "Q26877423",
+    "revision": 2467741375,
+    "snapshotSha256": "6ff5948cd66ed92df4e22bc92322860d43809b47c25baf5aaa57b10987240858",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q26877423.json?revision=2467741375"
+  },
+  {
+    "descriptions": {
+      "en": null,
+      "tr": null
+    },
+    "labels": {
+      "en": "passion fruit syrup",
+      "tr": null
+    },
+    "qid": "Q27670710",
+    "revision": 2259953113,
+    "snapshotSha256": "a39b4faaffb7ad155ea674a8494ce7ada6da857911a8b7401eab0b9d1816ebfa",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q27670710.json?revision=2259953113"
+  },
+  {
+    "descriptions": {
+      "en": "herbal tea",
+      "tr": null
+    },
+    "labels": {
+      "en": "butterfly pea flower tea",
+      "tr": null
+    },
+    "qid": "Q28208975",
+    "revision": 2457296121,
+    "snapshotSha256": "a21a0db22e21431775e240b7fd87179124a108f6d6525fa6c50f0d02cc86463d",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q28208975.json?revision=2457296121"
+  },
+  {
+    "descriptions": {
+      "en": "syrup extracted from dates",
+      "tr": null
+    },
+    "labels": {
+      "en": "date honey",
+      "tr": null
+    },
+    "qid": "Q2916133",
+    "revision": 2545657337,
+    "snapshotSha256": "88d8415a4f8dfb62f007b3da952dde1c9028940a9a404e75bf54d45558e42281",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2916133.json?revision=2545657337"
+  },
+  {
+    "descriptions": {
+      "en": "food additive",
+      "tr": null
+    },
+    "labels": {
+      "en": "barley malt syrup",
+      "tr": null
+    },
+    "qid": "Q3485291",
+    "revision": 2456084613,
+    "snapshotSha256": "125fe3388978027f8a2332517cc4a6ead6b0f111cde6a7ec053bbbb8b6c65c54",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3485291.json?revision=2456084613"
+  },
+  {
+    "descriptions": {
+      "en": "variety of orange liqueur",
+      "tr": null
+    },
+    "labels": {
+      "en": "triple sec",
+      "tr": "Triple sec"
+    },
+    "qid": "Q3539556",
+    "revision": 2541565598,
+    "snapshotSha256": "f30294e0daf787f5770c6b1312940d8e08ff2a726c65e8374026b93c2888e85f",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q3539556.json?revision=2541565598"
+  },
+  {
+    "descriptions": {
+      "en": "sweetener",
+      "tr": null
+    },
+    "labels": {
+      "en": "agave syrup",
+      "tr": "Agave şurubu"
+    },
+    "qid": "Q392001",
+    "revision": 2498565958,
+    "snapshotSha256": "09484c4ae1001b3af82dd86ddd54b3e1fcde282a1c5a744a417f569f290d8070",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q392001.json?revision=2498565958"
+  },
+  {
+    "descriptions": {
+      "en": "pearl onion pickled in a brine",
+      "tr": null
+    },
+    "labels": {
+      "en": "cocktail onion",
+      "tr": null
+    },
+    "qid": "Q5139704",
+    "revision": 2491875560,
+    "snapshotSha256": "ed3a8806b912ea8c7584cd91bc154e04ae36d9158fde793419e74fde2559d506",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5139704.json?revision=2491875560"
+  },
+  {
+    "descriptions": {
+      "en": "sweetened coffee concentrate",
+      "tr": null
+    },
+    "labels": {
+      "en": "coffee syrup",
+      "tr": null
+    },
+    "qid": "Q5140965",
+    "revision": 1772701455,
+    "snapshotSha256": "1df9fd880bdce03ede8509abcc8255e9779071f8ca169a93227ef8de8b1326fd",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5140965.json?revision=1772701455"
+  },
+  {
+    "descriptions": {
+      "en": "Japanese green tea mixed with brown rice",
+      "tr": null
+    },
+    "labels": {
+      "en": "genmaicha",
+      "tr": "Genmaicha"
+    },
+    "qid": "Q519365",
+    "revision": 2528538641,
+    "snapshotSha256": "ce49594e3b9368679f2594aca4fbb846bfaab2da6896f77f58730c72487455bb",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q519365.json?revision=2528538641"
+  },
+  {
+    "descriptions": {
+      "en": "Caribbean syrup used in drinks",
+      "tr": null
+    },
+    "labels": {
+      "en": "Falernum",
+      "tr": "Falernum"
+    },
+    "qid": "Q5431859",
+    "revision": 2345004393,
+    "snapshotSha256": "cc75202baa7f73b084ee3fa892ad57bbdad15e9b62b3c43e00d661975f95fdee",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q5431859.json?revision=2345004393"
+  },
+  {
+    "descriptions": {
+      "en": "anise-flavored liqueur",
+      "tr": null
+    },
+    "labels": {
+      "en": "anisette",
+      "tr": "Anisette"
+    },
+    "qid": "Q548940",
+    "revision": 2544828344,
+    "snapshotSha256": "e659f1fcf95b91c2f0000e67922a4403e5ac983b4a407c04bc7cc56ef4c86997",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q548940.json?revision=2544828344"
+  },
+  {
+    "descriptions": {
+      "en": "drink made from infusing water with rooibos (Aspalathus linearis) leaves",
+      "tr": null
+    },
+    "labels": {
+      "en": "rooibos",
+      "tr": null
+    },
+    "qid": "Q56342268",
+    "revision": 2519059514,
+    "snapshotSha256": "358b7b0ab9644613b2052fb16c76799f271f10ef2602e0711a38f3dee7e617d8",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q56342268.json?revision=2519059514"
+  },
+  {
+    "descriptions": {
+      "en": "tea scented with jasmine blossoms customary to China",
+      "tr": "Çin'e özgü yasemin çiçeği aromalı çay"
+    },
+    "labels": {
+      "en": "jasmine tea",
+      "tr": "yasemin çayı"
+    },
+    "qid": "Q60855",
+    "revision": 2517100551,
+    "snapshotSha256": "2f95f885a09fdb27b7213c01796fa36e47605b8a25cc6b3ccb14099d83917478",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q60855.json?revision=2517100551"
+  },
+  {
+    "descriptions": {
+      "en": "clear liquid inside young coconuts",
+      "tr": "hindistan cevizinin içindeki berrak sıvı"
+    },
+    "labels": {
+      "en": "coconut water",
+      "tr": "hindistan cevizi suyu"
+    },
+    "qid": "Q633401",
+    "revision": 2485411841,
+    "snapshotSha256": "21d0e7d943fa9ba17ae806f615e043eb719a302da07d2146c2e5703cadca24d9",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q633401.json?revision=2485411841"
+  },
+  {
+    "descriptions": {
+      "en": "cocktail flavoring",
+      "tr": null
+    },
+    "labels": {
+      "en": "orange bitters",
+      "tr": null
+    },
+    "qid": "Q654895",
+    "revision": 2480702257,
+    "snapshotSha256": "ed4a9596b4388c692aa35921522467d3e224ad621a5ffe96e79161290041670b",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q654895.json?revision=2480702257"
+  },
+  {
+    "descriptions": {
+      "en": "edible flower of Sambucus nigra",
+      "tr": null
+    },
+    "labels": {
+      "en": "elderflower",
+      "tr": null
+    },
+    "qid": "Q67778134",
+    "revision": 2488966625,
+    "snapshotSha256": "1be3b11dcfcdc58e7ff08a8e84da0cd519035ca7b459282865bf8ff8913a27ac",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q67778134.json?revision=2488966625"
+  },
+  {
+    "descriptions": {
+      "en": "syrup made of coconuts",
+      "tr": null
+    },
+    "labels": {
+      "en": "coconut syrup",
+      "tr": null
+    },
+    "qid": "Q67890691",
+    "revision": 1342639707,
+    "snapshotSha256": "346fe4b351ac7e2b993dbdff05bbde87a5ff2cc5f89c732764d80d5694986a72",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q67890691.json?revision=1342639707"
+  },
+  {
+    "descriptions": {
+      "en": "variety of fermented tea produced in the Yunnan province of China",
+      "tr": null
+    },
+    "labels": {
+      "en": "pu'er",
+      "tr": "Pu-erh çayı"
+    },
+    "qid": "Q690098",
+    "revision": 2540411259,
+    "snapshotSha256": "e456b774e410d0bca15adfad7f9cd2dd7a1f11800d4cf29f92634d9810949889",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q690098.json?revision=2540411259"
+  },
+  {
+    "descriptions": {
+      "en": "flour made from the tubers of the orchid genus Orchis",
+      "tr": null
+    },
+    "labels": {
+      "en": "salep",
+      "tr": "salep"
+    },
+    "qid": "Q693187",
+    "revision": 2555119039,
+    "snapshotSha256": "63eaeaa43076a90f342eec822952c93d67e0bba988463d8db1412313c0431395",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q693187.json?revision=2555119039"
+  },
+  {
+    "descriptions": {
+      "en": "liquid extracted from sugarcane",
+      "tr": null
+    },
+    "labels": {
+      "en": "sugarcane juice",
+      "tr": null
+    },
+    "qid": "Q718680",
+    "revision": 2557409707,
+    "snapshotSha256": "2194f9ca4f631b8d585b667311719ebdcd59b1b7760d9adac66ce9d3985029d1",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q718680.json?revision=2557409707"
+  },
+  {
+    "descriptions": {
+      "en": "distilled alcoholic beverage",
+      "tr": null
+    },
+    "labels": {
+      "en": "cachaça",
+      "tr": "Kaşasa"
+    },
+    "qid": "Q744729",
+    "revision": 2527915221,
+    "snapshotSha256": "9f5de26da7b68cbd9d696aa65169513b16d1cc60b5d713c6684ca777ea081fb6",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q744729.json?revision=2527915221"
+  },
+  {
+    "descriptions": {
+      "en": "finely powdered green tea",
+      "tr": "özel olarak yetiştirilen ve işlenen öğütülmüş bir yeşil çay tozu"
+    },
+    "labels": {
+      "en": "matcha",
+      "tr": "maça çayı"
+    },
+    "qid": "Q822331",
+    "revision": 2555390591,
+    "snapshotSha256": "2e8aa92e587e15fcf580eb92d3d3b4b437b444fadbdac6b7d82c0bffea149fe4",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q822331.json?revision=2555390591"
+  },
+  {
+    "descriptions": {
+      "en": "flavoured water made by distilling rose petals with water",
+      "tr": "gül yapraklarından yapılan ıtırlı sıvı"
+    },
+    "labels": {
+      "en": "rose water",
+      "tr": "gülsuyu"
+    },
+    "qid": "Q900450",
+    "revision": 2557908370,
+    "snapshotSha256": "e4a2c0e8c40f69a50abca7c58fbf28bb49532d73b13900a11587aceab730f5b1",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q900450.json?revision=2557908370"
+  },
+  {
+    "descriptions": {
+      "en": "clear, perfumed distillation of fresh bitter-orange blossoms",
+      "tr": null
+    },
+    "labels": {
+      "en": "orange flower water",
+      "tr": null
+    },
+    "qid": "Q902582",
+    "revision": 2340260293,
+    "snapshotSha256": "585d17a06699badc36ea7155a1fbb6926db8d29a9107ecdfce8a0f37c7e05d08",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q902582.json?revision=2340260293"
+  },
+  {
+    "descriptions": {
+      "en": "leaf of the yerba mate plant used to prepare infusions",
+      "tr": null
+    },
+    "labels": {
+      "en": "yerba mate leaf",
+      "tr": null
+    },
+    "qid": "Q96098098",
+    "revision": 2559474474,
+    "snapshotSha256": "12e947c06cb6aaf9c53fafee656df2be1cb239e70309c4cff58199010621c6db",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q96098098.json?revision=2559474474"
+  },
+  {
+    "descriptions": {
+      "en": "edible root of Cichorium intybus, with medicinal and culinary uses",
+      "tr": null
+    },
+    "labels": {
+      "en": "chicory root",
+      "tr": null
+    },
+    "qid": "Q96240608",
+    "revision": 2484693720,
+    "snapshotSha256": "fc657c3c31a6baf09e2db23a1e266cb76cbc89ee332b8eb184a2161ad5562ec9",
+    "url": "https://www.wikidata.org/wiki/Special:EntityData/Q96240608.json?revision=2484693720"
+  }
+]
