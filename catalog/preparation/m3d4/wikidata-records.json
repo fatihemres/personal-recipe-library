@@ -1,0 +1,338 @@
+[
+  {
+    "descriptions": {
+      "en": "a middle eastern condiment made from boiled down pomegranate juice",
+      "tr": null
+    },
+    "labels": {
+      "en": "pomegranate molasses",
+      "tr": "Nar ekşisi"
+    },
+    "qid": "Q108946643",
+    "revision": 2557959353,
+    "snapshotSha256": "1ea695fe88d13d7629635dd36225f2f3b45909916fb51942acda350224a549d8",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q108946643.json?revision=2557959353"
+  },
+  {
+    "descriptions": {
+      "en": "Korean fermented soybean paste",
+      "tr": null
+    },
+    "labels": {
+      "en": "doenjang",
+      "tr": "Doenjang"
+    },
+    "qid": "Q1196289",
+    "revision": 2552440448,
+    "snapshotSha256": "3bd29634de0ddd7bba0a8e2d6f2011cfb4ce2160fd8a2147f1070ce14be7fe0e",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1196289.json?revision=2552440448"
+  },
+  {
+    "descriptions": {
+      "en": "dried and processed red pepper spice from Şanlıurfa, Turkey",
+      "tr": "Şanlıurfa'ya özgü kurutulmuş ve işlenmiş kırmızı biber baharatı"
+    },
+    "labels": {
+      "en": "Urfa biber",
+      "tr": "isot"
+    },
+    "qid": "Q12812990",
+    "revision": 2543281212,
+    "snapshotSha256": "f008428fdc0698d61c3ccccc28a1b2c702271a900b514f72249c4097af8db5b4",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q12812990.json?revision=2543281212"
+  },
+  {
+    "descriptions": {
+      "en": "dry, spicy, fermented sausage of several Anatolian, Balkan, Middle Eastern and Central Asian cuisines",
+      "tr": "Türk mutfağından kurutulmuş et"
+    },
+    "labels": {
+      "en": "sujuk",
+      "tr": "sucuk"
+    },
+    "qid": "Q1432724",
+    "revision": 2539736104,
+    "snapshotSha256": "6a67d042f8dca644c3299c20e03492ec69dc93f63b7b8fd6d42e39722bd6f4d5",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1432724.json?revision=2539736104"
+  },
+  {
+    "descriptions": {
+      "en": "herbal spice used in seasoning",
+      "tr": "Levanten otu veya ot karışımı"
+    },
+    "labels": {
+      "en": "za'atar",
+      "tr": "Zahter"
+    },
+    "qid": "Q148306",
+    "revision": 2553152846,
+    "snapshotSha256": "97208a3f34716d32674da838237f536b92c686e27927090a1c951e88bc4e8b43",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q148306.json?revision=2553152846"
+  },
+  {
+    "descriptions": {
+      "en": "natural symbiotic clusters of bacteria and yeasts, used in preparation of kefir",
+      "tr": null
+    },
+    "labels": {
+      "en": "kefir grains",
+      "tr": null
+    },
+    "qid": "Q16620197",
+    "revision": 2067936241,
+    "snapshotSha256": "72a6b65fcf20d88c97d51b452f45dd506de77aae7d17f107f37d6918dc4e22aa",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q16620197.json?revision=2067936241"
+  },
+  {
+    "descriptions": {
+      "en": "German music project and record label",
+      "tr": null
+    },
+    "labels": {
+      "en": "Lemongrass",
+      "tr": null
+    },
+    "qid": "Q1817099",
+    "revision": 2302378824,
+    "snapshotSha256": "99d19af8f1e27dd0d2f3896255646cae598404bf975e71a678392e06352a6113",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1817099.json?revision=2302378824"
+  },
+  {
+    "descriptions": {
+      "en": "unleavened dough",
+      "tr": "Mayasız hamur"
+    },
+    "labels": {
+      "en": "phyllo",
+      "tr": "Yufka"
+    },
+    "qid": "Q1866347",
+    "revision": 2557231067,
+    "snapshotSha256": "f47364e40f17ad5c144ff03380ca92c31a1970e715dcf71681f9d2f1a452f764",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q1866347.json?revision=2557231067"
+  },
+  {
+    "descriptions": {
+      "en": "Anatolian cuisine cold cut, also found in neighbouring countries",
+      "tr": "Türk mutfağından kurutulmuş et"
+    },
+    "labels": {
+      "en": "pastırma",
+      "tr": "Pastırma"
+    },
+    "qid": "Q2056399",
+    "revision": 2490072075,
+    "snapshotSha256": "520b24348c1ca592691dfb419fdedec598cf5854ffb4de75d186078ce5099039",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q2056399.json?revision=2490072075"
+  },
+  {
+    "descriptions": {
+      "en": "dried mixture of flour, yogurt and vegetables",
+      "tr": null
+    },
+    "labels": {
+      "en": "tarhana",
+      "tr": "tarhana"
+    },
+    "qid": "Q2118339",
+    "revision": 2500795983,
+    "snapshotSha256": "773ac63bf4415aa1510bede4e0be41fd88892de955896230fef9678198c8f5a0",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q2118339.json?revision=2500795983"
+  },
+  {
+    "descriptions": {
+      "en": "fermented soybean paste",
+      "tr": null
+    },
+    "labels": {
+      "en": "miso",
+      "tr": "Miso"
+    },
+    "qid": "Q235169",
+    "revision": 2517552095,
+    "snapshotSha256": "83d0d2e3e2022e201ea51385fb195e65516dddd5de9e142700a2721141ac6b11",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q235169.json?revision=2517552095"
+  },
+  {
+    "descriptions": {
+      "en": "halophytic perennial dicot",
+      "tr": null
+    },
+    "labels": {
+      "en": "Salicornia europaea",
+      "tr": "Deniz börülcesi"
+    },
+    "qid": "Q27943",
+    "revision": 2556895689,
+    "snapshotSha256": "e64d71bb2d3252164a867ab37f5a8c109991f5f49d28af29bcd209a446a6639f",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q27943.json?revision=2556895689"
+  },
+  {
+    "descriptions": {
+      "en": "traditional Turkish goat's milk cheese ripened in a goatskin casing",
+      "tr": "Türk peyniri"
+    },
+    "labels": {
+      "en": "tulum cheese",
+      "tr": "tulum peyniri"
+    },
+    "qid": "Q3183584",
+    "revision": 2556524328,
+    "snapshotSha256": "d36764cdb3b2bfa64b82710f44358a946be6002f70397e2900250347c15cc785",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3183584.json?revision=2556524328"
+  },
+  {
+    "descriptions": {
+      "en": "resin traditionally obtained from the mastic tree on the island of Chios",
+      "tr": "Damla sakızı, sakız ağacından elde edilen bir reçinedir"
+    },
+    "labels": {
+      "en": "mastic",
+      "tr": "Damla sakızı"
+    },
+    "qid": "Q318367",
+    "revision": 2537480791,
+    "snapshotSha256": "0009a6d6f7ea86f7248e0683d8c9552e258e4b71477837655a04ccdb126920aa",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q318367.json?revision=2537480791"
+  },
+  {
+    "descriptions": {
+      "en": "species of plant",
+      "tr": null
+    },
+    "labels": {
+      "en": "Polygonum cognatum",
+      "tr": "Madımak"
+    },
+    "qid": "Q3337007",
+    "revision": 2535968927,
+    "snapshotSha256": "6d222f00120dcf6cba5ffeb5aada40446d86b31c4dc91c30b0aef40485fea5f9",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3337007.json?revision=2535968927"
+  },
+  {
+    "descriptions": {
+      "en": "traditional egg noodles found in various Turkic cuisines",
+      "tr": null
+    },
+    "labels": {
+      "en": "kesme",
+      "tr": "erişte"
+    },
+    "qid": "Q3668413",
+    "revision": 2553117911,
+    "snapshotSha256": "0daa95689bd285957dee161b287099de1cfb7075b695d91f2a5fe2bf25a3e65f",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q3668413.json?revision=2553117911"
+  },
+  {
+    "descriptions": {
+      "en": "spice made from cherry pits",
+      "tr": null
+    },
+    "labels": {
+      "en": "mahleb",
+      "tr": null
+    },
+    "qid": "Q465554",
+    "revision": 2475402700,
+    "snapshotSha256": "3d0e5b3c09d3ed58fec03915a2d38e57230066d82e4897ccde8ccb5fd6846eb3",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q465554.json?revision=2475402700"
+  },
+  {
+    "descriptions": {
+      "en": "creamy dairy product similar to clotted cream",
+      "tr": "krema türü"
+    },
+    "labels": {
+      "en": "kaymak",
+      "tr": "Kaymak"
+    },
+    "qid": "Q478654",
+    "revision": 2537650278,
+    "snapshotSha256": "279ebdcc6fabf8170d72b6b1e539afa0b868a57d9e4cde7d321e5fa4e92dd144",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q478654.json?revision=2537650278"
+  },
+  {
+    "descriptions": {
+      "en": "Turkish cheese",
+      "tr": "Türk peyniri"
+    },
+    "labels": {
+      "en": "çökelek",
+      "tr": "Çökelek"
+    },
+    "qid": "Q6027754",
+    "revision": 2439800899,
+    "snapshotSha256": "5a695715fecc50dadfd6866825ddfa26935c14c4ff248d00d7bf3e1f6fb821f6",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q6027754.json?revision=2439800899"
+  },
+  {
+    "descriptions": {
+      "en": "A cheese with herbs (otlu peynir), from Turkey, whose most famous version is from the province of Van",
+      "tr": null
+    },
+    "labels": {
+      "en": "Van herbed cheese",
+      "tr": "Van otlu peyniri"
+    },
+    "qid": "Q6062076",
+    "revision": 1352521981,
+    "snapshotSha256": "9437a197228a41d7f22cb8a92d659d0a67ccbcd02caa0c2ac0dddfc92d0894af",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q6062076.json?revision=1352521981"
+  },
+  {
+    "descriptions": {
+      "en": "runny paste made by diluting tamarind pulp with water",
+      "tr": null
+    },
+    "labels": {
+      "en": "tamarind paste",
+      "tr": null
+    },
+    "qid": "Q67207722",
+    "revision": 2480222626,
+    "snapshotSha256": "1001f41de7abe7737ba439493f06c604fccd55ea119d7ff8e5a7368273b747e4",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q67207722.json?revision=2480222626"
+  },
+  {
+    "descriptions": {
+      "en": "Korean red chilli paste",
+      "tr": null
+    },
+    "labels": {
+      "en": "gochujang",
+      "tr": "Gochujang"
+    },
+    "qid": "Q699637",
+    "revision": 2488883660,
+    "snapshotSha256": "7a1e66d45a75addf6cf8f871e415efcc3b024ea3e21eb6d4e9c3cda5c0e0c3e9",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q699637.json?revision=2488883660"
+  },
+  {
+    "descriptions": {
+      "en": "rhizome of several plants from the ginger family (Zingiberaceae)",
+      "tr": null
+    },
+    "labels": {
+      "en": "galangal",
+      "tr": null
+    },
+    "qid": "Q734727",
+    "revision": 2558005692,
+    "snapshotSha256": "929026e0cafe627678ff89a81a37e03e916ccd3a2ac2c725b29e85888d941a69",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q734727.json?revision=2558005692"
+  },
+  {
+    "descriptions": {
+      "en": "Tunisian hot chili pepper paste",
+      "tr": "Kuzey Afrika kökenli bir biber salçası"
+    },
+    "labels": {
+      "en": null,
+      "tr": null
+    },
+    "qid": "Q966327",
+    "revision": 2511176634,
+    "snapshotSha256": "f07699273583ff546d3a8beaa3c5f054b48f2d45e2e3a839097db8ffbb9f86c8",
+    "sourceUrl": "https://www.wikidata.org/wiki/Special:EntityData/Q966327.json?revision=2511176634"
+  }
+]

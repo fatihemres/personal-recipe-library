@@ -138,6 +138,43 @@
       "decision": "Project-authored bilingual labels and classifications; autonomous editorial choices, not independent human linguistic approval."
     },
     {
+      "id": "usda-foundation-m3d4",
+      "name": "USDA FoodData Central Foundation Foods — M3D-4 selected descriptors",
+      "url": "https://fdc.nal.usda.gov/download-datasets/",
+      "licenseUrl": "https://fdc.nal.usda.gov/api-guide/#licensing",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "2026-04-30-selection-1",
+      "retrievedAt": "2026-10-19",
+      "upstreamArtifactUrl": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_json_2026-04-30.zip",
+      "upstreamSha256": "186e988ec542e913f51ef62b86a47758e8cdd0d1dc3889e7b055581f3c09c77a",
+      "imagesApproved": false,
+      "decision": "Selected public-domain Foundation food descriptors only; no nutrition, images, or branded bulk import."
+    },
+    {
+      "id": "wikidata-m3d4",
+      "name": "Wikidata selected ingredient entity revisions",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Database_download",
+      "licenseUrl": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "entity-revisions-2026-10-19-1",
+      "retrievedAt": "2026-10-19",
+      "imagesApproved": false,
+      "decision": "Selected structured CC0 QID revisions with individually screened culinary meaning; no external media or linked descriptions copied."
+    },
+    {
+      "id": "recipeatlas-curation-m3d4",
+      "name": "Tarif Atlası M3D-4 authored labels",
+      "url": "https://github.com/fatihemres/personal-recipe-library",
+      "license": "CC0-1.0",
+      "seedApproved": true,
+      "pinnedVersion": "production-7",
+      "retrievedAt": "2026-10-19",
+      "imagesApproved": false,
+      "decision": "Project-authored Turkish/English labels and classifications; not source translations or human linguistic approval."
+    },
+    {
       "id": "usda-foundation",
       "name": "USDA Foundation Foods",
       "url": "https://fdc.nal.usda.gov/download-datasets/",

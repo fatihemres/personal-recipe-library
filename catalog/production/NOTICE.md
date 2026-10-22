@@ -64,3 +64,23 @@ used the original version labels for different evidence checksums. Historical
 source snapshots remain untouched in existing databases; release 7 is archived
 unchanged at `catalog/releases/7`. No new nutrition, density, allergen or ABV
 facts are asserted by this compatibility change.
+
+Version 9 adds 98 further selected USDA SR Legacy identities with separate
+project-authored bilingual labels. Its immutable package is archived at
+`catalog/releases/9`; the distinct source versions are
+`usda-sr-legacy-m3d3/2018-04-selection-7` and
+`recipeatlas-curation-m3d3/production-6`.
+
+Version 10 adds 35 selected USDA Foundation Foods identities and 15 selected
+Wikidata structured-entity identities. Foundation April 2026 data are CC0;
+the original ZIP SHA-256 is
+`186e988ec542e913f51ef62b86a47758e8cdd0d1dc3889e7b055581f3c09c77a`.
+Wikidata structured QID records are CC0; the exact selected revisions and
+response hashes are pinned under `catalog/preparation/m3d4`. USDA descriptors,
+Wikidata identity evidence, and project-authored bilingual labels have separate
+source/version evidence. No linked photographs, protected descriptions,
+nutrition, density, allergen or ABV facts were imported. Source credit is
+recorded in the manifest and `docs/CATALOG_M3D4_SOURCE_EVALUATION.md`.
+Version 10 retains all 745 Release-9 identities, 269 aliases and 50 category
+nodes; Release 9 is archived unchanged. Neither a regional catalog label nor
+a Wikidata QID certifies protected geographical origin for a user's ingredient.

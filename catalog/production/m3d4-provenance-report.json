@@ -1,0 +1,385 @@
+{
+  "release": 10,
+  "baselineManifestSha256": "3f0da2052988e65c9c543340c50ce7c8ea36323d687b5925c88e1781631b7712",
+  "additions": [
+    {
+      "key": "usda-foundation-1104867",
+      "id": "56565c0b-c59a-8e0a-ae78-dd7633d90a82",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "1104867"
+    },
+    {
+      "key": "usda-foundation-1999626",
+      "id": "4bfbbf9d-0e25-8c3f-9272-da505f05f7d5",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "1999626"
+    },
+    {
+      "key": "usda-foundation-1999630",
+      "id": "2bc7d421-e088-8440-83c3-b3d61cc28e9c",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "1999630"
+    },
+    {
+      "key": "usda-foundation-2003586",
+      "id": "f0619f70-f0e3-80ed-bae9-263c4e5b5736",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003586"
+    },
+    {
+      "key": "usda-foundation-2003588",
+      "id": "847e8438-3468-8256-ab4f-d3a3cb0a04d1",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003588"
+    },
+    {
+      "key": "usda-foundation-2003589",
+      "id": "2362ca4f-37d9-8e91-b4aa-2e2e02ffe3f2",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003589"
+    },
+    {
+      "key": "usda-foundation-2003593",
+      "id": "867a46fd-42f8-8e2d-b956-f3a547eecace",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003593"
+    },
+    {
+      "key": "usda-foundation-2003594",
+      "id": "8655fd87-5998-86f7-8ecf-b824d96f5212",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003594"
+    },
+    {
+      "key": "usda-foundation-2003595",
+      "id": "48cf4a59-fb90-8295-9227-e8b6745ef90b",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003595"
+    },
+    {
+      "key": "usda-foundation-2003599",
+      "id": "f22f8584-2c85-8bcf-9c59-5f61aa9e3279",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003599"
+    },
+    {
+      "key": "usda-foundation-2003601",
+      "id": "057f2325-b02d-80ba-8207-91dee46afecc",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003601"
+    },
+    {
+      "key": "usda-foundation-2003604",
+      "id": "dfbe26f2-7a96-80bc-bc63-ff48e4e9cb37",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2003604"
+    },
+    {
+      "key": "usda-foundation-2257045",
+      "id": "6b20c973-5b95-8543-9d81-b4a527a78694",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2257045"
+    },
+    {
+      "key": "usda-foundation-2257046",
+      "id": "4f959518-2ad3-8920-9513-e6d6116c56b7",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2257046"
+    },
+    {
+      "key": "usda-foundation-2261420",
+      "id": "5ae7b7ca-24b3-8de4-9cb9-2102a4bc4ed4",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2261420"
+    },
+    {
+      "key": "usda-foundation-2512371",
+      "id": "5f0d53b2-1721-826a-8839-3bd44906a698",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2512371"
+    },
+    {
+      "key": "usda-foundation-2512372",
+      "id": "5de7f92a-6422-844a-8af7-1676a6a26acb",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2512372"
+    },
+    {
+      "key": "usda-foundation-2512377",
+      "id": "c7f71173-1d5d-8e0f-a5e3-2ebdab68fb56",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2512377"
+    },
+    {
+      "key": "usda-foundation-2512378",
+      "id": "53dc597e-4e4a-8aaf-966e-7537c791f779",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2512378"
+    },
+    {
+      "key": "usda-foundation-2515377",
+      "id": "5f955891-692c-8aa4-a90a-87d045a91aef",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2515377"
+    },
+    {
+      "key": "usda-foundation-2515382",
+      "id": "f19226a2-405b-8fb7-9664-afb831076afa",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2515382"
+    },
+    {
+      "key": "usda-foundation-2644281",
+      "id": "0c33d667-6608-8a34-bdc6-2f6ddc793814",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2644281"
+    },
+    {
+      "key": "usda-foundation-2644286",
+      "id": "c201e495-76eb-8b55-a758-fce6820a41bb",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2644286"
+    },
+    {
+      "key": "usda-foundation-2644287",
+      "id": "bea7d756-c02e-8f80-b6a8-13a9b69fa954",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2644287"
+    },
+    {
+      "key": "usda-foundation-2710821",
+      "id": "3aee48ce-fa88-8e6d-b6ad-6e9d058230c1",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2710821"
+    },
+    {
+      "key": "usda-foundation-2710825",
+      "id": "4c0e4bfe-29c0-8bc5-9b8f-684d62fc5c57",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2710825"
+    },
+    {
+      "key": "usda-foundation-2710829",
+      "id": "6356eaf9-7f4e-8a19-a551-4ff799cdfea3",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2710829"
+    },
+    {
+      "key": "usda-foundation-2710830",
+      "id": "891881f3-3925-83c2-a785-f063082587dc",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2710830"
+    },
+    {
+      "key": "usda-foundation-2710838",
+      "id": "35e12647-e376-8cde-b3eb-b147208330d5",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2710838"
+    },
+    {
+      "key": "usda-foundation-2727582",
+      "id": "25eec375-e99a-869e-9534-721245c90216",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2727582"
+    },
+    {
+      "key": "usda-foundation-2727588",
+      "id": "de9a2909-a8d8-8c53-a33e-07b14349dfd4",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2727588"
+    },
+    {
+      "key": "usda-foundation-2727589",
+      "id": "297ee77f-1644-8ba7-a57c-a4bb57ba1af6",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2727589"
+    },
+    {
+      "key": "usda-foundation-2747661",
+      "id": "9dd5fcf3-deb3-8ee8-b053-0dc92a7c86b5",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2747661"
+    },
+    {
+      "key": "usda-foundation-2747662",
+      "id": "7382cf78-431c-8c88-bb28-8346a4b06bdf",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2747662"
+    },
+    {
+      "key": "usda-foundation-2747663",
+      "id": "d204dd6b-5ec6-8f11-a5f2-90702e614686",
+      "sourceId": "usda-foundation-m3d4",
+      "externalId": "2747663"
+    },
+    {
+      "key": "wikidata-q1196289",
+      "id": "43a5b831-4edd-86d2-93fb-4c98db02d731",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q1196289"
+    },
+    {
+      "key": "wikidata-q12812990",
+      "id": "48b7bca9-8627-8517-be57-d01841de000f",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q12812990"
+    },
+    {
+      "key": "wikidata-q1432724",
+      "id": "ae9a74d2-3918-8878-9ca0-c450fdb73465",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q1432724"
+    },
+    {
+      "key": "wikidata-q16620197",
+      "id": "a529db7a-fa1a-8d79-a97a-0969a78ac0bc",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q16620197"
+    },
+    {
+      "key": "wikidata-q2056399",
+      "id": "14ba07a1-a772-821b-bedb-53643a19ca54",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q2056399"
+    },
+    {
+      "key": "wikidata-q2118339",
+      "id": "9eee036a-f191-89f4-ba61-c8c955711bef",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q2118339"
+    },
+    {
+      "key": "wikidata-q3183584",
+      "id": "ed045afe-e3fe-83ec-b7f8-8dedb45ca207",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q3183584"
+    },
+    {
+      "key": "wikidata-q318367",
+      "id": "bf11abd6-22da-8a2e-96a5-885881760738",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q318367"
+    },
+    {
+      "key": "wikidata-q3668413",
+      "id": "7608aaf5-ae0a-8dee-877a-1632f54d192d",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q3668413"
+    },
+    {
+      "key": "wikidata-q465554",
+      "id": "ed963efa-5dcc-8ce6-8c32-077fe5337005",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q465554"
+    },
+    {
+      "key": "wikidata-q478654",
+      "id": "1161bf67-313a-895f-8c89-859326e37726",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q478654"
+    },
+    {
+      "key": "wikidata-q6027754",
+      "id": "09096284-eb21-88bf-b33f-a56347168438",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q6027754"
+    },
+    {
+      "key": "wikidata-q6062076",
+      "id": "0ba770cf-b12c-8c4c-bbf6-cb4720c5a4e1",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q6062076"
+    },
+    {
+      "key": "wikidata-q67207722",
+      "id": "1c2c1946-3d63-8a00-8fc9-ebff797c13c7",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q67207722"
+    },
+    {
+      "key": "wikidata-q699637",
+      "id": "2edfde59-d71e-814b-8658-90c8dfc354e1",
+      "sourceId": "wikidata-m3d4",
+      "externalId": "Q699637"
+    }
+  ],
+  "decisionCounts": {
+    "ACCEPT": 50,
+    "DEFER": 9,
+    "EXISTING": 4,
+    "REJECT": 2
+  },
+  "sourceVersions": [
+    {
+      "id": "usda-sr-legacy",
+      "version": "2018-04-selection-4",
+      "artifactSha256": "53df23ca497a1a0b5d4d58b46f82fcabdf2077a8d2ab01c0012cac47f03ac769"
+    },
+    {
+      "id": "recipeatlas-curation",
+      "version": "production-3",
+      "artifactSha256": "bd8b5894d86f535e57bbf4bef080b4c6ffde231d4894270bb2165ab2e729fbea"
+    },
+    {
+      "id": "recipeatlas-terminology",
+      "version": "user-decisions-1",
+      "artifactSha256": "9b9f3799305e7df8cc149551da7fc92b7ca12daf9a58ccd0961c59614ad40caf"
+    },
+    {
+      "id": "recipeatlas-terminology-final",
+      "version": "user-decisions-2",
+      "artifactSha256": "a92391b6c422449752dc12b9240d79da7110c11cdefa55945052e11e34c91dee"
+    },
+    {
+      "id": "usda-sr-legacy-m3d1",
+      "version": "2018-04-selection-5-reviewed",
+      "artifactSha256": "31c142918b247426c2b75299e5320b4ff281757f8a51950db881cb8a6027d5e4"
+    },
+    {
+      "id": "recipeatlas-curation-m3d1",
+      "version": "production-4-reviewed",
+      "artifactSha256": "a24c7e016e9a109cfcaa85191056a278833c26df3025c24a85a93c21bfcdedcd"
+    },
+    {
+      "id": "usda-sr-legacy-m3d2b",
+      "version": "2018-04-selection-6",
+      "artifactSha256": "97a3386bfff1baf92933205bcc935677b8f4a9935fc89fb3ffbe90352f3c623a"
+    },
+    {
+      "id": "recipeatlas-curation-m3d2b",
+      "version": "production-5",
+      "artifactSha256": "3c9a9661825d27702290c0fd24e60ff383a1d83ac17b801757fb72d0d403ed58"
+    },
+    {
+      "id": "usda-sr-legacy-m3d3",
+      "version": "2018-04-selection-7",
+      "artifactSha256": "192fac76f0f046aeb52306ca141d35cbf8722c6f8b78d07f967c3b9cea2b812b"
+    },
+    {
+      "id": "recipeatlas-curation-m3d3",
+      "version": "production-6",
+      "artifactSha256": "58b19fe1bf63537a7e5ec3b3683a4b94cf58bd0e2796f15632f5064717f18f04"
+    },
+    {
+      "id": "usda-foundation-m3d4",
+      "version": "2026-04-30-selection-1",
+      "artifactSha256": "c4d5a70c1823eb8fe7a40b1df6117feb71160a444c06b028569e5e6660e38eb4"
+    },
+    {
+      "id": "wikidata-m3d4",
+      "version": "entity-revisions-2026-10-19-1",
+      "artifactSha256": "3c1f81b6f23bcedad22d0d0d820cb3135041cdb0ebd9da8eda37fea54d59318e"
+    },
+    {
+      "id": "recipeatlas-curation-m3d4",
+      "version": "production-7",
+      "artifactSha256": "631535c8e5949d9e1c1b5d8f3130b21d300253e526cd771f9be3d830e5c3fa43"
+    }
+  ],
+  "structuralErrors": [],
+  "exactAliasCollisions": [],
+  "possibleConceptGroups": 37,
+  "olderDeferredCandidates": 29,
+  "historicalUnresolvedReviews": 7,
+  "independentlyHumanApprovedAdditions": 0
+}

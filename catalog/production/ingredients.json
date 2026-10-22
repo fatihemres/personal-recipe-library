@@ -2324,6 +2324,1224 @@
       ]
     },
     {
+      "aliases": [],
+      "canonicalName": "Glutinous rice flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "56565c0b-c59a-8e0a-ae78-dd7633d90a82",
+      "ingredientType": "food",
+      "key": "usda-foundation-1104867",
+      "names": {
+        "en": "Glutinous rice flour",
+        "tr": "Yapışkan pirinç unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, rice, glutinous",
+          "externalId": "1104867",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Glutinous rice flour\",\"preferredUnit\":\"g\",\"tr\":\"Yapışkan pirinç unu\"}",
+          "externalId": "usda-foundation-1104867",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Lion's mane mushroom",
+      "categories": [
+        "mushrooms",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "4bfbbf9d-0e25-8c3f-9272-da505f05f7d5",
+      "ingredientType": "food",
+      "key": "usda-foundation-1999626",
+      "names": {
+        "en": "Lion's mane mushroom",
+        "tr": "Aslan yelesi mantarı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mushroom, lion's mane",
+          "externalId": "1999626",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mushrooms\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Lion's mane mushroom\",\"preferredUnit\":\"g\",\"tr\":\"Aslan yelesi mantarı\"}",
+          "externalId": "usda-foundation-1999626",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Soy milk (unsweetened, shelf-stable)",
+      "categories": [
+        "dairy-alternatives",
+        "other-beverages"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "2bc7d421-e088-8440-83c3-b3d61cc28e9c",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-1999630",
+      "names": {
+        "en": "Soy milk (unsweetened, shelf-stable)",
+        "tr": "Şekersiz soya içeceği (raf ömrü uzun)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Soy milk, unsweetened, plain, shelf stable",
+          "externalId": "1999630",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Soy milk (unsweetened, shelf-stable)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz soya içeceği (raf ömrü uzun)\"}",
+          "externalId": "usda-foundation-1999630",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tipo 00 wheat flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f0619f70-f0e3-80ed-bae9-263c4e5b5736",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003586",
+      "names": {
+        "en": "Tipo 00 wheat flour",
+        "tr": "Tipo 00 buğday unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, 00",
+          "externalId": "2003586",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Tipo 00 wheat flour\",\"preferredUnit\":\"g\",\"tr\":\"Tipo 00 buğday unu\"}",
+          "externalId": "usda-foundation-2003586",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Coarse semolina",
+      "categories": [
+        "flours",
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "847e8438-3468-8256-ab4f-d3a3cb0a04d1",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003588",
+      "names": {
+        "en": "Coarse semolina",
+        "tr": "İri taneli irmik"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, semolina, coarse and semi-coarse",
+          "externalId": "2003588",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Coarse semolina\",\"preferredUnit\":\"g\",\"tr\":\"İri taneli irmik\"}",
+          "externalId": "usda-foundation-2003588",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Fine semolina",
+      "categories": [
+        "flours",
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2362ca4f-37d9-8e91-b4aa-2e2e02ffe3f2",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003589",
+      "names": {
+        "en": "Fine semolina",
+        "tr": "İnce taneli irmik"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, semolina, fine",
+          "externalId": "2003589",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Fine semolina\",\"preferredUnit\":\"g\",\"tr\":\"İnce taneli irmik\"}",
+          "externalId": "usda-foundation-2003589",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "White grape juice (from concentrate, shelf-stable)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "867a46fd-42f8-8e2d-b956-f3a547eecace",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2003593",
+      "names": {
+        "en": "White grape juice (from concentrate, shelf-stable)",
+        "tr": "Beyaz üzüm suyu (konsantreden, raf ömrü uzun)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
+          "externalId": "2003593",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"White grape juice (from concentrate, shelf-stable)\",\"preferredUnit\":\"mL\",\"tr\":\"Beyaz üzüm suyu (konsantreden, raf ömrü uzun)\"}",
+          "externalId": "usda-foundation-2003593",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cranberry juice (from concentrate, shelf-stable)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "8655fd87-5998-86f7-8ecf-b824d96f5212",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2003594",
+      "names": {
+        "en": "Cranberry juice (from concentrate, shelf-stable)",
+        "tr": "Turna yemişi suyu (konsantreden, raf ömrü uzun)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Cranberry juice, not fortified, from concentrate, shelf stable",
+          "externalId": "2003594",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Cranberry juice (from concentrate, shelf-stable)\",\"preferredUnit\":\"mL\",\"tr\":\"Turna yemişi suyu (konsantreden, raf ömrü uzun)\"}",
+          "externalId": "usda-foundation-2003594",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Red grapefruit juice (not from concentrate)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "48cf4a59-fb90-8295-9227-e8b6745ef90b",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2003595",
+      "names": {
+        "en": "Red grapefruit juice (not from concentrate)",
+        "tr": "Kırmızı greyfurt suyu (konsantre değil)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
+          "externalId": "2003595",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Red grapefruit juice (not from concentrate)\",\"preferredUnit\":\"mL\",\"tr\":\"Kırmızı greyfurt suyu (konsantre değil)\"}",
+          "externalId": "usda-foundation-2003595",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "King oyster mushroom",
+      "categories": [
+        "mushrooms",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f22f8584-2c85-8bcf-9c59-5f61aa9e3279",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003599",
+      "names": {
+        "en": "King oyster mushroom",
+        "tr": "Kral istiridye mantarı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mushroom, king oyster",
+          "externalId": "2003599",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mushrooms\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"King oyster mushroom\",\"preferredUnit\":\"g\",\"tr\":\"Kral istiridye mantarı\"}",
+          "externalId": "usda-foundation-2003599",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Crimini mushroom",
+      "categories": [
+        "mushrooms"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "057f2325-b02d-80ba-8207-91dee46afecc",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003601",
+      "names": {
+        "en": "Crimini mushroom",
+        "tr": "Kestane mantarı (crimini)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mushroom, crimini",
+          "externalId": "2003601",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mushrooms\"],\"dimensions\":[\"mass\"],\"en\":\"Crimini mushroom\",\"preferredUnit\":\"g\",\"tr\":\"Kestane mantarı (crimini)\"}",
+          "externalId": "usda-foundation-2003601",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pioppino mushroom",
+      "categories": [
+        "mushrooms",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "dfbe26f2-7a96-80bc-bc63-ff48e4e9cb37",
+      "ingredientType": "food",
+      "key": "usda-foundation-2003604",
+      "names": {
+        "en": "Pioppino mushroom",
+        "tr": "Pioppino mantarı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Mushroom, pioppini",
+          "externalId": "2003604",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"mushrooms\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Pioppino mushroom\",\"preferredUnit\":\"g\",\"tr\":\"Pioppino mantarı\"}",
+          "externalId": "usda-foundation-2003604",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Almond milk (unsweetened, refrigerated)",
+      "categories": [
+        "dairy-alternatives",
+        "other-beverages"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "6b20c973-5b95-8543-9d81-b4a527a78694",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2257045",
+      "names": {
+        "en": "Almond milk (unsweetened, refrigerated)",
+        "tr": "Şekersiz badem içeceği (soğuk zincir)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Almond milk, unsweetened, plain, refrigerated",
+          "externalId": "2257045",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Almond milk (unsweetened, refrigerated)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz badem içeceği (soğuk zincir)\"}",
+          "externalId": "usda-foundation-2257045",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Oat milk (unsweetened, refrigerated)",
+      "categories": [
+        "dairy-alternatives",
+        "other-beverages"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "4f959518-2ad3-8920-9513-e6d6116c56b7",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2257046",
+      "names": {
+        "en": "Oat milk (unsweetened, refrigerated)",
+        "tr": "Şekersiz yulaf içeceği (soğuk zincir)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Oat milk, unsweetened, plain, refrigerated",
+          "externalId": "2257046",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"dairy-alternatives\",\"other-beverages\"],\"dimensions\":[\"volume\"],\"en\":\"Oat milk (unsweetened, refrigerated)\",\"preferredUnit\":\"mL\",\"tr\":\"Şekersiz yulaf içeceği (soğuk zincir)\"}",
+          "externalId": "usda-foundation-2257046",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Almond flour",
+      "categories": [
+        "flours",
+        "nuts-seeds"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5ae7b7ca-24b3-8de4-9cb9-2102a4bc4ed4",
+      "ingredientType": "food",
+      "key": "usda-foundation-2261420",
+      "names": {
+        "en": "Almond flour",
+        "tr": "Badem unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, almond",
+          "externalId": "2261420",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"nuts-seeds\"],\"dimensions\":[\"mass\"],\"en\":\"Almond flour\",\"preferredUnit\":\"g\",\"tr\":\"Badem unu\"}",
+          "externalId": "usda-foundation-2261420",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Amaranth flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5f0d53b2-1721-826a-8839-3bd44906a698",
+      "ingredientType": "food",
+      "key": "usda-foundation-2512371",
+      "names": {
+        "en": "Amaranth flour",
+        "tr": "Amarant unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, amaranth",
+          "externalId": "2512371",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Amaranth flour\",\"preferredUnit\":\"g\",\"tr\":\"Amarant unu\"}",
+          "externalId": "usda-foundation-2512371",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Quinoa flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5de7f92a-6422-844a-8af7-1676a6a26acb",
+      "ingredientType": "food",
+      "key": "usda-foundation-2512372",
+      "names": {
+        "en": "Quinoa flour",
+        "tr": "Kinoa unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, quinoa",
+          "externalId": "2512372",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Quinoa flour\",\"preferredUnit\":\"g\",\"tr\":\"Kinoa unu\"}",
+          "externalId": "usda-foundation-2512372",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cassava flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c7f71173-1d5d-8e0f-a5e3-2ebdab68fb56",
+      "ingredientType": "food",
+      "key": "usda-foundation-2512377",
+      "names": {
+        "en": "Cassava flour",
+        "tr": "Manyok unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, cassava",
+          "externalId": "2512377",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Cassava flour\",\"preferredUnit\":\"g\",\"tr\":\"Manyok unu\"}",
+          "externalId": "usda-foundation-2512377",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Whole buckwheat grain",
+      "categories": [
+        "grains"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "53dc597e-4e4a-8aaf-966e-7537c791f779",
+      "ingredientType": "food",
+      "key": "usda-foundation-2512378",
+      "names": {
+        "en": "Whole buckwheat grain",
+        "tr": "Karabuğday tanesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Buckwheat, whole grain",
+          "externalId": "2512378",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\"],\"dimensions\":[\"mass\"],\"en\":\"Whole buckwheat grain\",\"preferredUnit\":\"g\",\"tr\":\"Karabuğday tanesi\"}",
+          "externalId": "usda-foundation-2512378",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Chestnut flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "5f955891-692c-8aa4-a90a-87d045a91aef",
+      "ingredientType": "food",
+      "key": "usda-foundation-2515377",
+      "names": {
+        "en": "Chestnut flour",
+        "tr": "Kestane unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, chestnut",
+          "externalId": "2515377",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Chestnut flour\",\"preferredUnit\":\"g\",\"tr\":\"Kestane unu\"}",
+          "externalId": "usda-foundation-2515377",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Coconut flour",
+      "categories": [
+        "flours",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "f19226a2-405b-8fb7-9664-afb831076afa",
+      "ingredientType": "food",
+      "key": "usda-foundation-2515382",
+      "names": {
+        "en": "Coconut flour",
+        "tr": "Hindistan cevizi unu"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Flour, coconut",
+          "externalId": "2515382",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"flours\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Coconut flour\",\"preferredUnit\":\"g\",\"tr\":\"Hindistan cevizi unu\"}",
+          "externalId": "usda-foundation-2515382",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cannellini beans (dry)",
+      "categories": [
+        "legumes",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "0c33d667-6608-8a34-bdc6-2f6ddc793814",
+      "ingredientType": "food",
+      "key": "usda-foundation-2644281",
+      "names": {
+        "en": "Cannellini beans (dry)",
+        "tr": "Kuru cannellini fasulyesi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beans, cannellini, dry",
+          "externalId": "2644281",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Cannellini beans (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Kuru cannellini fasulyesi\"}",
+          "externalId": "usda-foundation-2644281",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Navy beans (canned, drained and rinsed)",
+      "categories": [
+        "legumes",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "c201e495-76eb-8b55-a758-fce6820a41bb",
+      "ingredientType": "food",
+      "key": "usda-foundation-2644286",
+      "names": {
+        "en": "Navy beans (canned, drained and rinsed)",
+        "tr": "Konserve navy fasulyesi (süzülmüş ve durulanmış)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beans, navy, canned, sodium added, drained and rinsed",
+          "externalId": "2644286",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Navy beans (canned, drained and rinsed)\",\"preferredUnit\":\"g\",\"tr\":\"Konserve navy fasulyesi (süzülmüş ve durulanmış)\"}",
+          "externalId": "usda-foundation-2644286",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Cannellini beans (canned, drained and rinsed)",
+      "categories": [
+        "legumes",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "bea7d756-c02e-8f80-b6a8-13a9b69fa954",
+      "ingredientType": "food",
+      "key": "usda-foundation-2644287",
+      "names": {
+        "en": "Cannellini beans (canned, drained and rinsed)",
+        "tr": "Konserve cannellini fasulyesi (süzülmüş ve durulanmış)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Beans, cannellini, canned, sodium added, drained and rinsed",
+          "externalId": "2644287",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"legumes\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Cannellini beans (canned, drained and rinsed)\",\"preferredUnit\":\"g\",\"tr\":\"Konserve cannellini fasulyesi (süzülmüş ve durulanmış)\"}",
+          "externalId": "usda-foundation-2644287",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Wild rice (dry)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "3aee48ce-fa88-8e6d-b6ad-6e9d058230c1",
+      "ingredientType": "food",
+      "key": "usda-foundation-2710821",
+      "names": {
+        "en": "Wild rice (dry)",
+        "tr": "Yabani pirinç (kuru)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Wild rice, dry, raw",
+          "externalId": "2710821",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Wild rice (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Yabani pirinç (kuru)\"}",
+          "externalId": "usda-foundation-2710821",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Black rice (raw)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "4c0e4bfe-29c0-8bc5-9b8f-684d62fc5c57",
+      "ingredientType": "food",
+      "key": "usda-foundation-2710825",
+      "names": {
+        "en": "Black rice (raw)",
+        "tr": "Siyah pirinç (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Rice, black, unenriched, raw",
+          "externalId": "2710825",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Black rice (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Siyah pirinç (çiğ)\"}",
+          "externalId": "usda-foundation-2710825",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Fonio grain (dry)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "6356eaf9-7f4e-8a19-a551-4ff799cdfea3",
+      "ingredientType": "food",
+      "key": "usda-foundation-2710829",
+      "names": {
+        "en": "Fonio grain (dry)",
+        "tr": "Fonio tahılı (kuru)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Fonio, grain, dry, raw",
+          "externalId": "2710829",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Fonio grain (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Fonio tahılı (kuru)\"}",
+          "externalId": "usda-foundation-2710829",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Khorasan wheat grain (dry)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "891881f3-3925-83c2-a785-f063082587dc",
+      "ingredientType": "food",
+      "key": "usda-foundation-2710830",
+      "names": {
+        "en": "Khorasan wheat grain (dry)",
+        "tr": "Horasan buğdayı tanesi (kuru)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Khorasan, grain, dry, raw",
+          "externalId": "2710830",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Khorasan wheat grain (dry)\",\"preferredUnit\":\"g\",\"tr\":\"Horasan buğdayı tanesi (kuru)\"}",
+          "externalId": "usda-foundation-2710830",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Red rice (raw)",
+      "categories": [
+        "grains",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "35e12647-e376-8cde-b3eb-b147208330d5",
+      "ingredientType": "food",
+      "key": "usda-foundation-2710838",
+      "names": {
+        "en": "Red rice (raw)",
+        "tr": "Kırmızı pirinç (çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Rice, red, unenriched, dry, raw",
+          "externalId": "2710838",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"grains\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Red rice (raw)\",\"preferredUnit\":\"g\",\"tr\":\"Kırmızı pirinç (çiğ)\"}",
+          "externalId": "usda-foundation-2710838",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tomatillo (dehusked, raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "25eec375-e99a-869e-9534-721245c90216",
+      "ingredientType": "food",
+      "key": "usda-foundation-2727582",
+      "names": {
+        "en": "Tomatillo (dehusked, raw)",
+        "tr": "Tomatillo (kabuksuz, çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Tomatillos, dehusked, raw",
+          "externalId": "2727582",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Tomatillo (dehusked, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Tomatillo (kabuksuz, çiğ)\"}",
+          "externalId": "usda-foundation-2727582",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pomegranate juice (from concentrate, shelf-stable)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "de9a2909-a8d8-8c53-a33e-07b14349dfd4",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2727588",
+      "names": {
+        "en": "Pomegranate juice (from concentrate, shelf-stable)",
+        "tr": "Nar suyu (konsantreden, raf ömrü uzun)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Juice, pomegranate, from concentrate, shelf-stable",
+          "externalId": "2727588",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Pomegranate juice (from concentrate, shelf-stable)\",\"preferredUnit\":\"mL\",\"tr\":\"Nar suyu (konsantreden, raf ömrü uzun)\"}",
+          "externalId": "usda-foundation-2727588",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tart cherry juice (from concentrate, shelf-stable)",
+      "categories": [
+        "juices"
+      ],
+      "dimensions": [
+        "volume"
+      ],
+      "id": "297ee77f-1644-8ba7-a57c-a4bb57ba1af6",
+      "ingredientType": "beverage",
+      "key": "usda-foundation-2727589",
+      "names": {
+        "en": "Tart cherry juice (from concentrate, shelf-stable)",
+        "tr": "Vişne suyu (konsantreden, raf ömrü uzun)"
+      },
+      "observations": [],
+      "preferredUnit": "mL",
+      "provenance": [
+        {
+          "description": "Juice, tart cherry, from concentrate, shelf-stable",
+          "externalId": "2727589",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"juices\"],\"dimensions\":[\"volume\"],\"en\":\"Tart cherry juice (from concentrate, shelf-stable)\",\"preferredUnit\":\"mL\",\"tr\":\"Vişne suyu (konsantreden, raf ömrü uzun)\"}",
+          "externalId": "usda-foundation-2727589",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Jalapeño pepper (seeded, raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "9dd5fcf3-deb3-8ee8-b053-0dc92a7c86b5",
+      "ingredientType": "food",
+      "key": "usda-foundation-2747661",
+      "names": {
+        "en": "Jalapeño pepper (seeded, raw)",
+        "tr": "Jalapeño biberi (çekirdeksiz, çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, jalapeno, seeded, raw",
+          "externalId": "2747661",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Jalapeño pepper (seeded, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Jalapeño biberi (çekirdeksiz, çiğ)\"}",
+          "externalId": "usda-foundation-2747661",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Poblano pepper (seeded, raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7382cf78-431c-8c88-bb28-8346a4b06bdf",
+      "ingredientType": "food",
+      "key": "usda-foundation-2747662",
+      "names": {
+        "en": "Poblano pepper (seeded, raw)",
+        "tr": "Poblano biberi (çekirdeksiz, çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, poblano, seeded, raw",
+          "externalId": "2747662",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Poblano pepper (seeded, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Poblano biberi (çekirdeksiz, çiğ)\"}",
+          "externalId": "usda-foundation-2747662",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Serrano pepper (seeded, raw)",
+      "categories": [
+        "vegetables",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "d204dd6b-5ec6-8f11-a5f2-90702e614686",
+      "ingredientType": "food",
+      "key": "usda-foundation-2747663",
+      "names": {
+        "en": "Serrano pepper (seeded, raw)",
+        "tr": "Serrano biberi (çekirdeksiz, çiğ)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "Peppers, serrano, seeded, raw",
+          "externalId": "2747663",
+          "sourceId": "usda-foundation-m3d4",
+          "sourceVersion": "2026-04-30-selection-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"vegetables\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Serrano pepper (seeded, raw)\",\"preferredUnit\":\"g\",\"tr\":\"Serrano biberi (çekirdeksiz, çiğ)\"}",
+          "externalId": "usda-foundation-2747663",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
       "aliases": [
         {
           "locale": "tr",
@@ -27040,6 +28258,533 @@
           "externalId": "usda-sr-175303",
           "sourceId": "recipeatlas-curation",
           "sourceVersion": "production-3"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Doenjang",
+      "categories": [
+        "fermented",
+        "sauces",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "43a5b831-4edd-86d2-93fb-4c98db02d731",
+      "ingredientType": "food",
+      "key": "wikidata-q1196289",
+      "names": {
+        "en": "Doenjang",
+        "tr": "Doenjang"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Korean fermented soybean paste\",\"tr\":null},\"labels\":{\"en\":\"doenjang\",\"tr\":\"Doenjang\"},\"qid\":\"Q1196289\",\"revision\":2552440448}",
+          "externalId": "Q1196289",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Doenjang\",\"preferredUnit\":\"g\",\"tr\":\"Doenjang\"}",
+          "externalId": "wikidata-q1196289",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Urfa biber",
+      "categories": [
+        "spices",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "48b7bca9-8627-8517-be57-d01841de000f",
+      "ingredientType": "food",
+      "key": "wikidata-q12812990",
+      "names": {
+        "en": "Urfa biber",
+        "tr": "İsot biberi"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"dried and processed red pepper spice from Şanlıurfa, Turkey\",\"tr\":\"Şanlıurfa'ya özgü kurutulmuş ve işlenmiş kırmızı biber baharatı\"},\"labels\":{\"en\":\"Urfa biber\",\"tr\":\"isot\"},\"qid\":\"Q12812990\",\"revision\":2543281212}",
+          "externalId": "Q12812990",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"spices\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Urfa biber\",\"preferredUnit\":\"g\",\"tr\":\"İsot biberi\"}",
+          "externalId": "wikidata-q12812990",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Sucuk",
+      "categories": [
+        "meat",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ae9a74d2-3918-8878-9ca0-c450fdb73465",
+      "ingredientType": "food",
+      "key": "wikidata-q1432724",
+      "names": {
+        "en": "Sucuk",
+        "tr": "Sucuk"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"dry, spicy, fermented sausage of several Anatolian, Balkan, Middle Eastern and Central Asian cuisines\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"sujuk\",\"tr\":\"sucuk\"},\"qid\":\"Q1432724\",\"revision\":2539736104}",
+          "externalId": "Q1432724",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"meat\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Sucuk\",\"preferredUnit\":\"g\",\"tr\":\"Sucuk\"}",
+          "externalId": "wikidata-q1432724",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Kefir grains",
+      "categories": [
+        "fermented",
+        "dairy"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "a529db7a-fa1a-8d79-a97a-0969a78ac0bc",
+      "ingredientType": "food",
+      "key": "wikidata-q16620197",
+      "names": {
+        "en": "Kefir grains",
+        "tr": "Kefir mayası taneleri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"natural symbiotic clusters of bacteria and yeasts, used in preparation of kefir\",\"tr\":null},\"labels\":{\"en\":\"kefir grains\",\"tr\":null},\"qid\":\"Q16620197\",\"revision\":2067936241}",
+          "externalId": "Q16620197",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"dairy\"],\"dimensions\":[\"mass\"],\"en\":\"Kefir grains\",\"preferredUnit\":\"g\",\"tr\":\"Kefir mayası taneleri\"}",
+          "externalId": "wikidata-q16620197",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Pastırma",
+      "categories": [
+        "meat",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "14ba07a1-a772-821b-bedb-53643a19ca54",
+      "ingredientType": "food",
+      "key": "wikidata-q2056399",
+      "names": {
+        "en": "Pastırma",
+        "tr": "Pastırma"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Anatolian cuisine cold cut, also found in neighbouring countries\",\"tr\":\"Türk mutfağından kurutulmuş et\"},\"labels\":{\"en\":\"pastırma\",\"tr\":\"Pastırma\"},\"qid\":\"Q2056399\",\"revision\":2490072075}",
+          "externalId": "Q2056399",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"meat\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Pastırma\",\"preferredUnit\":\"g\",\"tr\":\"Pastırma\"}",
+          "externalId": "wikidata-q2056399",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tarhana (dried mixture)",
+      "categories": [
+        "fermented",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "9eee036a-f191-89f4-ba61-c8c955711bef",
+      "ingredientType": "food",
+      "key": "wikidata-q2118339",
+      "names": {
+        "en": "Tarhana (dried mixture)",
+        "tr": "Tarhana (kuru karışım)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"dried mixture of flour, yogurt and vegetables\",\"tr\":null},\"labels\":{\"en\":\"tarhana\",\"tr\":\"tarhana\"},\"qid\":\"Q2118339\",\"revision\":2500795983}",
+          "externalId": "Q2118339",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Tarhana (dried mixture)\",\"preferredUnit\":\"g\",\"tr\":\"Tarhana (kuru karışım)\"}",
+          "externalId": "wikidata-q2118339",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tulum cheese",
+      "categories": [
+        "cheeses",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ed045afe-e3fe-83ec-b7f8-8dedb45ca207",
+      "ingredientType": "food",
+      "key": "wikidata-q3183584",
+      "names": {
+        "en": "Tulum cheese",
+        "tr": "Tulum peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"traditional Turkish goat's milk cheese ripened in a goatskin casing\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"tulum cheese\",\"tr\":\"tulum peyniri\"},\"qid\":\"Q3183584\",\"revision\":2556524328}",
+          "externalId": "Q3183584",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Tulum cheese\",\"preferredUnit\":\"g\",\"tr\":\"Tulum peyniri\"}",
+          "externalId": "wikidata-q3183584",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Mastic resin",
+      "categories": [
+        "spices",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "bf11abd6-22da-8a2e-96a5-885881760738",
+      "ingredientType": "food",
+      "key": "wikidata-q318367",
+      "names": {
+        "en": "Mastic resin",
+        "tr": "Damla sakızı"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"resin traditionally obtained from the mastic tree on the island of Chios\",\"tr\":\"Damla sakızı, sakız ağacından elde edilen bir reçinedir\"},\"labels\":{\"en\":\"mastic\",\"tr\":\"Damla sakızı\"},\"qid\":\"Q318367\",\"revision\":2537480791}",
+          "externalId": "Q318367",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"spices\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Mastic resin\",\"preferredUnit\":\"g\",\"tr\":\"Damla sakızı\"}",
+          "externalId": "wikidata-q318367",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Kesme noodles",
+      "categories": [
+        "noodles-pasta",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "7608aaf5-ae0a-8dee-877a-1632f54d192d",
+      "ingredientType": "food",
+      "key": "wikidata-q3668413",
+      "names": {
+        "en": "Kesme noodles",
+        "tr": "Kesme erişte"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"traditional egg noodles found in various Turkic cuisines\",\"tr\":null},\"labels\":{\"en\":\"kesme\",\"tr\":\"erişte\"},\"qid\":\"Q3668413\",\"revision\":2553117911}",
+          "externalId": "Q3668413",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"noodles-pasta\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Kesme noodles\",\"preferredUnit\":\"g\",\"tr\":\"Kesme erişte\"}",
+          "externalId": "wikidata-q3668413",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Mahleb",
+      "categories": [
+        "spices",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "ed963efa-5dcc-8ce6-8c32-077fe5337005",
+      "ingredientType": "food",
+      "key": "wikidata-q465554",
+      "names": {
+        "en": "Mahleb",
+        "tr": "Mahlep"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"spice made from cherry pits\",\"tr\":null},\"labels\":{\"en\":\"mahleb\",\"tr\":null},\"qid\":\"Q465554\",\"revision\":2475402700}",
+          "externalId": "Q465554",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"spices\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Mahleb\",\"preferredUnit\":\"g\",\"tr\":\"Mahlep\"}",
+          "externalId": "wikidata-q465554",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Kaymak",
+      "categories": [
+        "dairy",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1161bf67-313a-895f-8c89-859326e37726",
+      "ingredientType": "food",
+      "key": "wikidata-q478654",
+      "names": {
+        "en": "Kaymak",
+        "tr": "Kaymak"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"creamy dairy product similar to clotted cream\",\"tr\":\"krema türü\"},\"labels\":{\"en\":\"kaymak\",\"tr\":\"Kaymak\"},\"qid\":\"Q478654\",\"revision\":2537650278}",
+          "externalId": "Q478654",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"dairy\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Kaymak\",\"preferredUnit\":\"g\",\"tr\":\"Kaymak\"}",
+          "externalId": "wikidata-q478654",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Çökelek cheese",
+      "categories": [
+        "cheeses",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "09096284-eb21-88bf-b33f-a56347168438",
+      "ingredientType": "food",
+      "key": "wikidata-q6027754",
+      "names": {
+        "en": "Çökelek cheese",
+        "tr": "Çökelek"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Turkish cheese\",\"tr\":\"Türk peyniri\"},\"labels\":{\"en\":\"çökelek\",\"tr\":\"Çökelek\"},\"qid\":\"Q6027754\",\"revision\":2439800899}",
+          "externalId": "Q6027754",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Çökelek cheese\",\"preferredUnit\":\"g\",\"tr\":\"Çökelek\"}",
+          "externalId": "wikidata-q6027754",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Van herbed cheese",
+      "categories": [
+        "cheeses",
+        "turkish-regional"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "0ba770cf-b12c-8c4c-bbf6-cb4720c5a4e1",
+      "ingredientType": "food",
+      "key": "wikidata-q6062076",
+      "names": {
+        "en": "Van herbed cheese",
+        "tr": "Van otlu peyniri"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"A cheese with herbs (otlu peynir), from Turkey, whose most famous version is from the province of Van\",\"tr\":null},\"labels\":{\"en\":\"Van herbed cheese\",\"tr\":\"Van otlu peyniri\"},\"qid\":\"Q6062076\",\"revision\":1352521981}",
+          "externalId": "Q6062076",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"cheeses\",\"turkish-regional\"],\"dimensions\":[\"mass\"],\"en\":\"Van herbed cheese\",\"preferredUnit\":\"g\",\"tr\":\"Van otlu peyniri\"}",
+          "externalId": "wikidata-q6062076",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Tamarind paste (diluted)",
+      "categories": [
+        "sauces",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "1c2c1946-3d63-8a00-8fc9-ebff797c13c7",
+      "ingredientType": "food",
+      "key": "wikidata-q67207722",
+      "names": {
+        "en": "Tamarind paste (diluted)",
+        "tr": "Demirhindi ezmesi (sulandırılmış)"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"runny paste made by diluting tamarind pulp with water\",\"tr\":null},\"labels\":{\"en\":\"tamarind paste\",\"tr\":null},\"qid\":\"Q67207722\",\"revision\":2480222626}",
+          "externalId": "Q67207722",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Tamarind paste (diluted)\",\"preferredUnit\":\"g\",\"tr\":\"Demirhindi ezmesi (sulandırılmış)\"}",
+          "externalId": "wikidata-q67207722",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "aliases": [],
+      "canonicalName": "Gochujang",
+      "categories": [
+        "fermented",
+        "sauces",
+        "international-specialty"
+      ],
+      "dimensions": [
+        "mass"
+      ],
+      "id": "2edfde59-d71e-814b-8658-90c8dfc354e1",
+      "ingredientType": "food",
+      "key": "wikidata-q699637",
+      "names": {
+        "en": "Gochujang",
+        "tr": "Gochujang"
+      },
+      "observations": [],
+      "preferredUnit": "g",
+      "provenance": [
+        {
+          "description": "{\"descriptions\":{\"en\":\"Korean red chilli paste\",\"tr\":null},\"labels\":{\"en\":\"gochujang\",\"tr\":\"Gochujang\"},\"qid\":\"Q699637\",\"revision\":2488883660}",
+          "externalId": "Q699637",
+          "sourceId": "wikidata-m3d4",
+          "sourceVersion": "entity-revisions-2026-10-19-1"
+        },
+        {
+          "description": "{\"aliasesEn\":[],\"aliasesTr\":[],\"basis\":\"Autonomous editorial label against pinned source identity; not an official translation or independent human linguistic approval\",\"categories\":[\"fermented\",\"sauces\",\"international-specialty\"],\"dimensions\":[\"mass\"],\"en\":\"Gochujang\",\"preferredUnit\":\"g\",\"tr\":\"Gochujang\"}",
+          "externalId": "wikidata-q699637",
+          "sourceId": "recipeatlas-curation-m3d4",
+          "sourceVersion": "production-7"
         }
       ],
       "relations": []

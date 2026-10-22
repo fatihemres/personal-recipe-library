@@ -72,6 +72,10 @@ def audit():
             assert evidence[provenance['sourceId']].get(provenance['externalId']) == provenance['description'], 'Unverified source identifier or descriptor'
             if provenance['sourceId'].startswith('usda-sr-legacy'):
                 assert re.fullmatch(r'[0-9]{6}', provenance['externalId']), 'Invalid USDA identifier'
+            if provenance['sourceId'].startswith('usda-foundation'):
+                assert re.fullmatch(r'[0-9]{6,8}', provenance['externalId']), 'Invalid Foundation FDC identifier'
+            if provenance['sourceId'].startswith('wikidata-'):
+                assert re.fullmatch(r'Q[1-9][0-9]*', provenance['externalId']), 'Invalid Wikidata QID'
             family = 'usda-sr-legacy' if provenance['sourceId'].startswith('usda-sr-legacy') else provenance['sourceId']
             source_owners[(family, provenance['externalId'])].add(key)
         assert i['ingredientType'] in ('food', 'beverage', 'alcohol', 'garnish', 'other'), 'Invalid ingredient type'
@@ -99,7 +103,11 @@ def audit():
             errors.append({'key': key, 'problem': 'Missing provenance or category'})
         if i['observations']:
             errors.append({'key': key, 'problem': 'Unexpected empirical metadata in identity-only batch'})
-        if any(p['sourceId'].startswith('usda-sr-legacy') for p in i['provenance']) == key.startswith('project-'):
+        source_ids = {p['sourceId'] for p in i['provenance']}
+        if ((key.startswith('usda-sr-') and not any(s.startswith('usda-sr-legacy') for s in source_ids))
+                or (key.startswith('usda-foundation-') and 'usda-foundation-m3d4' not in source_ids)
+                or (key.startswith('wikidata-') and 'wikidata-m3d4' not in source_ids)
+                or (key.startswith('project-') and any(s.startswith(('usda-', 'wikidata-')) for s in source_ids))):
             errors.append({'key': key, 'problem': 'Incorrect source identity ownership'})
         if any(word in i['names']['en'].lower() for word in ('powder', 'flour')) and i['preferredUnit'] != 'g':
             errors.append({'key': key, 'problem': 'Powder default is not mass'})
@@ -133,7 +141,7 @@ def audit():
         assert item['tr'] == item['existingTr'] and item['en'] == item['existingEn']
     for item in pending:
         assert item['status'] in ('human-review-needed', 'human-review') and item['tr'] == item['existingTr']
-    report = dict(version=manifest['version'], capitalizationAndTranslationWarnings=warnings, conceptReviewCandidates=[dict(concept=c,keys=sorted(keys),meaning='Same English base label; qualified culinary forms may be distinct. Not automatically merged.') for c,keys in sorted(concepts.items()) if len(keys)>1], previousIdentities=len(old['ingredients']), auditedIdentities=len(entries), newlyAddedIdentities=len(entries)-len(old['ingredients']), stableHistoricalIds=len(old['ingredients']), structuralErrors=errors, aliasCollisionCandidates=collisions, linguisticReviewCount=len(pending), userApprovedTerminologyCount=len(approved), userAuthorizedRetainCount=len(retained), independentlyHumanReviewed=0, reviewBoundary='Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification.', selectionExclusions=[dict(externalId='175186', reason='Black turtle bean mapping needs comparison with existing black bean identity; not added.'),dict(reference='Van otlu peyniri', reason='Excluded at v3 due unavailable primary page; reconsider only after current primary verification.')])
+    report = dict(version=manifest['version'], capitalizationAndTranslationWarnings=warnings, conceptReviewCandidates=[dict(concept=c,keys=sorted(keys),meaning='Same English base label; qualified culinary forms may be distinct. Not automatically merged.') for c,keys in sorted(concepts.items()) if len(keys)>1], previousIdentities=len(old['ingredients']), auditedIdentities=len(entries), newlyAddedIdentities=len(entries)-len(old['ingredients']), stableHistoricalIds=len(old['ingredients']), structuralErrors=errors, aliasCollisionCandidates=collisions, linguisticReviewCount=len(pending), userApprovedTerminologyCount=len(approved), userAuthorizedRetainCount=len(retained), independentlyHumanReviewed=0, reviewBoundary='Structural audit; 3 earlier and 2 current user-authorized name changes, 10 user-authorized no-change decisions, 3 unresolved. No independent linguistic verification.', selectionExclusions=[dict(externalId='175186', reason='Black turtle bean mapping needs comparison with existing black bean identity; not added.')])
     if errors or collisions:
         raise ValueError(json.dumps(report, ensure_ascii=False))
     report['historicalLinguisticReviewCount'] = len(pending)
