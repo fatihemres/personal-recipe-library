@@ -1,6 +1,6 @@
 # Project progress
 
-## M3D-5 checkpoint C — 2026-10-22 (local implementation; final gates pending)
+## M3D-5 Release 11 — 2026-10-22 (CI verified; manual acceptance pending)
 
 Branch `feature/m3d-5-beverage-catalog` began at `e85c260` with only the unrelated root workbook untracked; the workbook and normal user profile remain untouched. Release 10 was archived byte-for-byte in `catalog/releases/10`. The baseline was 795 identities (666 food / 129 beverage), 269 aliases and 50 categories. A reproducible 85-candidate ledger using the checksum-pinned USDA SR Legacy archive and 46 pinned Wikidata revisions records 59 ACCEPT, 16 DEFER and 10 EXISTING. FoodOn, Open Food Facts, TürKomp and TheCocktailDB remain excluded. No unsupported nutrition, density, allergen or ABV observations were introduced.
 
@@ -8,7 +8,9 @@ Release 11 currently generates 854 identities (666 food / 188 beverage), 269 ali
 
 Source/terminology, coverage, quality and native reports are written. Local verification passed 80 Rust tests, 56 frontend tests, two browser tests, seven Python catalog suites, TypeScript, ESLint, Cargo fmt/check/Clippy, version consistency, frontend build and historical Release-10 checks. An isolated production arm64 `.app` launched and relaunched with Release 11, schema 5, 854/269/50 and one successful import; integrity and foreign keys were valid. The Mac was locked, so native GUI actions were unavailable. Two local DMG attempts failed in `bundle_dmg.sh` without a specific Tauri diagnostic; CI packaging is still pending. See `docs/CATALOG_M3D5_NATIVE_VERIFICATION.md`.
 
-Next: review final diff, commit/push this branch, open PR and inspect all five CI jobs and package checksums. Product Owner GUI/device acceptance remains required. This checkpoint does **not** claim M3D-5 completion or native GUI verification.
+Commits `e0ddc8c` and `07f4090` were pushed to `feature/m3d-5-beverage-catalog`; [PR #4](https://github.com/fatihemres/personal-recipe-library/pull/4) remains open against protected `main`. The first PR run exposed a generated Markdown trailing-newline mismatch; the one-line generator fix was retested and pushed. [Actions run 39758125378](https://github.com/fatihemres/personal-recipe-library/actions/runs/39758125378) passed all five jobs: frontend/browser, Linux Rust/SQLite/catalog, macOS arm64, macOS Intel and Windows x64. The three unsigned platform artifacts were downloaded; both macOS app ZIPs, both DMGs and the Windows NSIS installer matched their SHA-256 manifests. The root review workbook remains untracked and untouched. No merge or tag was made.
+
+M3D-5 implementation and automated verification are complete. Product Owner arm64 GUI/device acceptance remains required before merge: inspect newly added ingredients through Turkish/English search and categories, save a recipe with a new ingredient and exact quantity/unit, fully quit and relaunch, and confirm existing personal recipes/drafts survive. Intel/Windows installer execution and GUI behavior, signing and notarization remain unverified.
 
 ## M3D-4 checkpoint — 2026-10-19 (implementation and CI verified; manual acceptance pending)
 
