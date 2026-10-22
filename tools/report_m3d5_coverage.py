@@ -64,7 +64,7 @@ def main():
               ' vermouth identities, culturally specific şerbet bases, additional alcohol-free mixers, and non-branded liqueur types.'
               ' The 16 deferred candidates have explicit reasons in `catalog/preparation/m3d5/candidates.json`; none is in the runtime seed.', '',
               'This is a real SQLite-backed count. `catalog/production/m3d5-sqlite-report.json` records isolated fresh/upgrade'
-              ' integrity checks and local debug-CLI durations, which include process startup and are not cross-device benchmarks.', '']
+              ' integrity checks and local debug-CLI durations, which include process startup and are not cross-device benchmarks.']
     markdown = '\n'.join(lines) + '\n'
     path = ROOT / 'docs/CATALOG_M3D5_COVERAGE.md'
     if args.check:
