@@ -51,6 +51,7 @@ test('persisted dark theme loads and keyboard reaches active navigation', async 
   const user = userEvent.setup(); render(<AppShell recipes={recipes} client={api} />);
   await screen.findByRole('heading', { name: 'Tarif kütüphanesi' }); expect(document.documentElement).toHaveClass('dark');
   await user.tab(); expect(screen.getByRole('link', { name: 'İçeriğe geç' })).toHaveFocus();
+  await user.tab(); expect(screen.getByRole('button', { name: 'Özet ve istatistikler' })).toHaveFocus();
   await user.tab(); expect(screen.getByRole('button', { name: 'Tarif kütüphanesi' })).toHaveFocus();
 });
 

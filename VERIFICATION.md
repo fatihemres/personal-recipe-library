@@ -2,7 +2,12 @@
 
 **Last checked 2026-10-23.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.
 
+## Current candidate: M4B-2
+
+**Issue #10, 2026-10-23:** isolated worktree from main `8663787db4b68c8f4043f4a3405ae55eaf1dddd6`, branch `feature/m4b2-notes-filters-dashboard`. Schema 008 and typed note/filter/dashboard paths passed local automated checks; an isolated arm64 production app exercised note, saved-filter and dashboard controls, quit/restart and SQLite integrity. Exact PR head and five-job CI remain to be recorded in [M4B-2 acceptance report](docs/M4B2_ACCEPTANCE.md). PO Mac acceptance and merge remain separate gates; no merge/tag/release is implied.
+
 ## Historical integrated milestone: M4A
+
 - Candidate commit: `f6441fe2c5b503a8bb95e0ce81e00412697ae1ad`.
 - Integration: [PR #5](https://github.com/fatihemres/personal-recipe-library/pull/5) merge commit `49955722e8359e19eee206c577faa7ba600c96f8`, two verified parents (previous main `21c930fad356197a36c9073e061ee83a9829083c` and candidate `f6441fe...`).
 - **Independently checked GitHub CI:** [Actions run 39851790479](https://github.com/fatihemres/personal-recipe-library/actions/runs/39851790479) completed successfully on exact head. Jobs: Frontend and browser; Rust, SQLite and catalog; macOS Apple Silicon package; macOS Intel package; Windows x64 installer — all 5 PASS.

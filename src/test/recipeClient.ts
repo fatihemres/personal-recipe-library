@@ -24,6 +24,13 @@ export function rendererRecipeClient(): RecipeClient {
       ingredientNames: { [ingredient.id]: ingredient.name },
     }));
   return {
+    getPrivateNote: vi.fn().mockImplementation(async recipeId => ({recipeId,formatVersion:1,markdown:'',revision:0,updatedAt:null})),
+    savePrivateNote: vi.fn().mockImplementation(async write => ({recipeId:write.recipeId,formatVersion:1,markdown:write.markdown,revision:write.expectedRevision+1,updatedAt:'2026-10-08T12:00:00Z'})),
+    savedFilters: vi.fn().mockResolvedValue([]),
+    resolveFilter: vi.fn(),
+    saveFilter: vi.fn().mockImplementation(async write => ({id:write.id,title:write.title,revision:(write.expectedRevision??0)+1,formatVersion:1,query:write.query,available:true})),
+    deleteFilter: vi.fn().mockResolvedValue(null),
+    dashboard: vi.fn().mockResolvedValue({activeTotal:0,foodCount:0,beverageCount:0,favoriteCount:0,recentCreated:[],recentModified:[],collections:[]}),
     getOrganization: vi.fn().mockImplementation(async (id) => ({recipeId:id,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]})),
     setOrganization: vi.fn().mockImplementation(async (write) => ({recipeId:write.recipeId,revision:write.expectedRevision+1,favorite:write.favorite,toTry:write.toTry,rating:write.rating,collectionIds:[]})),
     collections: vi.fn().mockResolvedValue([]),

@@ -2,6 +2,8 @@ import { z } from 'zod';
 import { recipeOrganizationSchema, organizationWriteSchema, recipeCollectionSchema, collectionWriteSchema,
   type RecipeOrganization, type OrganizationWrite, type RecipeCollection, type CollectionWrite } from '../contracts/recipeOrganization';
 import { request } from './client';
+import { dashboardSchema, privateNoteSchema, privateNoteWriteSchema, savedFilterSchema, savedFilterWriteSchema,
+  type Dashboard, type PrivateNote, type PrivateNoteWrite, type SavedFilter, type SavedFilterWrite } from '../contracts/recipeWorkspace';
 import { recipeSearchPageSchema, recipeSearchQuerySchema, type RecipeSearchPage, type RecipeSearchQuery } from '../contracts/recipeSearch';
 import {
   draftSchema,
@@ -21,6 +23,13 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  getPrivateNote(recipeId:string):Promise<PrivateNote>;
+  savePrivateNote(write:PrivateNoteWrite):Promise<PrivateNote>;
+  savedFilters():Promise<SavedFilter[]>;
+  resolveFilter(id:string):Promise<RecipeSearchQuery>;
+  saveFilter(write:SavedFilterWrite):Promise<SavedFilter>;
+  deleteFilter(id:string,revision:number):Promise<null>;
+  dashboard():Promise<Dashboard>;
   getOrganization(id:string):Promise<RecipeOrganization>;
   setOrganization(write:OrganizationWrite):Promise<RecipeOrganization>;
   collections():Promise<RecipeCollection[]>;
@@ -70,6 +79,13 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  getPrivateNote: recipeId => request('get_private_note',privateNoteSchema,{recipeId:z.uuid().parse(recipeId)}),
+  savePrivateNote: write => request('save_private_note',privateNoteSchema,{write:privateNoteWriteSchema.parse(write)}),
+  savedFilters: () => request('list_saved_filters',z.array(savedFilterSchema)),
+  resolveFilter: id => request('resolve_saved_filter',recipeSearchQuerySchema,{id:z.uuid().parse(id)}),
+  saveFilter: write => request('save_saved_filter',savedFilterSchema,{write:savedFilterWriteSchema.parse(write)}),
+  deleteFilter: (id,revision) => request('delete_saved_filter',z.null(),{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision)}),
+  dashboard: () => request('recipe_dashboard',dashboardSchema),
   getOrganization: (id) => request('get_recipe_organization',recipeOrganizationSchema,{id:z.uuid().parse(id)}),
   setOrganization: (write) => request('set_recipe_organization',recipeOrganizationSchema,{write:organizationWriteSchema.parse(write)}),
   collections: () => request('list_recipe_collections',z.array(recipeCollectionSchema)),
