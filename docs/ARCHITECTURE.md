@@ -52,6 +52,9 @@ Estimated ABV = ethanol volume / final beverage volume × 100, with ethanol deri
 
 ## Search and localization
 
+M4A implementation: migration 006 stores rebuildable, Turkish-normalized recipe search documents and an FTS5 index. Typed `search_recipes` IPC sends bounded, validated filters to the Rust worker; the renderer never opens SQLite or materializes the entire recipe table. Recipe aggregate writes and linked ingredient/catalog presentation changes refresh affected documents in their write transaction. Startup backfills documents once after a schema upgrade, then normal opens avoid a full rebuild. Search text becomes bound, quoted FTS tokens; fixed SQL branches select sort order. The authoritative recipe rows supply lifecycle state and stable IDs. Title typo suggestions use a bounded candidate/edit-distance pass only on a zero-result query. Recipe favorites, categories and saved filters remain future M4B schema/UI work; no misleading controls are shown for absent fields.
+
+
 Store original Unicode names plus NFC normalized keys. Implement shared Turkish-aware search normalization for İ/i and I/ı; accent-tolerant aliases are additional keys, not identity rewrites. Use an explicit Turkish sort strategy verified across native and JS paths; SQLite built-in NOCASE is not the solution. FTS5 indexes recipe titles, notes, steps, ingredient/localized aliases; rebuild/update within writes and exclude trashed records by policy. Prefix FTS plus bounded candidate trigram/edit-distance ranking supports offline typo tolerance. Escape user query into permitted FTS syntax, bind parameters, paginate and cap work. Do not treat FTS5 as automatically typo tolerant or Turkish-aware. [SQLite FTS5 documentation](https://www.sqlite.org/fts5.html).
 
 ## Catalog ingestion and licensing

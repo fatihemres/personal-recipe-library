@@ -1,5 +1,11 @@
 # Application testing
 
+## M4A search library
+
+`cargo test --locked --manifest-path src-tauri/Cargo.toml recipe_search_tests -- --nocapture` exercises real temporary SQLite databases: migration-6 backfill, FTS synchronization across recipe writes and linked ingredient edits, Turkish and English/alias queries, bounded typo suggestions, composable filters, status separation, pagination, rebuild, catalog integration, decimal quantity preservation, and a 500-recipe/854-catalog workload. Run the full Rust suite as regression coverage. Renderer interaction tests in `LibraryPage.test.tsx` cover card/list, search, keyboard and browse-context behavior; they use an isolated client and cannot establish native SQLite persistence. Browser shell tests similarly cannot exercise Tauri IPC. Use an isolated Tauri bundle/profile for native startup and restart. The normal user profile must not be used for load tests.
+
+Migration 006 is forward-only and checksum tracked. Historical schema-5 upgrade creates a pre-migration SQLite snapshot before applying it; schema-6 binaries backfill search documents once. Check `PRAGMA integrity_check`, `PRAGMA foreign_key_check` and the migration ledger in isolated profiles. See `M4A_ACCEPTANCE_AND_PERFORMANCE.md` for measured results and remaining acceptance limits.
+
 ## M3D-5 Release 11 local verification — 2026-10-22
 
 The committed candidate ledger and pinned evidence regenerate **59** beverage additions over archived Release 10. `tools/fetch_m3d5_wikidata.py`, candidate/catalog `--check`, the static audit and seven Python catalog suites passed; the audit reports zero structural errors and exact normalized alias collisions. The real Rust importer completed isolated fresh and v7/v8/v9/v10 upgrades, repeats and SQLite integrity checks; a process-local network-denial run completed 29 imports/opens outside the nested tool sandbox. Two new Rust regressions verify cross-version preservation, search and `CATALOG_SOURCE_CHANGED` rollback. The full Rust library suite passed **80/80**.

@@ -1,5 +1,11 @@
 # Changelog
 
+## M4A — Search-first Recipe Library (2026-10-22, unreleased)
+
+- Added forward-only SQLite migration 006 with transactionally maintained recipe FTS5 documents and one-time historical backfill. Turkish/English recipe and linked ingredient names, aliases, notes and steps are searchable without loading all recipes into the renderer.
+- Added typed, bounded search IPC with composable active/archive/trash, kind, ingredient and date filters; relevance, date and Turkish title sorts; and bounded typo suggestions.
+- Added a Turkish recipe library with card/list views, paged result counts, accessible keyboard result navigation, and clear loading, no-match and storage-error states. Recipe CRUD, drafts, exact quantities, and Release 11 remain intact.
+
 ## M3D-5 — Beverage catalog Release 11 (2026-10-22, unreleased)
 
 - Screened 85 source-traceable beverage candidates: 59 accepted, 16 deferred and 10 already represented. Added 27 USDA SR Legacy and 32 pinned Wikidata identities; the bundled catalog has 854 canonical ingredients (666 food / 188 beverage), 269 aliases and 50 unchanged categories.

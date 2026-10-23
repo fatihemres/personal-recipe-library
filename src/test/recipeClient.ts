@@ -26,6 +26,15 @@ export function rendererRecipeClient(): RecipeClient {
   return {
     list,
     scope: list,
+    searchRecipes: vi.fn().mockImplementation(async (query) => {
+      const recipes = await list(query.scope, query.kind);
+      const matches = recipes.filter((recipe: {title: string; kind: string; id: string}) =>
+        (!query.kind || recipe.kind === query.kind)
+        && recipe.title.toLocaleLowerCase('tr').includes(query.text.toLocaleLowerCase('tr')),
+      );
+      return { items: matches.slice(query.offset, query.offset + query.limit), total: matches.length,
+        hasMore: query.offset + query.limit < matches.length, suggestions: [] };
+    }),
     get: vi.fn(),
     save,
     commit: vi.fn().mockImplementation((input) => save(input)),

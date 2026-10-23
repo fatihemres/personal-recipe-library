@@ -62,6 +62,8 @@ Tests: seed repeat/upgrade/rollback, stable IDs/source mappings, user override p
 
 Depends M3. R02/R04 partial/R05/R14.
 
+M4A implementation slice (2026-10-22): recipe FTS5/index synchronization, validated paged IPC, Turkish/English ingredient-aware search, status/kind/ingredient/date filters, relevance/date/Turkish alphabetical sort, bounded title typo suggestions and card/list UI. Verification and Product Owner native acceptance are tracked in `M4A_ACCEPTANCE_AND_PERFORMANCE.md`. M4B remains the organization slice: recipe favorites, collections, ratings, saved filters, to-try, private/rich notes, real dashboard links and their migrations/tests. Do not claim the combined M4 acceptance criteria from M4A alone.
+
 Implement recipe/ingredient FTS indexes, autocomplete, bounded typo tolerance, Turkish sorting/normalization, advanced filters, saved filters, cards/list, favorites, collections/membership, to-try, private/rich notes, ratings. Sanitize rich-note rendering and record format/version. Dashboard count/favorite/recent/collection links are delivered only with real queries.
 
 Acceptance: search recipe title/steps/ingredients/aliases and filter/sort correctly; favorites/multi-collection membership persist; dashboard links match counts and filtered views; archive/trash inclusion explicit; query latency measured on catalog-sized data.

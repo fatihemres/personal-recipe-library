@@ -247,6 +247,17 @@ impl Database {
             materialize(&tx, i)?;
         }
         let report = coverage(&tx, seed, false, inserted, updated)?;
+        // Catalog names and aliases are searchable through existing recipe links.
+        // A release is rare; refresh linked recipes in the same import transaction.
+        let mut linked =
+            tx.prepare("SELECT DISTINCT recipe_id FROM recipe_ingredients ORDER BY recipe_id")?;
+        let recipe_ids = linked
+            .query_map([], |row| row.get::<_, String>(0))?
+            .collect::<Result<Vec<_>, _>>()?;
+        drop(linked);
+        for id in recipe_ids {
+            super::recipe_search::index_recipe(&tx, &id)?;
+        }
         finish_run(&tx, run, &report)?;
         #[cfg(test)]
         if let Ok(marker) = std::env::var("RECIPEATLAS_CATALOG_CRASH_MARKER") {
@@ -385,6 +396,7 @@ impl Database {
             "UPDATE catalog_collisions SET state='linked' WHERE catalog_id=?1 AND personal_id=?2",
             params![catalog_id, id],
         )?;
+        super::recipe_search::index_ingredient_recipes(&tx, id)?;
         tx.commit()?;
         Ok(())
     }
@@ -440,6 +452,7 @@ impl Database {
                 })
             },
         )?;
+        super::recipe_search::index_ingredient_recipes(&tx, &input.id)?;
         tx.commit()?;
         Ok(result)
     }

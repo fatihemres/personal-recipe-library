@@ -38,6 +38,7 @@ pub fn run() {
             commands::bootstrap,
             commands::save_preferences,
             commands::list_recipes,
+            commands::search_recipes,
             commands::get_recipe,
             commands::save_recipe,
             commands::set_recipe_deleted,

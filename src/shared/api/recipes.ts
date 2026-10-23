@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { request } from './client';
+import { recipeSearchPageSchema, recipeSearchQuerySchema, type RecipeSearchPage, type RecipeSearchQuery } from '../contracts/recipeSearch';
 import {
   draftSchema,
   draftInputSchema,
@@ -18,6 +19,7 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  searchRecipes(query: RecipeSearchQuery): Promise<RecipeSearchPage>;
   list(trash: boolean, kind: 'food' | 'beverage' | null): Promise<Recipe[]>;
   get(id: string): Promise<Recipe>;
   save(input: RecipeInput): Promise<Recipe>;
@@ -60,6 +62,7 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  searchRecipes: (query) => request('search_recipes', recipeSearchPageSchema, { query: recipeSearchQuerySchema.parse(query) }),
   list: (trash, kind) =>
     request('list_recipes', z.array(recipeSchema), { trash, kind }),
   get: (id) => request('get_recipe', recipeSchema, { id }),

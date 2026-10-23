@@ -148,11 +148,11 @@ fn real_m1_upgrade_preserves_preferences_and_validates_both_checksums() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 5);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 6);
     assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        5
+        6
     );
     drop(db);
     for _ in 0..3 {
