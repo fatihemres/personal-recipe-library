@@ -1,5 +1,11 @@
 # Changelog
 
+## M4B-1 — Recipe organization and collections (2026-10-23, unreleased)
+
+- Added SQLite schema migration 007 and typed commands for per-recipe favorite and To Try flags, nullable 1–5 whole-star rating, and user-defined many-to-many collections with independent revision tracking.
+- Added Turkish library/detail controls for recipe organization, collections, memberships and composable organization filters; preserved exact decimal quantities, drafts and offline bundled catalog Release 11.
+- [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) integrated by merge commit `77825776e1cfcf57eb81e547cb3407e5af9d05c2` after five CI jobs passed and PO reported 7/7 manual checks on an isolated Mac build. This is **not** a public/signed release; Windows/Intel native GUI and normal-profile migration remain separate gates.
+
 ## M4A — Search-first Recipe Library (2026-10-22, unreleased)
 
 - Added forward-only SQLite migration 006 with transactionally maintained recipe FTS5 documents and one-time historical backfill. Turkish/English recipe and linked ingredient names, aliases, notes and steps are searchable without loading all recipes into the renderer.
