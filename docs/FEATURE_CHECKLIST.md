@@ -1,5 +1,5 @@
-> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A is integrated, M4B-1 is an engineering candidate, and M4B-2 is planned. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
-> **M4B-1 candidate:** recipe favorites, To Try, nullable ratings and collections are implemented on a feature branch with schema 007. They are not checked here as integrated/PO-accepted until review and merge. Rich/private notes, saved filters and dashboard remain M4B-2.
+> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A and M4B-1 are integrated and PO accepted, while M4B-2 is planned. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
+> **M4B-1 integrated 2026-10-23:** recipe favorites, To Try, nullable ratings and collections merged in [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) with schema 007 and PO-reported isolated Mac GUI 7/7 checks PASS. This selective checklist is not the full V1 acceptance ledger. Rich/private notes, saved filters and dashboard remain M4B-2.
 
 # Feature checklist
 
@@ -38,8 +38,9 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 - [x] Food/beverage create/view/edit, ordered ingredients/steps, soft delete and basic trash restore.
 - [x] Independent duplication, archive/unarchive, separate trash/restore and confirmed purge (M2B).
 - [x] SQLite new/edit draft recovery, serialized autosave/Save/Discard, optimistic conflicts and explicit save-as-new (M2B).
-- [ ] Cards/list, sorts/filters/advanced FTS search and favorites.
-- [ ] Ratings/rich notes, variations/related recipes/history/version restore.
+- [x] Cards/list, sorts/filters/advanced FTS search (M4A) and recipe favorites (M4B-1).
+- [x] Nullable whole-star 1–5 ratings (M4B-1).
+- [ ] Rich notes, variations/related recipes/history/version restore.
 - [ ] Ingredient substitutions and portion adjustment.
 - [ ] Cover/step images, optional source URLs and attribution.
 
@@ -107,8 +108,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 
 ## R14 — Organization
 
-- [ ] Favorites/custom collections/multiple memberships/to-try.
-- [ ] Cooking history/saved filters/private notes/ratings.
+- [x] Recipe favorites/custom collections/multiple memberships/To Try/ratings (M4B-1).
+- [ ] Cooking history/saved filters/private notes (remaining V1 features).
 
 ## R16 — Database
 
