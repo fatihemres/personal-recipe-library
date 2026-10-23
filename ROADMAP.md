@@ -20,15 +20,15 @@
 | M3D-4 | Release 10, 795 identities | INTEGRATED / PO Mac-accepted / checkpoint tagged | Historical |
 | M3D-5 | Release 11, 854 identities (666 food/188 beverage) | INTEGRATED / PO Mac-accepted / checkpoint tagged | **Catalog expansion paused by PO** |
 | M4A | Search-first recipe library, FTS5, filters, sorting, pagination, keyboard | **INTEGRATED + PO ACCEPTED** via [PR #5](https://github.com/fatihemres/personal-recipe-library/pull/5), 2026-10-23; schema 6 | Verify local FF/tag separately |
-| **M4B overall** | Recipe favorites, collections, ratings, private/rich notes, saved filters, database-backed dashboard navigation | **PARTIAL CANDIDATE: M4B-1 implemented; M4B-2 planned** | Separate PO acceptance and integration gates for each slice |
-| **M4B-1** | Recipe favorite/To Try, nullable 1–5 rating, custom collections and membership | **IMPLEMENTED CANDIDATE on feature branch; PO acceptance pending** | Schema-7/native/CI evidence and explicit merge approval |
-| **M4B-2** | Private/rich notes, named saved filters and real dashboard | **PLANNED** | Separate scope, branch and PR after M4B-1 PO acceptance |
+| **M4B overall** | Recipe favorites, collections, ratings, private/rich notes, saved filters, database-backed dashboard navigation | **PARTIALLY INTEGRATED: M4B-1 PO ACCEPTED; M4B-2 PLANNED** | Separate future M4B-2 scope, implementation, CI, native/PO acceptance and merge gates |
+| **M4B-1** | Recipe favorite/To Try, nullable 1–5 rating, custom collections and membership | **INTEGRATED + PO ACCEPTED** via [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8), schema 7, 2026-10-23 | Optional annotated checkpoint tag only with separate PO authorization; cross-platform GUI remains unverified |
+| **M4B-2** | Private/rich notes, named saved filters and real dashboard | **PLANNED** | Define rich-note safety and saved-filter persistence; separate branch/PR after scope confirmation |
 | M5 | Advanced recipe editor, variations/version history, images/media, Cooking Mode | PLANNED; depends on M4 | Real media, history and native acceptance |
 | M6 | Full measurement and conversion engine; specialized Beverage Studio and honest ABV estimates | PLANNED; depends on M3/M5 | Precision/source-backed calculation tests |
 | M7 | Pantry lots and shopping lists | PLANNED; depends on M6 | Safe stock deduction, aggregation, offline native tests |
 | M8–M11 | Meal planning, stats/integration, data portability, QA/cross-platform/release | PLANNED; use exact [implementation plan](docs/IMPLEMENTATION_PLAN.md) milestone ownership | Complete R01–R20 before v1.0.0 |
 
-## M4B candidate acceptance outline (requires scoped PO review)
+## M4B overall acceptance outline (M4B-1 completed; M4B-2 requires scoped PO review)
 1. Recipe favorite + to-try and persistent ratings with selected policy; many-to-many custom collections.
 2. Private/rich notes with stored format/version and safe rendering; save/edit/reopen/restart without loss.
 3. Saved library filters with exact typed query model and explicit archive/trash handling; no SQL-string persistence.
@@ -36,7 +36,7 @@
 5. Turkish sort/filter/search and keyboard/a11y UI; no mock records, no hardcoded metrics.
 6. Forward-only migration only if needed, genuine SQLite/renderer/native verification, PR five CI jobs, Mac PO acceptance, separate merge authorization.
 
-No code is approved solely by this outline. M4B should not silently absorb M5 history/media or M6 beverage-specific editing.
+No M4B-2 code is approved solely by this outline. M4B should not silently absorb M5 history/media or M6 beverage-specific editing.
 
 ## Ongoing safety gates
 - Always protect installed catalog Release 11, previous release archives, recipe/draft data, exact decimal quantity/unit state and user overrides.
