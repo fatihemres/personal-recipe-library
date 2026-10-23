@@ -353,11 +353,11 @@ fn m2a_migration_preserves_records_decimal_values_settings_and_checksums() {
                 .as_deref(),
             Some("35.000001")
         );
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 6);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 7);
         assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
         assert_eq!(
             migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-            6
+            7
         );
     }
 }

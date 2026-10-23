@@ -5,6 +5,7 @@ import { errorMessage } from '../../shared/i18n';
 import { recipesTr as t } from '../../shared/i18n/recipes';
 import type { Draft, Recipe } from '../../shared/contracts/recipe';
 import type { RecipeSearchItem } from '../../shared/contracts/recipeSearch';
+import type { RecipeOrganization, RecipeCollection } from '../../shared/contracts/recipeOrganization';
 import { Button } from '../../shared/ui/button';
 import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
 import { RecipeDetails } from './RecipeDetails';
@@ -12,14 +13,24 @@ import { DraftRecovery } from './DraftRecovery';
 import { RecipeEditor } from './RecipeEditor';
 export function LibraryPage({
   client = recipeClient,
+  section = 'library',
 }: {
   client?: RecipeClient;
+  section?: 'library' | 'collections';
 }) {
   const [items, setItems] = useState<RecipeSearchItem[]>([]);
   const [total, setTotal] = useState(0);
   const [hasMore, setHasMore] = useState(false);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [selected, setSelected] = useState<Recipe | null>(null);
+  const [organization, setOrganization] = useState<RecipeOrganization | null>(null);
+  const [collections, setCollections] = useState<RecipeCollection[]>([]);
+  const [collectionId, setCollectionId] = useState<string | null>(null);
+  const [collectionTitle, setCollectionTitle] = useState('');
+  const [collectionEditing, setCollectionEditing] = useState<RecipeCollection | null>(null);
+  const [collectionDelete, setCollectionDelete] = useState<RecipeCollection | null>(null);
+  const [favoriteOnly, setFavoriteOnly] = useState(false);
+  const [toTryOnly, setToTryOnly] = useState(false);
   const [editing, setEditing] = useState(false);
   const [kind, setKind] = useState<'food' | 'beverage' | null>(null);
   const [scope, setScope] = useState<'active' | 'archived' | 'trash'>('active');
@@ -69,7 +80,7 @@ export function LibraryPage({
     }, 150);
     return () => { alive = false; window.clearTimeout(timer); };
   }, [client, ingredientQuery, ingredientId]);
-  const filters = {text:searchText,scope,kind,ingredientId,
+  const filters = {text:searchText,scope,kind,ingredientId,favoriteOnly,toTryOnly,collectionId,
     createdFrom:createdFrom || null,createdTo:createdTo || null,
     modifiedFrom:modifiedFrom || null,modifiedTo:modifiedTo || null,
     sort,offset:page*24,limit:24} as const;
@@ -78,9 +89,10 @@ export function LibraryPage({
     setLoading(true);
     setError('');
     try {
-      const [recipes, recovery] = await Promise.all([
+      const [recipes, recovery, groups] = await Promise.all([
         client.searchRecipes(filters),
         client.drafts(),
+        client.collections(),
       ]);
       if (current === generation.current) {
         setItems(recipes.items);
@@ -88,6 +100,7 @@ export function LibraryPage({
         setHasMore(recipes.hasMore);
         setSuggestions(recipes.suggestions);
         setDrafts(recovery);
+        setCollections(groups);
       }
     } catch (e) {
       if (current === generation.current) {
@@ -102,7 +115,7 @@ export function LibraryPage({
     }
   // Primitive dependencies keep the client request stable across ordinary renders.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [client, searchText, scope, kind, ingredientId, createdFrom, createdTo, modifiedFrom, modifiedTo, sort, page]);
+  }, [client, searchText, scope, kind, ingredientId, favoriteOnly, toTryOnly, collectionId, createdFrom, createdTo, modifiedFrom, modifiedTo, sort, page]);
   const invalidate = useCallback(() => {
     generation.current++;
   }, []);
@@ -116,13 +129,54 @@ export function LibraryPage({
     setBusy(true);
     setError('');
     try {
-      setSelected(await client.get(id));
+      const [recipe, state] = await Promise.all([client.get(id),client.getOrganization(id)]);
+      setSelected(recipe);
+      setOrganization(state);
     } catch (e) {
       setError(errorMessage(normalizeError(e).messageKey));
     } finally {
       setBusy(false);
       operation.current = false;
     }
+  }
+  async function updateOrganization(next: Pick<RecipeOrganization,'favorite'|'toTry'|'rating'>, id: string, revision: number) {
+    if (operation.current) return;
+    operation.current = true; setBusy(true); setError('');
+    try {
+      const state = await client.setOrganization({recipeId:id,expectedRevision:revision,...next});
+      setItems(previous => previous.map(item => item.id===id ? {...item,organizationRevision:state.revision,favorite:state.favorite,toTry:state.toTry,rating:state.rating} : item));
+      if (selected?.id===id) setOrganization(state);
+      await load();
+    } catch (e) { setError(errorMessage(normalizeError(e).messageKey)); }
+    finally { operation.current=false; setBusy(false); }
+  }
+  async function toggleMembership(group: RecipeCollection, member: boolean) {
+    if (!selected || !organization || operation.current) return;
+    operation.current=true; setBusy(true); setError('');
+    try {
+      setOrganization(await client.setMembership(selected.id,group.id,organization.revision,member));
+      await load();
+    } catch(e) { setError(errorMessage(normalizeError(e).messageKey)); }
+    finally { operation.current=false; setBusy(false); }
+  }
+  async function saveCollection() {
+    if (operation.current) return;
+    operation.current=true; setBusy(true); setError('');
+    try {
+      await client.saveCollection({id:collectionEditing?.id ?? crypto.randomUUID(),expectedRevision:collectionEditing?.revision ?? null,title:collectionTitle});
+      setCollectionTitle(''); setCollectionEditing(null); await load();
+    } catch(e) { setError(errorMessage(normalizeError(e).messageKey)); }
+    finally { operation.current=false; setBusy(false); }
+  }
+  async function removeCollection() {
+    if (!collectionDelete || operation.current) return;
+    operation.current=true; setBusy(true); setError('');
+    try {
+      await client.deleteCollection(collectionDelete.id,collectionDelete.revision);
+      if (collectionId===collectionDelete.id) setCollectionId(null);
+      setCollectionDelete(null); await load();
+    } catch(e) { setError(errorMessage(normalizeError(e).messageKey)); }
+    finally { operation.current=false; setBusy(false); }
   }
   async function deletion(deleted: boolean) {
     if (!selected || operation.current) return;
@@ -132,6 +186,7 @@ export function LibraryPage({
     try {
       await client.setDeleted(selected.id, selected.revision, deleted);
       setSelected(null);
+      setOrganization(null);
       setNotice(deleted ? t.deleted : t.restored);
       await load();
     } catch (e) {
@@ -153,9 +208,12 @@ export function LibraryPage({
       if (action === 'purge') {
         await client.purge(selected.id, selected.revision);
         setSelected(null);
+        setOrganization(null);
         setNotice(t.purged);
       } else if (action === 'duplicate') {
-        setSelected(await client.duplicate(selected.id, selected.revision));
+        const copy = await client.duplicate(selected.id, selected.revision);
+        setSelected(copy);
+        setOrganization(await client.getOrganization(copy.id));
         setScope('active');
         setNotice(t.duplicated);
       } else {
@@ -191,6 +249,7 @@ export function LibraryPage({
         }
       }
       setSelected(original);
+      setOrganization(original ? await client.getOrganization(original.id) : null);
       setRecovered(draft);
       setEditing(true);
     } catch (e) {
@@ -221,6 +280,7 @@ export function LibraryPage({
     setRecovered(undefined);
     setScope('active');
     setSelected(recipe);
+    void client.getOrganization(recipe.id).then(setOrganization, e => setError(errorMessage(normalizeError(e).messageKey)));
     setNotice(t.saved);
     void load();
   }
@@ -241,6 +301,7 @@ export function LibraryPage({
     );
   function resetFilters() {
     setQuery(''); setSearchText(''); setKind(null); setIngredientId(null);
+    setFavoriteOnly(false); setToTryOnly(false); setCollectionId(null);
     setIngredientName(''); setIngredientQuery(''); setCreatedFrom('');
     setCreatedTo(''); setModifiedFrom(''); setModifiedTo('');
     setSort('modified'); setPage(0);
@@ -250,7 +311,7 @@ export function LibraryPage({
       <div className="page-heading">
         <div>
           <p className="eyebrow">{t.brand}</p>
-          <h1>{selected ? selected.title : t.heading}</h1>
+          <h1>{selected ? selected.title : section === 'collections' ? t.collections : t.heading}</h1>
           <p>{selected ? selected.description : t.intro}</p>
         </div>
         <Button
@@ -342,9 +403,46 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
+          {organization && !selected.deletedAt && <div className="panel recipe-organization">
+            <div className="recipe-actions" role="group" aria-label={t.favorites}>
+              <Button variant={organization.favorite ? 'default' : 'outline'} aria-pressed={organization.favorite} disabled={busy}
+                onClick={() => void updateOrganization({favorite:!organization.favorite,toTry:organization.toTry,rating:organization.rating},selected.id,organization.revision)}>
+                {organization.favorite ? t.favoriteRemove : t.favoriteAdd}</Button>
+              <Button variant={organization.toTry ? 'default' : 'outline'} aria-pressed={organization.toTry} disabled={busy}
+                onClick={() => void updateOrganization({favorite:organization.favorite,toTry:!organization.toTry,rating:organization.rating},selected.id,organization.revision)}>
+                {organization.toTry ? t.toTryRemove : t.toTryAdd}</Button>
+            </div>
+            <fieldset><legend>{t.rating}</legend><p>{organization.rating === null ? t.unrated : `${organization.rating}/5`}</p><div className="recipe-actions">
+              {[1,2,3,4,5].map(value => <Button key={value} variant={organization.rating===value ? 'default' : 'outline'}
+                aria-pressed={organization.rating===value} disabled={busy} aria-label={t.ratingStar.replace('{count}',String(value))}
+                onClick={() => void updateOrganization({favorite:organization.favorite,toTry:organization.toTry,rating:value},selected.id,organization.revision)}>{value} ★</Button>)}
+              <Button variant="outline" disabled={busy || organization.rating===null} onClick={() => void updateOrganization({favorite:organization.favorite,toTry:organization.toTry,rating:null},selected.id,organization.revision)}>{t.ratingClear}</Button>
+            </div></fieldset>
+            <fieldset><legend>{t.collectionMembership}</legend>
+              {collections.length ? collections.map(group => <label key={group.id} className="recipe-collection-choice">
+                <input type="checkbox" checked={organization.collectionIds.includes(group.id)} disabled={busy}
+                  onChange={event => void toggleMembership(group,event.target.checked)} /> {group.title}
+              </label>) : <p>{t.collectionEmpty}</p>}
+            </fieldset>
+          </div>}
         </>
       ) : (
         <>
+          {section === 'collections' && <div className="panel recipe-collections">
+            <h2>{t.collections}</h2>
+            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="recipe-actions">
+              <label>{t.collectionName}<input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
+              <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
+              {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
+            </form>
+            {collections.length ? <ul className="recipe-collection-list">{collections.map(group => <li key={group.id}>
+              <Button variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
+                onClick={()=>{setCollectionId(group.id);setScope('active');setPage(0);}}>{group.title} · {t.collectionCount.replace('{count}',String(group.activeCount))}</Button>
+              <Button variant="outline" aria-label={`${group.title}: ${t.collectionRename}`} onClick={()=>{setCollectionEditing(group);setCollectionTitle(group.title);}}>{t.collectionRename}</Button>
+              <Button variant="outline" aria-label={`${group.title}: ${t.collectionDelete}`} onClick={()=>setCollectionDelete(group)}>{t.collectionDelete}</Button>
+            </li>)}</ul> : <p>{t.collectionEmpty}</p>}
+            {collectionId && <Button variant="outline" onClick={()=>{setCollectionId(null);setPage(0);}}>{t.collectionFilterClear}</Button>}
+          </div>}
           <div className="recipe-toolbar">
             <div className="recipe-actions">
               <Button
@@ -355,13 +453,13 @@ export function LibraryPage({
               </Button>
               <Button
                 variant={scope === 'archived' ? 'default' : 'outline'}
-                onClick={() => { setScope('archived'); setPage(0); }}
+                onClick={() => { setScope('archived'); setFavoriteOnly(false); setToTryOnly(false); setCollectionId(null); setPage(0); }}
               >
                 {t.archived}
               </Button>
               <Button
                 variant={trash ? 'default' : 'outline'}
-                onClick={() => { setScope('trash'); setPage(0); }}
+                onClick={() => { setScope('trash'); setFavoriteOnly(false); setToTryOnly(false); setCollectionId(null); setPage(0); }}
               >
                 {t.trash}
               </Button>
@@ -383,6 +481,10 @@ export function LibraryPage({
                 <option value="beverage">{t.beverage}</option>
               </select>
             </label>
+            {scope === 'active' && <div className="recipe-actions" role="group" aria-label={t.favorites}>
+              <Button variant={favoriteOnly ? 'default':'outline'} aria-pressed={favoriteOnly} onClick={()=>{setFavoriteOnly(!favoriteOnly);setPage(0);}}>{t.favorites}</Button>
+              <Button variant={toTryOnly ? 'default':'outline'} aria-pressed={toTryOnly} onClick={()=>{setToTryOnly(!toTryOnly);setPage(0);}}>{t.toTry}</Button>
+            </div>}
             <label>
               {t.search}
               <input ref={searchRef} type="search" maxLength={200} value={query}
@@ -390,7 +492,7 @@ export function LibraryPage({
                 onKeyDown={(event) => {
                   if (event.key === 'Escape') { setQuery(''); setPage(0); }
                   if (event.key === 'ArrowDown' && items.length) {
-                    event.preventDefault(); document.getElementById('recipe-result-0')?.focus();
+                    event.preventDefault(); document.querySelector<HTMLElement>('#recipe-result-0 .recipe-card-open')?.focus();
                   }
                 }}
                 aria-describedby="recipe-search-help" />
@@ -432,7 +534,7 @@ export function LibraryPage({
           ) : error ? null : !items.length ? (
             <div className="panel empty-state">
               <h2>
-                {query || kind || ingredientId || createdFrom || createdTo || modifiedFrom || modifiedTo
+                {query || kind || ingredientId || favoriteOnly || toTryOnly || collectionId || createdFrom || createdTo || modifiedFrom || modifiedTo
                   ? t.noMatches
                   : trash
                     ? t.emptyTrash
@@ -442,33 +544,41 @@ export function LibraryPage({
               </h2>
               {!trash && !query && !kind && <p>{t.emptyBody}</p>}
               {suggestions.length > 0 && <div className="recipe-actions"><span>{t.didYouMean}</span>{suggestions.map(value => <Button key={value} variant="outline" onClick={() => {setQuery(value);setPage(0);}}>{value}</Button>)}</div>}
-              {(query || kind || ingredientId || createdFrom || createdTo || modifiedFrom || modifiedTo) && <Button variant="outline" onClick={resetFilters}>{t.resetFilters}</Button>}
+              {(query || kind || ingredientId || favoriteOnly || toTryOnly || collectionId || createdFrom || createdTo || modifiedFrom || modifiedTo) && <Button variant="outline" onClick={resetFilters}>{t.resetFilters}</Button>}
             </div>
           ) : (
             <div className={view === 'card' ? 'recipe-grid' : 'recipe-list'}>
               {items.map((recipe, index) => (
-                <button
+                <div
                   id={`recipe-result-${index}`}
                   className={`panel recipe-card ${view === 'list' ? 'recipe-list-row' : ''}`}
                   key={recipe.id}
-                  disabled={busy}
-                  onClick={() => void open(recipe.id)}
-                  onKeyDown={(event) => {
+                >
+                  <button type="button" className="recipe-card-open" disabled={busy} onClick={() => void open(recipe.id)} onKeyDown={(event) => {
                     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
                       event.preventDefault();
-                      document.getElementById(`recipe-result-${index + (event.key === 'ArrowDown' ? 1 : -1)}`)?.focus();
+                      document.querySelector<HTMLElement>(`#recipe-result-${index + (event.key === 'ArrowDown' ? 1 : -1)} .recipe-card-open`)?.focus();
                     }
                   }}
-                >
+                  >
                   <span className="badge">
                     {recipe.kind === 'food' ? t.food : t.beverage}
                   </span>
-                  <h2>{recipe.title}</h2>
+                  <h2 id={`recipe-title-${recipe.id}`}>{recipe.title}</h2>
                   <p>{recipe.description}</p>
                   <span>
                     {recipe.servings} {t.portions}
                   </span>
-                </button>
+                  </button>
+                  {!trash && <div className="recipe-actions">
+                    <Button variant={recipe.favorite?'default':'outline'} aria-pressed={recipe.favorite} disabled={busy}
+                      aria-label={recipe.favorite?t.favoriteRemove:t.favoriteAdd} aria-describedby={`recipe-title-${recipe.id}`}
+                      onClick={()=>void updateOrganization({favorite:!recipe.favorite,toTry:recipe.toTry,rating:recipe.rating},recipe.id,recipe.organizationRevision)}>{recipe.favorite?'★':'☆'}</Button>
+                    <Button variant={recipe.toTry?'default':'outline'} aria-pressed={recipe.toTry} disabled={busy}
+                      aria-label={recipe.toTry?t.toTryRemove:t.toTryAdd} aria-describedby={`recipe-title-${recipe.id}`}
+                      onClick={()=>void updateOrganization({favorite:recipe.favorite,toTry:!recipe.toTry,rating:recipe.rating},recipe.id,recipe.organizationRevision)}>{t.toTry}</Button>
+                  </div>}
+                </div>
               ))}
             </div>
           )}
@@ -509,6 +619,9 @@ export function LibraryPage({
           onConfirm={() => void deletion(true)}
         />
       )}
+      {collectionDelete && <ConfirmDialog title={t.collectionDeleteConfirm} description={t.collectionDeleteHelp}
+        confirm={t.collectionDelete} cancel={t.cancel} busy={busy} error={error}
+        onCancel={()=>setCollectionDelete(null)} onConfirm={()=>void removeCollection()} />}
     </section>
   );
 }

@@ -20,7 +20,9 @@
 | M3D-4 | Release 10, 795 identities | INTEGRATED / PO Mac-accepted / checkpoint tagged | Historical |
 | M3D-5 | Release 11, 854 identities (666 food/188 beverage) | INTEGRATED / PO Mac-accepted / checkpoint tagged | **Catalog expansion paused by PO** |
 | M4A | Search-first recipe library, FTS5, filters, sorting, pagination, keyboard | **INTEGRATED + PO ACCEPTED** via [PR #5](https://github.com/fatihemres/personal-recipe-library/pull/5), 2026-10-23; schema 6 | Verify local FF/tag separately |
-| **M4B** | Recipe favorites, collections, ratings, private/rich notes, saved filters, database-backed dashboard navigation | **PLANNED / proposed next slice; no verified branch or implementation** | Scope decisions OPEN-001, separate feature branch and PR |
+| **M4B overall** | Recipe favorites, collections, ratings, private/rich notes, saved filters, database-backed dashboard navigation | **PARTIAL CANDIDATE: M4B-1 implemented; M4B-2 planned** | Separate PO acceptance and integration gates for each slice |
+| **M4B-1** | Recipe favorite/To Try, nullable 1–5 rating, custom collections and membership | **IMPLEMENTED CANDIDATE on feature branch; PO acceptance pending** | Schema-7/native/CI evidence and explicit merge approval |
+| **M4B-2** | Private/rich notes, named saved filters and real dashboard | **PLANNED** | Separate scope, branch and PR after M4B-1 PO acceptance |
 | M5 | Advanced recipe editor, variations/version history, images/media, Cooking Mode | PLANNED; depends on M4 | Real media, history and native acceptance |
 | M6 | Full measurement and conversion engine; specialized Beverage Studio and honest ABV estimates | PLANNED; depends on M3/M5 | Precision/source-backed calculation tests |
 | M7 | Pantry lots and shopping lists | PLANNED; depends on M6 | Safe stock deduction, aggregation, offline native tests |

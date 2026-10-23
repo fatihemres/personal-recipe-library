@@ -125,3 +125,8 @@
 - Added a PR-only GitHub Actions workflow with independent frontend/browser and Rust/SQLite/catalog gates, followed by unsigned macOS Apple Silicon, macOS Intel and Windows packaging jobs and short-lived test artifacts.
 - Documented feature-branch development, explicit Product Owner review before merge, preservation of the transition commits, milestone tags, semantic application versions, catalog releases and separate database recovery.
 - Kept the repository private. Current GitHub plan rejects private-repository branch protection, so the no-direct-main-push policy is manual until enforcement becomes available.
+# M4B-1 candidate — 2026-10-23
+
+- Add recipe-level favorite and To Try states, nullable 1–5 rating, and user-defined many-to-many collections with Turkish-first management and detail controls.
+- Add checksummed schema 007 and typed Rust/TypeScript IPC. Extend active M4A recipe search with composable organization filters, preserving content/draft revisions and exact quantities.
+- Verify isolated schema-6 upgrade, fresh/restart behavior, rollback, catalog preservation and frontend interactions. M4B-2 notes, saved filters and dashboard remain pending; this candidate awaits PO acceptance and merge.

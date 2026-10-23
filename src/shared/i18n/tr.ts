@@ -19,6 +19,7 @@ export const tr = {
     'errors.catalog': 'Katalog işlemi doğrulanamadı. Kaynak izinlerini, paket bütünlüğünü ve kayıt çakışmalarını kontrol edin; mevcut kişisel veriler değiştirilmedi.',
     'errors.draftConflict':'Bu taslak başka bir oturumda değiştirildi veya kapatıldı. Buradaki metni koruyup güncel taslağı yeniden açın; başka oturumun verisi üzerine yazılmadı.',
     'errors.ingredientDuplicate':'Bu isimle zaten bir malzeme var. Farklı bir isim seçin veya mevcut kaydı kullanın; kayıtlar otomatik birleştirilmez.',
+    'errors.collectionDuplicate':'Bu adla bir koleksiyon zaten var. Farklı bir ad seçin.',
     'errors.ingredientReferenced':'Malzeme kaydedilmiş tariflerde veya taslaklarda kullanılıyor ve silinemez. İsmini güvenle düzenleyebilirsiniz.',
 
     'errors.conflict': 'Bu kayıt başka bir işlemde değiştirildi. Güncel kaydı yeniden açıp değişikliklerinizi gözden geçirin.',

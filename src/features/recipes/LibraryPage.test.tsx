@@ -50,6 +50,38 @@ test('create recipe with personal ingredient, decimal comma and reordered steps'
   await user.click(screen.getByRole('button', { name: 'Düzenle' }));
   expect(screen.getByLabelText('Tarif adı')).toHaveValue('İçli köfte');
 });
+test('recipe organization controls are accessible and distinct from ingredient favorites', async () => {
+  const api = client();
+  const recipe: Recipe = { id:crypto.randomUUID(), revision:1,title:'Börek',kind:'food',servings:'2',
+    description:null,prepMinutes:null,cookMinutes:null,notes:null,createdAt:'now',updatedAt:'now',
+    deletedAt:null,archivedAt:null,ingredients:[],steps:[],ingredientNames:{} };
+  vi.mocked(api.list).mockResolvedValue([recipe]);
+  vi.mocked(api.get).mockResolvedValue(recipe);
+  vi.mocked(api.getOrganization).mockResolvedValue({recipeId:recipe.id,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]});
+  const user=userEvent.setup();
+  render(<LibraryPage client={api}/>);
+  await user.click(await screen.findByRole('button',{name:'Favorilere ekle'}));
+  expect(api.setOrganization).toHaveBeenCalledWith({recipeId:recipe.id,expectedRevision:1,favorite:true,toTry:false,rating:null});
+  await user.click(screen.getByRole('button',{name:/Börek/}));
+  await user.click(screen.getByRole('button',{name:'5 yıldız ver'}));
+  expect(api.setOrganization).toHaveBeenCalledWith({recipeId:recipe.id,expectedRevision:1,favorite:false,toTry:false,rating:5});
+  expect(screen.getByRole('button',{name:'5 yıldız ver'})).toHaveAttribute('aria-pressed');
+});
+
+test('collections use a named form, real count, membership and guarded deletion', async () => {
+  const api=client(); const user=userEvent.setup();
+  const group={id:crypto.randomUUID(),title:'İçli Tarifler',revision:2,activeCount:3};
+  vi.mocked(api.collections).mockResolvedValue([group]);
+  render(<LibraryPage client={api} section="collections"/>);
+  expect(await screen.findByRole('button',{name:/İçli Tarifler · 3 etkin tarif/})).toBeVisible();
+  await user.type(screen.getByLabelText('Koleksiyon adı'),'Yeni koleksiyon');
+  await user.click(screen.getByRole('button',{name:'Koleksiyon oluştur'}));
+  expect(api.saveCollection).toHaveBeenCalledWith(expect.objectContaining({title:'Yeni koleksiyon',expectedRevision:null}));
+  await user.click(screen.getByRole('button',{name:'İçli Tarifler: Koleksiyonu sil'}));
+  expect(screen.getByRole('dialog')).toBeVisible();
+  await user.click(within(screen.getByRole('dialog')).getByRole('button',{name:'Vazgeç'}));
+  expect(api.deleteCollection).not.toHaveBeenCalled();
+});
 test('safe deletion requires confirmation and trash offers restore', async () => {
   const api = client();
   const recipe: Recipe = {
@@ -187,7 +219,7 @@ test('search-first library keeps filters and card/list context with keyboard acc
     expect.objectContaining({ text: 'incir', scope: 'active', limit: 24 }),
   ));
   await user.click(screen.getByRole('button', { name: 'Liste' }));
-  expect(screen.getByRole('button', { name: /İncirli tatlı/ })).toHaveClass('recipe-list-row');
+  expect(screen.getByRole('button', { name: /İncirli tatlı/ }).closest('.recipe-list-row')).toBeTruthy();
   search.focus();
   await user.keyboard('{ArrowDown}');
   expect(screen.getByRole('button', { name: /İncirli tatlı/ })).toHaveFocus();

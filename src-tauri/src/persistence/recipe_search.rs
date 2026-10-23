@@ -167,7 +167,7 @@ impl Database {
         let en = name_key("en", &query.text);
         let fts = fts_expression(&tr, &en);
         let text = query.text.trim();
-        let where_clause = "FROM recipes r JOIN recipe_search_docs d ON d.recipe_id=r.id WHERE
+        let where_clause = "FROM recipes r JOIN recipe_search_docs d ON d.recipe_id=r.id JOIN recipe_organization o ON o.recipe_id=r.id WHERE
           (?1='' OR d.rowid IN (SELECT rowid FROM recipe_fts WHERE recipe_fts MATCH ?2))
           AND ((?3='active' AND r.deleted_at IS NULL AND r.archived_at IS NULL)
             OR (?3='archived' AND r.deleted_at IS NULL AND r.archived_at IS NOT NULL)
@@ -177,7 +177,10 @@ impl Database {
           AND (?6 IS NULL OR substr(r.created_at,1,10)>=?6)
           AND (?7 IS NULL OR substr(r.created_at,1,10)<=?7)
           AND (?8 IS NULL OR substr(r.updated_at,1,10)>=?8)
-          AND (?9 IS NULL OR substr(r.updated_at,1,10)<=?9)";
+          AND (?9 IS NULL OR substr(r.updated_at,1,10)<=?9)
+          AND (?10=0 OR o.favorite=1)
+          AND (?11=0 OR o.to_try=1)
+          AND (?12 IS NULL OR EXISTS(SELECT 1 FROM recipe_collection_members cm WHERE cm.recipe_id=r.id AND cm.collection_id=?12))";
         let params = params![
             text,
             fts,
@@ -187,7 +190,10 @@ impl Database {
             query.created_from,
             query.created_to,
             query.modified_from,
-            query.modified_to
+            query.modified_to,
+            query.favorite_only,
+            query.to_try_only,
+            query.collection_id
         ];
         let tx = self.conn.unchecked_transaction()?;
         let total: i64 =
@@ -201,7 +207,7 @@ impl Database {
             "relevance" if !text.is_empty() => "(SELECT bm25(recipe_fts,8.0,8.0,1.0,1.0,3.0,3.0) FROM recipe_fts WHERE rowid=d.rowid AND recipe_fts MATCH ?2) ASC,r.updated_at DESC,r.id",
             _ => "r.updated_at DESC,r.id",
         };
-        let sql = format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at {where_clause} ORDER BY {order} LIMIT ?10 OFFSET ?11");
+        let sql = format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at,o.revision,o.favorite,o.to_try,o.rating {where_clause} ORDER BY {order} LIMIT ?13 OFFSET ?14");
         let mut stmt = tx.prepare(&sql)?;
         let items = stmt
             .query_map(
@@ -215,6 +221,9 @@ impl Database {
                     query.created_to,
                     query.modified_from,
                     query.modified_to,
+                    query.favorite_only,
+                    query.to_try_only,
+                    query.collection_id,
                     query.limit,
                     query.offset
                 ],
@@ -227,6 +236,10 @@ impl Database {
                         servings: row.get(4)?,
                         created_at: row.get(5)?,
                         updated_at: row.get(6)?,
+                        organization_revision: row.get(7)?,
+                        favorite: row.get(8)?,
+                        to_try: row.get(9)?,
+                        rating: row.get(10)?,
                     })
                 },
             )?
@@ -238,6 +251,9 @@ impl Database {
             && query.created_to.is_none()
             && query.modified_from.is_none()
             && query.modified_to.is_none()
+            && !query.favorite_only
+            && !query.to_try_only
+            && query.collection_id.is_none()
             && tr.chars().count() >= 4
             && tr.chars().count() <= 32
         {

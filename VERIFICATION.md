@@ -10,6 +10,11 @@
 - **Native test distinction:** isolated arm64 app successfully launched/relaunched on schema 6, catalog Release 11 and clean integrity; automated GUI attachment did not succeed. **PO reported 8/8 real Mac manual acceptance tests PASS on 2026-10-23 in conversation.** This is not an independently recorded screen capture or a Windows/Intel native GUI test.
 - **Open:** actual Windows and Intel Mac GUI/installer execution; signing/notarization, public distribution. Schema-6 upgrade means an old binary cannot safely be assumed compatible with an upgraded profile.
 
+## M4B-1 engineering candidate — 2026-10-23
+- Branch `feature/m4b1-recipe-organization` starts at `af094688...` in an isolated worktree; unrelated root workbook untouched. This slice is implemented and locally verified but **not integrated or PO-accepted**. Exact PR head/Actions URL will be recorded after GitHub checks.
+- Local checks: 90 Rust/SQLite, 61 Vitest and three Playwright browser tests; typecheck, ESLint, Cargo fmt/check/Clippy, frontend build, catalog audit, five Python audit tests and app version check passed. Production arm64 bundle with temporary identifier launched and restarted on isolated schema-7/Release-11 profile (`integrity_check=ok`, zero FK rows). See [candidate record](docs/M4B1_ACCEPTANCE.md).
+- Native accessibility confirmed the shell and organization navigation/filters, but no native create/edit collection or rating GUI click flow was exercised. Those remain for Product Owner Mac acceptance. Windows/Intel GUI and signed releases remain unverified.
+
 ## Recent catalog milestone CI pointers
 | Work | Head evidence | GitHub CI | PO native acceptance | Integration |
 | --- | --- | --- | --- | --- |

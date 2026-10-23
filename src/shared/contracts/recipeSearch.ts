@@ -5,6 +5,9 @@ export const recipeSearchQuerySchema = z.object({
   scope: z.enum(['active', 'archived', 'trash']),
   kind: z.enum(['food', 'beverage']).nullable(),
   ingredientId: z.uuid().nullable(),
+  favoriteOnly: z.boolean().default(false),
+  toTryOnly: z.boolean().default(false),
+  collectionId: z.uuid().nullable().default(null),
   createdFrom: z.iso.date().nullable(),
   createdTo: z.iso.date().nullable(),
   modifiedFrom: z.iso.date().nullable(),
@@ -18,6 +21,8 @@ export const recipeSearchItemSchema = z.object({
   id: z.uuid(), title: z.string(), description: z.string().nullable(),
   kind: z.enum(['food', 'beverage']), servings: z.string(),
   createdAt: z.string(), updatedAt: z.string(),
+  organizationRevision: z.number().int().positive(), favorite: z.boolean(),
+  toTry: z.boolean(), rating: z.number().int().min(1).max(5).nullable(),
 }).strict();
 
 export const recipeSearchPageSchema = z.object({

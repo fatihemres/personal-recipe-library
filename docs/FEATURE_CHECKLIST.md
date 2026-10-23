@@ -1,4 +1,5 @@
-> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A is integrated, M4B is planned. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
+> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A is integrated, M4B-1 is an engineering candidate, and M4B-2 is planned. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
+> **M4B-1 candidate:** recipe favorites, To Try, nullable ratings and collections are implemented on a feature branch with schema 007. They are not checked here as integrated/PO-accepted until review and merge. Rich/private notes, saved filters and dashboard remain M4B-2.
 
 # Feature checklist
 
