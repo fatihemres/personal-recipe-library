@@ -1,6 +1,6 @@
 # Database schema and initialization
 
-Current schema version is **4**. Applied migrations 001–003 remain unchanged; migration 004 adds the M3A catalog foundation. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
+The **M4B-1 candidate** uses SQLite schema version **7** through forward-only migration 007; protected `main` remains at schema **6** until this PR is approved and merged. The M3A/M4A migration sections below document their historical checkpoints. Applied migrations 001–006 remain unchanged. SQLite is compiled into the Rust application through rusqlite 0.40.2 (`bundled`, `backup`). The verified local runtime is SQLite 3.53.2. Core runtime access never requires a server, account, API key, or network.
 
 ## Location, access and ownership
 
@@ -88,7 +88,7 @@ Personal ingredient metadata changes are transactional, personal-only and revisi
 
 ## Migration 004 — catalog foundation
 
-New canonical ingredients, bilingual names/aliases, hierarchical category/membership/dimension/relationship tables, source/provenance/optional exact observations, release/import audit, customization and collision tables; nullable `ingredients.catalog_id` FK. Full table dictionary/policies: INGREDIENT_CATALOG_SCHEMA.md. No recipe, draft, ingredient ID, quantity, archive/trash or preference rewrite. Existing online snapshot/checksum safeguards remain; validation seed is explicit CLI opt-in. Historical sections above describe the schema at their original milestone. Clean installs now apply 001–004. M2B binaries reject schema 4; no downgrade or automatic reset.
+New canonical ingredients, bilingual names/aliases, hierarchical category/membership/dimension/relationship tables, source/provenance/optional exact observations, release/import audit, customization and collision tables; nullable `ingredients.catalog_id` FK. Full table dictionary/policies: INGREDIENT_CATALOG_SCHEMA.md. No recipe, draft, ingredient ID, quantity, archive/trash or preference rewrite. Existing online snapshot/checksum safeguards remain; validation seed is explicit CLI opt-in. At the M3A checkpoint, clean installs applied 001–004. M2B binaries reject schema 4; no downgrade or automatic reset.
 
 M3B-1 uses existing schema 4 without a new migration. Catalog release version 2 and new immutable source-extraction snapshots do not change the SQLite schema version. See INGREDIENT_CATALOG_SCHEMA.md and CATALOG_IMPORT_PIPELINE.md for upgrade/preservation behavior.
 
