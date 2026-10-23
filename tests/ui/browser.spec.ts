@@ -27,3 +27,10 @@ test('collection navigation stays discoverable during a storage error', async ({
   await expect(collections).toHaveAttribute('aria-current','page');
   await expect(page.getByRole('alert')).toContainText('masaüstü uygulamasını açın');
 });
+test('dashboard navigation is available while storage recovery remains honest',async({page})=>{
+  await page.goto('/');
+  const dashboard=page.getByRole('button',{name:'Özet ve istatistikler',exact:true});
+  await expect(dashboard).toBeVisible();await dashboard.click();
+  await expect(dashboard).toHaveAttribute('aria-current','page');
+  await expect(page.getByRole('alert')).toContainText('masaüstü uygulamasını açın');
+});

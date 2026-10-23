@@ -136,3 +136,9 @@
 - Add recipe-level favorite and To Try states, nullable 1–5 rating, and user-defined many-to-many collections with Turkish-first management and detail controls.
 - Add checksummed schema 007 and typed Rust/TypeScript IPC. Extend active M4A recipe search with composable organization filters, preserving content/draft revisions and exact quantities.
 - Verify isolated schema-6 upgrade, fresh/restart behavior, rollback, catalog preservation and frontend interactions. M4B-2 notes, saved filters and dashboard remain pending; this candidate awaits PO acceptance and merge.
+# M4B-2 candidate — 2026-10-23
+
+- Added separate optimistic, format-versioned private Markdown notes with a constrained text-only safe preview and guarded unsaved changes. Historical recipe/draft notes remain unchanged.
+- Routed the macOS Quit menu command through the existing guarded native-exit handshake after an isolated GUI smoke test exposed an unsaved-note flush bypass.
+- Added persistent named recipe filters using versioned, validated search criteria, with live results and explicit missing-reference/version errors.
+- Added active-only SQLite dashboard counts, recent recipes and collection summaries with direct library navigation. Proposed candidate schema 008; Catalog Release 11 and app version 0.1.0 stay unchanged.

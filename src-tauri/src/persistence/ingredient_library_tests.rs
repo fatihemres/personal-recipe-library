@@ -667,7 +667,7 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
     db.save_recipe(input.clone()).unwrap();
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 7);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 8);
     assert_eq!(
         db.recipe(&input.id).unwrap().ingredients[0]
             .quantity

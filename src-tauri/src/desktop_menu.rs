@@ -1,9 +1,13 @@
 use crate::native_labels as tr;
 use tauri::{
-    menu::{Menu, PredefinedMenuItem as Item, Submenu},
+    menu::{Menu, MenuItemBuilder, PredefinedMenuItem as Item, Submenu},
     AppHandle, Runtime,
 };
+pub const SAFE_QUIT_ID: &str = "safe_quit";
 pub fn build<R: Runtime>(app: &AppHandle<R>) -> tauri::Result<Menu<R>> {
+    let quit = MenuItemBuilder::with_id(SAFE_QUIT_ID, tr::QUIT)
+        .accelerator("CmdOrCtrl+Q")
+        .build(app)?;
     Menu::with_items(
         app,
         &[
@@ -14,7 +18,7 @@ pub fn build<R: Runtime>(app: &AppHandle<R>) -> tauri::Result<Menu<R>> {
                 &[
                     #[cfg(target_os = "macos")]
                     &Item::hide(app, Some(tr::HIDE))?,
-                    &Item::quit(app, Some(tr::QUIT))?,
+                    &quit,
                 ],
             )?,
             &Submenu::with_items(
