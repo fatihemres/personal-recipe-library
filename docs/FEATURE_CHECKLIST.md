@@ -1,3 +1,5 @@
+> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A is integrated, M4B is planned. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
+
 # Feature checklist
 
 Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M1/M2A/M2B subsets only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.

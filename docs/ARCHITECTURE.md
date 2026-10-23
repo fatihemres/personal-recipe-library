@@ -1,3 +1,5 @@
+> **Status clarification, 2026-10-23:** The old opening status is historical. Current verified shipping structure includes M4A's SQLite FTS5 search and schema 6. This document contains implemented design boundaries **and** future proposed entities; check actual code/migrations and [PROJECT_STATUS.md](../PROJECT_STATUS.md) before claiming features exist. No architecture redesign is implied.
+
 # Architecture
 
 Status: M1 through M3C-5 implemented locally as of 2026-10-13; subsequent milestones remain pending. MASTER_SPEC.md governs scope. Preserve the existing Tauri 2/React/TypeScript/Vite starter and npm lockfile. No architectural incompatibility currently justifies replacing it. Validate dependency compatibility at introduction rather than upgrading everything now.

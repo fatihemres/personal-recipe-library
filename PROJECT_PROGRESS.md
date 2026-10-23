@@ -1,3 +1,9 @@
+## Integrated checkpoint — 2026-10-23
+
+Live GitHub verification: [PR #5](https://github.com/fatihemres/personal-recipe-library/pull/5) merged M4A via merge commit `49955722e8359e19eee206c577faa7ba600c96f8` after [Actions 39851790479](https://github.com/fatihemres/personal-recipe-library/actions/runs/39851790479) passed five jobs. PO reported 8/8 manual Mac acceptance checks. Schema 6, app 0.1.0, catalog Release 11 854 remain; PO paused new catalog growth. This section **supersedes** the earlier “local verification in progress” heading but preserves the detailed historical evidence below. M4B is proposed next scope, not an active verified branch. For resume use [PROJECT_STATUS.md](PROJECT_STATUS.md), [ROADMAP.md](ROADMAP.md), [VERIFICATION.md](VERIFICATION.md).
+
+---
+
 # Project progress
 
 ## M4A Search-First Recipe Library — 2026-10-22 (local verification in progress)

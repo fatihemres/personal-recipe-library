@@ -1,8 +1,8 @@
 # Tarif Atlası — Personal Food & Beverage Library
 
-Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **Milestones 1, 2A, 2B, 3A, 3B-1/2/3 and 3C-1/2 are implemented.** Recipes, personal ingredients, ordered steps, library preferences and settings persist in real local SQLite. No demo records or fabricated statistics are seeded.
+Local-first macOS/Windows desktop application using Tauri 2, React, TypeScript and SQLite. **M4A Search-first Recipe Library is integrated and PO-accepted (2026-10-23).** Recipes, personal ingredients, ordered steps, library preferences and settings persist in real local SQLite. No demo records or fabricated statistics are seeded.
 
-The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers food/beverage filters, Turkish title filtering, recipe creation/detail/editing, duplication, archive/unarchive, confirmed soft deletion, trash/restore and confirmed permanent deletion. Other modules are clearly identified as upcoming.
+The current desktop shell is Turkish, with light/dark/system themes saved in SQLite. Settings shows verified database schema/runtime, foreign keys and FTS5 readiness. The library offers SQLite FTS5 full-text Turkish/ingredient/step search, advanced filter/sort, paged card/list views, recipe creation/detail/editing, duplication, archive/unarchive, confirmed soft deletion, trash/restore and confirmed permanent deletion. Other modules are clearly identified as upcoming.
 
 ## Development
 
@@ -28,6 +28,10 @@ This is an unsigned debug build, not a signed/notarized release. Cached Rust dep
 
 Rust resolves the per-user Tauri application-data directory and stores `library.sqlite3`. Initialization never silently deletes or resets an existing DB. Applied migration SQL is immutable and SHA-256 checked. Pending changes to existing databases take an online SQLite snapshot before transactional migration. Do not edit DB/migration files to bypass a startup error. Complete portable backup/restore is planned for M9; migration snapshots are internal safety files.
 
+## Current checkpoint (2026-10-23)
+
+Application **0.1.0**, SQLite schema **6**, bundled catalog **Release 11**: 854 canonical ingredients (666 food/188 beverage), 269 aliases and 50 category nodes. [PR #5](https://github.com/fatihemres/personal-recipe-library/pull/5) integrated M4A FTS recipe search; next proposed scope is M4B personal organization. This paragraph supersedes older historical counts and phase notes retained below. See [status](PROJECT_STATUS.md), [roadmap](ROADMAP.md), [decisions](DECISIONS.md), [idea register](IDEA_REGISTER.md) and [verification](VERIFICATION.md). GitHub is the canonical engineering record; this snapshot is dated, not a live runtime claim.
+
 ## Project documentation
 
 - [Master requirements](docs/MASTER_SPEC.md), [architecture](docs/ARCHITECTURE.md), [phases and acceptance criteria](docs/IMPLEMENTATION_PLAN.md)
@@ -45,9 +49,9 @@ Unfinished recipe input is saved separately in SQLite after a 500 ms pause, with
 
 Stale edits never overwrite newer revisions. Review the current record or explicitly choose **Yeni tarif olarak kaydet** to preserve your changes independently. Archive/delete operations retain edit drafts; after permanent deletion an edit draft can only be saved as a new recipe.
 
-**Malzeme Kütüphanesi** browses the 508 built-in canonical ingredients and your personal ingredients together, or filters by origin, favorites, recently used and nested category. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker, with İ/i and I/ı as distinct pairs), English names and aliases. Favoriting changes only local preference tables. “Recently used” means ingredients currently present in non-deleted saved recipes, ordered by those recipes' latest edit time; viewing or drafting alone does not count. Select a record to see its known facts and source. You can change a built-in record's local display name, personal search alias, compatible preferred unit and notes, then reset its presentation without changing the canonical catalog. Personal names, notes and units remain editable with stable references. Possible duplicates are shown for review; records are never merged automatically. Unsaved ingredient forms offer Save, Discard or Continue Editing before navigation.
+**Malzeme Kütüphanesi** browses the 854 built-in canonical ingredients and your personal ingredients together, or filters by origin, favorites, recently used and nested category. Search matches Turkish case-insensitive substrings (Şek/şek/ŞEK/şeker, with İ/i and I/ı as distinct pairs), English names and aliases. Favoriting changes only local preference tables. “Recently used” means ingredients currently present in non-deleted saved recipes, ordered by those recipes' latest edit time; viewing or drafting alone does not count. Select a record to see its known facts and source. You can change a built-in record's local display name, personal search alias, compatible preferred unit and notes, then reset its presentation without changing the canonical catalog. Personal names, notes and units remain editable with stable references. Possible duplicates are shown for review; records are never merged automatically. Unsaved ingredient forms offer Save, Discard or Continue Editing before navigation.
 
-The entire requested product remains V1 scope. Further catalog coverage/review, recipe-wide advanced search/organization, specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
+The entire requested product remains V1 scope. Further *catalog expansion is PO-paused*; recipe organization (M4B), specialized beverage calculations, media, pantry, shopping, planning, portable backup and release installers remain pending.
 
 
 ## M3A catalog foundation
