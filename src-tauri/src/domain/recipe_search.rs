@@ -9,6 +9,12 @@ pub struct RecipeSearchQuery {
     pub scope: String,
     pub kind: Option<String>,
     pub ingredient_id: Option<String>,
+    #[serde(default)]
+    pub favorite_only: bool,
+    #[serde(default)]
+    pub to_try_only: bool,
+    #[serde(default)]
+    pub collection_id: Option<String>,
     pub created_from: Option<String>,
     pub created_to: Option<String>,
     pub modified_from: Option<String>,
@@ -33,6 +39,8 @@ impl RecipeSearchQuery {
         if self.text.chars().count() > 200
             || self.text.contains('\0')
             || !["active", "archived", "trash"].contains(&self.scope.as_str())
+            || (self.scope != "active"
+                && (self.favorite_only || self.to_try_only || self.collection_id.is_some()))
             || self
                 .kind
                 .as_ref()
@@ -58,6 +66,9 @@ impl RecipeSearchQuery {
         if let Some(id) = &self.ingredient_id {
             super::recipes::valid_id(id)?;
         }
+        if let Some(id) = &self.collection_id {
+            super::recipes::valid_id(id)?;
+        }
         Ok(())
     }
 }
@@ -72,6 +83,10 @@ pub struct RecipeSearchItem {
     pub servings: String,
     pub created_at: String,
     pub updated_at: String,
+    pub organization_revision: i64,
+    pub favorite: bool,
+    pub to_try: bool,
+    pub rating: Option<i64>,
 }
 
 #[derive(Clone, Debug, Serialize)]

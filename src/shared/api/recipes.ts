@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { recipeOrganizationSchema, organizationWriteSchema, recipeCollectionSchema, collectionWriteSchema,
+  type RecipeOrganization, type OrganizationWrite, type RecipeCollection, type CollectionWrite } from '../contracts/recipeOrganization';
 import { request } from './client';
 import { recipeSearchPageSchema, recipeSearchQuerySchema, type RecipeSearchPage, type RecipeSearchQuery } from '../contracts/recipeSearch';
 import {
@@ -19,6 +21,12 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  getOrganization(id:string):Promise<RecipeOrganization>;
+  setOrganization(write:OrganizationWrite):Promise<RecipeOrganization>;
+  collections():Promise<RecipeCollection[]>;
+  saveCollection(write:CollectionWrite):Promise<RecipeCollection>;
+  deleteCollection(id:string,revision:number):Promise<null>;
+  setMembership(recipeId:string,collectionId:string,expectedRevision:number,member:boolean):Promise<RecipeOrganization>;
   searchRecipes(query: RecipeSearchQuery): Promise<RecipeSearchPage>;
   list(trash: boolean, kind: 'food' | 'beverage' | null): Promise<Recipe[]>;
   get(id: string): Promise<Recipe>;
@@ -62,6 +70,12 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  getOrganization: (id) => request('get_recipe_organization',recipeOrganizationSchema,{id:z.uuid().parse(id)}),
+  setOrganization: (write) => request('set_recipe_organization',recipeOrganizationSchema,{write:organizationWriteSchema.parse(write)}),
+  collections: () => request('list_recipe_collections',z.array(recipeCollectionSchema)),
+  saveCollection: (write) => request('save_recipe_collection',recipeCollectionSchema,{write:collectionWriteSchema.parse(write)}),
+  deleteCollection: (id,revision) => request('delete_recipe_collection',z.null(),{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision)}),
+  setMembership: (recipeId,collectionId,expectedRevision,member) => request('set_recipe_collection_membership',recipeOrganizationSchema,{recipeId:z.uuid().parse(recipeId),collectionId:z.uuid().parse(collectionId),expectedRevision:z.number().int().positive().parse(expectedRevision),member}),
   searchRecipes: (query) => request('search_recipes', recipeSearchPageSchema, { query: recipeSearchQuerySchema.parse(query) }),
   list: (trash, kind) =>
     request('list_recipes', z.array(recipeSchema), { trash, kind }),

@@ -1,4 +1,4 @@
-> **Current-state note, 2026-10-23:** This file retains the original phased specification and append-only milestone plans. Its older opening “M4–M11 pending” is historical. M4A is now integrated and PO-accepted at PR #5; next *proposed* slice M4B. Follow [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md), [DECISIONS.md](../DECISIONS.md) and live GitHub for progress. The V1 scope below is unchanged.
+> **Current-state note, 2026-10-23:** This file retains the original phased specification and append-only milestone plans. Its older opening “M4–M11 pending” is historical. M4A is integrated and PO-accepted at PR #5; M4B-1 is an authorized engineering candidate on a feature branch, while M4B-2 remains pending. Follow [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md), [DECISIONS.md](../DECISIONS.md) and live GitHub for progress. The V1 scope below is unchanged.
 
 # Implementation plan
 
@@ -65,6 +65,8 @@ Tests: seed repeat/upgrade/rollback, stable IDs/source mappings, user override p
 Depends M3. R02/R04 partial/R05/R14.
 
 M4A implementation slice (2026-10-22): recipe FTS5/index synchronization, validated paged IPC, Turkish/English ingredient-aware search, status/kind/ingredient/date filters, relevance/date/Turkish alphabetical sort, bounded title typo suggestions and card/list UI. Verification and Product Owner native acceptance are tracked in `M4A_ACCEPTANCE_AND_PERFORMANCE.md`. M4B remains the organization slice: recipe favorites, collections, ratings, saved filters, to-try, private/rich notes, real dashboard links and their migrations/tests. Do not claim the combined M4 acceptance criteria from M4A alone.
+
+M4B is split by [Issue #7](https://github.com/fatihemres/personal-recipe-library/issues/7): **M4B-1** implements separate recipe favorites/To Try, nullable 1–5 ratings and many-to-many collections on schema 7, with real SQLite, typed IPC, Turkish UI and isolated verification. **M4B-2** retains safe private/rich notes, typed saved filters and database-backed dashboard/navigation in its own future PR. M4B-1 candidate code is not full M4B or PO acceptance; do not merge, tag or release without separate approval.
 
 Implement recipe/ingredient FTS indexes, autocomplete, bounded typo tolerance, Turkish sorting/normalization, advanced filters, saved filters, cards/list, favorites, collections/membership, to-try, private/rich notes, ratings. Sanitize rich-note rendering and record format/version. Dashboard count/favorite/recent/collection links are delivered only with real queries.
 

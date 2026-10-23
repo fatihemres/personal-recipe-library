@@ -2,6 +2,7 @@ mod catalog;
 mod ingredient_library;
 pub mod migrations;
 mod preferences;
+mod recipe_organization;
 mod recipe_search;
 mod recipes;
 mod reliability;
@@ -95,6 +96,8 @@ impl Database {
 #[cfg(test)]
 mod tests;
 
+#[cfg(test)]
+mod recipe_organization_tests;
 #[cfg(test)]
 mod recipe_tests;
 

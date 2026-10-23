@@ -14,7 +14,63 @@ pub async fn save_preferences(
     state.save(preferences).await
 }
 
+use crate::domain::recipe_organization::{
+    CollectionWrite, OrganizationWrite, RecipeCollection, RecipeOrganization,
+};
 use crate::domain::recipe_search::{RecipeSearchPage, RecipeSearchQuery};
+#[tauri::command]
+pub async fn get_recipe_organization(
+    id: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeOrganization, AppError> {
+    state.execute(move |d| d.recipe_organization(&id)).await
+}
+#[tauri::command]
+pub async fn set_recipe_organization(
+    write: OrganizationWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeOrganization, AppError> {
+    state
+        .execute(move |d| d.set_recipe_organization(write))
+        .await
+}
+#[tauri::command]
+pub async fn list_recipe_collections(
+    state: tauri::State<'_, StorageService>,
+) -> Result<Vec<RecipeCollection>, AppError> {
+    state.execute(|d| d.collections()).await
+}
+#[tauri::command]
+pub async fn save_recipe_collection(
+    write: CollectionWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeCollection, AppError> {
+    state.execute(move |d| d.save_collection(write)).await
+}
+#[tauri::command]
+pub async fn delete_recipe_collection(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state
+        .execute(move |d| d.delete_collection(&id, revision))
+        .await
+}
+#[tauri::command]
+pub async fn set_recipe_collection_membership(
+    recipe_id: String,
+    collection_id: String,
+    expected_revision: i64,
+    member: bool,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeOrganization, AppError> {
+    state
+        .execute(move |d| {
+            d.set_collection_membership(&recipe_id, &collection_id, expected_revision, member)
+        })
+        .await
+}
 use crate::domain::recipes::{Ingredient, Recipe, RecipeInput, Unit};
 #[tauri::command]
 pub async fn search_recipes(
@@ -320,6 +376,11 @@ mod tests {
                     get_recipe,
                     save_recipe,
                     set_recipe_deleted,
+                    get_recipe_organization,
+                    set_recipe_organization,
+                    list_recipe_collections,
+                    save_recipe_collection,
+                    set_recipe_collection_membership,
                     search_ingredients,
                     create_ingredient,
                     list_units
@@ -352,6 +413,21 @@ mod tests {
         let mut input = json!({"id":id,"expectedRevision":null,"title":"İçecek","description":null,"kind":"beverage","servings":"2.50","prepMinutes":2,"cookMinutes":null,"notes":"Çok soğuk", "ingredients":[{"id":uuid::Uuid::new_v4().to_string(),"ingredientId":ingredient["id"],"quantity":"35.000001","unitCode":"cc","note":null}], "steps":[{"id":uuid::Uuid::new_v4().to_string(),"instructions":"Karıştırın"}]});
         let saved = invoke(&window, "save_recipe", json!({"input":input})).unwrap();
         assert_eq!(saved["ingredients"][0]["quantity"], "35.000001");
+        let group_id = uuid::Uuid::new_v4().to_string();
+        invoke(
+            &window,
+            "save_recipe_collection",
+            json!({"write":{"id":group_id,"expectedRevision":null,"title":"İçecekler"}}),
+        )
+        .unwrap();
+        let state=invoke(&window,"set_recipe_organization",json!({"write":{"recipeId":id,"expectedRevision":1,"favorite":true,"toTry":true,"rating":5}})).unwrap();
+        assert_eq!(state["revision"], 2);
+        invoke(
+            &window,
+            "set_recipe_collection_membership",
+            json!({"recipeId":id,"collectionId":group_id,"expectedRevision":2,"member":true}),
+        )
+        .unwrap();
         drop(window);
         drop(app);
         let app = create_app();
@@ -360,6 +436,14 @@ mod tests {
             .unwrap();
         let loaded = invoke(&window, "get_recipe", json!({"id":id})).unwrap();
         assert_eq!(loaded["steps"][0]["instructions"], "Karıştırın");
+        let state = invoke(&window, "get_recipe_organization", json!({"id":id})).unwrap();
+        assert_eq!(state["favorite"], true);
+        assert_eq!(state["rating"], 5);
+        assert_eq!(state["collectionIds"][0], group_id);
+        assert_eq!(
+            invoke(&window, "list_recipe_collections", json!({})).unwrap()[0]["activeCount"],
+            1
+        );
         input["expectedRevision"] = json!(1);
         input["title"] = json!("İçecek güncel");
         assert_eq!(
@@ -419,7 +503,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            6
+            7
         );
     }
     #[test]

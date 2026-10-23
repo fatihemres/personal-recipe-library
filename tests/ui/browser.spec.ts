@@ -19,3 +19,11 @@ test('narrow screen reveals sidebar through accessible disclosure', async ({ pag
   await expect(page.getByRole('navigation')).toBeVisible();
   await expect(page.locator('body')).toHaveJSProperty('scrollWidth', 560);
 });
+test('collection navigation stays discoverable during a storage error', async ({ page }) => {
+  await page.goto('/');
+  const collections=page.getByRole('button',{name:'Koleksiyonlar',exact:true});
+  await expect(collections).toBeVisible();
+  await collections.click();
+  await expect(collections).toHaveAttribute('aria-current','page');
+  await expect(page.getByRole('alert')).toContainText('masaüstü uygulamasını açın');
+});

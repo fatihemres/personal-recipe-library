@@ -24,15 +24,23 @@ export function rendererRecipeClient(): RecipeClient {
       ingredientNames: { [ingredient.id]: ingredient.name },
     }));
   return {
+    getOrganization: vi.fn().mockImplementation(async (id) => ({recipeId:id,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]})),
+    setOrganization: vi.fn().mockImplementation(async (write) => ({recipeId:write.recipeId,revision:write.expectedRevision+1,favorite:write.favorite,toTry:write.toTry,rating:write.rating,collectionIds:[]})),
+    collections: vi.fn().mockResolvedValue([]),
+    saveCollection: vi.fn().mockImplementation(async (write) => ({id:write.id,title:write.title,revision:1,activeCount:0})),
+    deleteCollection: vi.fn().mockResolvedValue(null),
+    setMembership: vi.fn().mockImplementation(async (recipeId,collectionId,expectedRevision,member) => ({recipeId,revision:expectedRevision+1,favorite:false,toTry:false,rating:null,collectionIds:member?[collectionId]:[]})),
     list,
     scope: list,
     searchRecipes: vi.fn().mockImplementation(async (query) => {
       const recipes = await list(query.scope, query.kind);
-      const matches = recipes.filter((recipe: {title: string; kind: string; id: string}) =>
+      const matches = recipes.filter((recipe: {title: string; kind: string; id: string; favorite?:boolean; toTry?:boolean}) =>
         (!query.kind || recipe.kind === query.kind)
+        && (!query.favoriteOnly || recipe.favorite)
+        && (!query.toTryOnly || recipe.toTry)
         && recipe.title.toLocaleLowerCase('tr').includes(query.text.toLocaleLowerCase('tr')),
       );
-      return { items: matches.slice(query.offset, query.offset + query.limit), total: matches.length,
+      return { items: matches.slice(query.offset, query.offset + query.limit).map((recipe:{favorite?:boolean;toTry?:boolean;rating?:number|null;organizationRevision?:number})=>({organizationRevision:recipe.organizationRevision??1,favorite:recipe.favorite??false,toTry:recipe.toTry??false,rating:recipe.rating??null,...recipe})), total: matches.length,
         hasMore: query.offset + query.limit < matches.length, suggestions: [] };
     }),
     get: vi.fn(),

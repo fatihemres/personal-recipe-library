@@ -21,13 +21,12 @@ const futureModules = [
   { label: t.pantry, Icon: Package },
   { label: t.shopping, Icon: ShoppingBasket },
   { label: t.planner, Icon: CalendarDays },
-  { label: t.collections, Icon: FolderHeart },
 ];
 
 export function AppShell({ client = foundationClient, recipes = recipeClient }: { client?: FoundationClient; recipes?: RecipeClient }) {
   const { data, error, loading, saving, load, saveTheme } = useFoundation(client);
   const appVersion = useAppVersion();
-  const [page, setPage] = useState<'library' | 'settings' | 'ingredients'>('library');
+  const [page, setPage] = useState<'library' | 'collections' | 'settings' | 'ingredients'>('library');
   const [menuOpen, setMenuOpen] = useState(false);
   const [exitError, setExitError] = useState('');
   const ingredientLeaveGuard = useRef<(()=>Promise<boolean>)|null>(null);
@@ -83,6 +82,11 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
           >
             <Carrot size={19} aria-hidden="true" />{t.ingredients}
           </button>
+          <button className={`nav-item ${page === 'collections' ? 'active' : ''}`}
+            aria-current={page === 'collections' ? 'page' : undefined}
+            onClick={() => void navigate('collections')}>
+            <FolderHeart size={19} aria-hidden="true" />{t.collections}
+          </button>
         </nav>
         <section className="future-modules" aria-label={t.future}>
           <p className="nav-heading">{t.future}</p>
@@ -103,7 +107,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               aria-controls="sidebar" aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
             ><Menu size={20} aria-hidden="true" /></Button>
-            <span>{page === 'library' ? t.library : page === 'ingredients' ? t.ingredients : t.settings}</span>
+            <span>{page === 'library' ? t.library : page === 'collections' ? t.collections : page === 'ingredients' ? t.ingredients : t.settings}</span>
           </div>
           <span className="connection-status">
             {error ? <><AlertTriangle size={15} aria-hidden="true" />{t.storageUnavailable}</>
@@ -132,7 +136,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
             </section>
           )}
           {!loading && !data && page === 'settings' && <AboutPanel appVersion={appVersion} />}
-          {data && <><div hidden={loading || page !== 'library'}><LibraryPage client={recipes} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} appVersion={appVersion} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {data && <><div hidden={loading || (page !== 'library' && page !== 'collections')}><LibraryPage client={recipes} section={page === 'collections' ? 'collections' : 'library'} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} appVersion={appVersion} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>
