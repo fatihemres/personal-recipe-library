@@ -1,3 +1,5 @@
+> **Current-state note, 2026-10-23:** This file retains the original phased specification and append-only milestone plans. Its older opening “M4–M11 pending” is historical. M4A is now integrated and PO-accepted at PR #5; next *proposed* slice M4B. Follow [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md), [DECISIONS.md](../DECISIONS.md) and live GitHub for progress. The V1 scope below is unchanged.
+
 # Implementation plan
 
 Status: planning baseline 2026-10-08, updated 2026-10-12. M0, M1, M2A, M2B, M3A, M3B-1/2/3 and M3C-1/2/3 are implemented and verified locally; later increments and M4–M11 remain pending. MASTER_SPEC.md is the scope authority and ARCHITECTURE.md describes proposed decisions. This replaces the earlier abbreviated roadmap without removing any scope.

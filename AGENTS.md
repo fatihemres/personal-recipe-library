@@ -1,3 +1,9 @@
+## Current agent handoff (2026-10-23)
+
+Read [PROJECT_STATUS.md](PROJECT_STATUS.md), [DECISIONS.md](DECISIONS.md), [ROADMAP.md](ROADMAP.md), [VERIFICATION.md](VERIFICATION.md), [IDEA_REGISTER.md](IDEA_REGISTER.md) and [docs/DEVELOPMENT_AND_RELEASE_PROCESS.md](docs/DEVELOPMENT_AND_RELEASE_PROCESS.md) **before** proposing a new milestone or PR. The historical invariant sections below describe successive past phases: older phrases such as “current Release 10” do **not** override the dated live checkpoint. At this point M4A is **PO-ACCEPTED + INTEGRATED** at `49955722...`; catalog Release 11 is 854 entries, SQLite schema 6, app semver 0.1.0. PO explicitly paused catalog expansion; M4B is **proposed**, not implemented or automatically authorized. Separate PLANNED/IMPLEMENTED/VERIFIED/INTEGRATED/PO-ACCEPTED, read actual Git/dirty worktrees, preserve untracked root workbook, and capture significant new ideas in IDEA_REGISTER with provenance. No automated merge/tag/release; protected main requires PR, five CI checks and explicit PO merge approval.
+
+---
+
 # Project guidance
 
 ## Objective
