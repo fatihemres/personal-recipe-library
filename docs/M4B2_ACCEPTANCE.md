@@ -1,4 +1,4 @@
-# M4B-2 candidate acceptance and verification — 2026-10-23
+# M4B-2 candidate acceptance and verification — updated 2026-10-26
 
 Issue: [#10](https://github.com/fatihemres/personal-recipe-library/issues/10). Base: protected `main` at `8663787db4b68c8f4043f4a3405ae55eaf1dddd6`. Branch: `feature/m4b2-notes-filters-dashboard`. **Engineering candidate only; PO has not accepted the native feature or authorized merge.** Application version remains 0.1.0; Catalog Release 11 remains 854 identities, 269 aliases and 50 categories.
 
@@ -15,7 +15,7 @@ New checksummed, forward-only migration `008_recipe_notes_filters.sql` creates `
 
 ## Local verification
 
-Results below are local checks for this candidate; PR CI will verify the pushed exact head separately.
+Results below are local checks for the implementation. The 2026-10-23 candidate head has separate exact-head PR CI evidence; this documentation follow-up must pass its own new CI run before PO handoff.
 
 | Check | Result |
 | --- | --- |
@@ -32,9 +32,18 @@ Results below are local checks for this candidate; PR CI will verify the pushed 
 | `python3 tools/test_catalog_audit.py` | PASS — 5 tests |
 | `python3 tools/check_app_version.py` | PASS — 0.1.0 consistent |
 | Isolated production macOS arm64 app | PASS for launch, real UI navigation, private-note preview/save/leave confirmation, saved-filter persistence, dashboard click-through and dirty-note Cmd-Q/relaunch. GUI acceptance remains with the PO. |
-| PR five-job CI and package checksums | Pending PR |
+| Previous PR head CI | PASS — `540574047310e8c0a1933c61f4c8a7588c26f610`, [run 40004327930](https://github.com/fatihemres/personal-recipe-library/actions/runs/40004327930): Frontend and browser; Rust, SQLite and catalog; macOS Apple Silicon package; macOS Intel package; Windows x64 installer — all 5 SUCCESS. Three unsigned artifacts are present. This is **not** evidence for a later documentation commit. |
+| Final follow-up head CI and package checksums | Pending the documentation follow-up commit and new exact-head run. |
 
 The local arm64 `.app` used the temporary identifier `com.recipeatlas.m4b2verification` and its separate SQLite profile. The profile reached schema 8 and Catalog Release 11 (854/269/50), with `integrity_check=ok` and zero foreign-key violations. A disposable recipe and saved filter survived a full process relaunch. The note preview displayed `<script>alert(1)</script>` as text. Dashboard counts matched one active food recipe; its recent-recipe and food links navigated to the actual Library, including when a recipe detail had previously been selected. An initial Cmd-Q test exposed the quit-menu defect above; the corrected, rebuilt bundle saved `# Bekleyen değişiklik` at revision 2 on Cmd-Q and displayed it after relaunch. The final rebuild showed the note read-only in Trash, then editable with its text intact after Restore. The app was closed after testing. This did not open or change the normal `com.recipeatlas.desktop` profile.
+
+## PO-facing isolated Apple Silicon bundle — 2026-10-26
+
+The unsigned acceptance application is at `/private/tmp/tarif-atlasi-m4b2/src-tauri/target/acceptance/Tarif Atlasi M4B-2 Acceptance.app`. Its `Info.plist` has `CFBundleIdentifier=com.recipeatlas.m4b2acceptance` and app version 0.1.0; the bundled executable SHA-256 is `1caa323786f165633a1960ae85f25b1f0e305c51e19c5d5415543a5b5731be89`. The app was built from the unchanged implementation code at candidate commit `540574047310e8c0a1933c61f4c8a7588c26f610`; the subsequent governance follow-up changes only documentation. This local bundle is separate from the official PR artifacts, which retain the production identifier.
+
+Before first launch, `~/Library/Application Support/com.recipeatlas.m4b2acceptance` did not exist. The launched app created its own `library.sqlite3` there, with schema 8, Catalog Release 11, 854 canonical ingredients, 269 aliases, 50 categories, **zero recipes**, `integrity_check=ok` and zero foreign-key violations. It did not use `~/Library/Application Support/com.recipeatlas.desktop`. Native accessibility interactions then created one disposable recipe and one saved filter, confirmed dashboard active/food counts of 1/1 and food-filter navigation, saw safe Markdown as text, moved the recipe to Trash (note read-only), restored it, and changed the note without pressing Save. Cmd-Q flushed that note to SQLite at revision 2; a full relaunch displayed the new text and retained the named filter. The app was closed cleanly. The acceptance profile now contains that one clearly named **test recipe** and filter; the PO may use them for inspection or create separate test records. No real personal data was copied into this profile.
+
+In Finder, press **Shift–Command–G**, paste `/private/tmp/tarif-atlasi-m4b2/src-tauri/target/acceptance/`, and press Return. Open `Tarif Atlasi M4B-2 Acceptance.app` from that folder. Confirm the filename and isolated identifier before testing; do not open the unsigned PR arm64 artifact against the normal daily profile. Because this is an unsigned internal build, macOS may require the usual Finder **right-click → Open** flow. This is not a signed/notarized release.
 
 ## PO Mac acceptance checklist
 
