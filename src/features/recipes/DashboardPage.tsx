@@ -33,9 +33,9 @@ export function DashboardPage({client,onNavigate}:{client:RecipeClient;onNavigat
       </div>
       {!data.activeTotal && <div className="panel empty-state"><p>{t.dashboardEmpty}</p><Button onClick={()=>onNavigate({})}>{t.dashboardOpenLibrary}</Button></div>}
       <div className="dashboard-sections">
-        <section className="panel"><h2>{t.dashboardRecentCreated}</h2>{data.recentCreated.length ? <ul>{data.recentCreated.map(item=><li key={item.id}><Button variant="ghost" onClick={()=>onNavigate({recipeId:item.id})}>{item.title}</Button></li>)}</ul> : <p>{t.empty}</p>}</section>
-        <section className="panel"><h2>{t.dashboardRecentModified}</h2>{data.recentModified.length ? <ul>{data.recentModified.map(item=><li key={item.id}><Button variant="ghost" onClick={()=>onNavigate({recipeId:item.id})}>{item.title}</Button></li>)}</ul> : <p>{t.empty}</p>}</section>
-        <section className="panel"><h2>{t.dashboardCollections}</h2>{data.collections.length ? <ul>{data.collections.map(group=><li key={group.id}><Button variant="ghost" onClick={()=>onNavigate({collectionId:group.id})}>{group.title} · {t.collectionCount.replace('{count}',String(group.activeCount))}</Button></li>)}</ul> : <p>{t.collectionEmpty}</p>}</section>
+        <section className="panel workspace-panel"><h2>{t.dashboardRecentCreated}</h2>{data.recentCreated.length ? <ul>{data.recentCreated.map(item=><li key={item.id}><Button variant="ghost" onClick={()=>onNavigate({recipeId:item.id})}>{item.title}</Button></li>)}</ul> : <p>{t.empty}</p>}</section>
+        <section className="panel workspace-panel"><h2>{t.dashboardRecentModified}</h2>{data.recentModified.length ? <ul>{data.recentModified.map(item=><li key={item.id}><Button variant="ghost" onClick={()=>onNavigate({recipeId:item.id})}>{item.title}</Button></li>)}</ul> : <p>{t.empty}</p>}</section>
+        <section className="panel workspace-panel"><h2>{t.dashboardCollections}</h2>{data.collections.length ? <ul>{data.collections.map(group=><li key={group.id}><Button variant="ghost" onClick={()=>onNavigate({collectionId:group.id})}>{group.title} · {t.collectionCount.replace('{count}',String(group.activeCount))}</Button></li>)}</ul> : <p>{t.collectionEmpty}</p>}</section>
       </div>
     </>}
   </section>;

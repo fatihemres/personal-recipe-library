@@ -458,7 +458,7 @@ export function LibraryPage({
           </div>
           <RecipeDetails recipe={selected} />
           <PrivateNotePanel key={selected.id} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
-          {organization && !selected.deletedAt && <div className="panel recipe-organization">
+          {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
             <div className="recipe-actions" role="group" aria-label={t.favorites}>
               <Button variant={organization.favorite ? 'default' : 'outline'} aria-pressed={organization.favorite} disabled={busy}
                 onClick={() => void updateOrganization({favorite:!organization.favorite,toTry:organization.toTry,rating:organization.rating},selected.id,organization.revision)}>
@@ -483,20 +483,22 @@ export function LibraryPage({
         </>
       ) : (
         <>
-          {section === 'collections' && <div className="panel recipe-collections">
+          {section === 'collections' && <div className="panel workspace-panel recipe-collections">
             <h2>{t.collections}</h2>
-            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="recipe-collection-form">
-              <label>{t.collectionName}<input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
-              <div className="recipe-collection-actions">
+            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="workspace-form">
+              <label className="workspace-field"><span>{t.collectionName}</span><input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
+              <div className="workspace-form-actions">
                 <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
                 {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
               </div>
             </form>
-            {collections.length ? <ul className="recipe-collection-list">{collections.map(group => <li key={group.id}>
-              <Button variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
+            {collections.length ? <ul className="workspace-list">{collections.map(group => <li className="workspace-list-row" key={group.id}>
+              <Button className="workspace-list-primary" variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
                 onClick={()=>{setCollectionId(group.id);setScope('active');setPage(0);}}>{group.title} · {t.collectionCount.replace('{count}',String(group.activeCount))}</Button>
-              <Button variant="outline" aria-label={`${group.title}: ${t.collectionRename}`} onClick={()=>{setCollectionEditing(group);setCollectionTitle(group.title);}}>{t.collectionRename}</Button>
-              <Button variant="outline" aria-label={`${group.title}: ${t.collectionDelete}`} onClick={()=>setCollectionDelete(group)}>{t.collectionDelete}</Button>
+              <div className="workspace-list-actions">
+                <Button variant="outline" aria-label={`${group.title}: ${t.collectionRename}`} onClick={()=>{setCollectionEditing(group);setCollectionTitle(group.title);}}>{t.collectionRename}</Button>
+                <Button variant="outline" aria-label={`${group.title}: ${t.collectionDelete}`} onClick={()=>setCollectionDelete(group)}>{t.collectionDelete}</Button>
+              </div>
             </li>)}</ul> : <p>{t.collectionEmpty}</p>}
             {collectionId && <Button variant="outline" onClick={()=>{setCollectionId(null);setPage(0);}}>{t.collectionFilterClear}</Button>}
           </div>}
@@ -579,17 +581,21 @@ export function LibraryPage({
             </select></label>
             <Button variant="outline" onClick={resetFilters}>{t.resetFilters}</Button>
           </div>
-          <section className="panel saved-filter-panel" aria-label={t.savedFilters}>
+          <section className="panel workspace-panel saved-filter-panel" aria-label={t.savedFilters}>
             <h2>{t.savedFilters}</h2>
-            <form className="recipe-actions" onSubmit={e=>{e.preventDefault();void saveCurrentFilter();}}>
-              <label>{t.filterName}<input value={filterName} maxLength={100} required onChange={e=>setFilterName(e.target.value)} /></label>
-              <Button type="submit" disabled={busy||!filterName.trim()}>{renamingFilter?t.filterRename:t.saveFilter}</Button>
-              {renamingFilter && <Button type="button" variant="outline" onClick={()=>{setRenamingFilter(null);setFilterName('');}}>{t.cancel}</Button>}
+            <form className="workspace-form" onSubmit={e=>{e.preventDefault();void saveCurrentFilter();}}>
+              <label className="workspace-field"><span>{t.filterName}</span><input value={filterName} maxLength={100} required onChange={e=>setFilterName(e.target.value)} /></label>
+              <div className="workspace-form-actions">
+                <Button type="submit" disabled={busy||!filterName.trim()}>{renamingFilter?t.filterRename:t.saveFilter}</Button>
+                {renamingFilter && <Button type="button" variant="outline" onClick={()=>{setRenamingFilter(null);setFilterName('');}}>{t.cancel}</Button>}
+              </div>
             </form>
-            {savedFilters.length ? <ul className="saved-filter-list">{savedFilters.map(filter=><li key={filter.id}>
-              <Button variant="outline" onClick={()=>void applySavedFilter(filter)}>{filter.title} · {t.filterApply}</Button>
-              <Button variant="outline" disabled={!filter.available} onClick={()=>{setRenamingFilter(filter);setFilterName(filter.title);}} aria-label={`${filter.title}: ${t.filterRename}`}>{t.filterRename}</Button>
-              <Button variant="outline" onClick={()=>void removeFilter(filter)} aria-label={`${filter.title}: ${t.filterDelete}`}>{t.filterDelete}</Button>
+            {savedFilters.length ? <ul className="workspace-list">{savedFilters.map(filter=><li className="workspace-list-row" key={filter.id}>
+              <Button className="workspace-list-primary" variant="outline" onClick={()=>void applySavedFilter(filter)}>{filter.title} · {t.filterApply}</Button>
+              <div className="workspace-list-actions">
+                <Button variant="outline" disabled={!filter.available} onClick={()=>{setRenamingFilter(filter);setFilterName(filter.title);}} aria-label={`${filter.title}: ${t.filterRename}`}>{t.filterRename}</Button>
+                <Button variant="outline" onClick={()=>void removeFilter(filter)} aria-label={`${filter.title}: ${t.filterDelete}`}>{t.filterDelete}</Button>
+              </div>
               {!filter.available && <span role="status">{t.filterUnavailable}</span>}
             </li>)}</ul> : <p>{t.filterEmpty}</p>}
           </section>

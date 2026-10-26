@@ -46,7 +46,7 @@ export function PrivateNotePanel({recipeId,client,registerLeaveGuard,readOnly=fa
     if(readOnly) return;
     if(markdown!==committed){const ok=await save();if(!ok) throw new Error('PRIVATE_NOTE_SAVE_FAILED');}
   }));
-  return <section className="panel private-note" aria-label={t.privateNotes}>
+  return <section className="panel workspace-panel private-note" aria-label={t.privateNotes}>
     <h2>{t.privateNotes}</h2>
     <p className="muted">{readOnly?t.noteRestoreToEdit:t.privateNotesHelp}</p>
     {loading ? <p role="status">{t.loading}</p> : <>
