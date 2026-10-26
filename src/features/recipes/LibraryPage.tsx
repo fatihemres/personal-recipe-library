@@ -485,10 +485,12 @@ export function LibraryPage({
         <>
           {section === 'collections' && <div className="panel recipe-collections">
             <h2>{t.collections}</h2>
-            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="recipe-actions">
+            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="recipe-collection-form">
               <label>{t.collectionName}<input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
-              <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
-              {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
+              <div className="recipe-collection-actions">
+                <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
+                {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
+              </div>
             </form>
             {collections.length ? <ul className="recipe-collection-list">{collections.map(group => <li key={group.id}>
               <Button variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
