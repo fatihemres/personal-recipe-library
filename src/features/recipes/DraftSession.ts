@@ -48,20 +48,7 @@ export class DraftSession {
       } catch (error) {
         if (!asCopy || normalizeError(error).code !== 'DRAFT_CONFLICT')
           throw error;
-        const fork = {
-          ...captured,
-          id: crypto.randomUUID(),
-          expectedRevision: null,
-          ingredients: captured.ingredients.map((line) => ({
-            ...line,
-            id: crypto.randomUUID(),
-          })),
-          steps: captured.steps.map((step) => ({
-            ...step,
-            id: crypto.randomUUID(),
-          })),
-        };
-        return new DraftSession(this.client).commit(fork);
+        return new DraftSession(this.client).commit(independent(captured));
       }
       let result;
       try {
@@ -74,20 +61,7 @@ export class DraftSession {
       } catch (error) {
         if (!asCopy || normalizeError(error).code !== 'DRAFT_CONFLICT')
           throw error;
-        const fork = {
-          ...captured,
-          id: crypto.randomUUID(),
-          expectedRevision: null,
-          ingredients: captured.ingredients.map((line) => ({
-            ...line,
-            id: crypto.randomUUID(),
-          })),
-          steps: captured.steps.map((step) => ({
-            ...step,
-            id: crypto.randomUUID(),
-          })),
-        };
-        return new DraftSession(this.client).commit(fork);
+        return new DraftSession(this.client).commit(independent(captured));
       }
       this.closed = true;
       return result;
@@ -101,4 +75,11 @@ export class DraftSession {
       this.closed = true;
     });
   }
+}
+
+function independent(input: RecipeInput): RecipeInput {
+  const ids=new Map(input.ingredients.map(line=>[line.id,crypto.randomUUID()]));
+  return {...input,id:crypto.randomUUID(),expectedRevision:null,
+    ingredients:input.ingredients.map(line=>({...line,id:ids.get(line.id)!})),
+    steps:input.steps.map(step=>({...step,id:crypto.randomUUID(),ingredientLineIds:step.ingredientLineIds?.map(id=>ids.get(id)??id)}))};
 }

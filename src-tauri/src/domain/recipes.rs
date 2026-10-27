@@ -73,6 +73,92 @@ pub struct RecipeIngredient {
 pub struct RecipeStep {
     pub id: String,
     pub instructions: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub details: Option<StepDetails>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub ingredient_line_ids: Vec<String>,
+}
+#[derive(Clone, Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct StepDetails {
+    pub format_version: i64,
+    pub title: Option<String>,
+    // Drafts retain unfinished numeric text. Committed durations are whole minutes.
+    pub duration_minutes: Option<String>,
+    pub temperature_value: Option<String>,
+    pub temperature_unit: Option<String>,
+    pub heat_level: Option<String>,
+    pub equipment: Option<String>,
+    pub technique: Option<String>,
+    pub tips: Option<String>,
+}
+impl RecipeStep {
+    pub fn validate_details(
+        &self,
+        committed: bool,
+        lines: &std::collections::HashSet<&String>,
+    ) -> Result<(), AppError> {
+        let mut unique = std::collections::HashSet::new();
+        if self.ingredient_line_ids.len() > 500 {
+            return Err(invalid());
+        }
+        for id in &self.ingredient_line_ids {
+            valid_id(id)?;
+            if !lines.contains(id) || !unique.insert(id) {
+                return Err(invalid());
+            }
+        }
+        if let Some(d) = &self.details {
+            if d.format_version != 1 {
+                return Err(invalid());
+            }
+            for (value, max) in [
+                (&d.title, 200),
+                (&d.duration_minutes, 32),
+                (&d.temperature_value, 32),
+                (&d.heat_level, 200),
+                (&d.equipment, 1000),
+                (&d.technique, 1000),
+                (&d.tips, 5000),
+            ] {
+                if value
+                    .as_ref()
+                    .is_some_and(|v| v.chars().count() > max || v.contains('\0'))
+                {
+                    return Err(invalid());
+                }
+            }
+            if d.temperature_unit
+                .as_ref()
+                .is_some_and(|v| !["C", "F"].contains(&v.as_str()))
+            {
+                return Err(invalid());
+            }
+            if committed {
+                if d.duration_minutes.as_ref().is_some_and(|v| {
+                    v.is_empty()
+                        || !v.bytes().all(|b| b.is_ascii_digit())
+                        || v.parse::<i64>().map_or(true, |n| !(0..=10080).contains(&n))
+                }) {
+                    return Err(invalid());
+                }
+                if d.temperature_value.is_some() != d.temperature_unit.is_some() {
+                    return Err(invalid());
+                }
+                if d.temperature_value.as_ref().is_some_and(|v| {
+                    v.is_empty()
+                        || v.len() > 5
+                        || v.trim() != v
+                        || v.starts_with('+')
+                        || v.parse::<i64>()
+                            .map_or(true, |n| !(-999..=9999).contains(&n))
+                }) {
+                    return Err(invalid());
+                }
+            }
+        }
+        Ok(())
+    }
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
@@ -149,7 +235,9 @@ impl RecipeInput {
                 return Err(invalid());
             }
         }
+        let lines = self.ingredients.iter().map(|i| &i.id).collect();
         for s in &self.steps {
+            s.validate_details(true, &lines)?;
             valid_id(&s.id)?;
             if !ids.insert(&s.id) || !text(&s.instructions, 10000) {
                 return Err(invalid());

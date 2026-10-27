@@ -114,3 +114,6 @@ mod ingredient_library_tests;
 mod recipe_search_tests;
 #[cfg(test)]
 mod recipe_workspace_tests;
+
+#[cfg(test)]
+mod structured_step_tests;

@@ -26,10 +26,14 @@ fn input(ingredient: &Ingredient) -> RecipeInput {
             RecipeStep {
                 id: id(),
                 instructions: "Önce hazırlayın".into(),
+                details: None,
+                ingredient_line_ids: vec![],
             },
             RecipeStep {
                 id: id(),
                 instructions: "Sonra pişirin".into(),
+                details: None,
+                ingredient_line_ids: vec![],
             },
         ],
     }
@@ -148,11 +152,11 @@ fn real_m1_upgrade_preserves_preferences_and_validates_both_checksums() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 8);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
     assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        8
+        9
     );
     drop(db);
     for _ in 0..3 {
@@ -197,6 +201,8 @@ fn edit_replaces_removed_rows_and_database_rejects_malformed_decimal_text() {
     edited.steps.push(RecipeStep {
         id: id(),
         instructions: "Servis edin".into(),
+        details: None,
+        ingredient_line_ids: vec![],
     });
     let result = db.save_recipe(edited).unwrap();
     assert!(result.ingredients.is_empty());

@@ -152,15 +152,37 @@ pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recip
         })?
         .collect::<Result<_, _>>()?;
     let mut s = conn
-        .prepare("SELECT id,instructions FROM recipe_steps WHERE recipe_id=?1 ORDER BY position")?;
+        .prepare("SELECT id,instructions,details_version,title,duration_minutes,temperature_value,temperature_unit,heat_level,equipment,technique,tips FROM recipe_steps WHERE recipe_id=?1 ORDER BY position")?;
     recipe.steps = s
         .query_map([id], |r| {
             Ok(RecipeStep {
                 id: r.get(0)?,
                 instructions: r.get(1)?,
+                details: if r.get::<_, Option<i64>>(2)?.is_some() {
+                    Some(StepDetails {
+                        format_version: r.get(2)?,
+                        title: r.get(3)?,
+                        duration_minutes: r.get::<_, Option<i64>>(4)?.map(|v| v.to_string()),
+                        temperature_value: r.get(5)?,
+                        temperature_unit: r.get(6)?,
+                        heat_level: r.get(7)?,
+                        equipment: r.get(8)?,
+                        technique: r.get(9)?,
+                        tips: r.get(10)?,
+                    })
+                } else {
+                    None
+                },
+                ingredient_line_ids: vec![],
             })
         })?
         .collect::<Result<_, _>>()?;
+    let mut links=conn.prepare("SELECT line_id FROM recipe_step_ingredients WHERE recipe_id=?1 AND step_id=?2 ORDER BY line_id")?;
+    for step in &mut recipe.steps {
+        step.ingredient_line_ids = links
+            .query_map(params![id, step.id], |r| r.get(0))?
+            .collect::<Result<_, _>>()?;
+    }
     for line in &recipe.ingredients {
         let name: String = conn.query_row(
             "SELECT name FROM ingredients WHERE id=?1",
@@ -206,10 +228,21 @@ pub(super) fn write_recipe(
         tx.execute("INSERT INTO recipe_ingredients(id,recipe_id,ingredient_id,quantity,unit_code,position,note) VALUES(?1,?2,?3,?4,?5,?6,?7)",params![i.id,input.id,i.ingredient_id,i.quantity,i.unit_code,position as i64,i.note])?;
     }
     for (position, s) in input.steps.iter().enumerate() {
+        let d = s.details.as_ref();
+        let duration = d
+            .and_then(|d| d.duration_minutes.as_ref())
+            .map(|v| v.parse::<i64>().map_err(|_| invalid()))
+            .transpose()?;
         tx.execute(
-            "INSERT INTO recipe_steps(id,recipe_id,position,instructions) VALUES(?1,?2,?3,?4)",
-            params![s.id, input.id, position as i64, s.instructions.trim()],
+            "INSERT INTO recipe_steps(id,recipe_id,position,instructions,details_version,title,duration_minutes,temperature_value,temperature_unit,heat_level,equipment,technique,tips) VALUES(?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13)",
+            params![s.id, input.id, position as i64, s.instructions.trim(),d.map(|d|d.format_version),d.and_then(|d|d.title.as_ref()),duration,d.and_then(|d|d.temperature_value.as_ref()),d.and_then(|d|d.temperature_unit.as_ref()),d.and_then(|d|d.heat_level.as_ref()),d.and_then(|d|d.equipment.as_ref()),d.and_then(|d|d.technique.as_ref()),d.and_then(|d|d.tips.as_ref())],
         )?;
+        for line_id in &s.ingredient_line_ids {
+            tx.execute(
+                "INSERT INTO recipe_step_ingredients(recipe_id,step_id,line_id) VALUES(?1,?2,?3)",
+                params![input.id, s.id, line_id],
+            )?;
+        }
     }
     index_recipe_if_available(tx, &input.id)?;
     Ok(())

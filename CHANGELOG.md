@@ -1,3 +1,9 @@
+## M5A candidate — 2026-10-27
+
+- Optional expandable advanced recipe steps: title, whole-minute duration, explicit temperature unit/qualitative heat, equipment, technique and tips.
+- Stable step-to-ingredient-line associations, safe reorder/removal and independent duplicate/save-as-new mapping.
+- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. Not integrated or PO accepted.
+
 # Changelog
 
 ## M4B-2 — Private notes, saved filters, dashboard and responsive workspace (2026-10-27, unreleased)

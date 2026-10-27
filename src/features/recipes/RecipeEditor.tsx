@@ -304,10 +304,17 @@ export function RecipeEditor({
                 onBusy={setAdding}
               />
             }
-            onChange={(lines) => update('ingredients', lines)}
+            onChange={(lines) => {
+              const ids=new Set(lines.map(line=>line.id));
+              const removed=draft.steps.some(step=>(step.ingredientLineIds??[]).some(id=>!ids.has(id)));
+              setDraft(current=>({...current,ingredients:lines,steps:current.steps.map(step=>({...step,ingredientLineIds:(step.ingredientLineIds??[]).filter(id=>ids.has(id))}))}));
+              if(removed) setNotice(t.stepLinksRemoved);
+            }}
           />
           <RecipeSteps
             steps={draft.steps}
+            ingredients={draft.ingredients}
+            names={names}
             onChange={(steps) => update('steps', steps)}
           />
           <section className="panel recipe-form">

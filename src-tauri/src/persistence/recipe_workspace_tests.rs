@@ -270,7 +270,7 @@ fn schema_seven_upgrade_preserves_recipe_and_organization() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 8);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
     assert_eq!(
         db.recipe(&recipe_id).unwrap().ingredients[0]
             .quantity
@@ -297,7 +297,7 @@ fn schema_seven_upgrade_preserves_recipe_and_organization() {
         .is_none());
     drop(db);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 8);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
     assert_eq!(
         db.recipe(&recipe_id).unwrap().notes.as_deref(),
         Some("Tarihî not")

@@ -4,7 +4,7 @@
 
 ## Product and technical baseline
 - Repository: https://github.com/fatihemres/personal-recipe-library; protected integration branch `main`.
-- Verified protected `main` HEAD: `fb944f87c3c898bcf69b3e889bfa3cc8a39748c4`, [M4B-2 PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11) merge commit. Previous `main`: `8663787db4b68c8f4043f4a3405ae55eaf1dddd6`. M4B-1 [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) merged at `77825776e1cfcf57eb81e547cb3407e5af9d05c2`, after governance PR #6 at `af094688377d1ec94bc793a381640aedae872c98` and M4A PR #5 at `49955722e8359e19eee206c577faa7ba600c96f8`.
+- Verified M5A starting `main` HEAD: `1edfec3e6da56358a6c8bd7637503014f66fbfa9` after governance PR #15; the preceding `fb944f87c3c898bcf69b3e889bfa3cc8a39748c4` is [M4B-2 PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11) merge commit. Previous `main`: `8663787db4b68c8f4043f4a3405ae55eaf1dddd6`. M4B-1 [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) merged at `77825776e1cfcf57eb81e547cb3407e5af9d05c2`, after governance PR #6 at `af094688377d1ec94bc793a381640aedae872c98` and M4A PR #5 at `49955722e8359e19eee206c577faa7ba600c96f8`.
 - Application version **0.1.0** (development, not public v1.0.0); protected `main` has SQLite schema **8** (M4B-2 migration 008). Older binaries cannot safely be assumed compatible after upgrade. Bundled catalog **Release 11** remains 854 canonical ingredients (666 food/188 beverage), 269 aliases and 50 category nodes.
 - Stack: Tauri 2 + React/TypeScript/Vite + Rust worker/repositories + SQLite/FTS5. Offline-first, local user data. Turkish-first UI. macOS/Windows are targets.
 - Annotated milestone tags include `milestone/m3d-2b-release8`, `milestone/m3d-3-release9`, `milestone/m3d-4-release10`, `milestone/m3d-5-release11`, `milestone/m4a-recipe-search-library` (peels to M4A merge `49955722e8359e19eee206c577faa7ba600c96f8`) and `milestone/m4b1-recipe-organization` (tag object `bc65b6a98597e96f536a6675488c9aade211cc72`, peels to M4B-1 merge `77825776e1cfcf57eb81e547cb3407e5af9d05c2`).
@@ -27,7 +27,7 @@
 - **At the earlier planning checkpoint**, M4B was proposed for recipe favorites, custom collections, ratings, private/rich notes, saved filters and correct database-backed dashboard links. That proposal did not authorize coding at the time; subsequent [DEC-014](DECISIONS.md) authorized two slices, and M4B-1 was subsequently integrated and PO accepted via PR #8. M4B-2 retains notes, saved filters and dashboard. Follow M5 advanced recipe media/history/Cooking Mode, M6 measurement+Beverage Studio, M7 pantry/shopping, and remaining modules per [implementation plan](docs/IMPLEMENTATION_PLAN.md) and [roadmap](ROADMAP.md).
 
 ## Next planning gate (2026-10-27)
-- [M5 planning Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14) records a **PROPOSED** four-slice decomposition: advanced steps/editor; immutable versions, variations and relations; safe user-media; Cooking Mode. No M5 code or branch authorized/verified yet. Full V1 M5 boundary stays in the Master Spec/Implementation Plan. Separate [PR #13](https://github.com/fatihemres/personal-recipe-library/pull/13) concerns repository rights and is not part of the feature milestone.
+- [M5 planning Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14) originally recorded a **PROPOSED** four-slice decomposition: advanced steps/editor; immutable versions, variations and relations; safe user-media; Cooking Mode. That planning-only checkpoint did not authorize code then; the later explicit M5A implementation brief authorizes the candidate below (DEC-019), while M5B–D remain planned. Full V1 M5 boundary stays in the Master Spec/Implementation Plan. Separate [PR #13](https://github.com/fatihemres/personal-recipe-library/pull/13) concerns repository rights and is not part of the feature milestone.
 - M4B-2 annotated checkpoint tag, local Mac fast-forward and Windows/Intel real GUI tests remain separate uncompleted tasks.
 
 ## Open risks and PO decisions
@@ -43,3 +43,8 @@
 - [Product requirements](docs/MASTER_SPEC.md) · [Roadmap](ROADMAP.md) · [Decisions](DECISIONS.md) · [Ideas](IDEA_REGISTER.md)
 - [Architecture](docs/ARCHITECTURE.md) · [Engineering workflow](docs/DEVELOPMENT_AND_RELEASE_PROCESS.md) · [Evidence](VERIFICATION.md)
 - [Detailed historical log](PROJECT_PROGRESS.md) · [Tests](docs/TESTING.md) · [Change log](CHANGELOG.md)
+
+
+## Active M5A candidate — 2026-10-27
+
+The PO explicitly authorized M5A in the implementation brief, following Issue #14's accepted simple-by-default UX (DEC-019). Branch `feature/m5a-advanced-recipe-steps` starts at `1edfec3e6da56358a6c8bd7637503014f66fbfa9` in a separate worktree. Optional versioned structured steps, own-recipe ingredient-line associations, legacy draft compatibility and responsive editor/display are IMPLEMENTED candidates on schema 9. Protected main remains schema 8; application 0.1.0 and Catalog Release 11 (854/269/50) remain unchanged. M5B/M5C/M5D/M6/M8 are not implemented here. Engineering/local/native/CI evidence and remaining PO checks belong to [M5A acceptance record](docs/M5A_ACCEPTANCE.md). No integration or PO acceptance is claimed. The independent proprietary-rights PR #13, root workbook, normal Mac profile and older worktrees remain untouched.

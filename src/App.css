@@ -671,3 +671,29 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
 .ingredient-card-favorite { position: absolute; top: .75rem; right: .75rem; z-index: 1; min-width: 44px; min-height: 44px; padding: .5rem; }
 .ingredient-selector-shortcuts { display: flex; gap: .5rem; flex-wrap: wrap; margin: .6rem 0; }
 .ingredient-selector-shortcuts button { min-height: 40px; }
+
+/* Optional structured cooking steps share the editor's bounded form grid. */
+.step-row { min-width:0; container-type:inline-size; }
+.step-advanced { min-width:0; margin-top:1rem; border:1px solid var(--border); border-radius:10px; }
+.step-advanced summary { cursor:pointer; padding:.85rem 1rem; font-weight:600; overflow-wrap:anywhere; }
+.step-advanced summary:focus-visible { outline:2px solid var(--primary); outline-offset:2px; border-radius:8px; }
+.step-advanced-content { padding:0 1rem 1rem; min-width:0; }
+.step-advanced-content .form-grid { align-items:start; }
+.step-advanced-content .step-core-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.step-advanced-content label,.step-field { min-width:0; overflow-wrap:anywhere; }
+.step-advanced-content input:not([type="checkbox"]),.step-advanced-content select { height:3rem; }
+.step-validation { color:var(--destructive); }
+.step-advanced-content small { color:var(--secondary-text); font-weight:400; }
+.step-advanced-content input[aria-invalid="true"] { border-color:var(--destructive); }
+.step-ingredient-links { min-width:0; margin-top:1rem; border:1px solid var(--border); border-radius:8px; padding:1rem; }
+.step-ingredient-links legend { max-width:100%; overflow-wrap:anywhere; font-weight:600; }
+.recipe-form label.step-ingredient-choice { display:flex; align-items:flex-start; gap:.65rem; font-weight:400; min-width:0; }
+.recipe-form .step-ingredient-choice input { width:1.15rem; height:1.15rem; flex:0 0 1.15rem; margin-top:.2rem; accent-color:var(--primary); }
+.step-ingredient-choice span { min-width:0; overflow-wrap:anywhere; }
+.step-metadata { overflow-wrap:anywhere; }
+.step-metadata dt { font-weight:600; }
+.step-metadata dd { margin:0 0 .6rem; white-space:pre-wrap; }
+@container (max-width:30rem) {
+  .step-advanced-content .form-grid { grid-template-columns:minmax(0,1fr); }
+  .step-advanced-content,.step-ingredient-links { padding:.75rem; }
+}

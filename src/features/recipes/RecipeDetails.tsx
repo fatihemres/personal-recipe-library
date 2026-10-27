@@ -35,7 +35,19 @@ export function RecipeDetails({ recipe }: { recipe: Recipe }) {
       {recipe.steps.length ? (
         <ol className="detail-list">
           {recipe.steps.map((s) => (
-            <li key={s.id}>{s.instructions}</li>
+            <li key={s.id}>
+              {s.details?.title && <h3>{s.details.title}</h3>}
+              <p className="preserve-text">{s.instructions}</p>
+              {s.details && <dl className="step-metadata">
+                {s.details.durationMinutes!==null && <><dt>{t.stepDuration}</dt><dd>{s.details.durationMinutes}</dd></>}
+                {s.details.temperatureValue!==null && <><dt>{t.stepTemperature}</dt><dd>{s.details.temperatureValue} °{s.details.temperatureUnit}</dd></>}
+                {(['heatLevel','equipment','technique','tips'] as const).map(key=>s.details?.[key] && <div key={key}><dt>{key==='heatLevel'?t.stepHeat:key==='equipment'?t.stepEquipment:key==='technique'?t.stepTechnique:t.stepTips}</dt><dd className="preserve-text">{s.details[key]}</dd></div>)}
+              </dl>}
+              {!!s.ingredientLineIds?.length && <><strong>{t.stepIngredients}</strong><ul>{s.ingredientLineIds.map(id=>{
+                const line=recipe.ingredients.find(line=>line.id===id);
+                return line?<li key={id}>{recipe.ingredients.indexOf(line)+1}. {recipe.ingredientNames[line.ingredientId]} · {line.quantity??t.unknown} {line.unitCode}{line.note?` · ${line.note}`:''}</li>:null;
+              })}</ul></>}
+            </li>
           ))}
         </ol>
       ) : (
