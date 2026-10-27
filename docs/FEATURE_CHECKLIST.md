@@ -1,9 +1,9 @@
-> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A and M4B-1 are integrated and PO accepted, while M4B-2 is a candidate pending PR and PO gates. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
-> **M4B-1 integrated 2026-10-23:** recipe favorites, To Try, nullable ratings and collections merged in [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) with schema 007 and PO-reported isolated Mac GUI 7/7 checks PASS. M4B-2 notes, saved filters and dashboard are under implementation on a separate candidate branch; do not interpret unchecked lines as integrated acceptance.
+> **Checkpoint note, 2026-10-23:** This checklist's tick marks and introductory M1/M2-era totals are historical and not a current integrated-feature ledger. Use [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md) and [VERIFICATION.md](../VERIFICATION.md) for current milestone claims. Any unchecked full-V1 feature still requires its owning implementation/acceptance; M4A, M4B-1 and M4B-2 are integrated and PO accepted for their scoped Mac tests; M5–M11 and remaining V1 requirements are not thereby complete. Detailed R01–R20 requirements remain in [MASTER_SPEC.md](MASTER_SPEC.md).
+> **M4B-1 integrated 2026-10-23:** recipe favorites, To Try, nullable ratings and collections merged in [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8) with schema 007 and PO-reported isolated Mac GUI 7/7 checks PASS. M4B-2 private notes, saved filters and dashboard were integrated via PR #11; do not interpret other unchecked lines as accepted.
 
 # Feature checklist
 
-**M4B-2 candidate tracking (not PO accepted):** schema 008 private Markdown note storage and constrained preview; named versioned live filters; active-only SQLite dashboard and direct library navigation. The existing R04/R15 full statistics, prepared-history and later milestone requirements remain unchecked until their own acceptance.
+**M4B-2 integrated tracking (PO Mac accepted 2026-10-27):** schema 008 private Markdown note storage and constrained preview; named versioned live filters; active-only SQLite dashboard and direct library navigation. The existing R04/R15 full statistics, prepared-history and later milestone requirements remain unchecked until their own acceptance.
 
 Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M1/M2A/M2B subsets only. All unchecked items remain V1 unless labeled future; no unchecked feature is represented by demo records or mock-only functionality. IMPLEMENTATION_PLAN.md defines owning milestones and acceptance tests.
 
@@ -42,7 +42,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 - [x] SQLite new/edit draft recovery, serialized autosave/Save/Discard, optimistic conflicts and explicit save-as-new (M2B).
 - [x] Cards/list, sorts/filters/advanced FTS search (M4A) and recipe favorites (M4B-1).
 - [x] Nullable whole-star 1–5 ratings (M4B-1).
-- [ ] Rich notes, variations/related recipes/history/version restore.
+- [x] Safe private Markdown notes (M4B-2).
+- [ ] Recipe variations/related recipes/history/version restore (M5).
 - [ ] Ingredient substitutions and portion adjustment.
 - [ ] Cover/step images, optional source URLs and attribution.
 
@@ -111,7 +112,8 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 ## R14 — Organization
 
 - [x] Recipe favorites/custom collections/multiple memberships/To Try/ratings (M4B-1).
-- [ ] Cooking history/saved filters/private notes (remaining V1 features).
+- [x] Named saved filters/private notes (M4B-2).
+- [ ] Preparation/cooking history (M8).
 
 ## R16 — Database
 

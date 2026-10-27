@@ -1,5 +1,12 @@
 # Changelog
 
+## M4B-2 — Private notes, saved filters, dashboard and responsive workspace (2026-10-27, unreleased)
+
+- Added schema-8 local-only, versioned private Markdown recipe notes with safe preview and separate revisions, distinct from historical recipe notes and drafts.
+- Added named structured live saved filters and real SQLite-backed Dashboard totals, recent active recipes and functional library/collection navigation.
+- Fixed native Cmd-Q unsaved-note protection and improved workspace form/panel responsiveness across docked, narrow and wide Mac windows.
+- [PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11) merged as `fb944f87c3c898bcf69b3e889bfa3cc8a39748c4` after [five-job exact-head CI PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/40325150468), PO-reported functional Mac acceptance and 5/5 visual UI PASS. **No public release, milestone tag, normal-profile migration, Windows/Intel GUI verification or signing is implied.**
+
 ## M4B-1 — Recipe organization and collections (2026-10-23, unreleased)
 
 - Added SQLite schema migration 007 and typed commands for per-recipe favorite and To Try flags, nullable 1–5 whole-star rating, and user-defined many-to-many collections with independent revision tracking.
