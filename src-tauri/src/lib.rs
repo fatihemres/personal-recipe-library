@@ -13,6 +13,11 @@ pub struct ExitPermission(pub std::sync::atomic::AtomicBool);
 pub fn run() {
     tauri::Builder::default()
         .manage(ExitPermission::default())
+        .on_menu_event(|app, event| {
+            if event.id().as_ref() == desktop_menu::SAFE_QUIT_ID {
+                let _ = app.emit("request-exit", ());
+            }
+        })
         .on_window_event(|window, event| {
             if let tauri::WindowEvent::CloseRequested { api, .. } = event {
                 if !window
@@ -39,6 +44,13 @@ pub fn run() {
             commands::save_preferences,
             commands::list_recipes,
             commands::search_recipes,
+            commands::get_private_note,
+            commands::save_private_note,
+            commands::list_saved_filters,
+            commands::resolve_saved_filter,
+            commands::save_saved_filter,
+            commands::delete_saved_filter,
+            commands::recipe_dashboard,
             commands::get_recipe_organization,
             commands::set_recipe_organization,
             commands::list_recipe_collections,

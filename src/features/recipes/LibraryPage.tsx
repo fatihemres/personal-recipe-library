@@ -4,19 +4,25 @@ import { normalizeError } from '../../shared/api/client';
 import { errorMessage } from '../../shared/i18n';
 import { recipesTr as t } from '../../shared/i18n/recipes';
 import type { Draft, Recipe } from '../../shared/contracts/recipe';
-import type { RecipeSearchItem } from '../../shared/contracts/recipeSearch';
+import type { RecipeSearchItem, RecipeSearchQuery } from '../../shared/contracts/recipeSearch';
+import type { SavedFilter } from '../../shared/contracts/recipeWorkspace';
 import type { RecipeOrganization, RecipeCollection } from '../../shared/contracts/recipeOrganization';
 import { Button } from '../../shared/ui/button';
 import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
 import { RecipeDetails } from './RecipeDetails';
 import { DraftRecovery } from './DraftRecovery';
 import { RecipeEditor } from './RecipeEditor';
+import { PrivateNotePanel } from './PrivateNotePanel';
 export function LibraryPage({
   client = recipeClient,
   section = 'library',
+  navigationRequest,
+  registerLeaveGuard,
 }: {
   client?: RecipeClient;
   section?: 'library' | 'collections';
+  navigationRequest?: {sequence:number; kind?:'food'|'beverage'; favoriteOnly?:boolean; collectionId?:string; recipeId?:string};
+  registerLeaveGuard?: (guard:(()=>Promise<boolean>)|null)=>void;
 }) {
   const [items, setItems] = useState<RecipeSearchItem[]>([]);
   const [total, setTotal] = useState(0);
@@ -25,6 +31,9 @@ export function LibraryPage({
   const [selected, setSelected] = useState<Recipe | null>(null);
   const [organization, setOrganization] = useState<RecipeOrganization | null>(null);
   const [collections, setCollections] = useState<RecipeCollection[]>([]);
+  const [savedFilters,setSavedFilters] = useState<SavedFilter[]>([]);
+  const [filterName,setFilterName] = useState('');
+  const [renamingFilter,setRenamingFilter] = useState<SavedFilter|null>(null);
   const [collectionId, setCollectionId] = useState<string | null>(null);
   const [collectionTitle, setCollectionTitle] = useState('');
   const [collectionEditing, setCollectionEditing] = useState<RecipeCollection | null>(null);
@@ -61,6 +70,23 @@ export function LibraryPage({
   const generation = useRef(0);
   const operation = useRef(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const noteLeaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
+  useEffect(()=>{
+    registerLeaveGuard?.(async()=>noteLeaveGuard.current ? noteLeaveGuard.current():true);
+    return()=>registerLeaveGuard?.(null);
+  },[registerLeaveGuard]);
+  useEffect(()=>{
+    if(!navigationRequest) return;
+    setScope('active');setPage(0);setKind(navigationRequest.kind??null);
+    setFavoriteOnly(!!navigationRequest.favoriteOnly);setToTryOnly(false);
+    setCollectionId(navigationRequest.collectionId??null);
+    setQuery('');setSearchText('');setIngredientId(null);
+    setCreatedFrom('');setCreatedTo('');setModifiedFrom('');setModifiedTo('');setSort('modified');
+    if(navigationRequest.recipeId) void (async()=>{if(!noteLeaveGuard.current || await noteLeaveGuard.current()) await open(navigationRequest.recipeId!);})();
+    else {setSelected(null);setOrganization(null);}
+  // The sequence marks a deliberate external navigation, not ordinary rerenders.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[navigationRequest?.sequence]);
   useEffect(() => {
     const timer = window.setTimeout(() => setSearchText(query), 180);
     return () => window.clearTimeout(timer);
@@ -89,10 +115,11 @@ export function LibraryPage({
     setLoading(true);
     setError('');
     try {
-      const [recipes, recovery, groups] = await Promise.all([
+      const [recipes, recovery, groups, saved] = await Promise.all([
         client.searchRecipes(filters),
         client.drafts(),
         client.collections(),
+        client.savedFilters(),
       ]);
       if (current === generation.current) {
         setItems(recipes.items);
@@ -101,6 +128,7 @@ export function LibraryPage({
         setSuggestions(recipes.suggestions);
         setDrafts(recovery);
         setCollections(groups);
+        setSavedFilters(saved);
       }
     } catch (e) {
       if (current === generation.current) {
@@ -168,6 +196,32 @@ export function LibraryPage({
     } catch(e) { setError(errorMessage(normalizeError(e).messageKey)); }
     finally { operation.current=false; setBusy(false); }
   }
+  async function saveCurrentFilter() {
+    if(operation.current || !filterName.trim()) return;
+    operation.current=true;setBusy(true);setError('');
+    try {
+      await client.saveFilter({id:renamingFilter?.id??crypto.randomUUID(),expectedRevision:renamingFilter?.revision??null,
+        title:filterName,query:(renamingFilter?.query ?? {...filters,offset:0,limit:24}) as RecipeSearchQuery & {offset:0;limit:24}});
+      setFilterName('');setRenamingFilter(null);setNotice(t.filterSaved);await load();
+    } catch(e){setError(errorMessage(normalizeError(e).messageKey));}
+    finally{operation.current=false;setBusy(false);}
+  }
+  async function removeFilter(filter:SavedFilter) {
+    if(operation.current) return;
+    operation.current=true;setBusy(true);setError('');
+    try {await client.deleteFilter(filter.id,filter.revision);setNotice(t.filterDeleted);await load();}
+    catch(e){setError(errorMessage(normalizeError(e).messageKey));}
+    finally{operation.current=false;setBusy(false);}
+  }
+  async function applySavedFilter(filter:SavedFilter) {
+    let q:RecipeSearchQuery;
+    try{q=await client.resolveFilter(filter.id);}catch(e){setError(errorMessage(normalizeError(e).messageKey));return;}
+    setQuery(q.text);setSearchText(q.text);setScope(q.scope);setKind(q.kind);setIngredientId(q.ingredientId);
+    setIngredientName('');setIngredientQuery('');setFavoriteOnly(q.favoriteOnly);setToTryOnly(q.toTryOnly);
+    setCollectionId(q.collectionId);setCreatedFrom(q.createdFrom??'');setCreatedTo(q.createdTo??'');
+    setModifiedFrom(q.modifiedFrom??'');setModifiedTo(q.modifiedTo??'');setSort(q.sort);setPage(0);
+    searchRef.current?.focus();
+  }
   async function removeCollection() {
     if (!collectionDelete || operation.current) return;
     operation.current=true; setBusy(true); setError('');
@@ -180,6 +234,7 @@ export function LibraryPage({
   }
   async function deletion(deleted: boolean) {
     if (!selected || operation.current) return;
+    if(noteLeaveGuard.current && !await noteLeaveGuard.current()) return;
     operation.current = true;
     setBusy(true);
     setConfirm(false);
@@ -200,6 +255,7 @@ export function LibraryPage({
     action: 'duplicate' | 'archive' | 'unarchive' | 'purge',
   ) {
     if (!selected || operation.current) return;
+    if(noteLeaveGuard.current && !await noteLeaveGuard.current()) return;
     operation.current = true;
     setBusy(true);
     setError('');
@@ -317,9 +373,10 @@ export function LibraryPage({
         <Button
           disabled={busy}
           onClick={() => {
-            setSelected(null);
-            setRecovered(undefined);
-            setEditing(true);
+            void (async()=>{
+              if(noteLeaveGuard.current && !await noteLeaveGuard.current())return;
+              setSelected(null);setRecovered(undefined);setEditing(true);
+            })();
           }}
         >
           {t.newRecipe}
@@ -345,7 +402,7 @@ export function LibraryPage({
       {selected ? (
         <>
           <div className="recipe-actions">
-            <Button variant="outline" onClick={() => { setSelected(null); window.setTimeout(() => searchRef.current?.focus(), 0); }}>
+            <Button variant="outline" onClick={() => { void (async()=>{if(noteLeaveGuard.current && !await noteLeaveGuard.current())return;setSelected(null);window.setTimeout(() => searchRef.current?.focus(), 0);})(); }}>
               {t.back}
             </Button>
             {selected.deletedAt ? (
@@ -366,10 +423,7 @@ export function LibraryPage({
                 {!selected.archivedAt && (
                   <Button
                     disabled={busy}
-                    onClick={() => {
-                      setRecovered(undefined);
-                      setEditing(true);
-                    }}
+                    onClick={() => {void (async()=>{if(noteLeaveGuard.current && !await noteLeaveGuard.current())return;setRecovered(undefined);setEditing(true);})();}}
                   >
                     {t.edit}
                   </Button>
@@ -403,7 +457,8 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
-          {organization && !selected.deletedAt && <div className="panel recipe-organization">
+          <PrivateNotePanel key={selected.id} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
+          {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
             <div className="recipe-actions" role="group" aria-label={t.favorites}>
               <Button variant={organization.favorite ? 'default' : 'outline'} aria-pressed={organization.favorite} disabled={busy}
                 onClick={() => void updateOrganization({favorite:!organization.favorite,toTry:organization.toTry,rating:organization.rating},selected.id,organization.revision)}>
@@ -428,18 +483,22 @@ export function LibraryPage({
         </>
       ) : (
         <>
-          {section === 'collections' && <div className="panel recipe-collections">
+          {section === 'collections' && <div className="panel workspace-panel recipe-collections">
             <h2>{t.collections}</h2>
-            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="recipe-actions">
-              <label>{t.collectionName}<input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
-              <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
-              {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
+            <form onSubmit={event => {event.preventDefault();void saveCollection();}} className="workspace-form">
+              <label className="workspace-field"><span>{t.collectionName}</span><input value={collectionTitle} maxLength={100} required onChange={event=>setCollectionTitle(event.target.value)} /></label>
+              <div className="workspace-form-actions">
+                <Button type="submit" disabled={busy || !collectionTitle.trim()}>{collectionEditing ? t.collectionRename : t.collectionCreate}</Button>
+                {collectionEditing && <Button type="button" variant="outline" onClick={()=>{setCollectionEditing(null);setCollectionTitle('');}}>{t.cancel}</Button>}
+              </div>
             </form>
-            {collections.length ? <ul className="recipe-collection-list">{collections.map(group => <li key={group.id}>
-              <Button variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
+            {collections.length ? <ul className="workspace-list">{collections.map(group => <li className="workspace-list-row" key={group.id}>
+              <Button className="workspace-list-primary" variant={collectionId===group.id ? 'default':'outline'} aria-pressed={collectionId===group.id}
                 onClick={()=>{setCollectionId(group.id);setScope('active');setPage(0);}}>{group.title} · {t.collectionCount.replace('{count}',String(group.activeCount))}</Button>
-              <Button variant="outline" aria-label={`${group.title}: ${t.collectionRename}`} onClick={()=>{setCollectionEditing(group);setCollectionTitle(group.title);}}>{t.collectionRename}</Button>
-              <Button variant="outline" aria-label={`${group.title}: ${t.collectionDelete}`} onClick={()=>setCollectionDelete(group)}>{t.collectionDelete}</Button>
+              <div className="workspace-list-actions">
+                <Button variant="outline" aria-label={`${group.title}: ${t.collectionRename}`} onClick={()=>{setCollectionEditing(group);setCollectionTitle(group.title);}}>{t.collectionRename}</Button>
+                <Button variant="outline" aria-label={`${group.title}: ${t.collectionDelete}`} onClick={()=>setCollectionDelete(group)}>{t.collectionDelete}</Button>
+              </div>
             </li>)}</ul> : <p>{t.collectionEmpty}</p>}
             {collectionId && <Button variant="outline" onClick={()=>{setCollectionId(null);setPage(0);}}>{t.collectionFilterClear}</Button>}
           </div>}
@@ -522,6 +581,24 @@ export function LibraryPage({
             </select></label>
             <Button variant="outline" onClick={resetFilters}>{t.resetFilters}</Button>
           </div>
+          <section className="panel workspace-panel saved-filter-panel" aria-label={t.savedFilters}>
+            <h2>{t.savedFilters}</h2>
+            <form className="workspace-form" onSubmit={e=>{e.preventDefault();void saveCurrentFilter();}}>
+              <label className="workspace-field"><span>{t.filterName}</span><input value={filterName} maxLength={100} required onChange={e=>setFilterName(e.target.value)} /></label>
+              <div className="workspace-form-actions">
+                <Button type="submit" disabled={busy||!filterName.trim()}>{renamingFilter?t.filterRename:t.saveFilter}</Button>
+                {renamingFilter && <Button type="button" variant="outline" onClick={()=>{setRenamingFilter(null);setFilterName('');}}>{t.cancel}</Button>}
+              </div>
+            </form>
+            {savedFilters.length ? <ul className="workspace-list">{savedFilters.map(filter=><li className="workspace-list-row" key={filter.id}>
+              <Button className="workspace-list-primary" variant="outline" onClick={()=>void applySavedFilter(filter)}>{filter.title} · {t.filterApply}</Button>
+              <div className="workspace-list-actions">
+                <Button variant="outline" disabled={!filter.available} onClick={()=>{setRenamingFilter(filter);setFilterName(filter.title);}} aria-label={`${filter.title}: ${t.filterRename}`}>{t.filterRename}</Button>
+                <Button variant="outline" onClick={()=>void removeFilter(filter)} aria-label={`${filter.title}: ${t.filterDelete}`}>{t.filterDelete}</Button>
+              </div>
+              {!filter.available && <span role="status">{t.filterUnavailable}</span>}
+            </li>)}</ul> : <p>{t.filterEmpty}</p>}
+          </section>
           <div className="recipe-results-heading">
             <p role="status">{t.resultCount.replace('{count}', String(total))}</p>
             <div role="group" aria-label={t.viewMode} className="recipe-actions">

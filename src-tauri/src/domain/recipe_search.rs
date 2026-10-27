@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 use super::{recipes::invalid, AppError};
 
-#[derive(Clone, Debug, Deserialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RecipeSearchQuery {
     pub text: String,
