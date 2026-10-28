@@ -1,5 +1,18 @@
 # Changelog
 
+## M5A — advanced structured steps (2026-10-27, PO Mac accepted; integration pending)
+
+- Optional expandable advanced recipe steps: title, whole-minute duration, explicit temperature unit/qualitative heat, equipment, technique and tips.
+- Stable step-to-ingredient-line associations, safe reorder/removal and independent duplicate/save-as-new mapping.
+- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. PO reported 5/5 Mac acceptance PASS on 2026-10-27; separate PR #16 merge remains pending.
+
+## M4B-2 — Private notes, saved filters, dashboard and responsive workspace (2026-10-27, unreleased)
+
+- Added schema-8 local-only, versioned private Markdown recipe notes with safe preview and separate revisions, distinct from historical recipe notes and drafts.
+- Added named structured live saved filters and real SQLite-backed Dashboard totals, recent active recipes and functional library/collection navigation.
+- Fixed native Cmd-Q unsaved-note protection and improved workspace form/panel responsiveness across docked, narrow and wide Mac windows.
+- [PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11) merged as `fb944f87c3c898bcf69b3e889bfa3cc8a39748c4` after [five-job exact-head CI PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/40325150468), PO-reported functional Mac acceptance and 5/5 visual UI PASS. **No public release, milestone tag, normal-profile migration, Windows/Intel GUI verification or signing is implied.**
+
 ## M4B-1 — Recipe organization and collections (2026-10-23, unreleased)
 
 - Added SQLite schema migration 007 and typed commands for per-recipe favorite and To Try flags, nullable 1–5 whole-star rating, and user-defined many-to-many collections with independent revision tracking.
@@ -136,3 +149,9 @@
 - Add recipe-level favorite and To Try states, nullable 1–5 rating, and user-defined many-to-many collections with Turkish-first management and detail controls.
 - Add checksummed schema 007 and typed Rust/TypeScript IPC. Extend active M4A recipe search with composable organization filters, preserving content/draft revisions and exact quantities.
 - Verify isolated schema-6 upgrade, fresh/restart behavior, rollback, catalog preservation and frontend interactions. M4B-2 notes, saved filters and dashboard remain pending; this candidate awaits PO acceptance and merge.
+# M4B-2 candidate — 2026-10-23
+
+- Added separate optimistic, format-versioned private Markdown notes with a constrained text-only safe preview and guarded unsaved changes. Historical recipe/draft notes remain unchanged.
+- Routed the macOS Quit menu command through the existing guarded native-exit handshake after an isolated GUI smoke test exposed an unsaved-note flush bypass.
+- Added persistent named recipe filters using versioned, validated search criteria, with live results and explicit missing-reference/version errors.
+- Added active-only SQLite dashboard counts, recent recipes and collection summaries with direct library navigation. Proposed candidate schema 008; Catalog Release 11 and app version 0.1.0 stay unchanged.

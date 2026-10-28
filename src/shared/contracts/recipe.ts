@@ -23,8 +23,24 @@ export const lineSchema = z
     note: z.string().max(2000).nullable(),
   })
   .strict();
+export const stepDetailsSchema = z.object({
+  formatVersion: z.literal(1),
+  title: z.string().max(200).nullable(),
+  durationMinutes: z.string().max(32).nullable(),
+  temperatureValue: z.string().max(32).nullable(),
+  temperatureUnit: z.enum(['C','F']).nullable(),
+  heatLevel: z.string().max(200).nullable(),
+  equipment: z.string().max(1000).nullable(),
+  technique: z.string().max(1000).nullable(),
+  tips: z.string().max(5000).nullable(),
+}).strict();
+const stepFields = {
+  id: z.uuid(), instructions: z.string().max(10000),
+  details: stepDetailsSchema.optional(),
+  ingredientLineIds: z.array(z.uuid()).max(500).optional(),
+};
 export const stepSchema = z
-  .object({ id: z.uuid(), instructions: z.string().trim().min(1).max(10000) })
+  .object({ ...stepFields, instructions: z.string().trim().min(1).max(10000) })
   .strict();
 const fields = {
   id: z.uuid(),
@@ -38,12 +54,28 @@ const fields = {
   ingredients: z.array(lineSchema).max(500),
   steps: z.array(stepSchema).max(500),
 };
+export type StepDetails = z.infer<typeof stepDetailsSchema>;
+export function stepDetailsIssues(d?: StepDetails) {
+  return {
+    duration: !!d && d.durationMinutes!==null && (!/^\d+$/.test(d.durationMinutes) || Number(d.durationMinutes)>10080),
+    temperature: !!d && ((d.temperatureValue===null)!==(d.temperatureUnit===null) ||
+      (d.temperatureValue!==null && (d.temperatureValue.length>5 || !/^-?\d+$/.test(d.temperatureValue) || Number(d.temperatureValue)<-999 || Number(d.temperatureValue)>9999))),
+  };
+}
+function validStepDetails(input: {steps: z.infer<typeof stepSchema>[]; ingredients: z.infer<typeof lineSchema>[]}) {
+  const lines=new Set(input.ingredients.map(line=>line.id));
+  return input.steps.every(step=>{
+    const ids=step.ingredientLineIds??[];
+    const issues=stepDetailsIssues(step.details);
+    return new Set(ids).size===ids.length && ids.every(id=>lines.has(id)) && !issues.duration && !issues.temperature;
+  });
+}
 export const recipeInputSchema = z
   .object({
     ...fields,
     expectedRevision: z.number().int().positive().nullable(),
   })
-  .strict();
+  .strict().refine(validStepDetails);
 export const recipeSchema = z
   .object({
     ...fields,
@@ -61,7 +93,7 @@ export type Ingredient = z.infer<typeof ingredientSchema>;
 export type Unit = z.infer<typeof unitSchema>;
 
 // Drafts intentionally accept unfinished text that committed recipes reject.
-export const draftInputSchema = recipeInputSchema.extend({
+export const draftInputSchema = z.object({ ...fields, expectedRevision: z.number().int().positive().nullable(),
   title: z.string().max(200),
   servings: z.string().max(100),
   ingredients: z
@@ -69,12 +101,12 @@ export const draftInputSchema = recipeInputSchema.extend({
     .max(500),
   steps: z
     .array(
-      z.object({ id: z.uuid(), instructions: z.string().max(10000) }).strict(),
+      z.object(stepFields).strict(),
     )
     .max(500),
   prepMinutes: z.number().int().nullable(),
   cookMinutes: z.number().int().nullable(),
-});
+}).strict();
 export const draftSchema = z
   .object({
     id: z.uuid(),

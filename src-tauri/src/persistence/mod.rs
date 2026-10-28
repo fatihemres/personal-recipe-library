@@ -4,6 +4,7 @@ pub mod migrations;
 mod preferences;
 mod recipe_organization;
 mod recipe_search;
+mod recipe_workspace;
 mod recipes;
 mod reliability;
 use crate::domain::{AppError, Bootstrap, StorageStatus};
@@ -111,3 +112,8 @@ mod catalog_tests;
 mod ingredient_library_tests;
 #[cfg(test)]
 mod recipe_search_tests;
+#[cfg(test)]
+mod recipe_workspace_tests;
+
+#[cfg(test)]
+mod structured_step_tests;

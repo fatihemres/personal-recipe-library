@@ -41,3 +41,15 @@ test('recipe contract preserves Turkish text and unknown quantities', () => {
     }).success,
   ).toBe(true);
 });
+
+test('legacy drafts stay readable and advanced committed values require valid numbers and same-recipe links', async()=>{
+ const {draftInputSchema}=await import('./recipe');
+ const input={id:crypto.randomUUID(),expectedRevision:null,title:'Tarif',description:null,kind:'food',servings:'1',prepMinutes:null,cookMinutes:null,notes:null,ingredients:[],steps:[{id:crypto.randomUUID(),instructions:'Karıştırın'}]};
+ expect(draftInputSchema.parse(input).steps[0].details).toBeUndefined();
+ const details={formatVersion:1,title:null,durationMinutes:'1.',temperatureValue:'-',temperatureUnit:null,heatLevel:null,equipment:null,technique:null,tips:null};
+ const advanced={...input,steps:[{...input.steps[0],details}]};
+ expect(draftInputSchema.safeParse(advanced).success).toBe(true);
+ expect(recipeInputSchema.safeParse(advanced).success).toBe(false);
+ expect(recipeInputSchema.safeParse({...input,steps:[{...input.steps[0],ingredientLineIds:[crypto.randomUUID()]}]}).success).toBe(false);
+ expect(recipeInputSchema.safeParse({...advanced,steps:[{...input.steps[0],details:{...details,durationMinutes:'0',temperatureValue:'180',temperatureUnit:'C'}}]}).success).toBe(true);
+});

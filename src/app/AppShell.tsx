@@ -8,6 +8,7 @@ import { errorMessage, messages as t } from '../shared/i18n';
 import { Button } from '../shared/ui/button';
 import { recipeClient, type RecipeClient } from '../shared/api/recipes';
 import { LibraryPage } from '../features/recipes/LibraryPage';
+import { DashboardPage } from '../features/recipes/DashboardPage';
 import { AboutPanel, SettingsPage } from '../features/settings/SettingsPage';
 import { useFoundation } from './useFoundation';
 import { installNativeExitHandler } from './nativeExit';
@@ -16,7 +17,6 @@ import { useTheme } from './theme';
 import { useAppVersion } from './useAppVersion';
 
 const futureModules = [
-  { label: t.dashboard, Icon: ChartNoAxesCombined },
   { label: t.beverage, Icon: Wine },
   { label: t.pantry, Icon: Package },
   { label: t.shopping, Icon: ShoppingBasket },
@@ -26,10 +26,12 @@ const futureModules = [
 export function AppShell({ client = foundationClient, recipes = recipeClient }: { client?: FoundationClient; recipes?: RecipeClient }) {
   const { data, error, loading, saving, load, saveTheme } = useFoundation(client);
   const appVersion = useAppVersion();
-  const [page, setPage] = useState<'library' | 'collections' | 'settings' | 'ingredients'>('library');
+  const [page, setPage] = useState<'dashboard' | 'library' | 'collections' | 'settings' | 'ingredients'>('library');
+  const [navigationRequest,setNavigationRequest]=useState<{sequence:number;kind?:'food'|'beverage';favoriteOnly?:boolean;collectionId?:string;recipeId?:string}>();
   const [menuOpen, setMenuOpen] = useState(false);
   const [exitError, setExitError] = useState('');
   const ingredientLeaveGuard = useRef<(()=>Promise<boolean>)|null>(null);
+  const recipeLeaveGuard = useRef<(()=>Promise<boolean>)|null>(null);
   useEffect(() => {
     let active = true;
     let unlisten: (() => void) | undefined;
@@ -46,6 +48,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
 
   async function navigate(next: typeof page) {
     if (page === 'ingredients' && next !== page && ingredientLeaveGuard.current && !await ingredientLeaveGuard.current()) return;
+    if ((page === 'library' || page === 'collections') && next !== page && recipeLeaveGuard.current && !await recipeLeaveGuard.current()) return;
     setPage(next);
     setMenuOpen(false);
     document.getElementById('main-content')?.focus();
@@ -61,6 +64,9 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
         </div>
         <nav aria-label={t.navigation}>
           <p className="nav-heading">{t.workspace}</p>
+          <button className={`nav-item ${page === 'dashboard' ? 'active' : ''}`} aria-current={page === 'dashboard' ? 'page' : undefined} onClick={() => void navigate('dashboard')}>
+            <ChartNoAxesCombined size={19} aria-hidden="true" />{t.dashboard}
+          </button>
           <button
             className={`nav-item ${page === 'library' ? 'active' : ''}`}
             aria-current={page === 'library' ? 'page' : undefined}
@@ -107,7 +113,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
               aria-controls="sidebar" aria-expanded={menuOpen}
               onClick={() => setMenuOpen(!menuOpen)}
             ><Menu size={20} aria-hidden="true" /></Button>
-            <span>{page === 'library' ? t.library : page === 'collections' ? t.collections : page === 'ingredients' ? t.ingredients : t.settings}</span>
+            <span>{page === 'dashboard' ? t.dashboard : page === 'library' ? t.library : page === 'collections' ? t.collections : page === 'ingredients' ? t.ingredients : t.settings}</span>
           </div>
           <span className="connection-status">
             {error ? <><AlertTriangle size={15} aria-hidden="true" />{t.storageUnavailable}</>
@@ -136,7 +142,7 @@ export function AppShell({ client = foundationClient, recipes = recipeClient }: 
             </section>
           )}
           {!loading && !data && page === 'settings' && <AboutPanel appVersion={appVersion} />}
-          {data && <><div hidden={loading || (page !== 'library' && page !== 'collections')}><LibraryPage client={recipes} section={page === 'collections' ? 'collections' : 'library'} /></div>{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} appVersion={appVersion} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
+          {data && <><div hidden={loading || (page !== 'library' && page !== 'collections')}><LibraryPage client={recipes} section={page === 'collections' ? 'collections' : 'library'} navigationRequest={navigationRequest} registerLeaveGuard={guard=>{recipeLeaveGuard.current=guard;}} /></div>{!loading && page === 'dashboard' && <DashboardPage client={recipes} onNavigate={destination=>{setNavigationRequest({sequence:Date.now(),...destination});setPage('library');}} />}{!loading && page === 'ingredients' && <IngredientLibrary client={recipes} registerLeaveGuard={guard => { ingredientLeaveGuard.current = guard; }} />}{!loading && page === 'settings' && <SettingsPage data={data} appVersion={appVersion} saving={saving} onTheme={(theme) => void saveTheme(theme)} />}</>}
         </main>
       </div>
     </div>

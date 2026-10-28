@@ -79,7 +79,9 @@ impl DraftWrite {
                 return Err(invalid());
             }
         }
+        let lines = i.ingredients.iter().map(|line| &line.id).collect();
         for step in &i.steps {
+            step.validate_details(false, &lines)?;
             valid_id(&step.id)?;
             if !ids.insert(&step.id) || step.instructions.chars().count() > 10000 {
                 return Err(invalid());
@@ -108,11 +110,19 @@ impl Recipe {
 pub fn independent(mut input: RecipeInput) -> RecipeInput {
     input.id = uuid::Uuid::new_v4().to_string();
     input.expected_revision = None;
+    let mut line_ids = std::collections::HashMap::new();
     for line in &mut input.ingredients {
-        line.id = uuid::Uuid::new_v4().to_string();
+        let new_id = uuid::Uuid::new_v4().to_string();
+        line_ids.insert(line.id.clone(), new_id.clone());
+        line.id = new_id;
     }
     for step in &mut input.steps {
         step.id = uuid::Uuid::new_v4().to_string();
+        step.ingredient_line_ids = step
+            .ingredient_line_ids
+            .iter()
+            .map(|id| line_ids.get(id).cloned().unwrap_or_else(|| id.clone()))
+            .collect();
     }
     input
 }

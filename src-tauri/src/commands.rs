@@ -18,6 +18,57 @@ use crate::domain::recipe_organization::{
     CollectionWrite, OrganizationWrite, RecipeCollection, RecipeOrganization,
 };
 use crate::domain::recipe_search::{RecipeSearchPage, RecipeSearchQuery};
+use crate::domain::recipe_workspace::{
+    Dashboard, PrivateNote, PrivateNoteWrite, SavedFilter, SavedFilterWrite,
+};
+#[tauri::command]
+pub async fn get_private_note(
+    recipe_id: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<PrivateNote, AppError> {
+    state.execute(move |d| d.private_note(&recipe_id)).await
+}
+#[tauri::command]
+pub async fn save_private_note(
+    write: PrivateNoteWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<PrivateNote, AppError> {
+    state.execute(move |d| d.save_private_note(write)).await
+}
+#[tauri::command]
+pub async fn list_saved_filters(
+    state: tauri::State<'_, StorageService>,
+) -> Result<Vec<SavedFilter>, AppError> {
+    state.execute(|d| d.saved_filters()).await
+}
+#[tauri::command]
+pub async fn resolve_saved_filter(
+    id: String,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeSearchQuery, AppError> {
+    state.execute(move |d| d.resolve_filter(&id)).await
+}
+#[tauri::command]
+pub async fn save_saved_filter(
+    write: SavedFilterWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<SavedFilter, AppError> {
+    state.execute(move |d| d.save_filter(write)).await
+}
+#[tauri::command]
+pub async fn delete_saved_filter(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.delete_filter(&id, revision)).await
+}
+#[tauri::command]
+pub async fn recipe_dashboard(
+    state: tauri::State<'_, StorageService>,
+) -> Result<Dashboard, AppError> {
+    state.execute(|d| d.dashboard()).await
+}
 #[tauri::command]
 pub async fn get_recipe_organization(
     id: String,
@@ -503,7 +554,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            7
+            9
         );
     }
     #[test]
@@ -576,7 +627,13 @@ mod tests {
             "INGREDIENT_REFERENCED"
         );
         input["ingredients"][0]["quantity"] = json!("35.000001");
+        input["steps"] = json!([{"id":uuid::Uuid::new_v4().to_string(),"instructions":"Kısık ateşte karıştırın","ingredientLineIds":[input["ingredients"][0]["id"]],"details":{"formatVersion":1,"title":"Hazırlık","durationMinutes":"0","temperatureValue":"180","temperatureUnit":"C","heatLevel":"Kısık ateş","equipment":"Tava","technique":"Karıştırma","tips":"Özenle"}}]);
         let saved=invoke(&window,"commit_recipe",json!({"input":input,"draftId":draft_id,"draftRevision":draft["revision"],"asCopy":false})).unwrap();
+        assert_eq!(
+            saved["steps"][0]["ingredientLineIds"][0],
+            saved["ingredients"][0]["id"]
+        );
+        assert_eq!(saved["steps"][0]["details"]["durationMinutes"], "0");
         assert!(invoke(&window, "list_drafts", json!({}))
             .unwrap()
             .as_array()
@@ -593,6 +650,11 @@ mod tests {
         );
         let copy = invoke(&window, "duplicate_recipe", json!({"id":id,"revision":1})).unwrap();
         assert_ne!(copy["id"], saved["id"]);
+        assert_ne!(copy["steps"][0]["id"], saved["steps"][0]["id"]);
+        assert_eq!(
+            copy["steps"][0]["ingredientLineIds"][0],
+            copy["ingredients"][0]["id"]
+        );
         invoke(
             &window,
             "archive_recipe",

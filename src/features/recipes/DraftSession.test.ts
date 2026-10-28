@@ -127,3 +127,15 @@ test('stale shared draft can be explicitly saved through an independent session'
     false,
   );
 });
+
+test('save-as-copy recovery remaps ingredient line links as well as step IDs',async()=>{
+ const api=rendererRecipeClient();const value=input();const lineId=crypto.randomUUID();
+ value.ingredients=[{id:lineId,ingredientId:crypto.randomUUID(),quantity:'1.250',unitCode:'g',note:null}];
+ value.steps=[{id:crypto.randomUUID(),instructions:'Karıştırın',ingredientLineIds:[lineId]}];
+ vi.mocked(api.saveDraft).mockRejectedValueOnce({code:'DRAFT_CONFLICT',messageKey:'errors.draftConflict',recoverable:true});
+ const result=await new DraftSession(api).commit(value,true);
+ expect(result.ingredients[0].id).not.toBe(lineId);
+ expect(result.steps[0].ingredientLineIds).toEqual([result.ingredients[0].id]);
+ expect(result.steps[0].id).not.toBe(value.steps[0].id);
+ expect(result.ingredients[0].quantity).toBe('1.250');
+});

@@ -20,6 +20,10 @@ export const tr = {
     'errors.draftConflict':'Bu taslak başka bir oturumda değiştirildi veya kapatıldı. Buradaki metni koruyup güncel taslağı yeniden açın; başka oturumun verisi üzerine yazılmadı.',
     'errors.ingredientDuplicate':'Bu isimle zaten bir malzeme var. Farklı bir isim seçin veya mevcut kaydı kullanın; kayıtlar otomatik birleştirilmez.',
     'errors.collectionDuplicate':'Bu adla bir koleksiyon zaten var. Farklı bir ad seçin.',
+    'errors.filterDuplicate':'Bu adla kayıtlı bir filtre zaten var.',
+    'errors.filterVersion':'Bu filtrenin biçimi bu uygulama sürümünde desteklenmiyor. Filtreyi silip yeniden oluşturabilirsiniz.',
+    'errors.filterInvalid':'Kayıtlı filtrenin içeriği doğrulanamadı. Filtreyi silip yeniden oluşturabilirsiniz.',
+    'errors.filterReference':'Filtredeki malzeme veya koleksiyon artık mevcut değil. Filtre sonuçları genişletilmedi.',
     'errors.ingredientReferenced':'Malzeme kaydedilmiş tariflerde veya taslaklarda kullanılıyor ve silinemez. İsmini güvenle düzenleyebilirsiniz.',
 
     'errors.conflict': 'Bu kayıt başka bir işlemde değiştirildi. Güncel kaydı yeniden açıp değişikliklerinizi gözden geçirin.',

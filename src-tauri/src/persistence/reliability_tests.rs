@@ -26,10 +26,14 @@ fn input(ingredient: &Ingredient) -> RecipeInput {
             RecipeStep {
                 id: id(),
                 instructions: "Karıştırın".into(),
+                details: None,
+                ingredient_line_ids: vec![],
             },
             RecipeStep {
                 id: id(),
                 instructions: "Servis edin".into(),
+                details: None,
+                ingredient_line_ids: vec![],
             },
         ],
     }
@@ -353,11 +357,11 @@ fn m2a_migration_preserves_records_decimal_values_settings_and_checksums() {
                 .as_deref(),
             Some("35.000001")
         );
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 7);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
         assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
         assert_eq!(
             migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-            7
+            9
         );
     }
 }
@@ -373,6 +377,8 @@ fn crash_writer_child() {
     let mut draft = input(&ingredient);
     draft.ingredients[0].quantity = Some("35.".into());
     draft.steps[0].instructions.clear();
+    draft.steps[0].ingredient_line_ids = vec![draft.ingredients[0].id.clone()];
+    draft.steps[0].details=Some(serde_json::from_value(serde_json::json!({"formatVersion":1,"title":"Kesinti öncesi","durationMinutes":"1.","temperatureValue":"-","temperatureUnit":null,"heatLevel":"Kısık ateş","equipment":null,"technique":null,"tips":"Korunsun"})).unwrap());
     db.save_draft(DraftWrite {
         id: id(),
         expected_revision: None,
@@ -416,5 +422,27 @@ fn unexpected_termination_recovers_committed_draft_from_real_sqlite() {
         Some("35.")
     );
     assert!(drafts[0].input.steps[0].instructions.is_empty());
+    assert_eq!(
+        drafts[0].input.steps[0]
+            .details
+            .as_ref()
+            .unwrap()
+            .duration_minutes
+            .as_deref(),
+        Some("1.")
+    );
+    assert_eq!(
+        drafts[0].input.steps[0]
+            .details
+            .as_ref()
+            .unwrap()
+            .temperature_value
+            .as_deref(),
+        Some("-")
+    );
+    assert_eq!(
+        drafts[0].input.steps[0].ingredient_line_ids,
+        vec![drafts[0].input.ingredients[0].id.clone()]
+    );
     assert!(db.scope_recipes("active", None).unwrap().is_empty());
 }

@@ -158,6 +158,9 @@ impl Database {
         }
         let input = independent(source.to_input());
         write_recipe(&tx, &input)?;
+        // A duplicated recipe is a new personal copy; its private note starts with
+        // the same text but has its own revision and future edits are independent.
+        tx.execute("INSERT INTO recipe_private_notes(recipe_id,format_version,markdown) SELECT ?1,format_version,markdown FROM recipe_private_notes WHERE recipe_id=?2",params![input.id,id])?;
         tx.commit()?;
         self.recipe(&input.id)
     }

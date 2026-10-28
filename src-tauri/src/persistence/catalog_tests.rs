@@ -40,6 +40,8 @@ fn recipe(i: &Ingredient) -> RecipeInput {
         steps: vec![RecipeStep {
             id: uuid::Uuid::new_v4().to_string(),
             instructions: "Karıştırın".into(),
+            details: None,
+            ingredient_line_ids: vec![],
         }],
     }
 }
@@ -360,9 +362,9 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
             ],
         )
         .unwrap();
-    let r = db.save_recipe(recipe(&ingredient)).unwrap();
-    let archived = db.archive_recipe(&r.id, 1, true).unwrap();
-    let trashed = db.set_deleted(&r.id, archived.revision, true).unwrap();
+    let r = recipe(&ingredient);
+    super::tests::insert_legacy_recipe(&db.conn, &r);
+    db.conn.execute("UPDATE recipes SET archived_at='2026-10-01T00:00:00Z',deleted_at='2026-10-02T00:00:00Z',revision=3 WHERE id=?1",[&r.id]).unwrap();
     let draft = db
         .save_draft(DraftWrite {
             id: uuid::Uuid::new_v4().to_string(),
@@ -372,8 +374,11 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
         .unwrap();
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 7);
-    assert_eq!(db.recipe(&r.id).unwrap().deleted_at, trashed.deleted_at);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
+    assert_eq!(
+        db.recipe(&r.id).unwrap().deleted_at.as_deref(),
+        Some("2026-10-02T00:00:00Z")
+    );
     assert_eq!(db.draft(&draft.id).unwrap().revision, 1);
     db.import_catalog(&seed()).unwrap();
     db.install_bundled_catalog().unwrap();
@@ -389,7 +394,7 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
         .any(|i| i.id == ingredient.id));
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        7
+        9
     );
 }
 #[test]

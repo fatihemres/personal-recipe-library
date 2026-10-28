@@ -6,6 +6,34 @@ import { rendererRecipeClient } from '../../test/recipeClient';
 import type { Recipe } from '../../shared/contracts/recipe';
 // Renderer tests isolate interaction; real SQLite and native tests independently prove persistence.
 const client = rendererRecipeClient;
+test('named filter is saved without pagination and applying it resets to first page',async()=>{
+  const api=client();const user=userEvent.setup();
+  const saved={id:crypto.randomUUID(),title:'İçecekler',revision:1,formatVersion:1,available:true,
+    query:{text:'',scope:'active' as const,kind:'beverage' as const,ingredientId:null,favoriteOnly:false,toTryOnly:false,collectionId:null,createdFrom:null,createdTo:null,modifiedFrom:null,modifiedTo:null,sort:'modified' as const,offset:0 as const,limit:24 as const}};
+  vi.mocked(api.savedFilters).mockResolvedValue([saved]);
+  vi.mocked(api.resolveFilter).mockResolvedValue(saved.query);
+  render(<LibraryPage client={api}/>);
+  await screen.findByRole('button',{name:'İçecekler · Uygula'});
+  await user.type(screen.getByLabelText('Filtre adı'),'İçli tarifler');
+  await user.click(screen.getByRole('button',{name:'Filtreyi kaydet'}));
+  expect(api.saveFilter).toHaveBeenCalledWith(expect.objectContaining({title:'İçli tarifler',query:expect.objectContaining({offset:0,limit:24})}));
+  await user.click(screen.getByRole('button',{name:'İçecekler · Uygula'}));
+  expect(api.resolveFilter).toHaveBeenCalledWith(saved.id);
+  await waitFor(()=>expect(screen.getByLabelText('Tarif türü')).toHaveValue('beverage'));
+});
+test('dashboard metric navigation leaves an old recipe detail and shows filtered results',async()=>{
+  const api=client();const user=userEvent.setup();
+  const recipe:Recipe={id:crypto.randomUUID(),revision:1,title:'Ayran',kind:'beverage',servings:'1',
+    description:null,prepMinutes:null,cookMinutes:null,notes:null,createdAt:'now',updatedAt:'now',
+    deletedAt:null,archivedAt:null,ingredients:[],steps:[],ingredientNames:{}};
+  vi.mocked(api.list).mockResolvedValue([recipe]);vi.mocked(api.get).mockResolvedValue(recipe);
+  const view=render(<LibraryPage client={api}/>);
+  await user.click(await screen.findByRole('button',{name:/Ayran/}));
+  expect(await screen.findByRole('button',{name:'Kütüphaneye dön'})).toBeVisible();
+  view.rerender(<LibraryPage client={api} navigationRequest={{sequence:1,kind:'beverage'}}/>);
+  await waitFor(()=>expect(screen.queryByRole('button',{name:'Kütüphaneye dön'})).toBeNull());
+  expect(screen.getByLabelText('Tarif türü')).toHaveValue('beverage');
+});
 test('create recipe with personal ingredient, decimal comma and reordered steps', async () => {
   const api = client();
   const user = userEvent.setup();
@@ -29,7 +57,7 @@ test('create recipe with personal ingredient, decimal comma and reordered steps'
   await user.type(screen.getByLabelText('1. Talimat'), 'Hazırla');
   await user.click(screen.getByRole('button', { name: 'Adım ekle' }));
   await user.type(screen.getByLabelText('2. Talimat'), 'Pişir');
-  await user.click(screen.getAllByRole('button', { name: 'Yukarı taşı' })[1]);
+  await user.click(screen.getAllByRole('button', { name: /Yukarı taşı$/ })[1]);
   await user.click(screen.getByRole('button', { name: 'Tarifi kaydet' }));
   await screen.findByRole('heading', { name: 'İçli köfte' });
   expect(api.save).toHaveBeenCalledWith(
