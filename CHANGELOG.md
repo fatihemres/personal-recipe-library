@@ -1,10 +1,14 @@
 # Changelog
 
-## M5A — advanced structured steps (2026-10-27, PO Mac accepted; integration pending)
+## M5A — advanced structured steps (2026-10-28, integrated and PO Mac accepted; unreleased)
 
 - Optional expandable advanced recipe steps: title, whole-minute duration, explicit temperature unit/qualitative heat, equipment, technique and tips.
 - Stable step-to-ingredient-line associations, safe reorder/removal and independent duplicate/save-as-new mapping.
-- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. PO reported 5/5 Mac acceptance PASS on 2026-10-27; separate PR #16 merge remains pending.
+- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. PO reported 5/5 isolated Mac acceptance PASS on 2026-10-27. [PR #16](https://github.com/fatihemres/personal-recipe-library/pull/16) merged as `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83` after exact-head [five-job CI PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/40645726359). No signed release or normal-profile migration is implied.
+
+## Repository rights notice — 2026-10-28 (unreleased)
+
+- [PR #13](https://github.com/fatihemres/personal-recipe-library/pull/13) added a root proprietary LICENSE notice, merged as `8f61d5c0a25d9953212ae2e337165a147d6b611c` after [5/5 CI PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/40647794293). Third-party rights and previously granted licenses remain reserved; [Issue #12](https://github.com/fatihemres/personal-recipe-library/issues/12) still tracks rights clearance. No runtime or data change.
 
 ## M4B-2 — Private notes, saved filters, dashboard and responsive workspace (2026-10-27, unreleased)
 
