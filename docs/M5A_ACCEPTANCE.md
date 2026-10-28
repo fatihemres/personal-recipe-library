@@ -1,6 +1,6 @@
-# M5A structured editor candidate — 2026-10-27
+# M5A structured editor — PO Mac accepted 2026-10-27, integrated 2026-10-28
 
-Authority: explicit PO implementation brief and [M5 parent Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14), DEC-019. Branch `feature/m5a-advanced-recipe-steps` starts at protected main `1edfec3e6da56358a6c8bd7637503014f66fbfa9`. **IMPLEMENTED + VERIFIED candidate; PO-reported scoped native Mac 5/5 acceptance PASS on 2026-10-27; not INTEGRATED at this documentation checkpoint.** Final PR/head/CI URLs are recorded in the engineering handoff and the feature PR checks. Separate proprietary-rights PR #13 is untouched.
+Authority: explicit PO implementation brief and [M5 parent Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14), DEC-019. Branch `feature/m5a-advanced-recipe-steps` starts at protected main `1edfec3e6da56358a6c8bd7637503014f66fbfa9`. **INTEGRATED + PO_ACCEPTED (scoped native Mac 5/5 PASS, PO report 2026-10-27).** Final [PR #16](https://github.com/fatihemres/personal-recipe-library/pull/16) head `1da7a1e00d9c85743a4751cbec5578b1ef237a01` passed all five mandatory jobs in [Actions 40645726359](https://github.com/fatihemres/personal-recipe-library/actions/runs/40645726359) and merged as `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83`, with ordered parents `1edfec3e6da56358a6c8bd7637503014f66fbfa9` and `1da7a1e00d9c85743a4751cbec5578b1ef237a01`. The separate LICENSE-only PR #13 subsequently merged as `8f61d5c0a25d9953212ae2e337165a147d6b611c`; rights Issue #12 remains open.
 
 ## Delivered boundary
 
@@ -64,4 +64,4 @@ The Product Owner reported **5/5 PASS** for the isolated `com.recipeatlas.m5aacc
 6. Leave an unfinished advanced edit using Keep Draft or Cmd-Q, fully quit and relaunch; recover it. Try invalid numeric text and confirm explicit Save refuses it without losing edits.
 7. Inspect narrow/minimum, side-by-side, normal and fullscreen windows, short/tall windows, light/dark themes, long text, keyboard focus and larger text. Every action must remain reachable by natural vertical scrolling.
 
-Next gates: independent engineering review, five CI checks on final head, PO native feature/visual acceptance and separate explicit merge authorization. Windows/Intel GUI/installer use, signed/notarized distribution and ordinary-profile upgrades remain unverified unless separately reported.
+Completed M5A gates: independent engineering review, exact-final-head five-job CI, PO-reported isolated Mac feature/visual acceptance and separately authorized merge commit. **Remaining unverified**: Windows/Intel native GUI and installer use, signed/notarized distribution, ordinary-profile schema-9 upgrade and portable backup/restore. M5B/M5C/M5D require separate PO scope/coding authorization; no tag or release was created.
