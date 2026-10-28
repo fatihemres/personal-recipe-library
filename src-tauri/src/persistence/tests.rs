@@ -7,7 +7,7 @@ fn fresh_database_has_real_fts_foreign_keys_and_defaults() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
     let bootstrap = db.bootstrap().unwrap();
-    assert_eq!(bootstrap.storage.schema_version, 8);
+    assert_eq!(bootstrap.storage.schema_version, 9);
     assert!(bootstrap.storage.foreign_keys && bootstrap.storage.fts5);
     assert_eq!(bootstrap.preferences.theme, Theme::System);
     assert_eq!(bootstrap.preferences.locale, "tr");
@@ -43,7 +43,7 @@ fn repeated_initialization_preserves_preferences_and_migration_ledger() {
                 .query_row("SELECT count(*) FROM schema_migrations", [], |r| r
                     .get::<_, i64>(0))
                 .unwrap(),
-            8
+            9
         );
     }
 }
@@ -85,7 +85,7 @@ fn modified_checksum_is_rejected_without_mutating_file() {
 fn newer_schema_is_rejected_without_mutation() {
     let dir = tempdir().unwrap();
     let db = Database::open(dir.path()).unwrap();
-    db.conn.pragma_update(None, "user_version", 9).unwrap();
+    db.conn.pragma_update(None, "user_version", 10).unwrap();
     drop(db);
     let path = dir.path().join("library.sqlite3");
     let before = std::fs::read(&path).unwrap();
@@ -210,7 +210,7 @@ fn rust_bootstrap_matches_frontend_contract_shape() {
         value["preferences"],
         serde_json::json!({"theme":"system","locale":"tr"})
     );
-    assert_eq!(value["storage"]["schemaVersion"], 8);
+    assert_eq!(value["storage"]["schemaVersion"], 9);
     assert_eq!(value["storage"]["foreignKeys"], true);
     assert_eq!(value["storage"]["fts5"], true);
 }
@@ -312,5 +312,21 @@ fn migration_ledger_gap_and_version_disagreement_are_rejected() {
             Database::open(dir.path()).err().unwrap().code,
             "SCHEMA_INTEGRITY"
         );
+    }
+}
+
+// Populate historical schema fixtures with their original columns. Current
+// repositories deliberately expect the fully migrated schema at runtime.
+pub(super) fn insert_legacy_recipe(conn: &Connection, input: &crate::domain::recipes::RecipeInput) {
+    conn.execute("INSERT INTO recipes(id,title,description,kind,servings,prep_minutes,cook_minutes,notes) VALUES(?1,?2,?3,?4,?5,?6,?7,?8)",rusqlite::params![input.id,input.title,input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes]).unwrap();
+    for (position, line) in input.ingredients.iter().enumerate() {
+        conn.execute("INSERT INTO recipe_ingredients(id,recipe_id,ingredient_id,quantity,unit_code,position,note) VALUES(?1,?2,?3,?4,?5,?6,?7)",rusqlite::params![line.id,input.id,line.ingredient_id,line.quantity,line.unit_code,position as i64,line.note]).unwrap();
+    }
+    for (position, step) in input.steps.iter().enumerate() {
+        conn.execute(
+            "INSERT INTO recipe_steps(id,recipe_id,position,instructions) VALUES(?1,?2,?3,?4)",
+            rusqlite::params![step.id, input.id, position as i64, step.instructions],
+        )
+        .unwrap();
     }
 }

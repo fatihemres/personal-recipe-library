@@ -664,10 +664,10 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
         }],
         steps: vec![],
     };
-    db.save_recipe(input.clone()).unwrap();
+    super::tests::insert_legacy_recipe(&db.conn, &input);
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 8);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
     assert_eq!(
         db.recipe(&input.id).unwrap().ingredients[0]
             .quantity

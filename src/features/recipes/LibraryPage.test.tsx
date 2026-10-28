@@ -57,7 +57,7 @@ test('create recipe with personal ingredient, decimal comma and reordered steps'
   await user.type(screen.getByLabelText('1. Talimat'), 'Hazırla');
   await user.click(screen.getByRole('button', { name: 'Adım ekle' }));
   await user.type(screen.getByLabelText('2. Talimat'), 'Pişir');
-  await user.click(screen.getAllByRole('button', { name: 'Yukarı taşı' })[1]);
+  await user.click(screen.getAllByRole('button', { name: /Yukarı taşı$/ })[1]);
   await user.click(screen.getByRole('button', { name: 'Tarifi kaydet' }));
   await screen.findByRole('heading', { name: 'İçli köfte' });
   expect(api.save).toHaveBeenCalledWith(

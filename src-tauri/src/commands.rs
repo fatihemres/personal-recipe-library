@@ -554,7 +554,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            8
+            9
         );
     }
     #[test]
@@ -627,7 +627,13 @@ mod tests {
             "INGREDIENT_REFERENCED"
         );
         input["ingredients"][0]["quantity"] = json!("35.000001");
+        input["steps"] = json!([{"id":uuid::Uuid::new_v4().to_string(),"instructions":"Kısık ateşte karıştırın","ingredientLineIds":[input["ingredients"][0]["id"]],"details":{"formatVersion":1,"title":"Hazırlık","durationMinutes":"0","temperatureValue":"180","temperatureUnit":"C","heatLevel":"Kısık ateş","equipment":"Tava","technique":"Karıştırma","tips":"Özenle"}}]);
         let saved=invoke(&window,"commit_recipe",json!({"input":input,"draftId":draft_id,"draftRevision":draft["revision"],"asCopy":false})).unwrap();
+        assert_eq!(
+            saved["steps"][0]["ingredientLineIds"][0],
+            saved["ingredients"][0]["id"]
+        );
+        assert_eq!(saved["steps"][0]["details"]["durationMinutes"], "0");
         assert!(invoke(&window, "list_drafts", json!({}))
             .unwrap()
             .as_array()
@@ -644,6 +650,11 @@ mod tests {
         );
         let copy = invoke(&window, "duplicate_recipe", json!({"id":id,"revision":1})).unwrap();
         assert_ne!(copy["id"], saved["id"]);
+        assert_ne!(copy["steps"][0]["id"], saved["steps"][0]["id"]);
+        assert_eq!(
+            copy["steps"][0]["ingredientLineIds"][0],
+            copy["ingredients"][0]["id"]
+        );
         invoke(
             &window,
             "archive_recipe",

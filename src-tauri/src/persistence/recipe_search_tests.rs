@@ -44,6 +44,8 @@ fn input(title: &str, ingredient: &Ingredient) -> RecipeInput {
         steps: vec![RecipeStep {
             id: id(),
             instructions: "Yavaşça karıştır".into(),
+            details: None,
+            ingredient_line_ids: vec![],
         }],
     }
 }

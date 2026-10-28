@@ -301,3 +301,8 @@ Screen pinned rights-cleared source identities against Release 10; maintain a co
 ## M4B-2 candidate slice — 2026-10-23
 
 The PO-authorized [Issue #10](https://github.com/fatihemres/personal-recipe-library/issues/10) scopes separate versioned private Markdown notes, named versioned live Library filters and an active-only SQLite dashboard. The candidate uses forward-only migration 008 and the existing typed IPC/worker/repository stack; historical `recipes.notes`, editor drafts, catalog Release 11 and exact decimal text stay unchanged. Completion requires local regression checks, isolated packaged-app startup/restart, all five exact-head PR jobs, independent review, and separate PO Mac feature acceptance and merge authorization. Full preparation history/statistics, M5 advanced editing, M6 Beverage Studio, M7 pantry/shopping and M8 meal planning remain outside this slice.
+
+
+## M5A authorized implementation slice — 2026-10-27
+
+Following the explicit PO brief and Issue #14 UX decision, M5A implements optional expandable structured steps and links to recipe ingredient **lines**, with simple instructions still sufficient to save. Candidate schema 009 adds versioned nullable metadata and composite-FK links, preserving schema-8 recipes/drafts, exact quantities and the catalog. Tests must cover legacy JSON, reordering, independent duplication/save-as-new, line removal, conflicts/rollback, lifecycle/restart and actual-component responsive screenshots. This is an IMPLEMENTED candidate, not full M5, integration or PO acceptance; see M5A_ACCEPTANCE.md. M5B immutable history/relations/variations, M5C media and M5D Cooking Mode remain PLANNED. No M6 conversions or M8 preparation logs are included.
