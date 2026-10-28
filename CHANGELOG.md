@@ -1,10 +1,10 @@
-## M5A candidate — 2026-10-27
+# Changelog
+
+## M5A — advanced structured steps (2026-10-27, PO Mac accepted; integration pending)
 
 - Optional expandable advanced recipe steps: title, whole-minute duration, explicit temperature unit/qualitative heat, equipment, technique and tips.
 - Stable step-to-ingredient-line associations, safe reorder/removal and independent duplicate/save-as-new mapping.
-- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. Not integrated or PO accepted.
-
-# Changelog
+- Forward-only schema 009 with legacy recipe/draft compatibility; responsive actual-component tests and isolated acceptance gates. PO reported 5/5 Mac acceptance PASS on 2026-10-27; separate PR #16 merge remains pending.
 
 ## M4B-2 — Private notes, saved filters, dashboard and responsive workspace (2026-10-27, unreleased)
 

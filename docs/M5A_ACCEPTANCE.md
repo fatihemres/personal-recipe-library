@@ -1,6 +1,6 @@
 # M5A structured editor candidate — 2026-10-27
 
-Authority: explicit PO implementation brief and [M5 parent Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14), DEC-019. Branch `feature/m5a-advanced-recipe-steps` starts at protected main `1edfec3e6da56358a6c8bd7637503014f66fbfa9`. **IMPLEMENTED candidate; not INTEGRATED or PO_ACCEPTED.** Final PR/head/CI URLs are recorded in the engineering handoff and the feature PR checks. Separate proprietary-rights PR #13 is untouched.
+Authority: explicit PO implementation brief and [M5 parent Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14), DEC-019. Branch `feature/m5a-advanced-recipe-steps` starts at protected main `1edfec3e6da56358a6c8bd7637503014f66fbfa9`. **IMPLEMENTED + VERIFIED candidate; PO-reported scoped native Mac 5/5 acceptance PASS on 2026-10-27; not INTEGRATED at this documentation checkpoint.** Final PR/head/CI URLs are recorded in the engineering handoff and the feature PR checks. Separate proprietary-rights PR #13 is untouched.
 
 ## Delivered boundary
 
@@ -49,6 +49,10 @@ A later native edit entered invalid duration `1.` and changed tips. Explicit Sav
 The app was quit cleanly. The isolated profile intentionally retains **one clearly named test recipe and one recoverable edit draft**, no copied personal data; final schema/catalog counts are 9 / 11 / 854 / 269 / 50, integrity `ok`, no FK violations. The normal `com.recipeatlas.desktop` profile, root workbook and unrelated worktrees were not opened or modified.
 
 Finder launch: press **Shift–Command–G**, paste `/private/tmp/tarif-atlasi-m5a/src-tauri/target/release/bundle/macos/`, press Return, then open `Tarif Atlasi M5A Acceptance.app` (right-click → Open if the unsigned internal build prompts). Official PR packages retain the production identifier; use this explicitly isolated app for PO testing.
+
+## PO acceptance result — 2026-10-27
+
+The Product Owner reported **5/5 PASS** for the isolated `com.recipeatlas.m5aacceptance` application: plain-instruction recipe save; advanced metadata/line links and reorder/save/reopen; safe duplication/removal; unfinished advanced draft after full quit/relaunch; and responsive UI. This is a PO-reported manual GUI check, not a remotely reproduced native log. The actual PR HEAD may change due to premerge documentation corrections; verify all five CI jobs on the final HEAD. Windows/Intel native GUI and ordinary Mac production-profile upgrade remain untested.
 
 ## PO Mac acceptance checklist
 
