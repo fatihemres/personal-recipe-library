@@ -153,3 +153,9 @@ Scope authority: MASTER_SPEC.md R01–R20. Checked items below are implemented M
 - [ ] Upgrade/downgrade/restore limitations and preserved V1 artifacts.
 
 M3B-1: first embedded production batch contains 235 verified identities; extensive catalog checkbox remains open. Coverage plan and machine reports track actual versus planned breadth.
+
+## M5B-1 candidate — 2026-10-29
+
+- IMPLEMENTED + locally VERIFIED: schema-10 immutable committed-content snapshots, independent content numbers, atomic save/draft-close/duplicate capture, no-op detection, honest schema-9 baselines, historical ingredient/unit FKs and internal bounded reads.
+- NOT INTEGRATED / NOT PO_ACCEPTED. Required CI/review gates are recorded in M5B1_ACCEPTANCE.md and the feature PR.
+- R05/R16 history foundations only: history/compare/restore UI and commands, variations/relations/substitutions, media and Cooking Mode remain pending under their separate approved boundaries. No full R05/M5/V1 completion claim.

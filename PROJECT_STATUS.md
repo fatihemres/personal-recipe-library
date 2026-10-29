@@ -2,11 +2,15 @@
 
 **Verified against GitHub 2026-10-29.** This is a dated checkpoint, **not a live dashboard**. Re-check branches, PRs, CI and repo content before continuing. Product Owner (PO) acceptance is different from CI and implementation.
 
-## M5B planning policy checkpoint — 2026-10-29
+## Active M5B-1 engineering candidate — 2026-10-29
+
+Live protected main verified at `afb161b94d257e50515a063cd21436ba884a40de` (merged policy PR #18), schema 9. The PO subsequently and explicitly authorized M5B-1 coding in conversation and [Issue #19](https://github.com/fatihemres/personal-recipe-library/issues/19), recorded as DEC-023 without changing DEC-022/P1–P10. Dedicated branch `feature/m5b1-recipe-version-persistence` adds candidate schema 10, immutable content history, atomic save/commit/duplicate capture, honest upgrade baselines and historical ingredient/unit references. IMPLEMENTED + locally VERIFIED; final-head CI/PR evidence is recorded in the candidate handoff and [acceptance report](docs/M5B1_ACCEPTANCE.md). Not INTEGRATED or PO_ACCEPTED. M5B-2/3/4 and M5C/D remain planned, without coding authorization. No history UI, restore command or catalog changes. App 0.1.0 / Catalog 11 (854/269/50), primary checkout/workbook, other worktrees and normal Mac profile remain protected.
+
+## Historical M5B policy-creation checkpoint — 2026-10-29
 
 - Protected `main` last verified at `399f34e4552fc2243331a6e6d398b77b73888b7e`, following the explicit PO-authorized merge-commit integration of documentation [PR #17](https://github.com/fatihemres/personal-recipe-library/pull/17) (5/5 CI PASS). No new application code or migration; schema 9/catalog Release 11/app 0.1.0 remain unchanged.
 - PO explicitly accepted the **M5B P1–P10 product/architecture policy baseline** on 2026-10-29 ([DEC-022](DECISIONS.md), [detailed contract](docs/M5B_POLICY.md)), including immutable version capture/restore, no automatic pruning, honest baseline snapshots, independent variations, related recipes, explicit ingredient-line substitutions, safe purge and future media/notes boundaries. **M5B remains PLANNED; no M5B implementation, PR merge, tag or release is authorized by this design decision.** M5C/M5D remain PLANNED.
-- This policy is documented on a separate reviewable documentation branch/PR until independently merged; it is not yet an implemented feature or accepted test result.
+- This policy was originally prepared on a separate documentation branch and later merged via PR #18. That documentation was not an implemented feature or an accepted test result. The later M5B-1 authorization is recorded above.
 
 ## Latest integrated checkpoint — 2026-10-28
 

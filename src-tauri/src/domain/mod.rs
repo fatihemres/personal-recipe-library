@@ -2,6 +2,7 @@ pub mod catalog;
 pub mod ingredient_library;
 pub mod recipe_organization;
 pub mod recipe_search;
+pub mod recipe_versions;
 pub mod recipe_workspace;
 pub mod recipes;
 pub mod reliability;
