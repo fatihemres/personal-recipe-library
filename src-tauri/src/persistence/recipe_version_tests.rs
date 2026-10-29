@@ -47,6 +47,9 @@ fn historical_db(dir: &std::path::Path) -> Database {
     let mut conn = Connection::open(&path).unwrap();
     conn.pragma_update(None, "foreign_keys", true).unwrap();
     migrations::apply(&mut conn, &path, &migrations::MIGRATIONS[..9]).unwrap();
+    // Match installed applications, including interrupted-backfill fixtures.
+    conn.pragma_update(None, "journal_mode", "WAL").unwrap();
+    conn.pragma_update(None, "wal_autocheckpoint", 0).unwrap();
     Database { conn }
 }
 fn insert_old(db: &mut Database, value: &RecipeInput) {
@@ -553,7 +556,35 @@ fn schema_nine_upgrade_creates_honest_complete_baselines_and_preserves_user_data
             [&canonical],
         )
         .unwrap();
+    // Hold a real reader so closing the fixture writer does not checkpoint away
+    // committed WAL frames before the upgrade's online backup is taken.
+    let held_reader = Connection::open_with_flags(
+        dir.path().join("library.sqlite3"),
+        rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY,
+    )
+    .unwrap();
+    held_reader.execute_batch("BEGIN").unwrap();
+    assert_eq!(
+        held_reader
+            .query_row("SELECT count(*) FROM recipes", [], |r| r.get::<_, i64>(0))
+            .unwrap(),
+        3
+    );
+    assert_eq!(
+        old.conn
+            .query_row("PRAGMA journal_mode", [], |r| r.get::<_, String>(0))
+            .unwrap(),
+        "wal"
+    );
     drop(old);
+    assert!(
+        dir.path()
+            .join("library.sqlite3-wal")
+            .metadata()
+            .unwrap()
+            .len()
+            > 0
+    );
     for _ in 0..3 {
         let mut db = Database::open(dir.path()).unwrap();
         assert_eq!(db.bootstrap().unwrap().storage.schema_version, 10);
