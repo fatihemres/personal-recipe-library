@@ -1,6 +1,12 @@
 # Tarif Atlası — Project status checkpoint
 
-**Verified against GitHub 2026-10-28.** This is a dated checkpoint, **not a live dashboard**. Re-check branches, PRs, CI and repo content before continuing. Product Owner (PO) acceptance is different from CI and implementation.
+**Verified against GitHub 2026-10-29.** This is a dated checkpoint, **not a live dashboard**. Re-check branches, PRs, CI and repo content before continuing. Product Owner (PO) acceptance is different from CI and implementation.
+
+## M5B planning policy checkpoint — 2026-10-29
+
+- Protected `main` last verified at `399f34e4552fc2243331a6e6d398b77b73888b7e`, following the explicit PO-authorized merge-commit integration of documentation [PR #17](https://github.com/fatihemres/personal-recipe-library/pull/17) (5/5 CI PASS). No new application code or migration; schema 9/catalog Release 11/app 0.1.0 remain unchanged.
+- PO explicitly accepted the **M5B P1–P10 product/architecture policy baseline** on 2026-10-29 ([DEC-022](DECISIONS.md), [detailed contract](docs/M5B_POLICY.md)), including immutable version capture/restore, no automatic pruning, honest baseline snapshots, independent variations, related recipes, explicit ingredient-line substitutions, safe purge and future media/notes boundaries. **M5B remains PLANNED; no M5B implementation, PR merge, tag or release is authorized by this design decision.** M5C/M5D remain PLANNED.
+- This policy is documented on a separate reviewable documentation branch/PR until independently merged; it is not yet an implemented feature or accepted test result.
 
 ## Latest integrated checkpoint — 2026-10-28
 
