@@ -10,7 +10,7 @@ export const recipesTr = {
   purge: 'Kalıcı olarak sil',
   confirmPurge: 'Tarif kalıcı olarak silinsin mi?',
   purgeHelp:
-    'Bu işlem geri alınamaz. Paylaşılan malzemeler korunur; kalan düzenleme taslakları yalnızca yeni tarif olarak kaydedilebilir.',
+    'Bu tarif ve saklanan içerik sürümleri kalıcı olarak silinir. Bu işlem geri alınamaz. Paylaşılan malzemeler korunur; kalan düzenleme taslakları yalnızca yeni tarif olarak kaydedilebilir.',
   purged: 'Tarif kalıcı olarak silindi.',
   draftRecovery: 'Kurtarılabilir taslaklar',
   draftHelp:

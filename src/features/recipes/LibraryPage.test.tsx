@@ -221,6 +221,7 @@ test('archive scopes, duplication and permanent deletion are explicit UI actions
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
   expect(api.purge).not.toHaveBeenCalled();
   expect(screen.getByRole('dialog')).toHaveTextContent('geri alınamaz');
+  expect(screen.getByRole('dialog')).toHaveTextContent('saklanan içerik sürümleri kalıcı olarak silinir');
   await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Vazgeç' }));
   expect(api.purge).not.toHaveBeenCalled();
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
