@@ -59,7 +59,7 @@ export const recipesTr = {
   ingredientUpdated: 'Malzeme güncellendi.',
   deleteIngredient: 'Malzemeyi sil',
   ingredientDeleteHelp:
-    'Kaydedilmiş tariflerde veya taslaklarda kullanılan malzemeler silinemez.',
+    'Tariflerde, taslaklarda veya saklanan tarif sürümlerinde kullanılan malzemeler silinemez.',
   ingredientDeleted: 'Malzeme silindi.',
   closeFailed:
     'Kapatmadan önce taslak kaydedilemedi. Hata giderilene kadar pencere açık tutuldu.',

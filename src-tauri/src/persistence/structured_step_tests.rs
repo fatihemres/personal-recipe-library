@@ -271,7 +271,7 @@ fn schema_eight_upgrade_preserves_legacy_recipes_drafts_catalog_and_organization
         .unwrap();
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 9);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 10);
     let saved = db.recipe(&old.id).unwrap();
     assert_eq!(saved.steps[0].id, old.steps[0].id);
     assert!(saved.steps[0].details.is_none());
@@ -364,7 +364,7 @@ fn migration_nine_failure_rolls_back_and_checksums_remain_valid() {
     migrations::apply(&mut conn, &path, migrations::MIGRATIONS).unwrap();
     assert_eq!(
         migrations::validate(&conn, migrations::MIGRATIONS).unwrap(),
-        9
+        10
     );
 }
 

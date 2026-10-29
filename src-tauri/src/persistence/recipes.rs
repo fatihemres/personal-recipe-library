@@ -245,5 +245,6 @@ pub(super) fn write_recipe(
         }
     }
     index_recipe_if_available(tx, &input.id)?;
+    super::recipe_versions::capture(tx, &input.id, "created")?;
     Ok(())
 }
