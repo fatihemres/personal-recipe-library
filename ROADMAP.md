@@ -1,6 +1,6 @@
 # Tarif Atlası — Product delivery roadmap
 
-**Checkpoint 2026-10-27.** The full V1 boundary comes from [MASTER_SPEC.md](docs/MASTER_SPEC.md); [IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) contains detailed scope/acceptance. This file records *progress*, not automatic development authorization. Verify current work remotely and inspect local changes before starting.
+**Checkpoint 2026-10-28.** The full V1 boundary comes from [MASTER_SPEC.md](docs/MASTER_SPEC.md); [IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) contains detailed scope/acceptance. This file records *progress*, not automatic development authorization. Verify current work remotely and inspect local changes before starting.
 
 ## Status vocabulary
 - **PLANNED**: in approved V1 scope, but no verified work begun.
@@ -23,8 +23,8 @@
 | **M4B overall** | Recipe favorites, collections, ratings, private/rich notes, saved filters, database-backed dashboard navigation | **INTEGRATED + PO ACCEPTED: M4B-1 and M4B-2** | M4B delivered to main; optional checkpoint tag only by separate PO authorization |
 | **M4B-1** | Recipe favorite/To Try, nullable 1–5 rating, custom collections and membership | **INTEGRATED + PO ACCEPTED** via [PR #8](https://github.com/fatihemres/personal-recipe-library/pull/8), schema 7, 2026-10-23; annotated `milestone/m4b1-recipe-organization` peels to merge `77825776e1cfcf57eb81e547cb3407e5af9d05c2` | Cross-platform GUI remains unverified; no release implied |
 | **M4B-2** | Private versioned Markdown notes, live named saved filters and real active dashboard | **INTEGRATED + PO ACCEPTED** via [PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11), schema 8, 2026-10-27; final head `0b7cd9cb2891e8af40e6ab2274bd416ea20d825a`, [CI 40325150468](https://github.com/fatihemres/personal-recipe-library/actions/runs/40325150468) 5/5 and merge `fb944f87c3c898bcf69b3e889bfa3cc8a39748c4` | Cross-platform GUI, ordinary-profile migration and any tag/release remain distinct gates |
-| M5 overall | Advanced editor, history/relations, media and Cooking Mode | Partially IN PROGRESS; parent [Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14) | Complete separate slices and acceptance gates |
-| M5A | Simple-by-default advanced steps and own-recipe line associations | IMPLEMENTED + VERIFIED; scoped PO Mac acceptance 5/5 PASS (DEC-020), schema 9 candidate in PR #16 | Final exact-head CI and merge commit verification; not yet INTEGRATED |
+| M5 overall | Advanced editor, history/relations, media and Cooking Mode | **Partially INTEGRATED** (M5A only); parent [Issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14) | Review M5B policy before separate implementation authorization |
+| M5A | Simple-by-default advanced steps and own-recipe line associations | **INTEGRATED + PO_ACCEPTED** via [PR #16](https://github.com/fatihemres/personal-recipe-library/pull/16), merge `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83`; schema 9, [CI 40645726359](https://github.com/fatihemres/personal-recipe-library/actions/runs/40645726359) 5/5; isolated Mac PO 5/5 | Native Intel/Windows GUI, normal-profile upgrade and release gates unverified; no tag |
 | M5B / M5C / M5D | Immutable history/relations; safe media; Cooking Mode | PLANNED; not implemented in M5A | Separate scope/policy authorization and PRs |
 | M6 | Full measurement and conversion engine; specialized Beverage Studio and honest ABV estimates | PLANNED; depends on M3/M5 | Precision/source-backed calculation tests |
 | M7 | Pantry lots and shopping lists | PLANNED; depends on M6 | Safe stock deduction, aggregation, offline native tests |

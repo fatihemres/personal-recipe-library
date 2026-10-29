@@ -1,8 +1,17 @@
 # Tarif Atlası — Verification and acceptance evidence
 
-**Last checked 2026-10-27.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.
+**Last checked 2026-10-28.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.
 
-## Last integrated milestone: M4B-2 — 2026-10-27
+## Latest integrated milestone: M5A — 2026-10-28
+
+- **Scope/engineering:** [PR #16](https://github.com/fatihemres/personal-recipe-library/pull/16), final head `1da7a1e00d9c85743a4751cbec5578b1ef237a01`, schema migration 009, optional structured steps and same-recipe ingredient-line references. Engineering candidate validations and isolated app details remain in [M5A_ACCEPTANCE.md](docs/M5A_ACCEPTANCE.md). Local agent tests are not independently rerun here.
+- **Exact-head CI:** [Actions 40645726359](https://github.com/fatihemres/personal-recipe-library/actions/runs/40645726359), all five mandatory jobs PASS. This CI is not native GUI acceptance.
+- **PO native acceptance:** PO-reported **5/5 isolated Mac GUI PASS** for basic, advanced, links/duplicates, recovery and responsive display. `com.recipeatlas.m5aacceptance` only; not the normal Mac profile.
+- **Integration:** PR #16 CLOSED/MERGED as `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83`; ordered parents `1edfec3e6da56358a6c8bd7637503014f66fbfa9` and `1da7a1e00d9c85743a4751cbec5578b1ef237a01`. **INTEGRATED + PO_ACCEPTED (M5A scope)**. No tag or release.
+- **Separate rights change:** [PR #13](https://github.com/fatihemres/personal-recipe-library/pull/13) only introduced LICENSE, [Actions 40647794293](https://github.com/fatihemres/personal-recipe-library/actions/runs/40647794293) exact-head 5/5 PASS, merge `8f61d5c0a25d9953212ae2e337165a147d6b611c` with ordered parents `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83` and `0b0220370a6bd84e1c113e3e6ed67a221b44b4e2`. Issue #12 legal/rights review not completed.
+- **Not verified:** Intel Mac and Windows native GUI/installer use, ordinary `com.recipeatlas.desktop` schema-9 upgrade, signed/notarized releases, full backup/restore. M5B–D code not authorized. Earlier sections are historical checkpoint evidence.
+
+## Previously integrated milestone: M4B-2 — 2026-10-27
 
 - **Exact engineering/CI evidence:** [PR #11](https://github.com/fatihemres/personal-recipe-library/pull/11) final head `0b7cd9cb2891e8af40e6ab2274bd416ea20d825a`, protected-base `8663787db4b68c8f4043f4a3405ae55eaf1dddd6`. [Actions 40325150468](https://github.com/fatihemres/personal-recipe-library/actions/runs/40325150468) **5/5 PASS** on exact head (Frontend and browser; Rust/SQLite/catalog; macOS Apple Silicon; macOS Intel; Windows x64 installer). Three unsigned artifacts present. Agent reports checksum matching, not independently recalculated by ChatGPT.
 - **Agent local checks (not independently rerun):** 94 Rust/SQLite, 69 frontend and 7 Playwright/browser tests in final UI/layout test report; isolated schema-8 Apple Silicon app startup/restart, SQLite integrity and Catalog Release 11, notes/filter/dashboard/Cmd-Q/Trash-restore smoke, actual-component layout harness; exact native narrow/docked measurements initially agent-UNVERIFIED.
@@ -49,6 +58,6 @@ The PR CI enforces type/lint/tests/build across five jobs, but **no dedicated Co
 
 See [engineering/release policy](docs/DEVELOPMENT_AND_RELEASE_PROCESS.md) and [progress record](PROJECT_PROGRESS.md).
 
-## Active M5A candidate — 2026-10-27
+## Historical M5A preintegration candidate — 2026-10-27
 
 M5A was explicitly authorized in the PO implementation brief after Issue #14's simple-by-default UX direction (DEC-019). Branch `feature/m5a-advanced-recipe-steps` from `1edfec3...` adds schema 009 and optional structured steps/own-recipe line links. Local SQLite, contract/editor and actual-component browser evidence is recorded in [M5A_ACCEPTANCE.md](docs/M5A_ACCEPTANCE.md). This is an IMPLEMENTED + VERIFIED candidate. Original head `4c31adce9992353868cafb129b712c2baec6447c` passed [Actions 40508381663](https://github.com/fatihemres/personal-recipe-library/actions/runs/40508381663) five mandatory CI jobs; independent source review identified no blocker. PO reported **5/5 isolated Mac acceptance PASS**: simple save, structured step/line persistence, duplicate/removal safety, quit/draft recovery and responsive layouts. These are PO-reported manual GUI results, not ChatGPT-run native automation. After any documentation changes, five CI jobs must be rerun on final HEAD; the PR is not integrated at this checkpoint. M5B–D are not implemented. Main schema 8/catalog Release 11/app 0.1.0, normal Mac profile and unrelated workbook remain protected.
