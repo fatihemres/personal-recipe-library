@@ -1,3 +1,5 @@
+**2026-11-02 latest integration update:** M5B-2 PR #23 was explicitly PO_ACCEPTED and separately merged as `e8fe359fba1a4514ebd887ef5e177d66cbe5544c` after 5/5 exact-head CI. M5B-1 and M5B-2 are now integrated on schema 10. Earlier authorization-only statements below are historical; P1–P10 are unchanged. M5B-3/4 and later slices remain unauthorized; no tag/release or normal-profile operation authorized.
+
 **2026-11-02 scope update:** Issue #22 / DEC-025 explicitly authorize M5B-2 history/compare/restore implementation using integrated schema 10. Earlier policy-only and M5B-1-only authorization statements below are dated historical checkpoints. P1–P10 are unchanged. M5B-3/4 and later, integration, tags/releases and ordinary-profile access remain separately gated. See M5B2_ACCEPTANCE.md for actual candidate verification.
 
 # M5B — PO-approved product and architecture policy (2026-10-29)
