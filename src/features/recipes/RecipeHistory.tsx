@@ -63,6 +63,6 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
    if(!mounted.current)return;setConfirm(false);setNotice(result.changed?t.restoredNotice:t.unchanged);setComparison(null);
    onRestored(result.recipe);
    const next=await client.versions(recipe.id,null,20);if(mounted.current){setRows(next);setMore(next.length===20);}
-  })}/>} 
+  })}/>}
  </section>;
 }

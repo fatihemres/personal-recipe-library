@@ -40,6 +40,7 @@ These new identifiable fixture results do **not** resolve or retroactively pass 
 - `cargo fmt --manifest-path src-tauri/Cargo.toml -- --check`, `cargo check --locked --offline --manifest-path src-tauri/Cargo.toml`, `cargo clippy --locked --offline --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings`: PASS.
 - Full `cargo test --locked --offline --manifest-path src-tauri/Cargo.toml`: PASS,125 library tests,0fail. Focused history suite8 including killed-child helper; additional real worker/registered-command history test included in125.
 - `python3 tools/check_app_version.py`: PASS0.1.0. All CI-listed candidate/catalog deterministic `--check` commands, pinned Wikidata checks and static audit pass; seven Python suites35 tests pass. No catalog bytes changed.
+- `cargo build --locked --offline --manifest-path src-tauri/Cargo.toml --example catalog_import` and `python3 tools/verify_catalog_installation.py --include-v10 --output /private/tmp/m5b2-catalog-installation.json`: PASS,29 real isolated imports/opens. Network denial was **not** enabled in this run.
 - `npm run tauri -- build --config /private/tmp/m5b2-verification-config.json -- --locked --offline`: PASS arm64 production app. Temporary config/ad-hoc install do not change tracked bundling/signing/identifier.
 
 Final exact-head CI, artifact checksum receipt, source SHA and independent review are linked in the feature PR and final completion message rather than creating an endless documentation-only CI loop. No integration/PO_ACCEPTED/tag/release is implied.
