@@ -1,6 +1,14 @@
-# M5B-1 immutable recipe history candidate — 2026-10-29
+# M5B-1 immutable recipe history — candidate evidence (2026-10-29), integrated 2026-11-02
 
-## Authority and status
+## Integration and PO acceptance update — 2026-11-02
+
+The Product Owner explicitly accepted the **M5B-1 persistence slice with evidence limitations** and then separately authorized merging [PR #20](https://github.com/fatihemres/personal-recipe-library/pull/20). GitHub independently confirmed final head `9aee0af6d3ed7b067dec4467d06740beb3b0c191` passed all five required jobs in [CI 40845080044](https://github.com/fatihemres/personal-recipe-library/actions/runs/40845080044), and PR #20 merged via merge commit `c528014838ae1ce571032928cc8c81239bb234aa` with ordered parents `afb161b94d257e50515a063cd21436ba884a40de` and `9aee0af6d3ed7b067dec4467d06740beb3b0c191` into protected `main`. **INTEGRATED + scoped PO_ACCEPTED.** Schema 10 is now integrated; app 0.1.0 / Catalog Release 11 remain unchanged. This heading supersedes only the former candidate-status wording, preserving the dated candidate report below as historical evidence.
+
+**What was shown:** PO-reported isolated Apple Silicon native GUI interactions plus read-only SQL results verifying meaningful V1/V2/no-op behavior, exact `1.250` mL quantity text, independent duplicate identities/history, checksum integrity (eight verified snapshots), purge-history warning/cancel and restored test recipe. **What remains unverified:** manual advanced step-title/duration/line-link exercise was explicitly skipped; current-session favorite/private Markdown persistence for the nominated PO recipe was **not** corroborated—the expected favorite/private-note values were absent from the read-only all-five-recipe inventory. Do not mark these two subtests PASS or infer a proven code defect from the mismatch. Detailed PO acceptance decision and limitations are in [Issue #19](https://github.com/fatihemres/personal-recipe-library/issues/19#issuecomment-6571447127) and the [PR conversation](https://github.com/fatihemres/personal-recipe-library/pull/20#issuecomment-6571447790).
+
+No milestone tag, release, native Windows/Intel GUI acceptance, normal-profile migration or portable-backup release gate is authorized. M5B-2/3/4 and M5C/D remain outside this integrated slice.
+
+## Historical candidate authority and status (2026-10-29)
 
 Explicit PO implementation authorization: [Issue #19](https://github.com/fatihemres/personal-recipe-library/issues/19), following accepted DEC-022 / [P1–P10 policy](M5B_POLICY.md); separately recorded as DEC-023. Verified base `afb161b94d257e50515a063cd21436ba884a40de`, dedicated branch `feature/m5b1-recipe-version-persistence`, worktree `/private/tmp/tarif-atlasi-m5b1`. IMPLEMENTED + locally VERIFIED engineering candidate, not INTEGRATED or PO_ACCEPTED. The feature PR/completion handoff records its exact final head, five-job CI URL and artifact checksums. Earlier main remains schema 9; app 0.1.0 and Catalog Release 11 (854 identities / 269 aliases / 50 categories) are unchanged.
 
