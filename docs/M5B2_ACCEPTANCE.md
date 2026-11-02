@@ -1,4 +1,12 @@
-# M5B-2 history, comparison and safe restore — 2026-11-02
+# M5B-2 history, comparison and safe restore — integrated 2026-11-02
+
+## PO acceptance and integration update (2026-11-02)
+
+**INTEGRATED + scoped PO_ACCEPTED.** PO reported all six manual isolated native Mac tests successful, provided historical V1/V2/no-change screenshots, and explicitly accepted the milestone ([Issue #22](https://github.com/fatihemres/personal-recipe-library/issues/22#issuecomment-6574472577)); in a separate turn, the PO approved merging [PR #23](https://github.com/fatihemres/personal-recipe-library/pull/23). The exact final head `af16dc0f4e96e4ca719df4eaf885f4f9ed2f44d8` passed [all five mandatory CI jobs](https://github.com/fatihemres/personal-recipe-library/actions/runs/41420109075) and was integrated as merge commit `e8fe359fba1a4514ebd887ef5e177d66cbe5544c` with ordered parents `eb2cd73f6b1cbbc7b9687add3631d1a0894e7882` and `af16dc0f4e96e4ca719df4eaf885f4f9ed2f44d8`. Protected `main` confirmed at the merge SHA. App `0.1.0`, schema 10 and Catalog Release 11 remain unchanged. This update supersedes the dated candidate-status language below; its engineering evidence remains historical, not rewritten.
+
+**Evidence distinction and open gates:** PO-reported Mac GUI acceptance is not an independently rerun GUI test by the GitHub reviewer; screenshots directly evidence the version list, preview and no-change message. The older M5B-1 Test 4 mismatch remains unresolved. Action-specific Retry UX, very large-history/diff performance, Intel/Windows native GUI, normal daily-profile migration, signing and portable backup/release acceptance remain unverified. No milestone tag or GitHub Release created.
+
+## Original engineering candidate record (2026-11-02)
 
 Issue #22 / DEC-025 explicitly authorize coding only. Base main `eb2cd73f6b1cbbc7b9687add3631d1a0894e7882`. Branch `feature/m5b2-recipe-history-restore`. IMPLEMENTED + locally VERIFIED candidate; exact-head PR CI/independent review and PO gates remain. Not integrated/PO_ACCEPTED. No merge, tags, release or ordinary-profile access.
 
