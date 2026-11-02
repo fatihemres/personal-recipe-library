@@ -1,3 +1,9 @@
+## Current agent handoff (2026-11-02, M5B-2 integrated)
+
+Protected `main` independently verified at merge commit `e8fe359fba1a4514ebd887ef5e177d66cbe5544c`, combining M5B-2 PR #23 final head `af16dc0f4e96e4ca719df4eaf885f4f9ed2f44d8` after five exact-head CI jobs PASS. M5B-1 and M5B-2 are **INTEGRATED + scoped PO_ACCEPTED** (M5B-1 retains its Test 4 evidence gap). M5B-2 shipped version history/compare/safe restore on SQLite schema 10; Catalog Release 11 and app `0.1.0` unchanged. PO-reported native isolated Mac tests PASS; action Retry behavior, large-history profiling, Mac Intel/Windows native GUI, normal-profile migration and release gates remain open. M5B-3/4, M5C/D are **PLANNED, not code-authorized**. Read canonical status/decisions/verification and live GitHub before proceeding; no merge/tag/release or profile access is implied by this checkpoint. Previous handoff below is historical.
+
+---
+
 ## Current authorized work — 2026-11-02
 
 M5B-1 is integrated/scoped PO accepted on schema 10; its Test 4 mismatch remains unresolved. M5B-2 coding is explicitly authorized by Issue #22 / DEC-025. History/compare/restore candidate uses schema 10 unchanged; no later slices, merge/tag/release or ordinary-profile access. Current implementation evidence: docs/M5B2_ACCEPTANCE.md. Earlier handoff sections below are historical and superseded only for M5B-2 coding authority.
