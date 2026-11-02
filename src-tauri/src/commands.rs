@@ -554,7 +554,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            9
+            10
         );
     }
     #[test]

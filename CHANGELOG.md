@@ -1,3 +1,9 @@
+
+
+### M5B-1 engineering candidate — 2026-10-29
+- Add immutable schema-versioned recipe content history through forward-only migration 010, with atomic save/commit/duplicate capture and one honest upgrade baseline per existing recipe.
+- Preserve exact quantities, historical labels and all structured steps/line associations; exclude private Markdown/organization/lifecycle changes and avoid duplicate versions on no-op saves.
+- Protect historical ingredient/unit definitions, block per-version mutation/deletion, and retain existing confirmed recipe-purge/draft safeguards. No history UI/restore, catalog expansion or application version change.
 # Changelog
 
 ## M5A — advanced structured steps (2026-10-28, integrated and PO Mac accepted; unreleased)

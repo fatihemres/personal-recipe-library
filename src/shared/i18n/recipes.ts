@@ -10,7 +10,7 @@ export const recipesTr = {
   purge: 'Kalıcı olarak sil',
   confirmPurge: 'Tarif kalıcı olarak silinsin mi?',
   purgeHelp:
-    'Bu işlem geri alınamaz. Paylaşılan malzemeler korunur; kalan düzenleme taslakları yalnızca yeni tarif olarak kaydedilebilir.',
+    'Bu tarif ve saklanan içerik sürümleri kalıcı olarak silinir. Bu işlem geri alınamaz. Paylaşılan malzemeler korunur; kalan düzenleme taslakları yalnızca yeni tarif olarak kaydedilebilir.',
   purged: 'Tarif kalıcı olarak silindi.',
   draftRecovery: 'Kurtarılabilir taslaklar',
   draftHelp:
@@ -59,7 +59,7 @@ export const recipesTr = {
   ingredientUpdated: 'Malzeme güncellendi.',
   deleteIngredient: 'Malzemeyi sil',
   ingredientDeleteHelp:
-    'Kaydedilmiş tariflerde veya taslaklarda kullanılan malzemeler silinemez.',
+    'Tariflerde, taslaklarda veya saklanan tarif sürümlerinde kullanılan malzemeler silinemez.',
   ingredientDeleted: 'Malzeme silindi.',
   closeFailed:
     'Kapatmadan önce taslak kaydedilemedi. Hata giderilene kadar pencere açık tutuldu.',

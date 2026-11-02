@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "recipeId": "00000000-0000-4000-8000-000000000001",
+  "recipeCreatedAt": "2026-10-29T00:00:00.000Z",
+  "title": "İçli köfte",
+  "description": null,
+  "kind": "food",
+  "servings": "1.250",
+  "prepMinutes": null,
+  "cookMinutes": 0,
+  "notes": "Tarihî not",
+  "ingredients": [
+    {
+      "id": "00000000-0000-4000-8000-000000000003",
+      "ingredientId": "00000000-0000-4000-8000-000000000002",
+      "quantity": "1.250",
+      "unitCode": "g",
+      "note": "İnce"
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000005",
+      "ingredientId": "00000000-0000-4000-8000-000000000002",
+      "quantity": null,
+      "unitCode": "adet",
+      "note": null
+    }
+  ],
+  "ingredientNames": {
+    "00000000-0000-4000-8000-000000000002": "Şeker"
+  },
+  "steps": [
+    {
+      "id": "00000000-0000-4000-8000-000000000004",
+      "instructions": "Karıştırın",
+      "details": {
+        "formatVersion": 1,
+        "title": "Hazırlık",
+        "durationMinutes": "0",
+        "temperatureValue": "180",
+        "temperatureUnit": "C",
+        "heatLevel": "Kısık ateş",
+        "equipment": "Tava",
+        "technique": "Soteleme",
+        "tips": "İ/ı/Ş/ş"
+      },
+      "ingredientLineIds": [
+        "00000000-0000-4000-8000-000000000005",
+        "00000000-0000-4000-8000-000000000003"
+      ]
+    }
+  ]
+}

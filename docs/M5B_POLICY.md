@@ -1,6 +1,8 @@
 # M5B — PO-approved product and architecture policy (2026-10-29)
 
-**Authority:** Product Owner explicitly approved the discussed P1–P10 policy package in the Tarif Atlası project conversation on 2026-10-29. Record under DEC-022. **Status: PO_POLICY_ACCEPTED / PLANNED / NOT IMPLEMENTED / NOT AUTHORIZED TO CODE.** No approval to merge, tag, publish or access the PO's normal local profile. Parent planning issue: [#14](https://github.com/fatihemres/personal-recipe-library/issues/14). This is a design contract, not a claim that tables, IPC, migrations, UI or tests already exist.
+**Authority:** Product Owner explicitly approved the discussed P1–P10 policy package in the Tarif Atlası project conversation on 2026-10-29. Record under DEC-022. **Original policy-only checkpoint (before Issue #19): PO_POLICY_ACCEPTED / PLANNED / NOT IMPLEMENTED / NOT AUTHORIZED TO CODE.** No approval to merge, tag, publish or access the PO's normal local profile. Parent planning issue: [#14](https://github.com/fatihemres/personal-recipe-library/issues/14). This is a design contract, not a claim that tables, IPC, migrations, UI or tests already exist.
+
+**Subsequent authorization (2026-10-29):** The opening status describes the policy-creation checkpoint. The PO later explicitly authorized **M5B-1 persistence implementation only** in [Issue #19](https://github.com/fatihemres/personal-recipe-library/issues/19) / DEC-023. Candidate implementation and verification are in [M5B1_ACCEPTANCE.md](M5B1_ACCEPTANCE.md); P1–P10 below are unchanged. M5B-2/3/4, M5C/D, merge/tag/release and normal-profile access remain unauthorized.
 
 ## Accepted user-facing behavior (P1–P10)
 
@@ -23,7 +25,7 @@
 - Require transactional foreign-key / reference preservation for historical ingredient identities even after an ingredient is removed from the active recipe. Retirement is safer than deletion. Historical rendering and restoration are different: an unavailable external/catalog entry can be shown with its captured name/identity, but restore must not silently map it to a different live ID.
 - A committed-content fingerprint/canonical comparison must distinguish a no-op from a real content change while preserving original quantity text and user-defined ordering. Make hash/provenance a consistency aid, not a license to skip validation or rewrite history.
 - No accidental snapshot for lifecycle-only `recipes.revision` changes. Any future change to independently versioned private notes or organization remains separate.
-- Backfill must be idempotent, integrity-checked, bounded for existing libraries and tested with real disposable schema-9 data and legacy fixtures. Do not mutate applied migrations 001–009. Candidate next migration number is 010, **not yet authorized**.
+- Backfill must be idempotent, integrity-checked, bounded for existing libraries and tested with real disposable schema-9 data and legacy fixtures. Do not mutate applied migrations 001–009. At that policy-only checkpoint the candidate migration was 010, **not yet authorized by that decision**; the later M5B-1 authorization is recorded above.
 
 ## Reviewable delivery slices (proposed implementation sequence, not coding approval)
 

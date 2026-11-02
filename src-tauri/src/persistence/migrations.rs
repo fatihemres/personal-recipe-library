@@ -57,6 +57,11 @@ pub const MIGRATIONS: &[Migration] = &[
         name: "structured_recipe_steps",
         sql: include_str!("../../migrations/009_structured_recipe_steps.sql"),
     },
+    Migration {
+        version: 10,
+        name: "recipe_versions",
+        sql: include_str!("../../migrations/010_recipe_versions.sql"),
+    },
 ];
 pub fn checksum(sql: &str) -> String {
     format!("{:x}", Sha256::digest(sql.as_bytes()))
@@ -143,6 +148,9 @@ pub fn apply(conn: &mut Connection, path: &Path, migrations: &[Migration]) -> Re
     }
     for migration in migrations.iter().filter(|m| m.version > current) {
         tx.execute_batch(migration.sql)?;
+        if migration.version == 10 && migration.name == "recipe_versions" {
+            super::recipe_versions::backfill(&tx)?;
+        }
         tx.execute(
             "INSERT INTO schema_migrations(version, name, checksum) VALUES (?1, ?2, ?3)",
             rusqlite::params![migration.version, migration.name, checksum(migration.sql)],

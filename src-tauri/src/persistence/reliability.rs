@@ -200,6 +200,11 @@ impl Database {
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
+        let eligible:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM recipes WHERE id=?1 AND revision=?2 AND deleted_at IS NOT NULL)",params![id,revision],|r|r.get(0))?;
+        if !eligible {
+            return Err(conflict());
+        }
+        super::recipe_versions::check_purge_format(&tx, id)?;
         if tx.execute(
             "DELETE FROM recipes WHERE id=?1 AND revision=?2 AND deleted_at IS NOT NULL",
             params![id, revision],
@@ -327,7 +332,7 @@ impl Database {
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
-        let referenced:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM recipe_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM draft_ingredients WHERE ingredient_id=?1)",[id],|r|r.get(0))?;
+        let referenced:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM recipe_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM draft_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM recipe_version_ingredients WHERE ingredient_id=?1)",[id],|r|r.get(0))?;
         if referenced {
             return Err(AppError::new(
                 "INGREDIENT_REFERENCED",

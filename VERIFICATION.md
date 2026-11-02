@@ -1,6 +1,10 @@
 # Tarif Atlası — Verification and acceptance evidence
 
-**Last checked 2026-10-28.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.
+**Last checked 2026-10-29.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.
+
+## M5B-1 persistence candidate — 2026-10-29
+
+Issue #19 explicitly authorizes this slice after DEC-022; DEC-023 records coding authority separately from acceptance. Branch `feature/m5b1-recipe-version-persistence` starts at `afb161b...`; schema 10 is a candidate, main remains schema 9. Local checks passed 116 Rust/SQLite (16 focused history cases), 74 frontend, 8 Chromium and 35 Python audit tests, plus type/lint/fmt/check/Clippy/version/build checks. Exact commands, preservation/rollback evidence, native limits and final PR/head CI gate belong to [M5B1_ACCEPTANCE.md](docs/M5B1_ACCEPTANCE.md). An isolated arm64 build and actual native save/no-op/edit/organization/relaunch/duplicate smoke also passed on its own new profile; detailed limits are in the report. No integration or PO acceptance is claimed; normal Mac profile/workbook and prior applied migrations remain untouched. M5B-2 onward is not implemented.
 
 ## Latest integrated milestone: M5A — 2026-10-28
 
@@ -9,7 +13,7 @@
 - **PO native acceptance:** PO-reported **5/5 isolated Mac GUI PASS** for basic, advanced, links/duplicates, recovery and responsive display. `com.recipeatlas.m5aacceptance` only; not the normal Mac profile.
 - **Integration:** PR #16 CLOSED/MERGED as `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83`; ordered parents `1edfec3e6da56358a6c8bd7637503014f66fbfa9` and `1da7a1e00d9c85743a4751cbec5578b1ef237a01`. **INTEGRATED + PO_ACCEPTED (M5A scope)**. No tag or release.
 - **Separate rights change:** [PR #13](https://github.com/fatihemres/personal-recipe-library/pull/13) only introduced LICENSE, [Actions 40647794293](https://github.com/fatihemres/personal-recipe-library/actions/runs/40647794293) exact-head 5/5 PASS, merge `8f61d5c0a25d9953212ae2e337165a147d6b611c` with ordered parents `f80b41cf4e66fc3ef7a1dc8273cc98c829a27e83` and `0b0220370a6bd84e1c113e3e6ed67a221b44b4e2`. Issue #12 legal/rights review not completed.
-- **Not verified:** Intel Mac and Windows native GUI/installer use, ordinary `com.recipeatlas.desktop` schema-9 upgrade, signed/notarized releases, full backup/restore. M5B–D code not authorized. Earlier sections are historical checkpoint evidence.
+- **Not verified:** Intel Mac and Windows native GUI/installer use, ordinary `com.recipeatlas.desktop` schema-9 upgrade, signed/notarized releases, full backup/restore. M5B–D code was not authorized at that checkpoint; subsequent M5B-1 authorization is above. Earlier sections are historical checkpoint evidence.
 
 ## Previously integrated milestone: M4B-2 — 2026-10-27
 
