@@ -120,3 +120,6 @@ mod recipe_workspace_tests;
 mod recipe_version_tests;
 #[cfg(test)]
 mod structured_step_tests;
+
+#[cfg(test)]
+mod recipe_history_tests;

@@ -697,3 +697,24 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
   .step-advanced-content .form-grid { grid-template-columns:minmax(0,1fr); }
   .step-advanced-content,.step-ingredient-links { padding:.75rem; }
 }
+
+/* History uses the workspace's content width, not the desktop viewport. */
+.recipe-history { container-type:inline-size; min-width:0; margin-block:1rem; }
+.recipe-history .workspace-heading { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; justify-content:space-between; }
+.history-list { padding:0; list-style:none; display:grid; gap:.75rem; }
+.history-list>li { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; justify-content:space-between; padding-block:.75rem; border-bottom:1px solid var(--border); }
+.history-list>li>div { flex:1 1 18rem; min-width:0; overflow-wrap:anywhere; }
+.history-controls { display:flex; flex-wrap:wrap; align-items:end; gap:.75rem; margin-block:1rem; }
+.history-controls label { display:grid; gap:.4rem; flex:1 1 15rem; min-width:0; max-width:26rem; }
+.history-controls select { width:100%; min-width:0; }
+.history-preview,.history-preview .panel { min-width:0; max-width:100%; }
+.history-identities,.history-differences { padding-inline-start:1.25rem; overflow-wrap:anywhere; }
+.history-differences li { padding-block:.75rem; }
+.history-differences dl { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,3fr); gap:.4rem 1rem; }
+.history-differences dd { margin:0; min-width:0; }
+.recipe-history code { white-space:pre-wrap; overflow-wrap:anywhere; }
+@container (max-width:30rem) {
+ .history-list>li>button,.history-controls>button { width:100%; }
+ .history-controls label { max-width:none; flex-basis:100%; }
+ .history-differences dl { grid-template-columns:minmax(0,1fr); }
+}

@@ -130,3 +130,31 @@ pub struct RecipeVersion {
     pub summary: RecipeVersionSummary,
     pub snapshot: RecipeSnapshot,
 }
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct RestoreVersion {
+    pub recipe_id: String,
+    pub version_number: i64,
+    pub expected_revision: i64,
+}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct RestoreResult {
+    pub recipe: Recipe,
+    pub changed: bool,
+    pub version_number: i64,
+}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct VersionChange {
+    pub path: Vec<String>,
+    pub before: serde_json::Value,
+    pub after: serde_json::Value,
+}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct VersionComparison {
+    pub current_revision: i64,
+    pub changes: Vec<VersionChange>,
+}

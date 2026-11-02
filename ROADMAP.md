@@ -1,3 +1,7 @@
+## M5B-2 candidate — 2026-11-02
+
+Issue #22 / DEC-025 explicitly authorize implementation of history, comparison and safe restore-as-new-version. Base main `eb2cd73f6b1cbbc7b9687add3631d1a0894e7882`; branch `feature/m5b2-recipe-history-restore`. Schema **10**, Catalog **11 (854/269/50)**, app **0.1.0** unchanged. Not INTEGRATED or PO_ACCEPTED; local/native/CI evidence is maintained in [M5B2_ACCEPTANCE.md](docs/M5B2_ACCEPTANCE.md). Prior “M5B-2 not authorized” statements below describe their historical checkpoints, superseded by DEC-025 only for this slice. M5B-3/4 and later remain outside authorization. M5B-1 Test 4 remains a documented verification gap, not a proven defect or retroactive PASS.
+
 # Tarif Atlası — Product delivery roadmap
 
 **Checkpoint 2026-11-02 (M5B-1 integrated + scoped PO accepted).** The full V1 boundary comes from [MASTER_SPEC.md](docs/MASTER_SPEC.md); [IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) contains detailed scope/acceptance. This file records *progress*, not automatic development authorization. Verify current work remotely and inspect local changes before starting.

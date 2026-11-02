@@ -1,3 +1,5 @@
+**2026-11-02 scope update:** Issue #22 / DEC-025 explicitly authorize M5B-2 history/compare/restore implementation using integrated schema 10. Earlier policy-only and M5B-1-only authorization statements below are dated historical checkpoints. P1–P10 are unchanged. M5B-3/4 and later, integration, tags/releases and ordinary-profile access remain separately gated. See M5B2_ACCEPTANCE.md for actual candidate verification.
+
 # M5B — PO-approved product and architecture policy (2026-10-29)
 
 **Authority:** Product Owner explicitly approved the discussed P1–P10 policy package in the Tarif Atlası project conversation on 2026-10-29. Record under DEC-022. **Original policy-only checkpoint (before Issue #19): PO_POLICY_ACCEPTED / PLANNED / NOT IMPLEMENTED / NOT AUTHORIZED TO CODE.** No approval to merge, tag, publish or access the PO's normal local profile. Parent planning issue: [#14](https://github.com/fatihemres/personal-recipe-library/issues/14). This is a design contract, not a claim that tables, IPC, migrations, UI or tests already exist.

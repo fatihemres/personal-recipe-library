@@ -159,3 +159,13 @@ M3B-1: first embedded production batch contains 235 verified identities; extensi
 - IMPLEMENTED + locally VERIFIED: schema-10 immutable committed-content snapshots, independent content numbers, atomic save/draft-close/duplicate capture, no-op detection, honest schema-9 baselines, historical ingredient/unit FKs and internal bounded reads.
 - NOT INTEGRATED / NOT PO_ACCEPTED. Required CI/review gates are recorded in M5B1_ACCEPTANCE.md and the feature PR.
 - R05/R16 history foundations only: history/compare/restore UI and commands, variations/relations/substitutions, media and Cooking Mode remain pending under their separate approved boundaries. No full R05/M5/V1 completion claim.
+
+## M5B-2 engineering candidate — 2026-11-02
+
+- [x] Bounded immutable history IPC/UI for active/archive/trash, honest upgrade baseline, historical preview and captured IDs/names.
+- [x] Historical/current or historical/historical exact-text comparisons including structured steps and links.
+- [x] Confirmed active-only restore-as-one-new-version, CAS/draft/reference/format/checksum safeguards, explicit no-change.
+- [x] Real SQLite, typed IPC, renderer and browser regression coverage; separate identifiable Test 4 fixture.
+- [ ] Final exact-head PR CI, independent review, isolated Mac PO acceptance and separate merge authorization.
+
+This implements only M5B-2, not all R05/history-related modules. M5B-3/4, media/Cooking Mode and later modules remain pending. Prior M5B-1 PO Test 4 discrepancy is unchanged.

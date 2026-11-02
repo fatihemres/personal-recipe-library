@@ -9,6 +9,7 @@ import type { SavedFilter } from '../../shared/contracts/recipeWorkspace';
 import type { RecipeOrganization, RecipeCollection } from '../../shared/contracts/recipeOrganization';
 import { Button } from '../../shared/ui/button';
 import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
+import { RecipeHistory } from './RecipeHistory';
 import { RecipeDetails } from './RecipeDetails';
 import { DraftRecovery } from './DraftRecovery';
 import { RecipeEditor } from './RecipeEditor';
@@ -457,6 +458,7 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
+          <RecipeHistory key={selected.id} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
           <PrivateNotePanel key={selected.id} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
           {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
             <div className="recipe-actions" role="group" aria-label={t.favorites}>
