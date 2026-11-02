@@ -24,6 +24,7 @@ export function rendererRecipeClient(): RecipeClient {
       ingredientNames: { [ingredient.id]: ingredient.name },
     }));
   return {
+    versions:vi.fn().mockResolvedValue([]),version:vi.fn(),compareVersions:vi.fn(),restoreVersion:vi.fn(),
     getPrivateNote: vi.fn().mockImplementation(async recipeId => ({recipeId,formatVersion:1,markdown:'',revision:0,updatedAt:null})),
     savePrivateNote: vi.fn().mockImplementation(async write => ({recipeId:write.recipeId,formatVersion:1,markdown:write.markdown,revision:write.expectedRevision+1,updatedAt:'2026-10-08T12:00:00Z'})),
     savedFilters: vi.fn().mockResolvedValue([]),

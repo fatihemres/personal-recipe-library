@@ -165,3 +165,7 @@
 - Routed the macOS Quit menu command through the existing guarded native-exit handshake after an isolated GUI smoke test exposed an unsaved-note flush bypass.
 - Added persistent named recipe filters using versioned, validated search criteria, with live results and explicit missing-reference/version errors.
 - Added active-only SQLite dashboard counts, recent recipes and collection summaries with direct library navigation. Proposed candidate schema 008; Catalog Release 11 and app version 0.1.0 stay unchanged.
+
+## M5B-2 candidate — 2026-11-02
+
+Added read-only recipe history with bounded metadata paging, honest upgrade baseline labels, historical exact quantities/names/structured-step preview, and exact historical/current comparisons. Confirmed restore keeps the recipe UUID and old snapshots and appends one `restored` version; active drafts, stale revisions, inactive recipes, missing refs, collisions and corrupt/unsupported history fail safely. Same-content restore is an explicit no-change. Schema10, migrations, catalog11 and app0.1.0 are unchanged. Favorite/private-note data stays independent. Not a merged/released or PO-accepted milestone; see docs/M5B2_ACCEPTANCE.md.

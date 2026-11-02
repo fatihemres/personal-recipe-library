@@ -1,6 +1,6 @@
 import type { Recipe } from '../../shared/contracts/recipe';
 import { recipesTr as t } from '../../shared/i18n/recipes';
-export function RecipeDetails({ recipe }: { recipe: Recipe }) {
+export function RecipeDetails({ recipe }: { recipe: Pick<Recipe, 'kind'|'servings'|'prepMinutes'|'cookMinutes'|'ingredients'|'ingredientNames'|'steps'|'notes'> }) {
   return (
     <div className="panel recipe-form">
       <p>

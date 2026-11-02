@@ -34,7 +34,13 @@ const foundation:FoundationClient={
   savePreferences:async preferences=>preferences,
 };
 const unsupported = async () => { throw new Error('Unsupported browser presentation fixture operation'); };
+const snapshot=()=>({formatVersion:1 as const,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
+const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
 const recipes: RecipeClient={
+  versions:async()=>[summary(2),summary(1)],
+  version:async(_id,version)=>({summary:summary(version),snapshot:snapshot()}),
+  compareVersions:async()=>({currentRevision:1,changes:[{path:['ingredients','0','quantity'],before:'1.250',after:'1.25'},{path:['steps','0','details','title'],before:'Uzun Türkçe aşama başlığı '.repeat(6),after:'Yeni aşama'}]}),
+  restoreVersion:async()=>({recipe:{...recipe,revision:2},changed:true,versionNumber:3}),
   savePrivateNote:unsupported,resolveFilter:unsupported,saveFilter:unsupported,deleteFilter:unsupported,
   setOrganization:unsupported,saveCollection:unsupported,deleteCollection:unsupported,setMembership:unsupported,
   list:unsupported,save:unsupported,setDeleted:unsupported,searchIngredients:unsupported,createIngredient:unsupported,

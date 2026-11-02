@@ -200,6 +200,14 @@ pub(super) fn write_recipe(
     tx: &rusqlite::Transaction<'_>,
     input: &RecipeInput,
 ) -> Result<(), AppError> {
+    write_recipe_with_history(tx, input, None)
+}
+
+pub(super) fn write_recipe_with_history(
+    tx: &rusqlite::Transaction<'_>,
+    input: &RecipeInput,
+    restored_from: Option<i64>,
+) -> Result<(), AppError> {
     if let Some(revision) = input.expected_revision {
         let count=tx.execute("UPDATE recipes SET title=?2,description=?3,kind=?4,servings=?5,prep_minutes=?6,cook_minutes=?7,notes=?8,revision=revision+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1 AND revision=?9 AND deleted_at IS NULL AND archived_at IS NULL",params![input.id,input.title.trim(),input.description,input.kind,input.servings,input.prep_minutes,input.cook_minutes,input.notes,revision])?;
         if count != 1 {
@@ -245,6 +253,6 @@ pub(super) fn write_recipe(
         }
     }
     index_recipe_if_available(tx, &input.id)?;
-    super::recipe_versions::capture(tx, &input.id, "created")?;
+    super::recipe_versions::capture_with_origin(tx, &input.id, "created", restored_from)?;
     Ok(())
 }

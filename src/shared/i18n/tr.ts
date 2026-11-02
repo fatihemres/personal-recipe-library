@@ -24,7 +24,10 @@ export const tr = {
     'errors.filterVersion':'Bu filtrenin biçimi bu uygulama sürümünde desteklenmiyor. Filtreyi silip yeniden oluşturabilirsiniz.',
     'errors.filterInvalid':'Kayıtlı filtrenin içeriği doğrulanamadı. Filtreyi silip yeniden oluşturabilirsiniz.',
     'errors.filterReference':'Filtredeki malzeme veya koleksiyon artık mevcut değil. Filtre sonuçları genişletilmedi.',
-    'errors.recipeVersionUnsupported':'Bu tarifin saklanan sürümlerinden biri daha yeni bir biçim kullanıyor. Verileri korumak için bu işlem durduruldu. Uyumlu bir uygulama sürümüyle yeniden deneyin.',
+    'errors.recipeRestoreInactive':'İçeriği geri yüklemek için önce tarifi arşivden veya çöp kutusundan çıkarın.',
+    'errors.recipeRestoreDraft':'Bu tarifin açık düzenleme taslağı var. Önce taslağı kaydedin veya açıkça vazgeçin; taslak değiştirilmedi.',
+    'errors.recipeVersionReference':'Geçmiş sürümdeki malzeme veya birim artık bulunamıyor. Kimlikler otomatik değiştirilmedi.',
+    'errors.recipeVersionUnsupported' :'Bu tarifin saklanan sürümlerinden biri daha yeni bir biçim kullanıyor. Verileri korumak için bu işlem durduruldu. Uyumlu bir uygulama sürümüyle yeniden deneyin.',
     'errors.ingredientReferenced':'Malzeme tariflerde, taslaklarda veya saklanan tarif sürümlerinde kullanılıyor ve silinemez. İsmini güvenle düzenleyebilirsiniz.',
 
     'errors.conflict': 'Bu kayıt başka bir işlemde değiştirildi. Güncel kaydı yeniden açıp değişikliklerinizi gözden geçirin.',

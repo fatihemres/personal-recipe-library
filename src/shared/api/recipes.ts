@@ -1,3 +1,4 @@
+import { versionSummarySchema, recipeVersionSchema, versionComparisonSchema, restoreVersionSchema, restoreResultSchema, type RecipeVersionSummary, type RecipeVersion, type VersionComparison, type RestoreVersion, type RestoreResult } from '../contracts/recipeHistory';
 import { z } from 'zod';
 import { recipeOrganizationSchema, organizationWriteSchema, recipeCollectionSchema, collectionWriteSchema,
   type RecipeOrganization, type OrganizationWrite, type RecipeCollection, type CollectionWrite } from '../contracts/recipeOrganization';
@@ -23,6 +24,10 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  versions(id:string,before:number|null,limit:number):Promise<RecipeVersionSummary[]>;
+  version(id:string,version:number):Promise<RecipeVersion>;
+  compareVersions(id:string,left:number,right:number|null):Promise<VersionComparison>;
+  restoreVersion(write:RestoreVersion):Promise<RestoreResult>;
   getPrivateNote(recipeId:string):Promise<PrivateNote>;
   savePrivateNote(write:PrivateNoteWrite):Promise<PrivateNote>;
   savedFilters():Promise<SavedFilter[]>;
@@ -79,6 +84,10 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  versions:(id,before,limit)=>request('list_recipe_versions',z.array(versionSummarySchema),{id:z.uuid().parse(id),before:z.number().int().positive().nullable().parse(before),limit:z.number().int().min(1).max(100).parse(limit)}),
+  version:(id,version)=>request('get_recipe_version',recipeVersionSchema,{id:z.uuid().parse(id),version:z.number().int().positive().parse(version)}),
+  compareVersions:(id,left,right)=>request('compare_recipe_versions',versionComparisonSchema,{id:z.uuid().parse(id),left:z.number().int().positive().parse(left),right:z.number().int().positive().nullable().parse(right)}),
+  restoreVersion:write=>request('restore_recipe_version',restoreResultSchema,{write:restoreVersionSchema.parse(write)}),
   getPrivateNote: recipeId => request('get_private_note',privateNoteSchema,{recipeId:z.uuid().parse(recipeId)}),
   savePrivateNote: write => request('save_private_note',privateNoteSchema,{write:privateNoteWriteSchema.parse(write)}),
   savedFilters: () => request('list_saved_filters',z.array(savedFilterSchema)),

@@ -1,3 +1,7 @@
+## M5B-2 candidate — 2026-11-02
+
+Issue #22 / DEC-025 explicitly authorize implementation of history, comparison and safe restore-as-new-version. Base main `eb2cd73f6b1cbbc7b9687add3631d1a0894e7882`; branch `feature/m5b2-recipe-history-restore`. Schema **10**, Catalog **11 (854/269/50)**, app **0.1.0** unchanged. Not INTEGRATED or PO_ACCEPTED; local/native/CI evidence is maintained in [M5B2_ACCEPTANCE.md](docs/M5B2_ACCEPTANCE.md). Prior “M5B-2 not authorized” statements below describe their historical checkpoints, superseded by DEC-025 only for this slice. M5B-3/4 and later remain outside authorization. M5B-1 Test 4 remains a documented verification gap, not a proven defect or retroactive PASS.
+
 # Tarif Atlası — Verification and acceptance evidence
 
 **Last checked 2026-11-02.** This index supplements detailed [TESTING.md](docs/TESTING.md) and milestone reports; do not copy complete logs here. **PASS by a coding agent, independent review, GitHub Actions success, native GUI testing and PO acceptance are distinct claims.** Each new milestone should link its authoritative CI, exact commit, report and PO acceptance decision.

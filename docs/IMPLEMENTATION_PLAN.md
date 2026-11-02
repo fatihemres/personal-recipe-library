@@ -310,3 +310,7 @@ Following the explicit PO brief and Issue #14 UX decision, M5A implements option
 ## M5B-1 authorized persistence slice — 2026-10-29
 
 DEC-022/P1–P10 establish product policy; the later explicit PO brief / Issue #19 / DEC-023 authorize only immutable committed-content storage, atomic capture in existing saves, honest migration baselines and historical definition safety. Candidate schema 010 preserves migrations 001–009 and the catalog. Local tests must prove new/edit/no-op boundaries, immutable labels/exact quantities/M5A links, independent duplicate history, draft/lifecycle exclusions, historical ingredient/unit FKs, concurrency, rollback and interrupted schema-9 backfill/restart. Final acceptance requires exact-head five-job CI, independent review and separate PO integration approval; native GUI/platform claims remain explicit. No M5B-2 history/restore UI or commands, M5B-3 relations, M5B-4 substitutions, media or later modules are implemented. Detailed current evidence lives in M5B1_ACCEPTANCE.md.
+
+## M5B-2 authorized candidate — 2026-11-02
+
+Issue #22 / DEC-025 authorize bounded history, comparison and safe restore only, on integrated schema 10. No migration, app-version or catalog change. Candidate must pass real SQLite/reference/draft/rollback checks, actual-component responsive browser checks, isolated Mac smoke, final-head five-platform CI and independent review before separate PO acceptance/integration. M5B-3/4 remain planned, not authorized by this increment.

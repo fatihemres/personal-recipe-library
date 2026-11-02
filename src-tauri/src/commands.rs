@@ -368,6 +368,92 @@ mod tests {
         )
         .map(|response| response.deserialize::<Value>().unwrap())
     }
+
+    #[test]
+    fn history_ipc_restores_once_and_retains_identifiable_test4_metadata_after_restart() {
+        let directory = tempfile::tempdir().unwrap();
+        let create_app = || {
+            mock_builder()
+                .manage(StorageService::without_catalog(Ok(directory.path().into())))
+                .invoke_handler(tauri::generate_handler![
+                    create_ingredient,
+                    save_recipe,
+                    get_recipe,
+                    list_recipe_versions,
+                    get_recipe_version,
+                    compare_recipe_versions,
+                    restore_recipe_version,
+                    get_recipe_organization,
+                    set_recipe_organization,
+                    get_private_note,
+                    save_private_note
+                ])
+                .build(mock_context(noop_assets()))
+                .unwrap()
+        };
+        let app = create_app();
+        let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        let ingredient = invoke(
+            &window,
+            "create_ingredient",
+            json!({"name":"M5B2 IPC TEST4 Gül suyu"}),
+        )
+        .unwrap();
+        let id = uuid::Uuid::new_v4().to_string();
+        let line = uuid::Uuid::new_v4().to_string();
+        let mut input = json!({"id":id,"expectedRevision":null,"title":"M5B2 IPC TEST4 unique fixture","description":null,"kind":"beverage","servings":"1","prepMinutes":null,"cookMinutes":null,"notes":null,"ingredients":[{"id":line,"ingredientId":ingredient["id"],"quantity":"1.250","unitCode":"mL","note":null}],"steps":[]});
+        invoke(&window, "save_recipe", json!({"input":input})).unwrap();
+        input["expectedRevision"] = json!(1);
+        input["title"] = json!("V2");
+        invoke(&window, "save_recipe", json!({"input":input})).unwrap();
+        invoke(&window,"set_recipe_organization",json!({"write":{"recipeId":id,"expectedRevision":1,"favorite":true,"toTry":false,"rating":null}})).unwrap();
+        invoke(&window,"save_private_note",json!({"write":{"recipeId":id,"expectedRevision":0,"markdown":"M5B2 IPC TEST4 KONTROL"}})).unwrap();
+        let versions = invoke(
+            &window,
+            "list_recipe_versions",
+            json!({"id":id,"before":null,"limit":20}),
+        )
+        .unwrap();
+        assert_eq!(versions.as_array().unwrap().len(), 2);
+        let diff = invoke(
+            &window,
+            "compare_recipe_versions",
+            json!({"id":id,"left":1,"right":null}),
+        )
+        .unwrap();
+        assert!(!diff["changes"].as_array().unwrap().is_empty());
+        let result = invoke(
+            &window,
+            "restore_recipe_version",
+            json!({"write":{"recipeId":id,"versionNumber":1,"expectedRevision":2}}),
+        )
+        .unwrap();
+        assert_eq!(result["versionNumber"], 3);
+        assert_eq!(result["changed"], true);
+        let snapshot = invoke(&window, "get_recipe_version", json!({"id":id,"version":3})).unwrap();
+        assert_eq!(snapshot["summary"]["provenance"], "restored");
+        assert_eq!(snapshot["snapshot"]["ingredients"][0]["quantity"], "1.250");
+        drop(window);
+        drop(app);
+        let app = create_app();
+        let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        assert_eq!(
+            invoke(&window, "get_recipe_organization", json!({"id":id})).unwrap()["favorite"],
+            true
+        );
+        assert_eq!(
+            invoke(&window, "get_private_note", json!({"recipeId":id})).unwrap()["markdown"],
+            "M5B2 IPC TEST4 KONTROL"
+        );
+        assert_eq!(
+            invoke(&window, "get_recipe", json!({"id":id})).unwrap()["title"],
+            "M5B2 IPC TEST4 unique fixture"
+        );
+    }
     #[test]
     fn registered_ipc_handlers_use_real_worker_and_persist_across_restart() {
         let dir = tempfile::tempdir().unwrap();
@@ -847,5 +933,48 @@ pub async fn ingredient_suggestions(
 ) -> Result<crate::domain::reliability::IngredientSearch, AppError> {
     state
         .execute(move |d| d.available_ingredients_mode(&query, &mode))
+        .await
+}
+
+use crate::domain::recipe_versions::{
+    RecipeVersion, RecipeVersionSummary, RestoreResult, RestoreVersion, VersionComparison,
+};
+#[tauri::command]
+pub async fn list_recipe_versions(
+    id: String,
+    before: Option<i64>,
+    limit: u32,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Vec<RecipeVersionSummary>, AppError> {
+    state
+        .execute(move |d| d.recipe_versions(&id, before, limit))
+        .await
+}
+#[tauri::command]
+pub async fn get_recipe_version(
+    id: String,
+    version: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeVersion, AppError> {
+    state.execute(move |d| d.recipe_version(&id, version)).await
+}
+#[tauri::command]
+pub async fn compare_recipe_versions(
+    id: String,
+    left: i64,
+    right: Option<i64>,
+    state: tauri::State<'_, StorageService>,
+) -> Result<VersionComparison, AppError> {
+    state
+        .execute(move |d| d.compare_recipe_versions(&id, left, right))
+        .await
+}
+#[tauri::command]
+pub async fn restore_recipe_version(
+    write: RestoreVersion,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RestoreResult, AppError> {
+    state
+        .execute(move |d| d.restore_recipe_version(write))
         .await
 }
