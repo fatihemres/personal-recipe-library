@@ -456,7 +456,7 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
-          <RecipeRelations key={`relations:${selected.id}`} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setSelected(recipe);setScope('active');void client.getOrganization(recipe.id).then(setOrganization,e=>setError(errorMessage(normalizeError(e).messageKey)));setNotice(relationsTr.created);void load();}} />
+          <RecipeRelations key={`relations:${selected.id}`} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setScope('active');setNotice(relationsTr.created);void open(recipe.id);void load();}} />
           <RecipeHistory key={`history:${selected.id}`} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
           <PrivateNotePanel key={`private-note:${selected.id}`} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
           {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
