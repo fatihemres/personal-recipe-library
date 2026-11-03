@@ -14,3 +14,16 @@ test('actual two-stage purge dialog requires all dependencies and handles stale 
   await dialog.getByRole('button',{name:'Bağları ayır ve kalıcı sil'}).click();await expect(dialog.getByRole('alert')).toContainText('Silme yapılmadı');await expect(dialog.getByRole('button',{name:'Kalıcı olarak sil'})).toBeDisabled();await expect(dialog.getByRole('button',{name:'Güncel bağımlılıkları yeniden incele'})).toBeVisible();
  }
 });
+
+// Different keyed detail sections must not share recipe.id as a sibling key.
+test('linked recipe navigation replaces detail sections without retaining prior recipe panels',async({page})=>{
+ await page.goto('/tests/ui/workspace.html?steps=1');await page.locator('.recipe-card-open').click();
+ for(let cycle=0;cycle<3;cycle++){
+  const panel=page.getByRole('region',{name:'Varyasyonlar ve ilişkili tarifler'});
+  await expect(panel).toHaveCount(1);await panel.getByRole('button',{name:/Tarifi aç/}).click();
+  await expect(page.getByRole('heading',{name:'Hedef tarif',exact:true})).toBeVisible();
+  await expect(panel).toHaveCount(1);await expect(page.getByRole('region',{name:'Sürüm geçmişi',exact:true})).toHaveCount(1);
+  await expect(page.getByRole('region',{name:'Özel Markdown notu',exact:true})).toHaveCount(1);
+  await page.getByRole('button',{name:'Kütüphaneye dön'}).click();await page.locator('.recipe-card-open').click();
+ }
+});

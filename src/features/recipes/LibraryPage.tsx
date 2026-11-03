@@ -456,9 +456,9 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
-          <RecipeRelations key={selected.id} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setSelected(recipe);setScope('active');void client.getOrganization(recipe.id).then(setOrganization,e=>setError(errorMessage(normalizeError(e).messageKey)));setNotice(relationsTr.created);void load();}} />
-          <RecipeHistory key={selected.id} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
-          <PrivateNotePanel key={selected.id} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
+          <RecipeRelations key={`relations:${selected.id}`} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setSelected(recipe);setScope('active');void client.getOrganization(recipe.id).then(setOrganization,e=>setError(errorMessage(normalizeError(e).messageKey)));setNotice(relationsTr.created);void load();}} />
+          <RecipeHistory key={`history:${selected.id}`} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
+          <PrivateNotePanel key={`private-note:${selected.id}`} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
           {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
             <div className="recipe-actions" role="group" aria-label={t.favorites}>
               <Button variant={organization.favorite ? 'default' : 'outline'} aria-pressed={organization.favorite} disabled={busy}

@@ -56,7 +56,7 @@ const recipes: RecipeClient={
   discardDraft:async()=>null,
   commit:async(input:RecipeInput)=>({...recipe,...input,revision:2}),
   drafts:async()=>[], collections:async()=>[collection], savedFilters:async()=>filters,
-  get:async()=>recipe, getOrganization:async()=>({recipeId,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]}),
+  get:async(id)=>({...recipe,id,title:id===recipeId?recipe.title:'Hedef tarif'}), getOrganization:async()=>({recipeId,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]}),
   getPrivateNote:async()=>({recipeId,formatVersion:1 as const,markdown:Array.from({length:70},(_,i)=>`## Uzun not satırı ${i+1}`).join('\n'),revision:1,updatedAt:'2026-10-23T12:00:00Z'}),
   dashboard:async()=>({activeTotal:1,foodCount:1,beverageCount:0,favoriteCount:0,recentCreated:[item],recentModified:[item],collections:[collection]}),
 };
