@@ -1,3 +1,13 @@
+# M5B-3 milestone acceptance and integration update (2026-11-03)
+
+**INTEGRATED + scoped PO_ACCEPTED.** [PR #26](https://github.com/fatihemres/personal-recipe-library/pull/26) integrated M5B-3 by **merge commit** `f0e472d6f7f99335ac10a5c528bc363e785f0a9d` (parents: previous main `9298744c29f70f92ea3c1e60bae9bb31b481a2db` and approved head `5f7dfc76994efc8c9504d144164c85a0d8f8d884`). Independently verified protected `main` at merge SHA, PR closed/merged, [five exact-head CI checks PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/41601102074). The PO explicitly [accepted the scoped milestone](https://github.com/fatihemres/personal-recipe-library/issues/25#issuecomment-6600774200) following **5/5 PO-reported isolated Mac GUI acceptance PASS**, including actual confirmed final purge on disposable fixtures, then separately authorized merge. Source-level [independent review](https://github.com/fatihemres/personal-recipe-library/pull/26#pullrequestreview-5749350807) found no blocking issue (COMMENT, not formal GitHub APPROVE). SQLite schema **11** (forward-only 011) is integrated; app `0.1.0` and Catalog Release **11 (854 canonical/269 aliases/50 categories)** are unchanged.
+
+Evidence limits: the native 5/5 GUI outcome is **PO-reported**, not independently rerun by this GitHub reviewer. Intel/Windows native GUI, ordinary personal-profile schema 10→11 upgrade, large graph profiling, signed installers, portable backup and full V1 acceptance remain **UNVERIFIED**. M5B-1 Test 4 discrepancy is still open; M5B-2 Retry/large history follow-ups remain open. M5B-4 substitutions, M5C media and M5D Cooking Mode are **PLANNED, not code-authorized**. No tag, release, normal-profile access or other feature code permission.
+
+**Historical candidate record follows:** Original implementation, local/native and acceptance evidence below remains unchanged and attributable to its authors; its "not integrated/PO accepted" language was true at the candidate checkpoint only.
+
+---
+
 # M5B-3 variations, related recipes and safe purge — 2026-11-03
 
 ## Authority and candidate
