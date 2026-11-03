@@ -1,3 +1,13 @@
+## Current agent handoff — 2026-11-03 (M5B-3 integrated)
+
+**Protected `main` at `f0e472d6f7f99335ac10a5c528bc363e785f0a9d`** (independently verified), [PR #26](https://github.com/fatihemres/personal-recipe-library/pull/26) CLOSED/MERGED from `5f7dfc76994efc8c9504d144164c85a0d8f8d884`, [five required final-head CI checks PASS](https://github.com/fatihemres/personal-recipe-library/actions/runs/41601102074). M5A, M5B-1, M5B-2 and M5B-3 are **INTEGRATED + scoped PO_ACCEPTED**. Schema **11**, Catalog Release **11**, application `0.1.0`. M5B-3 covers independent variation trees, symmetric related links and safe reviewed target-only purge; the isolated native Mac PO reported five tests PASS including final destructive purge on disposable data. Prior candidate handoffs below are historical.
+
+Evidence limits: the native 5/5 GUI outcome is **PO-reported**, not independently rerun by this GitHub reviewer. Intel/Windows native GUI, ordinary personal-profile schema 10→11 upgrade, large graph profiling, signed installers, portable backup and full V1 acceptance remain **UNVERIFIED**. M5B-1 Test 4 discrepancy is still open; M5B-2 Retry/large history follow-ups remain open. M5B-4 substitutions, M5C media and M5D Cooking Mode are **PLANNED, not code-authorized**. No tag, release, normal-profile access or other feature code permission.
+
+Before future work, re-read live GitHub and canonical status/decisions/roadmap/verification; inspect local worktree/HEAD/dirty files. No direct main push, force push, auto merge, tags, release or normal-profile access. A separate PO authorization is needed to begin M5B-4 coding; any documentation PR also requires separate exact-head 5/5 CI and explicit merge approval.
+
+---
+
 ## M5B-3 candidate checkpoint — 2026-11-03
 
 Issue #25 / DEC-027 explicitly authorize variations, symmetric related links and safe reviewed purge only. Verified base main `9298744c29f70f92ea3c1e60bae9bb31b481a2db`; isolated branch `feature/m5b3-recipe-variations-relations`, worktree `/private/tmp/tarif-atlasi-m5b3`. Candidate schema **11**, app **0.1.0**, Catalog Release **11 (854/269/50)**. Prior migrations/history, normal and retained verification profiles, workbook and other worktrees are protected. Earlier “M5B-3 not authorized” checkpoint statements below are superseded only for coding by DEC-027. IMPLEMENTED; local/native/final-head CI evidence is recorded in docs/M5B3_ACCEPTANCE.md and the feature PR. Not INTEGRATED or PO_ACCEPTED; no merge/tag/release or later-slice authority. M5B-1 Test4 discrepancy and M5B-2 historical follow-ups remain recorded, not retroactively passed.
