@@ -3,6 +3,7 @@ mod ingredient_library;
 pub mod migrations;
 mod preferences;
 mod recipe_organization;
+mod recipe_relations;
 mod recipe_search;
 mod recipe_versions;
 mod recipe_workspace;
@@ -123,3 +124,6 @@ mod structured_step_tests;
 
 #[cfg(test)]
 mod recipe_history_tests;
+
+#[cfg(test)]
+mod recipe_relation_tests;

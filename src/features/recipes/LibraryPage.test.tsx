@@ -220,13 +220,13 @@ test('archive scopes, duplication and permanent deletion are explicit UI actions
   await user.click(await screen.findByRole('button', { name: /Çay/ }));
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
   expect(api.purge).not.toHaveBeenCalled();
-  expect(screen.getByRole('dialog')).toHaveTextContent('geri alınamaz');
+  expect(await screen.findByRole('dialog')).toHaveTextContent('geri alınamaz');
   expect(screen.getByRole('dialog')).toHaveTextContent('saklanan içerik sürümleri kalıcı olarak silinir');
   await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Vazgeç' }));
   expect(api.purge).not.toHaveBeenCalled();
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
-  await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
-  await waitFor(() => expect(api.purge).toHaveBeenCalledWith(recipe.id, 3));
+  await user.click(within(await screen.findByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
+  await waitFor(() => expect(api.purgeReviewed).toHaveBeenCalledWith({recipeId:recipe.id,expectedRevision:3,token:'a'.repeat(64),acknowledgeDetach:false}));
 });
 
 test('search-first library keeps filters and card/list context with keyboard access', async () => {
@@ -259,4 +259,23 @@ test('search-first library keeps filters and card/list context with keyboard acc
   expect(screen.getByRole('button', { name: 'Liste' })).toHaveAttribute('aria-pressed', 'true');
   await user.click(screen.getByRole('button', { name: 'Filtreleri temizle' }));
   expect(screen.getByRole('searchbox', { name: 'Tariflerde ara' })).toHaveValue('');
+});
+
+test('variation navigation never exposes source organization on the new child while metadata loads',async()=>{
+ const api=client(),user=userEvent.setup();
+ const source:Recipe={id:crypto.randomUUID(),title:'Kaynak varyasyon testi',kind:'food',servings:'1',description:null,notes:null,prepMinutes:null,cookMinutes:null,revision:1,createdAt:'now',updatedAt:'now',archivedAt:null,deletedAt:null,ingredients:[],steps:[],ingredientNames:{}};
+ const child={...source,id:crypto.randomUUID(),title:'Bağımsız çocuk'};
+ const sourceOrg={recipeId:source.id,revision:3,favorite:true,toTry:true,rating:5,collectionIds:[]};
+ const childOrg={recipeId:child.id,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]};
+ let resolveChild!:(value:typeof childOrg)=>void;const pending=new Promise<typeof childOrg>(resolve=>{resolveChild=resolve;});
+ vi.mocked(api.get).mockImplementation(async id=>id===source.id?source:child);
+ vi.mocked(api.getOrganization).mockImplementation(id=>id===source.id?Promise.resolve(sourceOrg):pending);
+ vi.mocked(api.createVariation).mockResolvedValue(child);
+ render(<LibraryPage client={api} navigationRequest={{sequence:1,recipeId:source.id}}/>);
+ await screen.findByRole('heading',{name:source.title});await user.click(screen.getByRole('button',{name:'Varyasyon oluştur'}));
+ await waitFor(()=>expect(api.getOrganization).toHaveBeenCalledWith(child.id));
+ expect(screen.getByRole('heading',{name:source.title})).toBeVisible();expect(screen.queryByRole('heading',{name:child.title})).toBeNull();
+ expect(screen.getByRole('button',{name:'Favorilerden çıkar'})).toBeDisabled();expect(api.setOrganization).not.toHaveBeenCalled();
+ resolveChild(childOrg);await screen.findByRole('heading',{name:child.title});expect(screen.getByRole('button',{name:'Favorilere ekle'})).toHaveAttribute('aria-pressed','false');
+ expect(screen.getByRole('button',{name:'Deneneceklere ekle'})).toHaveAttribute('aria-pressed','false');expect(screen.getByText('Puan verilmemiş')).toBeVisible();
 });

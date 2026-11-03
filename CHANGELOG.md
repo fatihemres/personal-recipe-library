@@ -169,3 +169,10 @@
 ## M5B-2 candidate — 2026-11-02
 
 Added read-only recipe history with bounded metadata paging, honest upgrade baseline labels, historical exact quantities/names/structured-step preview, and exact historical/current comparisons. Confirmed restore keeps the recipe UUID and old snapshots and appends one `restored` version; active drafts, stale revisions, inactive recipes, missing refs, collisions and corrupt/unsupported history fail safely. Same-content restore is an explicit no-change. Schema10, migrations, catalog11 and app0.1.0 are unchanged. Favorite/private-note data stays independent. Not a merged/released or PO-accepted milestone; see docs/M5B2_ACCEPTANCE.md.
+
+## M5B-3 candidate — 2026-11-03
+
+- Load new variation recipe/organization together to prevent transient source favorite/rating controls on the child; delayed-response regression guards the transition.
+- Use distinct recipe detail-section keys so linked navigation replaces prior relationship/history/private-note panels; native-reproduced defect covered by repeated-navigation browser regression.
+
+Added independent recipe variations, parent/child browsing/reparenting and symmetric related links with active-only creation. Variations receive new recipe/line/step IDs and one initial version, without separate private Markdown/organization; ordinary Duplicate remains unchanged. Migration011 adds acyclic/restrictive graph constraints and independent graph revisions. Linked permanent purge now requires complete dependency review and a separate detach acknowledgement, with atomic recipe/review-token validation. Other recipes/history/drafts remain safe. App0.1.0/Catalog11 unchanged; no merge/release or PO acceptance implied.

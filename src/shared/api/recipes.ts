@@ -1,3 +1,4 @@
+import { recipeLinksSchema,parentWriteSchema,relatedWriteSchema,purgePreviewSchema,reviewedPurgeSchema,type RecipeLinks,type ParentWrite,type RelatedWrite,type PurgePreview,type ReviewedPurge } from '../contracts/recipeRelations';
 import { versionSummarySchema, recipeVersionSchema, versionComparisonSchema, restoreVersionSchema, restoreResultSchema, type RecipeVersionSummary, type RecipeVersion, type VersionComparison, type RestoreVersion, type RestoreResult } from '../contracts/recipeHistory';
 import { z } from 'zod';
 import { recipeOrganizationSchema, organizationWriteSchema, recipeCollectionSchema, collectionWriteSchema,
@@ -24,6 +25,12 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  links(id:string,offset:number,limit:number):Promise<RecipeLinks>;
+  createVariation(id:string,revision:number):Promise<Recipe>;
+  setParent(write:ParentWrite):Promise<null>;
+  setRelated(write:RelatedWrite):Promise<null>;
+  previewPurge(id:string,revision:number,offset:number,limit:number):Promise<PurgePreview>;
+  purgeReviewed(write:ReviewedPurge):Promise<null>;
   versions(id:string,before:number|null,limit:number):Promise<RecipeVersionSummary[]>;
   version(id:string,version:number):Promise<RecipeVersion>;
   compareVersions(id:string,left:number,right:number|null):Promise<VersionComparison>;
@@ -84,6 +91,12 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  links:(id,offset,limit)=>request('recipe_links',recipeLinksSchema,{id:z.uuid().parse(id),offset:z.number().int().min(0).max(1000000).parse(offset),limit:z.number().int().min(1).max(100).parse(limit)}),
+  createVariation:(id,revision)=>request('create_recipe_variation',recipeSchema,{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision)}),
+  setParent:write=>request('set_variation_parent',z.null(),{write:parentWriteSchema.parse(write)}),
+  setRelated:write=>request('set_related_recipe',z.null(),{write:relatedWriteSchema.parse(write)}),
+  previewPurge:(id,revision,offset,limit)=>request('preview_recipe_purge',purgePreviewSchema,{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision),offset:z.number().int().min(0).max(1000000).parse(offset),limit:z.number().int().min(1).max(100).parse(limit)}),
+  purgeReviewed:write=>request('purge_reviewed_recipe',z.null(),{write:reviewedPurgeSchema.parse(write)}),
   versions:(id,before,limit)=>request('list_recipe_versions',z.array(versionSummarySchema),{id:z.uuid().parse(id),before:z.number().int().positive().nullable().parse(before),limit:z.number().int().min(1).max(100).parse(limit)}),
   version:(id,version)=>request('get_recipe_version',recipeVersionSchema,{id:z.uuid().parse(id),version:z.number().int().positive().parse(version)}),
   compareVersions:(id,left,right)=>request('compare_recipe_versions',versionComparisonSchema,{id:z.uuid().parse(id),left:z.number().int().positive().parse(left),right:z.number().int().positive().nullable().parse(right)}),

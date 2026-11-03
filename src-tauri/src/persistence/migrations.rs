@@ -62,6 +62,11 @@ pub const MIGRATIONS: &[Migration] = &[
         name: "recipe_versions",
         sql: include_str!("../../migrations/010_recipe_versions.sql"),
     },
+    Migration {
+        version: 11,
+        name: "recipe_relationships",
+        sql: include_str!("../../migrations/011_recipe_relationships.sql"),
+    },
 ];
 pub fn checksum(sql: &str) -> String {
     format!("{:x}", Sha256::digest(sql.as_bytes()))

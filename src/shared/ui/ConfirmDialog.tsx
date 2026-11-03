@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import { Button } from './button';
 export function ConfirmDialog({
   title,
@@ -10,6 +10,9 @@ export function ConfirmDialog({
   extra,
   busy = false,
   error,
+  children,
+  confirmDisabled=false,
+  focusKey,
 }: {
   title: string;
   description: string;
@@ -20,6 +23,9 @@ export function ConfirmDialog({
   extra?: {label:string;onClick:()=>void};
   busy?: boolean;
   error?: string;
+  children?:ReactNode;
+  confirmDisabled?:boolean;
+  focusKey?:string;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const cancelRef = useRef<HTMLButtonElement>(null);
@@ -39,6 +45,7 @@ export function ConfirmDialog({
       }
     };
   }, []);
+  useEffect(()=>{cancelRef.current?.focus();},[focusKey]);
   const cancelDialog = () => {
     if (busy) return;
     restoreOnClose.current = true;
@@ -58,12 +65,13 @@ export function ConfirmDialog({
       <h2 id="confirm-title">{title}</h2>
       <p id="confirm-description">{description}</p>
       {error && <p role="alert" className="recipe-error">{error}</p>}
+      {children}
       <div className="recipe-actions">
         <Button ref={cancelRef} type="button" autoFocus variant="outline" disabled={busy} onClick={cancelDialog}>
           {cancel}
         </Button>
         {extra && <Button type="button" disabled={busy} onClick={extra.onClick}>{extra.label}</Button>}
-        <Button type="button" disabled={busy} onClick={onConfirm}>{confirm}</Button>
+        <Button type="button" disabled={busy||confirmDisabled} onClick={onConfirm}>{confirm}</Button>
       </div>
     </dialog>
   );

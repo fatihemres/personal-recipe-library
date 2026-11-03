@@ -204,14 +204,8 @@ impl Database {
         if !eligible {
             return Err(conflict());
         }
-        super::recipe_versions::check_purge_format(&tx, id)?;
-        if tx.execute(
-            "DELETE FROM recipes WHERE id=?1 AND revision=?2 AND deleted_at IS NOT NULL",
-            params![id, revision],
-        )? != 1
-        {
-            return Err(conflict());
-        }
+        super::recipe_relations::ensure_no_links(&tx, id)?;
+        purge_owned_recipe(&tx, id, revision)?;
         tx.commit()?;
         Ok(())
     }
@@ -366,4 +360,20 @@ impl Database {
         tx.commit()?;
         Ok(())
     }
+}
+
+pub(super) fn purge_owned_recipe(
+    tx: &Transaction<'_>,
+    id: &str,
+    revision: i64,
+) -> Result<(), AppError> {
+    super::recipe_versions::check_purge_format(tx, id)?;
+    if tx.execute(
+        "DELETE FROM recipes WHERE id=?1 AND revision=?2 AND deleted_at IS NOT NULL",
+        params![id, revision],
+    )? != 1
+    {
+        return Err(conflict());
+    }
+    Ok(())
 }
