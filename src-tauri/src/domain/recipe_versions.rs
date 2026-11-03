@@ -1,4 +1,4 @@
-//! Version-one content envelope. Future formats may introduce stable media asset
+//! Format-dispatched content envelope (frozen V1, alternatives in V2). Future formats may introduce stable media asset
 //! IDs, never absolute paths; old payloads remain immutable and format-dispatched.
 use super::{recipes::*, AppError};
 use serde::{Deserialize, Serialize};
@@ -45,9 +45,20 @@ impl RecipeSnapshot {
             "prepMinutes":self.prep_minutes,"cookMinutes":self.cook_minutes,"notes":self.notes,
             "ingredients":ingredients,"steps":steps})
     }
+    /// V2 is also the semantic cross-format comparison projection: V1 has no
+    /// alternatives, while old serialized bytes/fingerprint remain frozen.
+    pub(crate) fn comparison_v2(&self) -> serde_json::Value {
+        let mut value = self.comparison_v1();
+        value["formatVersion"] = serde_json::json!(2);
+        for (index, line) in self.ingredients.iter().enumerate() {
+            value["ingredients"][index]["alternatives"] =
+                serde_json::to_value(&line.alternatives).expect("typed alternatives");
+        }
+        value
+    }
     pub fn from_recipe(recipe: Recipe) -> Self {
         Self {
-            format_version: 1,
+            format_version: 2,
             recipe_id: recipe.id,
             recipe_created_at: recipe.created_at,
             title: recipe.title,
@@ -84,16 +95,25 @@ impl RecipeSnapshot {
         }
     }
     pub fn validate(&self) -> Result<(), AppError> {
-        if self.format_version != 1 {
+        if ![1, 2].contains(&self.format_version) {
             return Err(AppError::new(
                 "RECIPE_VERSION_UNSUPPORTED",
                 "errors.recipeVersionUnsupported",
                 true,
             ));
         }
+        if self.format_version == 1 && self.ingredients.iter().any(|i| !i.alternatives.is_empty()) {
+            return Err(invalid());
+        }
         self.content().validate()?;
-        let ids: std::collections::BTreeSet<_> =
-            self.ingredients.iter().map(|i| &i.ingredient_id).collect();
+        let ids: std::collections::BTreeSet<_> = self
+            .ingredients
+            .iter()
+            .flat_map(|i| {
+                std::iter::once(&i.ingredient_id)
+                    .chain(i.alternatives.iter().map(|a| &a.ingredient_id))
+            })
+            .collect();
         if self.ingredient_names.len() != ids.len()
             || self.recipe_created_at.is_empty()
             || self.recipe_created_at.len() > 100

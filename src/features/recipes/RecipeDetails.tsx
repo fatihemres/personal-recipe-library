@@ -1,4 +1,5 @@
 import type { Recipe } from '../../shared/contracts/recipe';
+import { alternativesTr as a } from '../../shared/i18n/ingredientAlternatives';
 import { recipesTr as t } from '../../shared/i18n/recipes';
 export function RecipeDetails({ recipe }: { recipe: Pick<Recipe, 'kind'|'servings'|'prepMinutes'|'cookMinutes'|'ingredients'|'ingredientNames'|'steps'|'notes'> }) {
   return (
@@ -25,6 +26,7 @@ export function RecipeDetails({ recipe }: { recipe: Pick<Recipe, 'kind'|'serving
               <strong>{recipe.ingredientNames[i.ingredientId]}</strong> —{' '}
               {i.quantity === null ? t.unknown : `${i.quantity} ${i.unitCode}`}
               {i.note && <p>{i.note}</p>}
+              {!!i.alternatives?.length&&<div className="alternative-summary"><strong>{a.title}</strong><ul>{i.alternatives.map(alt=><li key={alt.id}>{recipe.ingredientNames[alt.ingredientId]??alt.ingredientId} · {alt.quantity??a.unknownQuantity} · {alt.unitCode??a.unknownUnit}</li>)}</ul></div>}
             </li>
           ))}
         </ul>

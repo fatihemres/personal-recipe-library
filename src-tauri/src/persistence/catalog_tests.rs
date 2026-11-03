@@ -31,6 +31,7 @@ fn recipe(i: &Ingredient) -> RecipeInput {
         cook_minutes: None,
         notes: None,
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: uuid::Uuid::new_v4().to_string(),
             ingredient_id: i.id.clone(),
             quantity: Some("35.000001".into()),
@@ -374,7 +375,7 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
         .unwrap();
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
     assert_eq!(
         db.recipe(&r.id).unwrap().deleted_at.as_deref(),
         Some("2026-10-02T00:00:00Z")
@@ -394,7 +395,7 @@ fn schema_three_upgrade_preserves_m2b_state_and_migration_checksums() {
         .any(|i| i.id == ingredient.id));
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        11
+        12
     );
 }
 #[test]

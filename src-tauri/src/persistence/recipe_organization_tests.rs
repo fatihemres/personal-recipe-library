@@ -21,6 +21,7 @@ fn input(ingredient_id: &str) -> RecipeInput {
         cook_minutes: None,
         notes: Some("Kişisel not".into()),
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: id(),
             ingredient_id: ingredient_id.into(),
             quantity: Some("1.250".into()),
@@ -399,7 +400,7 @@ fn migration_six_to_seven_preserves_rows_and_checksum_on_restart() {
     conn.execute("INSERT INTO editor_drafts(id,recipe_id,revision,state,payload) VALUES(?1,?2,1,'active',?3)",params![id(),recipe_id,payload]).unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
     assert_eq!(db.recipe_organization(&recipe_id).unwrap().revision, 1);
     assert_eq!(
         db.recipe(&recipe_id).unwrap().ingredients[0]
@@ -433,6 +434,6 @@ fn migration_six_to_seven_preserves_rows_and_checksum_on_restart() {
     assert_eq!(db.recipe_organization(&recipe_id).unwrap().revision, 1);
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        11
+        12
     );
 }

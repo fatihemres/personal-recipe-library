@@ -293,10 +293,10 @@ fn corrupt_and_unsupported_payloads_never_restore_or_change_committed_rows() {
         if future {
             let mut payload: serde_json::Value =
                 serde_json::from_str(&bytes(&db, &v1.id)[0]).unwrap();
-            payload["formatVersion"] = 2.into();
+            payload["formatVersion"] = 3.into();
             let text = payload.to_string();
             let hash = format!("{:x}", Sha256::digest(text.as_bytes()));
-            db.conn.execute("UPDATE recipe_versions SET format_version=2,snapshot=?2,snapshot_checksum=?3 WHERE recipe_id=?1 AND version_number=1",params![v1.id,text,hash]).unwrap();
+            db.conn.execute("UPDATE recipe_versions SET format_version=3,snapshot=?2,snapshot_checksum=?3 WHERE recipe_id=?1 AND version_number=1",params![v1.id,text,hash]).unwrap();
         } else {
             db.conn.execute("UPDATE recipe_versions SET snapshot_checksum=?2 WHERE recipe_id=?1 AND version_number=1",params![v1.id,"0".repeat(64)]).unwrap();
         }

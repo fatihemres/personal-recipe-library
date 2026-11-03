@@ -137,12 +137,20 @@ impl Database {
     }
 }
 
+pub(super) fn alternatives_available(conn: &rusqlite::Connection) -> Result<bool, AppError> {
+    Ok(conn.query_row(
+        "SELECT EXISTS(SELECT 1 FROM sqlite_master WHERE name='recipe_ingredient_alternatives')",
+        [],
+        |r| r.get(0),
+    )?)
+}
 pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recipe, AppError> {
     let mut recipe=conn.query_row("SELECT id,revision,title,description,kind,servings,prep_minutes,cook_minutes,notes,created_at,updated_at,deleted_at,archived_at FROM recipes WHERE id=?1",[id],|r|Ok(Recipe{archived_at:r.get(12)?,ingredient_names:Default::default(),id:r.get(0)?,revision:r.get(1)?,title:r.get(2)?,description:r.get(3)?,kind:r.get(4)?,servings:r.get(5)?,prep_minutes:r.get(6)?,cook_minutes:r.get(7)?,notes:r.get(8)?,created_at:r.get(9)?,updated_at:r.get(10)?,deleted_at:r.get(11)?,ingredients:vec![],steps:vec![]})).optional()?.ok_or_else(not_found)?;
     let mut s=conn.prepare("SELECT id,ingredient_id,quantity,unit_code,note FROM recipe_ingredients WHERE recipe_id=?1 ORDER BY position")?;
     recipe.ingredients = s
         .query_map([id], |r| {
             Ok(RecipeIngredient {
+                alternatives: vec![],
                 id: r.get(0)?,
                 ingredient_id: r.get(1)?,
                 quantity: r.get(2)?,
@@ -151,6 +159,25 @@ pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recip
             })
         })?
         .collect::<Result<_, _>>()?;
+    if conn.query_row(
+        "SELECT EXISTS(SELECT 1 FROM sqlite_master WHERE name='recipe_ingredient_alternatives')",
+        [],
+        |r| r.get::<_, bool>(0),
+    )? {
+        let mut stmt=conn.prepare("SELECT id,ingredient_id,quantity,unit_code FROM recipe_ingredient_alternatives WHERE recipe_id=?1 AND line_id=?2 ORDER BY position")?;
+        for line in &mut recipe.ingredients {
+            line.alternatives = stmt
+                .query_map(params![id, line.id], |r| {
+                    Ok(IngredientAlternative {
+                        id: r.get(0)?,
+                        ingredient_id: r.get(1)?,
+                        quantity: r.get(2)?,
+                        unit_code: r.get(3)?,
+                    })
+                })?
+                .collect::<Result<Vec<_>, _>>()?;
+        }
+    }
     let mut s = conn
         .prepare("SELECT id,instructions,details_version,title,duration_minutes,temperature_value,temperature_unit,heat_level,equipment,technique,tips FROM recipe_steps WHERE recipe_id=?1 ORDER BY position")?;
     recipe.steps = s
@@ -183,15 +210,15 @@ pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recip
             .query_map(params![id, step.id], |r| r.get(0))?
             .collect::<Result<_, _>>()?;
     }
-    for line in &recipe.ingredients {
+    for ingredient_id in recipe.ingredients.iter().flat_map(|l| {
+        std::iter::once(&l.ingredient_id).chain(l.alternatives.iter().map(|a| &a.ingredient_id))
+    }) {
         let name: String = conn.query_row(
             "SELECT name FROM ingredients WHERE id=?1",
-            [&line.ingredient_id],
+            [ingredient_id],
             |r| r.get(0),
         )?;
-        recipe
-            .ingredient_names
-            .insert(line.ingredient_id.clone(), name);
+        recipe.ingredient_names.insert(ingredient_id.clone(), name);
     }
     Ok(recipe)
 }
@@ -234,6 +261,17 @@ pub(super) fn write_recipe_with_history(
             return Err(invalid());
         }
         tx.execute("INSERT INTO recipe_ingredients(id,recipe_id,ingredient_id,quantity,unit_code,position,note) VALUES(?1,?2,?3,?4,?5,?6,?7)",params![i.id,input.id,i.ingredient_id,i.quantity,i.unit_code,position as i64,i.note])?;
+    }
+    // Cascaded removal is deliberate only inside this aggregate replacement.
+    // Rebuild all submitted alternatives after every stable parent line exists.
+    for line in &input.ingredients {
+        for (position, a) in line.alternatives.iter().enumerate() {
+            let valid:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM ingredients WHERE id=?1) AND (?2 IS NULL OR EXISTS(SELECT 1 FROM units WHERE code=?2))",params![a.ingredient_id,a.unit_code],|r|r.get(0))?;
+            if !valid {
+                return Err(invalid());
+            }
+            tx.execute("INSERT INTO recipe_ingredient_alternatives(id,recipe_id,line_id,ingredient_id,quantity,unit_code,position) VALUES(?1,?2,?3,?4,?5,?6,?7)",params![a.id,input.id,line.id,a.ingredient_id,a.quantity,a.unit_code,position as i64])?;
+        }
     }
     for (position, s) in input.steps.iter().enumerate() {
         let d = s.details.as_ref();

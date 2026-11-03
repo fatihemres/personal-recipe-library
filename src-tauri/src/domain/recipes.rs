@@ -62,11 +62,55 @@ pub struct Unit {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RecipeIngredient {
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub alternatives: Vec<IngredientAlternative>,
     pub id: String,
     pub ingredient_id: String,
     pub quantity: Option<String>,
     pub unit_code: String,
     pub note: Option<String>,
+}
+#[derive(Clone, Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+pub struct IngredientAlternative {
+    pub id: String,
+    pub ingredient_id: String,
+    pub quantity: Option<String>,
+    pub unit_code: Option<String>,
+}
+impl RecipeIngredient {
+    pub fn validate_alternatives<'a>(
+        &'a self,
+        committed: bool,
+        ids: &mut std::collections::HashSet<&'a String>,
+    ) -> Result<(), AppError> {
+        if self.alternatives.len() > 10 {
+            return Err(invalid());
+        }
+        let mut ingredients = std::collections::HashSet::new();
+        for a in &self.alternatives {
+            valid_id(&a.id)?;
+            valid_id(&a.ingredient_id)?;
+            if !ids.insert(&a.id)
+                || a.ingredient_id == self.ingredient_id
+                || !ingredients.insert(&a.ingredient_id)
+                || a.quantity.as_ref().is_some_and(|q| {
+                    q.contains('\0')
+                        || if committed {
+                            !decimal(q)
+                        } else {
+                            q.len() > 100
+                        }
+                })
+                || a.unit_code
+                    .as_ref()
+                    .is_some_and(|u| u.is_empty() || u.len() > 32 || u.contains('\0'))
+            {
+                return Err(invalid());
+            }
+        }
+        Ok(())
+    }
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
@@ -217,6 +261,12 @@ impl RecipeInput {
                 .iter()
                 .flatten()
                 .any(|v| !(0..=10080).contains(v))
+            || self
+                .ingredients
+                .iter()
+                .map(|i| i.alternatives.len())
+                .sum::<usize>()
+                > 1000
             || self.ingredients.len() > 500
             || self.steps.len() > 500
         {
@@ -226,6 +276,7 @@ impl RecipeInput {
         for i in &self.ingredients {
             valid_id(&i.id)?;
             valid_id(&i.ingredient_id)?;
+            i.validate_alternatives(true, &mut ids)?;
             if !ids.insert(&i.id)
                 || i.quantity.as_ref().is_some_and(|q| !decimal(q))
                 || i.note

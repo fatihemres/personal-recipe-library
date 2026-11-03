@@ -45,9 +45,10 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
    {more&&<Button disabled={busy} variant="outline" onClick={()=>load(true)}>{t.more}</Button>}
    {selected&&<section aria-label={t.selected} className="history-preview">
     <h3>V{selected.summary.versionNumber} · {selected.snapshot.title}</h3>
+    {selected.snapshot.formatVersion===1&&<p>{t.legacyAlternatives}</p>}
     {selected.snapshot.description&&<p className="preserve-text">{selected.snapshot.description}</p>}
     <RecipeDetails recipe={selected.snapshot}/>
-    <details><summary>{t.identities}</summary><ul className="history-identities">{selected.snapshot.ingredients.map((line,i)=><li key={line.id}>{t.line} {i+1}: <code>{line.id}</code> · <code>{line.ingredientId}</code></li>)}{selected.snapshot.steps.map((step,i)=><li key={step.id}>{t.step} {i+1}: <code>{step.id}</code></li>)}</ul></details>
+    <details><summary>{t.identities}</summary><ul className="history-identities">{selected.snapshot.ingredients.map((line,i)=><li key={line.id}>{t.line} {i+1}: <code>{line.id}</code> · <code>{line.ingredientId}</code>{!!line.alternatives?.length&&<ul>{line.alternatives.map(a=><li key={a.id}>{t.fields.alternatives}: <code>{a.id}</code> · <code>{a.ingredientId}</code></li>)}</ul>}</li>)}{selected.snapshot.steps.map((step,i)=><li key={step.id}>{t.step} {i+1}: <code>{step.id}</code></li>)}</ul></details>
     <div className="history-controls">
      <label>{t.compareWith}<select value={target} disabled={busy} onChange={e=>{setTarget(e.target.value);setComparison(null);}}><option value="current">{t.current}</option>{rows.map(row=><option key={row.versionNumber} value={row.versionNumber}>V{row.versionNumber}</option>)}</select></label>
      <Button disabled={busy} onClick={()=>void run(async()=>{const result=await client.compareVersions(recipe.id,selected.summary.versionNumber,target==='current'?null:Number(target));if(mounted.current){setComparison(result);setChangeLimit(50);}})}>{t.compare}</Button>
@@ -58,7 +59,7 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
     {recipe.archivedAt||recipe.deletedAt?<p>{t.inactive}</p>:<Button disabled={busy} onClick={()=>void (async()=>{let allowed=false;await run(async()=>{allowed=await beforeRestore();});if(allowed&&mounted.current)setConfirm(true);})()}>{t.restore}</Button>}
    </section>}
   </>}
-  {confirm&&selected&&<ConfirmDialog title={t.confirmTitle} description={`${t.confirmBody} (V${selected.summary.versionNumber})`} confirm={t.restore} cancel={t.cancel} busy={busy} error={error} onCancel={()=>{setConfirm(false);setError('');}} onConfirm={()=>void run(async()=>{
+  {confirm&&selected&&<ConfirmDialog title={t.confirmTitle} description={`${t.confirmBody} (V${selected.summary.versionNumber})${selected.snapshot.formatVersion===1?` · ${t.legacyAlternatives}`:""}`} confirm={t.restore} cancel={t.cancel} busy={busy} error={error} onCancel={()=>{setConfirm(false);setError('');}} onConfirm={()=>void run(async()=>{
    const result=await client.restoreVersion({recipeId:recipe.id,versionNumber:selected.summary.versionNumber,expectedRevision:recipe.revision});
    if(!mounted.current)return;setConfirm(false);setNotice(result.changed?t.restoredNotice:t.unchanged);setComparison(null);
    onRestored(result.recipe);

@@ -638,7 +638,20 @@ mod tests {
         );
         let id = uuid::Uuid::new_v4().to_string();
         let mut input = json!({"id":id,"expectedRevision":null,"title":"İçecek","description":null,"kind":"beverage","servings":"2.50","prepMinutes":2,"cookMinutes":null,"notes":"Çok soğuk", "ingredients":[{"id":uuid::Uuid::new_v4().to_string(),"ingredientId":ingredient["id"],"quantity":"35.000001","unitCode":"cc","note":null}], "steps":[{"id":uuid::Uuid::new_v4().to_string(),"instructions":"Karıştırın"}]});
+        let alternate = invoke(
+            &window,
+            "create_ingredient",
+            json!({"name":"M5B4 alternatif gül suyu"}),
+        )
+        .unwrap();
+        let alternative_id = uuid::Uuid::new_v4().to_string();
+        input["ingredients"][0]["alternatives"] = json!([{"id":alternative_id,"ingredientId":alternate["id"],"quantity":"0.123456","unitCode":null}]);
         let saved = invoke(&window, "save_recipe", json!({"input":input})).unwrap();
+        assert_eq!(
+            saved["ingredients"][0]["alternatives"][0]["quantity"],
+            "0.123456"
+        );
+        assert!(saved["ingredients"][0]["alternatives"][0]["unitCode"].is_null());
         assert_eq!(saved["ingredients"][0]["quantity"], "35.000001");
         let group_id = uuid::Uuid::new_v4().to_string();
         invoke(
@@ -661,6 +674,16 @@ mod tests {
         let window = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
             .build()
             .unwrap();
+        let reopened = invoke(&window, "get_recipe", json!({"id":id})).unwrap();
+        assert_eq!(
+            reopened["ingredients"][0]["alternatives"][0]["id"],
+            alternative_id
+        );
+        assert_eq!(
+            reopened["ingredients"][0]["alternatives"][0]["quantity"],
+            "0.123456"
+        );
+
         let loaded = invoke(&window, "get_recipe", json!({"id":id})).unwrap();
         assert_eq!(loaded["steps"][0]["instructions"], "Karıştırın");
         let state = invoke(&window, "get_recipe_organization", json!({"id":id})).unwrap();
@@ -730,7 +753,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            11
+            12
         );
     }
     #[test]

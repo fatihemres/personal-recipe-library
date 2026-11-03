@@ -35,6 +35,7 @@ fn input(title: &str, ingredient: &Ingredient) -> RecipeInput {
         cook_minutes: None,
         notes: Some("Özel not".into()),
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: id(),
             ingredient_id: ingredient.id.clone(),
             quantity: Some("0.123456".into()),

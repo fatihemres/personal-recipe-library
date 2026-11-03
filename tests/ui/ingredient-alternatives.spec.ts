@@ -1,0 +1,16 @@
+import {test,expect} from '@playwright/test';
+test('actual editor alternatives wrap across desktop widths/themes and require deliberate unsaved use',async({page})=>{
+ for(const theme of ['light','dark']){
+  await page.goto(`/tests/ui/workspace.html?steps=1&alternatives=1&theme=${theme}`);await page.locator('.recipe-card-open').click();await page.getByRole('button',{name:'Düzenle',exact:true}).click();await page.getByText('Satıra özel alternatifler · 2',{exact:true}).click();const panel=page.getByRole('region',{name:'Satıra özel alternatifler'});
+  for(const width of [520,640,768,1024,1440,1920]){
+   await page.setViewportSize({width,height:width===520?600:768});expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth+1)).toBe(true);
+   expect(await panel.evaluate(e=>{const p=e.getBoundingClientRect();return Array.from(e.querySelectorAll('input,select,button')).every(c=>{const r=c.getBoundingClientRect();return r.width===0||r.left>=p.left-1&&r.right<=p.right+1;});})).toBe(true);
+   const inputBox=await panel.getByLabel('1. Alternatif miktarı').boundingBox(),unitBox=await panel.getByLabel('1. Alternatif birimi').boundingBox();expect(Math.abs(inputBox!.height-unitBox!.height)).toBeLessThanOrEqual(1);expect(Math.abs(inputBox!.y-unitBox!.y)).toBeLessThanOrEqual(1);
+   if([520,1440].includes(width))await panel.screenshot({path:test.info().outputPath(`alternatives-${theme}-${width}.png`)});
+  }
+  await panel.getByRole('button',{name:'Alternatifi kullan',exact:true}).nth(1).click();const dialog=page.getByRole('dialog');await expect(dialog.getByRole('button',{name:'Vazgeç'})).toBeFocused();await expect(dialog.getByRole('button',{name:'Taslakta kullan'})).toBeDisabled();await dialog.getByLabel('Alternatif birimi').selectOption('mL');await expect(dialog.getByRole('button',{name:'Taslakta kullan'})).toBeDisabled();await dialog.getByRole('checkbox').check();await page.setViewportSize({width:520,height:600});await dialog.screenshot({path:test.info().outputPath(`review-${theme}-520.png`)});await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(panel.getByRole('button',{name:'Alternatifi kullan',exact:true}).nth(1)).toBeFocused();await expect(page.getByLabel('Miktar',{exact:true}).first()).toHaveValue('1.250');
+  await panel.getByRole('button',{name:'2. Alternatifi yukarı taşı'}).focus();await page.keyboard.press('Enter');await expect(panel.getByLabel('1. Alternatif miktarı')).toHaveValue('');await page.evaluate(()=>document.documentElement.style.fontSize='20px');expect(await page.locator('html').evaluate(e=>e.scrollWidth<=e.clientWidth+1)).toBe(true);
+  await page.getByRole('button',{name:'Kaldır',exact:true}).first().click();await expect(page.getByRole('dialog')).toContainText('Alternatifleri olan satır');await page.keyboard.press('Escape');await expect(page.getByLabel('Miktar',{exact:true}).first()).toHaveValue('1.250');
+  await panel.getByRole('button',{name:'Alternatifi kullan',exact:true}).nth(1).click();await expect(page.getByRole('dialog').getByLabel('Alternatif miktarı')).toHaveValue('0.123456');await page.getByRole('dialog').getByRole('button',{name:'Taslakta kullan'}).click();await expect(page.getByLabel('Miktar',{exact:true}).first()).toHaveValue('0.123456');await expect(page.getByText('Kaydedilmemiş değişiklikler',{exact:false})).toBeVisible();
+ }
+});

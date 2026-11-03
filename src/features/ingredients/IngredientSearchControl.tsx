@@ -14,9 +14,11 @@ export function IngredientSearchControl({
   onSelect,
   onBusy,
   personalOnly = true,
+  allowCreate = true,
 }: {
   client: RecipeClient;
   personalOnly?: boolean;
+  allowCreate?: boolean;
   onSelect: (
     ingredient: PersonalIngredient | { id: string; name: string },
   ) => void;
@@ -63,7 +65,7 @@ export function IngredientSearchControl({
     };
   }, [client, query, retry, personalOnly, mode]);
   async function create() {
-    if (creatingRef.current || !query.trim()) return;
+    if (!allowCreate || creatingRef.current || !query.trim()) return;
     creatingRef.current = true;
     setCreating(true);
     onBusy?.(true);
@@ -180,14 +182,14 @@ export function IngredientSearchControl({
         ))}
       </ul>
       {result?.hasMore && <p>{t.ingredientMore}</p>}
-      <Button
+      {allowCreate&&<Button
         type="button"
         variant="outline"
         disabled={creating || !query.trim()}
         onClick={() => void create()}
       >
         {t.createIngredient}
-      </Button>
+      </Button>}
     </div>
   );
 }

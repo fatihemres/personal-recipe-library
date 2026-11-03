@@ -126,4 +126,6 @@ mod structured_step_tests;
 mod recipe_history_tests;
 
 #[cfg(test)]
+mod ingredient_alternative_tests;
+#[cfg(test)]
 mod recipe_relation_tests;

@@ -11,6 +11,12 @@ fn close_draft(tx: &Transaction<'_>, id: &str, revision: i64) -> Result<(), AppE
         return Err(draft_conflict());
     }
     tx.execute("DELETE FROM draft_ingredients WHERE draft_id=?1", [id])?;
+    if super::recipes::alternatives_available(tx)? {
+        tx.execute(
+            "DELETE FROM draft_alternative_units WHERE draft_id=?1",
+            [id],
+        )?;
+    }
     Ok(())
 }
 impl Database {
@@ -21,13 +27,15 @@ impl Database {
         let input: RecipeInput =
             serde_json::from_str(&payload).map_err(|_| AppError::integrity())?;
         let mut names = std::collections::BTreeMap::new();
-        for line in &input.ingredients {
+        for ingredient_id in input.ingredients.iter().flat_map(|l| {
+            std::iter::once(&l.ingredient_id).chain(l.alternatives.iter().map(|a| &a.ingredient_id))
+        }) {
             let name = tx.query_row(
                 "SELECT name FROM ingredients WHERE id=?1",
-                [&line.ingredient_id],
+                [ingredient_id],
                 |r| r.get::<_, String>(0),
             )?;
-            names.insert(line.ingredient_id.clone(), name);
+            names.insert(ingredient_id.clone(), name);
         }
         Ok(Draft {
             id: id.into(),
@@ -102,6 +110,30 @@ impl Database {
             tx.execute(
                 "INSERT OR IGNORE INTO draft_ingredients(draft_id,ingredient_id) VALUES(?1,?2)",
                 params![write.id, line.ingredient_id],
+            )?;
+        }
+        if super::recipes::alternatives_available(&tx)? {
+            tx.execute(
+                "DELETE FROM draft_alternative_units WHERE draft_id=?1",
+                [&write.id],
+            )?;
+        }
+        for a in write.input.ingredients.iter().flat_map(|l| &l.alternatives) {
+            if let Some(unit) = &a.unit_code {
+                if !tx.query_row(
+                    "SELECT EXISTS(SELECT 1 FROM units WHERE code=?1)",
+                    [unit],
+                    |r| r.get::<_, bool>(0),
+                )? {
+                    return Err(invalid());
+                }
+            }
+            if let Some(unit) = &a.unit_code {
+                tx.execute("INSERT OR IGNORE INTO draft_alternative_units(draft_id,unit_code) VALUES(?1,?2)",params![write.id,unit])?;
+            }
+            tx.execute(
+                "INSERT OR IGNORE INTO draft_ingredients(draft_id,ingredient_id) VALUES(?1,?2)",
+                params![write.id, a.ingredient_id],
             )?;
         }
         tx.commit()?;
@@ -326,7 +358,19 @@ impl Database {
         let tx = self
             .conn
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
-        let referenced:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM recipe_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM draft_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM recipe_version_ingredients WHERE ingredient_id=?1)",[id],|r|r.get(0))?;
+        // A future envelope may own references this reader cannot enumerate.
+        if tx.query_row(
+            "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE format_version NOT IN (1,2))",
+            [],
+            |r| r.get::<_, bool>(0),
+        )? {
+            return Err(AppError::new(
+                "RECIPE_VERSION_UNSUPPORTED",
+                "errors.recipeVersionUnsupported",
+                true,
+            ));
+        }
+        let referenced:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM recipe_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM draft_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM recipe_version_ingredients WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM recipe_ingredient_alternatives WHERE ingredient_id=?1) OR EXISTS(SELECT 1 FROM recipe_version_alternatives WHERE ingredient_id=?1)",[id],|r|r.get(0))?;
         if referenced {
             return Err(AppError::new(
                 "INGREDIENT_REFERENCED",

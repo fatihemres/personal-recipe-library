@@ -1,3 +1,7 @@
+## M5B-4 current candidate — 2026-11-03
+
+Issue #28 / DEC-029 authorize P7 implementation only. Per-line alternatives, draft-only reviewed Use, warning on owned line removal, format2 immutable history, mixed-format restore and additive schema012 are implemented candidates. M5B-1/2/3 remain integrated/scoped PO accepted; M5C/D/M6 remain out of scope and unapproved here. Verification/remaining PO gates: M5B4_ACCEPTANCE.md (or docs/M5B4_ACCEPTANCE.md from root). No milestone acceptance or merge is implied.
+
 > **Current-state note, 2026-10-23:** This file retains the original phased specification and append-only milestone plans. Its older opening “M4–M11 pending” is historical. M4A and M4B-1 are integrated and PO accepted; M4B-2 is a feature candidate under Issue #10. Follow [PROJECT_STATUS.md](../PROJECT_STATUS.md), [ROADMAP.md](../ROADMAP.md), [DECISIONS.md](../DECISIONS.md) and live GitHub for progress. The V1 scope below is unchanged.
 
 # Implementation plan
