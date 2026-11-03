@@ -1,0 +1,14 @@
+import { z } from 'zod';
+const revision=z.number().int().positive();
+export const recipeReferenceSchema=z.object({id:z.uuid(),title:z.string(),revision,status:z.enum(['active','archived','trash']),relationship:z.enum(['parent','child','related'])}).strict();
+export const recipeLinksSchema=z.object({graphRevision:revision,items:z.array(recipeReferenceSchema).max(100),total:z.number().int().nonnegative(),hasMore:z.boolean()}).strict();
+export const parentWriteSchema=z.object({childId:z.uuid(),parentId:z.uuid().nullable(),expectedGraphRevision:revision}).strict();
+export const relatedWriteSchema=z.object({recipeId:z.uuid(),targetId:z.uuid(),expectedGraphRevision:revision,linked:z.boolean()}).strict();
+export const purgePreviewSchema=z.object({recipeId:z.uuid(),recipeRevision:revision,token:z.string().regex(/^[a-f0-9]{64}$/),links:recipeLinksSchema}).strict();
+export const reviewedPurgeSchema=z.object({recipeId:z.uuid(),expectedRevision:revision,token:z.string().regex(/^[a-f0-9]{64}$/),acknowledgeDetach:z.boolean()}).strict();
+export type RecipeReference=z.infer<typeof recipeReferenceSchema>;
+export type RecipeLinks=z.infer<typeof recipeLinksSchema>;
+export type PurgePreview=z.infer<typeof purgePreviewSchema>;
+export type ParentWrite=z.infer<typeof parentWriteSchema>;
+export type RelatedWrite=z.infer<typeof relatedWriteSchema>;
+export type ReviewedPurge=z.infer<typeof reviewedPurgeSchema>;

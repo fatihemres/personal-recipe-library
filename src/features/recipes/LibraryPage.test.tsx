@@ -220,13 +220,13 @@ test('archive scopes, duplication and permanent deletion are explicit UI actions
   await user.click(await screen.findByRole('button', { name: /Çay/ }));
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
   expect(api.purge).not.toHaveBeenCalled();
-  expect(screen.getByRole('dialog')).toHaveTextContent('geri alınamaz');
+  expect(await screen.findByRole('dialog')).toHaveTextContent('geri alınamaz');
   expect(screen.getByRole('dialog')).toHaveTextContent('saklanan içerik sürümleri kalıcı olarak silinir');
   await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Vazgeç' }));
   expect(api.purge).not.toHaveBeenCalled();
   await user.click(screen.getByRole('button', { name: 'Kalıcı olarak sil' }));
-  await user.click(within(screen.getByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
-  await waitFor(() => expect(api.purge).toHaveBeenCalledWith(recipe.id, 3));
+  await user.click(within(await screen.findByRole('dialog')).getByRole('button', { name: 'Kalıcı olarak sil' }));
+  await waitFor(() => expect(api.purgeReviewed).toHaveBeenCalledWith({recipeId:recipe.id,expectedRevision:3,token:'a'.repeat(64),acknowledgeDetach:false}));
 });
 
 test('search-first library keeps filters and card/list context with keyboard access', async () => {

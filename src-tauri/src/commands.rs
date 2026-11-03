@@ -370,6 +370,96 @@ mod tests {
     }
 
     #[test]
+    fn relationship_ipc_variation_private_note_isolation_and_reviewed_purge_use_real_worker() {
+        let dir = tempfile::tempdir().unwrap();
+        let app = mock_builder()
+            .manage(StorageService::without_catalog(Ok(dir.path().into())))
+            .invoke_handler(tauri::generate_handler![
+                create_ingredient,
+                save_recipe,
+                get_recipe,
+                save_private_note,
+                get_private_note,
+                create_recipe_variation,
+                recipe_links,
+                set_related_recipe,
+                set_variation_parent,
+                set_recipe_deleted,
+                purge_recipe,
+                preview_recipe_purge,
+                purge_reviewed_recipe,
+                list_recipe_versions
+            ])
+            .build(mock_context(noop_assets()))
+            .unwrap();
+        let w = tauri::WebviewWindowBuilder::new(&app, "main", Default::default())
+            .build()
+            .unwrap();
+        let ing = invoke(&w, "create_ingredient", json!({"name":"M5B3 IPC Gül suyu"})).unwrap();
+        let id = uuid::Uuid::new_v4().to_string();
+        let a=invoke(&w,"save_recipe",json!({"input":{"id":id,"expectedRevision":null,"title":"M5B3 IPC kaynak","description":null,"kind":"beverage","servings":"1","prepMinutes":null,"cookMinutes":null,"notes":"İçerik","ingredients":[{"id":uuid::Uuid::new_v4().to_string(),"ingredientId":ing["id"],"quantity":"1.250","unitCode":"mL","note":null}],"steps":[]}})).unwrap();
+        invoke(
+            &w,
+            "save_private_note",
+            json!({"write":{"recipeId":id,"expectedRevision":0,"markdown":"Kaynak özel Markdown"}}),
+        )
+        .unwrap();
+        let child = invoke(&w, "create_recipe_variation", json!({"id":id,"revision":1})).unwrap();
+        assert_ne!(child["id"], a["id"]);
+        assert_ne!(child["ingredients"][0]["id"], a["ingredients"][0]["id"]);
+        assert_eq!(child["ingredients"][0]["quantity"], "1.250");
+        assert_eq!(
+            invoke(&w, "get_private_note", json!({"recipeId":child["id"]})).unwrap()["markdown"],
+            ""
+        );
+        let links = invoke(&w, "recipe_links", json!({"id":id,"offset":0,"limit":20})).unwrap();
+        assert_eq!(links["total"], 1);
+        invoke(&w,"set_related_recipe",json!({"write":{"recipeId":id,"targetId":child["id"],"expectedGraphRevision":links["graphRevision"],"linked":true}})).unwrap();
+        invoke(
+            &w,
+            "set_recipe_deleted",
+            json!({"id":id,"revision":1,"deleted":true}),
+        )
+        .unwrap();
+        assert_eq!(
+            invoke(&w, "purge_recipe", json!({"id":id,"revision":2})).unwrap_err()["code"],
+            "RECIPE_LINKS_BLOCK_PURGE"
+        );
+        let preview = invoke(
+            &w,
+            "preview_recipe_purge",
+            json!({"id":id,"revision":2,"offset":0,"limit":20}),
+        )
+        .unwrap();
+        assert_eq!(preview["links"]["total"], 2);
+        invoke(&w,"purge_reviewed_recipe",json!({"write":{"recipeId":id,"expectedRevision":2,"token":preview["token"],"acknowledgeDetach":true}})).unwrap();
+        assert_eq!(
+            invoke(&w, "get_recipe", json!({"id":child["id"]})).unwrap()["revision"],
+            1
+        );
+        assert_eq!(
+            invoke(
+                &w,
+                "list_recipe_versions",
+                json!({"id":child["id"],"before":null,"limit":20})
+            )
+            .unwrap()
+            .as_array()
+            .unwrap()
+            .len(),
+            1
+        );
+        assert_eq!(
+            invoke(
+                &w,
+                "recipe_links",
+                json!({"id":child["id"],"offset":0,"limit":20})
+            )
+            .unwrap()["total"],
+            0
+        );
+    }
+    #[test]
     fn history_ipc_restores_once_and_retains_identifiable_test4_metadata_after_restart() {
         let directory = tempfile::tempdir().unwrap();
         let create_app = || {
@@ -640,7 +730,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            10
+            11
         );
     }
     #[test]
@@ -977,4 +1067,62 @@ pub async fn restore_recipe_version(
     state
         .execute(move |d| d.restore_recipe_version(write))
         .await
+}
+
+use crate::domain::recipe_relations::{
+    ParentWrite, PurgePreview, RecipeLinks, RelatedWrite, ReviewedPurge,
+};
+#[tauri::command]
+pub async fn recipe_links(
+    id: String,
+    offset: u32,
+    limit: u32,
+    state: tauri::State<'_, StorageService>,
+) -> Result<RecipeLinks, AppError> {
+    state
+        .execute(move |d| d.recipe_links(&id, offset, limit))
+        .await
+}
+#[tauri::command]
+pub async fn create_recipe_variation(
+    id: String,
+    revision: i64,
+    state: tauri::State<'_, StorageService>,
+) -> Result<Recipe, AppError> {
+    state
+        .execute(move |d| d.create_variation(&id, revision))
+        .await
+}
+#[tauri::command]
+pub async fn set_variation_parent(
+    write: ParentWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.set_variation_parent(write)).await
+}
+#[tauri::command]
+pub async fn set_related_recipe(
+    write: RelatedWrite,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.set_related_recipe(write)).await
+}
+#[tauri::command]
+pub async fn preview_recipe_purge(
+    id: String,
+    revision: i64,
+    offset: u32,
+    limit: u32,
+    state: tauri::State<'_, StorageService>,
+) -> Result<PurgePreview, AppError> {
+    state
+        .execute(move |d| d.preview_recipe_purge(&id, revision, offset, limit))
+        .await
+}
+#[tauri::command]
+pub async fn purge_reviewed_recipe(
+    write: ReviewedPurge,
+    state: tauri::State<'_, StorageService>,
+) -> Result<(), AppError> {
+    state.execute(move |d| d.purge_reviewed_recipe(write)).await
 }

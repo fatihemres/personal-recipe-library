@@ -41,6 +41,12 @@ pub fn run() {
         })
         .invoke_handler(tauri::generate_handler![
             commands::bootstrap,
+            commands::recipe_links,
+            commands::create_recipe_variation,
+            commands::set_variation_parent,
+            commands::set_related_recipe,
+            commands::preview_recipe_purge,
+            commands::purge_reviewed_recipe,
             commands::list_recipe_versions,
             commands::get_recipe_version,
             commands::compare_recipe_versions,

@@ -314,3 +314,7 @@ DEC-022/P1–P10 establish product policy; the later explicit PO brief / Issue #
 ## M5B-2 authorized candidate — 2026-11-02
 
 Issue #22 / DEC-025 authorize bounded history, comparison and safe restore only, on integrated schema 10. No migration, app-version or catalog change. Candidate must pass real SQLite/reference/draft/rollback checks, actual-component responsive browser checks, isolated Mac smoke, final-head five-platform CI and independent review before separate PO acceptance/integration. M5B-3/4 remain planned, not authorized by this increment.
+
+## M5B-3 authorized candidate — 2026-11-03
+
+Issue #25/DEC-027: independent variations, symmetric explicit links and reviewed safe purge, schema011. Deliver actual persisted graph/IDs, private-note/organization isolation, inactive preservation, CAS/token/cycle/FK safety, Turkish responsive focused components, isolated regression/native checks and final-head five-job PR CI. No M5B-4/media/Cooking Mode or merge/tag/release. Independent review and separate PO acceptance/merge approval remain required.

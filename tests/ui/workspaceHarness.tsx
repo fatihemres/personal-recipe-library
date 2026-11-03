@@ -1,3 +1,4 @@
+import { RecipePurgeDialog } from '../../src/features/recipes/RecipePurgeDialog';
 import { createRoot } from 'react-dom/client';
 import '../../src/App.css';
 import { AppShell } from '../../src/app/AppShell';
@@ -37,6 +38,8 @@ const unsupported = async () => { throw new Error('Unsupported browser presentat
 const snapshot=()=>({formatVersion:1 as const,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
 const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
 const recipes: RecipeClient={
+  links:async()=>({graphRevision:1,items:[{id:'88888888-8888-4888-8888-888888888888',title:'Uzun Türkçe üst tarif adı — '+longTitle,revision:1,status:'archived',relationship:'parent'}],total:1,hasMore:false}),createVariation:unsupported,setParent:async()=>null,setRelated:async()=>null,
+  previewPurge:async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}}),purgeReviewed:async()=>null,
   versions:async()=>[summary(2),summary(1)],
   version:async(_id,version)=>({summary:summary(version),snapshot:snapshot()}),
   compareVersions:async()=>({currentRevision:1,changes:[{path:['ingredients','0','quantity'],before:'1.250',after:'1.25'},{path:['steps','0','details','title'],before:'Uzun Türkçe aşama başlığı '.repeat(6),after:'Yeni aşama'}]}),
@@ -46,7 +49,7 @@ const recipes: RecipeClient={
   list:unsupported,save:unsupported,setDeleted:unsupported,searchIngredients:unsupported,createIngredient:unsupported,
   getDraft:unsupported,duplicate:unsupported,scope:unsupported,archive:unsupported,purge:unsupported,
   editIngredient:unsupported,deleteIngredient:unsupported,
-  searchRecipes:async(search:RecipeSearchQuery)=>({items:search.scope==='active'?[item]:[],total:search.scope==='active'?1:0,hasMore:false,suggestions:[]}),
+  searchRecipes:async(search:RecipeSearchQuery)=>({items:search.scope==='active'?[search.limit===10?{...item,id:'99999999-9999-4999-8999-999999999999',title:'Etkin hedef tarif — '+longTitle}:item]:[],total:search.scope==='active'?1:0,hasMore:false,suggestions:[]}),
   units:async()=>[{code:'g',dimension:'mass',canonicalCode:'g',factor:1}],
   searchPersonal:async()=>({items:[],total:0,hasMore:false}),
   saveDraft:async(id:string,revision:number|null,input:RecipeInput)=>({id,revision:(revision??0)+1,recipeId:input.id,input,updatedAt:'now',ingredientNames:recipe.ingredientNames}),
@@ -58,4 +61,5 @@ const recipes: RecipeClient={
   dashboard:async()=>({activeTotal:1,foodCount:1,beverageCount:0,favoriteCount:0,recentCreated:[item],recentModified:[item],collections:[collection]}),
 };
 
-createRoot(document.getElementById('root')!).render(<AppShell client={foundation} recipes={recipes}/>);
+const purgeFixture:RecipeClient={...recipes,previewPurge:async(id,revision,offset)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:2,total:2,hasMore:offset===0,items:[{id:offset===0?'88888888-8888-4888-8888-888888888888':'99999999-9999-4999-8999-999999999999',title:longTitle,revision:1,status:'active',relationship:offset===0?'child':'related'}]}}),purgeReviewed:async()=>{throw {code:'PURGE_REVIEW_STALE',messageKey:'errors.purgeReviewStale',recoverable:true};}};
+createRoot(document.getElementById('root')!).render(<><AppShell client={foundation} recipes={recipes}/>{new URLSearchParams(location.search).has('purge')&&<RecipePurgeDialog recipe={{...recipe,deletedAt:'2026-11-03T12:00:00Z'}} client={purgeFixture} onCancel={()=>{}} onPurged={()=>{}}/>}</>);

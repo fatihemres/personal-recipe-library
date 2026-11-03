@@ -1,3 +1,6 @@
+import { RecipeRelations } from './RecipeRelations';
+import { RecipePurgeDialog } from './RecipePurgeDialog';
+import { relationsTr } from '../../shared/i18n/recipeRelations';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { recipeClient, type RecipeClient } from '../../shared/api/recipes';
 import { normalizeError } from '../../shared/api/client';
@@ -253,7 +256,7 @@ export function LibraryPage({
     }
   }
   async function management(
-    action: 'duplicate' | 'archive' | 'unarchive' | 'purge',
+    action: 'duplicate' | 'archive' | 'unarchive',
   ) {
     if (!selected || operation.current) return;
     if(noteLeaveGuard.current && !await noteLeaveGuard.current()) return;
@@ -262,12 +265,7 @@ export function LibraryPage({
     setError('');
     setPurgeConfirm(false);
     try {
-      if (action === 'purge') {
-        await client.purge(selected.id, selected.revision);
-        setSelected(null);
-        setOrganization(null);
-        setNotice(t.purged);
-      } else if (action === 'duplicate') {
+      if (action === 'duplicate') {
         const copy = await client.duplicate(selected.id, selected.revision);
         setSelected(copy);
         setOrganization(await client.getOrganization(copy.id));
@@ -458,6 +456,7 @@ export function LibraryPage({
             )}
           </div>
           <RecipeDetails recipe={selected} />
+          <RecipeRelations key={selected.id} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setSelected(recipe);setScope('active');void client.getOrganization(recipe.id).then(setOrganization,e=>setError(errorMessage(normalizeError(e).messageKey)));setNotice(relationsTr.created);void load();}} />
           <RecipeHistory key={selected.id} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
           <PrivateNotePanel key={selected.id} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
           {organization && !selected.deletedAt && <div className="panel workspace-panel recipe-organization">
@@ -678,16 +677,7 @@ export function LibraryPage({
           onCancel={() => setDiscardTarget(undefined)}
         />
       )}
-      {purgeConfirm && (
-        <ConfirmDialog
-          title={t.confirmPurge}
-          description={t.purgeHelp}
-          confirm={t.purge}
-          cancel={t.cancel}
-          onConfirm={() => void management('purge')}
-          onCancel={() => setPurgeConfirm(false)}
-        />
-      )}
+      {purgeConfirm && selected && <RecipePurgeDialog recipe={selected} client={client} onCancel={()=>setPurgeConfirm(false)} onPurged={()=>{setPurgeConfirm(false);setSelected(null);setOrganization(null);setNotice(t.purged);void load();}} />}
       {confirm && (
         <ConfirmDialog
           title={t.confirmDelete}

@@ -1,6 +1,6 @@
 # Database schema and initialization
 
-Verified M5B-1 starting main `afb161b94d257e50515a063cd21436ba884a40de` uses schema **9**, with M5A integrated and PO accepted. The **M5B-1 candidate** adds checksummed forward-only migration **010** (schema **10**); it is not integrated or PO accepted. Migrations 001–009 and Catalog Release 11 remain unchanged. Core SQLite storage remains offline.
+Verified M5B-3 base main `9298744c29f70f92ea3c1e60bae9bb31b481a2db` uses schema **10**, with M5B-1/2 integrated and scoped PO accepted. The **M5B-3 candidate** adds checksummed forward-only migration **011** (schema **11**); it is not integrated or PO accepted. Migrations001–010, immutable snapshots and Catalog Release11 remain unchanged. Core SQLite storage remains offline.
 
 ## Location, access and ownership
 
@@ -140,3 +140,7 @@ The migration runner executes a bounded-memory Rust backfill hook (64 recipe IDs
 ## M5B-2 schema-10 reuse
 
 M5B-2 makes no migration or table change; 001–010 and the migration-010 SHA-256 remain unchanged. `restored_from_version` and `restored` provenance now have a validated transactional caller. Restore updates only the existing active recipe's aggregate/search rows, preserving its UUID/creation date, and appends exactly one version in the same transaction. An active edit draft, stale revision, missing definition, collision, unsupported format or checksum failure rejects without a partial update. Same-content restore returns explicit no-change with no revision/version increment. Existing owned-purge and historical ingredient/unit RESTRICT guards remain. See M5B2_ACCEPTANCE.md for real SQLite/restart/rollback tests and limitations.
+
+## Candidate schema11 — M5B-3 (not integrated)
+
+Additive `011_recipe_relationships.sql`: `recipe_variations(child_id PK,parent_id)`, `recipe_related(left_id,right_id PK,CHECK left<right)` and `recipe_graph_state(recipe_id PK,revision)`. All graph endpoints have recipe FKs; edges use RESTRICT, per-owner state is recipe-owned CASCADE. Child cannot equal parent; recursive INSERT/UPDATE triggers reject cycles. Indexes support parent/child and both related directions. Triggers initialize graph state for existing/new recipes and increment affected endpoint counters on graph edits, outside recipe content/draft revisions. Existing schema10 snapshot bytes, content fingerprints, catalog assets and migrations001–010 are immutable. Upgrade uses the established online pre-migration snapshot/transaction/checksum/FK/integrity runner; old schema10 binaries must not open schema11. Git rollback does not reverse migrations or restore user data.

@@ -24,6 +24,8 @@ export function rendererRecipeClient(): RecipeClient {
       ingredientNames: { [ingredient.id]: ingredient.name },
     }));
   return {
+    links:vi.fn().mockResolvedValue({graphRevision:1,items:[],total:0,hasMore:false}),createVariation:vi.fn(),setParent:vi.fn().mockResolvedValue(null),setRelated:vi.fn().mockResolvedValue(null),
+    previewPurge:vi.fn().mockImplementation(async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}})),purgeReviewed:vi.fn().mockResolvedValue(null),
     versions:vi.fn().mockResolvedValue([]),version:vi.fn(),compareVersions:vi.fn(),restoreVersion:vi.fn(),
     getPrivateNote: vi.fn().mockImplementation(async recipeId => ({recipeId,formatVersion:1,markdown:'',revision:0,updatedAt:null})),
     savePrivateNote: vi.fn().mockImplementation(async write => ({recipeId:write.recipeId,formatVersion:1,markdown:write.markdown,revision:write.expectedRevision+1,updatedAt:'2026-10-08T12:00:00Z'})),

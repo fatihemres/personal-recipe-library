@@ -47,3 +47,7 @@ Each slice requires separate implementation approval, scoped reviewable PR, exac
 Precise SQL DDL, historical-ingredient FK modeling under purge, serialization limits and canonical fingerprint design, restore conflict UX, no-op criteria, relation concurrency/uniqueness, and substitution cardinality remain design tasks subject to independent engineering review. Media physical lifecycle/file limits and release/backup guarantees remain for M5C/M9 and later PO gates. Material deviations from P1–P10 require a new explicit PO decision.
 
 For sources of truth see [DECISIONS.md](../DECISIONS.md), [ROADMAP.md](../ROADMAP.md), [MASTER_SPEC.md](MASTER_SPEC.md) and [M5 issue #14](https://github.com/fatihemres/personal-recipe-library/issues/14).
+
+## M5B-3 implementation authorization — 2026-11-03
+
+Issue #25 / DEC-027 authorize this slice only. P5/P6/P8 are implemented with no private Markdown/organization copy into new variations (ordinary Duplicate unchanged), retained inactive relationships but active-only link creation, and separately acknowledged reference-safe purge. Schema011 is additive. Earlier authorization statements are historical; P1–P10 themselves are unchanged. M5B-4 and later, integration, tags/releases and normal-profile operations remain separately gated.

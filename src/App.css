@@ -718,3 +718,12 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
  .history-controls label { max-width:none; flex-basis:100%; }
  .history-differences dl { grid-template-columns:minmax(0,1fr); }
 }
+
+.recipe-relations { container-type:inline-size; min-width:0; margin-block:1rem; }
+.recipe-link-list { list-style:none; padding:0; display:grid; gap:.75rem; min-width:0; }
+.recipe-link-list>li { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.75rem; border-bottom:1px solid var(--border); padding-block:.75rem; min-width:0; }
+.recipe-link-list>li>div:first-child,.recipe-link-list>li>strong { flex:1 1 16rem; min-width:0; overflow-wrap:anywhere; }
+.recipe-link-list code { overflow-wrap:anywhere; white-space:normal; }
+.relation-search { display:grid; gap:.4rem; max-width:32rem; margin-block:1rem; }
+.relation-search input { min-width:0; width:100%; }
+@container (max-width:30rem) { .recipe-link-list .recipe-actions { width:100%; } .recipe-link-list .recipe-actions button { flex:1 1 12rem; } }

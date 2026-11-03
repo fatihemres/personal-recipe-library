@@ -67,7 +67,7 @@ fn insert_old(db: &mut Database, value: &RecipeInput) {
 fn initial_versions_meaningful_edits_noops_and_bounded_queries() {
     let dir = tempfile::tempdir().unwrap();
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 10);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
     let ingredient = db.create_ingredient("Şeker").unwrap();
     for kind in ["food", "beverage"] {
         let mut saved = db.save_recipe(input(&ingredient.id, kind)).unwrap();
@@ -587,7 +587,7 @@ fn schema_nine_upgrade_creates_honest_complete_baselines_and_preserves_user_data
     );
     for _ in 0..3 {
         let mut db = Database::open(dir.path()).unwrap();
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 10);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
         for id in &ids {
             let v = super::recipe_versions::read_version(&db.conn, id, 1).unwrap();
             assert_eq!(v.summary.provenance, "upgrade_baseline");

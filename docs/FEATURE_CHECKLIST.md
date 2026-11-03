@@ -171,3 +171,13 @@ M3B-1: first embedded production batch contains 235 verified identities; extensi
 - [ ] Final exact-head PR CI, independent review, isolated Mac PO acceptance and separate merge authorization.
 
 This implements only M5B-2, not all R05/history-related modules. M5B-3/4, media/Cooking Mode and later modules remain pending. Prior M5B-1 PO Test 4 discrepancy is unchanged.
+
+## M5B-3 candidate — 2026-11-03
+
+- [x] Atomic independent variation/V1/parent creation, remapped structured-step line links, no private Markdown/organization copy.
+- [x] Single-parent acyclic graph, explicit reparent/remove, symmetric related pairs and bounded active discovery.
+- [x] Retained inactive links and labeled navigation, safe private-note leave guards.
+- [x] Default blocked linked purge; paginated dependency review and separate detach confirmation; transactional CAS/reference-set revalidation.
+- [ ] Independent engineering review, PO native acceptance and separate merge authorization.
+
+Actual local/native/CI evidence is in M5B3_ACCEPTANCE.md and the candidate PR; checked implementation is not PO acceptance.

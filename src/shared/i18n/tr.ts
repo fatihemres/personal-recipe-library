@@ -16,6 +16,12 @@ export const tr = {
   closeFailed:'Taslak kaydedilemediği için uygulama açık tutuldu. Hata giderildikten sonra yeniden kapatmayı deneyin.',
   catalogTitle: 'Malzeme kataloğu altyapısı', catalogBody: 'Genişletilmiş üretim kataloğu çevrimdışı olarak kurulmuştur. Katalog kapsamı sonraki aşamalarda genişletilecek. Doğrulama kayıtları üretim kataloğu değildir.', catalogLoading: 'Katalog durumu okunuyor…', catalogValidation: 'Doğrulama kayıtları', catalogProduction: 'Üretim kayıtları', catalogCollisions: 'İnceleme bekleyen eşleşmeler',
   errors: {
+    'errors.relationInactive':'Yeni bağlar için her iki tarif de etkin olmalıdır. Mevcut bağlar arşivde ve çöp kutusunda korunur.',
+    'errors.variationCycle':'Bu üst tarif seçimi bir döngü oluşturur. Tarif kendisinin veya alt varyasyonunun altına bağlanamaz.',
+    'errors.relationExists':'Bu tarifler zaten ilişkili. Ters yönde ikinci bir bağ oluşturulmaz.',
+    'errors.recipeLinksBlockPurge':'Bu tarife bağlı başka tarifler var. Önce bağımlılıkları inceleyip bağları ayırmayı ayrıca onaylayın.',
+    'errors.purgeReviewStale':'İncelenen bağlar veya tarif revizyonları değişti. Silme yapılmadı. Güncel bağımlılıkları yeniden inceleyin.',
+
     'errors.catalog': 'Katalog işlemi doğrulanamadı. Kaynak izinlerini, paket bütünlüğünü ve kayıt çakışmalarını kontrol edin; mevcut kişisel veriler değiştirilmedi.',
     'errors.draftConflict':'Bu taslak başka bir oturumda değiştirildi veya kapatıldı. Buradaki metni koruyup güncel taslağı yeniden açın; başka oturumun verisi üzerine yazılmadı.',
     'errors.ingredientDuplicate':'Bu isimle zaten bir malzeme var. Farklı bir isim seçin veya mevcut kaydı kullanın; kayıtlar otomatik birleştirilmez.',
