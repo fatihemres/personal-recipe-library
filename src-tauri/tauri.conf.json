@@ -34,7 +34,8 @@
       "icons/icon.ico"
     ],
     "resources": [
-      "../catalog/production/NOTICE.md"
+      "../catalog/production/NOTICE.md",
+      "resources/MEDIA_THIRD_PARTY_NOTICES.txt"
     ]
   }
 }
