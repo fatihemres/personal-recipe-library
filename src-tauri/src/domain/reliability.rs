@@ -63,6 +63,11 @@ impl DraftWrite {
                 .as_ref()
                 .is_some_and(|s| s.chars().count() > 10000)
             || i.notes.as_ref().is_some_and(|s| s.chars().count() > 20000)
+            || i.ingredients
+                .iter()
+                .map(|l| l.alternatives.len())
+                .sum::<usize>()
+                > 1000
             || i.ingredients.len() > 500
             || i.steps.len() > 500
         {
@@ -72,6 +77,7 @@ impl DraftWrite {
         for line in &i.ingredients {
             valid_id(&line.id)?;
             valid_id(&line.ingredient_id)?;
+            line.validate_alternatives(false, &mut ids)?;
             if !ids.insert(&line.id)
                 || line.quantity.as_ref().is_some_and(|s| s.len() > 100)
                 || line.note.as_ref().is_some_and(|s| s.chars().count() > 2000)
@@ -115,6 +121,9 @@ pub fn independent(mut input: RecipeInput) -> RecipeInput {
         let new_id = uuid::Uuid::new_v4().to_string();
         line_ids.insert(line.id.clone(), new_id.clone());
         line.id = new_id;
+        for a in &mut line.alternatives {
+            a.id = uuid::Uuid::new_v4().to_string();
+        }
     }
     for step in &mut input.steps {
         step.id = uuid::Uuid::new_v4().to_string();

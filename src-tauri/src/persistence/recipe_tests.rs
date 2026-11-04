@@ -16,6 +16,7 @@ fn input(ingredient: &Ingredient) -> RecipeInput {
         cook_minutes: None,
         notes: Some("Özel not".into()),
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: id(),
             ingredient_id: ingredient.id.clone(),
             quantity: Some("0.123456".into()),
@@ -152,11 +153,11 @@ fn real_m1_upgrade_preserves_preferences_and_validates_both_checksums() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
     assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        11
+        12
     );
     drop(db);
     for _ in 0..3 {

@@ -293,6 +293,8 @@ export function RecipeEditor({
             </div>
           </div>
           <RecipeIngredients
+            client={client}
+            onName={(id,name)=>setNames(previous=>({...previous,[id]:name}))}
             lines={draft.ingredients}
             units={units}
             names={names}

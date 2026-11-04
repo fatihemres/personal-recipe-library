@@ -176,6 +176,7 @@ fn category_edit_keeps_saved_recipe_reference_and_exact_quantity_after_restart()
             cook_minutes: None,
             notes: None,
             ingredients: vec![RecipeIngredient {
+                alternatives: vec![],
                 id: uuid::Uuid::new_v4().to_string(),
                 ingredient_id: own.id.clone(),
                 quantity: Some("0.123456".into()),
@@ -368,6 +369,7 @@ fn library_details_and_personal_edit_preserve_recipe_draft_and_restart() {
         cook_minutes: None,
         notes: None,
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: uuid::Uuid::new_v4().to_string(),
             ingredient_id: own.id.clone(),
             quantity: Some("35.000001".into()),
@@ -553,6 +555,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
         cook_minutes: None,
         notes: None,
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: uuid::Uuid::new_v4().to_string(),
             ingredient_id: sugar.clone(),
             quantity: Some("35.000001".into()),
@@ -656,6 +659,7 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
         cook_minutes: None,
         notes: None,
         ingredients: vec![RecipeIngredient {
+            alternatives: vec![],
             id: uuid::Uuid::new_v4().to_string(),
             ingredient_id: ingredient.id.clone(),
             quantity: Some("0.123456".into()),
@@ -667,7 +671,7 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
     super::tests::insert_legacy_recipe(&db.conn, &input);
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 11);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
     assert_eq!(
         db.recipe(&input.id).unwrap().ingredients[0]
             .quantity

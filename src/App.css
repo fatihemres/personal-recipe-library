@@ -727,3 +727,16 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
 .relation-search { display:grid; gap:.4rem; max-width:32rem; margin-block:1rem; }
 .relation-search input { min-width:0; width:100%; }
 @container (max-width:30rem) { .recipe-link-list .recipe-actions { width:100%; } .recipe-link-list .recipe-actions button { flex:1 1 12rem; } }
+
+/* Recipe-line alternatives reuse editor field/action patterns; content, not the
+   viewport, determines wrapping inside a narrow recipe panel. */
+.ingredient-alternatives { min-width:0; margin-block:1rem; padding:1rem; border:1px solid var(--border); border-radius:12px; container-type:inline-size; }
+.ingredient-alternatives h3 { margin:0; }
+.alternative-list { margin:0; padding:0; list-style:none; }
+.alternative-list > li { min-width:0; padding-block:1rem; border-bottom:1px solid var(--border); overflow-wrap:anywhere; }
+.ingredient-alternatives .form-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr)); }
+.ingredient-alternatives label,.ingredient-alternatives input,.ingredient-alternatives select { min-width:0; max-width:100%; }
+.ingredient-alternatives .recipe-actions > button { white-space:normal; max-width:100%; }
+.alternative-summary { padding-inline-start:1rem; border-inline-start:2px solid var(--border); overflow-wrap:anywhere; }
+.ingredient-alternatives input:not([type="checkbox"]),.ingredient-alternatives select,
+.alternative-review input:not([type="checkbox"]),.alternative-review select { height:3rem; }

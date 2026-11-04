@@ -23,6 +23,10 @@ if(new URLSearchParams(location.search).has('steps')) {
   recipe.ingredientNames={'55555555-5555-4555-8555-555555555555':'Şişli yöresinden ince doğranmış mantar ve uzun malzeme adı'};
   recipe.steps=[{id:'66666666-6666-4666-8666-666666666666',instructions:'Malzemeleri hazırlayın ve dikkatlice karıştırın. '.repeat(20)}, {id:'77777777-7777-4777-8777-777777777777',instructions:'Kısık ateşte pişirin'}];
 }
+if(new URLSearchParams(location.search).has('alternatives')){
+ recipe.ingredients=[{id:'44444444-4444-4444-8444-444444444444',ingredientId:'55555555-5555-4555-8555-555555555555',quantity:'1.250',unitCode:'g',note:null,alternatives:[{id:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',ingredientId:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',quantity:'0.123456',unitCode:'mL'},{id:'cccccccc-cccc-4ccc-8ccc-cccccccccccc',ingredientId:'dddddddd-dddd-4ddd-8ddd-dddddddddddd',quantity:null,unitCode:null}]},{id:'12121212-1212-4212-8212-121212121212',ingredientId:'55555555-5555-4555-8555-555555555555',quantity:null,unitCode:'g',note:'İkinci bağımsız satır'}];
+ recipe.ingredientNames={'55555555-5555-4555-8555-555555555555':'Ana malzeme — uzun Türkçe açıklama','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb':'Alternatif — Şişli yöresinden çok uzun açıklamalı malzeme adı','dddddddd-dddd-4ddd-8ddd-dddddddddddd':'İsteğe bağlı miktarsız alternatif'};
+}
 const item:RecipeSearchItem={id:recipe.id,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,
   createdAt:recipe.createdAt,updatedAt:recipe.updatedAt,organizationRevision:1,favorite:false,toTry:false,rating:null};
 const collection:RecipeCollection={id:collectionId,title:longTitle,revision:1,activeCount:1};
@@ -35,8 +39,8 @@ const foundation:FoundationClient={
   savePreferences:async preferences=>preferences,
 };
 const unsupported = async () => { throw new Error('Unsupported browser presentation fixture operation'); };
-const snapshot=()=>({formatVersion:1 as const,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
-const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
+const snapshot=()=>({formatVersion:(new URLSearchParams(location.search).has('alternatives')?2:1) as 1|2,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
+const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:new URLSearchParams(location.search).has('alternatives')?2:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
 const recipes: RecipeClient={
   links:async()=>({graphRevision:1,items:[{id:'88888888-8888-4888-8888-888888888888',title:'Uzun Türkçe üst tarif adı — '+longTitle,revision:1,status:'archived',relationship:'parent'}],total:1,hasMore:false}),createVariation:unsupported,setParent:async()=>null,setRelated:async()=>null,
   previewPurge:async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}}),purgeReviewed:async()=>null,
@@ -50,7 +54,7 @@ const recipes: RecipeClient={
   getDraft:unsupported,duplicate:unsupported,scope:unsupported,archive:unsupported,purge:unsupported,
   editIngredient:unsupported,deleteIngredient:unsupported,
   searchRecipes:async(search:RecipeSearchQuery)=>({items:search.scope==='active'?[search.limit===10?{...item,id:'99999999-9999-4999-8999-999999999999',title:'Etkin hedef tarif — '+longTitle}:item]:[],total:search.scope==='active'?1:0,hasMore:false,suggestions:[]}),
-  units:async()=>[{code:'g',dimension:'mass',canonicalCode:'g',factor:1}],
+  units:async()=>[{code:'g',dimension:'mass',canonicalCode:'g',factor:1},{code:'mL',dimension:'volume',canonicalCode:'mL',factor:1}],
   searchPersonal:async()=>({items:[],total:0,hasMore:false}),
   saveDraft:async(id:string,revision:number|null,input:RecipeInput)=>({id,revision:(revision??0)+1,recipeId:input.id,input,updatedAt:'now',ingredientNames:recipe.ingredientNames}),
   discardDraft:async()=>null,

@@ -8,8 +8,12 @@ fn digest(bytes: &[u8]) -> String {
 }
 pub(super) fn fingerprint(snapshot: &RecipeSnapshot) -> Result<String, AppError> {
     Ok(digest(
-        &serde_json::to_vec(&sorted_keys(snapshot.comparison_v1()))
-            .map_err(|_| AppError::integrity())?,
+        &serde_json::to_vec(&sorted_keys(if snapshot.format_version == 1 {
+            snapshot.comparison_v1()
+        } else {
+            snapshot.comparison_v2()
+        }))
+        .map_err(|_| AppError::integrity())?,
     ))
 }
 fn sorted_keys(value: serde_json::Value) -> serde_json::Value {
@@ -79,13 +83,13 @@ pub(super) fn read_version(
         format_version: i64,
         recipe_id: String,
     }
-    // Dispatch before strict V1 decoding, so a future format with new fields is
-    // a recoverable unsupported version, never silently narrowed to V1.
+    // Dispatch before strict supported-format decoding, so a future format with new fields is
+    // a recoverable unsupported version, never silently narrowed to a supported format.
     let header: Header = serde_json::from_str(&payload).map_err(|_| AppError::integrity())?;
     if header.format_version != summary.format_version || header.recipe_id != id {
         return Err(AppError::integrity());
     }
-    if header.format_version != 1 {
+    if ![1, 2].contains(&header.format_version) {
         return Err(AppError::new(
             "RECIPE_VERSION_UNSUPPORTED",
             "errors.recipeVersionUnsupported",
@@ -106,7 +110,7 @@ pub(super) fn read_version(
 
 pub(super) fn check_purge_format(conn: &Connection, id: &str) -> Result<(), AppError> {
     let unsupported: bool = conn.query_row(
-        "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE recipe_id=?1 AND format_version<>1)",
+        "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE recipe_id=?1 AND format_version NOT IN (1,2))",
         [id],
         |r| r.get(0),
     )?;
@@ -133,7 +137,16 @@ pub(super) fn capture_with_origin(
 ) -> Result<(), AppError> {
     let recipe = read_recipe(tx, id)?;
     let revision = recipe.revision;
-    let snapshot = RecipeSnapshot::from_recipe(recipe);
+    let mut snapshot = RecipeSnapshot::from_recipe(recipe);
+    // Migration010 runs before012 during old-profile initialization. Its honest
+    // baseline remains format1; no table or historical snapshot is back-edited.
+    if !tx.query_row(
+        "SELECT EXISTS(SELECT 1 FROM sqlite_master WHERE name='recipe_ingredient_alternatives')",
+        [],
+        |r| r.get::<_, bool>(0),
+    )? {
+        snapshot.format_version = 1;
+    }
     snapshot.validate()?;
     let hash = fingerprint(&snapshot)?;
     let latest = list_versions(tx, id, None, 1)?
@@ -141,7 +154,7 @@ pub(super) fn capture_with_origin(
         .map(|v| v.version_number);
     if let Some(version) = latest {
         // Validate retained bytes as well as the fingerprint before trusting a no-op.
-        if read_version(tx, id, version)?.summary.content_fingerprint == hash {
+        if read_version(tx, id, version)?.snapshot.comparison_v2() == snapshot.comparison_v2() {
             return Ok(());
         }
     }
@@ -160,7 +173,7 @@ pub(super) fn capture_with_origin(
     if payload.len() > MAX_SNAPSHOT_BYTES {
         return Err(invalid());
     }
-    tx.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot,restored_from_version) VALUES(?1,?2,1,?3,?4,?5,?6,?7,?8)",params![id,next,revision,provenance,hash,digest(payload.as_bytes()),payload,restored_from])?;
+    tx.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot,restored_from_version) VALUES(?1,?2,?9,?3,?4,?5,?6,?7,?8)",params![id,next,revision,provenance,hash,digest(payload.as_bytes()),payload,restored_from,snapshot.format_version])?;
     // SQL derives reference rows; reading immediately also verifies serialization.
     read_version(tx, id, next)?;
     Ok(())
@@ -292,8 +305,23 @@ impl super::Database {
                 ));
             }
         }
-        if fingerprint(&RecipeSnapshot::from_recipe(current.clone()))?
-            == selected.summary.content_fingerprint
+        for a in selected
+            .snapshot
+            .ingredients
+            .iter()
+            .flat_map(|l| &l.alternatives)
+        {
+            let valid:bool=tx.query_row("SELECT EXISTS(SELECT 1 FROM ingredients WHERE id=?1) AND (?2 IS NULL OR EXISTS(SELECT 1 FROM units WHERE code=?2))",params![a.ingredient_id,a.unit_code],|r|r.get(0))?;
+            if !valid {
+                return Err(AppError::new(
+                    "RECIPE_VERSION_REFERENCE",
+                    "errors.recipeVersionReference",
+                    true,
+                ));
+            }
+        }
+        if RecipeSnapshot::from_recipe(current.clone()).comparison_v2()
+            == selected.snapshot.comparison_v2()
         {
             return Ok(RestoreResult {
                 recipe: current,
@@ -326,7 +354,7 @@ impl super::Database {
 // Compare exact content plus captured labels. Arrays remain ordered; step links
 // use the frozen set-order projection. Private/lifecycle metadata never enters.
 fn comparison(snapshot: &RecipeSnapshot) -> serde_json::Value {
-    let mut value = snapshot.comparison_v1();
+    let mut value = snapshot.comparison_v2();
     value["ingredientNames"] =
         serde_json::to_value(&snapshot.ingredient_names).expect("string map");
     value

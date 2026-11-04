@@ -1,3 +1,8 @@
+## M5B-4 candidate — 2026-11-03
+
+- Add explicit line-owned ingredient alternatives with optional user-authored exact measurements, editable ordering and reviewed draft-only Use. Confirm owned line removal; preserve current data until deliberate Save.
+- Add schema012 and format2 committed history with frozen V1 compatibility, transactional aggregate reconstruction, draft/historical reference guards and independent duplicate/variation ID remapping. No catalog/app version change, conversion, media, merge or PO acceptance.
+
 
 
 ### M5B-1 engineering candidate — 2026-10-29

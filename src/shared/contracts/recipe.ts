@@ -14,6 +14,8 @@ export const unitSchema = z
 export const ingredientSchema = z
   .object({ id: z.uuid(), name: z.string().min(1).max(200) })
   .strict();
+export const alternativeSchema=z.object({id:z.uuid(),ingredientId:z.uuid(),quantity:decimalSchema.nullable(),unitCode:z.string().min(1).max(32).nullable()}).strict();
+export type IngredientAlternative=z.infer<typeof alternativeSchema>;
 export const lineSchema = z
   .object({
     id: z.uuid(),
@@ -21,6 +23,7 @@ export const lineSchema = z
     quantity: decimalSchema.nullable(),
     unitCode: z.string().min(1),
     note: z.string().max(2000).nullable(),
+    alternatives:z.array(alternativeSchema).max(10).optional(),
   })
   .strict();
 export const stepDetailsSchema = z.object({
@@ -64,6 +67,8 @@ export function stepDetailsIssues(d?: StepDetails) {
 }
 function validStepDetails(input: {steps: z.infer<typeof stepSchema>[]; ingredients: z.infer<typeof lineSchema>[]}) {
   const lines=new Set(input.ingredients.map(line=>line.id));
+  const ids=input.ingredients.flatMap(line=>[line.id,...(line.alternatives??[]).map(a=>a.id)]).concat(input.steps.map(s=>s.id));
+  if(new Set(ids).size!==ids.length || input.ingredients.reduce((n,l)=>n+(l.alternatives?.length??0),0)>1000 || input.ingredients.some(l=>{const a=l.alternatives??[];return new Set(a.map(a=>a.ingredientId)).size!==a.length || a.some(a=>a.ingredientId===l.ingredientId);}))return false;
   return input.steps.every(step=>{
     const ids=step.ingredientLineIds??[];
     const issues=stepDetailsIssues(step.details);
@@ -97,7 +102,7 @@ export const draftInputSchema = z.object({ ...fields, expectedRevision: z.number
   title: z.string().max(200),
   servings: z.string().max(100),
   ingredients: z
-    .array(lineSchema.extend({ quantity: z.string().max(100).nullable() }))
+    .array(lineSchema.extend({ quantity: z.string().max(100).nullable(),alternatives:z.array(alternativeSchema.extend({quantity:z.string().max(100).nullable()})).max(10).optional() }))
     .max(500),
   steps: z
     .array(
