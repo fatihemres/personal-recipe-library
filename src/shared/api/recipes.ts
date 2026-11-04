@@ -1,3 +1,4 @@
+import { convertFileSrc, isTauri } from '@tauri-apps/api/core';
 import { recipeLinksSchema,parentWriteSchema,relatedWriteSchema,purgePreviewSchema,reviewedPurgeSchema,type RecipeLinks,type ParentWrite,type RelatedWrite,type PurgePreview,type ReviewedPurge } from '../contracts/recipeRelations';
 import { versionSummarySchema, recipeVersionSchema, versionComparisonSchema, restoreVersionSchema, restoreResultSchema, type RecipeVersionSummary, type RecipeVersion, type VersionComparison, type RestoreVersion, type RestoreResult } from '../contracts/recipeHistory';
 import { z } from 'zod';
@@ -25,6 +26,8 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  pickCover(): Promise<{id:string;width:number;height:number}|null>;
+  coverUrl(id:string,variant:'thumb'|'preview'):string;
   links(id:string,offset:number,limit:number):Promise<RecipeLinks>;
   createVariation(id:string,revision:number):Promise<Recipe>;
   setParent(write:ParentWrite):Promise<null>;
@@ -91,6 +94,8 @@ export interface RecipeClient {
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
 export const recipeClient: RecipeClient = {
+  pickCover:()=>request('pick_recipe_cover',z.object({id:z.uuid(),width:z.number().int().positive().max(30000000),height:z.number().int().positive().max(30000000)}).strict().refine(v=>v.width*v.height<=30000000).nullable()),
+  coverUrl:(id,variant)=>{z.uuid().parse(id);z.enum(['thumb','preview']).parse(variant);const key=`${id}/${variant}`;return isTauri()?`${convertFileSrc(id,'recipe-media')}/${variant}`:`recipe-media://localhost/${key}`;},
   links:(id,offset,limit)=>request('recipe_links',recipeLinksSchema,{id:z.uuid().parse(id),offset:z.number().int().min(0).max(1000000).parse(offset),limit:z.number().int().min(1).max(100).parse(limit)}),
   createVariation:(id,revision)=>request('create_recipe_variation',recipeSchema,{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision)}),
   setParent:write=>request('set_variation_parent',z.null(),{write:parentWriteSchema.parse(write)}),

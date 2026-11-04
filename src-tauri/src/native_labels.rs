@@ -14,3 +14,6 @@ pub const FULLSCREEN: &str = "Tam ekran";
 pub const CLOSE: &str = "Pencereyi kapat";
 #[cfg(target_os = "macos")]
 pub const HIDE: &str = "Tarif Atlası’nı gizle";
+
+pub const COVER_TITLE: &str = "Tarif kapağı seçin — JPEG, PNG veya WebP";
+pub const COVER_FILTER: &str = "Görsel";

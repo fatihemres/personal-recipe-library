@@ -80,6 +80,6 @@ export class DraftSession {
 function independent(input: RecipeInput): RecipeInput {
   const ids=new Map(input.ingredients.map(line=>[line.id,crypto.randomUUID()]));
   return {...input,id:crypto.randomUUID(),expectedRevision:null,
-    ingredients:input.ingredients.map(line=>({...line,id:ids.get(line.id)!})),
+    ingredients:input.ingredients.map(line=>({...line,id:ids.get(line.id)!,alternatives:line.alternatives?.map(a=>({...a,id:crypto.randomUUID()}))})),
     steps:input.steps.map(step=>({...step,id:crypto.randomUUID(),ingredientLineIds:step.ingredientLineIds?.map(id=>ids.get(id)??id)}))};
 }

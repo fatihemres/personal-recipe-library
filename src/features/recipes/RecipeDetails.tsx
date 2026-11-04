@@ -1,9 +1,12 @@
+import { CoverImage } from './RecipeCover';
+import { recipeClient, type RecipeClient } from '../../shared/api/recipes';
 import type { Recipe } from '../../shared/contracts/recipe';
 import { alternativesTr as a } from '../../shared/i18n/ingredientAlternatives';
 import { recipesTr as t } from '../../shared/i18n/recipes';
-export function RecipeDetails({ recipe }: { recipe: Pick<Recipe, 'kind'|'servings'|'prepMinutes'|'cookMinutes'|'ingredients'|'ingredientNames'|'steps'|'notes'> }) {
+export function RecipeDetails({ recipe,client=recipeClient }: { client?:RecipeClient; recipe: Pick<Recipe, 'coverAssetId'|'kind'|'servings'|'prepMinutes'|'cookMinutes'|'ingredients'|'ingredientNames'|'steps'|'notes'> }) {
   return (
     <div className="panel recipe-form">
+      <CoverImage assetId={recipe.coverAssetId} variant="preview" client={client}/>
       <p>
         {recipe.kind === 'food' ? t.food : t.beverage} · {recipe.servings}{' '}
         {t.portions}

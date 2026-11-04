@@ -12,6 +12,7 @@ fn id() -> String {
 }
 fn recipe(ingredient_id: &str) -> RecipeInput {
     RecipeInput {
+        cover_asset_id: None,
         id: id(),
         expected_revision: None,
         title: "İçli köfte".into(),
@@ -271,7 +272,7 @@ fn schema_seven_upgrade_preserves_recipe_and_organization() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
     assert_eq!(
         db.recipe(&recipe_id).unwrap().ingredients[0]
             .quantity
@@ -298,7 +299,7 @@ fn schema_seven_upgrade_preserves_recipe_and_organization() {
         .is_none());
     drop(db);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
     assert_eq!(
         db.recipe(&recipe_id).unwrap().notes.as_deref(),
         Some("Tarihî not")

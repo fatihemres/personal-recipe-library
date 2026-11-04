@@ -17,6 +17,9 @@ fn close_draft(tx: &Transaction<'_>, id: &str, revision: i64) -> Result<(), AppE
             [id],
         )?;
     }
+    if super::media::available(tx)? {
+        tx.execute("DELETE FROM draft_media WHERE draft_id=?1", [id])?;
+    }
     Ok(())
 }
 impl Database {
@@ -135,6 +138,16 @@ impl Database {
                 "INSERT OR IGNORE INTO draft_ingredients(draft_id,ingredient_id) VALUES(?1,?2)",
                 params![write.id, a.ingredient_id],
             )?;
+        }
+        if super::media::available(&tx)? {
+            super::media::verify_cover(&tx, write.input.cover_asset_id.as_deref(), false)?;
+            tx.execute("DELETE FROM draft_media WHERE draft_id=?1", [&write.id])?;
+            if let Some(id) = &write.input.cover_asset_id {
+                tx.execute(
+                    "INSERT INTO draft_media(draft_id,asset_id) VALUES(?1,?2)",
+                    params![write.id, id],
+                )?;
+            }
         }
         tx.commit()?;
         self.draft(&write.id)
@@ -360,7 +373,7 @@ impl Database {
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
         // A future envelope may own references this reader cannot enumerate.
         if tx.query_row(
-            "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE format_version NOT IN (1,2))",
+            "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE format_version NOT IN (1,2,3))",
             [],
             |r| r.get::<_, bool>(0),
         )? {

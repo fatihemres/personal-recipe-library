@@ -209,11 +209,12 @@ impl Database {
     }
     fn dashboard_recent(&self, column: &str) -> Result<Vec<RecipeSearchItem>, AppError> {
         // Column is selected only from two internal literals; it never contains user input.
-        let sql=format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at,o.revision,o.favorite,o.to_try,o.rating FROM recipes r JOIN recipe_organization o ON o.recipe_id=r.id WHERE r.deleted_at IS NULL AND r.archived_at IS NULL ORDER BY r.{column} DESC,r.id LIMIT 5");
+        let sql=format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at,o.revision,o.favorite,o.to_try,o.rating,(SELECT asset_id FROM recipe_covers WHERE recipe_id=r.id) FROM recipes r JOIN recipe_organization o ON o.recipe_id=r.id WHERE r.deleted_at IS NULL AND r.archived_at IS NULL ORDER BY r.{column} DESC,r.id LIMIT 5");
         let mut stmt = self.conn.prepare(&sql)?;
         let rows = stmt
             .query_map([], |r| {
                 Ok(RecipeSearchItem {
+                    cover_asset_id: r.get(11)?,
                     id: r.get(0)?,
                     title: r.get(1)?,
                     description: r.get(2)?,

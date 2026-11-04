@@ -1,3 +1,10 @@
+## Unreleased — M5C-1 candidate (2026-11-04)
+
+- Optional offline recipe covers with native local selection, bounded JPEG/PNG/static-WebP decode, orientation/privacy sanitization, thumbnail/detail/history preview and draft-only changes until Save.
+- Forward-only schema13, immutable format3 cover UUID references, restart-reconciled media journal, reference-safe conservative retention and recoverable derivative cache. Historical snapshots/catalog unchanged.
+- Duplicate/Variation media sharing preserves independent associations; draft Save As New now also remaps ingredient-alternative UUIDs.
+- Local/native evidence and limitations: [M5C1_ACCEPTANCE.md](docs/M5C1_ACCEPTANCE.md). Candidate only, not PO accepted/integrated.
+
 ## M5B-4 candidate — 2026-11-03
 
 - Add explicit line-owned ingredient alternatives with optional user-authored exact measurements, editable ordering and reviewed draft-only Use. Confirm owned line removal; preserve current data until deliberate Save.

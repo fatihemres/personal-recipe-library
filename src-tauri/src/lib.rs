@@ -2,6 +2,7 @@ pub mod catalog_tool;
 mod commands;
 mod desktop_menu;
 mod domain;
+mod media;
 mod native_labels;
 mod persistence;
 mod services;
@@ -13,6 +14,48 @@ pub struct ExitPermission(pub std::sync::atomic::AtomicBool);
 pub fn run() {
     tauri::Builder::default()
         .manage(ExitPermission::default())
+        .manage(media::ImportGate::default())
+        .plugin(tauri_plugin_dialog::init())
+        .register_asynchronous_uri_scheme_protocol("recipe-media", |context, request, responder| {
+            let app = context.app_handle().clone();
+            let key = if context.webview_label() == "main"
+                && request.method() == tauri::http::Method::GET
+            {
+                media::request_key(request.uri())
+            } else {
+                Err(media::error("MEDIA_PATH"))
+            };
+            tauri::async_runtime::spawn(async move {
+                let result = match key {
+                    Ok((id, variant)) => {
+                        app.state::<services::StorageService>()
+                            .execute(move |d| d.media_bytes(&id, &variant))
+                            .await
+                    }
+                    Err(e) => Err(e),
+                };
+                let (status, body) = match result {
+                    Ok(bytes) => (200, bytes),
+                    Err(_) => (404, Vec::new()),
+                };
+                responder.respond(
+                    tauri::http::Response::builder()
+                        .status(status)
+                        .header("Content-Type", "image/png")
+                        .header("X-Content-Type-Options", "nosniff")
+                        .header(
+                            "Cache-Control",
+                            if status == 200 {
+                                "private, max-age=3600, immutable"
+                            } else {
+                                "no-store"
+                            },
+                        )
+                        .body(body)
+                        .expect("static media response"),
+                );
+            });
+        })
         .on_menu_event(|app, event| {
             if event.id().as_ref() == desktop_menu::SAFE_QUIT_ID {
                 let _ = app.emit("request-exit", ());
@@ -41,6 +84,7 @@ pub fn run() {
         })
         .invoke_handler(tauri::generate_handler![
             commands::bootstrap,
+            commands::pick_recipe_cover,
             commands::recipe_links,
             commands::create_recipe_variation,
             commands::set_variation_parent,

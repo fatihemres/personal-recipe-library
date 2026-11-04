@@ -65,3 +65,11 @@ Statuses: **ACCEPTED (PO)**, **ESTABLISHED (repo policy)**, **PROPOSED**, **OPEN
 - State source (PO message, issue, PR or doc). Record unknown date as unknown.
 - Project proposals, AI suggestions and research hypotheses belong in [IDEA_REGISTER.md](IDEA_REGISTER.md) until a binding decision is made.
 - Keep detailed validation in [VERIFICATION.md](VERIFICATION.md), milestones in [ROADMAP.md](ROADMAP.md), and historical narrative in [PROJECT_PROGRESS.md](PROJECT_PROGRESS.md).
+
+## M5C-1 implementation decision (2026-11-04)
+
+**Chronology:** DEC-031/032/033 belong to the separate, unmerged documentation PR #32. They are intentionally not duplicated or claimed integrated here.
+
+| ID | Source | Status | Decision |
+| --- | --- | --- | --- |
+| DEC-034 | PO explicit M5C-1 coding authorization in Issue33 and Issue31; this engineering implementation | IMPLEMENTED candidate; design subject to independent review, not PO_ACCEPTED/INTEGRATED | One optional cover, Rust-only picker, bounded static JPEG/PNG/WebP decode, oriented metadata-free 8-bit PNG copies, no source path persistence. Forward-only013 and format3 UUID references preserve frozen1/2 history and catalog. Ready immutable media are shared by independent Duplicate/Variation; staged journal finalizes files before ready SQLite references and reconciles interruptions. No physical asset GC: canceled/superseded/finalized assets are retained; known failed staging and reproducible derivative cache alone may be cleaned. Missing original remains a recoverable error. ICC/high-bit-depth fidelity and complete M9 portable backup are not implemented. Existing draft/CAS/history/exit safeguards remain, including blocking exit while picker/import runs. Details/evidence in docs/M5C1_ACCEPTANCE.md. No step photos, conversions, merge/tag/release or milestone acceptance authorized. |

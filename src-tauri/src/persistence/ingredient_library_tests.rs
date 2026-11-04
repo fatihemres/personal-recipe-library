@@ -166,6 +166,7 @@ fn category_edit_keeps_saved_recipe_reference_and_exact_quantity_after_restart()
     let own = db.create_ingredient("Deneme kategori otu").unwrap();
     let saved = db
         .save_recipe(RecipeInput {
+            cover_asset_id: None,
             id: uuid::Uuid::new_v4().to_string(),
             expected_revision: None,
             title: "Kategori bağlantısı".into(),
@@ -359,6 +360,7 @@ fn library_details_and_personal_edit_preserve_recipe_draft_and_restart() {
     assert_eq!(builtin.dimensions, vec!["mass"]);
     let own = db.create_ingredient("Iğdır karışımım").unwrap();
     let input = RecipeInput {
+        cover_asset_id: None,
         id: uuid::Uuid::new_v4().to_string(),
         expected_revision: None,
         title: "Kütüphane tarifi".into(),
@@ -545,6 +547,7 @@ fn favorites_recent_overrides_and_aliases_survive_restart_without_mutating_catal
         Some("Ev tatlısı")
     );
     let mut recipe = RecipeInput {
+        cover_asset_id: None,
         id: uuid::Uuid::new_v4().to_string(),
         expected_revision: None,
         title: "Tarif".into(),
@@ -649,6 +652,7 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
     let mut db = Database { conn };
     let ingredient = db.create_ingredient("Ev salçası").unwrap();
     let input = RecipeInput {
+        cover_asset_id: None,
         id: uuid::Uuid::new_v4().to_string(),
         expected_revision: None,
         title: "Eski tarif".into(),
@@ -671,7 +675,7 @@ fn version_four_upgrade_and_relevance_keep_existing_recipe_and_distinct_suggesti
     super::tests::insert_legacy_recipe(&db.conn, &input);
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
     assert_eq!(
         db.recipe(&input.id).unwrap().ingredients[0]
             .quantity

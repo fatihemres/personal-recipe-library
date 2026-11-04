@@ -27,8 +27,11 @@ if(new URLSearchParams(location.search).has('alternatives')){
  recipe.ingredients=[{id:'44444444-4444-4444-8444-444444444444',ingredientId:'55555555-5555-4555-8555-555555555555',quantity:'1.250',unitCode:'g',note:null,alternatives:[{id:'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',ingredientId:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',quantity:'0.123456',unitCode:'mL'},{id:'cccccccc-cccc-4ccc-8ccc-cccccccccccc',ingredientId:'dddddddd-dddd-4ddd-8ddd-dddddddddddd',quantity:null,unitCode:null}]},{id:'12121212-1212-4212-8212-121212121212',ingredientId:'55555555-5555-4555-8555-555555555555',quantity:null,unitCode:'g',note:'İkinci bağımsız satır'}];
  recipe.ingredientNames={'55555555-5555-4555-8555-555555555555':'Ana malzeme — uzun Türkçe açıklama','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb':'Alternatif — Şişli yöresinden çok uzun açıklamalı malzeme adı','dddddddd-dddd-4ddd-8ddd-dddddddddddd':'İsteğe bağlı miktarsız alternatif'};
 }
+const mediaFixture=new URLSearchParams(location.search).has('media');
+const coverA='abababab-abab-4bab-8bab-abababababab',coverB='bcbcbcbc-bcbc-4cbc-8cbc-bcbcbcbcbcbc';
+if(mediaFixture)recipe.coverAssetId=coverA;
 const item:RecipeSearchItem={id:recipe.id,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,
-  createdAt:recipe.createdAt,updatedAt:recipe.updatedAt,organizationRevision:1,favorite:false,toTry:false,rating:null};
+  coverAssetId:recipe.coverAssetId,createdAt:recipe.createdAt,updatedAt:recipe.updatedAt,organizationRevision:1,favorite:false,toTry:false,rating:null};
 const collection:RecipeCollection={id:collectionId,title:longTitle,revision:1,activeCount:1};
 const query:RecipeSearchQuery={text:'',scope:'active',kind:null,ingredientId:null,favoriteOnly:false,toTryOnly:false,
   collectionId:null,createdFrom:null,createdTo:null,modifiedFrom:null,modifiedTo:null,sort:'modified',offset:0,limit:24};
@@ -39,9 +42,10 @@ const foundation:FoundationClient={
   savePreferences:async preferences=>preferences,
 };
 const unsupported = async () => { throw new Error('Unsupported browser presentation fixture operation'); };
-const snapshot=()=>({formatVersion:(new URLSearchParams(location.search).has('alternatives')?2:1) as 1|2,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
+const snapshot=()=>({formatVersion:(mediaFixture?3:new URLSearchParams(location.search).has('alternatives')?2:1) as 1|2|3,coverAssetId:recipe.coverAssetId,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
 const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:new URLSearchParams(location.search).has('alternatives')?2:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
 const recipes: RecipeClient={
+ pickCover:async()=>({id:coverB,width:384,height:240}),coverUrl:(id,variant)=>`/tests/ui/${id===coverB?'cover-fixture-2.png':'cover-fixture.png'}?variant=${variant}`,
   links:async()=>({graphRevision:1,items:[{id:'88888888-8888-4888-8888-888888888888',title:'Uzun Türkçe üst tarif adı — '+longTitle,revision:1,status:'archived',relationship:'parent'}],total:1,hasMore:false}),createVariation:unsupported,setParent:async()=>null,setRelated:async()=>null,
   previewPurge:async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}}),purgeReviewed:async()=>null,
   versions:async()=>[summary(2),summary(1)],
@@ -58,7 +62,7 @@ const recipes: RecipeClient={
   searchPersonal:async()=>({items:[],total:0,hasMore:false}),
   saveDraft:async(id:string,revision:number|null,input:RecipeInput)=>({id,revision:(revision??0)+1,recipeId:input.id,input,updatedAt:'now',ingredientNames:recipe.ingredientNames}),
   discardDraft:async()=>null,
-  commit:async(input:RecipeInput)=>({...recipe,...input,revision:2}),
+  commit:async(input:RecipeInput)=>{if(mediaFixture){recipe.coverAssetId=input.coverAssetId;item.coverAssetId=input.coverAssetId;}return {...recipe,...input,revision:2};},
   drafts:async()=>[], collections:async()=>[collection], savedFilters:async()=>filters,
   get:async(id)=>({...recipe,id,title:id===recipeId?recipe.title:'Hedef tarif'}), getOrganization:async()=>({recipeId,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]}),
   getPrivateNote:async()=>({recipeId,formatVersion:1 as const,markdown:Array.from({length:70},(_,i)=>`## Uzun not satırı ${i+1}`).join('\n'),revision:1,updatedAt:'2026-10-23T12:00:00Z'}),

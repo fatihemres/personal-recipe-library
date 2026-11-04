@@ -18,7 +18,7 @@ export const recipeSearchQuerySchema = z.object({
 }).strict();
 
 export const recipeSearchItemSchema = z.object({
-  id: z.uuid(), title: z.string(), description: z.string().nullable(),
+  coverAssetId:z.uuid().nullable().optional(), id: z.uuid(), title: z.string(), description: z.string().nullable(),
   kind: z.enum(['food', 'beverage']), servings: z.string(),
   createdAt: z.string(), updatedAt: z.string(),
   organizationRevision: z.number().int().positive(), favorite: z.boolean(),

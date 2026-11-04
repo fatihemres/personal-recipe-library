@@ -46,6 +46,7 @@ export const stepSchema = z
   .object({ ...stepFields, instructions: z.string().trim().min(1).max(10000) })
   .strict();
 const fields = {
+  coverAssetId: z.uuid().nullable().optional(),
   id: z.uuid(),
   title: z.string().trim().min(1).max(200),
   description: z.string().max(10000).nullable(),

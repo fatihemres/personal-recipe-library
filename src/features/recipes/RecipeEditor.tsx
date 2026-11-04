@@ -1,3 +1,4 @@
+import { RecipeCoverEditor } from './RecipeCover';
 import { useEffect, useRef, useState } from 'react';
 import type { RecipeClient } from '../../shared/api/recipes';
 import { normalizeError } from '../../shared/api/client';
@@ -25,18 +26,21 @@ export function RecipeEditor({
   onSaved,
   onCancel,
   recovered,
+  registerLeaveGuard,
 }: {
   recipe: Recipe | null;
   client: RecipeClient;
   onSaved: (recipe: Recipe) => void;
   onCancel: () => void;
   recovered?: Draft;
+  registerLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void;
 }) {
   const [draft, setDraft] = useState<RecipeInput>(
     () =>
       recovered?.input ??
       (recipe
         ? {
+            coverAssetId: recipe.coverAssetId,
             id: recipe.id,
             expectedRevision: recipe.revision,
             title: recipe.title,
@@ -65,7 +69,14 @@ export function RecipeEditor({
   );
   const initial = useRef(JSON.stringify(draft));
   const dirty = !!recovered || JSON.stringify(draft) !== initial.current;
-  const durable = useDurableDraft(client, draft, dirty, recovered);
+  const mediaPending=useRef(false);
+  const [mediaBusy,setMediaBusy]=useState(false);
+  const durable = useDurableDraft(client, draft, dirty, recovered,()=>{if(mediaPending.current)throw {code:'MEDIA_BUSY',messageKey:'errors.mediaBusy',recoverable:true};});
+  const flushDraft=durable.flush;
+  useEffect(()=>{
+    registerLeaveGuard?.(async()=>{try{await flushDraft();return true;}catch(e){setError(errorMessage(normalizeError(e).messageKey));return false;}});
+    return()=>registerLeaveGuard?.(null);
+  },[registerLeaveGuard,flushDraft]);
   const [names, setNames] = useState<Record<string, string>>(
     recovered?.ingredientNames ?? recipe?.ingredientNames ?? {},
   );
@@ -97,6 +108,7 @@ export function RecipeEditor({
     setDraft((d) => ({ ...d, [key]: value }));
   }
   async function save(asCopy = false) {
+    if (mediaPending.current) {setError(errorMessage('errors.mediaBusy'));return;}
     if (pending.current) return;
     const parsed = recipeInputSchema.safeParse(draft);
     if (!parsed.success) {
@@ -123,6 +135,7 @@ export function RecipeEditor({
     }
   }
   async function leave(erase: boolean) {
+    if (mediaPending.current) {setError(errorMessage('errors.mediaBusy'));return;}
     if (pending.current) return;
     pending.current = true;
     setSaving(true);
@@ -215,7 +228,7 @@ export function RecipeEditor({
       {latestSaved && (
         <details open>
           <summary>{t.viewLatest}</summary>
-          <RecipeDetails recipe={latestSaved} />
+          <RecipeDetails client={client} recipe={latestSaved} />
         </details>
       )}
       <form
@@ -226,9 +239,10 @@ export function RecipeEditor({
         }}
       >
         <fieldset
-          disabled={saving || durable.closing}
+          disabled={saving || durable.closing || mediaBusy}
           className="recipe-fieldset"
         >
+          <RecipeCoverEditor assetId={draft.coverAssetId} client={client} onChange={id=>update('coverAssetId',id)} onBusy={busy=>{mediaPending.current=busy;setMediaBusy(busy);}} />
           <div className="panel recipe-form">
             <label>
               {t.title}
