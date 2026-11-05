@@ -76,6 +76,7 @@ impl RecipeSearchQuery {
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct RecipeSearchItem {
+    pub cover_asset_id: Option<String>,
     pub id: String,
     pub title: String,
     pub description: Option<String>,

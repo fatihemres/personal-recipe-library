@@ -1,3 +1,7 @@
+## M5C-1 engineering candidate — 2026-11-04
+
+[Issue #33](https://github.com/fatihemres/personal-recipe-library/issues/33) explicitly authorizes **M5C-1 coding only**. Verified base `1ff2aeb0a00780a128d81844fd5760694780df77`; existing branch `feature/m5c1-recipe-cover-media`. IMPLEMENTED, locally VERIFIED as recorded in [M5C1_ACCEPTANCE.md](M5C1_ACCEPTANCE.md); **not INTEGRATED or PO_ACCEPTED**. Optional offline cover import/edit/durable draft, bounded native decoding and metadata stripping, thumbnails, format-3 history/restore and shared immutable media are implemented. Integrated schema12 remains the main baseline; candidate adds forward-only013/schema13. Migrations001–012, historical1/2 snapshots, Catalog11 (854/269/50), app0.1.0 and production identifier remain unchanged. No normal-profile access, merge/tag/release or M5C-2 authorization. PR #32 remains separate and unmerged; its DEC-031/032/033 IDs remain reserved. Historical checkpoint statements below retain their dates, not current coding authorization.
+
 > **Status clarification, 2026-10-23:** The old opening status is historical. Current verified shipping structure includes M4A's SQLite FTS5 search and schema 6. This document contains implemented design boundaries **and** future proposed entities; check actual code/migrations and [PROJECT_STATUS.md](../PROJECT_STATUS.md) before claiming features exist. No architecture redesign is implied.
 
 # Architecture

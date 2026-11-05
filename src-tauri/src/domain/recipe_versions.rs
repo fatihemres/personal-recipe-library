@@ -1,5 +1,5 @@
-//! Format-dispatched content envelope (frozen V1, alternatives in V2). Future formats may introduce stable media asset
-//! IDs, never absolute paths; old payloads remain immutable and format-dispatched.
+//! Format-dispatched content: frozen V1, alternatives in V2, stable cover UUIDs in V3.
+//! No absolute media paths or bytes; older payloads and fingerprints remain immutable.
 use super::{recipes::*, AppError};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
@@ -9,6 +9,8 @@ pub const MAX_SNAPSHOT_BYTES: usize = 128 * 1024 * 1024;
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RecipeSnapshot {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cover_asset_id: Option<String>,
     pub format_version: i64,
     pub recipe_id: String,
     pub recipe_created_at: String,
@@ -45,8 +47,8 @@ impl RecipeSnapshot {
             "prepMinutes":self.prep_minutes,"cookMinutes":self.cook_minutes,"notes":self.notes,
             "ingredients":ingredients,"steps":steps})
     }
-    /// V2 is also the semantic cross-format comparison projection: V1 has no
-    /// alternatives, while old serialized bytes/fingerprint remain frozen.
+    /// Frozen V2 projection: V1 has no alternatives. New media belongs only
+    /// to V3, leaving old serialized bytes/fingerprints unchanged.
     pub(crate) fn comparison_v2(&self) -> serde_json::Value {
         let mut value = self.comparison_v1();
         value["formatVersion"] = serde_json::json!(2);
@@ -56,9 +58,16 @@ impl RecipeSnapshot {
         }
         value
     }
+    pub(crate) fn comparison_v3(&self) -> serde_json::Value {
+        let mut value = self.comparison_v2();
+        value["formatVersion"] = serde_json::json!(3);
+        value["coverAssetId"] = serde_json::json!(self.cover_asset_id);
+        value
+    }
     pub fn from_recipe(recipe: Recipe) -> Self {
         Self {
-            format_version: 2,
+            format_version: 3,
+            cover_asset_id: recipe.cover_asset_id,
             recipe_id: recipe.id,
             recipe_created_at: recipe.created_at,
             title: recipe.title,
@@ -81,6 +90,7 @@ impl RecipeSnapshot {
             step.ingredient_line_ids.sort();
         }
         RecipeInput {
+            cover_asset_id: self.cover_asset_id.clone(),
             id: self.recipe_id.clone(),
             expected_revision: None,
             title: self.title.clone(),
@@ -95,7 +105,7 @@ impl RecipeSnapshot {
         }
     }
     pub fn validate(&self) -> Result<(), AppError> {
-        if ![1, 2].contains(&self.format_version) {
+        if ![1, 2, 3].contains(&self.format_version) {
             return Err(AppError::new(
                 "RECIPE_VERSION_UNSUPPORTED",
                 "errors.recipeVersionUnsupported",
@@ -103,6 +113,9 @@ impl RecipeSnapshot {
             ));
         }
         if self.format_version == 1 && self.ingredients.iter().any(|i| !i.alternatives.is_empty()) {
+            return Err(invalid());
+        }
+        if self.format_version < 3 && self.cover_asset_id.is_some() {
             return Err(invalid());
         }
         self.content().validate()?;

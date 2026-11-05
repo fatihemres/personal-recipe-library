@@ -6,6 +6,7 @@ fn id() -> String {
 }
 fn input(ingredient: &Ingredient) -> RecipeInput {
     RecipeInput {
+        cover_asset_id: None,
         id: id(),
         expected_revision: None,
         title: "Şekerli içecek".into(),
@@ -358,11 +359,11 @@ fn m2a_migration_preserves_records_decimal_values_settings_and_checksums() {
                 .as_deref(),
             Some("35.000001")
         );
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 12);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
         assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
         assert_eq!(
             migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-            12
+            13
         );
     }
 }

@@ -1,3 +1,4 @@
+import { mediaTr } from '../../shared/i18n/media';
 import { useEffect, useRef, useState } from 'react';
 import type { Recipe } from '../../shared/contracts/recipe';
 import type { RecipeVersion, RecipeVersionSummary, VersionComparison } from '../../shared/contracts/recipeHistory';
@@ -46,8 +47,9 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
    {selected&&<section aria-label={t.selected} className="history-preview">
     <h3>V{selected.summary.versionNumber} · {selected.snapshot.title}</h3>
     {selected.snapshot.formatVersion===1&&<p>{t.legacyAlternatives}</p>}
+    {selected.snapshot.formatVersion<3&&recipe.coverAssetId&&<p>{mediaTr.legacy}</p>}
     {selected.snapshot.description&&<p className="preserve-text">{selected.snapshot.description}</p>}
-    <RecipeDetails recipe={selected.snapshot}/>
+    <RecipeDetails client={client} recipe={selected.snapshot}/>
     <details><summary>{t.identities}</summary><ul className="history-identities">{selected.snapshot.ingredients.map((line,i)=><li key={line.id}>{t.line} {i+1}: <code>{line.id}</code> · <code>{line.ingredientId}</code>{!!line.alternatives?.length&&<ul>{line.alternatives.map(a=><li key={a.id}>{t.fields.alternatives}: <code>{a.id}</code> · <code>{a.ingredientId}</code></li>)}</ul>}</li>)}{selected.snapshot.steps.map((step,i)=><li key={step.id}>{t.step} {i+1}: <code>{step.id}</code></li>)}</ul></details>
     <div className="history-controls">
      <label>{t.compareWith}<select value={target} disabled={busy} onChange={e=>{setTarget(e.target.value);setComparison(null);}}><option value="current">{t.current}</option>{rows.map(row=><option key={row.versionNumber} value={row.versionNumber}>V{row.versionNumber}</option>)}</select></label>

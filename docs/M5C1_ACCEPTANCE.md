@@ -1,0 +1,110 @@
+# M5C-1 — Cover media acceptance and engineering evidence
+
+## Candidate and authority
+
+2026-11-04 engineering candidate on `feature/m5c1-recipe-cover-media`, based on verified protected main `1ff2aeb0a00780a128d81844fd5760694780df77`. [Issue #33](https://github.com/fatihemres/personal-recipe-library/issues/33) authorizes **M5C-1 coding only**, under the [Issue #31 product decisions](https://github.com/fatihemres/personal-recipe-library/issues/31). IMPLEMENTED and locally VERIFIED as specified below; **not INTEGRATED or PO_ACCEPTED**. The feature PR is the authoritative exact-head CI/artifact receipt. No merge, tag or release permission.
+
+Separate documentation PR #32 remains unmerged and untouched. Its DEC-031/032/033 identifiers are reserved; DEC-034 records this implementation without pretending that PR's text is integrated. App version **0.1.0**, Catalog Release **11 (854 ingredients, 269 aliases, 50 categories)** and production identifier remain unchanged. Candidate schema **13**, content snapshot format **3**. Step photos remain M5C-2; no online media, conversions or automatic destructive GC.
+
+## Delivered behavior
+
+One optional recipe cover: native local selection, add/replace/remove and preview in the editor; lazy thumbnails in card/list results, larger detail/history preview. Selection changes only the durable draft; separate Save commits. Picker cancellation leaves state intact. Save/Cancel/leave/Cmd-Q do not race an in-flight import. Existing drafts without the new optional UUID still decode. Missing media shows a recoverable placeholder/retry instead of erasing the association.
+
+Current recipe, draft and history reference stable asset UUIDs. Duplicate and Variation share immutable bytes but own independent recipe associations and V1 histories. Duplicate retains its established private-note copy behavior; Variation starts without private Markdown or organization. Archive/Trash/restoration preserve images. Reviewed target-only purge removes owned references, **never media files or another recipe**.
+
+A regression found in the existing Save As New renderer fallback remapped lines/steps but retained alternative UUIDs. The minimal fix also remaps alternative UUIDs; it continues sharing cover UUIDs. It is covered in the existing DraftSession test, not a new duplication policy.
+
+## Schema and frozen history
+
+Forward-only `013_recipe_cover_media.sql`, SHA-256 `747de18a395f72d25c2cdd584b371f6b5ac77e4e96f1eebfa09df3447c6598b6`, adds:
+
+- `media_assets`: writing/ready/failed import journal and bounded checksummed manifest; ready identities immutable, deletion prohibited.
+- `recipe_covers`: optional one-per-recipe association.
+- `draft_media`: owned active draft reference, synchronized in draft CAS transactions.
+- `recipe_version_media`: immutable historical cover reference, snapshot-derived and retained until owned recipe purge.
+
+References require ready assets and use restrictive media FKs. Migration 013 extends alternative-history capture/validation for format 3 without altering migration 012 or old records. All migrations 001–012 and catalog assets remain byte-for-byte unchanged. Existing profiles get the normal pre-migration SQLite snapshot; **that snapshot alone is not a complete portable media backup**. Older schema-12 binaries cannot open schema 13; Git rollback does not downgrade data.
+
+Format-1 and format-2 serialized bytes, checksums and fingerprint projections are frozen. New captures use format 3 with `coverAssetId`; formats 1/2 have no cover. Mixed-format semantic comparison prevents format-only/no-op versions. Restoring an old coverless snapshot explicitly clears the current cover after confirmation, without deleting its retained asset/history. Unsupported future formats reject safely. New history never embeds image bytes or source paths. Save/restore validate ready metadata and required files before committing current content and exactly one meaningful content version; draft closure stays atomic.
+
+## Filesystem transaction and restart model
+
+SQLite and filesystem are **not one transaction**:
+
+1. Reserve a `writing` UUID journal row.
+2. Validate/decode the selected read-only source, create private staging files, bounded PNG variants and SHA-256 manifest; sync bytes.
+3. Save the manifest to the journal; atomically rename the complete staged directory to its fixed final location.
+4. Mark `ready` in SQLite. Only ready assets can enter committed/draft/history associations.
+
+Startup reconciles writing rows in bounded 64-row keyset batches: complete checked staging/finalized assets finish; incomplete unreferenceable staging becomes failed. A failed SQLite final commit leaves a recoverable journal instead of deleting finalized files. No source path is stored. Ready assets remain immutable. A known complete staging folder can recover an interrupted rename. Missing/corrupt regular thumbnail/preview files regenerate from the verified normalized original into a separate cache only when regenerated bytes match the immutable manifest; symlink repair is rejected. No source re-download occurs. Missing originals cause recoverable media errors, not catalog/bootstrap failure or fabricated replacement.
+
+All finalized assets, including canceled or superseded imports, are conservatively retained. Each explicit import gets a new UUID; no automatic deduplication, pruning, per-version deletion or physical asset GC. Only provably failed incomplete staging and known replaceable derivative cache files are cleaned. Disk use can therefore grow; a future explicit cleanup feature needs a separately reviewed reference-safe policy.
+
+## Security, formats and privacy
+
+- Rust-only native picker; command accepts no renderer path. No renderer SQL, arbitrary reads, JS dialog/fs permissions, or broad app-data asset scope. Existing capability stays `core:default`.
+- Actual magic/decoder validation for static JPEG/PNG/WebP. Input <= **20,000,000 bytes**, decoded <= **30,000,000 pixels**, decoder allocation budget **128 MiB**, one global import/picker gate. High-bit-depth inputs can hit the allocation budget below 30 MP and fail clearly.
+- Structural checks reject truncation, APNG/animated WebP and unsupported HEIC/HEIF. Wrong extensions do not establish format. Read-only user original remains untouched.
+- EXIF orientation applied, output reencoded as metadata-free 8-bit RGBA PNG; transparency preserved. GPS/EXIF and source ICC profile are not copied. **Color management, HDR/high-bit-depth precision and exact color fidelity are not guaranteed**; the UI discloses this. App-owned `original.png` means the sanitized full-resolution copy, not byte-identical user source.
+- Normalized full copy <=128,000,000 bytes; preview <=7,000,000 bytes/1280 edge; thumbnail <=700,000 bytes/384 edge. Small images may be upscaled by the fixed variant algorithm; these are upper bounds, not storage-size promises.
+- UUID-derived relative keys only: `media-v1/assets/{uuid}/{original,preview,thumb}.png`. No filenames/source paths in versions or logs. Symlink/reparse, traversal, special-file and Windows network/device path checks; Unix O_NOFOLLOW plus identity checks. Only macOS's standard /tmp and /var root aliases are accepted. Local same-user hostile filesystem mutation remains outside a hardened OS sandbox guarantee.
+- A fixed-key custom `recipe-media` protocol serves only thumb/preview to the main WebView; UUID/variant/method/host checks, PNG/nosniff, no arbitrary paths. Windows host mapping is covered by a contract test and native CI compilation; Windows GUI remains a separate gate.
+
+New pinned dependencies: `image 0.25.10` (MIT/Apache-2.0; only JPEG/PNG/WebP), `tauri-plugin-dialog 2.8.4` (MIT/Apache-2.0), direct Unix `libc 0.2.190` already present transitively. Dialog uses `rfd 0.17.2` (MIT) and brings the Tauri fs crate transitively without granting fs commands. Image dependencies include BSD-3-Clause/Apache-2.0 `moxcms`/`pxfm` and permissive image codecs. Existing Tauri plugin constraints require lockfile-only `tauri-utils 2.10.2` and `swift-rs 1.0.9`; attempting to retain swift-rs 1.0.8 failed the ^1.0.9 requirement. The package includes `resources/MEDIA_THIRD_PARTY_NOTICES.txt` with pinned-version license texts and source/file hashes; this incremental notice is not completion of historical rights Issue #12. No JavaScript dependency, app version, signing policy or catalog source change. Synthetic test images are project-authored; no external photos copied. Official implementation references: [Rust dialog](https://v2.tauri.app/plugin/dialog/), [image decoder limits](https://docs.rs/image/0.25.10/image/struct.Limits.html).
+
+## Executed local verification
+
+Commands run in the isolated feature worktree; output receipts are under `/private/tmp/m5c1-*.log` (local ephemeral evidence, not committed user data).
+
+| Command/check | Actual result |
+| --- | --- |
+| `npm run typecheck`, `npm run lint` | PASS |
+| `npm test -- --maxWorkers=2` | **103 PASS / 29 files**; full suite, bounded local workers |
+| Default `npm test` | Earlier 103 PASS; later unrestricted local runs had 7 then 8 timing failures (5-second callbacks; high concurrent jsdom/host load). No assertions/timeouts weakened. Standard command remains in PR CI; its exact-head result is authoritative for CI. |
+| `npm run test:ui` after final padding correction | **14 PASS**, 6.9 s |
+| `npm run build` | PASS; final isolated Tauri build also rebuilt production frontend |
+| `cargo test --locked --manifest-path src-tauri/Cargo.toml` | **162 PASS**, includes **17 media SQLite/filesystem tests**; no failures |
+| `cargo fmt --manifest-path src-tauri/Cargo.toml -- --check` | PASS |
+| `cargo check --locked --manifest-path src-tauri/Cargo.toml` | PASS |
+| `cargo clippy --locked --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings` | PASS |
+| Existing seven Python catalog test suites | **35 PASS** |
+| CI catalog generators, quality/source/checksum `--check` commands, version consistency | PASS; 0.1.0 consistent |
+| Rebuilt Rust catalog importer + `tools/verify_catalog_installation.py` | **29 actual SQLite imports/opens PASS**; this run did not deny networking |
+| `npm run tauri -- build --config /private/tmp/m5c1-verification-config.json --bundles app --no-sign -- --locked` | Apple Silicon production `.app` PASS; isolated config below |
+
+Media tests cover source format/Unicode/alpha/EXIF orientation and metadata stripping, actual 30 MP input, caps/truncation/unsupported/animated input, path/symlink/protocol guards, import gate, schema12→13 and old1/2 byte preservation, exact decimal quantities/alternatives/drafts, Save/no-op/reorder/restore, duplicate/variation/lifecycle/purge, shared historical assets, two-connection stale CAS, injected snapshot/draft-close/finalize failures, interrupted journal phases, cache repair and restart. SQLite integrity/FKs are checked in disposable databases. Browser clients are mocked typed clients; they **do not prove SQLite durability**.
+
+### Layout evidence
+
+Actual React/CSS browser matrix: widths **520, 640, 768, 1024, 1440, 1920 CSS px**, height600 at520 and900 otherwise, light/dark. Images/actions stay inside panels, no horizontal document overflow, previews <=50vh, keyboard replace and save/cancel semantics work. Four cover screenshots (520/1440 both themes) were opened and visually inspected. Existing workspace, steps, alternatives, history and relations browser regressions also passed. Narrow screenshots include the focused global skip link; this is not part of the cover controls. Native final padding correction was visually inspected at the default **1120×800 logical /2240×1600 Retina capture**, dark theme; native resizing and light theme were **not** retested. Browser screenshots are not native WebView acceptance.
+
+### Bounded resource observation
+
+Debug test process imported one generated 6000×5000 (30 MP), 591,372-byte PNG. Import measured **23,986 ms** under concurrent local validation; `/usr/bin/time -l` whole-test wall28.88 s, max RSS **441,090,048 bytes (~420.66 MiB)**, peak footprint428,852,112 bytes, zero swaps. Includes test fixture/Tauri/debug allocator overhead, not release-app baseline or a universal latency/peak bound. Decoder budget and one-import gate are deterministic limits; this is not a memory-leak-free claim or comprehensive image/performance campaign.
+
+## Actual isolated native evidence
+
+Installed bundle: `/Users/boragencgoz/Applications/Tarif Atlasi M5C1 Verification.app`.
+
+Verified CFBundleIdentifier **`com.recipeatlas.m5c1verification`**, app0.1.0; runtime profile **`~/Library/Application Support/com.recipeatlas.m5c1verification/library.sqlite3`**. Profile did not exist before the first launch. No normal or retained earlier acceptance profile was opened. The final corrected bundle was installed over this same test bundle while preserving its test data, relaunched, editor preview/padded actions visually inspected, then Cmd-Q closed it.
+
+Actual GUI: unsupported HEIC error; synthetic PNG selection/preview; unsaved imported cover persisted through full Cmd-Q/relaunch/recovery; explicit Save V1; no-op Save still V1; native picker Cancel unchanged; second cover draft-only until Save V2; history preview/comparison and restore V1→V3 restored; favorite/private Markdown persistence; Variation and Duplicate; archive/unarchive, Trash/restore; draft cover removal, keep editing and discard preserving committed cover. **No native permanent purge, metadata-rich real-camera photograph or Windows/Intel GUI claim**. Source fixtures were authored synthetic images, not personal photos.
+
+Read-only final receipt: schema13 ledger checksum matches migration; Catalog854/269, integrity `ok`, zero FK violations. Three independent test recipes share ready coverA: source has V1 created/revision1, V2 edited/revision3 (coverB), V3 restored/revision4/fromV1 (coverA); copy and variation each have independent V1 created. **All five snapshot checksums valid**, source V1 bytes unchanged from initial receipt. Source favorite1/private note retained; Duplicate copied private note and Variation did not. Two ready asset manifests/six PNG files match SHA-256; one rejected HEIC journal row is failed. Final normal app data was not queried.
+
+## M9 backup boundary
+
+Future portable backup must combine a consistent SQLite snapshot with the manifests/files for all referenced UUIDs (current recipes, active drafts and historical/shared assets), verify hashes and restore relative keys before exposure. Immutable assets plus no GC permit copying a stable reference set after a SQLite snapshot; staging/writing entries require explicit reconciliation. A DB-only copy is insufficient. M5C-1 supplies identities/checksums/journal semantics, **not portable export/import, encryption or complete disaster recovery**.
+
+## PO Mac acceptance checklist
+
+1. In Finder choose Go → Go to Folder, enter `~/Applications`, open **Tarif Atlasi M5C1 Verification.app**. This is the isolated candidate; do not launch a production-identifier CI artifact against daily data. Command: `open "$HOME/Applications/Tarif Atlasi M5C1 Verification.app"`.
+2. Create a disposable recipe. Choose JPEG/PNG/static WebP including an oriented phone JPEG, transparent PNG and Unicode filename; inspect orientation/transparency, original unchanged. Confirm HEIC/corrupt/oversize errors are understandable.
+3. Replace then cancel/discard; committed cover remains. Import, Cmd-Q/relaunch and recover unfinished draft; separate Save commits. Reopen/no-op Save creates no new content version.
+4. Replace/save, view history/compare and restore earlier cover; favorite/private note remain independent. Duplicate and Variation share the image but edit independently.
+5. Archive/Trash/restore; inspect thumbnails/details/history after full quit/relaunch. On disposable recipes only, review purge dependencies and confirm other/shared/historical assets remain visible.
+6. Resize to minimum520, half-screen and wide; light/dark, enlarged text, keyboard, long filenames/content; all cover actions remain reachable. Record visual acceptance separately.
+
+Remaining gates: independent engineering/security review, final exact-head five-job CI/package checksum receipt, PO native image/visual acceptance, separate explicit merge approval. Intel/Windows native GUI, hostile local filesystem races, representative real-photo/color fidelity and long-running memory/storage growth remain unverified. Earlier M5B-1 Test4 gap remains historical and is not retroactively resolved here.
+
+Separate PR #32 was inspected read-only: run41799443334 failed only the existing ingredient-alternatives Playwright line8 geometry assertion (received22.40625px where <=1px), with Rust/catalog passing and native jobs skipped. Its source/docs branch was not modified or rerun. The same unchanged alternatives test passed locally in this candidate's 14-test run; final M5C-1 CI must independently pass it.

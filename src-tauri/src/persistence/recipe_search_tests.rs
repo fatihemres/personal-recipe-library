@@ -25,6 +25,7 @@ fn query(text: &str) -> RecipeSearchQuery {
 }
 fn input(title: &str, ingredient: &Ingredient) -> RecipeInput {
     RecipeInput {
+        cover_asset_id: None,
         id: id(),
         expected_revision: None,
         title: title.into(),

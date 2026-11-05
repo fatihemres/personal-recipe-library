@@ -52,6 +52,9 @@ impl DraftWrite {
     pub fn validate(&self) -> Result<(), AppError> {
         valid_id(&self.id)?;
         valid_id(&self.input.id)?;
+        if let Some(id) = &self.input.cover_asset_id {
+            valid_id(id)?;
+        }
         let i = &self.input;
         if self.expected_revision.is_some_and(|v| v < 1)
             || i.expected_revision.is_some_and(|v| v < 1)
@@ -99,6 +102,7 @@ impl DraftWrite {
 impl Recipe {
     pub fn to_input(&self) -> RecipeInput {
         RecipeInput {
+            cover_asset_id: self.cover_asset_id.clone(),
             id: self.id.clone(),
             expected_revision: Some(self.revision),
             title: self.title.clone(),

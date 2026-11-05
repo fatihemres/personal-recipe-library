@@ -1,4 +1,10 @@
-## Current integration and candidate — 2026-11-03
+## Current integration and candidate — 2026-11-04
+
+Verified base main `1ff2aeb0a00780a128d81844fd5760694780df77` has integrated **schema12** (M5B-4). M5C-1 candidate adds checksummed forward-only **013/schema13**, not integrated/PO accepted. Prior opening checkpoints below are historical. No applied001–012 or catalog asset is edited; a code rollback does not downgrade schema13 or recover media.
+
+Media tables: immutable `media_assets` writing/ready/failed journal; optional `recipe_covers`; owned `draft_media`; immutable `recipe_version_media`. Ready-only FK references, restrictive asset deletion and snapshot-derived triggers preserve shared/history/draft assets. Files live under Rust-owned `media-v1` relative UUID keys. Format3 snapshots include optional cover UUID; old1/2 bytes/projections remain frozen. Migration013 forward-extends alternative reference capture to format3. See [M5C1_ACCEPTANCE.md](M5C1_ACCEPTANCE.md) for checksum, journal/recovery, tests and backup boundaries.
+
+## Historical integration and candidate — 2026-11-03
 
 Protected base `6bf160d2eccd374cdc44031f64fcd71918d73630` has integrated schema11. M5B-4 candidate adds forward-only **012** / schema12, not integrated or PO accepted. Older schema11 binaries reject schema12; Git rollback does not downgrade user databases. No applied001–011 file, historical payload/checksum or catalog asset is edited.
 

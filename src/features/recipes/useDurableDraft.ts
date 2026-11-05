@@ -8,8 +8,11 @@ export function useDurableDraft(
   input: RecipeInput,
   dirty: boolean,
   recovered?: Draft,
+  beforeFlush?:()=>void,
 ) {
   const [session] = useState(() => new DraftSession(client, recovered));
+  const before=useRef(beforeFlush);
+  before.current=beforeFlush;
   const latest = useRef({ input, dirty });
   const [status, setStatus] = useState<'idle' | 'saving' | 'saved' | 'failed'>(
     recovered ? 'saved' : 'idle',
@@ -20,6 +23,7 @@ export function useDurableDraft(
     latest.current = { input, dirty };
   }, [input, dirty]);
   async function flush() {
+    before.current?.();
     if (!latest.current.dirty) return;
     setStatus('saving');
     try {
@@ -80,6 +84,7 @@ export function useDurableDraft(
       registerDraftExitGuard(async () => {
         setClosing(true);
         try {
+          before.current?.();
           const value = latest.current;
           if (value.dirty) await session.flush(value.input);
         } catch (e) {

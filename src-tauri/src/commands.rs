@@ -753,7 +753,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            12
+            13
         );
     }
     #[test]
@@ -1148,4 +1148,37 @@ pub async fn purge_reviewed_recipe(
     state: tauri::State<'_, StorageService>,
 ) -> Result<(), AppError> {
     state.execute(move |d| d.purge_reviewed_recipe(write)).await
+}
+
+#[tauri::command]
+pub async fn pick_recipe_cover(
+    window: tauri::WebviewWindow,
+    state: tauri::State<'_, StorageService>,
+    gate: tauri::State<'_, crate::media::ImportGate>,
+) -> Result<Option<crate::media::ImportedCover>, AppError> {
+    use tauri_plugin_dialog::DialogExt;
+    let _permit = gate.acquire()?;
+    let (tx, rx) = tokio::sync::oneshot::channel();
+    window
+        .dialog()
+        .file()
+        .set_parent(&window)
+        .set_title(crate::native_labels::COVER_TITLE)
+        .add_filter(
+            crate::native_labels::COVER_FILTER,
+            &["jpg", "jpeg", "png", "webp", "heic", "heif"],
+        )
+        .pick_file(move |file| {
+            let _ = tx.send(file);
+        });
+    let file = rx
+        .await
+        .map_err(|_| crate::media::error("MEDIA_UNAVAILABLE"))?;
+    let Some(file) = file else { return Ok(None) };
+    let path = file
+        .into_path()
+        .map_err(|_| crate::media::error("MEDIA_PATH"))?;
+    state
+        .execute(move |d| d.import_cover(&path).map(Some))
+        .await
 }

@@ -145,7 +145,16 @@ pub(super) fn alternatives_available(conn: &rusqlite::Connection) -> Result<bool
     )?)
 }
 pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recipe, AppError> {
-    let mut recipe=conn.query_row("SELECT id,revision,title,description,kind,servings,prep_minutes,cook_minutes,notes,created_at,updated_at,deleted_at,archived_at FROM recipes WHERE id=?1",[id],|r|Ok(Recipe{archived_at:r.get(12)?,ingredient_names:Default::default(),id:r.get(0)?,revision:r.get(1)?,title:r.get(2)?,description:r.get(3)?,kind:r.get(4)?,servings:r.get(5)?,prep_minutes:r.get(6)?,cook_minutes:r.get(7)?,notes:r.get(8)?,created_at:r.get(9)?,updated_at:r.get(10)?,deleted_at:r.get(11)?,ingredients:vec![],steps:vec![]})).optional()?.ok_or_else(not_found)?;
+    let mut recipe=conn.query_row("SELECT id,revision,title,description,kind,servings,prep_minutes,cook_minutes,notes,created_at,updated_at,deleted_at,archived_at FROM recipes WHERE id=?1",[id],|r|Ok(Recipe{cover_asset_id:None,archived_at:r.get(12)?,ingredient_names:Default::default(),id:r.get(0)?,revision:r.get(1)?,title:r.get(2)?,description:r.get(3)?,kind:r.get(4)?,servings:r.get(5)?,prep_minutes:r.get(6)?,cook_minutes:r.get(7)?,notes:r.get(8)?,created_at:r.get(9)?,updated_at:r.get(10)?,deleted_at:r.get(11)?,ingredients:vec![],steps:vec![]})).optional()?.ok_or_else(not_found)?;
+    if super::media::available(conn)? {
+        recipe.cover_asset_id = conn
+            .query_row(
+                "SELECT asset_id FROM recipe_covers WHERE recipe_id=?1",
+                [id],
+                |r| r.get(0),
+            )
+            .optional()?;
+    }
     let mut s=conn.prepare("SELECT id,ingredient_id,quantity,unit_code,note FROM recipe_ingredients WHERE recipe_id=?1 ORDER BY position")?;
     recipe.ingredients = s
         .query_map([id], |r| {
@@ -287,6 +296,16 @@ pub(super) fn write_recipe_with_history(
             tx.execute(
                 "INSERT INTO recipe_step_ingredients(recipe_id,step_id,line_id) VALUES(?1,?2,?3)",
                 params![input.id, s.id, line_id],
+            )?;
+        }
+    }
+    if super::media::available(tx)? {
+        super::media::verify_cover(tx, input.cover_asset_id.as_deref(), true)?;
+        tx.execute("DELETE FROM recipe_covers WHERE recipe_id=?1", [&input.id])?;
+        if let Some(id) = &input.cover_asset_id {
+            tx.execute(
+                "INSERT INTO recipe_covers(recipe_id,asset_id) VALUES(?1,?2)",
+                params![input.id, id],
             )?;
         }
     }

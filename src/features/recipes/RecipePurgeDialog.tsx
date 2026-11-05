@@ -1,3 +1,4 @@
+import { mediaTr } from '../../shared/i18n/media';
 import { useEffect,useRef,useState } from 'react';
 import type { Recipe } from '../../shared/contracts/recipe';
 import type { PurgePreview } from '../../shared/contracts/recipeRelations';
@@ -17,6 +18,7 @@ export function RecipePurgeDialog({recipe,client,onCancel,onPurged}:{recipe:Reci
  if(reading&&!preview&&!error)return <p role="status">{t.loading}</p>;
  const needsReview=!!preview?.links.total&&!reviewed;
  return <ConfirmDialog focusKey={needsReview?'review':'final'} title={needsReview?t.purgeReview:reviewed?t.finalTitle:r.confirmPurge} description={needsReview?t.purgeIntro:reviewed?t.finalHelp:r.purgeHelp} confirm={needsReview?t.reviewed:reviewed?t.detachPurge:r.purge} cancel={t.cancel} busy={busy} error={error} confirmDisabled={!preview||reading||!!preview.links.hasMore} onCancel={onCancel} onConfirm={()=>{if(needsReview)setReviewed(true);else void purge();}}>
+ <p>{mediaTr.retention}</p>
  {preview&&<><p>{t.count}: {preview.links.total}</p><RecipeLinkList items={preview.links.items}/>{preview.links.hasMore&&<Button variant="outline" disabled={reading} onClick={()=>void read(true)}>{t.more}</Button>}</>}
  {(!preview||error)&&<Button variant="outline" disabled={reading||busy} onClick={()=>void read()}>{t.refresh}</Button>}
  </ConfirmDialog>;

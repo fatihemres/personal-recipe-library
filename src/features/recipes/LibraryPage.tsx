@@ -1,3 +1,4 @@
+import { CoverImage } from './RecipeCover';
 import { RecipeRelations } from './RecipeRelations';
 import { RecipePurgeDialog } from './RecipePurgeDialog';
 import { relationsTr } from '../../shared/i18n/recipeRelations';
@@ -74,9 +75,10 @@ export function LibraryPage({
   const generation = useRef(0);
   const operation = useRef(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const editorLeaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
   const noteLeaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
   useEffect(()=>{
-    registerLeaveGuard?.(async()=>noteLeaveGuard.current ? noteLeaveGuard.current():true);
+    registerLeaveGuard?.(async()=>{if(editorLeaveGuard.current&&!await editorLeaveGuard.current())return false;return noteLeaveGuard.current ? noteLeaveGuard.current():true;});
     return()=>registerLeaveGuard?.(null);
   },[registerLeaveGuard]);
   useEffect(()=>{
@@ -342,6 +344,7 @@ export function LibraryPage({
   if (editing)
     return (
       <RecipeEditor
+        registerLeaveGuard={guard=>{editorLeaveGuard.current=guard;}}
         key={recovered?.id ?? selected?.id ?? 'new'}
         recovered={recovered}
         recipe={selected}
@@ -455,7 +458,7 @@ export function LibraryPage({
               </>
             )}
           </div>
-          <RecipeDetails recipe={selected} />
+          <RecipeDetails client={client} recipe={selected} />
           <RecipeRelations key={`relations:${selected.id}`} recipe={selected} client={client} beforeAction={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onOpen={id=>void open(id)} onCreated={recipe=>{setScope('active');setNotice(relationsTr.created);void open(recipe.id);void load();}} />
           <RecipeHistory key={`history:${selected.id}`} recipe={selected} client={client} beforeRestore={async()=>!noteLeaveGuard.current||await noteLeaveGuard.current()} onRestored={recipe=>{setSelected(recipe);void load();}} />
           <PrivateNotePanel key={`private-note:${selected.id}`} recipeId={selected.id} client={client} readOnly={!!selected.deletedAt} registerLeaveGuard={guard=>{noteLeaveGuard.current=guard;}} />
@@ -639,6 +642,7 @@ export function LibraryPage({
                     }
                   }}
                   >
+                  <CoverImage assetId={recipe.coverAssetId} variant="thumb" client={client}/>
                   <span className="badge">
                     {recipe.kind === 'food' ? t.food : t.beverage}
                   </span>

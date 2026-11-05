@@ -207,7 +207,7 @@ impl Database {
             "relevance" if !text.is_empty() => "(SELECT bm25(recipe_fts,8.0,8.0,1.0,1.0,3.0,3.0) FROM recipe_fts WHERE rowid=d.rowid AND recipe_fts MATCH ?2) ASC,r.updated_at DESC,r.id",
             _ => "r.updated_at DESC,r.id",
         };
-        let sql = format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at,o.revision,o.favorite,o.to_try,o.rating {where_clause} ORDER BY {order} LIMIT ?13 OFFSET ?14");
+        let sql = format!("SELECT r.id,r.title,r.description,r.kind,r.servings,r.created_at,r.updated_at,o.revision,o.favorite,o.to_try,o.rating,(SELECT asset_id FROM recipe_covers WHERE recipe_id=r.id) {where_clause} ORDER BY {order} LIMIT ?13 OFFSET ?14");
         let mut stmt = tx.prepare(&sql)?;
         let items = stmt
             .query_map(
@@ -229,6 +229,7 @@ impl Database {
                 ],
                 |row| {
                     Ok(RecipeSearchItem {
+                        cover_asset_id: row.get(11)?,
                         id: row.get(0)?,
                         title: row.get(1)?,
                         description: row.get(2)?,

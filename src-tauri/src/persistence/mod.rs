@@ -1,5 +1,6 @@
 mod catalog;
 mod ingredient_library;
+mod media;
 pub mod migrations;
 mod preferences;
 mod recipe_organization;
@@ -59,6 +60,7 @@ impl Database {
         migrations::apply(&mut conn, &path, migrations::MIGRATIONS)?;
         conn.pragma_update(None, "journal_mode", "WAL")?;
         let mut db = Self { conn };
+        db.reconcile_media()?;
         db.ensure_recipe_search()?;
         db.bootstrap()?;
         Ok(db)
@@ -129,3 +131,6 @@ mod recipe_history_tests;
 mod ingredient_alternative_tests;
 #[cfg(test)]
 mod recipe_relation_tests;
+
+#[cfg(test)]
+mod media_tests;

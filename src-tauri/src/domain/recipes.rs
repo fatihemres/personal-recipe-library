@@ -207,6 +207,8 @@ impl RecipeStep {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RecipeInput {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cover_asset_id: Option<String>,
     pub id: String,
     pub expected_revision: Option<i64>,
     pub title: String,
@@ -222,6 +224,8 @@ pub struct RecipeInput {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct Recipe {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cover_asset_id: Option<String>,
     pub archived_at: Option<String>,
     pub ingredient_names: std::collections::BTreeMap<String, String>,
     pub id: String,
@@ -242,6 +246,9 @@ pub struct Recipe {
 impl RecipeInput {
     pub fn validate(&self) -> Result<(), AppError> {
         valid_id(&self.id)?;
+        if let Some(id) = &self.cover_asset_id {
+            valid_id(id)?;
+        }
         let text = |s: &str, max: usize| {
             !s.trim().is_empty() && s.chars().count() <= max && !s.contains('\0')
         };
