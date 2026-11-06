@@ -85,6 +85,7 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             commands::bootstrap,
             commands::pick_recipe_cover,
+            commands::pick_recipe_step_photo,
             commands::recipe_links,
             commands::create_recipe_variation,
             commands::set_variation_parent,

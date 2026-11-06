@@ -278,7 +278,7 @@ fn media_cover_save_noop_history_compare_restore_and_reference_rows_are_atomic_a
     let first = raw(&db, &r.id);
     assert_eq!(
         db.recipe_version(&r.id, 1).unwrap().summary.format_version,
-        3
+        4
     );
     r = db.save_recipe(r.to_input()).unwrap();
     assert_eq!(count(&db, &r.id), 1);
@@ -619,7 +619,7 @@ fn media_schema_twelve_upgrade_preserves_v1_v2_bytes_drafts_exact_quantities_and
     let legacy = raw(&db, &legacy_id);
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
     assert_eq!(raw(&db, &r.id), before);
     assert_eq!(raw(&db, &legacy_id), legacy);
     assert_eq!(db.draft(&draft.id).unwrap().revision, draft.revision);
@@ -690,7 +690,7 @@ fn media_failed_migration_thirteen_is_atomic_and_retry_preserves_schema_twelve_d
     );
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
     healthy(&db);
 }
 

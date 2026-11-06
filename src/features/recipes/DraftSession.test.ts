@@ -132,7 +132,7 @@ test('save-as-copy recovery remaps ingredient line links as well as step IDs',as
  const api=rendererRecipeClient();const value=input();const lineId=crypto.randomUUID();
  value.coverAssetId=crypto.randomUUID();
  value.ingredients=[{id:lineId,ingredientId:crypto.randomUUID(),quantity:'1.250',unitCode:'g',note:null,alternatives:[{id:crypto.randomUUID(),ingredientId:crypto.randomUUID(),quantity:'0.123456',unitCode:null}]}];
- value.steps=[{id:crypto.randomUUID(),instructions:'Karıştırın',ingredientLineIds:[lineId]}];
+ value.steps=[{id:crypto.randomUUID(),instructions:'Karıştırın',ingredientLineIds:[lineId],photoAssetId:crypto.randomUUID()}];
  vi.mocked(api.saveDraft).mockRejectedValueOnce({code:'DRAFT_CONFLICT',messageKey:'errors.draftConflict',recoverable:true});
  const result=await new DraftSession(api).commit(value,true);
  expect(result.ingredients[0].id).not.toBe(lineId);
@@ -140,6 +140,7 @@ test('save-as-copy recovery remaps ingredient line links as well as step IDs',as
  expect(result.steps[0].id).not.toBe(value.steps[0].id);
  expect(result.ingredients[0].quantity).toBe('1.250');
  expect(result.coverAssetId).toBe(value.coverAssetId);
+ expect(result.steps[0].photoAssetId).toBe(value.steps[0].photoAssetId);
  expect(result.ingredients[0].alternatives![0].id).not.toBe(value.ingredients[0].alternatives![0].id);
  expect(result.ingredients[0].alternatives![0].quantity).toBe('0.123456');
 });

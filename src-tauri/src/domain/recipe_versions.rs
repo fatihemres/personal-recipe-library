@@ -64,9 +64,18 @@ impl RecipeSnapshot {
         value["coverAssetId"] = serde_json::json!(self.cover_asset_id);
         value
     }
+    /// V1–V3 projections above are frozen. Only V4 owns step-photo content.
+    pub(crate) fn comparison_v4(&self) -> serde_json::Value {
+        let mut value = self.comparison_v3();
+        value["formatVersion"] = serde_json::json!(4);
+        for (index, step) in self.steps.iter().enumerate() {
+            value["steps"][index]["photoAssetId"] = serde_json::json!(step.photo_asset_id);
+        }
+        value
+    }
     pub fn from_recipe(recipe: Recipe) -> Self {
         Self {
-            format_version: 3,
+            format_version: 4,
             cover_asset_id: recipe.cover_asset_id,
             recipe_id: recipe.id,
             recipe_created_at: recipe.created_at,
@@ -105,7 +114,7 @@ impl RecipeSnapshot {
         }
     }
     pub fn validate(&self) -> Result<(), AppError> {
-        if ![1, 2, 3].contains(&self.format_version) {
+        if ![1, 2, 3, 4].contains(&self.format_version) {
             return Err(AppError::new(
                 "RECIPE_VERSION_UNSUPPORTED",
                 "errors.recipeVersionUnsupported",
@@ -116,6 +125,9 @@ impl RecipeSnapshot {
             return Err(invalid());
         }
         if self.format_version < 3 && self.cover_asset_id.is_some() {
+            return Err(invalid());
+        }
+        if self.format_version < 4 && self.steps.iter().any(|s| s.photo_asset_id.is_some()) {
             return Err(invalid());
         }
         self.content().validate()?;

@@ -1,3 +1,5 @@
+import { stepPhotosTr } from '../../shared/i18n/stepPhotos';
+import { HistoryPhotoDifference } from './HistoryPhotoDifference';
 import { mediaTr } from '../../shared/i18n/media';
 import { useEffect, useRef, useState } from 'react';
 import type { Recipe } from '../../shared/contracts/recipe';
@@ -48,6 +50,7 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
     <h3>V{selected.summary.versionNumber} · {selected.snapshot.title}</h3>
     {selected.snapshot.formatVersion===1&&<p>{t.legacyAlternatives}</p>}
     {selected.snapshot.formatVersion<3&&recipe.coverAssetId&&<p>{mediaTr.legacy}</p>}
+    {selected.snapshot.formatVersion<4&&recipe.steps.some(s=>s.photoAssetId)&&<p>{stepPhotosTr.legacy}</p>}
     {selected.snapshot.description&&<p className="preserve-text">{selected.snapshot.description}</p>}
     <RecipeDetails client={client} recipe={selected.snapshot}/>
     <details><summary>{t.identities}</summary><ul className="history-identities">{selected.snapshot.ingredients.map((line,i)=><li key={line.id}>{t.line} {i+1}: <code>{line.id}</code> · <code>{line.ingredientId}</code>{!!line.alternatives?.length&&<ul>{line.alternatives.map(a=><li key={a.id}>{t.fields.alternatives}: <code>{a.id}</code> · <code>{a.ingredientId}</code></li>)}</ul>}</li>)}{selected.snapshot.steps.map((step,i)=><li key={step.id}>{t.step} {i+1}: <code>{step.id}</code></li>)}</ul></details>
@@ -56,12 +59,12 @@ export function RecipeHistory({recipe,client,onRestored,beforeRestore}: {recipe:
      <Button disabled={busy} onClick={()=>void run(async()=>{const result=await client.compareVersions(recipe.id,selected.summary.versionNumber,target==='current'?null:Number(target));if(mounted.current){setComparison(result);setChangeLimit(50);}})}>{t.compare}</Button>
     </div>
     {comparison&&<section aria-label={t.compare}>
-     {!comparison.changes.length?<p>{t.noChanges}</p>:<><p>{t.before} → {target==='current'?t.current:`V${target}`}</p><ul className="history-differences">{comparison.changes.slice(0,changeLimit).map((change,i)=><li key={i}><strong>{change.path.map(part=>/^\d+$/.test(part)?String(Number(part)+1):t.fields[part]??part).join(' / ')}</strong><dl><dt>{t.before}</dt><dd><code>{JSON.stringify(change.before)}</code></dd><dt>{t.after}</dt><dd><code>{JSON.stringify(change.after)}</code></dd></dl></li>)}</ul>{comparison.changes.length>changeLimit&&<Button onClick={()=>setChangeLimit(changeLimit+50)}>{t.moreChanges}</Button>}</>}
+     {!comparison.changes.length?<p>{t.noChanges}</p>:<><p>{t.before} → {target==='current'?t.current:`V${target}`}</p><ul className="history-differences">{comparison.changes.slice(0,changeLimit).map((change,i)=><li key={i}><strong>{change.path.map(part=>/^\d+$/.test(part)?String(Number(part)+1):t.fields[part]??part).join(' / ')}</strong><dl><dt>{t.before}</dt><dd><code>{JSON.stringify(change.before)}</code></dd><dt>{t.after}</dt><dd><code>{JSON.stringify(change.after)}</code></dd></dl>{change.path[change.path.length-1]==='photoAssetId'&&<HistoryPhotoDifference client={client} before={change.before} after={change.after}/>}</li>)}</ul>{comparison.changes.length>changeLimit&&<Button onClick={()=>setChangeLimit(changeLimit+50)}>{t.moreChanges}</Button>}</>}
     </section>}
     {recipe.archivedAt||recipe.deletedAt?<p>{t.inactive}</p>:<Button disabled={busy} onClick={()=>void (async()=>{let allowed=false;await run(async()=>{allowed=await beforeRestore();});if(allowed&&mounted.current)setConfirm(true);})()}>{t.restore}</Button>}
    </section>}
   </>}
-  {confirm&&selected&&<ConfirmDialog title={t.confirmTitle} description={`${t.confirmBody} (V${selected.summary.versionNumber})${selected.snapshot.formatVersion===1?` · ${t.legacyAlternatives}`:""}`} confirm={t.restore} cancel={t.cancel} busy={busy} error={error} onCancel={()=>{setConfirm(false);setError('');}} onConfirm={()=>void run(async()=>{
+  {confirm&&selected&&<ConfirmDialog title={t.confirmTitle} description={`${t.confirmBody} (V${selected.summary.versionNumber})${selected.snapshot.formatVersion<4&&recipe.steps.some(s=>s.photoAssetId)?` · ${stepPhotosTr.legacy}`:""}${selected.snapshot.formatVersion===1?` · ${t.legacyAlternatives}`:""}`} confirm={t.restore} cancel={t.cancel} busy={busy} error={error} onCancel={()=>{setConfirm(false);setError('');}} onConfirm={()=>void run(async()=>{
    const result=await client.restoreVersion({recipeId:recipe.id,versionNumber:selected.summary.versionNumber,expectedRevision:recipe.revision});
    if(!mounted.current)return;setConfirm(false);setNotice(result.changed?t.restoredNotice:t.unchanged);setComparison(null);
    onRestored(result.recipe);

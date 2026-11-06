@@ -749,3 +749,14 @@ summary { cursor:pointer; padding:.75rem 0; font-weight:600; }
 .cover-preview { max-height:min(26rem,50vh); object-fit:contain; background:var(--muted); }
 .cover-unavailable { padding:1rem; overflow-wrap:anywhere; border:1px solid var(--border); border-radius:12px; }
 .recipe-list-row .cover-thumb { max-height:8rem; }
+
+/* Step media stays thumbnail-sized; large variants mount only in an explicit preview. */
+.step-photo-editor { min-width:0; padding-block:1rem; border-block:1px solid var(--border); }
+.step-photo-editor h3 { margin-block:0 .5rem; font-weight:600; }
+.step-photo-preview { min-width:0; display:grid; justify-items:start; gap:.75rem; margin-block:1rem; }
+.step-photo-preview .cover-thumb,.history-photo-difference .cover-thumb { width:min(100%,24rem); height:12rem; object-fit:contain; }
+.step-photo-editor .recipe-actions > button { white-space:normal; max-width:100%; }
+.step-photo-dialog { min-width:0; }
+.step-photo-dialog .recipe-cover { max-width:100%; }
+.history-photo-difference { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr)); gap:1rem; min-width:0; }
+.history-photo-difference > div { min-width:0; }

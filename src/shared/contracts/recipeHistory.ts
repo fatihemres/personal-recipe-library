@@ -6,7 +6,7 @@ export const versionSummarySchema=z.object({
  provenance:z.enum(['created','edited','upgrade_baseline','restored']),restoredFromVersion:positive.nullable(),
  capturedAt:z.string(),contentFingerprint:z.string().regex(/^[a-f0-9]{64}$/),snapshotChecksum:z.string().regex(/^[a-f0-9]{64}$/),
 }).strict();
-export const snapshotSchema=recipeSchema.omit({id:true,revision:true,createdAt:true,updatedAt:true,deletedAt:true,archivedAt:true}).extend({formatVersion:z.union([z.literal(1),z.literal(2),z.literal(3)]),recipeId:z.uuid(),recipeCreatedAt:z.string()}).strict().refine(s=>(s.formatVersion>=3 || s.coverAssetId==null) && (s.formatVersion!==1 || s.ingredients.every(l=>!l.alternatives?.length)));
+export const snapshotSchema=recipeSchema.omit({id:true,revision:true,createdAt:true,updatedAt:true,deletedAt:true,archivedAt:true}).extend({formatVersion:z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4)]),recipeId:z.uuid(),recipeCreatedAt:z.string()}).strict().refine(s=>(s.formatVersion>=4 || s.steps.every(step=>step.photoAssetId==null)) && (s.formatVersion>=3 || s.coverAssetId==null) && (s.formatVersion!==1 || s.ingredients.every(l=>!l.alternatives?.length)));
 export const recipeVersionSchema=z.object({summary:versionSummarySchema,snapshot:snapshotSchema}).strict();
 export const versionComparisonSchema=z.object({currentRevision:positive,changes:z.array(z.object({path:z.array(z.string()),before:z.json(),after:z.json()}).strict())}).strict();
 export const restoreVersionSchema=z.object({recipeId:z.uuid(),versionNumber:positive,expectedRevision:positive}).strict();

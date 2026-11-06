@@ -11,5 +11,5 @@ test('history IPC uses exact bounded args and validates native response',async()
 test('restore request is strict and versioned snapshot preserves exact quantity',()=>{
  expect(restoreVersionSchema.safeParse({recipeId:id,versionNumber:0,expectedRevision:2}).success).toBe(false);expect(restoreVersionSchema.safeParse({recipeId:id,versionNumber:1,expectedRevision:2,sql:'DELETE'}).success).toBe(false);
  const data={formatVersion:1,recipeId:id,recipeCreatedAt:'now',title:'Su',kind:'beverage',servings:'1',description:null,prepMinutes:null,cookMinutes:null,notes:null,ingredients:[{id,ingredientId:id,quantity:'1.250',unitCode:'mL',note:null}],steps:[],ingredientNames:{[id]:'Gül suyu'}};
- expect(snapshotSchema.parse(data).ingredients[0].quantity).toBe('1.250');expect(snapshotSchema.safeParse({...data,formatVersion:4}).success).toBe(false);
+ expect(snapshotSchema.parse(data).ingredients[0].quantity).toBe('1.250');expect(snapshotSchema.safeParse({...data,formatVersion:5}).success).toBe(false);
 });

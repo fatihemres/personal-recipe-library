@@ -195,3 +195,8 @@ This implements only M5B-2, not all R05/history-related modules. M5B-3/4, media/
 - [ ] Independent engineering review, PO native acceptance and separate merge authorization.
 
 Actual local/native/CI evidence is in M5B3_ACCEPTANCE.md and the candidate PR; checked implementation is not PO acceptance.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2 candidate implements zero/one photo per stable step, draft-only import/delete/replace, explicit photographed-step removal confirmation, history preview/compare/restore and independently remapped Duplicate/Variation. Native/CI/PO evidence is recorded separately in M5C2_ACCEPTANCE.md; not integrated or PO-accepted.

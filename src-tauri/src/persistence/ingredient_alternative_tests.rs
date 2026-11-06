@@ -151,7 +151,7 @@ fn alternative_history_mixed_formats_restore_and_reference_protection() {
         .unwrap();
     assert_eq!(
         db.recipe_version(&r.id, 1).unwrap().summary.format_version,
-        3
+        4
     );
     let mut edit = r.to_input();
     edit.ingredients[0].alternatives.clear();
@@ -445,7 +445,7 @@ fn schema_eleven_upgrade_preserves_format_one_bytes_and_legacy_drafts_then_mixed
     .unwrap();
     drop(db);
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
     assert_eq!(
         db.draft(&draft.id).unwrap().input.ingredients[0]
             .quantity
@@ -467,7 +467,7 @@ fn schema_eleven_upgrade_preserves_format_one_bytes_and_legacy_drafts_then_mixed
     r = db.save_recipe(edit).unwrap();
     assert_eq!(
         db.recipe_version(&r.id, 2).unwrap().summary.format_version,
-        3
+        4
     );
     assert_eq!(
         db.recipe_version(&r.id, 1).unwrap().summary.format_version,
@@ -648,11 +648,11 @@ fn unknown_future_content_blocks_read_restore_save_purge_and_definition_deletion
         .unwrap();
     let v = db.recipe_version(&r.id, 1).unwrap();
     let mut payload = serde_json::to_value(v.snapshot).unwrap();
-    payload["formatVersion"] = 4.into();
+    payload["formatVersion"] = 5.into();
     payload["futureIngredient"] = future_ingredient.id.clone().into();
     let raw = serde_json::to_string(&payload).unwrap();
     let hash = migrations::checksum(&raw);
-    db.conn.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot) VALUES(?1,2,4,1,'edited',?2,?3,?4)",rusqlite::params![r.id,"0".repeat(64),hash,raw]).unwrap();
+    db.conn.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot) VALUES(?1,2,5,1,'edited',?2,?3,?4)",rusqlite::params![r.id,"0".repeat(64),hash,raw]).unwrap();
     assert_eq!(
         db.recipe_version(&r.id, 2).unwrap_err().code,
         "RECIPE_VERSION_UNSUPPORTED"

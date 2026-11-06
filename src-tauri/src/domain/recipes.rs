@@ -115,6 +115,9 @@ impl RecipeIngredient {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase", deny_unknown_fields)]
 pub struct RecipeStep {
+    // Omit None in legacy payloads; format4 capture explicitly writes JSON null.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub photo_asset_id: Option<String>,
     pub id: String,
     pub instructions: String,
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -142,6 +145,9 @@ impl RecipeStep {
         committed: bool,
         lines: &std::collections::HashSet<&String>,
     ) -> Result<(), AppError> {
+        if let Some(id) = &self.photo_asset_id {
+            valid_id(id)?;
+        }
         let mut unique = std::collections::HashSet::new();
         if self.ingredient_line_ids.len() > 500 {
             return Err(invalid());

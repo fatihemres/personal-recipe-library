@@ -38,6 +38,7 @@ export const stepDetailsSchema = z.object({
   tips: z.string().max(5000).nullable(),
 }).strict();
 const stepFields = {
+  photoAssetId: z.uuid().nullable().optional(),
   id: z.uuid(), instructions: z.string().max(10000),
   details: stepDetailsSchema.optional(),
   ingredientLineIds: z.array(z.uuid()).max(500).optional(),

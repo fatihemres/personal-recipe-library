@@ -1,3 +1,8 @@
+import { useEffect, useRef, useState } from 'react';
+import { recipeClient, type RecipeClient } from '../../shared/api/recipes';
+import { ConfirmDialog } from '../../shared/ui/ConfirmDialog';
+import { stepPhotosTr as photos } from '../../shared/i18n/stepPhotos';
+import { StepPhotoEditor } from './StepPhoto';
 import { stepDetailsIssues, type RecipeInput, type StepDetails } from '../../shared/contracts/recipe';
 import { recipesTr as t } from '../../shared/i18n/recipes';
 import { Button } from '../../shared/ui/button';
@@ -6,12 +11,32 @@ const emptyDetails: StepDetails = {
   formatVersion: 1, title: null, durationMinutes: null, temperatureValue: null,
   temperatureUnit: null, heatLevel: null, equipment: null, technique: null, tips: null,
 };
-export function RecipeSteps({ steps, onChange, ingredients = [], names = {} }: {
+export function RecipeSteps({ steps, onChange, ingredients = [], names = {}, client = recipeClient, onMediaBusy }: {
+  client?: RecipeClient;
+  onMediaBusy?: (stepId: string, busy: boolean) => void;
   steps: RecipeInput['steps'];
   onChange: (steps: RecipeInput['steps']) => void;
   ingredients?: RecipeInput['ingredients'];
   names?: Record<string, string>;
 }) {
+  const [photoEditors, setPhotoEditors] = useState<Set<string>>(() => new Set());
+  // Collapse must not abandon a pending import. Mount once on demand, and
+  // release the control/visited ID only when its stable step is actually removed.
+  useEffect(() => {
+    const ids = new Set(steps.map(step => step.id));
+    setPhotoEditors(previous => {
+      const retained = [...previous].filter(id => ids.has(id));
+      return retained.length === previous.size ? previous : new Set(retained);
+    });
+  }, [steps]);
+  const [deleteStep, setDeleteStep] = useState<string | null>(null);
+  const addStep = useRef<HTMLButtonElement>(null);
+  const focusAfterDelete = useRef(false);
+  useEffect(() => {
+    if (deleteStep === null && focusAfterDelete.current) {
+      focusAfterDelete.current = false; addStep.current?.focus();
+    }
+  }, [deleteStep]);
   function updateDetails<K extends Exclude<keyof StepDetails, 'formatVersion'>>(index: number, key: K, value: StepDetails[K]) {
     onChange(steps.map((step, n) => n === index
       ? { ...step, details: { ...emptyDetails, ...step.details, [key]: value } }
@@ -41,7 +66,13 @@ export function RecipeSteps({ steps, onChange, ingredients = [], names = {} }: {
             <textarea required maxLength={10000} value={step.instructions}
               onChange={e => onChange(steps.map((s, n) => n === index ? { ...s, instructions: e.target.value } : s))} />
           </label>
-          <details className="step-advanced">
+          <details className="step-advanced" onToggle={event => {
+            const open = event.currentTarget.open;
+            if (open) setPhotoEditors(previous => {
+              if (previous.has(step.id)) return previous;
+              return new Set(previous).add(step.id);
+            });
+          }}>
             <summary>{t.stepAdvanced}{(issues.duration || issues.temperature) && <span className="step-validation"> · {t.stepInvalidDetails}</span>}</summary>
             <div className="step-advanced-content">
               <div className="form-grid step-core-fields">
@@ -84,6 +115,9 @@ export function RecipeSteps({ steps, onChange, ingredients = [], names = {} }: {
                 {(step.ingredientLineIds ?? []).filter(id => !ingredients.some(line => line.id === id)).map(id =>
                   <p role="alert" key={id}>{t.stepMissingLine} <Button type="button" variant="outline" onClick={() => link(index, id, false)}>{t.remove}</Button></p>)}
               </fieldset>
+              {photoEditors.has(step.id) && <StepPhotoEditor client={client} assetId={step.photoAssetId} position={index + 1}
+                onChange={photoAssetId => onChange(steps.map(s => s.id === step.id ? { ...s, photoAssetId } : s))}
+                onBusy={busy => onMediaBusy?.(step.id, busy)} />}
             </div>
           </details>
           <div className="recipe-actions">
@@ -91,11 +125,19 @@ export function RecipeSteps({ steps, onChange, ingredients = [], names = {} }: {
               disabled={index === 0} onClick={() => move(index, -1)}>{t.up}</Button>
             <Button type="button" variant="outline" aria-label={`${index + 1}. ${t.stepNumber}: ${t.down}`}
               disabled={index === steps.length - 1} onClick={() => move(index, 1)}>{t.down}</Button>
-            <Button type="button" variant="ghost" onClick={() => onChange(steps.filter((_, n) => n !== index))}>{t.remove}</Button>
+            <Button type="button" variant="ghost" onClick={() => {
+              if (step.photoAssetId) setDeleteStep(step.id);
+              else onChange(steps.filter(s => s.id !== step.id));
+            }}>{t.remove}</Button>
           </div>
         </div>;
       })}
-      <Button type="button" variant="outline" onClick={() => onChange([...steps, { id: crypto.randomUUID(), instructions: '' }])}>{t.addStep}</Button>
+      <Button ref={addStep} type="button" variant="outline" onClick={() => onChange([...steps, { id: crypto.randomUUID(), instructions: '' }])}>{t.addStep}</Button>
+      {deleteStep && <ConfirmDialog title={photos.deleteTitle} description={photos.deleteBody}
+        cancel={photos.cancel} confirm={photos.deleteConfirm} onCancel={() => setDeleteStep(null)}
+        onConfirm={() => {
+          onChange(steps.filter(s => s.id !== deleteStep)); focusAfterDelete.current = true; setDeleteStep(null);
+        }} />}
     </section>
   );
 }

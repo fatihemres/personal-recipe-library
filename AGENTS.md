@@ -151,3 +151,8 @@ Build a local-first food and beverage recipe management desktop application for 
 - Historical Release 10 had 795 identities (666 food/129 beverage), 269 aliases and 50 categories. Its 50 additions come from a screened 65-candidate ledger: 35 selected USDA Foundation April 2026 descriptors and 15 pinned Wikidata CC0 entity revisions. See `docs/CATALOG_M3D4_SOURCE_EVALUATION.md`, `docs/CATALOG_M3D4_QUALITY_AUDIT.md` and `catalog/preparation/m3d4` before any later source change.
 - Generate/check only through `tools/prepare_m3d4_candidates.py` and `tools/prepare_m3d4_catalog.py`. Source/version/checksum pairs are immutable. Keep 9 new deferrals, 29 earlier deferrals and seven prior review questions pending; do not turn autonomous editorial labels into claims of independent human linguistic approval.
 - FoodOn, Open Food Facts, TürKomp and TheCocktailDB remain outside the runtime seed. The protected GI registry is reference-only; a generic catalog label does not certify product origin. No prior migration, ingredient ID, user-owned record, alias, category node or factual observation was changed.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2 is coding-authorized by DEC-038/Issue36, under DEC-037. Candidate migration014/history4 adds stable-step media ownership for live recipes, active drafts and history; old migrations001–013 and format1–3 bytes/fingerprints stay immutable. Format4 must pin covers AND alternatives AND step photos. No physical media GC; only deliberate Save changes committed content. See docs/M5C2_ACCEPTANCE.md. Do not duplicate DEC-038 or overwrite separate PR39.

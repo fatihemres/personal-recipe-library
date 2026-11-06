@@ -433,7 +433,7 @@ fn schema_ten_upgrade_preserves_original_data_and_rolls_back_failed_eleven() {
     drop(conn);
     for _ in 0..2 {
         let db = Database::open(dir.path()).unwrap();
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
         assert_eq!(
             db.recipe(&a.id).unwrap().ingredients[0].quantity.as_deref(),
             Some("1.250")

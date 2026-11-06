@@ -12,8 +12,10 @@ pub(super) fn fingerprint(snapshot: &RecipeSnapshot) -> Result<String, AppError>
             snapshot.comparison_v1()
         } else if snapshot.format_version == 2 {
             snapshot.comparison_v2()
-        } else {
+        } else if snapshot.format_version == 3 {
             snapshot.comparison_v3()
+        } else {
+            snapshot.comparison_v4()
         }))
         .map_err(|_| AppError::integrity())?,
     ))
@@ -91,7 +93,7 @@ pub(super) fn read_version(
     if header.format_version != summary.format_version || header.recipe_id != id {
         return Err(AppError::integrity());
     }
-    if ![1, 2, 3].contains(&header.format_version) {
+    if ![1, 2, 3, 4].contains(&header.format_version) {
         return Err(AppError::new(
             "RECIPE_VERSION_UNSUPPORTED",
             "errors.recipeVersionUnsupported",
@@ -112,7 +114,7 @@ pub(super) fn read_version(
 
 pub(super) fn check_purge_format(conn: &Connection, id: &str) -> Result<(), AppError> {
     let unsupported: bool = conn.query_row(
-        "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE recipe_id=?1 AND format_version NOT IN (1,2,3))",
+        "SELECT EXISTS(SELECT 1 FROM recipe_versions WHERE recipe_id=?1 AND format_version NOT IN (1,2,3,4))",
         [id],
         |r| r.get(0),
     )?;
@@ -140,6 +142,9 @@ pub(super) fn capture_with_origin(
     let recipe = read_recipe(tx, id)?;
     let revision = recipe.revision;
     let mut snapshot = RecipeSnapshot::from_recipe(recipe);
+    if !super::step_media::available(tx)? {
+        snapshot.format_version = 3;
+    }
     // Migration010 runs before012 during old-profile initialization. Its honest
     // baseline remains format1; no table or historical snapshot is back-edited.
     if !tx.query_row(
@@ -159,7 +164,7 @@ pub(super) fn capture_with_origin(
         .map(|v| v.version_number);
     if let Some(version) = latest {
         // Validate retained bytes as well as the fingerprint before trusting a no-op.
-        if read_version(tx, id, version)?.snapshot.comparison_v3() == snapshot.comparison_v3() {
+        if read_version(tx, id, version)?.snapshot.comparison_v4() == snapshot.comparison_v4() {
             return Ok(());
         }
     }
@@ -174,7 +179,17 @@ pub(super) fn capture_with_origin(
     } else {
         provenance
     };
-    let payload = serde_json::to_string(&snapshot).map_err(|_| AppError::integrity())?;
+    // New-format snapshots canonically carry null for absent step photos. Legacy
+    // serialization remains untouched (including field omission and ordering).
+    let payload = if snapshot.format_version == 4 {
+        let mut value = serde_json::to_value(&snapshot).map_err(|_| AppError::integrity())?;
+        for (i, step) in snapshot.steps.iter().enumerate() {
+            value["steps"][i]["photoAssetId"] = serde_json::json!(step.photo_asset_id);
+        }
+        serde_json::to_string(&value).map_err(|_| AppError::integrity())?
+    } else {
+        serde_json::to_string(&snapshot).map_err(|_| AppError::integrity())?
+    };
     if payload.len() > MAX_SNAPSHOT_BYTES {
         return Err(invalid());
     }
@@ -325,9 +340,9 @@ impl super::Database {
                 ));
             }
         }
-        super::media::verify_cover(&tx, selected.snapshot.cover_asset_id.as_deref(), true)?;
-        if RecipeSnapshot::from_recipe(current.clone()).comparison_v3()
-            == selected.snapshot.comparison_v3()
+        super::step_media::verify(&tx, &selected.snapshot.content(), true)?;
+        if RecipeSnapshot::from_recipe(current.clone()).comparison_v4()
+            == selected.snapshot.comparison_v4()
         {
             return Ok(RestoreResult {
                 recipe: current,
@@ -360,7 +375,7 @@ impl super::Database {
 // Compare exact content plus captured labels. Arrays remain ordered; step links
 // use the frozen set-order projection. Private/lifecycle metadata never enters.
 fn comparison(snapshot: &RecipeSnapshot) -> serde_json::Value {
-    let mut value = snapshot.comparison_v3();
+    let mut value = snapshot.comparison_v4();
     value["ingredientNames"] =
         serde_json::to_value(&snapshot.ingredient_names).expect("string map");
     value

@@ -1,3 +1,4 @@
+import { StepPhoto } from './StepPhoto';
 import { CoverImage } from './RecipeCover';
 import { recipeClient, type RecipeClient } from '../../shared/api/recipes';
 import type { Recipe } from '../../shared/contracts/recipe';
@@ -39,10 +40,11 @@ export function RecipeDetails({ recipe,client=recipeClient }: { client?:RecipeCl
       <h2>{t.steps}</h2>
       {recipe.steps.length ? (
         <ol className="detail-list">
-          {recipe.steps.map((s) => (
+          {recipe.steps.map((s, index) => (
             <li key={s.id}>
               {s.details?.title && <h3>{s.details.title}</h3>}
               <p className="preserve-text">{s.instructions}</p>
+              <StepPhoto assetId={s.photoAssetId} position={index + 1} client={client} />
               {s.details && <dl className="step-metadata">
                 {s.details.durationMinutes!==null && <><dt>{t.stepDuration}</dt><dd>{s.details.durationMinutes}</dd></>}
                 {s.details.temperatureValue!==null && <><dt>{t.stepTemperature}</dt><dd>{s.details.temperatureValue} °{s.details.temperatureUnit}</dd></>}
