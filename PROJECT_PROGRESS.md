@@ -823,3 +823,8 @@ M5B-1 final local/native checkpoint: full Rust/SQLite suite now passes **116** t
 M5B-1 final safety-wording follow-up: review of the existing permanent-purge dialog found it did not name retained history. Added an explicit Turkish owned-history warning and a focused assertion to the existing cancel/confirm component regression, without changing purge behavior or policy. The final head must rerun CI; the earlier run is not final-head evidence. Backend/migration/catalog bytes remain unchanged.
 
 M5B-1 final migration coverage: converted schema-9 history fixtures to WAL mode with auto-checkpoint disabled, and held a read transaction to verify the pre-migration online backup includes committed WAL data. Standalone focused 16 tests, full 116 Rust tests, fmt and Clippy pass. This is a test/documentation-only follow-up; production/migration/catalog bytes and the final isolated native executable remain unchanged. Publish this coverage and wait for the newest exact-head five-job run before handoff.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2 implemented candidate: optional step photos, shared Rust picker/sanitizer, stable UUID reconstruction in existing CAS transactions, active draft/history pins, mixed-format comparison/restore, explicit photographed-step deletion confirmation and lazy thumbnails. Verification and limitations: docs/M5C2_ACCEPTANCE.md. M5C-2 remains not integrated/not PO-accepted; next gate is independent review and isolated native PO acceptance.

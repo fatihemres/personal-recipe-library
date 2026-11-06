@@ -78,3 +78,8 @@ in the coverage report. Full cross-platform/signed release validation is pending
 Normal local launch: `npm run tauri -- dev`. Use a separate identifier/profile
 for tests; do not reset personal databases. M3C-2 added schema migration 005 for
 local favorites and personal aliases. Catalog seed version 4 is unchanged.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2 candidate adds one optional offline step photo using the existing secure media foundation. Candidate schema14/history4; see [engineering acceptance](docs/M5C2_ACCEPTANCE.md). No PO acceptance or integration is claimed.

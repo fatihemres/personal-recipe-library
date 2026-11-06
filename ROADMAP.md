@@ -113,3 +113,8 @@ M4B-2 was integrated after separately reported PO Mac acceptance and explicit me
 - Always protect installed catalog Release 11, previous release archives, recipe/draft data, exact decimal quantity/unit state and user overrides.
 - Build/CI package success is not native GUI verification on Intel/Windows. A public release requires installation, signing/notarization and a full V1 acceptance process.
 - Consult [PROJECT_STATUS.md](PROJECT_STATUS.md), [DECISIONS.md](DECISIONS.md), [VERIFICATION.md](VERIFICATION.md), [IDEA_REGISTER.md](IDEA_REGISTER.md), and [engineering process](docs/DEVELOPMENT_AND_RELEASE_PROCESS.md) before claiming a milestone closed.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2: IMPLEMENTED feature candidate under DEC-038; verification details in docs/M5C2_ACCEPTANCE.md. Separate independent review, five exact-head CI jobs, PO native acceptance and explicit merge approval remain gates. M5D/M6 and other later milestones are untouched.

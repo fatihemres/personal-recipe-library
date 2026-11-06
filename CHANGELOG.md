@@ -188,3 +188,8 @@ Added read-only recipe history with bounded metadata paging, honest upgrade base
 - Use distinct recipe detail-section keys so linked navigation replaces prior relationship/history/private-note panels; native-reproduced defect covered by repeated-navigation browser regression.
 
 Added independent recipe variations, parent/child browsing/reparenting and symmetric related links with active-only creation. Variations receive new recipe/line/step IDs and one initial version, without separate private Markdown/organization; ordinary Duplicate remains unchanged. Migration011 adds acyclic/restrictive graph constraints and independent graph revisions. Linked permanent purge now requires complete dependency review and a separate detach acknowledgement, with atomic recipe/review-token validation. Other recipes/history/drafts remain safe. App0.1.0/Catalog11 unchanged; no merge/release or PO acceptance implied.
+
+
+## M5C-2 candidate — 2026-11-06
+
+M5C-2 candidate: optional local photo per recipe step; add/preview/replace/remove in expandable details, reviewed draft-only step deletion, durable recovery and immutable history. New forward-only schema14 and history4 retain legacy bytes and shared references. No change to app0.1.0, Catalog11, normal profile, permissions, dependencies or physical media retention.
