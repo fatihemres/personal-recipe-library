@@ -26,6 +26,7 @@ import {
   type Unit,
 } from '../contracts/recipe';
 export interface RecipeClient {
+  pickStepPhoto(): Promise<{id:string;width:number;height:number}|null>;
   pickCover(): Promise<{id:string;width:number;height:number}|null>;
   coverUrl(id:string,variant:'thumb'|'preview'):string;
   links(id:string,offset:number,limit:number):Promise<RecipeLinks>;
@@ -93,8 +94,10 @@ export interface RecipeClient {
   }): Promise<PersonalIngredient>;
   deleteIngredient(id: string, revision: number): Promise<null>;
 }
+const importedPhotoSchema=z.object({id:z.uuid(),width:z.number().int().positive().max(30000000),height:z.number().int().positive().max(30000000)}).strict().refine(v=>v.width*v.height<=30000000).nullable();
 export const recipeClient: RecipeClient = {
-  pickCover:()=>request('pick_recipe_cover',z.object({id:z.uuid(),width:z.number().int().positive().max(30000000),height:z.number().int().positive().max(30000000)}).strict().refine(v=>v.width*v.height<=30000000).nullable()),
+  pickCover:()=>request('pick_recipe_cover',importedPhotoSchema),
+  pickStepPhoto:()=>request('pick_recipe_step_photo',importedPhotoSchema),
   coverUrl:(id,variant)=>{z.uuid().parse(id);z.enum(['thumb','preview']).parse(variant);const key=`${id}/${variant}`;return isTauri()?`${convertFileSrc(id,'recipe-media')}/${variant}`:`recipe-media://localhost/${key}`;},
   links:(id,offset,limit)=>request('recipe_links',recipeLinksSchema,{id:z.uuid().parse(id),offset:z.number().int().min(0).max(1000000).parse(offset),limit:z.number().int().min(1).max(100).parse(limit)}),
   createVariation:(id,revision)=>request('create_recipe_variation',recipeSchema,{id:z.uuid().parse(id),revision:z.number().int().positive().parse(revision)}),

@@ -30,6 +30,16 @@ if(new URLSearchParams(location.search).has('alternatives')){
 const mediaFixture=new URLSearchParams(location.search).has('media');
 const coverA='abababab-abab-4bab-8bab-abababababab',coverB='bcbcbcbc-bcbc-4cbc-8cbc-bcbcbcbcbcbc';
 if(mediaFixture)recipe.coverAssetId=coverA;
+const stepPhotoCount=new URLSearchParams(location.search).get('stepPhotos');
+if(stepPhotoCount){
+ const count=stepPhotoCount==='500'?500:2;
+ recipe.steps=Array.from({length:count},(_,n)=>({
+  id:`${(n+1).toString(16).padStart(8,'0')}-1122-4333-8444-555555555555`,
+  instructions:`${n+1}. adım — İ/ı/Ş/ğ ile hazırlama, karıştırma ve dikkatle bekletme. `.repeat(n===0&&count===2?20:1),
+  photoAssetId:count===500?`${(n+1).toString(16).padStart(8,'0')}-aabb-4ccc-8ddd-eeeeeeeeeeee`:n===0?coverA:coverB,
+ }));
+}
+
 const item:RecipeSearchItem={id:recipe.id,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,
   coverAssetId:recipe.coverAssetId,createdAt:recipe.createdAt,updatedAt:recipe.updatedAt,organizationRevision:1,favorite:false,toTry:false,rating:null};
 const collection:RecipeCollection={id:collectionId,title:longTitle,revision:1,activeCount:1};
@@ -42,10 +52,10 @@ const foundation:FoundationClient={
   savePreferences:async preferences=>preferences,
 };
 const unsupported = async () => { throw new Error('Unsupported browser presentation fixture operation'); };
-const snapshot=()=>({formatVersion:(mediaFixture?3:new URLSearchParams(location.search).has('alternatives')?2:1) as 1|2|3,coverAssetId:recipe.coverAssetId,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
-const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:new URLSearchParams(location.search).has('alternatives')?2:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
+const snapshot=()=>({formatVersion:(stepPhotoCount?4:mediaFixture?3:new URLSearchParams(location.search).has('alternatives')?2:1) as 1|2|3|4,coverAssetId:recipe.coverAssetId,recipeId:recipe.id,recipeCreatedAt:recipe.createdAt,title:recipe.title,description:recipe.description,kind:recipe.kind,servings:recipe.servings,prepMinutes:recipe.prepMinutes,cookMinutes:recipe.cookMinutes,notes:recipe.notes,ingredients:recipe.ingredients,steps:recipe.steps,ingredientNames:recipe.ingredientNames});
+const summary=(n:number)=>({recipeId,versionNumber:n,formatVersion:stepPhotoCount?4:new URLSearchParams(location.search).has('alternatives')?2:1,sourceRevision:n,provenance:n===1?'created' as const:'edited' as const,restoredFromVersion:null,capturedAt:'2026-11-02T12:00:00Z',contentFingerprint:'a'.repeat(64),snapshotChecksum:'b'.repeat(64)});
 const recipes: RecipeClient={
- pickCover:async()=>({id:coverB,width:384,height:240}),coverUrl:(id,variant)=>`/tests/ui/${id===coverB?'cover-fixture-2.png':'cover-fixture.png'}?variant=${variant}`,
+ pickStepPhoto:async()=>({id:coverB,width:384,height:240}), pickCover:async()=>({id:coverB,width:384,height:240}),coverUrl:(id,variant)=>`/tests/ui/${id===coverB?'cover-fixture-2.png':'cover-fixture.png'}?variant=${variant}&asset=${id}`,
   links:async()=>({graphRevision:1,items:[{id:'88888888-8888-4888-8888-888888888888',title:'Uzun Türkçe üst tarif adı — '+longTitle,revision:1,status:'archived',relationship:'parent'}],total:1,hasMore:false}),createVariation:unsupported,setParent:async()=>null,setRelated:async()=>null,
   previewPurge:async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}}),purgeReviewed:async()=>null,
   versions:async()=>[summary(2),summary(1)],
@@ -62,7 +72,7 @@ const recipes: RecipeClient={
   searchPersonal:async()=>({items:[],total:0,hasMore:false}),
   saveDraft:async(id:string,revision:number|null,input:RecipeInput)=>({id,revision:(revision??0)+1,recipeId:input.id,input,updatedAt:'now',ingredientNames:recipe.ingredientNames}),
   discardDraft:async()=>null,
-  commit:async(input:RecipeInput)=>{if(mediaFixture){recipe.coverAssetId=input.coverAssetId;item.coverAssetId=input.coverAssetId;}return {...recipe,...input,revision:2};},
+  commit:async(input:RecipeInput)=>{if(mediaFixture){recipe.coverAssetId=input.coverAssetId;item.coverAssetId=input.coverAssetId;}if(stepPhotoCount)Object.assign(recipe,input,{revision:recipe.revision+1});return {...recipe,...input,revision:2};},
   drafts:async()=>[], collections:async()=>[collection], savedFilters:async()=>filters,
   get:async(id)=>({...recipe,id,title:id===recipeId?recipe.title:'Hedef tarif'}), getOrganization:async()=>({recipeId,revision:1,favorite:false,toTry:false,rating:null,collectionIds:[]}),
   getPrivateNote:async()=>({recipeId,formatVersion:1 as const,markdown:Array.from({length:70},(_,i)=>`## Uzun not satırı ${i+1}`).join('\n'),revision:1,updatedAt:'2026-10-23T12:00:00Z'}),

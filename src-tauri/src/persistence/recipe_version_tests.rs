@@ -67,7 +67,7 @@ fn insert_old(db: &mut Database, value: &RecipeInput) {
 fn initial_versions_meaningful_edits_noops_and_bounded_queries() {
     let dir = tempfile::tempdir().unwrap();
     let mut db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
     let ingredient = db.create_ingredient("Şeker").unwrap();
     for kind in ["food", "beverage"] {
         let mut saved = db.save_recipe(input(&ingredient.id, kind)).unwrap();
@@ -275,7 +275,7 @@ fn snapshots_and_reference_rows_are_immutable_but_owned_history_cascades_on_deli
     let mut v = super::recipe_versions::read_version(&db.conn, &saved.id, 1)
         .unwrap()
         .snapshot;
-    v.format_version = 4;
+    v.format_version = 5;
     assert_eq!(v.validate().unwrap_err().code, "RECIPE_VERSION_UNSUPPORTED");
     v.format_version = 1;
     v.steps[0].ingredient_line_ids = vec![id()];
@@ -587,7 +587,7 @@ fn schema_nine_upgrade_creates_honest_complete_baselines_and_preserves_user_data
     );
     for _ in 0..3 {
         let mut db = Database::open(dir.path()).unwrap();
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
         for id in &ids {
             let v = super::recipe_versions::read_version(&db.conn, id, 1).unwrap();
             assert_eq!(v.summary.provenance, "upgrade_baseline");
@@ -791,11 +791,11 @@ fn future_snapshot_formats_are_read_only_and_block_unsafe_old_application_save_o
         .unwrap()
         .snapshot;
     let mut future = serde_json::to_value(snapshot).unwrap();
-    future["formatVersion"] = json!(4);
+    future["formatVersion"] = json!(5);
     future["assetIds"] = json!([id()]);
     let payload = serde_json::to_string(&future).unwrap();
     // Simulate a later writer. This build has no format-4 authoring path.
-    db.conn.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot) VALUES(?1,2,4,2,'edited',?2,?3,?4)",params![saved.id,"0".repeat(64),migrations::checksum(&payload),payload]).unwrap();
+    db.conn.execute("INSERT INTO recipe_versions(recipe_id,version_number,format_version,source_revision,provenance,content_fingerprint,snapshot_checksum,snapshot) VALUES(?1,2,5,2,'edited',?2,?3,?4)",params![saved.id,"0".repeat(64),migrations::checksum(&payload),payload]).unwrap();
     db.conn
         .execute("UPDATE recipes SET revision=2 WHERE id=?1", [&saved.id])
         .unwrap();

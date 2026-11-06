@@ -192,6 +192,7 @@ pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recip
     recipe.steps = s
         .query_map([id], |r| {
             Ok(RecipeStep {
+                photo_asset_id: None,
                 id: r.get(0)?,
                 instructions: r.get(1)?,
                 details: if r.get::<_, Option<i64>>(2)?.is_some() {
@@ -213,6 +214,7 @@ pub(super) fn read_recipe(conn: &rusqlite::Connection, id: &str) -> Result<Recip
             })
         })?
         .collect::<Result<_, _>>()?;
+    super::step_media::read(conn, id, &mut recipe.steps)?;
     let mut links=conn.prepare("SELECT line_id FROM recipe_step_ingredients WHERE recipe_id=?1 AND step_id=?2 ORDER BY line_id")?;
     for step in &mut recipe.steps {
         step.ingredient_line_ids = links
@@ -299,8 +301,8 @@ pub(super) fn write_recipe_with_history(
             )?;
         }
     }
+    super::step_media::pin_recipe(tx, input)?;
     if super::media::available(tx)? {
-        super::media::verify_cover(tx, input.cover_asset_id.as_deref(), true)?;
         tx.execute("DELETE FROM recipe_covers WHERE recipe_id=?1", [&input.id])?;
         if let Some(id) = &input.cover_asset_id {
             tx.execute(

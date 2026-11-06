@@ -17,3 +17,5 @@ pub const HIDE: &str = "Tarif Atlası’nı gizle";
 
 pub const COVER_TITLE: &str = "Tarif kapağı seçin — JPEG, PNG veya WebP";
 pub const COVER_FILTER: &str = "Görsel";
+
+pub const STEP_PHOTO_TITLE: &str = "Adım fotoğrafı seçin — JPEG, PNG veya WebP";

@@ -24,7 +24,7 @@ export function rendererRecipeClient(): RecipeClient {
       ingredientNames: { [ingredient.id]: ingredient.name },
     }));
   return {
-    pickCover: vi.fn().mockResolvedValue(null), coverUrl: (id,variant)=>`recipe-media://localhost/${id}/${variant}`,
+    pickStepPhoto: vi.fn().mockResolvedValue(null), pickCover: vi.fn().mockResolvedValue(null), coverUrl: (id,variant)=>`recipe-media://localhost/${id}/${variant}`,
     links:vi.fn().mockResolvedValue({graphRevision:1,items:[],total:0,hasMore:false}),createVariation:vi.fn(),setParent:vi.fn().mockResolvedValue(null),setRelated:vi.fn().mockResolvedValue(null),
     previewPurge:vi.fn().mockImplementation(async(id,revision)=>({recipeId:id,recipeRevision:revision,token:'a'.repeat(64),links:{graphRevision:1,items:[],total:0,hasMore:false}})),purgeReviewed:vi.fn().mockResolvedValue(null),
     versions:vi.fn().mockResolvedValue([]),version:vi.fn(),compareVersions:vi.fn(),restoreVersion:vi.fn(),

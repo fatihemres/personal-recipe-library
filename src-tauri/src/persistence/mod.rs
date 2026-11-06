@@ -10,6 +10,7 @@ mod recipe_versions;
 mod recipe_workspace;
 mod recipes;
 mod reliability;
+mod step_media;
 use crate::domain::{AppError, Bootstrap, StorageStatus};
 use rusqlite::{Connection, OpenFlags};
 use std::{path::Path, time::Duration};
@@ -134,3 +135,6 @@ mod recipe_relation_tests;
 
 #[cfg(test)]
 mod media_tests;
+
+#[cfg(test)]
+mod step_media_tests;

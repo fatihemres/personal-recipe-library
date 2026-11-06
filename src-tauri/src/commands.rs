@@ -753,7 +753,7 @@ mod tests {
         std::fs::rename(&path, dir.path().join("preserved-obstacle")).unwrap();
         assert_eq!(
             invoke(&window, "bootstrap", json!({})).unwrap()["storage"]["schemaVersion"],
-            13
+            14
         );
     }
     #[test]
@@ -1156,6 +1156,22 @@ pub async fn pick_recipe_cover(
     state: tauri::State<'_, StorageService>,
     gate: tauri::State<'_, crate::media::ImportGate>,
 ) -> Result<Option<crate::media::ImportedCover>, AppError> {
+    pick_local_recipe_photo(window, state, gate, crate::native_labels::COVER_TITLE).await
+}
+#[tauri::command]
+pub async fn pick_recipe_step_photo(
+    window: tauri::WebviewWindow,
+    state: tauri::State<'_, StorageService>,
+    gate: tauri::State<'_, crate::media::ImportGate>,
+) -> Result<Option<crate::media::ImportedCover>, AppError> {
+    pick_local_recipe_photo(window, state, gate, crate::native_labels::STEP_PHOTO_TITLE).await
+}
+async fn pick_local_recipe_photo(
+    window: tauri::WebviewWindow,
+    state: tauri::State<'_, StorageService>,
+    gate: tauri::State<'_, crate::media::ImportGate>,
+    title: &'static str,
+) -> Result<Option<crate::media::ImportedCover>, AppError> {
     use tauri_plugin_dialog::DialogExt;
     let _permit = gate.acquire()?;
     let (tx, rx) = tokio::sync::oneshot::channel();
@@ -1163,7 +1179,7 @@ pub async fn pick_recipe_cover(
         .dialog()
         .file()
         .set_parent(&window)
-        .set_title(crate::native_labels::COVER_TITLE)
+        .set_title(title)
         .add_filter(
             crate::native_labels::COVER_FILTER,
             &["jpg", "jpeg", "png", "webp", "heic", "heif"],

@@ -25,7 +25,7 @@ test('strict contracts retain legacy defaults and reject unsupported versions, d
  const r=recipe();const input={...r,expectedRevision:1};for(const key of ['revision','createdAt','updatedAt','deletedAt','archivedAt','ingredientNames'])delete (input as Record<string,unknown>)[key];
  expect(recipeInputSchema.safeParse(input).success).toBe(true);
  const snapshot:Record<string,unknown>={...input,ingredientNames:r.ingredientNames,formatVersion:2,recipeId:r.id,recipeCreatedAt:r.createdAt};delete snapshot.id;delete snapshot.expectedRevision;
- expect(snapshotSchema.safeParse(snapshot).success).toBe(true);expect(snapshotSchema.safeParse({...snapshot,formatVersion:1}).success).toBe(false);expect(snapshotSchema.safeParse({...snapshot,formatVersion:4}).success).toBe(false);
+ expect(snapshotSchema.safeParse(snapshot).success).toBe(true);expect(snapshotSchema.safeParse({...snapshot,formatVersion:1}).success).toBe(false);expect(snapshotSchema.safeParse({...snapshot,formatVersion:5}).success).toBe(false);
  const old={...input,ingredients:input.ingredients.map(line=>{const legacy={...line};delete legacy.alternatives;return legacy;})};expect(recipeInputSchema.safeParse(old).success).toBe(true);
  expect(recipeInputSchema.safeParse({...input,ingredients:[{...input.ingredients[0],alternatives:Array(11).fill(input.ingredients[0].alternatives![0])}]}).success).toBe(false);
  expect(recipeInputSchema.safeParse({...input,ingredients:[{...input.ingredients[0],alternatives:[input.ingredients[0].alternatives![0],input.ingredients[0].alternatives![0]]}]}).success).toBe(false);

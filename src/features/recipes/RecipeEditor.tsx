@@ -70,7 +70,15 @@ export function RecipeEditor({
   const initial = useRef(JSON.stringify(draft));
   const dirty = !!recovered || JSON.stringify(draft) !== initial.current;
   const mediaPending=useRef(false);
+  const mediaSources=useRef(new Set<string>());
+  const editorMounted=useRef(true);
+  useEffect(()=>{editorMounted.current=true;return()=>{editorMounted.current=false;};},[]);
   const [mediaBusy,setMediaBusy]=useState(false);
+  function reportMediaBusy(key:string,busy:boolean){
+    if(busy)mediaSources.current.add(key);else mediaSources.current.delete(key);
+    mediaPending.current=mediaSources.current.size>0;
+    if(editorMounted.current)setMediaBusy(mediaPending.current);
+  }
   const durable = useDurableDraft(client, draft, dirty, recovered,()=>{if(mediaPending.current)throw {code:'MEDIA_BUSY',messageKey:'errors.mediaBusy',recoverable:true};});
   const flushDraft=durable.flush;
   useEffect(()=>{
@@ -242,7 +250,7 @@ export function RecipeEditor({
           disabled={saving || durable.closing || mediaBusy}
           className="recipe-fieldset"
         >
-          <RecipeCoverEditor assetId={draft.coverAssetId} client={client} onChange={id=>update('coverAssetId',id)} onBusy={busy=>{mediaPending.current=busy;setMediaBusy(busy);}} />
+          <RecipeCoverEditor assetId={draft.coverAssetId} client={client} onChange={id=>update('coverAssetId',id)} onBusy={busy=>reportMediaBusy('cover',busy)} />
           <div className="panel recipe-form">
             <label>
               {t.title}
@@ -328,6 +336,8 @@ export function RecipeEditor({
             }}
           />
           <RecipeSteps
+            client={client}
+            onMediaBusy={(id,busy)=>reportMediaBusy(`step:${id}`,busy)}
             steps={draft.steps}
             ingredients={draft.ingredients}
             names={names}

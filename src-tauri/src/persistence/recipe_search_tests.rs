@@ -44,6 +44,7 @@ fn input(title: &str, ingredient: &Ingredient) -> RecipeInput {
             note: None,
         }],
         steps: vec![RecipeStep {
+            photo_asset_id: None,
             id: id(),
             instructions: "Yavaşça karıştır".into(),
             details: None,

@@ -26,12 +26,14 @@ fn input(ingredient: &Ingredient) -> RecipeInput {
         }],
         steps: vec![
             RecipeStep {
+                photo_asset_id: None,
                 id: id(),
                 instructions: "Karıştırın".into(),
                 details: None,
                 ingredient_line_ids: vec![],
             },
             RecipeStep {
+                photo_asset_id: None,
                 id: id(),
                 instructions: "Servis edin".into(),
                 details: None,
@@ -359,11 +361,11 @@ fn m2a_migration_preserves_records_decimal_values_settings_and_checksums() {
                 .as_deref(),
             Some("35.000001")
         );
-        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+        assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
         assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
         assert_eq!(
             migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-            13
+            14
         );
     }
 }

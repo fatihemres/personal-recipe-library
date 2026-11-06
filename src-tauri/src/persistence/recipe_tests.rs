@@ -26,12 +26,14 @@ fn input(ingredient: &Ingredient) -> RecipeInput {
         }],
         steps: vec![
             RecipeStep {
+                photo_asset_id: None,
                 id: id(),
                 instructions: "Önce hazırlayın".into(),
                 details: None,
                 ingredient_line_ids: vec![],
             },
             RecipeStep {
+                photo_asset_id: None,
                 id: id(),
                 instructions: "Sonra pişirin".into(),
                 details: None,
@@ -154,11 +156,11 @@ fn real_m1_upgrade_preserves_preferences_and_validates_both_checksums() {
         .unwrap();
     drop(conn);
     let db = Database::open(dir.path()).unwrap();
-    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 13);
+    assert_eq!(db.bootstrap().unwrap().storage.schema_version, 14);
     assert_eq!(db.preferences().unwrap().theme, crate::domain::Theme::Dark);
     assert_eq!(
         migrations::validate(&db.conn, migrations::MIGRATIONS).unwrap(),
-        13
+        14
     );
     drop(db);
     for _ in 0..3 {
@@ -201,6 +203,7 @@ fn edit_replaces_removed_rows_and_database_rejects_malformed_decimal_text() {
     edited.ingredients.clear();
     edited.steps.remove(0);
     edited.steps.push(RecipeStep {
+        photo_asset_id: None,
         id: id(),
         instructions: "Servis edin".into(),
         details: None,
